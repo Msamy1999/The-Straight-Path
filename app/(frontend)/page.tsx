@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowRight, BookOpen, CheckCircle, Heart, Library, Search } from "lucide-react";
-import { Callout } from "@/components/content/Callout";
 import { ResearchTree } from "@/components/content/ResearchTree";
 import { TopicCard } from "@/components/content/TopicCard";
 import { Container } from "@/components/layout/Container";
@@ -65,12 +64,15 @@ export default async function HomePage() {
                 For sincere seekers
               </p>
               <h1 className="text-2xl font-semibold leading-tight text-foreground sm:text-3xl lg:text-4xl">
-                Learn Islam with care, clarity, and sincere questions.
+                Learn Islam through sincere questions and careful exploration
               </h1>
               <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base sm:leading-7">
-                A source-aware Islamic research library covering the foundations
-                of Islam and careful answers about Christianity, atheism,
-                scripture, history, and justice.
+                The Straight Path is a library of resources covering the foundations
+                of Islam and how it compares to other systems of belief. Along with
+                providing an overview of the Islamic faith, the platform offers a
+                careful exploration of Christianity, atheism, agnosticism, and more,
+                examining justifications for faith from both an intellectual and
+                spiritual perspective.
               </p>
               <div className="mt-4 flex flex-col gap-3 sm:flex-row">
                 <ButtonLink href="/islam-overview">
@@ -89,18 +91,13 @@ export default async function HomePage() {
 
       <Section id="seekers" className="border-b border-border">
         <Container>
-          <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+          <div className="max-w-4xl">
             <PageHeader
               titleAs="h2"
               eyebrow="For sincere seekers"
-              title="This is for people who want truth with patience."
-              subtitle="Many visitors arrive with real questions, a love for God, and a desire to understand. This library is designed to slow the discussion down, define terms, and keep source status visible."
+              title={'Goals of “The Straight Path”'}
+              subtitle="The Straight Path is for visitors with real questions and a desire to understand the truth. Muslims, Christians, and curious readers should feel safe to ask questions here. The goal is not to win a fight, but to explore the answers to life’s greatest questions with sincerity, honesty, and respect."
             />
-            <Callout type="respectful-reminder" title="A welcoming standard">
-              Muslims, Christians, and curious readers should feel safe to ask
-              careful questions here. The goal is not to win a fight, but to
-              study sincerely with honesty, respect, and clear sources.
-            </Callout>
           </div>
         </Container>
       </Section>

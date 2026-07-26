@@ -1,6 +1,29 @@
 name: the-straight-path
 
 services:
+  content-sync:
+    profiles:
+      - tools
+    image: the-straight-path-content-sync:${RELEASE_TAG}
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: content-sync
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      DATABASE_URI: file:/app/data/payload.db
+    user: "1001:1001"
+    volumes:
+      - the-straight-path-sqlite-data:/app/data
+    networks:
+      - proxy
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
   web:
     image: the-straight-path-web:${RELEASE_TAG}
     build:

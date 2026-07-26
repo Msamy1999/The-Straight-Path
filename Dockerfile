@@ -18,6 +18,12 @@ RUN npx --no-install tsx payload/import-drafts.ts --status=reviewed \
   && test -s /tmp/the-straight-path-build.db
 RUN npm run build
 
+FROM dependencies AS content-sync
+WORKDIR /app
+ENV NODE_ENV=production
+COPY . .
+CMD ["npx", "--no-install", "tsx", "payload/import-drafts.ts", "--status=reviewed"]
+
 FROM node:22-bookworm-slim AS runner
 WORKDIR /app
 

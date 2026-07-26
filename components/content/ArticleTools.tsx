@@ -20,7 +20,8 @@ const MAX_CHUNK_LENGTH = 360;
 const KEEP_ALIVE_MS = 10_000;
 const COPY_STATUS_MS = 2_500;
 const VOICE_RETRY_MS = 400;
-const NEURAL_VOICE = "en-US-AndrewMultilingualNeural";
+const NEURAL_VOICE = "en-US-GuyNeural";
+const PLAYBACK_RATES = [1, 1.25, 1.5, 1.75, 2] as const;
 
 /**
  * Rank English voices by expected quality — used only by the on-device
@@ -79,8 +80,9 @@ function toSpeechText(text: string): string {
   return text
     .replace(/[*_#`]+/g, "")
     .replace(/\s*[—–]\s*/g, ", ")
+    .replace(/\s*\n+\s*/g, " ")
     .replace(/[ \t]+/g, " ")
-    .replace(/ ?\n ?/g, "\n");
+    .trim();
 }
 
 /**
@@ -174,6 +176,7 @@ export function ArticleTools({
   const [playState, setPlayState] = useState<PlayState>("idle");
   const [copyStatus, setCopyStatus] = useState<CopyStatus>(null);
   const [voiceName, setVoiceName] = useState("");
+  const [playbackRate, setPlaybackRate] = useState(1);
 
   const stoppedRef = useRef(false);
   /** Increments on every play/stop so stale async callbacks self-discard. */
@@ -187,6 +190,7 @@ export function ArticleTools({
   const objectUrlRef = useRef<string | null>(null);
   const prefetchRef = useRef<Promise<Blob> | null>(null);
   const abortRef = useRef<AbortController | null>(null);
+  const playbackRateRef = useRef(1);
 
   useEffect(() => {
     if (typeof window === "undefined" || !("speechSynthesis" in window)) {
@@ -322,6 +326,7 @@ export function ArticleTools({
     }
     objectUrlRef.current = URL.createObjectURL(blob);
     audio.src = objectUrlRef.current;
+    audio.playbackRate = playbackRateRef.current;
 
     audio.onended = () => {
       void playNeuralChunk(chunks, index + 1, session).catch(() => {
@@ -360,7 +365,7 @@ export function ArticleTools({
       utterance.voice = voiceRef.current;
       utterance.lang = voiceRef.current.lang;
     }
-    utterance.rate = 1;
+    utterance.rate = playbackRateRef.current;
     utterance.pitch = 1;
     utterance.volume = 1;
     utterance.onend = () => {
@@ -462,6 +467,18 @@ export function ArticleTools({
     setPlayState("idle");
   }
 
+  function handlePlaybackRate() {
+    const currentIndex = PLAYBACK_RATES.indexOf(
+      playbackRateRef.current as (typeof PLAYBACK_RATES)[number],
+    );
+    const nextRate = PLAYBACK_RATES[(currentIndex + 1) % PLAYBACK_RATES.length];
+    playbackRateRef.current = nextRate;
+    setPlaybackRate(nextRate);
+    if (audioRef.current) {
+      audioRef.current.playbackRate = nextRate;
+    }
+  }
+
   function showCopyStatus(status: NonNullable<CopyStatus>) {
     if (copyTimeoutRef.current !== null) {
       window.clearTimeout(copyTimeoutRef.current);
@@ -521,8 +538,12 @@ export function ArticleTools({
     >
       <div
         role="group"
-        aria-label={`Reading tools for ${articleTitle}`}
-        className="flex flex-wrap items-center gap-2"
+        aria-label={`Audio controls for ${articleTitle}`}
+        className={cn(
+          "flex flex-wrap items-center gap-2",
+          playState !== "idle" &&
+            "fixed inset-x-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-[70] rounded-xl border border-border bg-card/95 p-2 shadow-soft backdrop-blur sm:left-1/2 sm:right-auto sm:w-auto sm:-translate-x-1/2",
+        )}
       >
         {playState === "idle" ? (
           <button
@@ -569,16 +590,28 @@ export function ArticleTools({
           </button>
         ) : null}
         {playState === "playing" || playState === "paused" ? (
-          <button
-            type="button"
-            onClick={handleStop}
-            aria-label="Stop reading"
-            className={cn(toolButtonClass, secondaryToolClass)}
-          >
-            <Square aria-hidden="true" className="h-4 w-4" />
-            Stop
-          </button>
+          <>
+            <button
+              type="button"
+              onClick={handlePlaybackRate}
+              aria-label={`Playback speed ${playbackRate} times. Press to increase speed.`}
+              className={cn(toolButtonClass, secondaryToolClass)}
+            >
+              {playbackRate}×
+            </button>
+            <button
+              type="button"
+              onClick={handleStop}
+              aria-label="Stop reading"
+              className={cn(toolButtonClass, secondaryToolClass)}
+            >
+              <Square aria-hidden="true" className="h-4 w-4" />
+              Stop
+            </button>
+          </>
         ) : null}
+      </div>
+      <div className="flex flex-wrap items-center gap-2">
         <button
           type="button"
           onClick={handleCopy}

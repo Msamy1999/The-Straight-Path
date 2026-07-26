@@ -98,6 +98,8 @@ const invalidBibliographyPairs = [
   ["The Gospel of John", "New Testament"],
 ];
 
+const advancedSchoolNames = /\b(?:Athari|Ashari|Ash'ari|Maturidi|Mu'tazili|Murji'ah|Khawarij)\b/i;
+
 for (const { file, data: draft } of drafts) {
   const label = draft.slug || file;
   for (const field of ["slug", "title", "summary", "sections", "quranVerses", "bibleVerses"]) {
@@ -159,6 +161,12 @@ for (const { file, data: draft } of drafts) {
   }
 
   const serialized = JSON.stringify(draft);
+  if (draft.audienceLevel === "beginner" && advancedSchoolNames.test(articleProse(draft))) {
+    problems.push(
+      label +
+        ": beginner article contains advanced school labels; explain the shared foundation in plain language instead",
+    );
+  }
   if (/John 7:53[–-]8(?!:11)/.test(serialized)) {
     problems.push(label + ": malformed Pericope Adulterae range; use John 7:53-8:11");
   }

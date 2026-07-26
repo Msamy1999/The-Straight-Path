@@ -13,7 +13,7 @@ import { MsEdgeTTS, OUTPUT_FORMAT } from "msedge-tts";
  * on-device speech engines automatically.
  */
 
-const DEFAULT_VOICE = "en-US-AndrewMultilingualNeural";
+const DEFAULT_VOICE = "en-US-GuyNeural";
 const MAX_CHARS = 1200;
 const REQUEST_WINDOW_MS = 60_000;
 const MAX_REQUESTS_PER_WINDOW = 12;
