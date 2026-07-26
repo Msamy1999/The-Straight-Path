@@ -14,6 +14,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/islam-christianity",
     "/atheism-agnosticism",
     "/people-of-palestine",
+    "/claims-against-islam",
     "/language-demo",
     ...siteCategories.map((category) => category.href),
   ];

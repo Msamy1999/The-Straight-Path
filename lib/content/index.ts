@@ -12,6 +12,7 @@ import { unstable_cache } from "next/cache";
 import { cache } from "react";
 import config from "@payload-config";
 import { atheismAgnosticismTree } from "@/data/atheism-agnosticism-tree";
+import { claimsAgainstIslamTree } from "@/data/claims-against-islam";
 import {
   christianLearningPath,
   comparisonMethods,
@@ -385,6 +386,16 @@ export async function getFullLibraryTree(): Promise<ResearchTreeNode[]> {
       tag: "Questions",
       defaultOpen: true,
       children: atheismAgnosticismTree,
+    },
+    {
+      id: "claims-against-islam",
+      title: "Claims Against Islam",
+      description:
+        "Common criticisms, careful responses, and links for deeper study.",
+      href: "/claims-against-islam",
+      tag: "Responses",
+      defaultOpen: true,
+      children: claimsAgainstIslamTree,
     },
     {
       id: "people-of-palestine",
