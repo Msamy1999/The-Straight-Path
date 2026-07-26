@@ -76,6 +76,35 @@ export default function ClaimsAgainstIslamPage() {
                       </p>
                     ))}
                   </div>
+                  <div className="mt-5 rounded-md border border-accent/25 bg-accent/5 p-3.5 sm:p-4">
+                    <p className="text-sm font-semibold text-foreground">
+                      Quran and hadith references
+                    </p>
+                    <p className="mt-1 text-xs leading-5 text-muted-foreground sm:text-sm">
+                      These primary texts are part of the Muslim case. They give
+                      readers evidence to examine, rather than asking them to
+                      accept a response without proof.
+                    </p>
+                    <ul className="mt-3 space-y-2.5">
+                      {item.evidence.map((source) => (
+                        <li key={`${source.kind}-${source.reference}`} className="text-sm leading-6 text-muted-foreground">
+                          <span className="mr-1.5 inline-flex rounded bg-background px-1.5 py-0.5 text-[0.7rem] font-semibold uppercase tracking-wide text-accent">
+                            {source.kind}
+                          </span>
+                          <a
+                            href={source.href}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="font-semibold text-accent underline decoration-accent/40 underline-offset-2 hover:text-foreground"
+                          >
+                            {source.reference}
+                          </a>
+                          <span className="text-foreground"> — </span>
+                          {source.summary}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                   {item.links?.length ? (
                     <div className="mt-4 flex flex-wrap gap-2">
                       {item.links.map((link) => (
