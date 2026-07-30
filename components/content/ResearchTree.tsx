@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useMemo, useState } from "react";
+import { usePathname } from "next/navigation";
 import { ChevronRight, FileText, FolderOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { ResearchTreeNode, ResearchTreeStatus } from "@/types/content";
@@ -29,6 +33,48 @@ export function ResearchTree({
   nodes,
   className,
 }: ResearchTreeProps) {
+  const pathname = usePathname();
+  const treeId = useMemo(() => `${pathname}:${title}`, [pathname, title]);
+  const [openNodeIds, setOpenNodeIds] = useState<Set<string>>(() => new Set());
+
+  useEffect(() => {
+    const historyState = window.history.state as {
+      researchTreeOpenNodes?: Record<string, string[]>;
+    } | null;
+    const savedOpenNodeIds = historyState?.researchTreeOpenNodes?.[treeId];
+
+    setOpenNodeIds(new Set(Array.isArray(savedOpenNodeIds) ? savedOpenNodeIds : []));
+  }, [treeId]);
+
+  const setNodeOpen = (nodeId: string, isOpen: boolean) => {
+    setOpenNodeIds((currentOpenNodeIds) => {
+      const nextOpenNodeIds = new Set(currentOpenNodeIds);
+
+      if (isOpen) {
+        nextOpenNodeIds.add(nodeId);
+      } else {
+        nextOpenNodeIds.delete(nodeId);
+      }
+
+      const historyState = window.history.state as {
+        researchTreeOpenNodes?: Record<string, string[]>;
+      } | null;
+
+      window.history.replaceState(
+        {
+          ...historyState,
+          researchTreeOpenNodes: {
+            ...historyState?.researchTreeOpenNodes,
+            [treeId]: [...nextOpenNodeIds],
+          },
+        },
+        "",
+      );
+
+      return nextOpenNodeIds;
+    });
+  };
+
   return (
     <div className={cn("rounded-lg border border-border bg-card p-2 shadow-soft sm:p-2.5", className)}>
       <div className="flex items-center gap-2 rounded-md bg-muted/70 px-2 py-1.5">
@@ -48,8 +94,11 @@ export function ResearchTree({
           <TreeNode
             key={node.id ?? `${node.title}-${index}`}
             node={node}
+            nodeId={node.id ?? `node-${index}`}
             depth={0}
             isLast={index === nodes.length - 1}
+            openNodeIds={openNodeIds}
+            onNodeOpenChange={setNodeOpen}
           />
         ))}
       </ol>
@@ -59,17 +108,31 @@ export function ResearchTree({
 
 type TreeNodeProps = {
   node: ResearchTreeNode;
+  nodeId: string;
   depth: number;
   isLast: boolean;
+  openNodeIds: Set<string>;
+  onNodeOpenChange: (nodeId: string, isOpen: boolean) => void;
 };
 
-function TreeNode({ node, depth, isLast }: TreeNodeProps) {
+function TreeNode({
+  node,
+  nodeId,
+  depth,
+  isLast,
+  openNodeIds,
+  onNodeOpenChange,
+}: TreeNodeProps) {
   const hasChildren = Boolean(node.children?.length);
 
   return (
     <li className={cn("relative pl-3", !isLast && "pb-0.5")}>
       {hasChildren ? (
-        <details className={styles.details} open={node.defaultOpen}>
+        <details
+          className={styles.details}
+          open={openNodeIds.has(nodeId)}
+          onToggle={(event) => onNodeOpenChange(nodeId, event.currentTarget.open)}
+        >
           <summary
             title={node.description}
             className={cn(
@@ -104,8 +167,11 @@ function TreeNode({ node, depth, isLast }: TreeNodeProps) {
                 <TreeNode
                   key={child.id ?? `${child.title}-${index}`}
                   node={child}
+                  nodeId={`${nodeId}/${child.id ?? `node-${index}`}`}
                   depth={depth + 1}
                   isLast={index === (node.children?.length ?? 0) - 1}
+                  openNodeIds={openNodeIds}
+                  onNodeOpenChange={onNodeOpenChange}
                 />
               ))}
             </ol>

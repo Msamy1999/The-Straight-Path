@@ -276,6 +276,12 @@ export const islamChristianityBranches: IslamChristianityBranchDef[] = [
       "draft",
     ),
     topic(
+      "Bible manuscript transmission",
+      "/articles/how-was-the-bible-transmitted",
+      "A draft comparison article about transmission questions and source status.",
+      "draft",
+    ),
+    topic(
       "Oral memorization of the Quran",
       "/articles/oral-memorization-of-the-quran",
       "How companion memorization created an independent oral check on the text from the start.",
@@ -303,12 +309,6 @@ export const islamChristianityBranches: IslamChristianityBranchDef[] = [
       "Qira'at explained simply",
       "/articles/qiraat-explained-simply",
       "Certified recitation modes traced by unbroken chains, read from one fixed written text.",
-      "draft",
-    ),
-    topic(
-      "Bible manuscript transmission",
-      "/articles/how-was-the-bible-transmitted",
-      "A draft comparison article about transmission questions and source status.",
       "draft",
     ),
     topic(

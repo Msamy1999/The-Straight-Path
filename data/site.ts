@@ -122,6 +122,11 @@ export const siteCategories = [
         "/articles/how-was-the-quran-preserved",
       ),
       topic(
+        "Bible manuscript transmission",
+        "A draft comparison article about transmission questions and source status.",
+        "/articles/how-was-the-bible-transmitted",
+      ),
+      topic(
         "Oral memorization of the Quran",
         "A planned study on memorization that needs verified sources before claims are made.",
       ),
@@ -140,11 +145,6 @@ export const siteCategories = [
       topic(
         "Qira'at explained simply",
         "A planned beginner explanation with terminology and source safeguards.",
-      ),
-      topic(
-        "Bible manuscript transmission",
-        "A draft comparison article about transmission questions and source status.",
-        "/articles/how-was-the-bible-transmitted",
       ),
       topic(
         "Gospel authorship and dating",
