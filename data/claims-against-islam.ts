@@ -28,9 +28,9 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     claim:
       "Critics point to reports that place Aisha at a very young age when her marriage to the Prophet Muhammad was consummated.",
     response: [
-      "The well-known reports in Sahih al-Bukhari are commonly understood to give Aisha a very young age at consummation. Some researchers reconstruct an older age from chronology, but that remains disputed. A truthful answer must acknowledge the reports and must not claim that the historical question is settled.",
-      "The Quran sets no universal numerical marriage age. It does connect marriageable age with sound judgment (Quran 4:6), forbids treating women as property or coercing them (4:19), and gives women their own financial rights (4:4 and 4:7). The Prophet also required a woman's permission before marriage (Sahih al-Bukhari 5136).",
-      "These texts mean that a historical report cannot excuse coercion, incapacity, or harm today. Consent, legal capacity, and protection from harm are essential; a child cannot meaningfully supply those conditions.",
+      "Islam does not treat a girl or woman as property, and it does not make marriage valid through coercion. The Quran forbids inheriting women against their will (4:19), gives women their own financial rights (4:4 and 4:7), and links marriageable age with sound judgment (4:6). The Prophet required a woman's permission before marriage (Sahih al-Bukhari 5136).",
+      "The well-known reports in Sahih al-Bukhari are commonly understood to give Aisha a very young age at consummation. Some researchers reconstruct an older age from chronology, though that remains disputed. Muslims do not need to deny the reports to affirm the Quranic and prophetic safeguards of consent, capacity, and protection from harm.",
+      "No historical report can cancel those safeguards. Islam's principles do not permit coercion, incapacity, or harm today; a child cannot meaningfully provide the consent and sound judgment that marriage requires.",
     ],
     evidence: [
       {
@@ -65,8 +65,8 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     claim:
       "Because early Muslim states expanded through war, critics say people became Muslim only through forced conversion.",
     response: [
-      "Early Muslim states did expand through war; that political history should not be denied. But conquest, rule, and personal conversion are different claims. The Quran says there is no compulsion in religion (2:256), asks whether people can be compelled to believe (10:99), and orders protection and safe passage even for a polytheist seeking asylum (9:6).",
-      "Muslim rulers did not always live up to those standards, and non-Muslims could face unequal taxation or legal status. That is not the same as proving that Islam required conversion at sword-point. The primary texts and the varied historical record must both be considered.",
+      "Islam explicitly rejects forced faith: “there is no compulsion in religion” (Quran 2:256). The Quran asks whether people can be compelled to believe (10:99) and even orders protection and safe passage for a polytheist who seeks asylum (9:6). These are direct principles, not later excuses.",
+      "Early Muslim states did expand through war, but political rule is not the same as forced conversion. Islam spread through preaching, trade, scholarship, and family life across regions far beyond the first battlefields. Where rulers acted unjustly, that was a failure to uphold the Quran's standard—not proof that Islam commands conversion at sword-point.",
     ],
     evidence: [
       { kind: "Quran", reference: "Quran 2:256", summary: "It states that there is no compulsion in religion.", href: "https://quran.com/2/256" },
@@ -86,7 +86,7 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
       "Critics point to unequal inheritance shares in some cases, polygamy, dress rules, divorce rules, and the conduct of Muslim societies.",
     response: [
       "Islam's primary texts give women direct religious and legal standing: men and women are equally accountable before God (Quran 33:35), are described as mutual supporters (9:71), and women own their mahr and inheritance share themselves (4:4 and 4:7). The Prophet made good treatment of one's wife a measure of character (Jami at-Tirmidhi 3895).",
-      "That does not mean every classical rule or Muslim custom matches modern expectations of legal equality. Some inheritance, marriage, and divorce rules are genuinely disputed today. A fair judgment should distinguish what the Quran says, later legal interpretation, and the wrongdoing of particular Muslim societies.",
+      "These were real protections in a world where women often had insecure property and inheritance rights. Islamic law assigns family responsibilities in different ways, but difference is not permission for contempt or abuse. Muslim societies and later legal opinions must be measured against the Quran's standard of justice and the Prophet's command to treat women well.",
     ],
     evidence: [
       { kind: "Quran", reference: "Quran 33:35", summary: "It affirms men's and women's equal accountability before God.", href: "https://quran.com/33/35" },
@@ -105,8 +105,8 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     claim:
       "Islam permits a man to marry up to four wives, while a woman cannot marry multiple husbands.",
     response: [
-      "The Quran permits, but never commands, a man to marry up to four wives. Its permission is conditional: if he fears he cannot be just, he is told to marry only one (Quran 4:3). It also warns that complete equality between wives is difficult and forbids abandoning one wife by leaning entirely to another (4:129).",
-      "This is not an identical marital arrangement for men and women, and Muslims should not pretend otherwise. The Muslim case is that it is a restricted permission carrying serious duties, not a male entitlement; the Prophet warned that unjust favoritism between wives has grave consequences (Sunan Abi Dawud 2133).",
+      "The Quran does not make polygyny a male entitlement or a religious command. It permits it only under the condition of justice, then directs a man to marry only one if he fears injustice (Quran 4:3). It further warns that complete equality is difficult and forbids leaving one wife neglected by leaning entirely toward another (4:129).",
+      "Islamic justice is not based on making every family role identical; it is based on binding rights and responsibilities. Polygyny is therefore a restricted social permission, not a licence for desire or mistreatment. The Prophet warned of grave consequences for a husband who unjustly favors one wife over another (Sunan Abi Dawud 2133).",
     ],
     evidence: [
       { kind: "Quran", reference: "Quran 4:3", summary: "It conditions polygyny on justice and directs a man to marry only one if he fears injustice.", href: "https://quran.com/4/3" },
@@ -121,8 +121,8 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     claim:
       "Critics argue that the Prophet Muhammad used religion to gain influence and political authority.",
     response: [
-      "No verse can force someone to conclude that Muhammad was sincere, but the charge should be weighed against the record. The Quran tells him to say that he asks no payment for the message (6:90), and Aisha described periods in which his household lived for months on dates and water rather than accumulating luxury (Sahih al-Bukhari 2567).",
-      "He later exercised political and military authority in Medina, so the question is not settled by denying that authority. The relevant question is whether his long public life—its message, hardship, conduct, and use of power—fits better with prophethood or deliberate self-enrichment.",
+      "The Quran repeatedly commands Muhammad to say that he asks no payment for God's message (6:90). Aisha described periods in which his household lived for months on dates and water rather than accumulating luxury (Sahih al-Bukhari 2567). That is difficult to reconcile with a mission designed for wealth.",
+      "Muhammad later exercised political and military authority in Medina, but he used it while continuing to teach accountability before God and personal restraint. His long public life—its hardship, message, conduct, and lack of personal enrichment—fits the Muslim case for prophethood far better than a search for fame or riches.",
     ],
     evidence: [
       { kind: "Quran", reference: "Quran 6:90", summary: "Muhammad is told to say that he asks no payment for the message.", href: "https://quran.com/6/90" },
@@ -136,8 +136,8 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     claim:
       "Some critics say the Quran is demonic deception, copied material, or Muhammad's own composition rather than revelation.",
     response: [
-      "Calling the Quran satanic or human-made is a theological claim, not a demonstrated fact. The Quran directly rejects both accusations: it denies that a human teacher supplied it (16:103), says devils did not bring it down (26:210–212), and challenges opponents to produce anything comparable if they believe it was invented (17:88).",
-      "Muslims also point to the opening-revelation report, in which Muhammad is shaken rather than presenting a prepared composition (Sahih al-Bukhari 3). These are reasons within the Muslim case; they do not compel a non-Muslim to believe, but a fair critique must engage them instead of merely attaching a label.",
+      "The Quran directly rejects both accusations: it denies that a human teacher supplied it (16:103), says devils did not bring it down (26:210–212), and challenges opponents to produce anything comparable if they believe it was invented (17:88). Its central call is to worship the one God, reject evil, uphold justice, and seek mercy—none of which resembles a satanic message.",
+      "Muslims also point to the opening-revelation report, in which Muhammad is shaken rather than presenting a prepared composition (Sahih al-Bukhari 3). The Quran's message, challenge, preservation, and the Prophet's life form a cumulative case for revelation; dismissing it as satanic or invented simply assumes the conclusion instead of answering that case.",
     ],
     evidence: [
       { kind: "Quran", reference: "Quran 16:103", summary: "It rejects the claim that a human being taught Muhammad the Quran.", href: "https://quran.com/16/103" },
@@ -153,8 +153,8 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     claim:
       "Because some violent groups use Islamic language and cite the Quran, critics say terrorism follows naturally from Islam.",
     response: [
-      "A group's use of Islamic words does not make its violence Islamic. The Quran permits fighting only against those who fight Muslims and forbids transgression (2:190); it commands peace when an enemy genuinely offers peace (8:61), and it treats unjust killing as a grave sin (17:33). The Prophet prohibited killing women and children in war (Sahih al-Bukhari 3015).",
-      "Terrorism deliberately targets civilians and spreads fear. It violates these limits even when perpetrators cite scripture. Political conflict and extremist recruitment help explain why terrorism occurs, but they do not turn murder of non-combatants into a religious duty.",
+      "Terrorism is not a teaching of Islam; it violates Islam's stated limits. The Quran permits fighting only against those who fight Muslims and forbids transgression (2:190), commands peace when an enemy genuinely offers peace (8:61), and treats unjust killing as a grave sin (17:33). The Prophet prohibited killing women and children in war (Sahih al-Bukhari 3015).",
+      "Deliberately targeting civilians and spreading fear is therefore not jihad. Violent groups may use Islamic words, but their actions contradict the Quran and the Prophet's rules of war. Political conflict and extremist recruitment help explain terrorism; they do not make murder of non-combatants a religious duty.",
     ],
     evidence: [
       { kind: "Quran", reference: "Quran 2:190", summary: "It limits fighting and prohibits transgression.", href: "https://quran.com/2/190" },
@@ -173,8 +173,8 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     claim:
       "Critics say the caliph Uthman created a new Quran by standardizing copies and ordering other materials destroyed.",
     response: [
-      "Uthman's standardization was a real historical act, not something to conceal. Sahih al-Bukhari 4987 reports that he borrowed the manuscript kept by Hafsa, appointed a four-person committee to copy it, sent the copies to provinces, and ordered other written Quranic materials burned after disputes over recitation arose.",
-      "That report describes the production of a common written standard from an existing manuscript, not Uthman claiming new revelation or writing a new book himself. Critics may still question the process; Muslims see it as preventing recitational fragmentation. Quran 15:9 states the Muslim belief in preservation, while Bukhari 4987 supplies the historical report that must be examined.",
+      "Sahih al-Bukhari 4987 is evidence against the claim that Uthman invented a new Quran. It reports that he borrowed the manuscript kept by Hafsa, appointed a four-person committee to make copies from it, and sent those copies to the provinces when disputes over recitation appeared.",
+      "The order to remove non-standard private materials was a preservation measure: it protected one verified written standard from public fragmentation. Uthman did not claim new revelation or write a new book; he standardized copies of an already-recited Quran. Quran 15:9 states the Muslim belief that God preserves the Reminder, and this careful standardization is part of the historical means through which Muslims understand that preservation.",
     ],
     evidence: [
       { kind: "Quran", reference: "Quran 15:9", summary: "The Quran states the Muslim belief that God sent down the Reminder and will preserve it.", href: "https://quran.com/15/9" },
@@ -191,8 +191,8 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     claim:
       "Critics point to recognized readings of the Quran and say this disproves its preservation.",
     response: [
-      "Recognized qiraat are not rival books or rival revelations. They are transmitted recitation traditions for the same Quranic corpus. They share the Uthmanic written text in the overwhelming majority of places while differing in limited recitational and linguistic details; some differences can affect wording or grammar and should not be hidden.",
-      "The qiraat should also not simply be called the seven ahruf. They are related but distinct technical concepts. Sahih al-Bukhari 4992 shows that the Prophet accepted more than one recitation of the same passage and described the Quran as revealed in seven ahruf. The question is whether the known, transmitted limits of variation are compatible with preservation—not whether variation exists at all.",
+      "Recognized qiraat are not rival books or rival revelations. They are carefully transmitted recitation traditions for the same Quranic corpus, sharing the Uthmanic written text in the overwhelming majority of places. Their limited differences in pronunciation, vowels, grammar, or wording were recorded and taught openly—not discovered as hidden competing Qurans.",
+      "The qiraat should not simply be called the seven ahruf; they are related but distinct technical concepts. Sahih al-Bukhari 4992 shows that the Prophet accepted more than one recitation of the same passage and described the Quran as revealed in seven ahruf. Far from proving loss, this documented and controlled transmission is part of the Muslim case for preservation.",
     ],
     evidence: [
       { kind: "Quran", reference: "Quran 15:9", summary: "It states the Muslim belief that God preserves the Reminder.", href: "https://quran.com/15/9" },
@@ -209,8 +209,8 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     claim:
       "Critics point to classical rulings on apostasy and say Islam gives no room for freedom of conscience.",
     response: [
-      "The Quran repeatedly mentions people who leave faith and places their final judgment with God (2:217 and 4:137). It does not state a fixed worldly punishment for a private change of belief, and it says there is no compulsion in religion (2:256). Nothing in those verses licenses private individuals to threaten, punish, or harm someone for changing belief.",
-      "The difficult hadith must still be faced: Sahih al-Bukhari 6922 contains the wording used in classical apostasy rulings. Classical jurists generally developed severe rulings from it. Other Muslim scholars argue that it must be read with the early context of armed rebellion and public treason, not as a punishment for peaceful conscience. The disagreement should be stated plainly, while vigilante violence remains indefensible.",
+      "Islam calls people to faith, but the Quran does not permit forcing belief. It says there is no compulsion in religion (2:256) and mentions people who leave faith while placing their final judgment with God (2:217 and 4:137). No individual has the right to threaten, punish, or harm someone for a private change of belief.",
+      "Sahih al-Bukhari 6922 is a key text in classical apostasy rulings and must be interpreted responsibly. Classical jurists developed severe rulings from it, while other Muslim scholars read it in the early context of armed rebellion and public treason rather than peaceful conscience. In every reading, vigilante violence is indefensible and contradicts Islamic justice.",
     ],
     evidence: [
       { kind: "Quran", reference: "Quran 2:256", summary: "It states that there is no compulsion in religion.", href: "https://quran.com/2/256" },
@@ -225,9 +225,9 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     claim:
       "Critics note that the Quran and classical Islamic law regulated slavery rather than abolishing it immediately.",
     response: [
-      "The Quran and classical Islamic law regulated slavery; they did not announce an immediate universal abolition. That is a serious moral difficulty and should not be covered by slogans.",
-      "At the same time, the Quran repeatedly makes emancipation a righteous act and an expiation for wrongdoing (90:13, 4:92, 5:89, and 58:3), requires a contract of emancipation for enslaved people who seek it when good is known in them, and forbids coercing enslaved women into prostitution (24:33). The Prophet attached a major spiritual reward to freeing an enslaved Muslim person (Sahih Muslim 1509a).",
-      "Muslims who conclude that slavery has no place today see these texts as orienting society toward liberation and human dignity. That conclusion is a moral reading of the reforming direction of the texts, not a claim that the texts enacted instant abolition.",
+      "Islam did not create the slavery it encountered; it confronted a universal institution by restricting abuses, recognizing the humanity of enslaved people, and opening repeated paths to freedom. The Quran makes emancipation a righteous act and an expiation for wrongdoing (90:13, 4:92, 5:89, and 58:3), requires a contract of emancipation for enslaved people who seek it when good is known in them, and forbids coercing enslaved women into prostitution (24:33).",
+      "The Prophet attached a major spiritual reward to freeing an enslaved Muslim person (Sahih Muslim 1509a). These commands changed slavery from an unrestricted system into one constrained by rights, manumission, and moral accountability.",
+      "The Quran did not announce an immediate universal abolition, but its repeated legal and moral movement is toward liberation and human dignity. Muslims who reject slavery today apply that direction faithfully rather than treating historical slavery as an Islamic ideal.",
     ],
     evidence: [
       { kind: "Quran", reference: "Quran 90:13", summary: "It names freeing an enslaved person as a righteous act.", href: "https://quran.com/90/13" },
@@ -244,8 +244,8 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     claim:
       "Critics use the word jihad as if it always means unrestricted religious violence.",
     response: [
-      "Jihad is broader than war: it means striving in God's path, while it can also refer to armed struggle. When the Quran permits fighting, it limits it to those fighting Muslims and forbids transgression (2:190); it permits the oppressed to fight after being wronged (22:39) and commands acceptance of a genuine offer of peace (8:61).",
-      "Armed jihad is therefore not a license for private warfare, forced conversion, or attacks on civilians. The Prophet's prohibition on killing women and children in war (Sahih al-Bukhari 3015) is a direct limit. Muslims have disagreed about applications in history, but extremist violence cannot erase the stated limits.",
+      "Jihad means striving in God's path; it is broader than war and includes moral, intellectual, and spiritual struggle. Armed jihad exists in Islamic teaching, but the Quran limits fighting to those who fight Muslims and forbids transgression (2:190), permits the oppressed to fight after being wronged (22:39), and commands acceptance of a genuine offer of peace (8:61).",
+      "It is therefore not a licence for private warfare, forced conversion, or attacks on civilians. The Prophet's prohibition on killing women and children in war (Sahih al-Bukhari 3015) is a direct limit. Extremist violence does not define jihad; it violates the conditions Islam places on the use of force.",
     ],
     evidence: [
       { kind: "Quran", reference: "Quran 2:190", summary: "It limits fighting and forbids transgression.", href: "https://quran.com/2/190" },
@@ -261,8 +261,8 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     claim:
       "Critics point to verses about conflict and to the historical dhimma system.",
     response: [
-      "The Quran commands Muslims to be just even toward those they dislike (5:8) and kind and fair to people who do not fight them because of religion (60:8). It also orders protection and safe passage for an enemy polytheist who seeks it (9:6). The Prophet gave a severe warning against killing a person protected by treaty (Sahih al-Bukhari 3166).",
-      "Historically, the dhimma system offered protected status but was not equal citizenship by modern standards. Its practice varied widely, and its inequalities should not be denied. The Muslim case is not that every historical arrangement was ideal; it is that hatred and indiscriminate harm toward non-Muslims contradict explicit Quranic and prophetic commands.",
+      "Islam does not teach hatred of non-Muslims. The Quran commands Muslims to be just even toward those they dislike (5:8), kind and fair to people who do not fight them because of religion (60:8), and protective of an enemy polytheist who seeks asylum (9:6). The Prophet gave a severe warning against killing a person protected by treaty (Sahih al-Bukhari 3166).",
+      "The historical dhimma system was a premodern framework of protected status and legal duties, not permission for contempt, forced conversion, or indiscriminate harm. Its practice varied, but the permanent Islamic standard remains justice, faithfulness to agreements, and safety for peaceful non-Muslims.",
     ],
     evidence: [
       { kind: "Quran", reference: "Quran 5:8", summary: "It commands justice even toward opponents.", href: "https://quran.com/5/8" },
