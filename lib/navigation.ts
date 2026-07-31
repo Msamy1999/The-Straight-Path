@@ -10,9 +10,11 @@ export const primaryNavItems = [
   { href: "/islam-christianity", label: "Islam & Christianity" },
   {
     href: "/atheism-agnosticism",
-    label: "Atheism & Agnosticism Answers in Islam",
+    label: "Atheism & Agnosticism",
   },
+  { href: "/claims-against-islam", label: "Claims Against Islam" },
   { href: "/people-of-palestine", label: "People of Palestine" },
+  { href: "/method", label: "Research Method" },
   { href: "/questions", label: "Common Questions" },
   { href: "/glossary", label: "Glossary" },
   { href: "/sources", label: "Source Library" },

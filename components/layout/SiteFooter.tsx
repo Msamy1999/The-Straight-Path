@@ -10,8 +10,7 @@ export function SiteFooter() {
         <div>
           <SiteBrand as="text" />
           <p className="mt-3">
-            A peaceful Islamic research library for clear definitions,
-            sincere questions, and source-aware study.
+            The Straight Path is a library of resources covering the foundations of Islam and how it compares to other systems of belief. Along with providing an overview of the Islamic faith, the platform offers a careful exploration of Christianity, atheism, agnosticism, and more, examining justifications for faith from both an intellectual and spiritual perspective.
           </p>
         </div>
         <nav aria-label="Footer main sections">
@@ -50,10 +49,6 @@ export function SiteFooter() {
               Search
             </Link>
           </div>
-          <p className="mt-3">
-            Future content should include citations, source status, and
-            translation/version attribution.
-          </p>
         </div>
       </Container>
     </footer>

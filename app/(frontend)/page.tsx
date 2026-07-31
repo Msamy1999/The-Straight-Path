@@ -1,8 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowRight, BookOpen, CheckCircle, Heart, Library, Search } from "lucide-react";
+import { ArrowRight, CheckCircle, Library } from "lucide-react";
 import { ResearchTree } from "@/components/content/ResearchTree";
-import { TopicCard } from "@/components/content/TopicCard";
 import { Container } from "@/components/layout/Container";
 import { LogoMark } from "@/components/layout/LogoMark";
 import { PageHeader } from "@/components/layout/PageHeader";
@@ -29,7 +28,7 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
   const [
-    { christianLearningPath, comparisonMethods, featuredResearchCards },
+    { christianLearningPath, comparisonMethods },
     fullLibraryTree,
   ] = await Promise.all([getHomeData(), getFullLibraryTree()]);
 
@@ -204,71 +203,6 @@ export default async function HomePage() {
         </Container>
       </Section>
 
-      <Section className="border-t border-border">
-        <Container>
-          <PageHeader
-            titleAs="h2"
-            eyebrow="Featured research"
-            title="Draft studies and planned questions"
-            subtitle="These examples remain draft pages. They use placeholders until sources, verses, translations, and citations are verified."
-          />
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredResearchCards.map((card) => (
-              <TopicCard
-                key={card.title}
-                title={card.title}
-                description={card.description}
-                href={card.href}
-                icon={selectResearchIcon(card.title)}
-                label={card.label}
-                meta="Source pending"
-              />
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      <Section tone="muted" className="border-t border-border">
-        <Container>
-          <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
-            <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase text-accent sm:text-sm">
-                Begin gently
-              </p>
-              <h2 className="mt-2 text-xl font-semibold leading-tight sm:mt-3 sm:text-2xl lg:text-3xl">
-                Begin with the basics, then follow your questions.
-              </h2>
-              <p className="mt-3 text-sm leading-6 text-muted-foreground sm:mt-4 sm:text-base sm:leading-7">
-                Start with Islam, follow the sources, and use the comparison
-                branch when Christianity is the question you are bringing to
-                the library.
-              </p>
-            </div>
-            <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-              <ButtonLink href="/islam-overview">
-                Islam Overview
-                <Heart aria-hidden="true" className="h-4 w-4" />
-              </ButtonLink>
-              <ButtonLink href="/sources" variant="secondary">
-                View sources
-                <Search aria-hidden="true" className="h-4 w-4" />
-              </ButtonLink>
-            </div>
-          </div>
-        </Container>
-      </Section>
     </>
   );
-}
-
-function selectResearchIcon(title: string) {
-  if (title.toLowerCase().includes("jesus")) {
-    return Heart;
-  }
-
-  if (title.toLowerCase().includes("quran")) {
-    return BookOpen;
-  }
-
-  return Library;
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ChevronDown } from "lucide-react";
 import { claimsAgainstIslam } from "@/data/claims-against-islam";
-import { Callout } from "@/components/content/Callout";
+import { ClaimsHashOpener } from "@/components/content/ClaimsHashOpener";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 export default function ClaimsAgainstIslamPage() {
   return (
     <>
+      <ClaimsHashOpener />
       <Section className="border-b border-border" spacing="sm">
         <Container size="narrow">
           <Breadcrumbs
@@ -32,11 +33,6 @@ export default function ClaimsAgainstIslamPage() {
             title="Common claims against Islam"
             subtitle="Open any question to read the claim fairly, see a concise response, and continue to deeper study where it is available."
           />
-          <Callout type="respectful-reminder" title="How to use this page" className="mt-6">
-            These are starting answers, not slogans. Some questions involve real
-            historical or moral disagreement. Read the response first, then use
-            the linked studies to examine the evidence and context.
-          </Callout>
         </Container>
       </Section>
 
@@ -79,11 +75,6 @@ export default function ClaimsAgainstIslamPage() {
                   <div className="mt-5 rounded-md border border-accent/25 bg-accent/5 p-3.5 sm:p-4">
                     <p className="text-sm font-semibold text-foreground">
                       Quran and hadith references
-                    </p>
-                    <p className="mt-1 text-xs leading-5 text-muted-foreground sm:text-sm">
-                      These primary texts are part of the Muslim case. They give
-                      readers evidence to examine, rather than asking them to
-                      accept a response without proof.
                     </p>
                     <ul className="mt-3 space-y-2.5">
                       {item.evidence.map((source) => (
