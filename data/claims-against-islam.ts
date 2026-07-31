@@ -222,6 +222,70 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     ],
     links: [{ href: "/articles/rights-of-non-muslims", label: "Rights of non-Muslims" }],
   },
+  {
+    id: "wife-beating",
+    title: "Does Islam permit wife-beating?",
+    claim: "Critics point to Quran 4:34 and argue that Islam permits or excuses domestic abuse.",
+    response: [
+      "Quran 4:34 is a difficult verse and must not be hidden. It sets out a sequence for a serious marital breakdown: counsel, temporary separation in bed, and a final disputed term often translated as striking. It immediately forbids seeking a way against the wife once reconciliation occurs; it does not authorise rage, injury, humiliation, or routine control.",
+      "Classical jurists who understood the term as a physical act restricted it severely and forbade injury and striking the face. Other modern Muslim interpreters read it as separation rather than hitting. In either approach, domestic abuse is not a Prophetic model: Aisha said the Prophet never struck a woman or servant, and the Quran commands spouses to be treated with kindness.",
+      "A Muslim cannot use this verse to justify violence. Harm, coercion, and intimidation violate the Quranic purpose of mercy in marriage and must be confronted through protection, lawful redress, and accountability.",
+    ],
+    evidence: [
+      { kind: "Quran", reference: "Quran 4:34", summary: "It addresses a grave marital conflict in a staged sequence and forbids further aggression after reconciliation.", href: "https://quran.com/4/34" },
+      { kind: "Quran", reference: "Quran 4:19 and 30:21", summary: "It commands kind treatment and describes marriage through comfort, affection, and mercy.", href: "https://quran.com/4/19" },
+      { kind: "Hadith", reference: "Sahih Muslim 2328a", summary: "Aisha reported that the Prophet never struck a woman or servant.", href: "https://sunnah.com/muslim:2328a" },
+      { kind: "Hadith", reference: "Sahih Muslim 1218a", summary: "The Farewell Sermon commands men to fear God concerning women and provide for them fairly.", href: "https://sunnah.com/muslim:1218a" },
+    ],
+    links: [{ href: "/articles/marriage-and-divorce", label: "Marriage and divorce" }],
+  },
+  {
+    id: "homosexuality",
+    title: "Why does Islam prohibit homosexuality?",
+    claim: "Critics argue that Islam's sexual ethics are unjust because classical Islamic teaching prohibits same-sex sexual acts.",
+    response: [
+      "Islamic teaching distinguishes a person's inherent dignity from every desire or action. The Quran places sexual intimacy within marriage between a man and a woman, and the classical Muslim understanding of the passages about the people of Lot prohibits same-sex sexual acts. That is a moral teaching shared by the major classical schools, not a licence to demean people.",
+      "Muslims believe sexual ethics are part of a wider framework of chastity, fidelity, family responsibility, and accountability before God. A Muslim may explain and hold that conviction while still treating every person with justice, privacy, compassion, and protection from abuse. Harassment, violence, coercion, and vigilante punishment are not Islamic answers to moral disagreement.",
+      "People can disagree deeply about this teaching. The Muslim response is that divine moral limits are not hatred; they are part of a consistent ethic that asks every person, whatever their circumstances, to seek God's guidance and mercy.",
+    ],
+    evidence: [
+      { kind: "Quran", reference: "Quran 7:80-81", summary: "It recounts Lot's condemnation of men approaching men with desire instead of women.", href: "https://quran.com/7/80-81" },
+      { kind: "Quran", reference: "Quran 30:21", summary: "It presents marriage as a source of comfort, affection, and mercy.", href: "https://quran.com/30/21" },
+      { kind: "Quran", reference: "Quran 49:13 and 5:8", summary: "It grounds human dignity and commands justice even toward those one dislikes.", href: "https://quran.com/49/13" },
+    ],
+  },
+  {
+    id: "jews-and-christians",
+    title: "Does Islam teach that Jews and Christians are enemies?",
+    claim: "Critics point to Quranic passages about conflict and loyalty and argue that Islam teaches permanent hostility toward Jews and Christians.",
+    response: [
+      "No. The Quran does not make a person's Jewish or Christian identity a reason for hatred. It instructs Muslims to speak with the People of the Book in the best manner, to be just even toward opponents, and to be kind and fair to people who do not fight them because of religion.",
+      "Some verses concern particular hostile groups, broken treaties, or political alliances during conflict. They cannot be detached from that setting and used to cancel the Quran's repeated commands of justice, covenant keeping, dialogue, and peaceful coexistence. The Prophet's dealings with Jewish and Christian individuals and communities must also be read in their varied historical contexts, not reduced to one rule of enmity.",
+      "Islam permits principled disagreement about theology while forbidding collective hatred and injustice. A Muslim's standard is to deal fairly with peaceful neighbours and to oppose wrongdoing whoever commits it.",
+    ],
+    evidence: [
+      { kind: "Quran", reference: "Quran 29:46", summary: "It commands Muslims to discuss with the People of the Book in the best manner, except with wrongdoers.", href: "https://quran.com/29/46" },
+      { kind: "Quran", reference: "Quran 5:8 and 60:8", summary: "It commands justice and kindness toward those who do not fight Muslims for their religion.", href: "https://quran.com/5/8" },
+      { kind: "Quran", reference: "Quran 9:6", summary: "It requires protection and safe passage for a polytheist who seeks asylum.", href: "https://quran.com/9/6" },
+      { kind: "Hadith", reference: "Sahih al-Bukhari 3166", summary: "It gives a severe warning against killing a person protected by treaty.", href: "https://sunnah.com/bukhari:3166" },
+    ],
+    links: [{ href: "/articles/rights-of-non-muslims", label: "Rights of non-Muslims" }],
+  },
+  {
+    id: "sharia-and-democracy",
+    title: "Is Sharia incompatible with justice and democracy?",
+    claim: "Critics argue that Sharia necessarily produces authoritarian rule and cannot coexist with democracy, human rights, or accountable government.",
+    response: [
+      "Sharia is broader than a state criminal code. It includes worship, family, contracts, ethics, and the public duties of justice and mercy. The Quran commands rulers to return trusts, judge fairly, consult their community, and refer disputes to principled law rather than personal power.",
+      "Islam does not prescribe one modern constitutional blueprint. Elections, representative institutions, courts, limits on executive power, and public accountability can serve the Quranic aims of consultation and justice. Muslim thinkers disagree about institutional design and about how divine law relates to legislation by a majority.",
+      "There are real points of tension between some classical rulings and some liberal-democratic assumptions, and Muslim governments have often failed their own standards. That does not make tyranny Islamic. A credible Islamic public order must protect life, property, due process, conscience, and justice for all people under its authority.",
+    ],
+    evidence: [
+      { kind: "Quran", reference: "Quran 4:58", summary: "It commands trusts to be returned and judgments between people to be made with justice.", href: "https://quran.com/4/58" },
+      { kind: "Quran", reference: "Quran 42:38", summary: "It praises believers whose affairs are conducted through mutual consultation.", href: "https://quran.com/42/38" },
+      { kind: "Quran", reference: "Quran 5:8", summary: "It commands justice even toward those Muslims dislike.", href: "https://quran.com/5/8" },
+    ],
+  },
 ];
 
 export const claimsAgainstIslamTree: ResearchTreeNode[] = claimsAgainstIslam.map(
