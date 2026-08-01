@@ -4,17 +4,17 @@ import { ArticleLayout } from "@/components/content/ArticleLayout";
 import { ComparisonArticleLayout } from "@/components/content/ComparisonArticleLayout";
 import {
   getArticleBySlug,
-  getArticles,
+  getArticleSlugs,
   getCategoryBySlug,
   getCitationsByIds,
   getComparisonArticleBySlug,
   getRelatedArticles,
 } from "@/lib/content";
 
-// Draft records can be imported by a separate CLI process while the local
-// server remains open. Rendering the route dynamically prevents a prebuilt
-// article page from continuing to show the old draft after that import.
-export const dynamic = "force-dynamic";
+// ISR lets long articles be served from the generated cache instead of
+// rebuilding the full Payload response on every tree click. Next development
+// mode still renders route data dynamically while draft imports are active.
+export const revalidate = 300;
 
 type ArticlePageProps = {
   params: Promise<{
@@ -47,10 +47,8 @@ function hasRenderableComparison(
 }
 
 export async function generateStaticParams() {
-  const articles = await getArticles();
-  return articles.map((article) => ({
-    slug: article.slug,
-  }));
+  const slugs = await getArticleSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({

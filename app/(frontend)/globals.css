@@ -55,6 +55,26 @@
     text-rendering: optimizeLegibility;
   }
 
+  /* Keep the on-demand translator invisible while its language control is
+   * driven by our accessible button in the header. */
+  body {
+    top: 0 !important;
+  }
+
+  .goog-te-banner-frame.skiptranslate {
+    display: none !important;
+  }
+
+  iframe.skiptranslate,
+  body > .skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .goog-te-gadget {
+    font-size: 0 !important;
+  }
+
   h1,
   h2,
   h3 {

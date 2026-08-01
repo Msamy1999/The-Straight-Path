@@ -85,7 +85,9 @@ function citationKeys(value: unknown): string[] {
     .map((item) =>
       typeof item === "object" && item !== null && "citationKey" in item
         ? String((item as { citationKey: unknown }).citationKey)
-        : undefined,
+        : typeof item === "string" || typeof item === "number"
+          ? String(item)
+          : undefined,
     )
     .filter((key): key is string => Boolean(key));
 }
@@ -137,6 +139,8 @@ function mapArticle(doc: ArticleDoc): Article {
           .map((related) =>
             typeof related === "object" && related !== null && "slug" in related
               ? String((related as { slug: unknown }).slug)
+              : typeof related === "string" || typeof related === "number"
+                ? String(related)
               : undefined,
           )
           .filter((slug): slug is string => Boolean(slug))
@@ -145,6 +149,7 @@ function mapArticle(doc: ArticleDoc): Article {
 }
 
 type CitationDoc = {
+  id?: string | number;
   citationKey: string;
   type: Citation["type"];
   title: string;
@@ -455,7 +460,10 @@ export type GetArticlesOptions = {
   includeDrafts?: boolean;
 };
 
-const getCachedArticleDocs = unstable_cache(
+// Full article bodies can exceed Next.js' 2 MB persistent data-cache limit.
+// Request-level memoisation still prevents duplicate reads during a render
+// without attempting to serialize the complete library into the data cache.
+const getCachedArticleDocs = cache(
   async (includeDrafts: boolean) => {
     const payload = await getClient();
 
@@ -464,13 +472,11 @@ const getCachedArticleDocs = unstable_cache(
       where: includeDrafts ? {} : { status: { equals: "published" } },
       sort: "createdAt",
       pagination: false,
-      depth: 1,
+      depth: 0,
     });
 
     return result.docs;
   },
-  ["article-list"],
-  contentCacheOptions,
 );
 
 export async function getArticles(
@@ -483,7 +489,7 @@ export async function getArticles(
   );
 }
 
-const getCachedArticlesByCategory = unstable_cache(
+const getCachedArticlesByCategory = cache(
   async (category: CategorySlug, includeDrafts: boolean) => {
     const payload = await getClient();
 
@@ -497,13 +503,11 @@ const getCachedArticlesByCategory = unstable_cache(
       },
       sort: "createdAt",
       pagination: false,
-      depth: 1,
+      depth: 0,
     });
 
     return result.docs;
   },
-  ["article-list-by-category"],
-  contentCacheOptions,
 );
 
 export async function getArticlesByCategory(
@@ -525,7 +529,9 @@ const getCachedArticleDocBySlug = unstable_cache(
       collection: "articles",
       where: { slug: { equals: slug } },
       limit: 1,
-      depth: 1,
+      // Related articles and citations are fetched separately. Avoid
+      // expanding their full bodies while opening one long article.
+      depth: 0,
     });
 
     return result.docs[0] ?? null;
@@ -541,13 +547,19 @@ export const getArticleBySlug = cache(async (slug: string) => {
 });
 
 const getCachedRelatedArticleDocs = unstable_cache(
-  async (slugs: string[]) => {
+  async (references: string[]) => {
     const payload = await getClient();
+    const ids = references.filter((reference) => /^\d+$/.test(reference));
+    const slugs = references.filter((reference) => !/^\d+$/.test(reference));
+    const clauses = [
+      ...(ids.length > 0 ? [{ id: { in: ids } }] : []),
+      ...(slugs.length > 0 ? [{ slug: { in: slugs } }] : []),
+    ];
     const result = await payload.find({
       collection: "articles",
-      where: { slug: { in: slugs } },
+      where: (clauses.length === 1 ? clauses[0] : { or: clauses }) as never,
       pagination: false,
-      depth: 1,
+      depth: 0,
     });
 
     return result.docs;
@@ -572,17 +584,41 @@ export async function getRelatedArticles(
     [...article.relatedArticles].sort(),
   );
 
-  const bySlug = new Map(
-    docs.map((doc) => {
-      const mapped = mapArticle(doc as unknown as ArticleDoc);
-      return [mapped.slug, mapped] as const;
-    }),
-  );
+  const byReference = new Map<string, Article>();
+  for (const doc of docs) {
+    const mapped = mapArticle(doc as unknown as ArticleDoc);
+    byReference.set(mapped.slug, mapped);
+    if ("id" in doc) {
+      byReference.set(String((doc as { id: unknown }).id), mapped);
+    }
+  }
 
   // Preserve the order defined on the article record.
   return article.relatedArticles
-    .map((slug) => bySlug.get(slug))
+    .map((reference) => byReference.get(reference))
     .filter((related): related is Article => Boolean(related));
+}
+
+const getCachedArticleSlugs = cache(async (includeDrafts: boolean) => {
+  const payload = await getClient();
+  const result = await payload.find({
+    collection: "articles",
+    where: includeDrafts ? {} : { status: { equals: "published" } },
+    sort: "createdAt",
+    pagination: false,
+    depth: 0,
+    select: { slug: true },
+  });
+
+  return result.docs
+    .map((doc) => (typeof doc.slug === "string" ? doc.slug : undefined))
+    .filter((slug): slug is string => Boolean(slug));
+});
+
+export async function getArticleSlugs(
+  options: GetArticlesOptions = {},
+): Promise<string[]> {
+  return getCachedArticleSlugs(options.includeDrafts ?? true);
 }
 
 // ---------------------------------------------------------------------------
@@ -598,7 +634,9 @@ const getCachedCitationDocs = unstable_cache(
     const payload = await getClient();
     const result = await payload.find({
       collection: "citations",
-      where: { citationKey: { in: ids } },
+      where: {
+        or: [{ citationKey: { in: ids } }, { id: { in: ids } }],
+      },
       pagination: false,
       depth: 0,
     });
@@ -622,9 +660,17 @@ export async function getCitationsByIds(ids: string[]): Promise<Citation[]> {
       return [mapped.id, mapped] as const;
     }),
   );
+  const byDatabaseId = new Map(
+    docs.map((doc) => {
+      const mapped = mapCitation(doc as unknown as CitationDoc);
+      const databaseId =
+        "id" in doc ? String((doc as { id: unknown }).id) : undefined;
+      return databaseId ? ([databaseId, mapped] as const) : undefined;
+    }).filter((entry): entry is readonly [string, Citation] => Boolean(entry)),
+  );
 
   return ids
-    .map((id) => byKey.get(id))
+    .map((id) => byKey.get(id) ?? byDatabaseId.get(id))
     .filter((citation): citation is Citation => Boolean(citation));
 }
 

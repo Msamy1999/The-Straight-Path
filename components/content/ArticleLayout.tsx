@@ -1,12 +1,12 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import type { ReactNode } from "react";
+import { ArticleHashOpener } from "@/components/content/ArticleHashOpener";
 import {
   ArticleStatusBadge,
   getArticleStatusDescription,
   getArticleStatusLabel,
 } from "@/components/content/ArticleStatusBadge";
 import { ArticleTools } from "@/components/content/ArticleTools";
-import { Callout } from "@/components/content/Callout";
 import { CitationList } from "@/components/content/CitationList";
 import { TopicCard } from "@/components/content/TopicCard";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
@@ -58,6 +58,7 @@ export function ArticleLayout({
 
   return (
     <>
+      <ArticleHashOpener />
       <Section className="border-b border-border" spacing="sm">
         <Container>
           <Breadcrumbs
@@ -105,28 +106,36 @@ export function ArticleLayout({
         <Container>
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start">
             <article className="min-w-0">
-              <Callout type="respectful-reminder" title="Beginner summary">
-                {article.summary}
-              </Callout>
-
-              <div className="mt-8 space-y-10">
+              <div className="mt-2 space-y-3">
                 {children ??
                   article.sections.map((section) => (
                     <ArticleSectionBlock key={section.id} article={article} sectionId={section.id} />
                   ))}
               </div>
 
-              <section id="sources" className="mt-12 scroll-mt-20">
-                <PageHeader
-                  titleAs="h2"
-                  eyebrow="Sources"
-                  title="Citations and source status"
-                  subtitle="Placeholder or source-pending citations must be replaced before review or publication."
-                />
-                <div className="mt-6">
+              <details
+                id="sources"
+                className="group mt-8 scroll-mt-20 rounded-lg border border-border bg-card shadow-soft"
+              >
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 px-4 py-4 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-5 [&::-webkit-details-marker]:hidden">
+                  <span>
+                    <span className="block text-xs font-semibold uppercase text-accent">Sources</span>
+                    <span className="mt-1 block text-base font-semibold text-foreground sm:text-lg">
+                      Citations and source status
+                    </span>
+                    <span className="mt-1 block text-sm leading-6 text-muted-foreground">
+                      Placeholder or source-pending citations must be replaced before review or publication.
+                    </span>
+                  </span>
+                  <ChevronDown
+                    aria-hidden="true"
+                    className="mt-1 h-5 w-5 shrink-0 text-accent transition-transform group-open:rotate-180"
+                  />
+                </summary>
+                <div className="border-t border-border px-4 py-4 sm:px-5 sm:py-5">
                   <CitationList citations={citations} />
                 </div>
-              </section>
+              </details>
 
               {relatedArticles.length > 0 ? (
                 <section id="related-articles" className="mt-12 scroll-mt-20">
@@ -207,18 +216,33 @@ function ArticleSectionBlock({
   }
 
   return (
-    <section id={section.id} className="scroll-mt-20">
-      <p className="text-xs font-semibold uppercase text-accent sm:text-sm">
-        {section.kind}
-      </p>
-      <h2 className="mt-2 select-text text-lg leading-snug sm:mt-3 sm:text-xl">{section.title}</h2>
-      <ArticleSectionBody body={section.body} />
-      {section.citationIds && section.citationIds.length > 0 ? (
-        <p className="mt-4 text-xs font-medium uppercase text-muted-foreground">
-          Source markers to verify: {section.citationIds.join(", ")}
-        </p>
-      ) : null}
-    </section>
+    <details
+      id={section.id}
+      className="group scroll-mt-24 rounded-lg border border-border bg-card shadow-soft"
+    >
+      <summary className="flex cursor-pointer list-none items-start justify-between gap-4 px-4 py-4 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-5 [&::-webkit-details-marker]:hidden">
+        <span>
+          <span className="block text-xs font-semibold uppercase text-accent sm:text-sm">
+            {section.kind}
+          </span>
+          <span className="mt-1 block select-text text-base font-semibold leading-snug text-foreground sm:text-lg">
+            {section.title}
+          </span>
+        </span>
+        <ChevronDown
+          aria-hidden="true"
+          className="mt-1 h-5 w-5 shrink-0 text-accent transition-transform group-open:rotate-180"
+        />
+      </summary>
+      <div className="border-t border-border px-4 py-4 sm:px-5 sm:py-5">
+        <ArticleSectionBody body={section.body} />
+        {section.citationIds && section.citationIds.length > 0 ? (
+          <p className="mt-4 text-xs font-medium uppercase text-muted-foreground">
+            Source markers to verify: {section.citationIds.join(", ")}
+          </p>
+        ) : null}
+      </div>
+    </details>
   );
 }
 

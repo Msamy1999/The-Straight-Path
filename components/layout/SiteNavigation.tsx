@@ -6,6 +6,7 @@ import { Menu, Search, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Container } from "@/components/layout/Container";
 import { SiteBrand } from "@/components/layout/SiteBrand";
+import { LanguageToggle } from "@/components/ui/LanguageToggle";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { islamChristianityHrefs, primaryNavItems } from "@/lib/navigation";
 import { cn } from "@/lib/utils";
@@ -59,6 +60,7 @@ export function SiteNavigation() {
             )}
             Browse
           </button>
+          <LanguageToggle className="hidden sm:inline-flex" />
           <ThemeToggle className="h-9 w-9" />
           <button
             type="button"
@@ -109,6 +111,10 @@ export function SiteNavigation() {
       >
         <Container className="py-4">
           <SearchPlaceholder className="mb-4 flex sm:hidden" onClick={closeMenus} />
+          <div className="mb-4 flex items-center justify-between border-b border-border pb-4 sm:hidden">
+            <span className="text-sm font-semibold text-foreground">Language</span>
+            <LanguageToggle />
+          </div>
           <nav aria-label="Mobile navigation" className="grid gap-1">
             {primaryNavItems.map((item) => (
               <HeaderLink
