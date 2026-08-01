@@ -13,7 +13,7 @@ import { getResearchTree } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Atheism & Agnosticism Answers in Islam",
   description:
-    "Source-aware answers for atheists, agnostics, skeptics, and seekers studying Islam.",
+    "Clear answers for atheists, agnostics, skeptics, and seekers studying Islam.",
   alternates: {
     canonical: "/atheism-agnosticism",
   },
@@ -45,7 +45,7 @@ export default async function AtheismAgnosticismPage() {
               <PageHeader
                 eyebrow="Audience path"
                 title="Atheism & Agnosticism Answers in Islam"
-                subtitle="A respectful section for skeptics, agnostics, atheists, and seekers, built from clear definitions, careful reasoning, and verified sources."
+                subtitle="A respectful section for skeptics, agnostics, atheists, and seekers, built from clear definitions, careful reasoning, and evidence."
               />
               <div className="mt-4 flex flex-wrap gap-2">
                 <Tag>Doubt</Tag>
@@ -74,7 +74,7 @@ export default async function AtheismAgnosticismPage() {
           <div className="mt-6">
             <ResearchTree
               title="Atheism & Agnosticism"
-              description="Nine source-aware articles for skeptical and honest questions, arranged in the order a careful reader might ask them."
+              description="Nine carefully ordered discussions for skeptical and honest questions."
               nodes={atheismAgnosticismTree}
             />
           </div>

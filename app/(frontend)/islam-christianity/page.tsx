@@ -12,14 +12,14 @@ import { getResearchTree } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Islam & Christianity",
   description:
-    "A respectful branch of the library for Christian visitors and seekers comparing Islam and Christianity through source-aware draft paths.",
+    "A respectful branch for Christian visitors and seekers comparing Islam and Christianity through scripture, history, and reasoned argument.",
   alternates: {
     canonical: "/islam-christianity",
   },
   openGraph: {
     title: "Islam & Christianity",
     description:
-      "Study Jesus, scripture, preservation, theology, salvation, and difficult questions through a respectful source-aware branch.",
+      "Study Jesus, scripture, preservation, theology, salvation, and difficult questions through a respectful comparison.",
   },
 };
 
@@ -73,7 +73,7 @@ export default async function IslamChristianityPage() {
           <div className="mt-8">
             <ResearchTree
               title="Islam & Christianity"
-              description="A research-library tree for comparison branches, draft articles, and source-pending study topics."
+              description="A comparison tree for branches, studies, and topics awaiting evidence."
               nodes={islamChristianityTree}
             />
           </div>

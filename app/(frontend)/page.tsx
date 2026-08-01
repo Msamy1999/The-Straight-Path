@@ -15,7 +15,7 @@ import { siteName, siteNameArabic } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Respectful Islamic Research Library",
   description:
-    "A mobile-first Islamic research library for sincere seekers, source-aware study, and respectful comparison where needed.",
+    "A mobile-first Islamic research library for sincere seekers and respectful comparison where needed.",
   alternates: {
     canonical: "/",
   },
@@ -173,7 +173,7 @@ export default async function HomePage() {
               titleAs="h2"
               eyebrow="How we study"
               title="A calm method for difficult questions"
-              subtitle="The library should make it easy to see what is scripture, what is interpretation, what is history, what is argument, and what still needs sources."
+              subtitle="See clearly what is scripture, what is interpretation, what is history, what is argument, and what remains uncertain."
             />
             <div className="grid gap-3">
               {comparisonMethods.map((method) => (

@@ -13,14 +13,14 @@ import { getResearchTree } from "@/lib/content";
 export const metadata: Metadata = {
   title: "People of Palestine",
   description:
-    "A respectful, source-aware draft section about the people of Palestine, their religious connections, dignity, and careful research.",
+    "A respectful draft section about the people of Palestine, their religious connections, dignity, and history.",
   alternates: {
     canonical: "/people-of-palestine",
   },
   openGraph: {
     title: "People of Palestine",
     description:
-      "A careful, source-aware draft area for study of human dignity, history, religious connection, and practical reading paths.",
+      "A careful draft area for human dignity, history, religious connection, and practical reading paths.",
   },
 };
 
@@ -45,7 +45,7 @@ export default async function PeopleOfPalestinePage() {
               <PageHeader
                 eyebrow="Human section"
                 title="People of Palestine"
-                subtitle="A respectful, source-aware draft section about the people of Palestine, with careful attention to dignity, context, and verified references."
+                subtitle="A respectful draft section about the people of Palestine, with careful attention to dignity, context, and historical evidence."
               />
               <div className="mt-4 flex flex-wrap gap-2">
                 <Tag>Human dignity</Tag>
@@ -69,7 +69,7 @@ export default async function PeopleOfPalestinePage() {
             titleAs="h2"
             eyebrow="Study map"
             title="Draft topics for careful study"
-            subtitle="Each topic opens a source-aware draft article. These are not final or published conclusions and should be read with the stated source limits in mind."
+            subtitle="Each topic opens a draft discussion. These are not final or published conclusions and should be read with attention to context and uncertainty."
           />
           <div className="mt-6">
             <ResearchTree

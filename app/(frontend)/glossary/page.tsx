@@ -29,7 +29,7 @@ export default async function GlossaryPage() {
           <PageHeader
             eyebrow="Glossary"
             title="Study terms and definitions"
-            subtitle="Search draft glossary entries for theology, scripture, history, and source-library terms. Definitions are source-pending until reviewed."
+            subtitle="Search glossary entries for theology, scripture, and history. Definitions remain pending verification until reviewed."
           />
           <div className="mt-6">
             <Callout type="note" title="Draft glossary standard">

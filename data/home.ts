@@ -25,7 +25,7 @@ export const mainPaths: ResearchTreeNode[] = [
     id: "questions-from-atheists-and-agnostics",
     title: "Questions from atheists and agnostics",
     description:
-      "Careful, source-aware paths for doubt, meaning, evidence, and belief.",
+      "Careful paths for doubt, meaning, evidence, and belief.",
     href: "/atheism-agnosticism",
     tag: "Doubt",
   },
@@ -115,7 +115,7 @@ export const comparisonMethods = [
   {
     title: "Corrections welcome",
     description:
-      "Draft pages are not final. Readers can flag errors, and sourced corrections are welcomed before publication.",
+      "Draft material is not final. Errors can be flagged, and supported corrections are welcomed before publication.",
   },
 ];
 

@@ -9,7 +9,7 @@ export const siteName = "The Straight Path";
 export const siteNameArabic = "الصراط المستقيم";
 
 export const siteDescription =
-  "A respectful Islamic research library for sincere seekers, source-aware study, and careful comparison where needed.";
+  "A respectful Islamic research library for sincere seekers and careful comparison where needed.";
 
 export function getSiteUrl() {
   return process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";

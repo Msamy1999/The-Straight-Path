@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Islam Overview",
     description:
-      "Study Islam through careful definitions, source-aware notes, and beginner-friendly paths.",
+      "Study Islam through careful definitions, clear notes, and beginner-friendly paths.",
   },
 };
 
@@ -73,10 +73,10 @@ export default async function IslamOverviewPage() {
                 <Tag>Draft-aware</Tag>
               </div>
             </div>
-            <Callout type="note" title="Source-aware learning">
-              This library keeps draft material visibly marked. Future pages
-              should add verified scripture, translations, citations, and
-              source notes before making final claims.
+            <Callout type="note" title="Careful learning">
+              Draft material is clearly marked. Scripture, translations,
+              citations, and historical context should be checked before a
+              conclusion is treated as final.
             </Callout>
           </div>
         </Container>
@@ -88,7 +88,7 @@ export default async function IslamOverviewPage() {
             titleAs="h2"
             eyebrow="Foundations of Islam"
             title="A beginner outline, one topic at a time"
-            subtitle="Start wherever feels natural. Every foundational topic now links to a complete draft for careful reading and human review."
+            subtitle="Start wherever feels natural. Each foundational topic introduces one question clearly and separates evidence from interpretation."
           />
           <div className="mt-6">
             <ResearchTree

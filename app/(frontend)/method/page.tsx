@@ -59,7 +59,7 @@ const methodSteps = [
   {
     title: "Corrections welcome",
     description:
-      "Draft pages should be easy to improve when a source needs correction, a claim needs nuance, or a citation is missing.",
+      "Draft material should be easy to improve when evidence needs correction, a claim needs nuance, or a citation is missing.",
     icon: PencilLine,
   },
 ];
@@ -75,13 +75,13 @@ export default function MethodPage() {
           <div className="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <PageHeader
               eyebrow="Research Method"
-              title="How this library studies difficult questions"
-              subtitle="The Straight Path is educational and comparative. It is designed to help readers see what is scripture, what is interpretation, what is historical context, and what still needs source review."
+              title="A careful way to study difficult questions"
+              subtitle="Separate scripture, interpretation, historical context, and argument so each claim can be weighed on its own terms."
             />
             <Callout type="respectful-reminder" title="Educational disclaimer">
-              This site is for study and comparison. Readers should check claims
-              against cited sources, and draft pages are not final until they
-              have been reviewed.
+              This material is for study and comparison. Check important claims
+              against the cited evidence, and remember that draft material is not
+              final until they have been reviewed.
             </Callout>
           </div>
         </Container>
@@ -92,7 +92,7 @@ export default function MethodPage() {
           <PageHeader
             titleAs="h2"
             eyebrow="Method"
-            title="A clear path for source-aware study"
+            title="A clear path for careful study"
             subtitle="These standards guide future article writing, editing, and review."
           />
           <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -127,7 +127,7 @@ export default function MethodPage() {
             <div className="grid gap-4">
               <StatusExplanation
                 status={<ArticleStatusBadge status="draft" />}
-                description="A draft page may contain placeholders, source-pending sections, and unfinished study notes."
+                description="Draft material may contain placeholders, pending evidence, and unfinished study notes."
               />
               <StatusExplanation
                 status={<ArticleStatusBadge status="reviewed" />}
@@ -148,9 +148,8 @@ export default function MethodPage() {
             <div>
               <h2 className="text-2xl leading-snug">Check sources as you read</h2>
               <p className="mt-3 max-w-3xl text-muted-foreground">
-                Source cards, glossary entries, and draft articles should make
-                verification easier rather than asking readers to accept claims
-                without evidence.
+                Source cards, glossary entries, and draft discussions make it
+                easier to verify claims rather than accept them without evidence.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">

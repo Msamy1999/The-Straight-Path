@@ -20,11 +20,11 @@ const statusLabels: Record<ArticleStatus, string> = {
 
 const statusDescriptions: Record<ArticleStatus, string> = {
   draft:
-    "This page is a draft framework. Scripture, citations, and claims must be verified before publication.",
+    "A draft study whose scripture references, citations, and claims still need verification.",
   reviewed:
-    "This page is under review. Sources and wording should still be checked before final publication.",
+    "Under review; sources and wording should still be checked before final publication.",
   published:
-    "This page is published. Readers should still check claims against the cited sources.",
+    "Published with cited sources available for readers who want to verify the claims.",
 };
 
 export function getArticleStatusLabel(status: ArticleStatus) {

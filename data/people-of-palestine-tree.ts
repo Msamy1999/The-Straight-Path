@@ -1,7 +1,7 @@
 import type { ResearchTreeNode } from "@/types/domain";
 
 /**
- * A source-aware draft study path for /people-of-palestine. Every entry links
+ * A carefully sourced draft study path for /people-of-palestine. Every entry links
  * to a draft article; none is presented as a final or published conclusion.
  */
 export const peopleOfPalestineTree: ResearchTreeNode[] = [

@@ -56,7 +56,6 @@ export function ComparisonArticleLayout({
           titleAs="h2"
           eyebrow="Main question"
           title={comparison.mainQuestion}
-          subtitle={comparison.beginnerSummary}
         />
       </section>
 
@@ -80,15 +79,15 @@ export function ComparisonArticleLayout({
       <section id="comparison" className="scroll-mt-20">
         <ComparisonBlock
           title="Quranic and Biblical perspectives"
-          intro="The finished article should quote verified passages first, then clearly label interpretation and argument."
+          intro="Quote verified passages first, then clearly label interpretation and argument."
           left={{
             label: "Quranic perspective",
-            title: "Source-pending draft",
+            title: "Evidence pending",
             children: comparison.quranicPerspective,
           }}
           right={{
             label: "Biblical perspective",
-            title: "Source-pending draft",
+            title: "Evidence pending",
             children: comparison.biblicalPerspective,
           }}
         />
@@ -140,7 +139,7 @@ export function ComparisonArticleLayout({
           titleAs="h2"
           eyebrow="Common objections"
           title="Questions to answer fairly"
-          subtitle="Future responses should quote objections fairly and answer with citations."
+          subtitle="Quote objections fairly and answer them with citations."
         />
         <div className="mt-5 space-y-4">
           {comparison.commonObjections.map((item) => (
@@ -163,14 +162,14 @@ export function ComparisonArticleLayout({
           titleAs="h2"
           eyebrow="Related topics"
           title="Further study paths"
-          subtitle="These labels show how comparison articles can connect to broader categories."
+          subtitle="These topics connect the comparison with broader categories."
         />
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {comparison.relatedTopics.map((topic) => (
             <TopicCard
               key={topic}
               title={topic}
-              description="Placeholder related topic. Future versions can link this to a category, article, or glossary term."
+              description="Related topic placeholder; connect it to a category, study, or glossary term when ready."
               href={category.href}
               icon={CategoryIcon}
               label="Related topic"

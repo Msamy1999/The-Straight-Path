@@ -127,6 +127,43 @@ function applyGoogleLanguage(language: SupportedLanguage) {
   return true;
 }
 
+function applyGoogleLanguageWhenReady(language: SupportedLanguage) {
+  return new Promise<boolean>((resolve) => {
+    let attempts = 0;
+    let timer = 0;
+    let settled = false;
+
+    const finish = (applied: boolean) => {
+      if (settled) {
+        return;
+      }
+      settled = true;
+      window.clearTimeout(timer);
+      observer.disconnect();
+      resolve(applied);
+    };
+
+    const tryApply = () => {
+      if (applyGoogleLanguage(language)) {
+        finish(true);
+        return;
+      }
+
+      if (attempts >= 60) {
+        finish(false);
+        return;
+      }
+
+      attempts += 1;
+      timer = window.setTimeout(tryApply, 150);
+    };
+
+    const observer = new MutationObserver(tryApply);
+    observer.observe(document.body, { childList: true, subtree: true });
+    tryApply();
+  });
+}
+
 export function LanguageToggle({ className }: { className?: string }) {
   const [language, setLanguage] = useState<SupportedLanguage>("en");
   const [isLoading, setIsLoading] = useState(false);
@@ -138,31 +175,15 @@ export function LanguageToggle({ className }: { className?: string }) {
 
     if (savedLanguage === "ar") {
       void loadGoogleTranslate().then(() => {
-        let attempts = 0;
-        const apply = () => {
-          if (applyGoogleLanguage("ar") || attempts >= 12) {
-            return;
-          }
-          attempts += 1;
-          window.setTimeout(apply, 150);
-        };
-        apply();
+        void applyGoogleLanguageWhenReady("ar");
       });
     } else if (window.localStorage.getItem(LANGUAGE_STORAGE_KEY) === "en") {
       // If Google left its translation cookie behind, restore the English
       // source DOM when the next page mounts. This keeps the preference stable
       // without duplicating or pre-translating article content.
-      void loadGoogleTranslate().then(() => {
-        let attempts = 0;
-        const apply = () => {
-          if (applyGoogleLanguage("en") || attempts >= 12) {
-            setDirection("en");
-            return;
-          }
-          attempts += 1;
-          window.setTimeout(apply, 150);
-        };
-        apply();
+      void loadGoogleTranslate().then(async () => {
+        await applyGoogleLanguageWhenReady("en");
+        setDirection("en");
       });
     }
 
@@ -182,33 +203,18 @@ export function LanguageToggle({ className }: { className?: string }) {
       // change asynchronously, so keep retrying briefly until its hidden
       // control is ready; the next page mount repeats this if needed.
       setIsLoading(true);
-      let attempts = 0;
-      const apply = () => {
-        if (applyGoogleLanguage("en") || attempts >= 12) {
-          setDirection("en");
-          setIsLoading(false);
-          return;
-        }
-        attempts += 1;
-        window.setTimeout(apply, 150);
-      };
-      apply();
+      void applyGoogleLanguageWhenReady("en").then(() => {
+        setDirection("en");
+        setIsLoading(false);
+      });
       return;
     }
 
     setIsLoading(true);
     try {
       await loadGoogleTranslate();
-      let attempts = 0;
-      const apply = () => {
-        if (applyGoogleLanguage("ar") || attempts >= 12) {
-          setIsLoading(false);
-          return;
-        }
-        attempts += 1;
-        window.setTimeout(apply, 150);
-      };
-      apply();
+      await applyGoogleLanguageWhenReady("ar");
+      setIsLoading(false);
     } catch {
       setIsLoading(false);
       saveLanguage("en");
@@ -277,6 +283,7 @@ export function LanguageToggle({ className }: { className?: string }) {
         type="button"
         translate="no"
         data-language-toggle="true"
+        dir={language === "ar" ? "rtl" : "ltr"}
         disabled={isLoading}
         aria-label={language === "en" ? "Translate site to Arabic" : "Return site to English"}
         className={cn(

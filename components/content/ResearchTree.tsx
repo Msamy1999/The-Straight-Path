@@ -154,14 +154,6 @@ function TreeNode({
             <NodeBadges node={node} />
           </summary>
           <div className="ml-3 border-l border-border pb-0.5 pl-2 sm:ml-4 sm:pl-3">
-            {node.href ? (
-            <Link
-              href={node.href}
-              className="mb-0.5 inline-flex min-h-7 items-center rounded-sm text-xs font-semibold text-accent no-underline hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-            >
-                Explore {node.title}
-            </Link>
-            ) : null}
             <ol className="grid gap-0">
               {node.children?.map((child, index) => (
                 <TreeNode

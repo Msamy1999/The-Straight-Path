@@ -52,8 +52,13 @@ export function ArticleLayout({
   children,
 }: ArticleLayoutProps) {
   const CategoryIcon = categoryIconMap[category.icon] ?? fallbackCategoryIcon;
+  const visibleSections = article.sections.filter(
+    (section) =>
+      section.id !== "beginner-summary" &&
+      section.title.trim().toLowerCase() !== "beginner summary",
+  );
   const tableOfContents =
-    tocItems ?? article.sections.map((section) => ({ id: section.id, title: section.title }));
+    tocItems ?? visibleSections.map((section) => ({ id: section.id, title: section.title }));
   const articleText = plainText ?? buildArticlePlainText(article);
 
   return (
@@ -108,7 +113,7 @@ export function ArticleLayout({
             <article className="min-w-0">
               <div className="mt-2 space-y-3">
                 {children ??
-                  article.sections.map((section) => (
+                  visibleSections.map((section) => (
                     <ArticleSectionBlock key={section.id} article={article} sectionId={section.id} />
                   ))}
               </div>
@@ -219,6 +224,7 @@ function ArticleSectionBlock({
     <details
       id={section.id}
       className="group scroll-mt-24 rounded-lg border border-border bg-card shadow-soft"
+      open={section.kind === "summary"}
     >
       <summary className="flex cursor-pointer list-none items-start justify-between gap-4 px-4 py-4 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-5 [&::-webkit-details-marker]:hidden">
         <span>
@@ -264,17 +270,21 @@ function ArticleSectionBody({ body }: { body: string }) {
           }))
           .filter((segment): segment is typeof segment & { label: string } => Boolean(segment.label));
 
+        if (line.trim().length === 0) {
+          return <span key={`blank-${index}`} className="block h-1" aria-hidden="true" />;
+        }
+
         if (quotes.length > 0) {
           let cursor = 0;
           return (
-            <span key={`${index}-${line}`}>
+            <span key={`line-${index}`}>
               {quotes.map((quote) => {
                 const before = line.slice(cursor, quote.start);
                 cursor = quote.end;
 
                 return (
                   <span key={`${quote.start}-${quote.end}`}>
-                    {before}
+                    {renderInlineMarkdown(before, `${index}-${quote.start}-before`)}
                     <span className="block py-1.5">
                       <span
                         lang="ar"
@@ -294,19 +304,36 @@ function ArticleSectionBody({ body }: { body: string }) {
                   </span>
                 );
               })}
-              {line.slice(cursor)}
+              {renderInlineMarkdown(line.slice(cursor), `${index}-after`)}
               {index < lines.length - 1 ? <br /> : null}
             </span>
           );
         }
 
         return (
-          <span key={`${index}-${line}`}>
-            {line}
+          <span key={`line-${index}`}>
+            {renderInlineMarkdown(line, `${index}-line`)}
             {index < lines.length - 1 ? <br /> : null}
           </span>
         );
       })}
     </div>
   );
+}
+
+function renderInlineMarkdown(text: string, keyPrefix: string): ReactNode {
+  const parts = text.split(/(\*\*[^*]+\*\*|__[\s\S]+?__)/g);
+
+  return parts.map((part, index) => {
+    const match = part.match(/^\*\*([\s\S]+)\*\*$|^__([\s\S]+)__$/);
+    if (!match) {
+      return <span key={`${keyPrefix}-${index}`}>{part}</span>;
+    }
+
+    return (
+      <strong key={`${keyPrefix}-${index}`} className="font-semibold text-foreground">
+        {match[1] ?? match[2]}
+      </strong>
+    );
+  });
 }

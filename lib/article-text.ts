@@ -29,6 +29,12 @@ export function buildArticlePlainText(article: Article): string {
     parts.push(article.summary);
   }
   for (const section of article.sections) {
+    if (
+      section.id === "beginner-summary" ||
+      section.title.trim().toLowerCase() === "beginner summary"
+    ) {
+      continue;
+    }
     parts.push(section.title, section.body);
   }
 
@@ -52,7 +58,6 @@ export function buildComparisonPlainText(
 
   parts.push(
     comparison.mainQuestion,
-    comparison.beginnerSummary,
     "Quranic perspective.",
     comparison.quranicPerspective,
     "Biblical perspective.",

@@ -76,6 +76,40 @@ function opt<T>(value: T | null | undefined): T | undefined {
   return value ?? undefined;
 }
 
+/**
+ * Keep the prose focused on the subject rather than the publishing process.
+ * Draft records contain a few legacy notes that referred readers back to the
+ * website, the library, or the article itself; those phrases are not part of
+ * the argument and are normalized at the content boundary.
+ */
+function cleanEditorialText(value: string): string {
+  return value
+    .replace(
+      /\bWhat This Page Does(?:—|–|--|-)\s*and Does Not(?:—|–|--|-)?\s*Call a Contradiction\b/gi,
+      "What Counts—and Does Not Count—as a Contradiction",
+    )
+    .replace(
+      /\bThis page does not call manuscript additions or wording variants contradictions\.?/gi,
+      "Manuscript additions and wording variants are not counted as contradictions.",
+    )
+    .replace(/\bThis library flags such matters honestly\b/gi, "Such matters are flagged honestly")
+    .replace(/\bFollowing this library(?:'s|’s) method\b/gi, "Using these distinctions")
+    .replace(/\bsource-aware\b/gi, "well-supported")
+    .replace(/\bsource awareness\b/gi, "careful support")
+    .replace(/\bin this article\b/gi, "here")
+    .replace(/\bthis article\b/gi, "the analysis")
+    .replace(/\bthis draft\b/gi, "the analysis")
+    .replace(/\bthis page\b/gi, "the discussion")
+    .replace(/\bthis library\b/gi, "the discussion")
+    .replace(/\bthe library(?:'s|’s)\b/gi, "the")
+    .replace(/\bthis site\b/gi, "the discussion")
+    .replace(/\bthe site(?:'s|’s)\b/gi, "the")
+    .replace(/\bthe website\b/gi, "the discussion")
+    .replace(/\bcompanion articles?\b/gi, "related discussions")
+    .replace(/\bthese articles\b/gi, "these discussions")
+    .replace(/\bthe textual-variants article\b/gi, "the textual-variants study");
+}
+
 function citationKeys(value: unknown): string[] {
   if (!Array.isArray(value)) {
     return [];
@@ -119,20 +153,26 @@ function mapArticle(doc: ArticleDoc): Article {
   return {
     slug: doc.slug,
     title: doc.title,
-    subtitle: doc.subtitle,
+    subtitle: cleanEditorialText(doc.subtitle),
     category: doc.category,
     audienceLevel: doc.audienceLevel,
-    summary: doc.summary,
+    summary: cleanEditorialText(doc.summary),
     tags: doc.tags ?? [],
     status: doc.status,
     lastUpdated: doc.lastUpdated.slice(0, 10),
-    sections: (doc.sections ?? []).map((section) => ({
-      id: section.sectionId,
-      title: section.title,
-      kind: section.kind,
-      body: section.body,
-      citationIds: citationKeys(section.citations),
-    })),
+    sections: (doc.sections ?? [])
+      .filter(
+        (section) =>
+          section.sectionId !== "beginner-summary" &&
+          section.title.trim().toLowerCase() !== "beginner summary",
+      )
+      .map((section) => ({
+        id: section.sectionId,
+        title: cleanEditorialText(section.title),
+        kind: section.kind,
+        body: cleanEditorialText(section.body),
+        citationIds: citationKeys(section.citations),
+      })),
     citations: citationKeys(doc.citations),
     relatedArticles: Array.isArray(doc.relatedArticles)
       ? doc.relatedArticles
@@ -164,12 +204,12 @@ function mapCitation(doc: CitationDoc): Citation {
   return {
     id: doc.citationKey,
     type: doc.type,
-    title: doc.title,
+    title: cleanEditorialText(doc.title),
     author: opt(doc.author),
     publisher: opt(doc.publisher),
     year: opt(doc.year),
     url: opt(doc.url),
-    note: opt(doc.note),
+    note: opt(doc.note ? cleanEditorialText(doc.note) : undefined),
   };
 }
 
@@ -405,7 +445,7 @@ export async function getFullLibraryTree(): Promise<ResearchTreeNode[]> {
     {
       id: "people-of-palestine",
       title: "People of Palestine",
-      description: "Human-centred, source-aware draft study topics.",
+      description: "Human-centred draft study topics.",
       href: "/people-of-palestine",
       tag: "Drafts",
       status: "draft",
@@ -421,7 +461,7 @@ export async function getFullLibraryTree(): Promise<ResearchTreeNode[]> {
         {
           id: "method",
           title: "How we study",
-          description: "The library's source, correction, and comparison standards.",
+          description: "Standards for evidence, correction, and comparison.",
           href: "/method",
         },
         {
@@ -777,19 +817,19 @@ export const getComparisonArticleBySlug = cache(async (slug: string) => {
 
   return {
     slug: doc.slug,
-    mainQuestion: doc.mainQuestion,
-    beginnerSummary: doc.beginnerSummary,
-    quranicPerspective: doc.quranicPerspective,
-    biblicalPerspective: doc.biblicalPerspective,
-    historicalContext: doc.historicalContext,
-    christianInterpretation: doc.christianInterpretation,
-    islamicResponse: doc.islamicResponse,
-    keyDifferences: (doc.keyDifferences ?? []).map((item) => item.difference),
+    mainQuestion: cleanEditorialText(doc.mainQuestion),
+    beginnerSummary: cleanEditorialText(doc.beginnerSummary),
+    quranicPerspective: cleanEditorialText(doc.quranicPerspective),
+    biblicalPerspective: cleanEditorialText(doc.biblicalPerspective),
+    historicalContext: cleanEditorialText(doc.historicalContext),
+    christianInterpretation: cleanEditorialText(doc.christianInterpretation),
+    islamicResponse: cleanEditorialText(doc.islamicResponse),
+    keyDifferences: (doc.keyDifferences ?? []).map((item) => cleanEditorialText(item.difference)),
     commonObjections: (doc.commonObjections ?? []).map((item) => ({
-      objection: item.objection,
-      response: item.response,
+      objection: cleanEditorialText(item.objection),
+      response: cleanEditorialText(item.response),
     })),
-    respectfulConclusion: doc.respectfulConclusion,
+    respectfulConclusion: cleanEditorialText(doc.respectfulConclusion),
     quranVerses: Array.isArray(doc.quranVerses)
       ? (doc.quranVerses as QuranVerseDoc[])
           .filter((verse) => typeof verse === "object" && verse !== null)
@@ -801,7 +841,7 @@ export const getComparisonArticleBySlug = cache(async (slug: string) => {
           .map(mapBibleVerse)
       : [],
     sources: citationKeys(doc.sources),
-    relatedTopics: (doc.relatedTopics ?? []).map((item) => item.topic),
+    relatedTopics: (doc.relatedTopics ?? []).map((item) => cleanEditorialText(item.topic)),
   };
 });
 

@@ -583,24 +583,19 @@ export const islamChristianityBranches: IslamChristianityBranchDef[] = [
     ),
   ]),
   branch("difficult-questions", [
-    {
-      title: "What is a contradiction?",
-      href: "/articles/what-is-a-contradiction",
-      description:
-        "A framing article distinguishing genuine contradictions from textual variants, harmonizable difficulties, and interpretation.",
-      status: "draft",
-      defaultOpen: true,
-      children: [
-        {
-          title: "Contradictions in the Bible",
-          href: "/articles/contradictions-in-the-bible",
-          description:
-            "A draft map of commonly cited biblical tensions. Each item states the competing claims, why critics call it a contradiction, and the main harmonization or critical response.",
-          tag: "Bible",
-          status: "draft",
-        },
-      ],
-    },
+    topic(
+      "What is a contradiction?",
+      "/articles/what-is-a-contradiction",
+      "A framing article distinguishing genuine contradictions from textual variants, harmonizable difficulties, and interpretation.",
+      "draft",
+    ),
+    topic(
+      "Contradictions in the Bible",
+      "/articles/contradictions-in-the-bible",
+      "A map of commonly cited biblical tensions. Each item states the competing claims, why critics call it a contradiction, and the main harmonization or critical response.",
+      "draft",
+      "Bible",
+    ),
     topic(
       "Genealogies of Jesus",
       "/articles/genealogies-of-jesus",

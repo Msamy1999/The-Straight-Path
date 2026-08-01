@@ -60,9 +60,9 @@ export async function CategoryPage({ category }: CategoryPageProps) {
               </div>
             </div>
             <Callout type="note" title="Citation standard">
-              Future articles in this section will include clear citations,
-              scripture references, translation/version attribution, and honest
-              source-status labels before claims are published.
+              Claims should be accompanied by clear citations, scripture
+              references, translation or version attribution, and an honest
+              indication of the evidence behind them.
             </Callout>
           </div>
         </Container>
@@ -76,7 +76,7 @@ export async function CategoryPage({ category }: CategoryPageProps) {
                 titleAs="h2"
                 eyebrow="Draft articles"
                 title="Article templates in this category"
-                subtitle="These draft pages demonstrate the article architecture without publishing final claims."
+                subtitle="These drafts collect material that remains under review."
               />
               <div className="mt-6 grid gap-4 md:grid-cols-2">
                 {draftArticles.map((article) => (
@@ -96,8 +96,8 @@ export async function CategoryPage({ category }: CategoryPageProps) {
           <PageHeader
             titleAs="h2"
             eyebrow="Planned studies"
-            title="Future article cards"
-            subtitle="These placeholders mark the architecture for later sourced content."
+            title="Future study cards"
+            subtitle="These placeholders mark topics for future study."
           />
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {category.futureTopics.map((topic) => (
@@ -117,12 +117,12 @@ export async function CategoryPage({ category }: CategoryPageProps) {
 
       <Section className="border-t border-border">
         <Container>
-          <PageHeader
-            titleAs="h2"
-            eyebrow="Related categories"
-            title="Continue through the library"
-            subtitle="Related sections help future articles connect evidence, definitions, and source notes across the site."
-          />
+              <PageHeader
+                titleAs="h2"
+                eyebrow="Related categories"
+                title="Continue through the library"
+                subtitle="Related sections connect evidence, definitions, and source notes across the wider study."
+              />
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {relatedCategories.map((related) => {
               const RelatedIcon =
