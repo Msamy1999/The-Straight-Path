@@ -39,6 +39,8 @@ type ArticleLayoutProps = {
    * otherwise it is built from the article sections.
    */
   plainText?: string;
+  /** Use the claims-style accordion presentation for selected long-form articles. */
+  collapsibleSections?: boolean;
   children?: ReactNode;
 };
 
@@ -49,6 +51,7 @@ export function ArticleLayout({
   relatedArticles,
   tocItems,
   plainText,
+  collapsibleSections = false,
   children,
 }: ArticleLayoutProps) {
   const CategoryIcon = categoryIconMap[category.icon] ?? fallbackCategoryIcon;
@@ -63,7 +66,7 @@ export function ArticleLayout({
 
   return (
     <>
-      <ArticleHashOpener />
+      {collapsibleSections ? <ArticleHashOpener /> : null}
       <Section className="border-b border-border" spacing="sm">
         <Container>
           <Breadcrumbs
@@ -111,36 +114,55 @@ export function ArticleLayout({
         <Container>
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start">
             <article className="min-w-0">
-              <div className="mt-2 space-y-3">
+              <div className={collapsibleSections ? "mt-2 space-y-3" : "mt-8 space-y-10"}>
                 {children ??
                   visibleSections.map((section) => (
-                    <ArticleSectionBlock key={section.id} article={article} sectionId={section.id} />
+                    <ArticleSectionBlock
+                      key={section.id}
+                      article={article}
+                      sectionId={section.id}
+                      collapsible={collapsibleSections}
+                    />
                   ))}
               </div>
 
-              <details
-                id="sources"
-                className="group mt-8 scroll-mt-20 rounded-lg border border-border bg-card shadow-soft"
-              >
-                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 px-4 py-4 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-5 [&::-webkit-details-marker]:hidden">
-                  <span>
-                    <span className="block text-xs font-semibold uppercase text-accent">Sources</span>
-                    <span className="mt-1 block text-base font-semibold text-foreground sm:text-lg">
-                      Citations and source status
+              {collapsibleSections ? (
+                <details
+                  id="sources"
+                  className="group mt-8 scroll-mt-20 rounded-lg border border-border bg-card shadow-soft"
+                >
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-4 px-4 py-4 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-5 [&::-webkit-details-marker]:hidden">
+                    <span>
+                      <span className="block text-xs font-semibold uppercase text-accent">Sources</span>
+                      <span className="mt-1 block text-base font-semibold text-foreground sm:text-lg">
+                        Citations and source status
+                      </span>
+                      <span className="mt-1 block text-sm leading-6 text-muted-foreground">
+                        Placeholder or source-pending citations must be replaced before review or publication.
+                      </span>
                     </span>
-                    <span className="mt-1 block text-sm leading-6 text-muted-foreground">
-                      Placeholder or source-pending citations must be replaced before review or publication.
-                    </span>
-                  </span>
-                  <ChevronDown
-                    aria-hidden="true"
-                    className="mt-1 h-5 w-5 shrink-0 text-accent transition-transform group-open:rotate-180"
+                    <ChevronDown
+                      aria-hidden="true"
+                      className="mt-1 h-5 w-5 shrink-0 text-accent transition-transform group-open:rotate-180"
+                    />
+                  </summary>
+                  <div className="border-t border-border px-4 py-4 sm:px-5 sm:py-5">
+                    <CitationList citations={citations} />
+                  </div>
+                </details>
+              ) : (
+                <section id="sources" className="mt-12 scroll-mt-20">
+                  <PageHeader
+                    titleAs="h2"
+                    eyebrow="Sources"
+                    title="Citations and source status"
+                    subtitle="Placeholder or source-pending citations must be replaced before review or publication."
                   />
-                </summary>
-                <div className="border-t border-border px-4 py-4 sm:px-5 sm:py-5">
-                  <CitationList citations={citations} />
-                </div>
-              </details>
+                  <div className="mt-6">
+                    <CitationList citations={citations} />
+                  </div>
+                </section>
+              )}
 
               {relatedArticles.length > 0 ? (
                 <section id="related-articles" className="mt-12 scroll-mt-20">
@@ -210,14 +232,33 @@ export function ArticleLayout({
 function ArticleSectionBlock({
   article,
   sectionId,
+  collapsible,
 }: {
   article: Article;
   sectionId: string;
+  collapsible: boolean;
 }) {
   const section = article.sections.find((item) => item.id === sectionId);
 
   if (!section) {
     return null;
+  }
+
+  if (!collapsible) {
+    return (
+      <section id={section.id} className="scroll-mt-20">
+        <p className="text-xs font-semibold uppercase text-accent sm:text-sm">
+          {section.kind}
+        </p>
+        <h2 className="mt-2 select-text text-lg leading-snug sm:mt-3 sm:text-xl">{section.title}</h2>
+        <ArticleSectionBody body={section.body} />
+        {section.citationIds && section.citationIds.length > 0 ? (
+          <p className="mt-4 text-xs font-medium uppercase text-muted-foreground">
+            Source markers to verify: {section.citationIds.join(", ")}
+          </p>
+        ) : null}
+      </section>
+    );
   }
 
   return (

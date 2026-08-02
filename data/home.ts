@@ -105,7 +105,7 @@ export const comparisonMethods = [
   {
     title: "Respectful tone",
     description:
-      "Speak to Muslims, Christians, and sincere seekers without mockery or hostility.",
+      "Speak to all sincere seekers without mockery or hostility.",
   },
   {
     title: "Clear citations",

@@ -95,7 +95,7 @@ export default async function HomePage() {
               titleAs="h2"
               eyebrow="For sincere seekers"
               title={'Goals of “The Straight Path”'}
-              subtitle="The Straight Path is for visitors with real questions and a desire to understand the truth. Muslims, Christians, and curious readers should feel safe to ask questions here. The goal is not to win a fight, but to explore the answers to life’s greatest questions with sincerity, honesty, and respect."
+              subtitle="The Straight Path is for visitors with real questions and a desire to understand the truth. Readers from all backgrounds should feel safe to ask questions here. The goal is not to win a fight, but to explore the answers to life’s greatest questions with sincerity, honesty, and respect."
             />
           </div>
         </Container>
@@ -172,7 +172,7 @@ export default async function HomePage() {
             <PageHeader
               titleAs="h2"
               eyebrow="How we study"
-              title="A calm method for difficult questions"
+              title="A reasoned approach to difficult questions"
               subtitle="See clearly what is scripture, what is interpretation, what is history, what is argument, and what remains uncertain."
             />
             <div className="grid gap-3">

@@ -241,7 +241,7 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
   },
   {
     id: "homosexuality",
-    title: "Islam prohibits homosexuality.",
+    title: "Islam promotes hatred against the LGBTQ+ community.",
     claim: "Critics argue that Islam's sexual ethics are unjust because classical Islamic teaching prohibits same-sex sexual acts.",
     response: [
       "Islamic teaching distinguishes a person's inherent dignity from every desire or action. The Quran places sexual intimacy within marriage between a man and a woman, and the classical Muslim understanding of the passages about the people of Lot prohibits same-sex sexual acts. That is a moral teaching shared by the major classical schools, not a licence to demean people.",

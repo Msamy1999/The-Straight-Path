@@ -117,6 +117,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       category={category}
       citations={citations}
       relatedArticles={relatedArticles}
+      collapsibleSections={article.slug === "contradictions-in-the-bible"}
     />
   );
 }
