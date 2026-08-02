@@ -96,6 +96,8 @@ function cleanEditorialText(value: string): string {
     .replace(/\bFollowing this library(?:'s|’s) method\b/gi, "Using these distinctions")
     .replace(/\bsource-aware\b/gi, "well-supported")
     .replace(/\bsource awareness\b/gi, "careful support")
+    .replace(/\bHow This Library Labels Its Sources\b/gi, "How Sources Are Labeled")
+    .replace(/\bHow to Use This Library\b/gi, "How to Use These Sources")
     .replace(/\bthis library(?:['’]s)?\s+preservation-branch articles\b/gi, "the preservation evidence")
     .replace(/\bthis article(?:['’]s)?\b/gi, "the discussion")
     .replace(/\bthis library(?:['’]s)?\b/gi, "the discussion")
@@ -158,7 +160,7 @@ type ArticleDoc = {
 function mapArticle(doc: ArticleDoc): Article {
   return {
     slug: doc.slug,
-    title: doc.title,
+    title: cleanEditorialText(doc.title),
     subtitle: cleanEditorialText(doc.subtitle),
     category: doc.category,
     audienceLevel: doc.audienceLevel,
