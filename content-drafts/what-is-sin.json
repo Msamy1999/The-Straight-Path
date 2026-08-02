@@ -1,10 +1,10 @@
 {
   "slug": "what-is-sin",
   "title": "What Is Sin?",
-  "subtitle": "An inherited debt paid by Christ, or a free choice erased by repentance? Comparing how the Bible and the Quran define wrongdoing",
+  "subtitle": "An inherited debt paid by Christ, or a free choice erased by repentance? Comparing how the Bible and the Quran define wrongdoing — Written for sincere seekers asking whether Islam is true.",
   "category": "the-quran-and-the-bible",
   "audienceLevel": "beginner",
-  "summary": "Christianity defines sin as 'lawlessness' (1 John 3:4) and, in mainstream teaching, as a condition every person inherits from Adam's fall, so serious that 'the wages of sin is death' (Romans 6:23) and only Christ's atonement can pay it. Islam teaches that every soul begins morally free and unstained — a claim the Quran grounds in the principle that 'no bearer of burdens will bear the burden of another' (Quran 17:15) — and that sin is a choice ranging from minor lapses to grave major sins (kaba'ir), fully erased through sincere repentance offered directly to God (Quran 66:8). This article quotes each tradition's own scripture — Romans 3:23, Romans 6:23, 1 John 3:4, and 1 John 1:9 alongside Quran 17:15, 4:31, 53:32, 66:8, and 3:135 — before comparing how each understands what sin is and how it is removed.",
+  "summary": "For sincere seekers asking whether Islam is true: Western Christian formulations define sin as 'lawlessness' (1 John 3:4), and many Western accounts connect the human condition to Adam's fall; Eastern Orthodox accounts more often speak of ancestral sin and its consequences rather than inherited guilt in the same way. Many Christian traditions connect forgiveness to Christ's atoning work, though they explain that work differently. Islam teaches that every soul begins morally free and unstained — a claim the Quran grounds in the principle that 'no bearer of burdens will bear the burden of another' (Quran 17:15) — and that sin is a choice ranging from minor lapses to grave major sins (kaba'ir), fully erased through sincere repentance offered directly to God (Quran 66:8). This article quotes each tradition's own scripture before comparing how each understands what sin is and how it is removed.",
   "tags": [
     "Theology",
     "Scripture",
@@ -13,7 +13,7 @@
   ],
   "seo": {
     "metaTitle": "What Is Sin? Islam and Christianity Compared",
-    "metaDescription": "Is sin an inherited debt Christ must pay, or a free choice erased by repentance? Compare Romans 3:23 and 1 John 3:4 with the Quran's teaching on major sins.",
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: What Is Sin?.",
     "keywords": [
       "what is sin",
       "sin in Islam",
@@ -28,6 +28,12 @@
     ]
   },
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nWestern Christian original-sin formulations should be distinguished from Eastern Orthodox ancestral-sin accounts and other Christian readings. Islam's teaching on fitrah, personal responsibility, repentance, and mercy is a positive truth claim, not only a criticism of Christianity.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "beginner-summary",
       "title": "In One Minute",
@@ -83,10 +89,16 @@
       "body": "Drawing the Quran's verses together, Islam's picture of sin holds together as one coherent claim about God's justice and mercy. Human beings are created free and morally unstained — no soul, the Quran insists, 'will bear the burden of another' (Quran 17:15) — so sin is something a person does, not a debt attached at birth. Sin is real and comes in degrees — the Quran names 'major sins' distinctly from lesser lapses (Quran 4:31, 53:32) — but no degree of sin outruns God's mercy, described as 'vast' (Quran 53:32). The remedy God has appointed is not a payment exacted from someone else; it is 'sincere repentance' offered directly to Him (Quran 66:8), available the instant a person remembers God, seeks forgiveness, and stops (Quran 3:135).\n\nMuslims find this picture both just and merciful: just, because no one inherits another's guilt or needs another to die for their own choices; merciful, because forgiveness is never further away than a sincere turning of the heart, and God Himself poses the question that closes the case — 'who can forgive sins except Allah?' (Quran 3:135). The invitation of this article is to weigh that picture against the biblical texts quoted here — 'sin is lawlessness' (1 John 3:4), 'all have sinned' (Romans 3:23), 'the wages of sin is death' (Romans 6:23), 'confess our sins' (1 John 1:9) — and ask which account of a just, merciful God, and of the sinner standing before Him, sits most naturally together."
     },
     {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nWestern Christian original-sin formulations should be distinguished from Eastern Orthodox ancestral-sin accounts and other Christian readings. Islam's teaching on fitrah, personal responsibility, repentance, and mercy is a positive truth claim, not only a criticism of Christianity.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
+    },
+    {
       "sectionId": "faq",
       "title": "Frequently Asked Questions",
       "kind": "notes",
-      "body": "Q: Does Islam teach that humans are born sinful?\nA: No. The Quran states that 'no bearer of burdens will bear the burden of another' (Quran 17:15), so every soul is treated as morally free and unstained at birth; sin only enters the picture once a person makes a wrong choice as a responsible agent. This is explored further in the companion article on original sin and personal responsibility.\n\nQ: Are all sins equally serious in Islam?\nA: No. The Quran distinguishes 'major sins' (kaba'ir) from lesser, 'slight' ones (Quran 4:31, 53:32), and promises that avoiding the major sins brings mercy for the smaller ones. Classical scholars, most famously al-Dhahabi in his work Al-Kaba'ir, catalogued and discussed these major sins in detail.\n\nQ: Does Christianity teach that all sins carry the same weight?\nA: Christians disagree among themselves. Catholic and Orthodox theology distinguish mortal sins from venial sins, a grading not unlike the Quran's major and minor sins. Many Protestant traditions instead read verses like 1 John 3:4 as treating all sin as lawlessness before a holy God, even while granting that sins differ in their earthly consequences.\n\nQ: Why does Christianity say sin requires Christ's death, while Islam says it is removed by repentance?\nA: The two traditions picture sin's mechanism differently. Romans 6:23 describes sin's penalty as a debt ('wages') paid through Christ's atoning death. The Quran never introduces a substitute bearing that penalty; it presents God as forgiving directly in response to 'sincere repentance' (Quran 66:8), because He is 'vast in forgiveness' (Quran 53:32).\n\nQ: Can a Muslim ever be certain their sins are forgiven?\nA: The Quran promises that God's forgiveness is 'vast' (Quran 53:32) and open to whoever turns to Him with sincere repentance and does not return to the wrong once they know better (Quran 3:135). Muslims are taught to combine hope in that mercy with continued watchfulness over their own conduct, rather than either despair or presumption."
+      "body": "Q: Does Islam teach that humans are born sinful?\nA: No. The Quran states that 'no bearer of burdens will bear the burden of another' (Quran 17:15), so every soul is treated as morally free and unstained at birth; sin only enters the picture once a person makes a wrong choice as a responsible agent. This is explored further in the companion article on original sin and personal responsibility.\n\nQ: Are all sins equally serious in Islam?\nA: No. The Quran distinguishes 'major sins' (kaba'ir) from lesser, 'slight' ones (Quran 4:31, 53:32), and promises that avoiding the major sins brings mercy for the smaller ones. Classical scholars, most famously al-Dhahabi in his work Al-Kaba'ir, catalogued and discussed these major sins in detail.\n\nQ: Does Christianity teach that all sins carry the same weight?\nA: Christians disagree among themselves. Catholic and Orthodox theology distinguish mortal sins from venial sins, a grading not unlike the Quran's major and minor sins. Many Protestant traditions instead read verses like 1 John 3:4 as treating all sin as lawlessness before a holy God, even while granting that sins differ in their earthly consequences.\n\nQ: Why does Christianity say sin requires Christ's death, while Islam says it is removed by repentance?\nA: The two traditions picture sin's mechanism differently. Romans 6:23 describes sin's penalty as a debt ('wages') paid through Christ's atoning death. The Quran never introduces a substitute bearing that penalty; it presents God as forgiving directly in response to 'sincere repentance' (Quran 66:8), because He is 'vast in forgiveness' (Quran 53:32).\n\nQ: Can a Muslim ever be certain their sins are forgiven?\nA: The Quran promises that God's forgiveness is 'vast' (Quran 53:32) and open to whoever turns to Him with sincere repentance and does not return to the wrong once they know better (Quran 3:135). Muslims are taught to combine hope in that mercy with continued watchfulness over their own conduct, rather than either despair or presumption.\n\nQ: If I am asking whether Islam is true, what should I do next?\nA: Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Western Christian original-sin formulations should be distinguished from Eastern Orthodox ancestral-sin accounts and other Christian readings. Islam's teaching on fitrah, personal responsibility, repentance, and mercy is a positive truth claim, not only a criticism of Christianity."
     },
     {
       "sectionId": "further-reading",
@@ -205,6 +217,10 @@
     {
       "question": "Can a Muslim ever be certain their sins are forgiven?",
       "answer": "The Quran promises that God's forgiveness is 'vast' (Quran 53:32) and open to whoever turns to Him with sincere repentance and does not return to the wrong once they know better (Quran 3:135). Muslims are taught to combine hope in that mercy with continued watchfulness over their own conduct, rather than either despair or presumption."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Western Christian original-sin formulations should be distinguished from Eastern Orthodox ancestral-sin accounts and other Christian readings. Islam's teaching on fitrah, personal responsibility, repentance, and mercy is a positive truth claim, not only a criticism of Christianity."
     }
   ],
   "relatedSlugs": [

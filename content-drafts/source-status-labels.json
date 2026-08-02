@@ -1,10 +1,10 @@
 {
   "slug": "source-status-labels",
   "title": "How This Library Labels Its Sources",
-  "subtitle": "What Draft, Under Review, Published, Source Pending, and Verified mean — and why nothing goes live until every citation is checked",
+  "subtitle": "What Draft, Under Review, Published, Source Pending, and Verified mean — and why nothing goes live until every citation is checked — Written for sincere seekers asking whether Islam is true.",
   "category": "sources",
   "audienceLevel": "beginner",
-  "summary": "Every article and every quotation in this library carries a visible status label. Articles move through Draft, Under Review, and Published, while individual citations and scripture quotations are marked Source Pending until they have been checked word-for-word against a named original, at which point they become Verified. No article is published until every citation inside it is verified. This page explains each label, why the system exists, and how you can report an error if you find one.",
+  "summary": "For sincere seekers asking whether Islam is true: Every article and every quotation in this library carries a visible status label. Articles move through Draft, Under Review, and Published, while individual citations and scripture quotations are marked Source Pending until they have been checked word-for-word against a named original, at which point they become Verified. No article is published until every citation inside it is verified. This page explains each label, why the system exists, and how you can report an error if you find one.",
   "tags": [
     "Sources",
     "Scripture",
@@ -12,7 +12,7 @@
   ],
   "seo": {
     "metaTitle": "How This Library Labels Its Sources | The Straight Path",
-    "metaDescription": "Learn what Draft, Under Review, Published, Source Pending, and Verified mean in this Islamic research library, why every citation is checked before publication, and how to report errors.",
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: How This Library Labels Its Sources.",
     "keywords": [
       "source verification",
       "citation labels",
@@ -24,6 +24,12 @@
     ]
   },
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nReliable investigation of Islam requires primary texts, transparent source labels, and honest acknowledgment of uncertainty; careful method serves the truth-seeking question rather than replacing it.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "beginner-summary",
       "title": "In Brief",
@@ -79,10 +85,16 @@
       "body": "For Muslims, careful sourcing is not merely good editorial practice; it is obedience. The Quran commands believers to 'investigate' information before acting on it (Quran 49:6) and warns that a person 'will be questioned' about what they repeat (Quran 17:36). A library built to present Islam's case is therefore bound, by Islam itself, to the strictest accuracy — especially when quoting the scriptures of others.\n\nThere is a quiet argument inside the system too: a position that fears checking hides its sources, while a position confident of the truth invites scrutiny.\n\nSo read published articles knowing every citation has been verified, treat Draft and Source Pending with the caution they ask for, and if you find an error, report it. Correcting us is not an attack; it is a service to the truth we are all accountable for."
     },
     {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nReliable investigation of Islam requires primary texts, transparent source labels, and honest acknowledgment of uncertainty; careful method serves the truth-seeking question rather than replacing it.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
+    },
+    {
       "sectionId": "faq",
       "title": "Frequently Asked Questions",
       "kind": "notes",
-      "body": "Q: What is the difference between Draft and Under Review?\nA: Draft means checking has not finished and the article is not shown to general readers; Under Review means checking is actively underway.\n\nQ: What does Verified mean for a scripture quotation?\nA: It was compared word-for-word against a named edition — a claim about accurate quotation, not endorsement of any interpretation.\n\nQ: Can a Published article lose its status?\nA: Yes. A confirmed error rolls it back to Under Review until fixed.\n\nQ: How do I report an error?\nA: Use the error-report link on any published article; describe the problem and, if you can, point to the correct source.\n\nQ: Why does one unverified citation hold up a whole article?\nA: Because a single false quotation can mislead a seeker, and the Quran commands verification before information is acted on (Quran 49:6)."
+      "body": "Q: What is the difference between Draft and Under Review?\nA: Draft means checking has not finished and the article is not shown to general readers; Under Review means checking is actively underway.\n\nQ: What does Verified mean for a scripture quotation?\nA: It was compared word-for-word against a named edition — a claim about accurate quotation, not endorsement of any interpretation.\n\nQ: Can a Published article lose its status?\nA: Yes. A confirmed error rolls it back to Under Review until fixed.\n\nQ: How do I report an error?\nA: Use the error-report link on any published article; describe the problem and, if you can, point to the correct source.\n\nQ: Why does one unverified citation hold up a whole article?\nA: Because a single false quotation can mislead a seeker, and the Quran commands verification before information is acted on (Quran 49:6).\n\nQ: If I am asking whether Islam is true, what should I do next?\nA: Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Reliable investigation of Islam requires primary texts, transparent source labels, and honest acknowledgment of uncertainty; careful method serves the truth-seeking question rather than replacing it."
     },
     {
       "sectionId": "further-reading",
@@ -144,6 +156,10 @@
     {
       "question": "Why does one unverified citation hold up a whole article?",
       "answer": "Because a single false quotation can mislead a reader on questions of eternal weight, and the Quran commands believers to verify information before acting on it (Quran 49:6). A true quotation loses nothing by waiting, but a false one must never be published under this library's name."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Reliable investigation of Islam requires primary texts, transparent source labels, and honest acknowledgment of uncertainty; careful method serves the truth-seeking question rather than replacing it."
     }
   ],
   "relatedSlugs": [

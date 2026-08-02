@@ -1,17 +1,34 @@
 {
   "slug": "punishment-for-apostasy-and-war",
   "title": "Punishment for Apostasy and War in Islamic Law",
-  "subtitle": "Jurisprudential Positions, Historical Context, and Scholarly Debate",
+  "subtitle": "Jurisprudential Positions, Historical Context, and Scholarly Debate — Written for sincere seekers asking whether Islam is true.",
   "category": "war-and-violence",
   "audienceLevel": "deep-study",
-  "summary": "Islamic jurisprudence addresses capital punishment for apostasy (ridda) through distinct scholarly positions among the four Sunni schools. The topic involves distinguishing between apostasy as a religious matter and apostasy conflated with political rebellion or treason against the Islamic state, with significant historical and textual complexities that merit careful scholarly examination.",
+  "summary": "For sincere seekers asking whether Islam is true: Islamic jurisprudence addresses capital punishment for apostasy (ridda) through distinct scholarly positions among the four Sunni schools. The topic involves distinguishing between apostasy as a religious matter and apostasy conflated with political rebellion or treason against the Islamic state, with significant historical and textual complexities that merit careful scholarly examination.",
   "tags": ["Scripture", "Theology", "History", "Sources"],
   "seo": {
     "metaTitle": "Apostasy and War in Islamic Law: Four Schools' Jurisprudential Positions",
-    "metaDescription": "Explore Islamic jurisprudential views on apostasy (ridda), including Hanafi, Maliki, Shafi'i, and Hanbali positions, historical context, and comparison with Christian heresy trials.",
-    "keywords": ["apostasy", "ridda", "Islamic law", "jurisprudence", "Hanafi", "Maliki", "Shafi'i", "Hanbali", "Islamic theology", "religious freedom"]
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Punishment for Apostasy and War in Islamic Law.",
+    "keywords": [
+      "apostasy",
+      "ridda",
+      "Islamic law",
+      "jurisprudence",
+      "Hanafi",
+      "Maliki",
+      "Shafi'i",
+      "Hanbali",
+      "Islamic theology",
+      "religious freedom"
+    ]
   },
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nIslamic texts, classical Sunni law, historical practice, modern Muslim ethics, and contemporary international law are related but distinct layers; a seeker should examine each before reaching a conclusion about Islam's moral framework.\n\nWhere historians or scholars disagree, the article identifies the main alternatives before drawing its Islamic implication.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "introduction",
       "title": "Introduction: Apostasy (Ridda) in Islamic Legal Tradition",
@@ -53,6 +70,12 @@
       "title": "Theological and Jurisprudential Complexity",
       "kind": "summary",
       "body": "The Islamic jurisprudential treatment of apostasy represents a complex historical, theological, and legal matter that cannot be reduced to simple generalizations. The four schools of Sunni jurisprudence reached recognizable agreement that apostasy is a serious religious transgression, yet developed varying positions on worldly punishment, procedural safeguards, and the conditions triggering such punishment. Careful attention to the historical context in which these rulings developed—when apostasy was frequently intertwined with rebellion and political challenge to the Islamic state—is essential for understanding both the jurists' reasoning and the contemporary reassessments of their conclusions. Christian history, when examined honestly, reveals parallel engagement with the intertwining of religious and political authority, resulting in premodern systems of coercive religious conformity that modern Christian societies have largely abandoned. Contemporary Islamic scholarly discourse reveals diverse interpretive strategies for addressing apostasy law, ranging from maintaining traditional positions to extensive reinterpretation. Scholarly treatment of this topic requires sustained engagement with classical texts, historical contexts, jurisprudential methodologies, and contemporary perspectives, without reducing the complexity to polemical simplicity."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nIslamic texts, classical Sunni law, historical practice, modern Muslim ethics, and contemporary international law are related but distinct layers; a seeker should examine each before reaching a conclusion about Islam's moral framework.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
     }
   ],
   "quranVerses": [
@@ -140,6 +163,10 @@
     {
       "question": "What is the scholarly consensus on apostasy law in contemporary Islamic jurisprudence?",
       "answer": "There is no single consensus. The jurisprudential tradition recognized apostasy law as established through reasoning from hadith evidence, but modern Islamic scholarship divides on several questions: whether the traditional jurisprudential reasoning remains convincing, whether apostasy law should apply in modern plural societies, whether procedural safeguards adequately protect individual rights, and whether Islamic principles can accommodate religious freedom protections. Contemporary Islamic scholars span a spectrum from maintaining traditional positions to arguing for significant reform or abandonment of apostasy laws. Academic treatment of this topic acknowledges this diversity of contemporary Islamic scholarly opinion."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Islamic texts, classical Sunni law, historical practice, modern Muslim ethics, and contemporary international law are related but distinct layers; a seeker should examine each before reaching a conclusion about Islam's moral framework."
     }
   ],
   "relatedSlugs": ["crusades-and-islamic-history", "jihad-and-just-war-theory"],

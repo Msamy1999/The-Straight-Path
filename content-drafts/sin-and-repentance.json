@@ -1,10 +1,10 @@
 {
   "slug": "sin-and-repentance",
   "title": "Sin and Repentance",
-  "subtitle": "How Islam and Christianity understand transgression and the path to reconciliation with God",
+  "subtitle": "How Islam and Christianity understand transgression and the path to reconciliation with God — Written for sincere seekers asking whether Islam is true.",
   "category": "salvation-and-purpose-of-life",
   "audienceLevel": "intermediate",
-  "summary": "Both Islam and Christianity recognize sin as a fundamental breach in the human relationship with God and place repentance at the center of spiritual restoration. While Islamic theology emphasizes sin as deliberate transgression that can be forgiven through genuine tawbah (repentance), Christianity presents sin as separation from God's glory healed through metanoia (turning around) toward Christ. Both traditions affirm God's unlimited mercy and forgiveness for those who genuinely seek to change.",
+  "summary": "For sincere seekers asking whether Islam is true: Both Islam and Christianity recognize sin as a fundamental breach in the human relationship with God and place repentance at the center of spiritual restoration. While Islamic theology emphasizes sin as deliberate transgression that can be forgiven through genuine tawbah (repentance), Christianity presents sin as separation from God's glory healed through metanoia (turning around) toward Christ. Both traditions affirm God's unlimited mercy and forgiveness for those who genuinely seek to change.",
   "tags": [
     "Theology",
     "Scripture",
@@ -13,7 +13,7 @@
   ],
   "seo": {
     "metaTitle": "Sin and Repentance in Islam and Christianity",
-    "metaDescription": "Explore how Islamic and Christian traditions understand sin, repentance, and God's mercy. Fetches live Quran and Bible verses on tawbah, metanoia, and divine forgiveness.",
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Sin and Repentance.",
     "keywords": [
       "sin",
       "repentance",
@@ -27,6 +27,12 @@
     ]
   },
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nIslam presents human life as purposeful worship of the one God, moral accountability, repentance, mercy, and a final return to Him; comparison should clarify that invitation rather than stop at description.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "intro",
       "title": "Introduction",
@@ -80,6 +86,12 @@
       "title": "Gospel Witness",
       "kind": "scripture",
       "body": "The Christian New Testament witnesses to sin as a universal human condition and repentance as the central requirement for reconciliation with God. Paul's declaration that all have sinned establishes the shared human predicament. Yet this universal sinfulness is met by God's universal offer of grace.\n\nThe wages of sin is presented as death, but the free gift of God through Christ is eternal life. This establishes the stark contrast: the moral logic of the universe demands payment for transgression, yet God's grace offers an alternative economy where forgiveness and eternal life are freely given.\n\nThe pathway of repentance in Christianity involves confession—bringing one's sins into the open before God in humble acknowledgment. This confession is accompanied by God's faithfulness and righteousness: God is faithful to His promise to forgive and just in granting that forgiveness because Christ's death has satisfied all demands of justice. The result is not merely forgiveness of sins but cleansing from all unrighteousness—a restoration to moral wholeness.\n\nThe Parable of the Prodigal Son captures the heart of Christian repentance and mercy. The son comes to himself, recognizes his waywardness, determines to return and seek reconciliation. The father's response is overflowing with compassion—running, embracing, clothing, celebrating. This is the image of Christian mercy: a relational restoration that exceeds the sinner's expectations or requests. The son came expecting to be treated as a hired servant; the father restores him as a beloved child."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nIslam presents human life as purposeful worship of the one God, moral accountability, repentance, mercy, and a final return to Him; comparison should clarify that invitation rather than stop at description.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
     }
   ],
   "quranVerses": [
@@ -215,6 +227,10 @@
     {
       "question": "How do these traditions understand the connection between repentance and transformation?",
       "answer": "Both Islam and Christianity view repentance as the beginning of spiritual transformation, not merely the erasure of past sin. In Islamic understanding, genuine repentance (tawbah) represents a new beginning; the person is renewed spiritually and positioned to cultivate taqwa (God-consciousness). In Christian understanding, repentance leads to being born again or becoming a new creation—the old identity marked by sin gives way to a new identity in Christ. Both traditions recognize this is a process: the Christian life is described as continuous repentance and growth, while Islamic spiritual development involves strengthening one's God-consciousness and righteous action over time. Repentance is not a single moment but the opening of a path toward spiritual maturity and transformation."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Islam presents human life as purposeful worship of the one God, moral accountability, repentance, mercy, and a final return to Him; comparison should clarify that invitation rather than stop at description."
     }
   ],
   "relatedSlugs": [

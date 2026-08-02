@@ -1,10 +1,10 @@
 {
   "slug": "womens-worth-classical-voices",
   "title": "Women's Worth: Classical Christian Voices and the Islamic Tradition",
-  "subtitle": "What Tertullian, Jerome, Aquinas, and Basil wrote about women — verified and in context — read alongside the Quran, the hadith, and both traditions' modern responses",
+  "subtitle": "A respectful, source-aware guide for sincere seekers asking whether Islam is true.",
   "category": "women",
   "audienceLevel": "deep-study",
-  "summary": "A documentary survey of what four influential classical Christian authorities — Tertullian, Jerome, Thomas Aquinas, and Basil of Caesarea — wrote about women, with every quotation verified against standard scholarly editions and cited by work and section. The same standard of honesty is applied to the Islamic tradition, including the contested \"deficient in intellect and religion\" hadith and the Quran's equality verses. Both traditions' mainstream responses and internal reform conversations are presented at full strength, with no winner declared.",
+  "summary": "For sincere seekers asking whether Islam is true: A documentary survey of what four influential classical Christian authorities — Tertullian, Jerome, Thomas Aquinas, and Basil of Caesarea — wrote about women, with every quotation verified against standard scholarly editions and cited by work and section. The same standard of honesty is applied to the Islamic tradition, including the contested \"deficient in intellect and religion\" hadith and the Quran's equality verses. The selected voices and internal reform conversations are presented with their limits made explicit; the article does not treat a handful of quotations as representative of every Christian or Muslim, and it directs the seeker back to the primary Islamic case rather than ending in neutrality.",
   "tags": [
     "History",
     "Theology",
@@ -14,7 +14,7 @@
   ],
   "seo": {
     "metaTitle": "Women's Worth: Classical Christian Voices and the Islamic Tradition",
-    "metaDescription": "Verified quotations from Tertullian, Jerome, Aquinas, and Basil on women, placed beside the Quran and hadith — with both traditions' modern responses and reform debates, fairly presented.",
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Women's Worth: Classical Christian Voices and the Islamic Tradition.",
     "keywords": [
       "Tertullian devil's gateway",
       "Aquinas misbegotten woman",
@@ -29,6 +29,12 @@
     ]
   },
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nA fair comparison needs representative positive, negative, and dissenting voices on both sides, exact editions, and a warning that selected quotations do not represent every Christian or Muslim. The Islamic invitation should rest on its own sources, not on a one-sided portrait of Christianity.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "overview",
       "title": "What This Survey Does",
@@ -94,6 +100,12 @@
       "title": "Notes on Reading This Material Fairly",
       "kind": "notes",
       "body": "Three cautions apply to everything above. First, quotation-mining cuts both ways: a survey of any tradition's harshest sentences will distort unless the counter-texts and the historical settings are kept in view, which is why this article quotes the responses of each tradition at full strength and names its sources throughout. Second, the classical authors wrote inside the science and social order of their eras — Aristotelian embryology, Roman family law, late-antique purity culture — and holding them to knowledge they could not have had explains their errors without excusing the harm those errors did. Third, the Victorian-era translations quoted here (Ante-Nicene and Nicene and Post-Nicene Fathers) are the standard accessible English versions but are themselves dated; serious students should consult modern critical editions where wording matters.\n\nThis material is offered as information for readers comparing the two traditions honestly — not as ammunition. Behind every text in this article are living communities of women and men who love their faith; both traditions' own scholars, quoted above, model how to face a difficult inheritance without contempt."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nA fair comparison needs representative positive, negative, and dissenting voices on both sides, exact editions, and a warning that selected quotations do not represent every Christian or Muslim. The Islamic invitation should rest on its own sources, not on a one-sided portrait of Christianity.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
     }
   ],
   "quranVerses": [
@@ -227,6 +239,10 @@
     {
       "question": "Does Aquinas's \"misbegotten\" claim come from the Bible or from Aristotle?",
       "answer": "From Aristotle. The phrase \"the female is a misbegotten male\" enters Summa Theologiae I q.92 a.1 as a quotation from Aristotle's Generation of Animals, whose embryology held that male seed aims to reproduce a male and that a female birth reflects a defect in that process. Aquinas accepted this as the science of his day at the individual level while insisting that woman is fully intended by God in nature as a whole and fully bears the image of God in its principal sense. Critics such as Joe Early (CBE International) argue the damage of the framework outlived the science; defenders note the framework collapsed with the science — both agree the biology is obsolete."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. A fair comparison needs representative positive, negative, and dissenting voices on both sides, exact editions, and a warning that selected quotations do not represent every Christian or Muslim. The Islamic invitation should rest on its own sources, not on a one-sided portrait of Christianity."
     }
   ],
   "relatedSlugs": [

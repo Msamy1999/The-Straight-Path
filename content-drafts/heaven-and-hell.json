@@ -1,17 +1,34 @@
 {
   "slug": "heaven-and-hell",
   "title": "Heaven and Hell",
-  "subtitle": "The Afterlife in Islamic and Christian Perspectives",
+  "subtitle": "The Afterlife in Islamic and Christian Perspectives — Written for sincere seekers asking whether Islam is true.",
   "category": "salvation-and-purpose-of-life",
   "audienceLevel": "intermediate",
-  "summary": "Both Islam and Christianity describe an afterlife with rewards and punishments, but with different theological emphases. Islamic jannah and jahannam are described in concrete, sensory terms, while Christian heaven and hell reflect relationships—communion with God or separation from Him. Both traditions present their visions as certain, while scholars continue to debate the literal versus metaphorical nature of descriptions.",
+  "summary": "For sincere seekers asking whether Islam is true: Both Islam and Christianity describe an afterlife with rewards and punishments, but with different theological emphases. Islamic jannah and jahannam are described in concrete, sensory terms, while Christian heaven and hell reflect relationships—communion with God or separation from Him. Both traditions present their visions as certain, while scholars continue to debate the literal versus metaphorical nature of descriptions.",
   "tags": ["Theology", "Scripture", "Purpose", "Sources", "Questions"],
   "seo": {
     "metaTitle": "Heaven and Hell: Islamic Jannah and Christian Heaven Compared",
-    "metaDescription": "Explore Islamic and Christian teachings on the afterlife: Paradise (jannah), hellfire (jahannam), heaven, and hell. Compare descriptions, rewards, and punishments.",
-    "keywords": ["jannah", "jahannam", "paradise", "hell", "afterlife", "heaven", "Islamic theology", "Christian theology", "Quran", "Bible"]
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Heaven and Hell.",
+    "keywords": [
+      "jannah",
+      "jahannam",
+      "paradise",
+      "hell",
+      "afterlife",
+      "heaven",
+      "Islamic theology",
+      "Christian theology",
+      "Quran",
+      "Bible"
+    ]
   },
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nIslam presents human life as purposeful worship of the one God, moral accountability, repentance, mercy, and a final return to Him; comparison should clarify that invitation rather than stop at description.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "intro",
       "title": "Introduction: Two Visions of Eternity",
@@ -77,6 +94,12 @@
       "title": "Frequently Asked Questions",
       "kind": "notes",
       "body": "Q: Do Islamic and Christian teachings agree on who goes to Paradise/Heaven and who goes to Hell/Jahannam? A: No. Islam teaches that those who submit to God and act righteously enter jannah, regardless of religious affiliation, though the Quran emphasizes believers in God's message. Christianity teaches that entrance to heaven is through faith in Christ as savior. These are mutually exclusive doctrines—one tradition's saved are not the same as the other's according to each faith's own theology.\n\nQ: Is Hell/Jahannam eternal according to both religions? A: Islamic theology offers more nuance on this point. Many Islamic scholars teach that those who associate partners with God face eternal punishment, but some argue that believers whose faith was genuine but whose deeds were inadequate may eventually enter jannah after purification. Christian theology traditionally teaches eternal separation from God for those who reject salvation, though some modern Christian thinkers have revisited this question. Both traditions, however, teach that consequences are real and permanent separation from God's favor, even if interpretations on ultimate duration vary.\n\nQ: Why do both religions use such vivid, physical descriptions if they may be metaphorical? A: Both Quranic and Biblical authors used concrete imagery to convey realities that transcend ordinary human perception. Physical descriptions communicate severity, permanence, and consequence in ways abstract language cannot. Additionally, both traditions affirm embodied existence in the afterlife (Muslims in resurrected form in jannah, Christians in resurrected, glorified form in heaven), so some physical descriptions may point to genuine features of an embodied afterlife, even if not identical to earthly physical reality.\n\nQ: How should belief in the afterlife affect how I live now? A: Both Islamic and Christian teachings connect afterlife beliefs directly to present ethics and behavior. The Quran repeatedly ties jannah to righteous deeds and warns of jahannam as motivation for obedience. Christian teachings tie heaven to present holiness and hell as warning against hardness of heart. The afterlife is not meant to encourage escapism but to motivate justice, mercy, self-discipline, and love toward others in the present world.\n\nQ: Can people from other faiths enter jannah or heaven according to these religions? A: This remains a complex question within both traditions. The Quran mentions believers of other scriptures (People of the Book) and suggests some will enter jannah, but the primary message is that submission to God and to His final messenger is the path. Christianity teaches that Christ is the only way to the Father, though debates persist about how this applies to those who have never heard the Gospel. Both traditions present their own pathway as the normative one while leaving final judgment to God."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nIslam presents human life as purposeful worship of the one God, moral accountability, repentance, mercy, and a final return to Him; comparison should clarify that invitation rather than stop at description.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
     }
   ],
   "quranVerses": [
@@ -356,6 +379,10 @@
     {
       "question": "What role does God's justice play in the afterlife according to both traditions?",
       "answer": "Both emphasize divine justice strongly. Islam teaches that jannah and jahannam are perfectly just—no soul is punished beyond its deserving, and reward is proportionate to deeds and faith. Christianity similarly affirms that judgment is righteous and that separation from God in hell represents consequences that align with one's rejection of salvation. Justice, not arbitrary punishment, characterizes God's judgment in both faiths."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Islam presents human life as purposeful worship of the one God, moral accountability, repentance, mercy, and a final return to Him; comparison should clarify that invitation rather than stop at description."
     }
   ],
   "relatedSlugs": [

@@ -1,17 +1,31 @@
 {
   "slug": "genealogies-of-jesus",
   "title": "The Two Genealogies of Jesus",
-  "subtitle": "Why Matthew and Luke's family trees diverge, and what this means for Christian and Islamic understandings of Jesus's identity",
+  "subtitle": "Why Matthew and Luke's family trees diverge, and what this means for Christian and Islamic understandings of Jesus's identity — Written for sincere seekers asking whether Islam is true.",
   "category": "difficult-questions",
   "audienceLevel": "intermediate",
-  "summary": "The Gospels of Matthew and Luke present strikingly different genealogies for Jesus, raising the question: if Jesus had no earthly father, why trace Joseph's lineage at all? Christian scholars offer several explanations, while the Quran's silence on genealogy—presenting Jesus instead through Mary's lineage—reflects a distinct theological framework. Both traditions affirm Jesus's miraculous origins, but diverge on how family connection matters.",
+  "summary": "For sincere seekers asking whether Islam is true: The Gospels of Matthew and Luke present strikingly different genealogies for Jesus, raising the question: if Jesus had no earthly father, why trace Joseph's lineage at all? Christian scholars offer several explanations, while the Quran's silence on genealogy—presenting Jesus instead through Mary's lineage—reflects a distinct theological framework. Both traditions affirm Jesus's miraculous origins, but diverge on how family connection matters.",
   "tags": ["Jesus", "Scripture", "History", "Sources", "Theology", "Questions"],
   "seo": {
     "metaTitle": "The Two Genealogies of Jesus: Matthew vs Luke",
-    "metaDescription": "Explore why Matthew and Luke present different genealogies for Jesus, Christian scholarly responses to the discrepancy, and how the Quran addresses Jesus's lineage.",
-    "keywords": ["genealogy of Jesus", "Matthew Luke gospel", "virgin birth", "Jesus lineage", "gospel discrepancies", "levirate marriage", "Islamic perspective Jesus"]
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: The Two Genealogies of Jesus.",
+    "keywords": [
+      "genealogy of Jesus",
+      "Matthew Luke gospel",
+      "virgin birth",
+      "Jesus lineage",
+      "gospel discrepancies",
+      "levirate marriage",
+      "Islamic perspective Jesus"
+    ]
   },
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nQuestions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "overview",
       "title": "The Genealogical Problem",
@@ -59,6 +73,12 @@
       "title": "Unresolved Questions and Shared Ground",
       "kind": "summary",
       "body": "The divergent genealogies of Matthew and Luke remain unexplained by any single scholarly theory that commands universal acceptance. Whether one interprets them as legal vs. biological lines, or as theological composition, or as differently sourced traditions that were not harmonized, the fact of their divergence stands. What both gospels affirm clearly—and what separates them from historical skepticism—is Jesus's connection to Israel's covenantal story and to humanity itself. Both present Jesus as genuinely human, born into a family, rooted in history. The Quranic approach sidesteps the genealogical puzzle altogether by focusing on Mary rather than Joseph, emphasizing the miraculous conception and prophetic office over questions of inheritance and kingly succession. For Christian tradition, Jesus's Davidic descent (however traced) matters because it connects him to messianic hope and covenantal promise. For Islamic tradition, Jesus's place in the honored family of believers (through Mary) and his status as a chosen messenger matter more than patrilineal descent. Both traditions affirm that Jesus was born miraculously, without a human father. Both traditions honor Jesus as a central figure in God's plan for humanity. They differ in how lineage and succession relate to that central significance, and those differences reflect their different theological frameworks about Jesus's role and identity."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nQuestions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
     }
   ],
   "quranVerses": [
@@ -163,6 +183,10 @@
     {
       "question": "How do these genealogical accounts affect belief in the virgin birth?",
       "answer": "The genealogies do not undermine the virgin birth; both Matthew and Luke explicitly affirm Jesus's conception without a human father, and both immediately follow their genealogies with accounts of the virgin conception. The genealogies function differently: they establish Jesus's connection to Israel's covenantal history and to the Messianic promise. In Matthew's framework, Joseph (the legal father) establishes the genealogical connection; the genealogy need not be biological to be meaningful. In Luke's framework, similarly, the genealogy establishes Jesus within human history and covenantal tradition. The phrase in Luke 3:23, \"being the son (as was supposed) of Joseph,\" explicitly notes that this was a matter of assumption, not biological fact. Thus the genealogies and the virgin birth account operate on different theological levels: the genealogy addresses covenantal continuity and Messianic expectation; the virgin conception addresses the miraculous nature of Jesus's origin."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Questions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility."
     }
   ],
   "relatedSlugs": [

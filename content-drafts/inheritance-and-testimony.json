@@ -1,10 +1,10 @@
 {
   "slug": "inheritance-and-testimony",
   "title": "Inheritance and Testimony",
-  "subtitle": "How Islamic and Biblical law address the distribution of estates and the requirements for legal witnesses",
+  "subtitle": "How Islamic and Biblical law address the distribution of estates and the requirements for legal witnesses — Written for sincere seekers asking whether Islam is true.",
   "category": "women",
   "audienceLevel": "intermediate",
-  "summary": "Islamic law and Biblical law both establish detailed rules for inheritance and the role of testimony in legal matters, though they arrive at different distributions based on their respective theological and social frameworks. This article explores the scriptural bases, scholarly interpretations, and underlying principles that guide these systems in both traditions.",
+  "summary": "For sincere seekers asking whether Islam is true: Islamic law and Biblical law both establish detailed rules for inheritance and the role of testimony in legal matters, though they arrive at different distributions based on their respective theological and social frameworks. This article explores the scriptural bases, scholarly interpretations, and underlying principles that guide these systems in both traditions.",
   "tags": [
     "Scripture",
     "Sources",
@@ -14,7 +14,7 @@
   ],
   "seo": {
     "metaTitle": "Inheritance and Testimony in Islam and the Bible",
-    "metaDescription": "Comparative analysis of Islamic and Biblical inheritance law and testimony requirements, with scriptural basis and scholarly interpretation.",
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Inheritance and Testimony.",
     "keywords": [
       "inheritance law",
       "Islamic inheritance",
@@ -27,6 +27,12 @@
     ]
   },
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nQuran 2:282 concerns documenting a debt, not a universal rule that every female testimony always equals half of male testimony. Inheritance shares and evidentiary rules need separate, school-aware treatment.\n\nWhere historians or scholars disagree, the article identifies the main alternatives before drawing its Islamic implication.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "intro",
       "title": "Introduction",
@@ -74,6 +80,12 @@
       "title": "Scriptural Sources and Scholarly Interpretation",
       "kind": "sources",
       "body": "The Islamic sources for inheritance law rest primarily on Quran 4:11-12, supplemented by hadith (reports of the Prophet Muhammad's practice and teaching) and centuries of jurisprudential development. Early Islamic jurisprudence established the science of Faraaiz, with scholars like Muhammad ibn Jarir al-Tabari (d. 310/923) and later jurists creating systematic treatments. The four main schools of Islamic law (Hanafi, Maliki, Shafi'i, Hanbali) developed slightly different applications while maintaining the core proportions established in the Quranic text.\n\nOn testimony, Quran 2:282 provides the most detailed source, though verses 65:2 and other passages also address witness requirements. The hadith collections contain numerous traditions about honest testimony and the prohibition of false witness. Islamic jurisprudence developed detailed evidentiary rules considering context, the character of witnesses, and the nature of the matter under judgment.\n\nBiblical sources for inheritance law are dispersed throughout the Torah and Prophets. Numbers 27 and 36 provide the case law about daughters inheriting. Deuteronomy 21:17 establishes the double portion for the firstborn. Genesis contains narratives about inheritance (Esau and Jacob's birthright, Joseph's double portion as Jacob's favored son) that illustrate but do not systematically legislate. The Proverbs contain wisdom about property and family. The New Testament offers limited specific guidance on inheritance mechanics.\n\nOn testimony, Deuteronomy 19:15-19 provides the foundational requirement for multiple witnesses and establishes consequences for false testimony. The law treats bearing false witness as a serious crime. Proverbs repeatedly emphasizes honest testimony as part of righteous conduct. The New Testament affirms the principle of corroborating witnesses without adding systematic procedural requirements.\n\nMediaeval Islamic jurisprudence saw sophisticated development of these principles. Al-Sarakhsi (d. 490/1096) and other Hanafi jurists wrote detailed works on evidence and testimony. The Maliki tradition developed equally nuanced approaches. These scholarly traditions continue today with contemporary Muslim jurists addressing modern contexts like digital evidence, anonymous reporting, and equal education.\n\nMediaeval Christian scholarship on inheritance and testimony developed differently because Christian societies were not primarily governed by biblical law after Constantine. Theological reflection on biblical principles continued, but implementation occurred through canon law (the law of the Church) and civil law (increasingly secular). Thomas Aquinas and other medieval theologians discussed biblical principles, but their concern was moral theology rather than legal implementation. This divergence between Islamic legal tradition (which remained primary in Muslim societies) and Christian theological tradition (which became secondary to civil law) represents a major historical difference between the traditions."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nQuran 2:282 concerns documenting a debt, not a universal rule that every female testimony always equals half of male testimony. Inheritance shares and evidentiary rules need separate, school-aware treatment.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
     }
   ],
   "quranVerses": [
@@ -215,6 +227,10 @@
     {
       "question": "How have modern legal systems adapted these inheritance and testimony principles?",
       "answer": "Muslim-majority countries vary in their approach. Some preserve classical Islamic inheritance law; others have reformed it to provide greater gender equality while arguing that Islamic principles of justice support these changes. On testimony, most modern legal systems, including Muslim-majority ones, now apply gender-neutral evidentiary standards in most contexts. Christian-majority countries long ago moved away from biblical inheritance law toward secular systems based on testamentary freedom and formal legal procedures. On testimony, the biblical principle of requiring corroboration survives in modern evidence law through cross-examination, forensic verification, and the burden of proof. Both traditions have engaged the challenge of distinguishing between timeless principles (justice, reliability) and historically situated applications (specific formulas and procedures)."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Quran 2:282 concerns documenting a debt, not a universal rule that every female testimony always equals half of male testimony. Inheritance shares and evidentiary rules need separate, school-aware treatment."
     }
   ],
   "relatedSlugs": [

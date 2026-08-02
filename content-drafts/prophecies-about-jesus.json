@@ -1,10 +1,10 @@
 {
   "slug": "prophecies-about-jesus",
   "title": "Prophecies About Jesus",
-  "subtitle": "Old Testament Predictions and Interpretive Debates",
+  "subtitle": "Old Testament Predictions and Interpretive Debates — Written for sincere seekers asking whether Islam is true.",
   "category": "prophecies",
   "audienceLevel": "intermediate",
-  "summary": "Christians point to Old Testament passages like Isaiah 53, Psalm 22, and Micah 5:2 as predictions of Jesus's suffering, resurrection, and birthplace. Muslims dispute these interpretations, arguing the texts are misread, taken out of context, or refer to other historical figures. Scholars debate the dating and authorship of these texts, complicating claims about prophetic accuracy.",
+  "summary": "For sincere seekers asking whether Islam is true: Christians point to Old Testament passages like Isaiah 53, Psalm 22, and Micah 5:2 as predictions of Jesus's suffering, resurrection, and birthplace. Muslims dispute these interpretations, arguing the texts are misread, taken out of context, or refer to other historical figures. Scholars debate the dating and authorship of these texts, complicating claims about prophetic accuracy.",
   "tags": [
     "Jesus",
     "Prophecy",
@@ -15,7 +15,7 @@
   ],
   "seo": {
     "metaTitle": "Prophecies About Jesus: Christian Claims vs. Islamic Critique",
-    "metaDescription": "Explore Christian claims that Old Testament passages predicted Jesus, Islamic critiques of these interpretations, and scholarly perspectives on text dating and authorship.",
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Prophecies About Jesus.",
     "keywords": [
       "Jesus prophecies",
       "Isaiah 53",
@@ -28,6 +28,12 @@
     ]
   },
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nProphecy arguments require attention to the original text, genre, historical setting, transmission, and later interpretation; a possible correspondence is not automatically a fulfilled prediction.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "intro",
       "title": "Introduction: The Prophecy Question",
@@ -93,6 +99,12 @@
       "title": "Quranic Perspective on Jesus and Prophecy",
       "kind": "interpretation",
       "body": "The Quran affirms Jesus (Isa) as a significant messenger and prophet, while explicitly rejecting Christian theological claims about him. The Quranic Jesus performs miracles, receives revelation, and calls people to God's oneness. However, the Quran denies crucifixion, sonship, and divine nature.\n\nThe Quran addresses Christian claims about Jesus's divine status directly. Surah 4:171 states: \"O People of the Scripture, do not commit excess in your religion or say about Allah except the truth. The Messiah, Jesus, the son of Mary, was but a messenger of Allah and His word which He directed to Mary and a soul [created at a command] from Him. So believe in Allah and His messengers. And do not say, \"Three\"; desist - it is better for you. Indeed, Allah is but one God. Exalted is He above having a son. To Him belongs whatever is in the heavens and whatever is on the earth. And sufficient is Allah as Disposer of affairs.\" This verse comes in a passage asserting Jesus's humanity and prophethood. The Quranic understanding is that Jesus is a servant of God (abd Allah) and His messenger (rasul), not God's son in any literal sense, and certainly not divine himself.\n\nRegarding prophecy, the Quran affirms the principle of prophethood: God sends messengers to guide people, and these messengers come with signs and miracles. Jesus fits this category. However, Islamic theology maintains that prophecy is not mediated through esoteric prediction codes hidden in older texts. Rather, prophets are sent openly to their communities with clear messages. The Quranic Jesus speaks directly to his people and performs miracles before them; he does not leave cryptic predictions to be deciphered centuries later.\n\nSurah 3:45 describes the angel Gabriel announcing Jesus to Mary: the announcement is direct and clear, not a hidden prediction. Similarly, Surah 61:6 quotes Jesus as announcing the coming of Ahmad (understood by Islamic tradition as Muhammad), but this announcement is explicit speech, not hidden prophecy. The Quranic model of prophecy emphasizes clarity, not interpretive decoding.\n\nFrom this perspective, the Christian hermeneutical project—reading the Old Testament for hidden predictions of Jesus—operates outside the Quranic framework of how prophecy functions. Even if historical analysis were to show that the Old Testament contains messianic expectations, and even if Christians could demonstrate linguistic parallels to Gospel accounts, the Quranic conception of Jesus and of prophecy would remain fundamentally distinct from the Christian framework."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nProphecy arguments require attention to the original text, genre, historical setting, transmission, and later interpretation; a possible correspondence is not automatically a fulfilled prediction.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
     }
   ],
   "quranVerses": [
@@ -228,6 +240,10 @@
     {
       "question": "How do Muslims explain the specific details in these passages if they don't predict Jesus?",
       "answer": "Muslims offer several explanations. First, much of the language may be generic to the human experience of suffering and persecution, not unique predictions. Second, some texts (particularly the Psalms) may describe situations in ancient Israel or the Jewish exile experience. Third, Muslims argue that Christians engage in retrofitting—finding parallels by selecting Gospel language that matches Old Testament imagery, a process that would work with almost any ancient text. Fourth, even if texts contain predictions, the Quranic framework for prophecy does not work through hidden codes; prophets were sent openly with clear messages. From this perspective, the hermeneutical project itself is built on assumptions not found in Islamic theology."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Prophecy arguments require attention to the original text, genre, historical setting, transmission, and later interpretation; a possible correspondence is not automatically a fulfilled prediction."
     }
   ],
   "relatedSlugs": [

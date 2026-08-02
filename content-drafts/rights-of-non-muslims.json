@@ -1,10 +1,10 @@
 {
   "slug": "rights-of-non-muslims",
   "title": "The Rights of Non-Muslims under Islamic Law",
-  "subtitle": "Life, property, worship, and legal protection — what classical Islamic law guaranteed non-Muslims, what it denied them, and how modern scholars have rethought the framework",
+  "subtitle": "A respectful, source-aware guide for sincere seekers asking whether Islam is true.",
   "category": "war-and-violence",
   "audienceLevel": "intermediate",
-  "summary": "Classical Islamic law guaranteed non-Muslims enforceable protections of life, property, and worship that were unusual in the pre-modern world, while also assigning them a subordinate legal rank with real disabilities. This article documents both sides: the Quranic baseline, the Prophet's covenants and their authenticity debates, the dhimma system as jurists actually described it, the lived history of non-Muslim communities under Muslim rule, and the modern critique together with contemporary Muslim scholars' turn toward equal citizenship.",
+  "summary": "For sincere seekers asking whether Islam is true: Classical Islamic law guaranteed non-Muslims enforceable protections of life, property, and worship that are described by some historians as distinctive in particular contexts, but that comparative claim requires evidence, while also assigning them a subordinate legal rank with real disabilities. This article documents both sides: the Quranic baseline, the Prophet's covenants and their authenticity debates, the dhimma system as jurists actually described it, the lived history of non-Muslim communities under Muslim rule, and the modern critique together with contemporary Muslim scholars' turn toward equal citizenship.",
   "tags": [
     "History",
     "Questions",
@@ -12,7 +12,7 @@
   ],
   "seo": {
     "metaTitle": "Rights of Non-Muslims under Islamic Law: Dhimma, Jizya, and the Modern Debate",
-    "metaDescription": "What Islamic law guaranteed non-Muslims — life, property, worship, legal protection — and what it restricted. The Medina Charter, the Pact of Umar, the jizya, hadith on protected persons, and the modern citizenship debate, documented fairly.",
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: The Rights of Non-Muslims under Islamic Law.",
     "keywords": [
       "rights of non-Muslims in Islam",
       "dhimma system",
@@ -30,10 +30,16 @@
   },
   "sections": [
     {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nProtection and subordination both appear in the history of dhimma, but the rules and lived experience varied by jurist, dynasty, place, and period. Comparative claims such as 'unusual' need evidence rather than assertion.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
+    {
       "sectionId": "overview",
       "title": "What This Article Documents",
       "kind": "summary",
-      "body": "Few subjects in the comparative study of Islam generate claims as far apart as this one. One strand of popular literature describes Islamic law as a machine of permanent oppression for anyone outside the faith; another describes a golden age of tolerance with hardly a shadow in it. The historical record supports neither picture in full. Classical Islamic law guaranteed non-Muslims specific, enforceable protections — of life, property, worship, and legal recourse — that were unusual in the pre-modern world, and it simultaneously assigned them a subordinate legal rank with genuine disabilities that no modern standard of equal citizenship would accept. Both facts are well documented, and both belong in an honest account.\n\nThis article works through the evidence in layers: the Quranic baseline governing conduct toward peaceful non-Muslims; the covenants attributed to the Prophet Muhammad, with their authenticity debates stated plainly; the dhimma system as classical jurists actually described it, including its second-class elements presented at full strength; the textual sources on the sanctity of protected non-Muslim life; the lived history of Jewish, Christian, Zoroastrian, and later Hindu communities under Muslim rule; and finally the modern critique of the whole framework, together with the responses of contemporary Muslim scholars — most of whom now argue that equal citizenship, not the dhimma, is the correct Islamic arrangement for the modern state.\n\nScripture below is quoted verbatim from the translations named in the notes section. Historical claims that remain contested in scholarship are presented as attributed arguments, not as settled facts."
+      "body": "Few subjects in the comparative study of Islam generate claims as far apart as this one. One strand of popular literature describes Islamic law as a machine of permanent oppression for anyone outside the faith; another describes a golden age of tolerance with hardly a shadow in it. The historical record supports neither picture in full. Classical Islamic law guaranteed non-Muslims specific, enforceable protections — of life, property, worship, and legal recourse — that are described by some historians as distinctive in particular contexts, but that comparative claim requires evidence, and it simultaneously assigned them a subordinate legal rank with genuine disabilities that no modern standard of equal citizenship would accept. Both facts are well documented, and both belong in an honest account.\n\nThis article works through the evidence in layers: the Quranic baseline governing conduct toward peaceful non-Muslims; the covenants attributed to the Prophet Muhammad, with their authenticity debates stated plainly; the dhimma system as classical jurists actually described it, including its second-class elements presented at full strength; the textual sources on the sanctity of protected non-Muslim life; the lived history of Jewish, Christian, Zoroastrian, and later Hindu communities under Muslim rule; and finally the modern critique of the whole framework, together with the responses of contemporary Muslim scholars — most of whom now argue that equal citizenship, not the dhimma, is the correct Islamic arrangement for the modern state.\n\nScripture below is quoted verbatim from the translations named in the notes section. Historical claims that remain contested in scholarship are presented as attributed arguments, not as settled facts."
     },
     {
       "sectionId": "quranic-baseline",
@@ -82,6 +88,12 @@
       "title": "Method, Sources, and What Remains Contested",
       "kind": "notes",
       "body": "Scripture in this article is quoted verbatim: Quranic verses from the Tanzil Uthmani text with Saheeh International's translation (via api.alquran.cloud), and biblical verses from the World English Bible (via bible-api.com). Hadith are quoted from the standard English renderings used by sunnah.com's numbering: Sahih al-Bukhari 3166 (Book of Jizya), 3156, and 3700, and Sunan Abi Dawud 3052 — the last graded authentic by al-Albani, though its isnad's less standard collective-narrator structure is noted rather than suppressed.\n\nItems presented here as contested, because they are: the date and unity of the Constitution of Medina (authentically early per most historians, but debated in detail); the authenticity of the St. Catherine covenant (defended by John Andrew Morrow, dated later by most academic historians); the attribution and dating of the Pact of Umar (a later juristic compilation per A. S. Tritton, with Milka Levy-Rubin tracing its provisions to Byzantine-Sasanian precedent); the meaning of wa-hum saghirun in Quran 9:29 (submission to law versus humiliation — both readings attested in classical commentary); the legal framing of the Banu Qurayza episode; and the overall balance-sheet judgments of historians such as Cohen and Lewis, which are summarized with attribution.\n\nNo casualty figures or population statistics are asserted in this article's own voice. Events such as the destruction of the Holy Sepulchre (1009), the Granada massacre (1066), the Almohad persecutions, and al-Mutawakkil's decrees are reported as the chronicles and standard histories record them; readers pursuing the details should consult the works in Further Reading, which represent the mainstream scholarly literature rather than polemic from either direction."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nProtection and subordination both appear in the history of dhimma, but the rules and lived experience varied by jurist, dynasty, place, and period. Comparative claims such as 'unusual' need evidence rather than assertion.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
     }
   ],
   "quranVerses": [
@@ -180,6 +192,10 @@
     {
       "question": "Is criticism of the dhimma system just anti-Islamic polemic?",
       "answer": "No — and treating it that way would be unfair in the other direction. Serious historians document the system's discriminatory elements, and Muslim reformers themselves have criticized the dhimma as a historically conditioned arrangement unsuited to the modern world. What scholars such as Mark R. Cohen do reject is the polemical extension — the claim, associated with the term 'dhimmitude,' that Islamic civilization is constitutively built on degradation — because the documented record shows protected, often flourishing non-Muslim communities alongside the disabilities and the episodic persecutions. The critique and the polemic are different things."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Protection and subordination both appear in the history of dhimma, but the rules and lived experience varied by jurist, dynasty, place, and period. Comparative claims such as 'unusual' need evidence rather than assertion."
     }
   ],
   "relatedSlugs": [

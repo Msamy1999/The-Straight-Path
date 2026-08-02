@@ -1,10 +1,10 @@
 {
   "slug": "quranic-revelation-history",
   "title": "Quranic Revelation History",
-  "subtitle": "How the Quran was revealed, preserved, memorized, and compiled over 23 years",
+  "subtitle": "How the Quran was revealed, preserved, memorized, and compiled over 23 years — Written for sincere seekers asking whether Islam is true.",
   "category": "religious-history",
   "audienceLevel": "intermediate",
-  "summary": "The Quran was revealed orally over 23 years (609–632 CE) in two main periods: Meccan (610–622) and Medinan (622–632). During this time, believers memorized it, wrote it on various materials, and preserved it through systematic oral transmission. After the Prophet Muhammad's death, Caliph Uthman commissioned a standardized written compilation around 650 CE, which remains the basis of all Quran copies today.",
+  "summary": "For sincere seekers asking whether Islam is true: The Quran was revealed orally over 23 years (conventionally c. 610–632 CE) in two main periods: Meccan (610–622) and Medinan (622–632). During this time, believers memorized it, wrote it on various materials, and preserved it through systematic oral transmission. After the Prophet Muhammad's death, Caliph Uthman commissioned a standardized written compilation around 650 CE, which became the basis of the mainstream written Quranic tradition, alongside authorized recitational variation.",
   "tags": [
     "Scripture",
     "History",
@@ -13,7 +13,7 @@
   ],
   "seo": {
     "metaTitle": "Quranic Revelation History: From Oral to Written Text",
-    "metaDescription": "Learn how the Quran was revealed over 23 years, memorized by believers, and compiled into a standardized text under Caliph Uthman.",
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Quranic Revelation History.",
     "keywords": [
       "Quranic revelation",
       "Quran compilation",
@@ -26,6 +26,12 @@
     ]
   },
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nThe traditional chronology is conventionally described as beginning around 610 CE and ending in 632 CE, with exact dating and the relationship between recitation, writing, rasm, and qira'at explained rather than compressed into one timeline.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "overview",
       "title": "Overview of Quranic Revelation",
@@ -85,6 +91,12 @@
       "title": "Frequently Asked Questions",
       "kind": "notes",
       "body": "This section addresses common questions about Quranic revelation, preservation, and the history of its compilation into written form."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nThe traditional chronology is conventionally described as beginning around 610 CE and ending in 632 CE, with exact dating and the relationship between recitation, writing, rasm, and qira'at explained rather than compressed into one timeline.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
     }
   ],
   "quranVerses": [
@@ -303,6 +315,10 @@
     {
       "question": "Can Islamic and academic scholars agree on Quranic history?",
       "answer": "Islamic tradition emphasizes divine preservation of the Quran as a theological principle, viewing God's protection as ensuring the text's authenticity. Academic scholars, employing historical methodology, investigate the human processes—memorization systems, written documentation, institutional oversight, and community commitment—that contributed to textual preservation. While their frameworks differ (theological vs. naturalistic), there is substantial agreement on many historical facts: revelation occurred over 23 years, written sources existed during the Prophet's time, and early manuscripts show remarkable textual consistency. The dating of complete standardization is not fully settled, however: most scholars date systematic compilation to the Uthmanic era (~650 CE), though a minority—including Patricia Crone and Michael Cook in their revisionist study Hagarism—argue standardization was completed later, closer to 700 CE under Abd al-Malik/al-Hajjaj (a still later canonization date, around 800 CE, is associated with John Wansbrough's separate revisionist chronology). The perspectives complement rather than contradict each other when understood in their own terms, even where dating questions remain open."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. The traditional chronology is conventionally described as beginning around 610 CE and ending in 632 CE, with exact dating and the relationship between recitation, writing, rasm, and qira'at explained rather than compressed into one timeline."
     }
   ],
   "relatedSlugs": [

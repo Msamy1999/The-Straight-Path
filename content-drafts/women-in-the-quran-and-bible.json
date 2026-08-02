@@ -1,17 +1,32 @@
 {
   "slug": "women-in-the-quran-and-bible",
   "title": "Women in the Quran and Bible",
-  "subtitle": "Scriptural foundations, roles, and interpretive diversity in Islamic and Christian traditions",
+  "subtitle": "Scriptural foundations, roles, and interpretive diversity in Islamic and Christian traditions — Written for sincere seekers asking whether Islam is true.",
   "category": "women",
   "audienceLevel": "intermediate",
-  "summary": "Both the Quran and Bible affirm women's spiritual equality and moral worth, yet contain passages about distinct roles that have generated centuries of interpretation. This article surveys key scriptural texts on women's creation, rights, responsibilities, and authority, highlighting how both traditions wrestle with the relationship between spiritual equality and social organization.",
+  "summary": "For sincere seekers asking whether Islam is true: Both the Quran and Bible affirm women's spiritual equality and moral worth, yet contain passages about distinct roles that have generated centuries of interpretation. This article surveys key scriptural texts on women's creation, rights, responsibilities, and authority, labeling the differences among spiritual equality, legal rules, social roles, historical practice, Sunni interpretation, and Christian denominational interpretation.",
   "tags": ["History", "Theology", "Scripture", "Sources", "Questions"],
   "seo": {
     "metaTitle": "Women in the Quran and Bible: Scriptural Texts and Interpretations",
-    "metaDescription": "Comprehensive analysis of women's roles, rights, and spiritual status in Islamic and Christian scripture, examining creation accounts, authority passages, and interpretive diversity.",
-    "keywords": ["women", "Quran", "Bible", "gender", "Islam", "Christianity", "interpretation", "roles"]
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Women in the Quran and Bible.",
+    "keywords": [
+      "women",
+      "Quran",
+      "Bible",
+      "gender",
+      "Islam",
+      "Christianity",
+      "interpretation",
+      "roles"
+    ]
   },
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nPassages about women need case-by-case context, with differences among Sunni schools, Christian denominations, historical periods, spiritual status, law, and social practice made visible.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "creation-equal-worth",
       "title": "Creation and Equal Spiritual Worth",
@@ -53,6 +68,12 @@
       "title": "Contemporary Expressions and Lived Experience",
       "kind": "summary",
       "body": "Modern Muslim-majority and Muslim-minority communities exhibit considerable variation in how women's roles are practiced and understood. Some emphasize formal equality in law and workplace while maintaining traditional family structures; others have integrated women into religious scholarship, leadership, and judiciary. Many Muslim women scholars, activists, and theologians engage in ijtihad (independent reasoning) to argue for women's full participation in all aspects of community life, grounding their positions in Quranic principles rather than medieval interpretations. Similarly, Christian denominations range from those ordaining women to senior leadership to those maintaining male-only pastoral roles. Women serve as theologians, biblical scholars, missionaries, activists, and church leaders across the Christian world, and many of these women root their participation in Christian theology itself. What remains consistent across both traditions is that no mainstream Islamic or Christian authority advocates for women's spiritual worthlessness or exemption from moral accountability; the scriptural foundations of women's dignity are not in dispute. The disagreements center on the implications of scriptural texts for social roles, the relationship between equality and difference, how to interpret culturally situated passages in modern contexts, and whether specific role directives are universal or provisional."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nPassages about women need case-by-case context, with differences among Sunni schools, Christian denominations, historical periods, spiritual status, law, and social practice made visible.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
     }
   ],
   "quranVerses": [
@@ -278,6 +299,10 @@
     {
       "question": "Is there genuine disagreement on women's roles within Islam and Christianity?",
       "answer": "Yes, substantial and serious disagreement exists within both traditions. Mainstream Islamic scholars range from strict complementarians to progressive interpretivists. Christian denominations range from those ordaining women to all levels of leadership to those maintaining male pastoral leadership. These are not disagreements between believers and non-believers, but within committed religious communities wrestling with scriptural interpretation, tradition, context, and principle."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Passages about women need case-by-case context, with differences among Sunni schools, Christian denominations, historical periods, spiritual status, law, and social practice made visible."
     }
   ],
   "relatedSlugs": ["female-scholars-and-leaders", "marriage-and-divorce", "inheritance-and-testimony", "modesty-and-dress"],

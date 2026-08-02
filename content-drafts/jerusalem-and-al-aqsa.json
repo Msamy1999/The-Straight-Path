@@ -1,12 +1,18 @@
 {
   "slug": "jerusalem-and-al-aqsa",
   "title": "Jerusalem and Al-Aqsa",
-  "subtitle": "Religious significance, shared attachments, and source-aware study",
+  "subtitle": "Religious significance, shared attachments, and source-aware study — Written for sincere seekers asking whether Islam is true.",
   "category": "religious-history",
   "audienceLevel": "beginner",
-  "summary": "Jerusalem has profound religious importance for Muslims, Jews, and Christians. This draft explains the Islamic significance of Al-Aqsa while keeping religious tradition, historical evidence, and present-day political claims clearly distinct.",
+  "summary": "For sincere seekers asking whether Islam is true: Jerusalem has profound religious importance for Muslims, Jews, and Christians. This draft explains the Islamic significance of Al-Aqsa while keeping religious tradition, historical evidence, and present-day political claims clearly distinct.",
   "tags": ["History", "Theology", "Sources"],
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nReligious history supplies context for how communities transmitted and interpreted their teachings, but historical development is not the same thing as proof or disproof of revelation.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "beginner-summary",
       "title": "In Plain Words",
@@ -30,6 +36,12 @@
       "title": "How to Study a Shared Sacred City",
       "kind": "sources",
       "body": "Use scholarship that distinguishes archaeology, religious tradition, law, and political advocacy. Read writers from more than one community, consult primary texts in reliable editions, and check whether a claim is about an ancient period, a later institution, or a present-day event.\n\nThe city deserves precision. Sweeping statements about who has no connection to Jerusalem are historically and religiously careless, and they make serious conversation impossible."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nReligious history supplies context for how communities transmitted and interpreted their teachings, but historical development is not the same thing as proof or disproof of revelation.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
     }
   ],
   "quranVerses": [],
@@ -49,6 +61,12 @@
       "publisher": "Alfred A. Knopf",
       "year": 2011,
       "note": "A broad narrative history useful for orientation; readers should verify individual claims against specialist scholarship."
+    }
+  ],
+  "faq": [
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Religious history supplies context for how communities transmitted and interpreted their teachings, but historical development is not the same thing as proof or disproof of revelation."
     }
   ]
 }

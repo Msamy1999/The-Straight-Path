@@ -1,14 +1,14 @@
 {
   "slug": "embryology",
   "title": "Embryology and Fetal Development in Scripture",
-  "subtitle": "Comparing Quranic descriptions of embryonic stages with modern scientific understanding",
+  "subtitle": "Comparing Quranic descriptions of embryonic stages with modern scientific understanding — Written for sincere seekers asking whether Islam is true.",
   "category": "scientific-signs",
   "audienceLevel": "intermediate",
-  "summary": "The Quran describes the human fetal development in stages—sperm drop, clinging clot, and lump of flesh—in passages like 23:12-14. Muslim scholars claim these descriptions align remarkably with modern embryology, while secular scholars emphasize that such language was known in ancient medical texts and that interpretations were often retrofitted to match contemporary science.",
+  "summary": "For sincere seekers asking whether Islam is true: The Quran describes the human fetal development in stages—sperm drop, clinging clot, and lump of flesh—in passages like 23:12-14. Some Muslim writers argue that these descriptions resonate with modern embryology, while other Muslim scholars, historians of medicine, and secular critics emphasize the terms' broad meanings, ancient medical parallels, and the risk of reading modern science back into the text.",
   "tags": ["Science", "Scripture", "Theology", "Questions"],
   "seo": {
     "metaTitle": "Embryology in the Quran and Bible: Scientific Accuracy or Ancient Knowledge?",
-    "metaDescription": "Explore Quranic and Biblical descriptions of fetal development. Examine Muslim claims of miraculous precision versus scholarly perspectives on post-hoc interpretation.",
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Embryology and Fetal Development in Scripture.",
     "keywords": [
       "embryology",
       "fetal development",
@@ -23,6 +23,12 @@
     ]
   },
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nQuranic embryology arguments are an interpretive debate. Arabic terms, classical tafsir, ancient medical parallels, and modern embryology should be compared without treating a modern translation as the only possible meaning.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "intro",
       "title": "Introduction: Ancient Texts and Modern Science",
@@ -76,6 +82,12 @@
       "title": "Summary of Competing Claims",
       "kind": "notes",
       "body": "The Quran describes human development through a memorable sequence of fluid, clinging or clot-like material, a chewed-like lump, bones, flesh, and a further creation. Premodern commentators treated this as fetal development and moral proof of creation and resurrection. Modern scientific-miracle writers identify detailed correspondences with embryology; critics answer that the broad terms and overlapping biological processes do not sustain claims of technical prediction.\n\nThe strongest shared conclusion is modest: the passages speak meaningfully about staged human development in premodern language. Whether their correspondence with modern science is miraculous is a theological and interpretive judgment, not a result established by embryology alone."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nQuranic embryology arguments are an interpretive debate. Arabic terms, classical tafsir, ancient medical parallels, and modern embryology should be compared without treating a modern translation as the only possible meaning.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
     }
   ],
   "quranVerses": [
@@ -202,6 +214,10 @@
     {
       "question": "What do skeptical scholars mean by 'retroactive fitting' or 'eisegesis' in this context?",
       "answer": "Critics argue that when a new embryological discovery occurs, Islamic exegetes adjust their interpretation of the Quranic terms rather than acknowledging that the text does not explicitly describe the newly discovered stage. For example, if a stage is identified that doesn't fit neatly into nutfah, alaqah, or mudghah, exegetes may broaden the definition of one of these terms or propose new layers of meaning rather than concluding that the Quranic account is incomplete. This pattern—making the text fit the science rather than deriving the science from the text—is cited as evidence of retroactive interpretation designed to maintain a narrative of Quranic scientific precision."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Quranic embryology arguments are an interpretive debate. Arabic terms, classical tafsir, ancient medical parallels, and modern embryology should be compared without treating a modern translation as the only possible meaning."
     }
   ],
   "relatedSlugs": [

@@ -1,17 +1,30 @@
 {
   "slug": "why-believe-in-revelation",
   "title": "Why Believe in Revelation?",
-  "subtitle": "From a possible creator to the rational investigation of claimed divine communication",
+  "subtitle": "From a possible creator to the rational investigation of claimed divine communication — Written for sincere seekers asking whether Islam is true.",
   "category": "difficult-questions",
   "audienceLevel": "beginner",
-  "summary": "Belief in a creator does not automatically establish that God has spoken. This article explains why revelation is a coherent possibility, what human reason can and cannot settle alone, and how a seeker can test a claimed revelation without circular reasoning.",
+  "summary": "For sincere seekers asking whether Islam is true: Belief in a creator does not automatically establish that God has spoken. This article explains why revelation is a coherent possibility, what human reason can and cannot settle alone, and how a seeker can test a claimed revelation without circular reasoning.",
   "tags": ["Theology", "Questions", "Scripture", "Sources"],
   "seo": {
     "metaTitle": "Why Believe in Revelation? A Rational Framework",
-    "metaDescription": "Consider why divine revelation is possible, why reason may need guidance, and how to evaluate scriptures and messengers without circularity.",
-    "keywords": ["why revelation", "divine revelation", "reason and revelation", "how to test religion", "Quran revelation", "prophets"]
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Why Believe in Revelation?.",
+    "keywords": [
+      "why revelation",
+      "divine revelation",
+      "reason and revelation",
+      "how to test religion",
+      "Quran revelation",
+      "prophets"
+    ]
   },
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nQuestions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility.\n\nWhere historians or scholars disagree, the article identifies the main alternatives before drawing its Islamic implication.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "a-separate-question",
       "title": "A Separate Question After God",
@@ -53,6 +66,12 @@
       "title": "A Responsible Next Step",
       "kind": "notes",
       "body": "Choose a manageable comparison. Read substantial connected passages from a claimed scripture in a responsible translation, learn how its text reached the present, and study the messenger through early and critical sources. Record both attractions and objections. Distinguish the religion's foundational sources from the conduct of every follower.\n\nFor the Quran, begin by asking what picture of God and humanity emerges across whole chapters, not whether a single verse sounds impressive. Explore the history of its recitation, manuscripts, and canonical readings. Then ask whether Muhammad's prophetic claim makes better sense of the evidence than fraud, delusion, borrowing, political ambition, or later legend. A conclusion should emerge from the whole case, with uncertainty honestly named."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nQuestions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
     }
   ],
   "quranVerses": [
@@ -94,6 +113,10 @@
     {
       "question": "Why communicate through fallible human messengers?",
       "answer": "A human messenger can speak human language and demonstrate guidance in ordinary life. That creates historical and interpretive questions, so the messenger's character, transmission, and teaching must remain open to scrutiny."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Questions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility."
     }
   ],
   "relatedSlugs": ["does-god-exist", "why-islam-not-just-a-creator", "the-final-message", "how-was-the-quran-preserved"],

@@ -1,10 +1,10 @@
 {
   "slug": "celestial-signs-in-the-quran",
   "title": "Celestial Signs: Orbits, Stars, Iron, and Light in the Quran",
-  "subtitle": "Seven frequently cited Quran-and-science passages, read through classical tafsir and modern science with an honest strength assessment for each",
+  "subtitle": "Seven frequently cited Quran-and-science passages, read through classical tafsir and modern science with an honest strength assessment for each — Written for sincere seekers asking whether Islam is true.",
   "category": "scientific-signs",
   "audienceLevel": "intermediate",
-  "summary": "This article examines seven commonly cited Quran passages from the \"scientific miracles\" (i'jaz) literature — on orbiting celestial bodies, the oath by the stars' positions, mountains passing like clouds, paired plant life, water and life, iron \"sent down,\" and the sun's versus the moon's light — giving the classical tafsir reading, the modern scientific gloss, and an honest assessment of each. It applies the site's caution framework throughout, showing that resonance ranges from strong to interpretively flexible to genuinely contested.",
+  "summary": "For sincere seekers asking whether Islam is true: This article examines seven commonly cited Quran passages from the \"scientific miracles\" (i'jaz) literature — on orbiting celestial bodies, the oath by the stars' positions, mountains passing like clouds, paired plant life, water and life, iron \"sent down,\" and the sun's versus the moon's light — giving the classical tafsir reading, the modern scientific gloss, and an honest assessment of each. It applies the site's caution framework throughout, showing that resonance ranges from strong to interpretively flexible to genuinely contested.",
   "tags": [
     "Science",
     "Scripture",
@@ -14,7 +14,7 @@
   ],
   "seo": {
     "metaTitle": "Celestial Signs in the Quran: Orbits, Stars, Iron, and Light Assessed Honestly",
-    "metaDescription": "A verse-by-verse look at the Quran's celestial and scientific-sounding passages — orbits, star positions, mountains, plant pairs, water, iron, and light — with classical tafsir, modern science, and honest strength assessments.",
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Celestial Signs: Orbits, Stars, Iron, and Light in the Quran.",
     "keywords": [
       "Quran and science",
       "Quran orbits",
@@ -27,6 +27,12 @@
     ]
   },
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nThe passages should be weighed first in their Arabic, literary, and classical-tafsir settings. Modern scientific resonance may support reflection, but it should be called possible or contested where the text and science do not force one reading.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "introduction",
       "title": "Introduction: Seven More Signs, One Framework",
@@ -80,6 +86,12 @@
       "title": "Applying the Framework: Signs, Not a Physics Textbook",
       "kind": "argument",
       "body": "Laid side by side, these seven passages resist a single verdict, which is itself the honest finding: the orbiting of celestial bodies is a strong resonance whose wording is equally at home in the geocentric cosmology it was first read within; the \"positions of the stars\" is evocative but linguistically open enough to fit whatever astronomy a reader already holds; mountains \"passing like clouds\" carries a plain classical meaning about the Day of Judgment that the plate-tectonics reading sets aside rather than builds on; paired fruits touch a real but only partially known ancient practice; water as life's origin is accurate but was already available to unaided observation; iron \"sent down\" rests on a striking astrophysical fact paired with a live linguistic counter-reading from the Quran's own usage elsewhere; and the sun/moon light distinction is real in the text but its significance is contested by the very tafsir tradition that transmits it.\n\nWhat unites the two verses that close with an explicit statement of purpose — 13:3's \"signs for a people who give thought\" and 10:5's \"He details the signs for a people who know\" — is that the Quran's own stated aim for this material is ayat: prompts toward reflection, gratitude, and recognition of a Creator, addressed most directly to an audience already inclined to look for them. That is a theological and rhetorical purpose, not a scientific one, and the distinction matters in both directions. It means these verses should not be dismissed as failures simply because they do not read like a modern astronomy or geology textbook — that was never their genre or aim. But it equally means that treating them as forensic scientific predictions, capable of settling debates about the Quran's origin, asks them to bear a kind of evidentiary weight their own context does not claim for them. As the companion article on approaching scientific claims carefully argues, overclaiming here does not strengthen the religious case being made for these verses; by inviting exactly the scrutiny under which alignment collapses into either geocentric-compatible poetry, contested linguistics, or knowledge the original audience already possessed, it can weaken it. The more durable claim — available whether or not any given scientific resonance holds up — is the text's own: that a reflective observer, looking at orbiting bodies, a star-strewn sky, standing mountains, fruit-bearing plants, water-dependent life, useful metal, and the different lights of day and night, might reasonably be moved to wonder about their maker."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nThe passages should be weighed first in their Arabic, literary, and classical-tafsir settings. Modern scientific resonance may support reflection, but it should be called possible or contested where the text and science do not force one reading.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
     }
   ],
   "quranVerses": [
@@ -324,6 +336,10 @@
     {
       "question": "Why does the Quran use different words for the light of the sun and the moon?",
       "answer": "The sun is consistently called siraj (blazing lamp) or diya' (radiant light), while the moon is called nur or munir (light, luminosity) — a real and consistent terminological pattern across 25:61, 71:16, and 10:5. Modern astronomy confirms the underlying physical fact that the sun generates its own light while the moon only reflects it. Whether the Quran's word choice is meant to encode that specific mechanism is debated even within the Islamic exegetical tradition: Ibn Kathir treats the sun and moon as having \"two different natures,\" while the modern Ma'arif-ul-Qur'an commentary cautions that reading \"reflected versus intrinsic\" into diya' and nur \"has no lexical basis\" and may reflect imported Greek philosophical categories rather than the Arabic language itself."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. The passages should be weighed first in their Arabic, literary, and classical-tafsir settings. Modern scientific resonance may support reflection, but it should be called possible or contested where the text and science do not force one reading."
     }
   ],
   "relatedSlugs": [

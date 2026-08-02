@@ -1,17 +1,33 @@
 {
   "slug": "early-islamic-preservation",
   "title": "Early Islamic Preservation: Companions to Codification",
-  "subtitle": "The transmission, authentication, and compilation of hadith from the Prophet's lifetime to the major collections",
+  "subtitle": "The transmission, authentication, and compilation of hadith from the Prophet's lifetime to the major collections — Written for sincere seekers asking whether Islam is true.",
   "category": "religious-history",
   "audienceLevel": "deep-study",
-  "summary": "The transmission of hadith—reports of Prophet Muhammad's words and deeds—developed through an oral culture of memorization among the companions, followed by systematic written codification in the 9th century. Islamic scholars created sophisticated authentication methods using chains of narrators (isnad) and rigorous criticism (jarh wa ta'dil) to evaluate each report's reliability. This approach contrasts with Biblical manuscript transmission, which relied on written copies from early periods, revealing how different religious cultures prioritized different preservation methods.",
+  "summary": "For sincere seekers asking whether Islam is true: The transmission of hadith—reports of Prophet Muhammad's words and deeds—developed through memorization, early written notes and collections, and later large canonical compilations that matured in the 9th century. Islamic scholars created sophisticated authentication methods using chains of narrators (isnad) and rigorous criticism (jarh wa ta'dil) to evaluate each report's reliability. This approach contrasts with Biblical manuscript transmission, which relied on written copies from early periods, revealing how different religious cultures prioritized different preservation methods.",
   "tags": ["Preservation", "Scripture", "Sources", "History"],
   "seo": {
     "metaTitle": "Early Islamic Hadith Preservation: Transmission, Authentication, Codification",
-    "metaDescription": "Explore how Islamic scholars preserved hadith through oral transmission chains (isnad), rigorous criticism (jarh wa ta'dil), and written collections like Bukhari and Muslim. Compare with Biblical manuscript transmission.",
-    "keywords": ["hadith transmission", "isnad", "jarh wa ta'dil", "Bukhari", "Muslim", "Islamic preservation", "manuscript transmission", "companions", "hadith authentication"]
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Early Islamic Preservation: Companions to Codification.",
+    "keywords": [
+      "hadith transmission",
+      "isnad",
+      "jarh wa ta'dil",
+      "Bukhari",
+      "Muslim",
+      "Islamic preservation",
+      "manuscript transmission",
+      "companions",
+      "hadith authentication"
+    ]
   },
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nHadith preservation involved oral teaching, early written notes, first- and second-century collections, and later canonical compilations. The timing and reliability of individual reports remain questions of method, not reasons to erase either the strengths or the limits of the tradition.\n\nWhere historians or scholars disagree, the article identifies the main alternatives before drawing its Islamic implication.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "intro",
       "title": "Introduction: The Challenge of Preservation",
@@ -65,6 +81,12 @@
       "title": "Conclusion: Lessons in Religious Preservation",
       "kind": "summary",
       "body": "Islamic hadith preservation developed an extensive culture of named transmission, biographical evaluation, comparison, and written compilation. Its scale and sophistication are historically important without needing the unsupported superlative 'unprecedented.' Early notebooks and compilations also correct the impression that writing began only centuries after Muhammad.\n\nThe system did not eliminate disagreement: Muslim critics graded reports differently, and modern historians continue to debate how far isnads can establish first-century origins. The responsible conclusion recognizes both the richness of the evidence and its methodological limits."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nHadith preservation involved oral teaching, early written notes, first- and second-century collections, and later canonical compilations. The timing and reliability of individual reports remain questions of method, not reasons to erase either the strengths or the limits of the tradition.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
     }
   ],
   "quranVerses": [
@@ -187,6 +209,10 @@
     {
       "question": "What about hadith that appear in one collection but not others—which is authentic?",
       "answer": "This is an area where Islamic scholars themselves disagree and continue to debate. When a hadith appears in al-Bukhari, it is generally accepted as authentic across Islamic schools. When a hadith appears in other collections but not al-Bukhari, scholars might accept it as 'hasan' (good) or 'sahih' (authentic) if the chain meets standards, even if al-Bukhari rejected it for his particular collection. Scholars assess such reports individually using jarh wa ta'dil principles. This ongoing scholarly discussion is not a weakness of the system but rather how the system functions—it requires engaged, careful evaluation rather than passive acceptance."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Hadith preservation involved oral teaching, early written notes, first- and second-century collections, and later canonical compilations. The timing and reliability of individual reports remain questions of method, not reasons to erase either the strengths or the limits of the tradition."
     }
   ],
   "relatedSlugs": [

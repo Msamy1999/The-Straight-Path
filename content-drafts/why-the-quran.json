@@ -1,17 +1,30 @@
 {
   "slug": "why-the-quran",
   "title": "Why the Quran?",
-  "subtitle": "A cumulative case from message, form, transmission, historical setting, and lived guidance",
+  "subtitle": "A cumulative case from message, form, transmission, historical setting, and lived guidance — Written for sincere seekers asking whether Islam is true.",
   "category": "the-quran-and-the-bible",
   "audienceLevel": "intermediate",
-  "summary": "The Quran's claim to be revelation cannot be proved by quoting its self-description alone. Its case is cumulative: a sustained account of God and humanity, a distinctive Arabic proclamation, early and unusually stable transmission, a historically consequential prophetic setting, and a form of guidance meant to be recited and lived. Each line of evidence has limits and alternatives that deserve direct examination.",
+  "summary": "For sincere seekers asking whether Islam is true: The Quran's claim to be revelation cannot be proved by quoting its self-description alone. Its case is cumulative: a sustained account of God and humanity, a distinctive Arabic proclamation, early and unusually stable transmission, a historically consequential prophetic setting, and a form of guidance meant to be recited and lived. Each line of evidence has limits and alternatives that deserve direct examination.",
   "tags": ["Scripture", "Preservation", "Theology", "History", "Sources"],
   "seo": {
     "metaTitle": "Why the Quran? Evidence, Preservation, and a Cumulative Case",
-    "metaDescription": "Evaluate the Quran through its message, literary challenge, manuscripts, recitations, historical context, coherence, and transformative guidance.",
-    "keywords": ["why Quran", "evidence Quran revelation", "Quran preservation", "Quran manuscripts", "Quran inimitability", "is Quran from God"]
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Why the Quran?.",
+    "keywords": [
+      "why Quran",
+      "evidence Quran revelation",
+      "Quran preservation",
+      "Quran manuscripts",
+      "Quran inimitability",
+      "is Quran from God"
+    ]
   },
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nA cumulative case should state its criteria: which claims are empirical, literary, historical, theological, or experiential, and what a serious skeptical response would be. The invitation to Islam should rest on honest examination, not on pretending that one feature settles everything.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "what-would-count",
       "title": "What Would Count as Evidence?",
@@ -59,6 +72,12 @@
       "title": "How to Reach a Responsible Verdict",
       "kind": "notes",
       "body": "Read entire surahs in more than one respected translation. Note recurring claims and difficult passages. Use a commentary that explains Arabic and early interpretation, then consult academic work that does not assume revelation. Study manuscript evidence and the canonical readings without demanding either an immaculate slogan or a skeptical slogan. Compare explanations for Muhammad and the Quran with their full evidential costs.\n\nFor Muslims, the convergence points to God's final preserved revelation. A historian, restricted to ordinary historical causes, can establish much about early text and community but will not certify divine authorship by method alone. A seeker must combine historical judgment with philosophical conclusions about God and revelation. Quran 2:2 describes the book as guidance without doubt; the reader's task is not to borrow that confidence unexamined, but to discover whether sustained examination makes it warranted."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nA cumulative case should state its criteria: which claims are empirical, literary, historical, theological, or experiential, and what a serious skeptical response would be. The invitation to Islam should rest on honest examination, not on pretending that one feature settles everything.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
     }
   ],
   "quranVerses": [
@@ -134,6 +153,10 @@
     {
       "question": "Where should a first-time reader begin?",
       "answer": "Read several complete shorter surahs, then longer connected passages such as Surahs Maryam, Yusuf, or portions of al-Baqarah, using a translation with explanatory notes. Record questions and compare responsible Muslim commentary with critical academic scholarship."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. A cumulative case should state its criteria: which claims are empirical, literary, historical, theological, or experiential, and what a serious skeptical response would be. The invitation to Islam should rest on honest examination, not on pretending that one feature settles everything."
     }
   ],
   "relatedSlugs": ["how-was-the-quran-preserved", "qiraat-explained-simply", "early-quran-manuscripts", "the-final-message"],

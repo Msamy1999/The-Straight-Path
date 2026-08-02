@@ -1,17 +1,31 @@
 {
   "slug": "the-death-of-judas",
   "title": "The Death of Judas",
-  "subtitle": "Reconciling Two Accounts of Judas's End",
+  "subtitle": "Reconciling Two Accounts of Judas's End — Written for sincere seekers asking whether Islam is true.",
   "category": "difficult-questions",
   "audienceLevel": "intermediate",
-  "summary": "The New Testament offers two different descriptions of how Judas Iscariot died: Matthew reports he hanged himself, while Acts describes him falling headlong and his body bursting open. This article explores the apparent contradiction, examines Christian harmonization attempts, and addresses the Islamic perspective on this figure.",
+  "summary": "For sincere seekers asking whether Islam is true: The New Testament offers two different descriptions of how Judas Iscariot died: Matthew reports he hanged himself, while Acts describes him falling headlong and his body bursting open. This article explores the apparent contradiction, examines Christian harmonization attempts, and addresses the Islamic perspective on this figure.",
   "tags": ["Scripture", "Questions", "History", "Sources"],
   "seo": {
     "metaTitle": "The Death of Judas: Reconciling Matthew and Acts",
-    "metaDescription": "Explore the biblical accounts of Judas Iscariot's death, the apparent contradictions between Matthew 27 and Acts 1, and scholarly approaches to harmonization.",
-    "keywords": ["Judas Iscariot", "Matthew 27", "Acts 1", "biblical contradiction", "death of Judas", "Christian apologetics", "New Testament"]
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: The Death of Judas.",
+    "keywords": [
+      "Judas Iscariot",
+      "Matthew 27",
+      "Acts 1",
+      "biblical contradiction",
+      "death of Judas",
+      "Christian apologetics",
+      "New Testament"
+    ]
   },
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nQuestions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "overview",
       "title": "Overview of the Difficulty",
@@ -59,6 +73,12 @@
       "title": "Notes on Textual Reliability",
       "kind": "sources",
       "body": "Both Matthew and Acts are preserved in multiple ancient manuscript traditions, and the accounts of Judas's death are stable across these witnesses. There are no significant textual variants in the passages describing Judas's end—the differences between Matthew and Acts reflect authorial choices, not scribal alterations or corruptions. This manuscript stability indicates that early Christians did not attempt to harmonize the texts by changing their wording, and both accounts were retained despite their apparent incompatibility. The existence of both accounts in the New Testament canon suggests that the early Christian community accepted some level of interpretive flexibility on how to understand Judas's death. Early Church Fathers such as Papias, Clement of Alexandria, and others occasionally commented on Judas's death, sometimes offering harmonization attempts or additional legendary details, but their comments do not provide independent historical sources—they work from the same textual tradition we possess. The archaeological record has not yielded direct evidence of Judas's death, though the location of Akeldama in Jerusalem has been identified by tradition and archaeological study, supporting at least the geographical plausibility of Acts's reference."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nQuestions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
     }
   ],
   "quranVerses": [
@@ -127,6 +147,10 @@
     {
       "question": "What does this difficulty reveal about how the New Testament was composed?",
       "answer": "Critical scholars argue that the presence of two accounts of Judas's death demonstrates that the gospels and Acts were composed from diverse sources and traditions. They contend that early Christian communities had limited access to reliable historical information about events surrounding Jesus's arrest and execution, and that the retention of both accounts in the canon reflects a priority on preserving multiple voices over enforcing textual harmony. In contrast, traditional Christian interpreters argue that the two accounts are not necessarily incompatible but complementary—each Gospel writer selecting details meaningful to his theological purpose, both drawing on reliable tradition. This interpretive divide reflects broader disagreements about how the New Testament was composed and transmitted, with critical scholars emphasizing source diversity and traditional scholars emphasizing the reliability of distinct but harmonizable accounts."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Questions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility."
     }
   ],
   "relatedSlugs": [

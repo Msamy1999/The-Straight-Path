@@ -1,17 +1,34 @@
 {
   "slug": "grace-mercy-faith-deeds",
   "title": "Grace, Mercy, Faith, and Deeds",
-  "subtitle": "Salvation, Divine Mercy, and Human Responsibility in Christian and Islamic Theology",
+  "subtitle": "Salvation, Divine Mercy, and Human Responsibility in Christian and Islamic Theology — Written for sincere seekers asking whether Islam is true.",
   "category": "salvation-and-purpose-of-life",
   "audienceLevel": "deep-study",
-  "summary": "Christian and Islamic traditions engage differently with salvation and the balance between divine grace/mercy and human faith and deeds. While Protestantism emphasizes justification by faith alone, Catholicism and Orthodoxy incorporate works as necessary responses to grace. Islam maintains an integrated theology where tawakkul (trust in God) and amal (righteous deeds) are both essential and inseparable. This article explores how each tradition understands the relationship between mercy, faith, action, and salvation.",
+  "summary": "For sincere seekers asking whether Islam is true: Christian and Islamic traditions engage differently with salvation and the balance between divine grace/mercy and human faith and deeds. While Protestantism emphasizes justification by faith alone, Catholicism and Orthodoxy incorporate works as necessary responses to grace. Islam maintains an integrated theology where tawakkul (trust in God) and amal (righteous deeds) are both essential and inseparable. This article explores how each tradition understands the relationship between mercy, faith, action, and salvation.",
   "tags": ["Theology", "Scripture", "Purpose", "Questions"],
   "seo": {
     "metaTitle": "Grace, Mercy, Faith, and Deeds: Christian and Islamic Perspectives",
-    "metaDescription": "Explore how Christianity and Islam understand salvation: faith alone vs. faith and works, divine grace vs. human responsibility, and the roles of tawakkul and amal in achieving salvation.",
-    "keywords": ["grace", "mercy", "faith", "works", "deeds", "salvation", "tawakkul", "amal", "sola fide", "justification"]
+    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Grace, Mercy, Faith, and Deeds.",
+    "keywords": [
+      "grace",
+      "mercy",
+      "faith",
+      "works",
+      "deeds",
+      "salvation",
+      "tawakkul",
+      "amal",
+      "sola fide",
+      "justification"
+    ]
   },
   "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "For a Seeker Asking Whether Islam Is True",
+      "kind": "summary",
+      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nIslam presents human life as purposeful worship of the one God, moral accountability, repentance, mercy, and a final return to Him; comparison should clarify that invitation rather than stop at description.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+    },
     {
       "sectionId": "introduction",
       "title": "Introduction: The Central Tension",
@@ -59,6 +76,12 @@
       "title": "Key Questions for Interfaith Reflection",
       "kind": "notes",
       "body": "Several questions emerge when comparing these traditions:\n\n1. How do we understand divine sovereignty and human responsibility? Does God's omniscience and control eliminate genuine human choice, or does it encompass and enable human agency? All three traditions affirm both, but they explain the relationship differently.\n\n2. What is the relationship between internal transformation (faith, intention, sincere commitment) and external conduct (deeds, moral action)? Can one exist without the other? Are they distinct but inseparable?\n\n3. How do we understand God's mercy and justice? Does mercy mean that one's deeds don't matter? Or does it mean that God has given humans the capacity and opportunity to do good, and judges justly based on their response to that opportunity?\n\n4. What role does God's grace play in human action? Is grace simply the initial gift of salvation (in the Reformation view), or does it continually enable and sustain the believer's moral growth (in the Catholic/Orthodox view), or does it provide both the framework and the power for human effort (in the Islamic view through tawakkul)?\n\n5. How do we interpret passages that seem to emphasize faith alone or works alone? Are they speaking to different audiences or addressing different errors? Are they different emphases within a single truth?\n\nThese questions do not have simple answers, but engaging them deeply is essential for understanding how each tradition navigates the fundamental tension between divine initiative and human responsibility in the project of salvation and moral transformation."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "What This Means for a Seeker",
+      "kind": "summary",
+      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nIslam presents human life as purposeful worship of the one God, moral accountability, repentance, mercy, and a final return to Him; comparison should clarify that invitation rather than stop at description.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
     }
   ],
   "quranVerses": [
@@ -203,6 +226,10 @@
     {
       "question": "Is salvation based more on God's action or on human action across these traditions?",
       "answer": "All three traditions affirm that God's action is primary and foundational. Christianity (whether Protestant, Catholic, or Orthodox) sees salvation as ultimately God's gift and initiative; humans cannot save themselves. Islam teaches that all good deeds are ultimately enabled by God's will and guidance, and that God's mercy encompasses all things. The differences are in how God's primacy and human responsibility are balanced and explained. Protestantism emphasizes God's sovereign choice and grace more prominently in the order of salvation. Catholicism and Orthodoxy emphasize the necessity of human cooperation with grace. Islam emphasizes that deeds matter because God has made them matter; they are the means by which humans respond to and fulfill God's will. In all cases, humans are ultimately dependent on God, yet genuinely responsible for their choices and actions."
+    },
+    {
+      "question": "If I am asking whether Islam is true, what should I do next?",
+      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Islam presents human life as purposeful worship of the one God, moral accountability, repentance, mercy, and a final return to Him; comparison should clarify that invitation rather than stop at description."
     }
   ],
   "relatedSlugs": [
