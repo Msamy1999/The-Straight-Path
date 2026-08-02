@@ -91,9 +91,12 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     getRelatedArticles(article),
     getCategoryBySlug(article.category),
   ]);
-  const renderableComparison = hasRenderableComparison(comparison)
-    ? comparison
-    : undefined;
+  // This is a focused catalogue, not a two-scripture comparison. Its researched
+  // article sections use the same accordion presentation as Claims Against Islam.
+  const renderableComparison =
+    article.slug === "contradictions-in-the-bible" || !hasRenderableComparison(comparison)
+      ? undefined
+      : comparison;
   const citationIds = Array.from(
     new Set([...article.citations, ...(renderableComparison?.sources ?? [])]),
   );
