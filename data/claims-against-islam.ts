@@ -224,7 +224,7 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
   },
   {
     id: "wife-beating",
-    title: "Does Islam permit wife-beating?",
+    title: "Islam permits “domestic abuse.”",
     claim: "Critics point to Quran 4:34 and argue that Islam permits or excuses domestic abuse.",
     response: [
       "Quran 4:34 is a difficult verse and must not be hidden. It sets out a sequence for a serious marital breakdown: counsel, temporary separation in bed, and a final disputed term often translated as striking. It immediately forbids seeking a way against the wife once reconciliation occurs; it does not authorise rage, injury, humiliation, or routine control.",
@@ -241,7 +241,7 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
   },
   {
     id: "homosexuality",
-    title: "Why does Islam prohibit homosexuality?",
+    title: "Islam prohibits homosexuality.",
     claim: "Critics argue that Islam's sexual ethics are unjust because classical Islamic teaching prohibits same-sex sexual acts.",
     response: [
       "Islamic teaching distinguishes a person's inherent dignity from every desire or action. The Quran places sexual intimacy within marriage between a man and a woman, and the classical Muslim understanding of the passages about the people of Lot prohibits same-sex sexual acts. That is a moral teaching shared by the major classical schools, not a licence to demean people.",
@@ -256,7 +256,7 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
   },
   {
     id: "jews-and-christians",
-    title: "Does Islam teach that Jews and Christians are enemies?",
+    title: "Islam teaches that Jews and Christians are enemies.",
     claim: "Critics point to Quranic passages about conflict and loyalty and argue that Islam teaches permanent hostility toward Jews and Christians.",
     response: [
       "No. The Quran does not make a person's Jewish or Christian identity a reason for hatred. It instructs Muslims to speak with the People of the Book in the best manner, to be just even toward opponents, and to be kind and fair to people who do not fight them because of religion.",
@@ -273,7 +273,7 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
   },
   {
     id: "sharia-and-democracy",
-    title: "Is Sharia incompatible with justice and democracy?",
+    title: "Sharia is incompatible with justice and democracy.",
     claim: "Critics argue that Sharia necessarily produces authoritarian rule and cannot coexist with democracy, human rights, or accountable government.",
     response: [
       "Sharia is broader than a state criminal code. It includes worship, family, contracts, ethics, and the public duties of justice and mercy. The Quran commands rulers to return trusts, judge fairly, consult their community, and refer disputes to principled law rather than personal power.",

@@ -1,10 +1,10 @@
 {
   "slug": "who-are-the-people-of-palestine",
   "title": "Who Are the People of Palestine?",
-  "subtitle": "A human-centred introduction to identity, place, and careful language",
+  "subtitle": "A respectful discussion about the people of Palestine, with focus on historical context and the relevance of the Palestinian cause to Islam.",
   "category": "religious-history",
   "audienceLevel": "beginner",
-  "summary": "Palestinians are a people with diverse religious, family, regional, and cultural histories connected to Palestine. This draft introduces the subject without reducing people to a political slogan, a single religion, or a single experience.",
+  "summary": "Palestinians are a people with diverse religious, family, regional, and cultural histories connected to Palestine. Their modern identity developed through local life, Ottoman and Mandate-era institutions, displacement, political organization, and attachment to the land.",
   "tags": ["History", "Questions", "Sources"],
   "sections": [
     {
@@ -17,13 +17,19 @@
       "sectionId": "identity-and-history",
       "title": "Identity Is Historical and Personal",
       "kind": "history",
-      "body": "Modern national identities develop through many forces: family networks, local institutions, migration, education, language, religious communities, and changing political boundaries. Palestine was a geographic and administrative name long before modern nationalism, but a specifically Palestinian national consciousness developed gradually rather than appearing fully formed at one moment. Historians commonly trace important stages through the late Ottoman period, the British Mandate, the upheavals of 1948, and the later experience of displacement and political organization.\n\nLocal, Arab, religious, and Palestinian identities often overlapped. A person could be attached to a village, Jerusalem, a wider Arab or Syrian project, a religious community, and a developing Palestinian national movement at the same time. This history does not erase older Jewish, Christian, Muslim, Samaritan, Armenian, Bedouin, and other connections to the land, nor does it make present-day Palestinians a single political bloc.\n\nCareful study should make room for these layers rather than using history as a weapon. A historical account can describe institutions, documents, and demographic change; it should not turn whole communities into stereotypes or make present-day individuals answer for every event in the past."
+      "body": "Modern national identities develop through family networks, local institutions, migration, education, language, religious communities, and changing political boundaries. Palestine was a geographic name long before modern nationalism, while a specifically Palestinian national consciousness developed gradually rather than appearing fully formed at one moment. In the late Ottoman period, towns, newspapers, schools, trade networks, municipal bodies, and religious institutions connected local communities across the country. Under the British Mandate, elections, political associations, the press, and opposition to competing national projects made the question of Palestine more explicitly national.\n\nRashid Khalidi's Palestinian Identity: The Construction of Modern National Consciousness (1997) emphasizes overlapping local, Arab, Syrian, Ottoman, and Palestinian loyalties. Beshara Doumani's Rediscovering Palestine (1995) shows how families, merchants, peasants, and local institutions shaped public life in Ottoman Palestine. James L. Gelvin's The Israel-Palestine Conflict: A History with Documents places these developments within the wider history of the conflict. Their emphases differ, but together they show why Palestinian identity should be understood as historically formed rather than as something that suddenly appeared in 1948.\n\nLocal, Arab, religious, and Palestinian identities often overlapped. A person could be attached to a village, Jerusalem, a wider Arab project, a religious community, and a developing Palestinian national movement at the same time. This history does not erase older Jewish, Christian, Muslim, Samaritan, Armenian, Bedouin, and other connections to the land, nor does it make present-day Palestinians a single political bloc.\n\nCareful study should make room for these layers rather than using history as a weapon. A historical account can describe institutions, documents, and demographic change; it should not turn whole communities into stereotypes or make present-day individuals answer for every event in the past."
+    },
+    {
+      "sectionId": "modern-history-timeline",
+      "title": "A concise modern history",
+      "kind": "history",
+      "body": "Several events are essential for understanding the modern Palestinian experience. The 1917 Balfour Declaration and the British Mandate that followed placed competing national promises and projects within one territory. The 1947 United Nations partition recommendation and the 1948 war were followed by the Nakba (catastrophe), in which hundreds of thousands of Palestinians—commonly estimated at more than 700,000—were displaced from their homes and became refugees; Palestinian and Israeli historians continue to debate parts of the causes and chronology.\n\nThe Palestine Liberation Organization (PLO) was established in 1964, with the first Palestine National Council meeting in Jerusalem under Arab League auspices. It became an umbrella organization for major Palestinian political and armed factions and, after 1967, increasingly represented Palestinians in international diplomacy. The June 1967 war brought the West Bank, including East Jerusalem, and the Gaza Strip under Israeli military occupation, creating another decisive layer of Palestinian political and social life.\n\nThe First Intifada began in December 1987 as a mass uprising against the occupation, involving strikes, demonstrations, civil disobedience, and armed violence. It helped bring the Palestinian question to the centre of international diplomacy and was followed by the 1993 Oslo process, in which Israel and the PLO mutually recognized one another. The Second Intifada began in 2000 after the collapse of the peace process and escalating confrontations; it brought severe Palestinian and Israeli civilian suffering and ended after several years of conflict. These milestones do not explain every later development, but they provide a necessary frame for understanding Palestinian identity, displacement, political organization, and the continuing relevance of the cause to Muslims and to others concerned with justice."
     },
     {
       "sectionId": "reading-with-dignity",
       "title": "Start With Human Dignity",
       "kind": "notes",
-      "body": "When reading about Palestine, begin with the basic fact that the people being discussed are human beings with names, families, grief, hopes, and ordinary responsibilities. Good sources distinguish a government, an armed group, a religious tradition, and a civilian population. They also state what they know, what they do not know, and how they know it.\n\nThis is a draft study guide, not a final historical account. Readers should compare a scholarly history with primary documents and reputable reporting, then check dates, authorship, and context before sharing a claim."
+      "body": "When reading about Palestine, begin with the basic fact that the people being discussed are human beings with names, families, grief, hopes, and ordinary responsibilities. Good sources distinguish a government, an armed group, a religious tradition, and a civilian population. They also state what they know, what they do not know, and how they know it.\n\nAn introductory account should be compared with scholarly histories, primary documents, and dated reporting. Dates, authorship, and context matter, especially when a claim is used to judge an entire people."
     }
   ],
   "quranVerses": [],
@@ -51,6 +57,20 @@
       "publisher": "University of California Press",
       "year": 1995,
       "note": "A social and economic history of Ottoman Palestine that helps ground national-identity discussions in local institutions, families, and regional life."
+    },
+    {
+      "title": "The Israel-Palestine Conflict: A History with Documents",
+      "author": "James L. Gelvin",
+      "publisher": "Cambridge University Press",
+      "year": 2021,
+      "note": "An accessible survey that places Palestinian identity, the Mandate, 1948, 1967, the PLO, and the Intifadas within the wider conflict."
+    },
+    {
+      "title": "Armed Struggle and the Search for State: The Palestinian National Movement, 1949-1993",
+      "author": "Yezid Sayigh",
+      "publisher": "Oxford University Press",
+      "year": 1997,
+      "note": "A detailed history of Palestinian political organization, including the PLO and the movement's changing strategies."
     }
   ]
 }

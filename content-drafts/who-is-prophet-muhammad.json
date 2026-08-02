@@ -40,7 +40,13 @@
       "sectionId": "hijrah-and-medina",
       "title": "The Hijrah and the Medinan Community",
       "kind": "history",
-      "body": "In 622 CE Muhammad and his followers migrated from Mecca to Medina. This Hijrah, or migration, is so important that the Islamic lunar calendar counts its years from that event. It marks a transition from a persecuted minority to an organized community whose prophet also carried public responsibilities.\n\nIn Medina, Muhammad joined the emigrants from Mecca with local supporters, established the mosque as a place of prayer and community life, entered agreements with groups in and around the city, taught new practices and social duties, and led the community through periods of alliance, conflict, loss, and reconciliation. The historical record includes warfare, but his Medinan life cannot be reduced to warfare: it also includes worship, family life, charity, teaching, diplomacy, adjudication, and daily care for companions.\n\nAfter years of conflict, Mecca came under Muslim authority in 630 CE. Islamic tradition remembers Muhammad entering the city with a broad amnesty and cleansing the Kaaba of idols, restoring it to the worship of the one God. He died in Medina in 632 CE after completing his public mission."
+      "body": "In 622 CE Muhammad and his followers migrated from Mecca to Medina. This Hijrah, or migration, is so important that the Islamic lunar calendar counts its years from that event. It marks a transition from a persecuted minority to an organized community whose prophet also carried public responsibilities.\n\nIn Medina, Muhammad joined the emigrants from Mecca with local supporters, established the mosque as a place of prayer and community life, entered agreements with groups in and around the city, taught new practices and social duties, and led the community through periods of alliance, conflict, loss, and reconciliation. The historical record includes warfare, but his Medinan life cannot be reduced to warfare: it also includes worship, family life, charity, teaching, diplomacy, adjudication, and daily care for companions.\n\nThe major conflicts are usually described in this sequence. At Badr (624), a Muslim force defeated a larger Meccan army after the years of persecution and expulsion. At Uhud (625), Mecca's counterattack initially pushed the Muslims back and caused heavy losses. At the Battle of the Trench, or al-Khandaq (627), a Meccan-led coalition besieged Medina; the siege failed after the Muslims defended the city behind a trench. The Treaty of Hudaybiyyah (628) then created a truce and recognized the Muslim community politically. When Quraysh-aligned forces attacked the Muslims' ally Khuza'ah, the treaty broke down. Muhammad entered Mecca in 630 with a large force, and the city came under Muslim authority with limited fighting and a widely reported general amnesty. These events were not a simple campaign of unprovoked conquest: they unfolded through persecution, migration, alliances, treaty violations, and negotiated surrender, while the Prophet's authority in Mecca was followed by the removal of idols from the Kaaba.\n\nHe died in Medina in 632 CE after completing his public mission."
+    },
+    {
+      "sectionId": "marriages-and-family-life",
+      "title": "His Marriages and Family Life",
+      "kind": "history",
+      "body": "Muhammad's family life should be described in its full historical setting. He was married only to Khadijah for about twenty-five years, until her death. She was a respected merchant, his first believer, and his closest supporter through the earliest persecution. His later marriages took place after her death and included widows, divorcees, and women from different tribes and communities. Among his wives were Sawdah bint Zam'ah, Hafsah bint Umar, Zaynab bint Khuzaymah, Umm Salamah, Zaynab bint Jahsh, Juwayriyyah bint al-Harith, Umm Habibah, Safiyyah bint Huyayy, and Maymunah bint al-Harith. The circumstances varied: companionship, care for women left without support, family and tribal reconciliation, and the formation of bonds across former lines of conflict all appear in the early Muslim accounts. No single explanation describes every marriage, and some individual reports remain debated.\n\nThe Quran calls the Prophet's wives Mothers of the Believers (Quran 33:6) and placed special responsibilities on the household because it was also a place where the community learned religion. Muhammad consulted his wives, accepted their counsel, and shared ordinary domestic life. Umm Salamah's advice at Hudaybiyyah is a well-known example of his listening to a wife's judgment. Aisha became one of the most important teachers and transmitters of Islam. Reports in Sahih Muslim 2328a also state that he never struck a woman or servant, while Quran 4:19 commands husbands to live with wives in kindness. For Muslims, these patterns—long monogamy with Khadijah, responsibility toward later wives, consultation, and good treatment—are central to understanding his marriages rather than reducing them to power or desire."
     },
     {
       "sectionId": "difficult-episodes-and-sources",
@@ -69,6 +75,26 @@
       "reference": "Quran 3:144",
       "arabic": "وَمَا مُحَمَّدٌ إِلَّا رَسُولٌۭ قَدْ خَلَتْ مِن قَبْلِهِ ٱلرُّسُلُ ۚ أَفَإِي۟ن مَّاتَ أَوْ قُتِلَ ٱنقَلَبْتُمْ عَلَىٰٓ أَعْقَٰبِكُمْ ۚ وَمَن يَنقَلِبْ عَلَىٰ عَقِبَيْهِ فَلَن يَضُرَّ ٱللَّهَ شَيْـًۭٔا ۗ وَسَيَجْزِى ٱللَّهُ ٱلشَّٰكِرِينَ",
       "translation": "Muhammad is not but a messenger. [Other] messengers have passed on before him. So if he was to die or be killed, would you turn back on your heels [to unbelief]? And he who turns back on his heels will never harm Allah at all; but Allah will reward the grateful.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Ahzab",
+      "surahNumber": 33,
+      "ayahNumber": 6,
+      "reference": "Quran 33:6",
+      "arabic": "ٱلنَّبِىُّ أَوْلَىٰ بِٱلْمُؤْمِنِينَ مِنْ أَنفُسِهِمْ ۖ وَأَزْوَٰجُهُۥٓ أُمَّهَٰتُهُمْ ۗ وَأُو۟لُوا۟ ٱلْأَرْحَامِ بَعْضُهُمْ أَوْلَىٰ بِبَعْضٍۢ فِى كِتَٰبِ ٱللَّهِ مِنَ ٱلْمُؤْمِنِينَ وَٱلْمُهَٰجِرِينَ إِلَّآ أَن تَفْعَلُوٓا۟ إِلَىٰٓ أَوْلِيَآئِكُم مَّعْرُوفًۭا ۚ كَانَ ذَٰلِكَ فِى ٱلْكِتَٰبِ مَسْطُورًۭا",
+      "translation": "The Prophet is more worthy of the believers than themselves, and his wives are [in the position of] their mothers. And those of [blood] relationship are more entitled [to inheritance] in the decree of Allah than the [other] believers and the emigrants, except that you may do to your close associates a kindness [through bequest]. That was in the Book inscribed.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "An-Nisaa",
+      "surahNumber": 4,
+      "ayahNumber": 19,
+      "reference": "Quran 4:19",
+      "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا يَحِلُّ لَكُمْ أَن تَرِثُوا۟ ٱلنِّسَآءَ كَرْهًۭا ۖ وَلَا تَعْضُلُوهُنَّ لِتَذْهَبُوا۟ بِبَعْضِ مَآ ءَاتَيْتُمُوهُنَّ إِلَّآ أَن يَأْتِينَ بِفَٰحِشَةٍۢ مُّبَيِّنَةٍۢ ۚ وَعَاشِرُوهُنَّ بِٱلْمَعْرُوفِ ۚ فَإِن كَرِهْتُمُوهُنَّ فَعَسَىٰٓ أَن تَكْرَهُوا۟ شَيْـًۭٔا وَيَجْعَلَ ٱللَّهُ فِيهِ خَيْرًۭا كَثِيرًۭا",
+      "translation": "O you who have believed, it is not lawful for you to inherit women by compulsion. And do not make difficulties for them in order to take [back] part of what you gave them unless they commit a clear immorality. And live with them in kindness. For if you dislike them - perhaps you dislike a thing and Allah makes therein much good.",
       "translator": "Saheeh International",
       "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
     },

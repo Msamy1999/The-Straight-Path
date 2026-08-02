@@ -9,9 +9,6 @@ export function SiteFooter() {
       <Container className="grid gap-8 py-10 text-sm text-muted-foreground md:grid-cols-[1.1fr_1.5fr_0.8fr]">
         <div>
           <SiteBrand as="text" />
-          <p className="mt-3">
-            The Straight Path is a library of resources covering the foundations of Islam and how it compares to other systems of belief. Along with providing an overview of the Islamic faith, the platform offers a careful exploration of Christianity, atheism, agnosticism, and more, examining justifications for faith from both an intellectual and spiritual perspective.
-          </p>
         </div>
         <nav aria-label="Footer main sections">
           <p className="font-medium text-foreground">Main sections</p>

@@ -1,7 +1,7 @@
 {
   "slug": "why-would-god-allow-corruption",
   "title": "Why Would God Allow Scripture to Be Corrupted?",
-  "subtitle": "The question that rebounds: divine faithfulness, human trust, and what each tradition believes God actually promised to protect",
+  "subtitle": "Divine faithfulness, human trust, and what each tradition believes God promised to protect",
   "category": "difficult-questions",
   "audienceLevel": "intermediate",
   "summary": "After the historical evidence about textual transmission has been laid out, Muslims and Christians often turn to a more basic theological question: if the Torah and Gospel are from God, why would He allow them to be altered at all — and does the same question apply to the Quran? This article presents the Christian argument from divine faithfulness (Isaiah 40:8, Matthew 24:35), the Islamic framework distinguishing scriptures entrusted to human guardianship (Quran 5:44, 2:79) from the Quran's own direct divine guarantee (Quran 15:9), the internal Muslim debate over what \"corruption\" (tahrif) actually means, and the Christian counter-arguments this raises. It closes with a philosophical look at free will and divine testing, and with what evidence each side would need to strengthen its own case.",
@@ -56,6 +56,18 @@
       "body": "The Islamic framework answers this question by first distinguishing between two very different kinds of relationship a community can have with its scripture: being given a book to guard, versus being given a guarantee that the book cannot be lost. The Quran describes earlier scripture in the first category. Speaking of the Torah, it says: \"Indeed, We sent down the Torah, in which was guidance and light. The prophets who submitted [to Allah] judged by it for the Jews, as did the rabbis and scholars by that with which they were entrusted of the Scripture of Allah, and they were witnesses thereto. So do not fear the people but fear Me, and do not exchange My verses for a small price. And whoever does not judge by what Allah has revealed - then it is those who are the disbelievers.\" (Quran 5:44). On the standard Muslim reading, this verse places responsibility for guarding the Torah's content on the human scholars and rabbis who received and transmitted it — they are described as entrusted with it, not as passive recipients of an automatic divine seal that made tampering impossible regardless of what they did.\n\nThe Quran goes further, accusing some individuals of actively breaking that trust rather than simply failing to keep it through neglect: \"So woe to those who write the \"scripture\" with their own hands, then say, \"This is from Allah,\" in order to exchange it for a small price. Woe to them for what their hands have written and woe to them for what they earn.\" (Quran 2:79). Read together, these verses present a specific claim: that guarding earlier revelation was a delegated human responsibility, and that at least some of the people entrusted with it did not meet that responsibility — whether through misinterpretation, selective transmission, or, on the reading many classical Muslim scholars held, through actually writing things and attaching God's name to them.\n\nThis matters for the theological question at hand because it reframes what \"God allowing corruption\" would even mean in the Islamic framework. God did not promise, on this reading, that the Torah and Gospel's wording would be automatically protected regardless of human conduct; He entrusted communities with that task and held them accountable for the outcome, the same way the Quran elsewhere holds individuals accountable for other moral and religious failures. Failing to guard something one was trusted with is, in the Quran's own moral vocabulary, a human failure — not evidence that God is either powerless or unfaithful."
     },
     {
+      "sectionId": "jeremiah-and-scribes",
+      "title": "Jeremiah's warning about scribes",
+      "kind": "scripture",
+      "body": "Jeremiah 8:8 adds an important biblical text to this discussion. It refers to \"the false pen of the scribes\" and says that the law has been handled falsely (wording varies by translation). Christian commentators differ over the precise historical referent, but some understand Jeremiah to accuse scribes of falsifying or distorting written religious texts, not merely of misunderstanding them. That reading does not by itself settle the later history of the Bible, and it should not be used as a slogan; it does show that the Bible itself contains a warning about human custodians altering or misrepresenting written revelation. The verse therefore belongs in any serious comparison of divine promises, scribal responsibility, and the Islamic claim that earlier communities failed to guard what they had received."
+    },
+    {
+      "sectionId": "quranic-coherence",
+      "title": "The Quran's claim about contradiction",
+      "kind": "scripture",
+      "body": "The Quran also gives a test for its own source: \"Do they not reflect upon the Qur'an? If it had been from [anyone] other than Allah, they would have found within it much contradiction.\" (Quran 4:82). Muslims understand this as an invitation to examine the Quran's coherence across a revelation delivered over many years, not as a substitute for historical evidence. In the preservation debate, it supports the Islamic claim that the Quran is a unified divine message; critics can still ask whether the test is persuasive and how \"contradiction\" should be defined."
+    },
+    {
       "sectionId": "islamic-guarantee",
       "title": "A Different Promise for the Final Revelation",
       "kind": "scripture",
@@ -87,7 +99,7 @@
     },
     {
       "sectionId": "what-would-it-take",
-      "title": "What Would It Take to Settle This?",
+      "title": "The bottom line",
       "kind": "notes",
       "body": "This article does not declare a winner, because the disagreement rests on a genuine difference in what each tradition believes God actually promised, and that difference cannot be resolved by evidence about manuscripts alone — such evidence only shows what happened to a text's wording, not what God promised regarding it in the first place. What can be said honestly is what each side would need to show to make its own case stronger, on its own terms.\n\nA Muslim case for the Islamic framework would be strengthened by showing, in detail and against the strongest counter-evidence, that the actual transmission history of the Quran — the interlocking record of memorization and early manuscript compilation examined in this library's preservation-branch articles — matches the specific, verbatim guarantee Quran 15:9 describes, rather than treating that guarantee as self-evidently true because the Quran states it. A Christian case for the Christian framework would be strengthened by showing, with comparable historical rigor, that the New Testament's documented manuscript variants really do fall short of touching the substance of the gospel message, in line with what textual critics such as Metzger and Bruce argue, and by engaging directly with the internal Muslim debate over tahrif al-ma'na rather than treating \"the Quran says our scripture was corrupted\" as a single, uncontested Islamic claim.\n\nBoth sides, in other words, would need to do the same kind of work: test a scripture's claim about itself against the actual, checkable history of how that scripture reached the present day, rather than resolving the question by appeal to the strength of the claim alone. That is the spirit in which this library's preservation-branch articles were written, and it is the same spirit this article has tried to apply to the theological question of why God would allow — or not allow — His word to be altered in the first place."
     },
@@ -126,6 +138,16 @@
       "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
     },
     {
+      "surahName": "An-Nisaa",
+      "surahNumber": 4,
+      "ayahNumber": 82,
+      "reference": "Quran 4:82",
+      "arabic": "أَفَلَا يَتَدَبَّرُونَ ٱلْقُرْءَانَ ۚ وَلَوْ كَانَ مِنْ عِندِ غَيْرِ ٱللَّهِ لَوَجَدُوا۟ فِيهِ ٱخْتِلَٰفًۭا كَثِيرًۭا",
+      "translation": "Then do they not reflect upon the Qur'an? If it had been from [anyone] other than Allah, they would have found within it much contradiction.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
       "surahName": "Al-Hijr",
       "surahNumber": 15,
       "ayahNumber": 9,
@@ -152,6 +174,15 @@
       "verse": "35",
       "reference": "Matthew 24:35",
       "text": "Heaven and earth will pass away, but my words will not pass away.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Jeremiah",
+      "chapter": 8,
+      "verse": "8",
+      "reference": "Jeremiah 8:8",
+      "text": "How can you say, ‘We are wise, and the law of Yahweh is with us?’ But, behold, the false pen of the scribes has worked falsely.",
       "version": "World English Bible",
       "sourceAttribution": "bible-api.com — World English Bible (public domain)"
     }
@@ -184,6 +215,7 @@
     "how-was-the-quran-preserved",
     "how-was-the-bible-transmitted",
     "textual-variants-explained",
+    "contradictions-in-the-bible",
     "early-quran-manuscripts",
     "uthmanic-standardization",
     "biblical-canon-formation",

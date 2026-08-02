@@ -96,8 +96,10 @@ function cleanEditorialText(value: string): string {
     .replace(/\bFollowing this library(?:'s|’s) method\b/gi, "Using these distinctions")
     .replace(/\bsource-aware\b/gi, "well-supported")
     .replace(/\bsource awareness\b/gi, "careful support")
+    .replace(/\bthis library(?:['’]s)?\s+preservation-branch articles\b/gi, "the preservation evidence")
+    .replace(/\bthis article(?:['’]s)?\b/gi, "the discussion")
+    .replace(/\bthis library(?:['’]s)?\b/gi, "the discussion")
     .replace(/\bin this article\b/gi, "here")
-    .replace(/\bthis article\b/gi, "the analysis")
     .replace(/\bthis draft\b/gi, "the analysis")
     .replace(/\bthis page\b/gi, "the discussion")
     .replace(/\bthis library\b/gi, "the discussion")
@@ -107,7 +109,11 @@ function cleanEditorialText(value: string): string {
     .replace(/\bthe website\b/gi, "the discussion")
     .replace(/\bcompanion articles?\b/gi, "related discussions")
     .replace(/\bthese articles\b/gi, "these discussions")
-    .replace(/\bthe textual-variants article\b/gi, "the textual-variants study");
+    .replace(/\bthe textual-variants article\b/gi, "the textual-variants study")
+    .replace(
+      /\bat bottom it is not a historical question\b/gi,
+      "the bottom line is not a historical question",
+    );
 }
 
 function citationKeys(value: unknown): string[] {
