@@ -1,5 +1,3 @@
-import { Callout } from "@/components/content/Callout";
-import { getArticleStatusLabel } from "@/components/content/ArticleStatusBadge";
 import { TopicCard } from "@/components/content/TopicCard";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Container } from "@/components/layout/Container";
@@ -12,6 +10,7 @@ import {
   getRelatedCategories,
   isIslamChristianityCategorySlug,
 } from "@/lib/content";
+import { readerDescription } from "@/lib/reader-text";
 import type { SiteCategory } from "@/types/content";
 
 type CategoryPageProps = {
@@ -39,7 +38,7 @@ export async function CategoryPage({ category }: CategoryPageProps) {
               { label: category.title },
             ]}
           />
-          <div className="mt-5 grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+          <div className="mt-5 max-w-3xl">
             <div>
               <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-md bg-muted text-accent sm:mb-4 sm:h-11 sm:w-11">
                 <Icon aria-hidden="true" className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -51,7 +50,7 @@ export async function CategoryPage({ category }: CategoryPageProps) {
                     : "Research category"
                 }
                 title={category.title}
-                subtitle={category.description}
+                subtitle={readerDescription(category.description)}
               />
               <div className="mt-4 flex flex-wrap gap-2">
                 {category.tags.map((tag) => (
@@ -59,24 +58,19 @@ export async function CategoryPage({ category }: CategoryPageProps) {
                 ))}
               </div>
             </div>
-            <Callout type="note" title="Citation standard">
-              Claims should be accompanied by clear citations, scripture
-              references, translation or version attribution, and an honest
-              indication of the evidence behind them.
-            </Callout>
           </div>
         </Container>
       </Section>
 
-      <Section id="future-topics" tone="muted">
+      <Section id="articles" tone="muted">
         <Container>
           {draftArticles.length > 0 ? (
             <div className="mb-10">
               <PageHeader
                 titleAs="h2"
-                eyebrow="Draft articles"
-                title="Article templates in this category"
-                subtitle="These drafts collect material that remains under review."
+                eyebrow="Articles"
+                title="Explore this category"
+                subtitle="Articles that examine this category's central questions."
               />
               <div className="mt-6 grid gap-4 md:grid-cols-2">
                 {draftArticles.map((article) => (
@@ -86,7 +80,6 @@ export async function CategoryPage({ category }: CategoryPageProps) {
                     description={article.summary}
                     href={`/articles/${article.slug}`}
                     icon={Icon}
-                    label={getArticleStatusLabel(article.status)}
                     meta="Article"
                   />
                 ))}
@@ -95,20 +88,20 @@ export async function CategoryPage({ category }: CategoryPageProps) {
           ) : null}
           <PageHeader
             titleAs="h2"
-            eyebrow="Planned studies"
-            title="Future study cards"
-            subtitle="These placeholders mark topics for future study."
+            eyebrow="Topics"
+            title="Explore related topics"
+            subtitle="Questions and themes connected to this category."
           />
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {category.futureTopics.map((topic) => (
               <TopicCard
                 key={topic.title}
                 title={topic.title}
-                description={topic.description}
-                href={topic.href ?? `${category.href}#future-topics`}
+                    description={readerDescription(topic.description)}
+                href={topic.href ?? `${category.href}#articles`}
                 icon={Icon}
-                label={topic.href?.startsWith("/articles/") ? "Draft article" : "Planned article"}
-                meta={topic.href?.startsWith("/articles/") ? "Article" : "Source pending"}
+                label={topic.href?.startsWith("/articles/") ? "Article" : "Topic"}
+                meta={topic.href?.startsWith("/articles/") ? "Article" : "Study topic"}
               />
             ))}
           </div>
@@ -132,7 +125,7 @@ export async function CategoryPage({ category }: CategoryPageProps) {
                 <TopicCard
                   key={related.slug}
                   title={related.title}
-                  description={related.description}
+                  description={readerDescription(related.description)}
                   href={related.href}
                   icon={RelatedIcon}
                   label="Related"

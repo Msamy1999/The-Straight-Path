@@ -1,17 +1,21 @@
 {
   "slug": "source-library-for-palestine",
   "title": "Source Library for Palestine",
-  "subtitle": "A reading map for primary texts, scholarship, law, and responsible reporting — Written for sincere seekers asking whether Islam is true.",
+  "subtitle": "A reading map for primary texts, scholarship, law, and responsible reporting",
   "category": "sources",
   "audienceLevel": "beginner",
-  "summary": "For sincere seekers asking whether Islam is true: There is no single neutral source that can answer every question about Palestine. This draft reading map explains what different source types can and cannot establish, so readers can build a careful and balanced research process.",
-  "tags": ["Sources", "History", "Questions"],
+  "summary": "There is no single neutral source that can answer every question about Palestine. This draft reading map explains what different source types can and cannot establish, so readers can build a careful and balanced research process.",
+  "tags": [
+    "Sources",
+    "History",
+    "Questions"
+  ],
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "For a Seeker Asking Whether Islam Is True",
+      "title": "Understanding Source Library for Palestine",
       "kind": "summary",
-      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nReliable investigation of Islam requires primary texts, transparent source labels, and honest acknowledgment of uncertainty; careful method serves the truth-seeking question rather than replacing it.\n\nWhere historians or scholars disagree, the article identifies the main alternatives before drawing its Islamic implication.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+      "body": "There is no single neutral source that can answer every question about Palestine. This draft reading map explains what different source types can and cannot establish, so readers can build a careful and balanced research process."
     },
     {
       "sectionId": "beginner-summary",
@@ -33,14 +37,18 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "What This Means for a Seeker",
+      "title": "Key Takeaways: Source Library for Palestine",
       "kind": "summary",
-      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nReliable investigation of Islam requires primary texts, transparent source labels, and honest acknowledgment of uncertainty; careful method serves the truth-seeking question rather than replacing it.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
+      "body": "Reliable investigation of Islam requires primary texts, transparent source labels, and honest acknowledgment of uncertainty; careful method serves the truth-seeking question rather than replacing it.\n\nThere is no single neutral source that can answer every question about Palestine. This draft reading map explains what different source types can and cannot establish, so readers can build a careful and balanced research process."
     }
   ],
   "quranVerses": [],
   "bibleVerses": [],
-  "relatedSlugs": ["how-to-learn-responsibly", "jerusalem-and-al-aqsa", "who-are-the-people-of-palestine"],
+  "relatedSlugs": [
+    "how-to-learn-responsibly",
+    "jerusalem-and-al-aqsa",
+    "who-are-the-people-of-palestine"
+  ],
   "furtherReading": [
     {
       "title": "The Question of Palestine",
@@ -64,10 +72,5 @@
       "note": "A widely assigned historical survey with documents; compare it with specialist works for particular periods."
     }
   ],
-  "faq": [
-    {
-      "question": "If I am asking whether Islam is true, what should I do next?",
-      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Reliable investigation of Islam requires primary texts, transparent source labels, and honest acknowledgment of uncertainty; careful method serves the truth-seeking question rather than replacing it."
-    }
-  ]
+  "faq": []
 }

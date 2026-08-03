@@ -63,8 +63,8 @@ export function ComparisonArticleLayout({
         <PageHeader
           titleAs="h2"
           eyebrow="Scripture preview"
-          title="How verified verses will appear"
-          subtitle="These cards intentionally use placeholders until exact source data is verified."
+          title="Key passages"
+          subtitle="Read the relevant passages before weighing the interpretations offered below."
         />
         <div className="mt-6 grid gap-4 lg:grid-cols-2">
           {comparison.quranVerses.map((verse) => (
@@ -82,12 +82,12 @@ export function ComparisonArticleLayout({
           intro="Quote verified passages first, then clearly label interpretation and argument."
           left={{
             label: "Quranic perspective",
-            title: "Evidence pending",
+            title: "The Quranic perspective",
             children: comparison.quranicPerspective,
           }}
           right={{
             label: "Biblical perspective",
-            title: "Evidence pending",
+            title: "The Biblical perspective",
             children: comparison.biblicalPerspective,
           }}
         />
@@ -120,10 +120,10 @@ export function ComparisonArticleLayout({
 
       <section id="key-differences" className="scroll-mt-20">
         <PageHeader
-          titleAs="h2"
-          eyebrow="Key differences"
-          title="Differences to document carefully"
-          subtitle="These are structural placeholders, not final conclusions."
+            titleAs="h2"
+            eyebrow="Key differences"
+          title="Key differences"
+          subtitle="The central differences between the two perspectives."
         />
         <div className="mt-5 grid gap-3">
           {comparison.keyDifferences.map((difference) => (
@@ -169,11 +169,11 @@ export function ComparisonArticleLayout({
             <TopicCard
               key={topic}
               title={topic}
-              description="Related topic placeholder; connect it to a category, study, or glossary term when ready."
+              description="Explore this related topic in the wider library."
               href={category.href}
               icon={CategoryIcon}
               label="Related topic"
-              meta="Placeholder"
+              meta="Related topic"
             />
           ))}
         </div>

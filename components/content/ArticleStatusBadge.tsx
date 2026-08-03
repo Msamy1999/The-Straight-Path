@@ -20,7 +20,7 @@ const statusLabels: Record<ArticleStatus, string> = {
 
 const statusDescriptions: Record<ArticleStatus, string> = {
   draft:
-    "A draft study whose scripture references, citations, and claims still need verification.",
+    "An article whose scripture references, citations, and claims are still being checked.",
   reviewed:
     "Under review; sources and wording should still be checked before final publication.",
   published:

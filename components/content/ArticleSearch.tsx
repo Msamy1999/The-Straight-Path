@@ -3,36 +3,36 @@
 import Link from "next/link";
 import { Search } from "lucide-react";
 import type { ReactNode } from "react";
-import { useMemo, useState } from "react";
-import {
-  ArticleStatusBadge,
-  getArticleStatusLabel,
-} from "@/components/content/ArticleStatusBadge";
+import { useEffect, useMemo, useState } from "react";
 import { Card } from "@/components/ui/Card";
 import { Tag } from "@/components/ui/Tag";
-import type {
-  Article,
-  ArticleStatus,
-  AudienceLevel,
-  SiteCategory,
-  TopicTag,
-} from "@/types/content";
+import type { Article, AudienceLevel, SiteCategory, TopicTag } from "@/types/content";
 
 type ArticleSearchProps = {
   articles: Article[];
   categories: SiteCategory[];
+  initialQuery?: string;
+};
+
+type SearchResult = {
+  article: Article;
+  matchedSection?: string;
+  snippet?: string;
 };
 
 const allValue = "all";
 
-export function ArticleSearch({ articles, categories }: ArticleSearchProps) {
-  const [query, setQuery] = useState("");
+export function ArticleSearch({ articles, categories, initialQuery = "" }: ArticleSearchProps) {
+  const [query, setQuery] = useState(initialQuery);
   const [category, setCategory] = useState(allValue);
   const [audienceLevel, setAudienceLevel] = useState<typeof allValue | AudienceLevel>(
     allValue,
   );
   const [tag, setTag] = useState<typeof allValue | TopicTag>(allValue);
-  const [status, setStatus] = useState<typeof allValue | ArticleStatus>(allValue);
+
+  useEffect(() => {
+    setQuery(initialQuery);
+  }, [initialQuery]);
 
   const categoryTitles = useMemo(
     () => new Map(categories.map((item) => [item.slug, item.title])),
@@ -46,37 +46,36 @@ export function ArticleSearch({ articles, categories }: ArticleSearchProps) {
     () => Array.from(new Set(articles.map((article) => article.audienceLevel))).sort(),
     [articles],
   );
-  const statuses = useMemo(
-    () => Array.from(new Set(articles.map((article) => article.status))).sort(),
-    [articles],
-  );
 
-  const filteredArticles = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase();
+  const results = useMemo(() => {
+    const words = query.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);
+    const appliesFilters = (article: Article) =>
+      (category === allValue || article.category === category) &&
+      (audienceLevel === allValue || article.audienceLevel === audienceLevel) &&
+      (tag === allValue || article.tags.includes(tag));
+    const eligible = articles.filter(appliesFilters);
 
-    return articles.filter((article) => {
-      const categoryTitle = categoryTitles.get(article.category) ?? article.category;
-      const searchable = [
-        article.title,
-        article.subtitle,
-        article.summary,
-        categoryTitle,
-        article.category,
-        ...article.tags,
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
+    if (words.length === 0) {
+      return {
+        titleMatches: eligible.map((article) => ({ article })),
+        contentMatches: [] as SearchResult[],
+      };
+    }
 
-      return (
-        (!normalizedQuery || searchable.includes(normalizedQuery)) &&
-        (category === allValue || article.category === category) &&
-        (audienceLevel === allValue || article.audienceLevel === audienceLevel) &&
-        (tag === allValue || article.tags.includes(tag)) &&
-        (status === allValue || article.status === status)
-      );
-    });
-  }, [articles, audienceLevel, category, categoryTitles, query, status, tag]);
+    const titleMatches = eligible
+      .filter((article) => includesAllWords(article.title, words))
+      .map((article) => ({ article }));
+    const titleSlugs = new Set(titleMatches.map(({ article }) => article.slug));
+    const contentMatches = eligible
+      .filter((article) => !titleSlugs.has(article.slug))
+      .map((article) => findContentMatch(article, words, categoryTitles))
+      .filter((result): result is SearchResult => result !== null);
+
+    return { titleMatches, contentMatches };
+  }, [articles, audienceLevel, category, categoryTitles, query, tag]);
+
+  const totalResults = results.titleMatches.length + results.contentMatches.length;
+  const isSearching = query.trim().length > 0;
 
   return (
     <div className="space-y-6">
@@ -88,11 +87,14 @@ export function ArticleSearch({ articles, categories }: ArticleSearchProps) {
             aria-label="Search articles"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="Search by title, summary, tag, or category"
+            placeholder="Search article titles and text"
             className="min-h-10 min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
           />
         </div>
-        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <p className="mt-3 text-sm leading-6 text-muted-foreground">
+          Article titles appear first. Results below them show where the search words occur in an article.
+        </p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-3">
           <FilterSelect label="Category" value={category} onChange={setCategory}>
             <option value={allValue}>All categories</option>
             {categories.map((item) => (
@@ -125,64 +127,150 @@ export function ArticleSearch({ articles, categories }: ArticleSearchProps) {
               </option>
             ))}
           </FilterSelect>
-          <FilterSelect
-            label="Status"
-            value={status}
-            onChange={(value) => setStatus(value as typeof allValue | ArticleStatus)}
-          >
-            <option value={allValue}>All statuses</option>
-            {statuses.map((item) => (
-              <option key={item} value={item}>
-                {getArticleStatusLabel(item)}
-              </option>
-            ))}
-          </FilterSelect>
         </div>
       </Card>
 
       <p className="text-sm text-muted-foreground">
-        Showing {filteredArticles.length} of {articles.length} articles.
+        {isSearching ? `Found ${totalResults} matching articles.` : `Showing all ${articles.length} articles.`}
       </p>
 
-      {filteredArticles.length > 0 ? (
-        <div className="grid gap-4 lg:grid-cols-2">
-          {filteredArticles.map((article) => (
-            <Card key={article.slug} className="p-4 sm:p-5">
-              <p className="text-xs font-semibold uppercase text-accent">
-                {categoryTitles.get(article.category) ?? article.category}
-              </p>
-              <h2 className="mt-2 text-lg leading-snug sm:mt-3 sm:text-xl">
-                <Link
-                  href={`/articles/${article.slug}`}
-                  className="no-underline hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-                >
-                  {article.title}
-                </Link>
-              </h2>
-              <p className="mt-2 text-sm leading-6 text-muted-foreground sm:mt-3 sm:leading-7">
-                {article.summary}
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {article.tags.map((item) => (
-                  <Tag key={item}>{item}</Tag>
-                ))}
-                <Tag>{article.audienceLevel}</Tag>
-                <ArticleStatusBadge status={article.status} />
-              </div>
-            </Card>
-          ))}
-        </div>
-      ) : (
+      {results.titleMatches.length > 0 ? (
+        <SearchResultGroup
+          title={isSearching ? "Title matches" : "All articles"}
+          results={results.titleMatches}
+          categoryTitles={categoryTitles}
+        />
+      ) : null}
+
+      {results.contentMatches.length > 0 ? (
+        <SearchResultGroup
+          title="Mentioned in article text"
+          results={results.contentMatches}
+          categoryTitles={categoryTitles}
+        />
+      ) : null}
+
+      {totalResults === 0 ? (
         <Card className="p-5 text-center sm:p-6">
           <h2 className="text-lg leading-snug sm:text-xl">No articles found</h2>
           <p className="mt-3 text-sm leading-6 text-muted-foreground sm:leading-7">
-            Try a broader search, remove a filter, or check back after more draft
-            research pages are added.
+            Try fewer words or choose a broader category.
           </p>
         </Card>
-      )}
+      ) : null}
     </div>
   );
+}
+
+function SearchResultGroup({
+  title,
+  results,
+  categoryTitles,
+}: {
+  title: string;
+  results: SearchResult[];
+  categoryTitles: Map<string, string>;
+}) {
+  return (
+    <section aria-label={title}>
+      <h2 className="text-lg leading-snug sm:text-xl">{title}</h2>
+      <div className="mt-4 grid gap-4 lg:grid-cols-2">
+        {results.map((result) => (
+          <SearchResultCard
+            key={result.article.slug}
+            result={result}
+            categoryTitle={categoryTitles.get(result.article.category) ?? result.article.category}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function SearchResultCard({
+  result,
+  categoryTitle,
+}: {
+  result: SearchResult;
+  categoryTitle: string;
+}) {
+  const { article, matchedSection, snippet } = result;
+
+  return (
+    <Card className="p-4 sm:p-5">
+      <p className="text-xs font-semibold uppercase text-accent">{categoryTitle}</p>
+      <h3 className="mt-2 text-lg leading-snug sm:mt-3 sm:text-xl">
+        <Link
+          href={`/articles/${article.slug}${matchedSection ? `#${matchedSection}` : ""}`}
+          className="no-underline hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        >
+          {article.title}
+        </Link>
+      </h3>
+      {matchedSection && snippet ? (
+        <p className="mt-2 text-sm leading-6 text-muted-foreground sm:mt-3 sm:leading-7">
+          <span className="font-semibold text-foreground">Found in {matchedSection}: </span>
+          {snippet}
+        </p>
+      ) : (
+        <p className="mt-2 text-sm leading-6 text-muted-foreground sm:mt-3 sm:leading-7">
+          {article.summary}
+        </p>
+      )}
+      <div className="mt-4 flex flex-wrap gap-2">
+        {article.tags.map((item) => (
+          <Tag key={item}>{item}</Tag>
+        ))}
+        <Tag>{article.audienceLevel}</Tag>
+      </div>
+    </Card>
+  );
+}
+
+function findContentMatch(
+  article: Article,
+  words: string[],
+  categoryTitles: Map<string, string>,
+): SearchResult | null {
+  const articleText = [
+    article.subtitle,
+    article.summary,
+    categoryTitles.get(article.category) ?? article.category,
+    article.category,
+    ...article.tags,
+    ...article.sections.flatMap((section) => [section.title, section.body]),
+  ].join(" ");
+
+  if (!includesAllWords(articleText, words)) {
+    return null;
+  }
+
+  const section = article.sections.find((item) =>
+    words.some((word) => `${item.title} ${item.body}`.toLocaleLowerCase().includes(word)),
+  );
+  const text = section ? `${section.title}. ${section.body}` : `${article.subtitle}. ${article.summary}`;
+
+  return {
+    article,
+    matchedSection: section?.id,
+    snippet: excerptAroundMatch(text, words),
+  };
+}
+
+function includesAllWords(value: string, words: string[]) {
+  const normalized = value.toLocaleLowerCase();
+  return words.every((word) => normalized.includes(word));
+}
+
+function excerptAroundMatch(value: string, words: string[]) {
+  const normalized = value.toLocaleLowerCase();
+  const index = words
+    .map((word) => normalized.indexOf(word))
+    .filter((position) => position >= 0)
+    .sort((first, second) => first - second)[0] ?? 0;
+  const start = Math.max(0, index - 72);
+  const end = Math.min(value.length, index + 210);
+  return `${start > 0 ? "…" : ""}${value.slice(start, end).replace(/\s+/g, " ").trim()}${end < value.length ? "…" : ""}`;
 }
 
 type FilterSelectProps = {

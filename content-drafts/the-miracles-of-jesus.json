@@ -1,14 +1,19 @@
 {
   "slug": "the-miracles-of-jesus",
   "title": "The Miracles of Jesus",
-  "subtitle": "What the Quran and the Gospels report — and what the miracles were meant to prove — Written for sincere seekers asking whether Islam is true.",
+  "subtitle": "What the Quran and the Gospels report — and what the miracles were meant to prove",
   "category": "jesus-in-islam-and-christianity",
   "audienceLevel": "beginner",
-  "summary": "For sincere seekers asking whether Islam is true: Muslims and Christians both affirm in their scriptures and theology that Jesus performed miracles; historical method cannot independently verify every reported wonder, including healing the blind and lepers, raising the dead, and feeding the faithful. The Quran adds distinctive wonders such as Jesus speaking as an infant in the cradle and giving life to a bird formed from clay. Strikingly, the Quran says each miracle happened 'by permission of Allah', while the New Testament itself describes them as works 'which God did by him'. This article catalogs the miracles in both scriptures and asks whether miracles prove Jesus's divinity — or his prophethood.",
-  "tags": ["Jesus", "Scripture", "Theology", "Questions"],
+  "summary": "Muslims and Christians both affirm in their scriptures and theology that Jesus performed miracles; historical method cannot independently verify every reported wonder, including healing the blind and lepers, raising the dead, and feeding the faithful. The Quran adds distinctive wonders such as Jesus speaking as an infant in the cradle and giving life to a bird formed from clay. Strikingly, the Quran says each miracle happened 'by permission of Allah', while the New Testament itself describes them as works 'which God did by him'. This article catalogs the miracles in both scriptures and asks whether miracles prove Jesus's divinity — or his prophethood.",
+  "tags": [
+    "Jesus",
+    "Scripture",
+    "Theology",
+    "Questions"
+  ],
   "seo": {
     "metaTitle": "The Miracles of Jesus in the Quran and the Bible",
-    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: The Miracles of Jesus.",
+    "metaDescription": "Muslims and Christians both affirm in their scriptures and theology that Jesus performed miracles; historical method cannot independently verify every…",
     "keywords": [
       "miracles of Jesus",
       "Jesus in Islam",
@@ -27,9 +32,9 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "For a Seeker Asking Whether Islam Is True",
+      "title": "Understanding The Miracles of Jesus",
       "kind": "summary",
-      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\n'Real miracles' is a statement of Islamic or Christian belief, not a neutral historical finding. The article should distinguish scriptural testimony, theological commitment, and what ordinary historical method can verify.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+      "body": "Muslims and Christians both affirm in their scriptures and theology that Jesus performed miracles; historical method cannot independently verify every reported wonder, including healing the blind and lepers, raising the dead, and feeding the faithful. The Quran adds distinctive wonders such as Jesus speaking as an infant in the cradle and giving life to a bird formed from clay. Strikingly, the Quran says each miracle happened 'by permission of Allah', while the New Testament itself describes them as works 'which God did by him'. This article catalogs the miracles in both scriptures and asks whether miracles prove Jesus's divinity — or his prophethood."
     },
     {
       "sectionId": "beginner-summary",
@@ -87,9 +92,9 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "What This Means for a Seeker",
+      "title": "Key Takeaways: The Miracles of Jesus",
       "kind": "summary",
-      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\n'Real miracles' is a statement of Islamic or Christian belief, not a neutral historical finding. The article should distinguish scriptural testimony, theological commitment, and what ordinary historical method can verify.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
+      "body": "'Real miracles' is a statement of Islamic or Christian belief, not a neutral historical finding. The article should distinguish scriptural testimony, theological commitment, and what ordinary historical method can verify.\n\nMuslims and Christians both affirm in their scriptures and theology that Jesus performed miracles; historical method cannot independently verify every reported wonder, including healing the blind and lepers, raising the dead, and feeding the faithful. The Quran adds distinctive wonders such as Jesus speaking as an infant in the cradle and giving life to a bird formed from clay. Strikingly, the Quran says each miracle happened 'by permission of Allah', while the New Testament itself describes them as works 'which God did by him'. This article catalogs the miracles in both scriptures and asks whether miracles prove Jesus's divinity — or his prophethood."
     },
     {
       "sectionId": "faq",
@@ -101,7 +106,7 @@
       "sectionId": "further-reading",
       "title": "Further Reading",
       "kind": "sources",
-      "body": "The works below come from Muslim, Christian, and secular academic authors, so a reader can test this article's claims against several perspectives. Khalidi gathers the rich Islamic literary tradition about Jesus; Reynolds sets the Quran beside the Bible passage by passage; Akyol writes an accessible Muslim account of Jesus; Ehrman and Vermes represent critical historical scholarship on how Jesus was remembered and how claims about him developed.\n\nAs always on this site, we encourage readers to open the primary sources themselves: read Surah Aal-i-Imraan and Surah Al-Maaida alongside the Gospel accounts, and weigh what each text actually says about where the power behind the miracles came from."
+      "body": "Selected sources and further reading:\n\n- **The Muslim Jesus: Sayings and Stories in Islamic Literature** — Tarif Khalidi. A Harvard-published collection of how the Islamic tradition remembered and revered Jesus.\n- **The Qur'an and the Bible: Text and Commentary** — Gabriel Said Reynolds. An academic, passage-by-passage study of where the Quran and the Bible meet — including the Jesus material.\n- **The Islamic Jesus** — Mustafa Akyol. An accessible Muslim author's account of Jesus in the Quran and his place between the two faiths.\n- **How Jesus Became God** — Bart D. Ehrman. A secular historian traces how beliefs about Jesus's divinity developed after his lifetime.\n- **Jesus the Jew** — Geza Vermes. A classic historical portrait of Jesus as a Galilean charismatic healer within Jewish tradition."
     }
   ],
   "quranVerses": [
@@ -300,10 +305,6 @@
     {
       "question": "Didn't the Quran take the clay-bird story from a Christian legend?",
       "answer": "A similar story appears in the Infancy Gospel of Thomas, a non-canonical Christian text older than the Quran, and scholars note the parallel. Muslims respond that the Quran confirms and corrects earlier tradition: if the event was real, its memory surviving among Christians is expected, and the Quran retells it with its own theological frame — 'by permission of Allah' — which the legend lacks."
-    },
-    {
-      "question": "If I am asking whether Islam is true, what should I do next?",
-      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. 'Real miracles' is a statement of Islamic or Christian belief, not a neutral historical finding. The article should distinguish scriptural testimony, theological commitment, and what ordinary historical method can verify."
     }
   ],
   "relatedSlugs": [

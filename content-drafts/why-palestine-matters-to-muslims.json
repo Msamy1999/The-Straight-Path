@@ -1,17 +1,21 @@
 {
   "slug": "why-palestine-matters-to-muslims",
   "title": "Why Palestine Matters to Muslims",
-  "subtitle": "Religious connection, human concern, and careful distinctions — Written for sincere seekers asking whether Islam is true.",
+  "subtitle": "Religious connection, human concern, and careful distinctions",
   "category": "religious-history",
   "audienceLevel": "beginner",
-  "summary": "For sincere seekers asking whether Islam is true: For many Muslims, Palestine matters because of the religious importance of Jerusalem and Al-Aqsa, the history of Muslim communities in the region, and concern for human dignity. These reasons should be explained without treating political claims as religious facts or treating people as symbols.",
-  "tags": ["History", "Theology", "Sources"],
+  "summary": "For many Muslims, Palestine matters because of the religious importance of Jerusalem and Al-Aqsa, the history of Muslim communities in the region, and concern for human dignity. These reasons should be explained without treating political claims as religious facts or treating people as symbols.",
+  "tags": [
+    "History",
+    "Theology",
+    "Sources"
+  ],
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "For a Seeker Asking Whether Islam Is True",
+      "title": "Understanding Why Palestine Matters to Muslims",
       "kind": "summary",
-      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nReligious history supplies context for how communities transmitted and interpreted their teachings, but historical development is not the same thing as proof or disproof of revelation.\n\nWhere historians or scholars disagree, the article identifies the main alternatives before drawing its Islamic implication.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+      "body": "For many Muslims, Palestine matters because of the religious importance of Jerusalem and Al-Aqsa, the history of Muslim communities in the region, and concern for human dignity. These reasons should be explained without treating political claims as religious facts or treating people as symbols."
     },
     {
       "sectionId": "beginner-summary",
@@ -23,7 +27,7 @@
       "sectionId": "religious-connection",
       "title": "Religious Connection",
       "kind": "interpretation",
-      "body": "The Qur'an refers to the Prophet Muhammad's night journey from the Sacred Mosque to the farthest mosque in the opening verse of Surah al-Isra. Muslim interpretation identifies that farthest mosque with the sanctuary in Jerusalem, and this reading gives Al-Aqsa lasting religious significance. Jerusalem is also connected in Islamic tradition with earlier prophets honoured in Islam.\n\nThese are religious claims and inherited practices. They should be presented as such, while historical questions about buildings, sites, and changing institutions are investigated through evidence and cited scholarship."
+      "body": "The Qur'an refers to the Prophet Muhammad's night journey from the Sacred Mosque to the farthest mosque in the opening verse of Surah al-Isra. Muslim interpretation identifies that farthest mosque with the sanctuary in Jerusalem, and this reading gives Al-Aqsa lasting religious significance. Jerusalem is also connected in Islamic tradition with earlier prophets honored in Islam.\n\nThese are religious claims and inherited practices. They should be presented as such, while historical questions about buildings, sites, and changing institutions are investigated through evidence and cited scholarship."
     },
     {
       "sectionId": "ethical-connection",
@@ -33,14 +37,18 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "What This Means for a Seeker",
+      "title": "Key Takeaways: Why Palestine Matters to Muslims",
       "kind": "summary",
-      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nReligious history supplies context for how communities transmitted and interpreted their teachings, but historical development is not the same thing as proof or disproof of revelation.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
+      "body": "Religious history supplies context for how communities transmitted and interpreted their teachings, but historical development is not the same thing as proof or disproof of revelation.\n\nFor many Muslims, Palestine matters because of the religious importance of Jerusalem and Al-Aqsa, the history of Muslim communities in the region, and concern for human dignity. These reasons should be explained without treating political claims as religious facts or treating people as symbols."
     }
   ],
   "quranVerses": [],
   "bibleVerses": [],
-  "relatedSlugs": ["jerusalem-and-al-aqsa", "human-dignity-and-justice", "how-to-learn-responsibly"],
+  "relatedSlugs": [
+    "jerusalem-and-al-aqsa",
+    "human-dignity-and-justice",
+    "how-to-learn-responsibly"
+  ],
   "furtherReading": [
     {
       "title": "Jerusalem in the Qur'an",
@@ -57,10 +65,5 @@
       "note": "An English translation of an important classical historical source; it records tradition and requires historical comparison rather than uncritical use."
     }
   ],
-  "faq": [
-    {
-      "question": "If I am asking whether Islam is true, what should I do next?",
-      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Religious history supplies context for how communities transmitted and interpreted their teachings, but historical development is not the same thing as proof or disproof of revelation."
-    }
-  ]
+  "faq": []
 }

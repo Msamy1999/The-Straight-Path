@@ -28,9 +28,6 @@ export function Citation({ source, prefix = "Source", className }: CitationProps
       ) : (
         <span>{citation.label}</span>
       )}
-      {citation.status === "pending" ? (
-        <span className="ml-1 font-medium text-gold">(source pending)</span>
-      ) : null}
       {citation.note ? <span className="ml-1">{citation.note}</span> : null}
     </p>
   );

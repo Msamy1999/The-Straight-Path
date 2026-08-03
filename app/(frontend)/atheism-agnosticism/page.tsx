@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowRight, CircleHelp } from "lucide-react";
-import { Callout } from "@/components/content/Callout";
 import { ResearchTree } from "@/components/content/ResearchTree";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Container } from "@/components/layout/Container";
@@ -11,14 +10,14 @@ import { Tag } from "@/components/ui/Tag";
 import { getResearchTree } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Atheism & Agnosticism Answers in Islam",
+  title: "Atheism & Agnosticism",
   description:
     "Clear answers for atheists, agnostics, skeptics, and seekers studying Islam.",
   alternates: {
     canonical: "/atheism-agnosticism",
   },
   openGraph: {
-    title: "Atheism & Agnosticism Answers in Islam",
+    title: "Atheism & Agnosticism",
     description:
       "Carefully sourced articles about belief, doubt, meaning, evidence, morality, science, and the Quran.",
   },
@@ -34,31 +33,25 @@ export default async function AtheismAgnosticismPage() {
           <Breadcrumbs
             items={[
               { label: "Library", href: "/" },
-              { label: "Atheism & Agnosticism Answers in Islam" },
+              { label: "Atheism & Agnosticism" },
             ]}
           />
-          <div className="mt-5 grid gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="mt-5 max-w-3xl">
             <div>
               <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-md bg-muted text-accent sm:mb-4 sm:h-11 sm:w-11">
                 <CircleHelp aria-hidden="true" className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
               <PageHeader
                 eyebrow="Audience path"
-                title="Atheism & Agnosticism Answers in Islam"
+                title="Atheism & Agnosticism"
                 subtitle="A respectful section for skeptics, agnostics, atheists, and seekers, built from clear definitions, careful reasoning, and evidence."
               />
               <div className="mt-4 flex flex-wrap gap-2">
                 <Tag>Doubt</Tag>
                 <Tag>Meaning</Tag>
                 <Tag>Evidence</Tag>
-                <Tag>Draft</Tag>
               </div>
             </div>
-            <Callout type="note" title="Draft status">
-              All nine foundational articles are written, source-checked, and
-              available to read as drafts. A human editor must advance them
-              through the review and publishing workflow.
-            </Callout>
           </div>
         </Container>
       </Section>

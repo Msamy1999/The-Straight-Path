@@ -17,7 +17,7 @@ export function TopicCard({
   href,
   icon: Icon,
   label,
-  meta = "Placeholder topic",
+  meta = "Topic",
 }: TopicCardProps) {
   return (
     <Card className="group flex min-h-36 flex-col transition hover:-translate-y-0.5 hover:border-accent/60 sm:min-h-44">

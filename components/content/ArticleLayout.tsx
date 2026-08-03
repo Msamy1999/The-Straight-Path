@@ -1,11 +1,6 @@
 import { ArrowRight, ChevronDown } from "lucide-react";
 import type { ReactNode } from "react";
 import { ArticleHashOpener } from "@/components/content/ArticleHashOpener";
-import {
-  ArticleStatusBadge,
-  getArticleStatusDescription,
-  getArticleStatusLabel,
-} from "@/components/content/ArticleStatusBadge";
 import { ArticleTools } from "@/components/content/ArticleTools";
 import { CitationList } from "@/components/content/CitationList";
 import { TopicCard } from "@/components/content/TopicCard";
@@ -84,7 +79,6 @@ export function ArticleLayout({
               titleClassName="text-2xl sm:text-3xl lg:text-3xl"
             />
             <div className="mt-3 flex flex-wrap items-center gap-1.5">
-              <ArticleStatusBadge status={article.status} />
               {article.tags.map((tag) => (
                 <Tag key={tag}>{tag}</Tag>
               ))}
@@ -93,15 +87,6 @@ export function ArticleLayout({
             <p className="mt-3 text-xs text-muted-foreground sm:text-sm">
               Last updated:{" "}
               <time dateTime={article.lastUpdated}>{article.lastUpdated}</time>
-            </p>
-            <p
-              className="mt-3 max-w-3xl rounded-md border border-border bg-muted/40 px-3 py-2 text-xs leading-5 text-muted-foreground sm:text-sm"
-              role="status"
-            >
-              <span className="font-semibold text-foreground">
-                {getArticleStatusLabel(article.status)}:{" "}
-              </span>
-              {getArticleStatusDescription(article.status)}
             </p>
             <div className="mt-3">
               <ArticleTools articleText={articleText} articleTitle={article.title} />
@@ -135,10 +120,10 @@ export function ArticleLayout({
                     <span>
                       <span className="block text-xs font-semibold uppercase text-accent">Sources</span>
                       <span className="mt-1 block text-base font-semibold text-foreground sm:text-lg">
-                        Citations and source status
+                        Sources and further reading
                       </span>
                       <span className="mt-1 block text-sm leading-6 text-muted-foreground">
-                        Placeholder or source-pending citations must be replaced before review or publication.
+                        Primary texts and works cited in this article.
                       </span>
                     </span>
                     <ChevronDown
@@ -155,8 +140,8 @@ export function ArticleLayout({
                   <PageHeader
                     titleAs="h2"
                     eyebrow="Sources"
-                    title="Citations and source status"
-                    subtitle="Placeholder or source-pending citations must be replaced before review or publication."
+                    title="Sources and further reading"
+                    subtitle="Primary texts and works cited in this article."
                   />
                   <div className="mt-6">
                     <CitationList citations={citations} />
@@ -170,7 +155,7 @@ export function ArticleLayout({
                     titleAs="h2"
                     eyebrow="Related"
                     title="Related articles"
-                    subtitle="Draft links show how future research paths can connect across categories."
+                    subtitle="Continue exploring related questions and evidence."
                   />
                   <div className="mt-6 grid gap-4 sm:grid-cols-2">
                     {relatedArticles.map((relatedArticle) => (
@@ -180,7 +165,6 @@ export function ArticleLayout({
                         description={relatedArticle.summary}
                         href={`/articles/${relatedArticle.slug}`}
                         icon={CategoryIcon}
-                        label={getArticleStatusLabel(relatedArticle.status)}
                         meta="Article"
                       />
                     ))}
@@ -248,15 +232,10 @@ function ArticleSectionBlock({
     return (
       <section id={section.id} className="scroll-mt-20">
         <p className="text-xs font-semibold uppercase text-accent sm:text-sm">
-          {section.kind}
+          {section.id === "seeker-guide" ? "Overview" : section.kind}
         </p>
         <h2 className="mt-2 select-text text-lg leading-snug sm:mt-3 sm:text-xl">{section.title}</h2>
         <ArticleSectionBody body={section.body} />
-        {section.citationIds && section.citationIds.length > 0 ? (
-          <p className="mt-4 text-xs font-medium uppercase text-muted-foreground">
-            Source markers to verify: {section.citationIds.join(", ")}
-          </p>
-        ) : null}
       </section>
     );
   }
@@ -270,7 +249,7 @@ function ArticleSectionBlock({
       <summary className="flex cursor-pointer list-none items-start justify-between gap-4 px-4 py-4 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-5 [&::-webkit-details-marker]:hidden">
         <span>
           <span className="block text-xs font-semibold uppercase text-accent sm:text-sm">
-            {section.kind}
+            {section.id === "seeker-guide" ? "Overview" : section.kind}
           </span>
           <span className="mt-1 block select-text text-base font-semibold leading-snug text-foreground sm:text-lg">
             {section.title}
@@ -283,11 +262,6 @@ function ArticleSectionBlock({
       </summary>
       <div className="border-t border-border px-4 py-4 sm:px-5 sm:py-5">
         <ArticleSectionBody body={section.body} />
-        {section.citationIds && section.citationIds.length > 0 ? (
-          <p className="mt-4 text-xs font-medium uppercase text-muted-foreground">
-            Source markers to verify: {section.citationIds.join(", ")}
-          </p>
-        ) : null}
       </div>
     </details>
   );
@@ -347,6 +321,16 @@ function ArticleSectionBody({ body }: { body: string }) {
               })}
               {renderInlineMarkdown(line.slice(cursor), `${index}-after`)}
               {index < lines.length - 1 ? <br /> : null}
+            </span>
+          );
+        }
+
+        if (line.trimStart().startsWith("- ")) {
+          const item = line.trimStart().slice(2);
+          return (
+            <span key={`bullet-${index}`} className="flex gap-2 pl-1">
+              <span aria-hidden="true" className="text-accent">•</span>
+              <span>{renderInlineMarkdown(item, `${index}-bullet`)}</span>
             </span>
           );
         }

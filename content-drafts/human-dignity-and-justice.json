@@ -1,17 +1,21 @@
 {
   "slug": "human-dignity-and-justice",
   "title": "Human Dignity and Justice",
-  "subtitle": "An ethical framework for speaking about Palestinian lives and every human life — Written for sincere seekers asking whether Islam is true.",
+  "subtitle": "An ethical framework for speaking about Palestinian lives and every human life",
   "category": "questions",
   "audienceLevel": "beginner",
-  "summary": "For sincere seekers asking whether Islam is true: A source-aware library should treat human dignity as a starting point. This draft offers an Islamic ethical framework for discussing suffering and injustice without excusing harm, spreading hatred, or making claims beyond the evidence.",
-  "tags": ["Theology", "Questions", "Sources"],
+  "summary": "Islamic ethics treats human dignity as a starting point for discussing suffering and injustice without excusing harm, spreading hatred, or making claims beyond the evidence.",
+  "tags": [
+    "Theology",
+    "Questions",
+    "Sources"
+  ],
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "For a Seeker Asking Whether Islam Is True",
+      "title": "Understanding Human Dignity and Justice",
       "kind": "summary",
-      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nA method article is useful only if it leads beyond comparison: the reader should use its distinctions to investigate Islam's claims about God, revelation, accountability, and the Quran.\n\nWhere historians or scholars disagree, the article identifies the main alternatives before drawing its Islamic implication.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+      "body": "Islamic ethics treats human dignity as a starting point for discussing suffering and injustice without excusing harm, spreading hatred, or making claims beyond the evidence."
     },
     {
       "sectionId": "beginner-summary",
@@ -23,13 +27,13 @@
       "sectionId": "islamic-ethics",
       "title": "An Islamic Ethical Starting Point",
       "kind": "interpretation",
-      "body": "The Qur'an describes the children of Adam as honoured, and Islamic ethics repeatedly joins justice with truthfulness and mercy. Muslims understand these teachings as obligations toward human beings, not permissions to value only people from their own group.\n\nApplying a principle requires humility. A religious text can guide moral reasoning, but it does not remove the need to establish facts, distinguish intentional harm from rumour, and recognise the limits of one's knowledge."
+      "body": "The Qur'an describes the children of Adam as honored, and Islamic ethics repeatedly joins justice with truthfulness and mercy. Muslims understand these teachings as obligations toward human beings, not permissions to value only people from their own group.\n\nApplying a principle requires humility. A religious text can guide moral reasoning, but it does not remove the need to establish facts, distinguish intentional harm from rumour, and recognize the limits of one's knowledge."
     },
     {
       "sectionId": "practical-standards",
       "title": "Practical Standards for Speech and Action",
       "kind": "notes",
-      "body": "Do not assign guilt to an entire people for the actions of leaders, institutions, or armed groups. Do not circulate graphic images or casualty figures without checking the source, date, and context. Do not use another community's pain as a rhetorical tool.\n\nA fair response to suffering can include prayer, charitable support through accountable organisations, careful learning, and principled advocacy. It should never include dehumanisation, false witness, or celebration of harm."
+      "body": "Do not assign guilt to an entire people for the actions of leaders, institutions, or armed groups. Do not circulate graphic images or casualty figures without checking the source, date, and context. Do not use another community's pain as a rhetorical tool.\n\nA fair response to suffering can include prayer, charitable support through accountable organizations, careful learning, and principled advocacy. It should never include dehumanisation, false witness, or celebration of harm."
     },
     {
       "sectionId": "worked-example",
@@ -39,21 +43,25 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "What This Means for a Seeker",
+      "title": "Key Takeaways: Human Dignity and Justice",
       "kind": "summary",
-      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nA method article is useful only if it leads beyond comparison: the reader should use its distinctions to investigate Islam's claims about God, revelation, accountability, and the Quran.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
+      "body": "A method article is useful only if it leads beyond comparison: the reader should use its distinctions to investigate Islam's claims about God, revelation, accountability, and the Quran.\n\nIslamic ethics treats human dignity as a starting point for discussing suffering and injustice without excusing harm, spreading hatred, or making claims beyond the evidence."
     }
   ],
   "quranVerses": [],
   "bibleVerses": [],
-  "relatedSlugs": ["who-are-the-people-of-palestine", "how-to-learn-responsibly", "source-library-for-palestine"],
+  "relatedSlugs": [
+    "who-are-the-people-of-palestine",
+    "how-to-learn-responsibly",
+    "source-library-for-palestine"
+  ],
   "furtherReading": [
     {
       "title": "The Qur'an: A New Translation",
       "author": "M. A. S. Abdel Haleem",
       "publisher": "Oxford University Press",
       "year": 2004,
-      "note": "A widely used modern English translation; consult Arabic and recognised tafsir for detailed legal or theological interpretation."
+      "note": "A widely used modern English translation; consult Arabic and recognized tafsir for detailed legal or theological interpretation."
     },
     {
       "title": "The Ethics of War and Peace in Islam",
@@ -63,10 +71,5 @@
       "note": "A foundational academic study of Islamic legal and ethical traditions; later scholarship should be consulted for critique and development."
     }
   ],
-  "faq": [
-    {
-      "question": "If I am asking whether Islam is true, what should I do next?",
-      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. A method article is useful only if it leads beyond comparison: the reader should use its distinctions to investigate Islam's claims about God, revelation, accountability, and the Quran."
-    }
-  ]
+  "faq": []
 }

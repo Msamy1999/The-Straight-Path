@@ -1,14 +1,19 @@
 {
   "slug": "the-problem-of-evil",
   "title": "The Problem of Evil",
-  "subtitle": "Suffering, freedom, divine goodness, and the limits of easy answers — Written for sincere seekers asking whether Islam is true.",
+  "subtitle": "Suffering, freedom, divine goodness, and the limits of easy answers",
   "category": "difficult-questions",
   "audienceLevel": "intermediate",
-  "summary": "For sincere seekers asking whether Islam is true: The existence and scale of suffering are among the strongest challenges to belief in a good and powerful God. Islam offers a framework involving creaturely freedom, a stable world, spiritual testing, limited human perspective, and final justice, while forbidding believers from treating another person's pain as an abstract puzzle or casually declaring it punishment.",
-  "tags": ["Theology", "Questions", "Purpose", "Sources"],
+  "summary": "The existence and scale of suffering are among the strongest challenges to belief in a good and powerful God. Islam offers a framework involving creaturely freedom, a stable world, spiritual testing, limited human perspective, and final justice, while forbidding believers from treating another person's pain as an abstract puzzle or casually declaring it punishment.",
+  "tags": [
+    "Theology",
+    "Questions",
+    "Purpose",
+    "Sources"
+  ],
   "seo": {
     "metaTitle": "The Problem of Evil: An Islamic Response to Suffering",
-    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: The Problem of Evil.",
+    "metaDescription": "The existence and scale of suffering are among the strongest challenges to belief in a good and powerful God. Islam offers a framework involving creaturely…",
     "keywords": [
       "problem of evil Islam",
       "why does God allow suffering",
@@ -21,9 +26,9 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "For a Seeker Asking Whether Islam Is True",
+      "title": "Understanding The Problem of Evil",
       "kind": "summary",
-      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nQuestions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility.\n\nWhere historians or scholars disagree, the article identifies the main alternatives before drawing its Islamic implication.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+      "body": "The existence and scale of suffering are among the strongest challenges to belief in a good and powerful God. Islam offers a framework involving creaturely freedom, a stable world, spiritual testing, limited human perspective, and final justice, while forbidding believers from treating another person's pain as an abstract puzzle or casually declaring it punishment."
     },
     {
       "sectionId": "three-problems",
@@ -69,9 +74,9 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "What This Means for a Seeker",
+      "title": "Key Takeaways: The Problem of Evil",
       "kind": "summary",
-      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nQuestions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
+      "body": "Questions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility.\n\nThe existence and scale of suffering are among the strongest challenges to belief in a good and powerful God. Islam offers a framework involving creaturely freedom, a stable world, spiritual testing, limited human perspective, and final justice, while forbidding believers from treating another person's pain as an abstract puzzle or casually declaring it punishment."
     }
   ],
   "quranVerses": [
@@ -143,13 +148,14 @@
     {
       "question": "Is saying that suffering is a test enough?",
       "answer": "It supplies part of an Islamic framework, not a complete explanation of every event. It must be joined to freedom, mercy, human duty, resurrection, perfect justice, and humility about what people do not know."
-    },
-    {
-      "question": "If I am asking whether Islam is true, what should I do next?",
-      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Questions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility."
     }
   ],
-  "relatedSlugs": ["does-god-exist", "morality-without-god", "purpose-of-life-atheism-agnosticism", "judgment-day"],
+  "relatedSlugs": [
+    "does-god-exist",
+    "morality-without-god",
+    "purpose-of-life-atheism-agnosticism",
+    "judgment-day"
+  ],
   "furtherReading": [
     {
       "title": "Islamic Theology and the Problem of Evil",

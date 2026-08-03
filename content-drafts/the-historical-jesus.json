@@ -1,14 +1,20 @@
 {
   "slug": "the-historical-jesus",
   "title": "The Historical Jesus: Scholarly Consensus",
-  "subtitle": "What historians across traditions agree on, what they debate, and why sources diverge — Written for sincere seekers asking whether Islam is true.",
+  "subtitle": "What historians across traditions agree on, what they debate, and why sources diverge",
   "category": "jesus-in-islam-and-christianity",
   "audienceLevel": "intermediate",
-  "summary": "For sincere seekers asking whether Islam is true: Mainstream historical scholarship identifies core facts about Jesus: baptism by John the Baptist, an itinerant preaching ministry in Galilee centered on the Kingdom of God, and crucifixion under Pontius Pilate. Islamic tradition accepts Jesus's prophetic ministry and virgin birth but denies the crucifixion, locating theological disagreement at the heart of Christian-Islamic comparative study.",
-  "tags": ["Jesus", "History", "Scripture", "Sources", "Questions"],
+  "summary": "Mainstream historical scholarship identifies core facts about Jesus: baptism by John the Baptist, an itinerant preaching ministry in Galilee centered on the Kingdom of God, and crucifixion under Pontius Pilate. Islamic tradition accepts Jesus's prophetic ministry and virgin birth but denies the crucifixion, locating theological disagreement at the heart of Christian-Islamic comparative study.",
+  "tags": [
+    "Jesus",
+    "History",
+    "Scripture",
+    "Sources",
+    "Questions"
+  ],
   "seo": {
     "metaTitle": "The Historical Jesus: What Scholars Agree On",
-    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: The Historical Jesus: Scholarly Consensus.",
+    "metaDescription": "Mainstream historical scholarship identifies core facts about Jesus: baptism by John the Baptist, an itinerant preaching ministry in Galilee centered on the…",
     "keywords": [
       "historical Jesus",
       "scholars",
@@ -22,9 +28,9 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "For a Seeker Asking Whether Islam Is True",
+      "title": "Understanding The Historical Jesus: Scholarly Consensus",
       "kind": "summary",
-      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nIslam's central claim is that Jesus is the Messiah and a uniquely honored human messenger, not God; Christian readings deserve their strongest presentation before that Islamic conclusion is evaluated.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+      "body": "Mainstream historical scholarship identifies core facts about Jesus: baptism by John the Baptist, an itinerant preaching ministry in Galilee centered on the Kingdom of God, and crucifixion under Pontius Pilate. Islamic tradition accepts Jesus's prophetic ministry and virgin birth but denies the crucifixion, locating theological disagreement at the heart of Christian-Islamic comparative study."
     },
     {
       "sectionId": "intro",
@@ -76,9 +82,9 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "What This Means for a Seeker",
+      "title": "Key Takeaways: The Historical Jesus: Scholarly Consensus",
       "kind": "summary",
-      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nIslam's central claim is that Jesus is the Messiah and a uniquely honored human messenger, not God; Christian readings deserve their strongest presentation before that Islamic conclusion is evaluated.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
+      "body": "Islam's central claim is that Jesus is the Messiah and a uniquely honored human messenger, not God; Christian readings deserve their strongest presentation before that Islamic conclusion is evaluated.\n\nMainstream historical scholarship identifies core facts about Jesus: baptism by John the Baptist, an itinerant preaching ministry in Galilee centered on the Kingdom of God, and crucifixion under Pontius Pilate. Islamic tradition accepts Jesus's prophetic ministry and virgin birth but denies the crucifixion, locating theological disagreement at the heart of Christian-Islamic comparative study."
     }
   ],
   "quranVerses": [
@@ -214,10 +220,6 @@
     {
       "question": "How are Christian and Islamic views of Jesus compatible or incompatible?",
       "answer": "Both traditions affirm Jesus as a prophetic figure who preached monotheism and called people to righteousness. Muslims honor Jesus's virgin birth and miraculous signs. However, they diverge fundamentally on three points: Christianity claims Jesus is divine (the Son of God); Islam denies this explicitly, affirming strict monotheism (Tawhid). Christianity centers on Jesus's crucifixion and resurrection as saving events; Islam denies the crucifixion and interprets Jesus's mission as prophecy without redemptive sacrifice. These are genuine theological differences that cannot be minimized, though both traditions can respect Jesus as a significant historical and religious figure."
-    },
-    {
-      "question": "If I am asking whether Islam is true, what should I do next?",
-      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Islam's central claim is that Jesus is the Messiah and a uniquely honored human messenger, not God; Christian readings deserve their strongest presentation before that Islamic conclusion is evaluated."
     }
   ],
   "relatedSlugs": [

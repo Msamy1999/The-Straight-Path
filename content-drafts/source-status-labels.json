@@ -1,10 +1,10 @@
 {
   "slug": "source-status-labels",
   "title": "How This Library Labels Its Sources",
-  "subtitle": "What Draft, Under Review, Published, Source Pending, and Verified mean — and why nothing goes live until every citation is checked — Written for sincere seekers asking whether Islam is true.",
+  "subtitle": "What Draft, Under Review, Published, Source Pending, and Verified mean — and why nothing goes live until every citation is checked",
   "category": "sources",
   "audienceLevel": "beginner",
-  "summary": "For sincere seekers asking whether Islam is true: Every article and every quotation in this library carries a visible status label. Articles move through Draft, Under Review, and Published, while individual citations and scripture quotations are marked Source Pending until they have been checked word-for-word against a named original, at which point they become Verified. No article is published until every citation inside it is verified. This page explains each label, why the system exists, and how you can report an error if you find one.",
+  "summary": "Every article and every quotation in this library carries a visible status label. Articles move through Draft, Under Review, and Published, while individual citations and scripture quotations are marked Source Pending until they have been checked word-for-word against a named original, at which point they become Verified. No article is published until every citation inside it is verified. This page explains each label, why the system exists, and how you can report an error if you find one.",
   "tags": [
     "Sources",
     "Scripture",
@@ -12,7 +12,7 @@
   ],
   "seo": {
     "metaTitle": "How This Library Labels Its Sources | The Straight Path",
-    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: How This Library Labels Its Sources.",
+    "metaDescription": "Every article and every quotation in this library carries a visible status label. Articles move through Draft, Under Review, and Published, while individual…",
     "keywords": [
       "source verification",
       "citation labels",
@@ -26,9 +26,9 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "For a Seeker Asking Whether Islam Is True",
+      "title": "Understanding How This Library Labels Its Sources",
       "kind": "summary",
-      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nReliable investigation of Islam requires primary texts, transparent source labels, and honest acknowledgment of uncertainty; careful method serves the truth-seeking question rather than replacing it.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+      "body": "Every article and every quotation in this library carries a visible status label. Articles move through Draft, Under Review, and Published, while individual citations and scripture quotations are marked Source Pending until they have been checked word-for-word against a named original, at which point they become Verified. No article is published until every citation inside it is verified. This page explains each label, why the system exists, and how you can report an error if you find one."
     },
     {
       "sectionId": "beginner-summary",
@@ -86,9 +86,9 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "What This Means for a Seeker",
+      "title": "Key Takeaways: How This Library Labels Its Sources",
       "kind": "summary",
-      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nReliable investigation of Islam requires primary texts, transparent source labels, and honest acknowledgment of uncertainty; careful method serves the truth-seeking question rather than replacing it.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
+      "body": "Reliable investigation of Islam requires primary texts, transparent source labels, and honest acknowledgment of uncertainty; careful method serves the truth-seeking question rather than replacing it.\n\nEvery article and every quotation in this library carries a visible status label. Articles move through Draft, Under Review, and Published, while individual citations and scripture quotations are marked Source Pending until they have been checked word-for-word against a named original, at which point they become Verified. No article is published until every citation inside it is verified. This page explains each label, why the system exists, and how you can report an error if you find one."
     },
     {
       "sectionId": "faq",
@@ -100,7 +100,7 @@
       "sectionId": "further-reading",
       "title": "Further Reading",
       "kind": "sources",
-      "body": "The verification instinct behind these labels has deep roots in both traditions. These works introduce how Muslim scholars authenticated reports about the Prophet Muhammad (peace be upon him) and how Christian scholars study the Bible's transmission. None is quoted in this article; they are starting points for the larger story."
+      "body": "Selected sources and further reading:\n\n- **Hadith: Muhammad's Legacy in the Medieval and Modern World** — Jonathan A. C. Brown. An accessible academic introduction to how Muslim scholars authenticated reports about the Prophet, including chains of transmission and narrator criticism — the historical ancestor of source-verification systems like this library's.\n- **Studies in Hadith Methodology and Literature** — Muhammad Mustafa al-Azami. A concise Muslim scholar's account of the classical methods used to grade reports as sound, weak, or fabricated.\n- **The Text of the New Testament: Its Transmission, Corruption, and Restoration** — Bruce M. Metzger and Bart D. Ehrman. The standard introduction to Christian textual criticism — how scholars compare biblical manuscripts and rate the confidence behind different readings."
     }
   ],
   "quranVerses": [
@@ -156,10 +156,6 @@
     {
       "question": "Why does one unverified citation hold up a whole article?",
       "answer": "Because a single false quotation can mislead a reader on questions of eternal weight, and the Quran commands believers to verify information before acting on it (Quran 49:6). A true quotation loses nothing by waiting, but a false one must never be published under this library's name."
-    },
-    {
-      "question": "If I am asking whether Islam is true, what should I do next?",
-      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Reliable investigation of Islam requires primary texts, transparent source labels, and honest acknowledgment of uncertainty; careful method serves the truth-seeking question rather than replacing it."
     }
   ],
   "relatedSlugs": [

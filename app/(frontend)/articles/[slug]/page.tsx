@@ -91,7 +91,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     getRelatedArticles(article),
     getCategoryBySlug(article.category),
   ]);
-  // This is a focused catalogue, not a two-scripture comparison. Its researched
+  // This is a focused catalog, not a two-scripture comparison. Its researched
   // article sections use the same accordion presentation as Claims Against Islam.
   const renderableComparison =
     article.slug === "contradictions-in-the-bible" || !hasRenderableComparison(comparison)

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { GitBranch } from "lucide-react";
-import { Callout } from "@/components/content/Callout";
 import { ResearchTree } from "@/components/content/ResearchTree";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Container } from "@/components/layout/Container";
@@ -36,7 +35,7 @@ export default async function IslamChristianityPage() {
               { label: "Islam & Christianity" },
             ]}
           />
-          <div className="mt-5 grid gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="mt-5 max-w-3xl">
             <div>
               <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-md bg-muted text-accent sm:mb-4 sm:h-11 sm:w-11">
                 <GitBranch aria-hidden="true" className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -50,14 +49,8 @@ export default async function IslamChristianityPage() {
                 <Tag>Jesus</Tag>
                 <Tag>Scripture</Tag>
                 <Tag>Theology</Tag>
-                <Tag>Source pending</Tag>
               </div>
             </div>
-            <Callout type="respectful-reminder" title="Respectful comparison">
-              This section keeps Christian and Islamic claims separated from
-              interpretation, history, and argument. Draft branches should not
-              publish final claims until citations and source details are added.
-            </Callout>
           </div>
         </Container>
       </Section>
@@ -68,12 +61,12 @@ export default async function IslamChristianityPage() {
             titleAs="h2"
             eyebrow="Branch map"
             title="Follow the comparison tree"
-            subtitle="Comparison paths are grouped by question so readers can move from broad themes into draft articles and planned studies."
+            subtitle="Comparison paths are grouped by question so readers can move from broad themes into focused studies."
           />
           <div className="mt-8">
             <ResearchTree
               title="Islam & Christianity"
-              description="A comparison tree for branches, studies, and topics awaiting evidence."
+              description="A comparison tree for branches, studies, and related questions."
               nodes={islamChristianityTree}
             />
           </div>

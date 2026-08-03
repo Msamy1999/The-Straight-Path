@@ -1,14 +1,19 @@
 {
   "slug": "purpose-of-life-atheism-agnosticism",
   "title": "Purpose of Life: Given, Made, or Discovered?",
-  "subtitle": "Secular meaning and the Islamic claim that human life has an objective end — Written for sincere seekers asking whether Islam is true.",
+  "subtitle": "Secular meaning and the Islamic claim that human life has an objective end",
   "category": "salvation-and-purpose-of-life",
   "audienceLevel": "beginner",
-  "summary": "For sincere seekers asking whether Islam is true: People can create profound projects, relationships, and service without religious belief. Islam makes a further claim: meaning is not only made by human choice but grounded in why the Creator made us. Worship, moral stewardship, trial, mercy, and return to God give ordinary life an objective direction without making earthly goods worthless.",
-  "tags": ["Purpose", "Theology", "Questions", "Scripture"],
+  "summary": "People can create profound projects, relationships, and service without religious belief. Islam makes a further claim: meaning is not only made by human choice but grounded in why the Creator made us. Worship, moral stewardship, trial, mercy, and return to God give ordinary life an objective direction without making earthly goods worthless.",
+  "tags": [
+    "Purpose",
+    "Theology",
+    "Questions",
+    "Scripture"
+  ],
   "seo": {
     "metaTitle": "What Is the Purpose of Life? Secular and Islamic Answers",
-    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Purpose of Life: Given, Made, or Discovered?.",
+    "metaDescription": "People can create profound projects, relationships, and service without religious belief. Islam makes a further claim: meaning is not only made by human…",
     "keywords": [
       "purpose of life Islam",
       "meaning without God",
@@ -21,9 +26,9 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "For a Seeker Asking Whether Islam Is True",
+      "title": "Understanding Purpose of Life: Given, Made, or Discovered?",
       "kind": "summary",
-      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nIslam presents human life as purposeful worship of the one God, moral accountability, repentance, mercy, and a final return to Him; comparison should clarify that invitation rather than stop at description.\n\nWhere historians or scholars disagree, the article identifies the main alternatives before drawing its Islamic implication.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+      "body": "People can create profound projects, relationships, and service without religious belief. Islam makes a further claim: meaning is not only made by human choice but grounded in why the Creator made us. Worship, moral stewardship, trial, mercy, and return to God give ordinary life an objective direction without making earthly goods worthless."
     },
     {
       "sectionId": "meaning-and-purpose",
@@ -69,9 +74,9 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "What This Means for a Seeker",
+      "title": "Key Takeaways: Purpose of Life: Given, Made, or Discovered?",
       "kind": "summary",
-      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nIslam presents human life as purposeful worship of the one God, moral accountability, repentance, mercy, and a final return to Him; comparison should clarify that invitation rather than stop at description.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
+      "body": "Islam presents human life as purposeful worship of the one God, moral accountability, repentance, mercy, and a final return to Him; comparison should clarify that invitation rather than stop at description.\n\nPeople can create profound projects, relationships, and service without religious belief. Islam makes a further claim: meaning is not only made by human choice but grounded in why the Creator made us. Worship, moral stewardship, trial, mercy, and return to God give ordinary life an objective direction without making earthly goods worthless."
     }
   ],
   "quranVerses": [
@@ -133,13 +138,14 @@
     {
       "question": "Does purpose require an afterlife?",
       "answer": "Some kinds of finite meaning do not. Islam's stronger account of objective and ultimate purpose includes resurrection because it completes responsibility, justice, and enduring relationship with God."
-    },
-    {
-      "question": "If I am asking whether Islam is true, what should I do next?",
-      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Islam presents human life as purposeful worship of the one God, moral accountability, repentance, mercy, and a final return to Him; comparison should clarify that invitation rather than stop at description."
     }
   ],
-  "relatedSlugs": ["purpose-of-life", "the-problem-of-evil", "morality-without-god", "judgment-day"],
+  "relatedSlugs": [
+    "purpose-of-life",
+    "the-problem-of-evil",
+    "morality-without-god",
+    "judgment-day"
+  ],
   "furtherReading": [
     {
       "title": "Man's Search for Meaning",

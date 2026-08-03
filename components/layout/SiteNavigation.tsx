@@ -41,7 +41,7 @@ export function SiteNavigation() {
     <>
       <Container className="flex h-14 items-center gap-3 py-2">
         <SiteBrand compact onClick={closeMenus} />
-        <SearchPlaceholder className="hidden min-w-0 max-w-md flex-1 sm:flex" />
+        <HeaderSearch className="hidden min-w-0 max-w-md flex-1 sm:flex" />
         <div className="ml-auto flex items-center gap-2">
           <button
             type="button"
@@ -110,7 +110,7 @@ export function SiteNavigation() {
         className={cn("border-t border-border lg:hidden", isMobileOpen ? "block" : "hidden")}
       >
         <Container className="py-4">
-          <SearchPlaceholder className="mb-4 flex sm:hidden" onClick={closeMenus} />
+          <HeaderSearch className="mb-4 flex sm:hidden" onSubmit={closeMenus} />
           <div className="mb-4 flex items-center justify-between border-b border-border pb-4 sm:hidden">
             <span className="text-sm font-semibold text-foreground">Language</span>
             <LanguageToggle />
@@ -181,25 +181,31 @@ function HeaderLink({
   );
 }
 
-function SearchPlaceholder({
+function HeaderSearch({
   className,
-  onClick,
+  onSubmit,
 }: {
   className?: string;
-  onClick?: () => void;
+  onSubmit?: () => void;
 }) {
   return (
-    <Link
-      href="/search"
-      aria-label="Search the research library"
-      onClick={onClick}
+    <form
+      action="/search"
+      role="search"
+      onSubmit={onSubmit}
       className={cn(
         "items-center gap-2 rounded-md border border-border bg-card px-3 py-2 text-muted-foreground no-underline transition hover:bg-muted hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
         className,
       )}
     >
       <Search aria-hidden="true" className="h-4 w-4 shrink-0" />
-      <span className="min-w-0 flex-1 text-sm">Search library...</span>
-    </Link>
+      <input
+        type="search"
+        name="q"
+        aria-label="Search the library"
+        placeholder="Search library..."
+        className="min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
+      />
+    </form>
   );
 }

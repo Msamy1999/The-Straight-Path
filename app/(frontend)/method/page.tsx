@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import type { ReactNode } from "react";
 import {
   BookMarked,
   ClipboardCheck,
@@ -8,7 +6,6 @@ import {
   MessageCircleHeart,
   PencilLine,
 } from "lucide-react";
-import { ArticleStatusBadge } from "@/components/content/ArticleStatusBadge";
 import { Callout } from "@/components/content/Callout";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Container } from "@/components/layout/Container";
@@ -20,14 +17,14 @@ import { Card } from "@/components/ui/Card";
 export const metadata: Metadata = {
   title: "Research Method",
   description:
-    "How The Straight Path separates scripture, interpretation, history, argument, citations, and draft status.",
+    "How The Straight Path distinguishes scripture, interpretation, history, and argument.",
   alternates: {
     canonical: "/method",
   },
   openGraph: {
     title: "Research Method",
     description:
-      "A transparent method for respectful comparison, source status, and educational draft content.",
+      "A transparent method for respectful comparison and careful reasoning.",
   },
 };
 
@@ -35,7 +32,7 @@ const methodSteps = [
   {
     title: "Scripture first",
     description:
-      "When scripture is quoted, the page should show the passage, reference, translation or version, and source status before interpretation.",
+      "Read scripture with its passage, reference, and translation or version before drawing conclusions from it.",
     icon: BookMarked,
   },
   {
@@ -47,7 +44,7 @@ const methodSteps = [
   {
     title: "Scholarly sources",
     description:
-      "Academic, commentary, manuscript, tafsir, hadith, and translation sources should be clearly attributed before publication.",
+      "Academic, commentary, manuscript, tafsir, hadith, and translation sources help readers evaluate a claim in context.",
     icon: ClipboardCheck,
   },
   {
@@ -57,9 +54,9 @@ const methodSteps = [
     icon: MessageCircleHeart,
   },
   {
-    title: "Corrections welcome",
+    title: "Intellectual humility",
     description:
-      "Draft material should be easy to improve when evidence needs correction, a claim needs nuance, or a citation is missing.",
+      "Strong conclusions should remain open to clearer evidence, better context, and fair objections.",
     icon: PencilLine,
   },
 ];
@@ -78,10 +75,9 @@ export default function MethodPage() {
               title="A careful way to study difficult questions"
               subtitle="Separate scripture, interpretation, historical context, and argument so each claim can be weighed on its own terms."
             />
-            <Callout type="respectful-reminder" title="Educational disclaimer">
-              This material is for study and comparison. Check important claims
-              against the cited evidence, and remember that draft material is not
-              final until they have been reviewed.
+            <Callout type="respectful-reminder" title="Read with care">
+              This material distinguishes scripture, interpretation, history,
+              and argument so that each claim can be considered on its own terms.
             </Callout>
           </div>
         </Container>
@@ -93,7 +89,7 @@ export default function MethodPage() {
             titleAs="h2"
             eyebrow="Method"
             title="A clear path for careful study"
-            subtitle="These standards guide future article writing, editing, and review."
+            subtitle="These principles help readers follow a claim from its sources to its conclusion."
           />
           <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {methodSteps.map((step) => {
@@ -115,79 +111,25 @@ export default function MethodPage() {
         </Container>
       </Section>
 
-      <Section className="border-t border-border">
-        <Container>
-          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-            <PageHeader
-              titleAs="h2"
-              eyebrow="Status labels"
-              title="Draft state stays visible"
-              subtitle="Article status labels help readers know whether a page is a framework, under review, or ready for regular reading."
-            />
-            <div className="grid gap-4">
-              <StatusExplanation
-                status={<ArticleStatusBadge status="draft" />}
-                description="Draft material may contain placeholders, pending evidence, and unfinished study notes."
-              />
-              <StatusExplanation
-                status={<ArticleStatusBadge status="reviewed" />}
-                description="An under-review page is being checked for citations, wording, and fair representation."
-              />
-              <StatusExplanation
-                status={<ArticleStatusBadge status="published" />}
-                description="A published page should still invite readers to verify claims against its cited sources."
-              />
-            </div>
-          </div>
-        </Container>
-      </Section>
-
       <Section tone="muted" className="border-t border-border">
         <Container>
           <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <h2 className="text-2xl leading-snug">Check sources as you read</h2>
               <p className="mt-3 max-w-3xl text-muted-foreground">
-                Source cards, glossary entries, and draft discussions make it
-                easier to verify claims rather than accept them without evidence.
+                Sources, glossary entries, and related discussions make it easier
+                to examine claims rather than accept them without evidence.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
               <ButtonLink href="/sources">Open Source Library</ButtonLink>
               <ButtonLink href="/search" variant="secondary">
-                Search Draft Articles
+                Search Articles
               </ButtonLink>
             </div>
           </div>
-          <p className="mt-6 text-sm text-muted-foreground">
-            Future correction details can be linked here when a public review
-            workflow is added.
-          </p>
         </Container>
       </Section>
     </>
-  );
-}
-
-function StatusExplanation({
-  status,
-  description,
-}: {
-  status: ReactNode;
-  description: string;
-}) {
-  return (
-    <Card className="p-5">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        {status}
-        <Link
-          href="/sources"
-          className="text-sm font-semibold text-accent no-underline hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-        >
-          Review source standards
-        </Link>
-      </div>
-      <p className="mt-4 text-sm leading-7 text-muted-foreground">{description}</p>
-    </Card>
   );
 }

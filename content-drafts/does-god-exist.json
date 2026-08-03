@@ -1,14 +1,19 @@
 {
   "slug": "does-god-exist",
   "title": "Does God Exist?",
-  "subtitle": "A cumulative philosophical case, the strongest objections, and what the arguments can actually establish — Written for sincere seekers asking whether Islam is true.",
+  "subtitle": "A cumulative philosophical case, the strongest objections, and what the arguments can actually establish",
   "category": "difficult-questions",
   "audienceLevel": "beginner",
-  "summary": "For sincere seekers asking whether Islam is true: God's existence is not a laboratory hypothesis, but it is a rational question about why anything exists, why the universe is intelligible, and how consciousness and moral experience fit within reality. This article presents a cumulative case without pretending that any single argument forces belief or that philosophy alone proves Islam.",
-  "tags": ["Theology", "Questions", "Science", "Sources"],
+  "summary": "God's existence is not a laboratory hypothesis, but it is a rational question about why anything exists, why the universe is intelligible, and how consciousness and moral experience fit within reality. This article presents a cumulative case without pretending that any single argument forces belief or that philosophy alone proves Islam.",
+  "tags": [
+    "Theology",
+    "Questions",
+    "Science",
+    "Sources"
+  ],
   "seo": {
     "metaTitle": "Does God Exist? Arguments, Objections, and an Islamic View",
-    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Does God Exist?.",
+    "metaDescription": "God's existence is not a laboratory hypothesis, but it is a rational question about why anything exists, why the universe is intelligible, and how…",
     "keywords": [
       "does God exist",
       "arguments for God",
@@ -21,9 +26,9 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "For a Seeker Asking Whether Islam Is True",
+      "title": "Understanding Does God Exist?",
       "kind": "summary",
-      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nQuestions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility.\n\nWhere historians or scholars disagree, the article identifies the main alternatives before drawing its Islamic implication.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+      "body": "God's existence is not a laboratory hypothesis, but it is a rational question about why anything exists, why the universe is intelligible, and how consciousness and moral experience fit within reality. This article presents a cumulative case without pretending that any single argument forces belief or that philosophy alone proves Islam."
     },
     {
       "sectionId": "what-kind-of-question",
@@ -69,9 +74,9 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "What This Means for a Seeker",
+      "title": "Key Takeaways: Does God Exist?",
       "kind": "summary",
-      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nQuestions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
+      "body": "Questions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility.\n\nGod's existence is not a laboratory hypothesis, but it is a rational question about why anything exists, why the universe is intelligible, and how consciousness and moral experience fit within reality. This article presents a cumulative case without pretending that any single argument forces belief or that philosophy alone proves Islam."
     }
   ],
   "quranVerses": [
@@ -123,13 +128,14 @@
     {
       "question": "Would an argument for a creator prove Islam?",
       "answer": "No. It would at most establish part of a worldview. Revelation, prophethood, the Quran, and Islam's account of God require their own investigation."
-    },
-    {
-      "question": "If I am asking whether Islam is true, what should I do next?",
-      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Questions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility."
     }
   ],
-  "relatedSlugs": ["what-is-tawhid", "creation-and-nature", "consciousness-and-the-soul", "the-problem-of-evil"],
+  "relatedSlugs": [
+    "what-is-tawhid",
+    "creation-and-nature",
+    "consciousness-and-the-soul",
+    "the-problem-of-evil"
+  ],
   "furtherReading": [
     {
       "title": "Arguing about Gods",

@@ -1,7 +1,7 @@
 "use client";
 
 import { Languages } from "lucide-react";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 type SupportedLanguage = "en" | "ar";
@@ -20,6 +20,8 @@ type GoogleTranslateApi = {
 };
 
 const LANGUAGE_STORAGE_KEY = "the-straight-path-language";
+const LANGUAGE_EVENT = "the-straight-path-language-change";
+const GOOGLE_TARGET_ID = "the-straight-path-google-translate";
 
 declare global {
   interface Window {
@@ -35,9 +37,9 @@ function readSavedLanguage(): SupportedLanguage {
     return "en";
   }
 
-  const storedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
-  if (storedLanguage === "ar" || storedLanguage === "en") {
-    return storedLanguage;
+  const saved = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+  if (saved === "ar" || saved === "en") {
+    return saved;
   }
 
   return document.cookie.includes("googtrans=/en/ar") ? "ar" : "en";
@@ -51,23 +53,19 @@ function setDirection(language: SupportedLanguage) {
 
 function saveLanguage(language: SupportedLanguage) {
   window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+  const target = language === "ar" ? "/en/ar" : "/en/en";
+  document.cookie = `googtrans=${target}; path=/; max-age=31536000; SameSite=Lax`;
+}
 
-  if (language === "ar") {
-    document.cookie = "googtrans=/en/ar; path=/; max-age=31536000; SameSite=Lax";
-  } else {
-    // Google Translate may set this cookie for either the exact host or its
-    // dotted parent. Mark both variants as the source language so a reload
-    // cannot immediately re-translate the page after the user switches back.
-    const hosts = new Set([
-      "",
-      `domain=${window.location.hostname}`,
-      `domain=.${window.location.hostname}`,
-      "domain=localhost",
-      "domain=.localhost",
-    ]);
-    for (const host of hosts) {
-      document.cookie = `googtrans=/en/en; path=/; max-age=31536000; SameSite=Lax${host ? `; ${host}` : ""}`;
-    }
+function ensureGoogleTranslateTarget() {
+  let target = document.getElementById(GOOGLE_TARGET_ID);
+  if (!target) {
+    target = document.createElement("div");
+    target.id = GOOGLE_TARGET_ID;
+    target.className = "sr-only";
+    target.setAttribute("aria-hidden", "true");
+    target.setAttribute("translate", "no");
+    document.body.appendChild(target);
   }
 }
 
@@ -75,33 +73,43 @@ function loadGoogleTranslate() {
   if (window.google?.translate?.TranslateElement) {
     return Promise.resolve();
   }
-
   if (translateLoader) {
     return translateLoader;
   }
 
+  ensureGoogleTranslateTarget();
   translateLoader = new Promise<void>((resolve, reject) => {
     window.googleTranslateElementInit = () => {
-      if (window.google?.translate?.TranslateElement) {
-        new window.google.translate.TranslateElement(
-          {
-            autoDisplay: false,
-            includedLanguages: "ar,en",
-            pageLanguage: "en",
-          },
-          "google_translate_element",
-        );
+      try {
+        if (window.google?.translate?.TranslateElement) {
+          new window.google.translate.TranslateElement(
+            { autoDisplay: false, includedLanguages: "ar,en", pageLanguage: "en" },
+            GOOGLE_TARGET_ID,
+          );
+        }
+        resolve();
+      } catch (error) {
+        translateLoader = null;
+        reject(error);
       }
-      resolve();
     };
 
+    const existingScript = document.querySelector<HTMLScriptElement>(
+      'script[src*="translate.google.com/translate_a/element.js"]',
+    );
+    if (existingScript) {
+      existingScript.addEventListener("error", () => reject(new Error("Translation could not be loaded")), {
+        once: true,
+      });
+      return;
+    }
+
     const script = document.createElement("script");
-    script.src =
-      "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
     script.async = true;
     script.onerror = () => {
       translateLoader = null;
-      reject(new Error("Arabic translation could not be loaded"));
+      reject(new Error("Translation could not be loaded"));
     };
     document.head.appendChild(script);
   });
@@ -111,18 +119,13 @@ function loadGoogleTranslate() {
 
 function applyGoogleLanguage(language: SupportedLanguage) {
   const select = document.querySelector<HTMLSelectElement>(".goog-te-combo");
-  if (!select) {
+  const value = language === "ar" ? "ar" : "en";
+  const option = select ? Array.from(select.options).find((item) => item.value === value) : undefined;
+  if (!select || !option) {
     return false;
   }
 
-  const targetValue = language === "ar" ? "ar" : "en";
-  const option = Array.from(select.options).find((item) => item.value === targetValue);
-  if (!option) {
-    return false;
-  }
-
-  select.selectedIndex = option.index;
-  select.dispatchEvent(new Event("input", { bubbles: true }));
+  select.value = value;
   select.dispatchEvent(new Event("change", { bubbles: true }));
   return true;
 }
@@ -131,177 +134,109 @@ function applyGoogleLanguageWhenReady(language: SupportedLanguage) {
   return new Promise<boolean>((resolve) => {
     let attempts = 0;
     let timer = 0;
-    let settled = false;
-
+    let finished = false;
     const finish = (applied: boolean) => {
-      if (settled) {
-        return;
-      }
-      settled = true;
+      if (finished) return;
+      finished = true;
       window.clearTimeout(timer);
       observer.disconnect();
       resolve(applied);
     };
-
     const tryApply = () => {
       if (applyGoogleLanguage(language)) {
         finish(true);
-        return;
-      }
-
-      if (attempts >= 60) {
+      } else if (attempts++ >= 80) {
         finish(false);
-        return;
+      } else {
+        timer = window.setTimeout(tryApply, 125);
       }
-
-      attempts += 1;
-      timer = window.setTimeout(tryApply, 150);
     };
-
     const observer = new MutationObserver(tryApply);
     observer.observe(document.body, { childList: true, subtree: true });
     tryApply();
   });
 }
 
+function hideGoogleOverlays() {
+  document
+    .querySelectorAll<HTMLElement>("iframe.skiptranslate, .goog-te-banner-frame, body > .skiptranslate")
+    .forEach((element) => {
+      element.style.setProperty("display", "none", "important");
+      element.style.setProperty("visibility", "hidden", "important");
+      element.style.setProperty("pointer-events", "none", "important");
+    });
+}
+
+function broadcastLanguage(language: SupportedLanguage) {
+  window.dispatchEvent(new CustomEvent<SupportedLanguage>(LANGUAGE_EVENT, { detail: language }));
+}
+
 export function LanguageToggle({ className }: { className?: string }) {
   const [language, setLanguage] = useState<SupportedLanguage>("en");
   const [isLoading, setIsLoading] = useState(false);
+  const languageRef = useRef<SupportedLanguage>("en");
 
   useEffect(() => {
-    const savedLanguage = readSavedLanguage();
-    setLanguage(savedLanguage);
-    setDirection(savedLanguage);
+    const saved = readSavedLanguage();
+    languageRef.current = saved;
+    setLanguage(saved);
+    setDirection(saved);
 
-    if (savedLanguage === "ar") {
-      void loadGoogleTranslate().then(() => {
-        void applyGoogleLanguageWhenReady("ar");
-      });
-    } else if (window.localStorage.getItem(LANGUAGE_STORAGE_KEY) === "en") {
-      // If Google left its translation cookie behind, restore the English
-      // source DOM when the next page mounts. This keeps the preference stable
-      // without duplicating or pre-translating article content.
-      void loadGoogleTranslate().then(async () => {
-        await applyGoogleLanguageWhenReady("en");
-        setDirection("en");
-      });
+    const handleLanguageChange = (event: Event) => {
+      const next = (event as CustomEvent<SupportedLanguage>).detail;
+      if (next !== "en" && next !== "ar") return;
+      languageRef.current = next;
+      setLanguage(next);
+      setDirection(next);
+    };
+    window.addEventListener(LANGUAGE_EVENT, handleLanguageChange);
+
+    if (saved === "ar") {
+      void loadGoogleTranslate().then(() => applyGoogleLanguageWhenReady("ar").then(hideGoogleOverlays));
     }
 
-    return () => {
-      window.googleTranslateElementInit = undefined;
-    };
+    return () => window.removeEventListener(LANGUAGE_EVENT, handleLanguageChange);
   }, []);
 
   const toggleLanguage = useCallback(async () => {
-    const nextLanguage: SupportedLanguage = language === "en" ? "ar" : "en";
-    setLanguage(nextLanguage);
-    setDirection(nextLanguage);
-    saveLanguage(nextLanguage);
-
-    if (nextLanguage === "en") {
-      // Ask the widget to restore the current DOM. Google applies the select
-      // change asynchronously, so keep retrying briefly until its hidden
-      // control is ready; the next page mount repeats this if needed.
-      setIsLoading(true);
-      void applyGoogleLanguageWhenReady("en").then(() => {
-        setDirection("en");
-        setIsLoading(false);
-      });
-      return;
-    }
-
+    if (isLoading) return;
+    const next: SupportedLanguage = languageRef.current === "en" ? "ar" : "en";
+    languageRef.current = next;
+    setLanguage(next);
+    setDirection(next);
+    saveLanguage(next);
+    broadcastLanguage(next);
     setIsLoading(true);
+
     try {
       await loadGoogleTranslate();
-      await applyGoogleLanguageWhenReady("ar");
-      setIsLoading(false);
-    } catch {
-      setIsLoading(false);
-      saveLanguage("en");
-      setLanguage("en");
-      setDirection("en");
-    }
-  }, [language]);
-
-  useEffect(() => {
-    // Google Translate can rewrite the control nodes themselves. Bind at the
-    // button in capture phase and re-bind when the widget mutates the DOM.
-    const handleButtonClick = (event: MouseEvent) => {
-      const handledEvent = event as MouseEvent & {
-        theStraightPathLanguageHandled?: boolean;
-      };
-      if (handledEvent.theStraightPathLanguageHandled) {
-        return;
-      }
-
-      const button = event.currentTarget;
-      if (!(button instanceof HTMLButtonElement) || button.disabled) {
-        return;
-      }
-
-      handledEvent.theStraightPathLanguageHandled = true;
-      event.preventDefault();
-      event.stopPropagation();
-      void toggleLanguage();
-    };
-
-    const boundButtons = new Set<HTMLButtonElement>();
-    const hideGoogleOverlays = () => {
-      document
-        .querySelectorAll<HTMLElement>("iframe.skiptranslate, .goog-te-banner-frame, body > .skiptranslate")
-        .forEach((element) => {
-          element.style.setProperty("display", "none", "important");
-          element.style.setProperty("visibility", "hidden", "important");
-          element.style.setProperty("pointer-events", "none", "important");
-        });
-    };
-
-    const bindButtons = () => {
+      const applied = await applyGoogleLanguageWhenReady(next);
       hideGoogleOverlays();
-      document.querySelectorAll<HTMLButtonElement>("button[data-language-toggle]").forEach((button) => {
-        if (boundButtons.has(button)) {
-          return;
-        }
-        boundButtons.add(button);
-        button.addEventListener("click", handleButtonClick, true);
-      });
-    };
-
-    const observer = new MutationObserver(bindButtons);
-    observer.observe(document.body, { childList: true, subtree: true });
-    bindButtons();
-
-    return () => {
-      observer.disconnect();
-      boundButtons.forEach((button) => button.removeEventListener("click", handleButtonClick, true));
-    };
-  }, [isLoading, language, toggleLanguage]);
+      if (!applied) {
+        window.location.reload();
+      }
+    } catch {
+      // The preference remains saved. Retrying the button will load the provider again.
+    } finally {
+      setIsLoading(false);
+    }
+  }, [isLoading]);
 
   return (
-    <>
-      <button
-        type="button"
-        translate="no"
-        data-language-toggle="true"
-        dir={language === "ar" ? "rtl" : "ltr"}
-        disabled={isLoading}
-        aria-label={language === "en" ? "Translate site to Arabic" : "Return site to English"}
-        className={cn(
-          "inline-flex h-9 items-center justify-center gap-1.5 rounded-md border border-border bg-card px-2.5 text-sm font-semibold text-foreground transition hover:bg-muted disabled:cursor-wait disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
-          className,
-        )}
-      >
-        <Languages aria-hidden="true" className="h-4 w-4" />
-        <span lang={language === "en" ? "ar" : "en"}>
-          {isLoading ? "…" : language === "en" ? "العربية" : "English"}
-        </span>
-      </button>
-      <span
-        id="google_translate_element"
-        className="sr-only"
-        aria-hidden="true"
-        translate="no"
-      />
-    </>
+    <button
+      type="button"
+      translate="no"
+      dir={language === "ar" ? "rtl" : "ltr"}
+      disabled={isLoading}
+      onClick={() => void toggleLanguage()}
+      aria-label={language === "en" ? "Translate site to Arabic" : "Return site to English"}
+      className={cn(
+        "inline-flex h-9 items-center justify-center gap-1.5 rounded-md border border-border bg-card px-2.5 text-sm font-semibold text-foreground transition hover:bg-muted disabled:cursor-wait disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
+        className,
+      )}
+    >
+      <Languages aria-hidden="true" className="h-4 w-4" />
+      <span lang={language === "en" ? "ar" : "en"}>{isLoading ? "…" : language === "en" ? "العربية" : "English"}</span>
+    </button>
   );
 }

@@ -72,7 +72,7 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     title: "Polygamy proves Islam sees women as unequal.",
     claim: "Critics assert that Islam's permission of men to marry up to four wives indicates unjust treatment of women.",
     response: [
-      "Quran 4:3 did not introduce unrestricted polygyny; it capped and conditioned an existing practice at four and directs a man to one wife if he fears injustice. Quran 4:129 then warns against neglecting one wife through partiality. It is a restricted permission, not a command or a licence for desire.",
+      "Quran 4:3 did not introduce unrestricted polygyny; it capped and conditioned an existing practice at four and directs a man to one wife if he fears injustice. Quran 4:129 then warns against neglecting one wife through partiality. It is a restricted permission, not a command or a license for desire.",
       "The Prophet was monogamous throughout his long marriage to Khadijah. Many later marriages had identifiable social, family, and community purposes, including care for widows and the formation of family bonds; they should not be reduced to a model of indulgence.",
       "A husband remains answerable for fairness, maintenance, and dignity. Where those conditions cannot be met, the Quran's own direction is one wife.",
     ],
@@ -196,7 +196,7 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     claim: "Critics apply the word \"jihad\" as if it refers to unrestricted religious violence.",
     response: [
       "Jihad means striving in God's path; it is broader than war and includes moral, intellectual, and spiritual struggle. The Quran praises the person who restrains the self from wrongful desire, a core basis for the Islamic struggle against the nafs. Armed jihad exists, but it is governed by authority, just cause, proportionality, and limits.",
-      "The Quran limits fighting to those who fight Muslims, forbids transgression, permits defense after wrong, and commands acceptance of a genuine offer of peace. The Prophet prohibited killing women and children; Islamic martial law also protects non-combatants and forbids betrayal and mutilation. It is not a licence for forced conversion, private warfare, or attacks on civilians.",
+      "The Quran limits fighting to those who fight Muslims, forbids transgression, permits defense after wrong, and commands acceptance of a genuine offer of peace. The Prophet prohibited killing women and children; Islamic martial law also protects non-combatants and forbids betrayal and mutilation. It is not a license for forced conversion, private warfare, or attacks on civilians.",
       "The popular wording that calls inner struggle 'the greater jihad' is not established by a sound hadith. The inner struggle itself is a genuine Quranic and ethical Islamic teaching, and it should be supported without relying on a weak report.",
     ],
     evidence: [
@@ -213,7 +213,7 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     response: [
       "Islam does not teach hatred of non-Muslims. The Quran commands justice even toward opponents, kindness and fairness toward peaceful people of other faiths, and safe passage for an enemy polytheist who asks for protection. The Prophet gave a severe warning against killing a person protected by treaty.",
       "Dhimma was a premodern protected-status framework for non-Muslim communities under Muslim rule. In principle it secured life, property, worship, and communal affairs in return for public allegiance and the jizya. Jizya was generally levied on eligible adult non-Muslim men and was linked to state protection and exemption from the Muslim military obligation; its rates, exemptions, and implementation varied by time and place.",
-      "It was not modern equal citizenship, and historical governments did not always meet their own ideals. But it was not a licence for forced conversion or contempt. The governing Islamic standards remain justice, fidelity to covenants, and safety for peaceful non-Muslims.",
+      "It was not modern equal citizenship, and historical governments did not always meet their own ideals. But it was not a license for forced conversion or contempt. The governing Islamic standards remain justice, fidelity to covenants, and safety for peaceful non-Muslims.",
     ],
     evidence: [
       { kind: "Quran", reference: "Quran 5:8, 60:8, and 9:6", summary: "It commands justice, fairness to peaceful non-Muslims, and protection for asylum seekers.", href: "https://quran.com/5/8" },
@@ -244,7 +244,7 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     title: "Islam promotes hatred against the LGBTQ+ community.",
     claim: "Critics argue that Islam's sexual ethics are unjust because classical Islamic teaching prohibits same-sex sexual acts.",
     response: [
-      "Islamic teaching distinguishes a person's inherent dignity from every desire or action. The Quran places sexual intimacy within marriage between a man and a woman, and the classical Muslim understanding of the passages about the people of Lot prohibits same-sex sexual acts. That is a moral teaching shared by the major classical schools, not a licence to demean people.",
+      "Islamic teaching distinguishes a person's inherent dignity from every desire or action. The Quran places sexual intimacy within marriage between a man and a woman, and the classical Muslim understanding of the passages about the people of Lot prohibits same-sex sexual acts. That is a moral teaching shared by the major classical schools, not a license to demean people.",
       "Muslims believe sexual ethics are part of a wider framework of chastity, fidelity, family responsibility, and accountability before God. A Muslim may explain and hold that conviction while still treating every person with justice, privacy, compassion, and protection from abuse. Harassment, violence, coercion, and vigilante punishment are not Islamic answers to moral disagreement.",
       "People can disagree deeply about this teaching. The Muslim response is that divine moral limits are not hatred; they are part of a consistent ethic that asks every person, whatever their circumstances, to seek God's guidance and mercy.",
     ],

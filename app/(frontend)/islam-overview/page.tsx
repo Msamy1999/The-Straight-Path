@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowRight, BookOpenCheck } from "lucide-react";
-import { Callout } from "@/components/content/Callout";
 import { ResearchTree } from "@/components/content/ResearchTree";
 import { TopicCard } from "@/components/content/TopicCard";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
@@ -12,11 +11,12 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Tag } from "@/components/ui/Tag";
 import { categoryIconMap, fallbackCategoryIcon } from "@/lib/category-icons";
 import { getLearnIslamCategories, getResearchTree } from "@/lib/content";
+import { readerDescription } from "@/lib/reader-text";
 
 export const metadata: Metadata = {
   title: "Islam Overview",
   description:
-    "A gentle starting point for studying Islam with careful definitions, source status, and respectful questions.",
+    "A gentle starting point for studying Islam through foundations, scripture, and respectful questions.",
   alternates: {
     canonical: "/islam-overview",
   },
@@ -29,16 +29,14 @@ export const metadata: Metadata = {
 
 const startingArticles = [
   {
-    title: "Source status labels",
-    description:
-      "A draft standard for citation-needed and source-pending content.",
-    href: "/articles/source-status-labels",
+    title: "What is Tawhid?",
+    description: "An introduction to Islam’s belief in the oneness of God.",
+    href: "/articles/what-is-tawhid",
   },
   {
     title: "Was the Quran preserved?",
-    description:
-      "A draft template for future preservation study with source status visible.",
-    href: "/articles/was-the-quran-preserved",
+    description: "An introduction to the Muslim understanding of Quranic preservation.",
+    href: "/articles/how-was-the-quran-preserved",
   },
 ];
 
@@ -56,7 +54,7 @@ export default async function IslamOverviewPage() {
               { label: "Islam Overview" },
             ]}
           />
-          <div className="mt-5 grid gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="mt-5 max-w-3xl">
             <div>
               <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-md bg-muted text-accent sm:mb-4 sm:h-11 sm:w-11">
                 <BookOpenCheck aria-hidden="true" className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -64,20 +62,13 @@ export default async function IslamOverviewPage() {
               <PageHeader
                 eyebrow="Start here"
                 title="Islam Overview"
-                subtitle="A broad starting point for Islamic learning paths: foundations, scripture, purpose, questions, glossary terms, and source standards."
+                subtitle="A broad starting point for Islamic learning paths: foundations, scripture, purpose, questions, and glossary terms."
               />
               <div className="mt-4 flex flex-wrap gap-2">
                 <Tag>Foundations</Tag>
                 <Tag>Questions</Tag>
-                <Tag>Sources</Tag>
-                <Tag>Draft-aware</Tag>
               </div>
             </div>
-            <Callout type="note" title="Careful learning">
-              Draft material is clearly marked. Scripture, translations,
-              citations, and historical context should be checked before a
-              conclusion is treated as final.
-            </Callout>
           </div>
         </Container>
       </Section>
@@ -106,7 +97,7 @@ export default async function IslamOverviewPage() {
             titleAs="h2"
             eyebrow="Study folders"
             title="Continue into deeper library sections"
-            subtitle="These paths reuse existing draft structures and keep placeholders visible until sourced content is ready."
+            subtitle="Continue through connected topics in the library."
           />
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {categories.map((category) => {
@@ -116,7 +107,7 @@ export default async function IslamOverviewPage() {
                 <TopicCard
                   key={category.slug}
                   title={category.title}
-                  description={category.description}
+                  description={readerDescription(category.description)}
                   href={category.href}
                   icon={Icon}
                   label={category.tags[0]}
@@ -133,9 +124,9 @@ export default async function IslamOverviewPage() {
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
             <PageHeader
               titleAs="h2"
-              eyebrow="Draft starting points"
-              title="A few places to begin carefully"
-              subtitle="These are not final articles. They are structured drafts for future sourced study."
+              eyebrow="Starting points"
+              title="A few places to begin"
+              subtitle="Begin with a foundational question, then follow the related articles at your own pace."
             />
             <div className="grid gap-3">
               {startingArticles.map((article) => (

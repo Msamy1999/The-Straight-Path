@@ -1,14 +1,19 @@
 {
   "slug": "textual-variants-explained",
   "title": "Textual Variants Explained",
-  "subtitle": "Why Bible manuscripts differ, what Mark 16 and John 8 have to do with it, and how the Quran's single consonantal text compares — Written for sincere seekers asking whether Islam is true.",
+  "subtitle": "Why Bible manuscripts differ, what Mark 16 and John 8 have to do with it, and how the Quran's single consonantal text compares",
   "category": "preservation",
   "audienceLevel": "beginner",
-  "summary": "For sincere seekers asking whether Islam is true: Textual criticism is the respected scholarly practice — largely developed and practiced by Christian scholars themselves — of comparing ancient handwritten Bible manuscripts to recover the earliest wording. Most of the many thousands of differences found this way are trivial spelling or word-order changes, but a few, like the longer ending of Mark and the story of the woman caught in adultery in John, are openly discussed by scholars in footnotes of nearly every modern Bible. This article walks through those two well-known cases in plain language, then compares that history of manuscript divergence with the Quran's single Uthmanic consonantal text, which did not develop comparable rival textual families.",
-  "tags": ["Preservation", "Scripture", "History", "Sources"],
+  "summary": "Textual criticism is the respected scholarly practice — largely developed and practiced by Christian scholars themselves — of comparing ancient handwritten Bible manuscripts to recover the earliest wording. Most of the many thousands of differences found this way are trivial spelling or word-order changes, but a few, like the longer ending of Mark and the story of the woman caught in adultery in John, are openly discussed by scholars in footnotes of nearly every modern Bible. This article walks through those two well-known cases in plain language, then compares that history of manuscript divergence with the Quran's single Uthmanic consonantal text, which did not develop comparable rival textual families.",
+  "tags": [
+    "Preservation",
+    "Scripture",
+    "History",
+    "Sources"
+  ],
   "seo": {
-    "metaTitle": "Textual Variants Explained: Bible Manuscripts vs. the Quran's Text",
-    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Textual Variants Explained.",
+    "metaTitle": "Textual Variants Explained: Bible Manuscripts vs. The Quran's Text",
+    "metaDescription": "Textual criticism is the respected scholarly practice — largely developed and practiced by Christian scholars themselves — of comparing ancient handwritten…",
     "keywords": [
       "textual variants",
       "textual criticism",
@@ -23,9 +28,9 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "For a Seeker Asking Whether Islam Is True",
+      "title": "Understanding Textual Variants Explained",
       "kind": "summary",
-      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nThe Islamic preservation claim is a cumulative case involving revelation, recitation, writing, manuscripts, and scholarly transmission; those kinds of evidence should not be collapsed into one another or described with absolute slogans.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+      "body": "Textual criticism is the respected scholarly practice — largely developed and practiced by Christian scholars themselves — of comparing ancient handwritten Bible manuscripts to recover the earliest wording. Most of the many thousands of differences found this way are trivial spelling or word-order changes, but a few, like the longer ending of Mark and the story of the woman caught in adultery in John, are openly discussed by scholars in footnotes of nearly every modern Bible. This article walks through those two well-known cases in plain language, then compares that history of manuscript divergence with the Quran's single Uthmanic consonantal text, which did not develop comparable rival textual families."
     },
     {
       "sectionId": "beginner-summary",
@@ -83,9 +88,9 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "What This Means for a Seeker",
+      "title": "Key Takeaways: Textual Variants Explained",
       "kind": "summary",
-      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nThe Islamic preservation claim is a cumulative case involving revelation, recitation, writing, manuscripts, and scholarly transmission; those kinds of evidence should not be collapsed into one another or described with absolute slogans.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
+      "body": "The Islamic preservation claim is a cumulative case involving revelation, recitation, writing, manuscripts, and scholarly transmission; those kinds of evidence should not be collapsed into one another or described with absolute slogans.\n\nTextual criticism is the respected scholarly practice — largely developed and practiced by Christian scholars themselves — of comparing ancient handwritten Bible manuscripts to recover the earliest wording. Most of the many thousands of differences found this way are trivial spelling or word-order changes, but a few, like the longer ending of Mark and the story of the woman caught in adultery in John, are openly discussed by scholars in footnotes of nearly every modern Bible. This article walks through those two well-known cases in plain language, then compares that history of manuscript divergence with the Quran's single Uthmanic consonantal text, which did not develop comparable rival textual families."
     },
     {
       "sectionId": "faq",
@@ -97,7 +102,7 @@
       "sectionId": "further-reading",
       "title": "Further Reading",
       "kind": "sources",
-      "body": "The following works, written from a range of perspectives, allow readers to go deeper into New Testament textual criticism and the history of the Quran's compilation and standardization."
+      "body": "Selected sources and further reading:\n\n- **The Text of the New Testament: Its Transmission, Corruption, and Restoration** — Bruce M. Metzger and Bart D. Ehrman. A standard, widely cited textbook on New Testament textual criticism, covering manuscript families and famous variant passages.\n- **Misquoting Jesus: The Story Behind Who Changed the Bible and Why** — Bart D. Ehrman. A popular-level introduction to New Testament textual variants, including the ending of Mark and the story in John 7:53-8:11.\n- **The New Testament Documents: Are They Reliable?** — F. F. Bruce. A classic evangelical Christian defense of the New Testament's manuscript reliability, written by a respected biblical scholar.\n- **The History of the Qur'anic Text: From Revelation to Compilation** — Muhammad Mustafa Al-Azami. A detailed Muslim scholarly account of the Quran's compilation and the Uthmanic standardization, written partly in response to Western textual criticism of the Quran."
     }
   ],
   "quranVerses": [
@@ -179,10 +184,6 @@
     {
       "question": "Why did Uthman have some Quran copies set aside?",
       "answer": "According to Islamic historical accounts, Uthman acted to prevent the kind of regional divergence in recitation that was beginning to appear, standardizing on a single consonantal text sent to the main cities of the Muslim world, based on the compilation prepared earlier under Abu Bakr."
-    },
-    {
-      "question": "If I am asking whether Islam is true, what should I do next?",
-      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. The Islamic preservation claim is a cumulative case involving revelation, recitation, writing, manuscripts, and scholarly transmission; those kinds of evidence should not be collapsed into one another or described with absolute slogans."
     }
   ],
   "relatedSlugs": [

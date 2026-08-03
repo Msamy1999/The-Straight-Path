@@ -40,7 +40,7 @@ export function ThemeToggle({ className }: { className?: string }) {
 
   const label =
     isDark === null
-      ? "Toggle colour theme"
+      ? "Toggle color theme"
       : isDark
         ? "Switch to light mode"
         : "Switch to dark mode";

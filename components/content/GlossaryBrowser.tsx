@@ -101,9 +101,6 @@ export function GlossaryBrowser({ terms }: GlossaryBrowserProps) {
                   ))}
                 </div>
               ) : null}
-              <p className="mt-4 text-xs font-medium uppercase text-muted-foreground">
-                Citation status: source pending
-              </p>
             </Card>
           ))}
         </div>

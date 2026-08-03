@@ -49,8 +49,6 @@ export default async function PeopleOfPalestinePage() {
               <div className="mt-4 flex flex-wrap gap-2">
                 <Tag>Human dignity</Tag>
                 <Tag>History</Tag>
-                <Tag>Sources</Tag>
-                <Tag>Draft-aware</Tag>
               </div>
             </div>
           </div>
@@ -62,21 +60,21 @@ export default async function PeopleOfPalestinePage() {
           <PageHeader
             titleAs="h2"
             eyebrow="Study map"
-            title="Draft topics for careful study"
-            subtitle="Each topic opens a draft discussion. These are not final or published conclusions and should be read with attention to context and uncertainty."
+            title="Topics for careful study"
+            subtitle="Each topic approaches the subject with attention to context, dignity, and historical complexity."
           />
           <div className="mt-6">
             <ResearchTree
               title="People of Palestine"
-              description="A careful, human-centered draft outline with direct links to each study article."
+              description="A careful, human-centered outline with direct links to each study article."
               nodes={peopleOfPalestineTree}
             />
           </div>
           <Link
-            href="/sources"
+            href="/method"
             className="mt-6 inline-flex items-center gap-2 rounded-sm text-sm font-semibold text-accent no-underline hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
-            Review source standards
+            Explore the research method
             <ArrowRight aria-hidden="true" className="h-4 w-4" />
           </Link>
         </Container>

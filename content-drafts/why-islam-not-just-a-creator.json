@@ -1,14 +1,19 @@
 {
   "slug": "why-islam-not-just-a-creator",
   "title": "Why Islam and Not Just a Creator?",
-  "subtitle": "How Islam bridges generic theism to Tawhid, prophecy, the Quran, and a lived response — Written for sincere seekers asking whether Islam is true.",
+  "subtitle": "How Islam bridges generic theism to Tawhid, prophecy, the Quran, and a lived response",
   "category": "difficult-questions",
   "audienceLevel": "beginner",
-  "summary": "For sincere seekers asking whether Islam is true: Belief in some creator leaves major questions unanswered: what is God like, why are humans here, has God guided them, and how should they live? Islam offers a connected answer through Tawhid, prophetic continuity, the Quran, worship, mercy, and accountability. Each step still requires evidence.",
-  "tags": ["Theology", "Questions", "Scripture", "Purpose"],
+  "summary": "Belief in some creator leaves major questions unanswered: what is God like, why are humans here, has God guided them, and how should they live? Islam offers a connected answer through Tawhid, prophetic continuity, the Quran, worship, mercy, and accountability. Each step still requires evidence.",
+  "tags": [
+    "Theology",
+    "Questions",
+    "Scripture",
+    "Purpose"
+  ],
   "seo": {
     "metaTitle": "Why Islam and Not Just Belief in a Creator?",
-    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Why Islam and Not Just a Creator?.",
+    "metaDescription": "Belief in some creator leaves major questions unanswered: what is God like, why are humans here, has God guided them, and how should they live? Islam offers…",
     "keywords": [
       "why Islam",
       "deism vs Islam",
@@ -21,9 +26,9 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "For a Seeker Asking Whether Islam Is True",
+      "title": "Understanding Why Islam and Not Just a Creator?",
       "kind": "summary",
-      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nQuestions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+      "body": "Belief in some creator leaves major questions unanswered: what is God like, why are humans here, has God guided them, and how should they live? Islam offers a connected answer through Tawhid, prophetic continuity, the Quran, worship, mercy, and accountability. Each step still requires evidence."
     },
     {
       "sectionId": "creator-is-not-yet-a-religion",
@@ -69,9 +74,9 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "What This Means for a Seeker",
+      "title": "Key Takeaways: Why Islam and Not Just a Creator?",
       "kind": "summary",
-      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nQuestions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
+      "body": "Questions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility.\n\nBelief in some creator leaves major questions unanswered: what is God like, why are humans here, has God guided them, and how should they live? Islam offers a connected answer through Tawhid, prophetic continuity, the Quran, worship, mercy, and accountability. Each step still requires evidence."
     }
   ],
   "quranVerses": [
@@ -153,13 +158,14 @@
     {
       "question": "Why should Muslim behavior not decide the question?",
       "answer": "Behavior is relevant to claims about a tradition's fruits, but followers can contradict their own sources. A fair assessment examines foundational teachings, interpretive traditions, historical outcomes, and lived practice rather than reducing a religion to either its best publicity or worst adherents."
-    },
-    {
-      "question": "If I am asking whether Islam is true, what should I do next?",
-      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Questions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility."
     }
   ],
-  "relatedSlugs": ["does-god-exist", "why-believe-in-revelation", "what-is-tawhid", "why-the-quran"],
+  "relatedSlugs": [
+    "does-god-exist",
+    "why-believe-in-revelation",
+    "what-is-tawhid",
+    "why-the-quran"
+  ],
   "furtherReading": [
     {
       "title": "The Vision of Islam",

@@ -5,7 +5,8 @@ import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ChevronRight, FileText, FolderOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
-import type { ResearchTreeNode, ResearchTreeStatus } from "@/types/content";
+import { readerDescription } from "@/lib/reader-text";
+import type { ResearchTreeNode } from "@/types/content";
 import styles from "./ResearchTree.module.css";
 
 type ResearchTreeProps = {
@@ -13,18 +14,6 @@ type ResearchTreeProps = {
   description?: string;
   nodes: ResearchTreeNode[];
   className?: string;
-};
-
-const statusLabels: Record<ResearchTreeStatus, string> = {
-  draft: "Draft",
-  "under-review": "Under review",
-  published: "Published",
-};
-
-const statusClasses: Record<ResearchTreeStatus, string> = {
-  draft: "border-gold/50 bg-gold/10 text-foreground",
-  "under-review": "border-secondary/45 bg-secondary/10 text-foreground",
-  published: "border-accent/45 bg-accent/10 text-foreground",
 };
 
 export function ResearchTree({
@@ -134,7 +123,7 @@ function TreeNode({
           onToggle={(event) => onNodeOpenChange(nodeId, event.currentTarget.open)}
         >
           <summary
-            title={node.description}
+            title={node.description ? readerDescription(node.description) : undefined}
             className={cn(
               "flex cursor-pointer list-none items-start gap-1.5 rounded-md px-1 py-1 transition hover:bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-1.5 [&::-webkit-details-marker]:hidden",
               styles.summary,
@@ -180,7 +169,7 @@ function LeafNode({ node }: { node: ResearchTreeNode }) {
   if (!node.href) {
     return (
       <div
-        title={node.description}
+        title={node.description ? readerDescription(node.description) : undefined}
         className="flex items-start gap-1.5 rounded-md px-1 py-1 sm:px-1.5"
       >
         <FileText aria-hidden="true" className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground" />
@@ -193,7 +182,7 @@ function LeafNode({ node }: { node: ResearchTreeNode }) {
   return (
     <Link
       href={node.href}
-      title={node.description}
+      title={node.description ? readerDescription(node.description) : undefined}
       className="flex items-start gap-1.5 rounded-md px-1 py-1 text-foreground no-underline transition hover:bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-1.5"
     >
       <FileText aria-hidden="true" className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground" />
@@ -204,14 +193,13 @@ function LeafNode({ node }: { node: ResearchTreeNode }) {
 }
 
 function NodeBadges({ node }: { node: ResearchTreeNode }) {
-  if (!node.tag && !node.status) {
+  if (!node.tag) {
     return null;
   }
 
   return (
     <span className="flex shrink-0 flex-wrap items-center gap-1">
       {node.tag ? <TreeTag>{node.tag}</TreeTag> : null}
-      {node.status ? <StatusPill status={node.status} /> : null}
     </span>
   );
 }
@@ -220,19 +208,6 @@ function TreeTag({ children }: { children: string }) {
   return (
     <span className="rounded-sm bg-muted px-1.5 py-0.5 text-[10px] font-medium uppercase text-muted-foreground ring-1 ring-border">
       {children}
-    </span>
-  );
-}
-
-function StatusPill({ status }: { status: ResearchTreeStatus }) {
-  return (
-    <span
-      className={cn(
-        "rounded-sm border px-1.5 py-0.5 text-[10px] font-semibold uppercase",
-        statusClasses[status],
-      )}
-    >
-      {statusLabels[status]}
     </span>
   );
 }

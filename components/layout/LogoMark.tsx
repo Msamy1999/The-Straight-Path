@@ -3,7 +3,7 @@
  *
  * "Road to the light": a straight road in perspective, open at the horizon,
  * receding toward a white light with a warm gold glow. Road strokes use
- * currentColor so the mark follows the text colour of its parent (e.g.
+ * currentColor so the mark follows the text color of its parent (e.g.
  * `text-accent`) in light and dark mode; size it with Tailwind classes such
  * as `h-8 w-8`.
  */

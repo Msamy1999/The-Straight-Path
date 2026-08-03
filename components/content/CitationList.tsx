@@ -6,11 +6,7 @@ type CitationListProps = {
 
 export function CitationList({ citations }: CitationListProps) {
   if (citations.length === 0) {
-    return (
-      <p className="text-sm leading-7 text-muted-foreground">
-        Source pending. Citations must be added before publication.
-      </p>
-    );
+    return null;
   }
 
   return (
@@ -51,5 +47,5 @@ function formatCitationMeta(citation: CitationRecord) {
     citation.year?.toString(),
   ].filter(Boolean);
 
-  return parts.length > 0 ? parts.join(" | ") : "Citation details pending";
+  return parts.length > 0 ? parts.join(" | ") : "Publication details unavailable";
 }

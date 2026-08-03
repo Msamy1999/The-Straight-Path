@@ -1,14 +1,20 @@
 {
   "slug": "gospel-authorship-and-dating",
   "title": "Gospel Authorship and Dating",
-  "subtitle": "What mainstream biblical scholarship says about who wrote the Gospels and when — compared with the Quran's single-generation compilation — Written for sincere seekers asking whether Islam is true.",
+  "subtitle": "What mainstream biblical scholarship says about who wrote the Gospels and when — compared with the Quran's single-generation compilation",
   "category": "preservation",
   "audienceLevel": "beginner",
-  "summary": "For sincere seekers asking whether Islam is true: The four New Testament Gospels are traditionally named for Matthew, Mark, Luke, and John, but mainstream biblical scholarship notes that none of them actually names its author within the text itself. Scholars generally date Mark to roughly 65-75 CE, Matthew and Luke to about 80-90 CE, and John to around 90-100 CE — all written decades after Jesus' life, likely not by direct eyewitnesses. This article presents that scholarly consensus in its own words, then compares it with the Quran's single-generation compilation and the Islamic science of hadith transmission, which relies on named, checkable chains of narrators.",
-  "tags": ["Preservation", "History", "Scripture", "Sources", "Questions"],
+  "summary": "The four New Testament Gospels are traditionally named for Matthew, Mark, Luke, and John, but mainstream biblical scholarship notes that none of them actually names its author within the text itself. Scholars generally date Mark to roughly 65-75 CE, Matthew and Luke to about 80-90 CE, and John to around 90-100 CE — all written decades after Jesus' life, likely not by direct eyewitnesses. This article presents that scholarly consensus in its own words, then compares it with the Quran's single-generation compilation and the Islamic science of hadith transmission, which relies on named, checkable chains of narrators.",
+  "tags": [
+    "Preservation",
+    "History",
+    "Scripture",
+    "Sources",
+    "Questions"
+  ],
   "seo": {
     "metaTitle": "Gospel Authorship and Dating: What Scholars Really Say",
-    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Gospel Authorship and Dating.",
+    "metaDescription": "The four New Testament Gospels are traditionally named for Matthew, Mark, Luke, and John, but mainstream biblical scholarship notes that none of them…",
     "keywords": [
       "Gospel authorship",
       "Synoptic Problem",
@@ -25,9 +31,9 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "For a Seeker Asking Whether Islam Is True",
+      "title": "Understanding Gospel Authorship and Dating",
       "kind": "summary",
-      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nThe Islamic preservation claim is a cumulative case involving revelation, recitation, writing, manuscripts, and scholarly transmission; those kinds of evidence should not be collapsed into one another or described with absolute slogans.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+      "body": "The four New Testament Gospels are traditionally named for Matthew, Mark, Luke, and John, but mainstream biblical scholarship notes that none of them actually names its author within the text itself. Scholars generally date Mark to roughly 65-75 CE, Matthew and Luke to about 80-90 CE, and John to around 90-100 CE — all written decades after Jesus' life, likely not by direct eyewitnesses. This article presents that scholarly consensus in its own words, then compares it with the Quran's single-generation compilation and the Islamic science of hadith transmission, which relies on named, checkable chains of narrators."
     },
     {
       "sectionId": "beginner-summary",
@@ -69,7 +75,7 @@
       "sectionId": "comparison",
       "title": "Two Transmission Models, Side by Side",
       "kind": "argument",
-      "body": "Set alongside this scholarly picture, the Islamic model of transmission developed along a different track, built around named chains of narration rather than anonymous compilation followed by later attribution.\n\nFor the Quran, this is the account given by Islamic tradition: the text was recited by Muhammad, memorized immediately by his companions (a normal practice in an oral culture that prized memorization), partially written down during his lifetime, and formally compiled into a single standardized written text within roughly two decades of his death, under the early caliphs. This traditional account is corroborated by early manuscript evidence — including Hijazi-script parchment folios radiocarbon-dated to a range overlapping the Prophet's own lifetime — as this library's companion articles \"How Was the Quran Preserved?\" and \"Was the Quran Preserved? Weighing the Evidence\" set out in more detail. On this account, the gap between source and finished text is measured in years, not generations. As with Gospel authorship, the timeline is not free of academic dispute: a minority of revisionist scholars, arguing mainly from source-critical readings of the early Arabic historical record rather than the traditional Islamic sources, have proposed that full standardization took longer, or occurred somewhat later, than the traditional account holds — a minority position set against the mainstream reading of the manuscript and historical evidence.\n\nFor reports about what Muhammad said and did outside the Quran — what Islamic scholarship calls hadith — Muslim scholars developed an entire discipline, the science of isnad, or chain of narration. Each report was expected to carry a named chain of transmitters reaching back to the Prophet, and generations of scholars cross-checked those chains: could this transmitter plausibly have met the next one in the chain, and what did other scholars say about their memory and honesty? Reports were then graded by reliability, a formal, named, cross-checked system built to answer \"how do we know this really goes back to its source?\"\n\nThe contrast with the Gospels, as mainstream scholarship describes them, is not a contrast between sincere and insincere believers — it is a difference in the kind of documentation each tradition produced. The Gospels, per the majority view, are anonymous texts, written decades after the events, whose connection to named eyewitnesses rests on later church tradition rather than an internal chain of named transmitters. The isnad system, by contrast, insists on naming and evaluating every link in the chain. Neither system guarantees perfect accuracy by itself, but Muslims point to the isnad model, together with the Quran's single-generation compilation, as offering a documented continuity the Gospels' transmission history does not."
+      "body": "Set alongside this scholarly picture, the Islamic model of transmission developed along a different track, built around named chains of narration rather than anonymous compilation followed by later attribution.\n\nFor the Quran, this is the account given by Islamic tradition: the text was recited by Muhammad, memorized immediately by his companions (a normal practice in an oral culture that prized memorization), partially written down during his lifetime, and formally compiled into a single standardized written text within roughly two decades of his death, under the early caliphs. This traditional account is corroborated by early manuscript evidence — including Hijazi-script parchment folios radiocarbon-dated to a range overlapping the Prophet's own lifetime — as this library's companion articles \"How Was the Quran Preserved?\" And \"Was the Quran Preserved? Weighing the Evidence\" set out in more detail. On this account, the gap between source and finished text is measured in years, not generations. As with Gospel authorship, the timeline is not free of academic dispute: a minority of revisionist scholars, arguing mainly from source-critical readings of the early Arabic historical record rather than the traditional Islamic sources, have proposed that full standardization took longer, or occurred somewhat later, than the traditional account holds — a minority position set against the mainstream reading of the manuscript and historical evidence.\n\nFor reports about what Muhammad said and did outside the Quran — what Islamic scholarship calls hadith — Muslim scholars developed an entire discipline, the science of isnad, or chain of narration. Each report was expected to carry a named chain of transmitters reaching back to the Prophet, and generations of scholars cross-checked those chains: could this transmitter plausibly have met the next one in the chain, and what did other scholars say about their memory and honesty? Reports were then graded by reliability, a formal, named, cross-checked system built to answer \"how do we know this really goes back to its source?\"\n\nThe contrast with the Gospels, as mainstream scholarship describes them, is not a contrast between sincere and insincere believers — it is a difference in the kind of documentation each tradition produced. The Gospels, per the majority view, are anonymous texts, written decades after the events, whose connection to named eyewitnesses rests on later church tradition rather than an internal chain of named transmitters. The isnad system, by contrast, insists on naming and evaluating every link in the chain. Neither system guarantees perfect accuracy by itself, but Muslims point to the isnad model, together with the Quran's single-generation compilation, as offering a documented continuity the Gospels' transmission history does not."
     },
     {
       "sectionId": "common-misconceptions",
@@ -85,9 +91,9 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "What This Means for a Seeker",
+      "title": "Key Takeaways: Gospel Authorship and Dating",
       "kind": "summary",
-      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nThe Islamic preservation claim is a cumulative case involving revelation, recitation, writing, manuscripts, and scholarly transmission; those kinds of evidence should not be collapsed into one another or described with absolute slogans.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
+      "body": "The Islamic preservation claim is a cumulative case involving revelation, recitation, writing, manuscripts, and scholarly transmission; those kinds of evidence should not be collapsed into one another or described with absolute slogans.\n\nThe four New Testament Gospels are traditionally named for Matthew, Mark, Luke, and John, but mainstream biblical scholarship notes that none of them actually names its author within the text itself. Scholars generally date Mark to roughly 65-75 CE, Matthew and Luke to about 80-90 CE, and John to around 90-100 CE — all written decades after Jesus' life, likely not by direct eyewitnesses. This article presents that scholarly consensus in its own words, then compares it with the Quran's single-generation compilation and the Islamic science of hadith transmission, which relies on named, checkable chains of narrators."
     },
     {
       "sectionId": "faq",
@@ -99,7 +105,7 @@
       "sectionId": "further-reading",
       "title": "Further Reading",
       "kind": "sources",
-      "body": "Readers who want to go deeper into either the Christian scholarly discussion of Gospel authorship and dating, or the Islamic science of hadith transmission, may find the following works useful starting points. They represent mainstream, widely cited scholarship from within each tradition and from secular academic study; listing them does not imply agreement with every conclusion.\n\nA note on sources: the Quran quotation was fetched from api.alquran.cloud (Tanzil Uthmani text; Saheeh International translation) and the Bible quotations from bible-api.com (World English Bible), reproduced verbatim. Historical statements on Gospel dating and authorship draw on mainstream encyclopedic summaries of New Testament scholarship."
+      "body": "Selected sources and further reading:\n\n- **Jesus, Interrupted: Revealing the Hidden Contradictions in the Bible (And Why We Don't Know About Them)** — Bart D. Ehrman. A widely read overview of mainstream scholarly conclusions on Gospel authorship, dating, and the Synoptic Problem.\n- **An Introduction to the New Testament** — Raymond E. Brown. A standard Catholic scholarly textbook surveying authorship and dating debates for each New Testament book.\n- **The Historical Figure of Jesus** — E. P. Sanders. A leading historical-Jesus scholar's discussion of the Gospel sources and their reliability.\n- **Hadith: Muhammad's Legacy in the Medieval and Modern World** — Jonathan A. C. Brown. An accessible academic overview of isnad methodology and the development of hadith criticism.\n- **Hadith Literature: Its Origin, Development and Special Features** — M. Zubayr Siddiqi. A classic account of the science of hadith transmission and chain evaluation."
     }
   ],
   "quranVerses": [
@@ -154,10 +160,6 @@
     {
       "question": "Why does this comparison matter for someone deciding what to believe?",
       "answer": "It does not settle every theological question on its own, but it gives a concrete, checkable basis for comparing how each tradition documents the distance between its claimed source and the text available today."
-    },
-    {
-      "question": "If I am asking whether Islam is true, what should I do next?",
-      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. The Islamic preservation claim is a cumulative case involving revelation, recitation, writing, manuscripts, and scholarly transmission; those kinds of evidence should not be collapsed into one another or described with absolute slogans."
     }
   ],
   "relatedSlugs": [

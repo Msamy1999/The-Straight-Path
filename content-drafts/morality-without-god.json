@@ -1,14 +1,19 @@
 {
   "slug": "morality-without-god",
   "title": "Morality Without God",
-  "subtitle": "Moral character, moral knowledge, and the deeper question of what makes obligations objectively true — Written for sincere seekers asking whether Islam is true.",
+  "subtitle": "Moral character, moral knowledge, and the deeper question of what makes obligations objectively true",
   "category": "difficult-questions",
   "audienceLevel": "intermediate",
-  "summary": "For sincere seekers asking whether Islam is true: Atheists can be compassionate, principled, and morally courageous. The philosophical debate is not whether nonbelievers can behave well, but how objective duties and human worth are grounded. This article compares secular and theistic accounts while acknowledging genuine Muslim disagreement about reason and revelation in ethics.",
-  "tags": ["Theology", "Questions", "Purpose", "Sources"],
+  "summary": "Atheists can be compassionate, principled, and morally courageous. The philosophical debate is not whether nonbelievers can behave well, but how objective duties and human worth are grounded. This article compares secular and theistic accounts while acknowledging genuine Muslim disagreement about reason and revelation in ethics.",
+  "tags": [
+    "Theology",
+    "Questions",
+    "Purpose",
+    "Sources"
+  ],
   "seo": {
     "metaTitle": "Morality Without God? Secular Ethics and the Islamic Case",
-    "metaDescription": "A fair, source-aware guide for seekers asking whether Islam is true: Morality Without God.",
+    "metaDescription": "Atheists can be compassionate, principled, and morally courageous. The philosophical debate is not whether nonbelievers can behave well, but how objective…",
     "keywords": [
       "morality without God",
       "objective morality",
@@ -21,9 +26,9 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "For a Seeker Asking Whether Islam Is True",
+      "title": "Understanding Morality Without God",
       "kind": "summary",
-      "body": "This article is written for a sincere seeker asking whether Islam is true. It is not only a neutral comparison or an interfaith description.\n\nQuestions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility.\n\nWhere Christianity, atheism, or another alternative appears, its strongest responsible argument should be stated in a form an informed defender would recognize before the Islamic response is offered.\n\nRead the labels carefully: an explicit Quranic or Prophetic text, an established Sunni teaching, a classical or modern scholarly interpretation, a historical reconstruction, and the author's inference are different kinds of claim. Disputed questions should be identified as disputed rather than hidden."
+      "body": "Atheists can be compassionate, principled, and morally courageous. The philosophical debate is not whether nonbelievers can behave well, but how objective duties and human worth are grounded. This article compares secular and theistic accounts while acknowledging genuine Muslim disagreement about reason and revelation in ethics."
     },
     {
       "sectionId": "clear-away-caricature",
@@ -69,9 +74,9 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "What This Means for a Seeker",
+      "title": "Key Takeaways: Morality Without God",
       "kind": "summary",
-      "body": "This article is one part of a larger truth-seeking case. Its subject should not be treated as an isolated proof or as a reason to stop at comparison. The Islamic claim is that the Quran restores clear guidance about the one God and calls human beings to respond to Him with faith, worship, repentance, and moral responsibility.\n\nQuestions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility.\n\nIf you are asking whether Islam is true, take a direct next step: read the Quran itself in a reliable translation, revisit the primary sources linked here, and write down the strongest objection that remains. Ask God sincerely for guidance and take that question to a trustworthy, knowledgeable Muslim. The aim is not to win an interfaith argument or to caricature alternatives, but to investigate Islam honestly and then respond to its claim."
+      "body": "Questions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility.\n\nAtheists can be compassionate, principled, and morally courageous. The philosophical debate is not whether nonbelievers can behave well, but how objective duties and human worth are grounded. This article compares secular and theistic accounts while acknowledging genuine Muslim disagreement about reason and revelation in ethics."
     }
   ],
   "quranVerses": [
@@ -123,13 +128,14 @@
     {
       "question": "Does moral disagreement disprove objective morality?",
       "answer": "Not by itself. People can disagree because of limited facts, self-interest, culture, or competing principles. Disagreement does require careful argument and humility about one's interpretations."
-    },
-    {
-      "question": "If I am asking whether Islam is true, what should I do next?",
-      "answer": "Begin with the Quran in a reliable translation and the primary sources linked in this article. Ask God sincerely for guidance, note the strongest question that remains, and discuss it with a trustworthy, knowledgeable Muslim. Questions about God, suffering, morality, history, or reason are not treated as isolated objections; they are tests of which worldview best explains reality and human responsibility."
     }
   ],
-  "relatedSlugs": ["does-god-exist", "the-problem-of-evil", "purpose-of-life-atheism-agnosticism", "rights-of-non-muslims"],
+  "relatedSlugs": [
+    "does-god-exist",
+    "the-problem-of-evil",
+    "purpose-of-life-atheism-agnosticism",
+    "rights-of-non-muslims"
+  ],
   "furtherReading": [
     {
       "title": "Ethics Without God",
