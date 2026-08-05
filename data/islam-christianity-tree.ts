@@ -597,39 +597,9 @@ export const islamChristianityBranches: IslamChristianityBranchDef[] = [
       "Bible",
     ),
     topic(
-      "Genealogies of Jesus",
-      "/articles/genealogies-of-jesus",
-      "Why Matthew and Luke give Jesus two different genealogies, and how each tradition reads the difficulty.",
-      "draft",
-    ),
-    topic(
-      "The death of Judas",
-      "/articles/the-death-of-judas",
-      "Matthew's hanging and Acts' falling-headlong accounts of Judas' death, and how each is read.",
-      "draft",
-    ),
-    topic(
-      "The timing of the crucifixion",
-      "/articles/the-timing-of-the-crucifixion",
-      "Reconciling the Synoptic and Johannine timing of the Last Supper and crucifixion with Passover.",
-      "draft",
-    ),
-    topic(
-      "Did anyone see God?",
-      "/articles/did-anyone-see-god",
-      "Moses at Sinai, John 1:18, and Quran 6:103 and 7:143 on seeing God.",
-      "draft",
-    ),
-    topic(
-      "Is original sin just?",
-      "/articles/original-sin-vs-personal-responsibility",
-      "A draft comparison of inherited guilt, accountability, repentance, and justice.",
-      "draft",
-    ),
-    topic(
-      "Can God become man?",
-      "/articles/can-god-become-man",
-      "The Incarnation and Tawhid's objection to it, presented as a difference in starting premises about God.",
+      "The Passion Narrative: The Story of Jesus’ Crucifixion and Resurrection",
+      "/articles/the-passion-narrative",
+      "The Gospel accounts of Jesus’ crucifixion and resurrection, the Christian confession, and the Quranic account.",
       "draft",
     ),
     topic(

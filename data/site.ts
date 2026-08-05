@@ -173,42 +173,7 @@ export const siteCategories = [
       "A careful space for hard questions, context, fair representation, and source-backed responses.",
     icon: "questions",
     tags: ["Questions", "Scripture"],
-    futureTopics: [
-      topic(
-        "What is a contradiction?",
-        "A planned method page for defining contradiction before evaluating examples.",
-      ),
-      topic(
-        "Genealogies of Jesus",
-        "A planned question page with Bible references and source notes pending.",
-      ),
-      topic(
-        "The death of Judas",
-        "A planned comparison that must quote exact passages and versions before analysis.",
-      ),
-      topic(
-        "The timing of the crucifixion",
-        "A planned topic requiring careful context and source attribution.",
-      ),
-      topic(
-        "Did anyone see God?",
-        "A planned question page separating text, interpretation, and theology.",
-      ),
-      topic(
-        "Is original sin just?",
-        "A planned bridge into salvation, responsibility, and justice.",
-        "/articles/original-sin-vs-personal-responsibility",
-      ),
-      topic(
-        "Can God become man?",
-        "A planned theology question linked to incarnation and Tawhid.",
-      ),
-      topic(
-        "Does salvation require a sacrifice?",
-        "A planned study linked to forgiveness, mercy, and atonement.",
-        "/articles/forgiveness-in-islam-and-christianity",
-      ),
-    ],
+    futureTopics: [],
     relatedSlugs: ["questions", "the-quran-and-the-bible", "sources"],
   },
   {

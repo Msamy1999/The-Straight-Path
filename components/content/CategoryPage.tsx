@@ -86,25 +86,29 @@ export async function CategoryPage({ category }: CategoryPageProps) {
               </div>
             </div>
           ) : null}
-          <PageHeader
-            titleAs="h2"
-            eyebrow="Topics"
-            title="Explore related topics"
-            subtitle="Questions and themes connected to this category."
-          />
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
-            {category.futureTopics.map((topic) => (
-              <TopicCard
-                key={topic.title}
-                title={topic.title}
-                    description={readerDescription(topic.description)}
-                href={topic.href ?? `${category.href}#articles`}
-                icon={Icon}
-                label={topic.href?.startsWith("/articles/") ? "Article" : "Topic"}
-                meta={topic.href?.startsWith("/articles/") ? "Article" : "Study topic"}
+          {category.futureTopics.length > 0 ? (
+            <>
+              <PageHeader
+                titleAs="h2"
+                eyebrow="Topics"
+                title="Explore related topics"
+                subtitle="Questions and themes connected to this category."
               />
-            ))}
-          </div>
+              <div className="mt-6 grid gap-4 md:grid-cols-3">
+                {category.futureTopics.map((topic) => (
+                  <TopicCard
+                    key={topic.title}
+                    title={topic.title}
+                    description={readerDescription(topic.description)}
+                    href={topic.href ?? `${category.href}#articles`}
+                    icon={Icon}
+                    label={topic.href?.startsWith("/articles/") ? "Article" : "Topic"}
+                    meta={topic.href?.startsWith("/articles/") ? "Article" : "Study topic"}
+                  />
+                ))}
+              </div>
+            </>
+          ) : null}
         </Container>
       </Section>
 
