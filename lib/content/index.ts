@@ -83,7 +83,7 @@ function opt<T>(value: T | null | undefined): T | undefined {
  * the argument and are normalized at the content boundary.
  */
 function cleanEditorialText(value: string): string {
-  return value
+  const cleaned = value
     .replace(
       /\bWhat This Page Does(?:—|–|--|-)\s*and Does Not(?:—|–|--|-)?\s*Call a Contradiction\b/gi,
       "What Counts—and Does Not Count—as a Contradiction",
@@ -116,6 +116,16 @@ function cleanEditorialText(value: string): string {
       /\bat bottom it is not a historical question\b/gi,
       "the bottom line is not a historical question",
     );
+
+  // Several legacy editorial labels are deliberately made impersonal above.
+  // When one of those replacements begins a sentence, retain normal English
+  // capitalization rather than rendering a sentence that starts with
+  // "the discussion" or "the analysis".
+  return cleaned.replace(
+    /(^|[.!?]\s+)(the discussion|the analysis|the preservation evidence|the bottom line|the textual-variants study|related discussions|these discussions|here)\b/g,
+    (_match, sentenceStart: string, phrase: string) =>
+      `${sentenceStart}${phrase.charAt(0).toUpperCase()}${phrase.slice(1)}`,
+  );
 }
 
 function citationKeys(value: unknown): string[] {
