@@ -67,6 +67,21 @@ const islamicPerspectiveByCategory: Partial<Record<SiteCategory["slug"], string>
     "Islam invites scrutiny rather than fear of it: the Quran itself directs readers to reflect on whether it contains contradiction. Examining difficult questions is not controversy for its own sake, but a clearer judgment about revelation and worship of God alone.",
 };
 
+export function getArticleIslamicPerspective(
+  article: Article,
+  category: SiteCategory,
+): string | undefined {
+  const hasIslamicPerspective = article.sections.some((section) =>
+    /islamic.*(conclusion|perspective|case)|the islamic (conclusion|perspective|case)/i.test(
+      `${section.id} ${section.title}`,
+    ),
+  );
+
+  return hasIslamicPerspective
+    ? undefined
+    : islamicPerspectiveByCategory[category.slug];
+}
+
 export function ArticleLayout({
   article,
   category,
@@ -84,14 +99,7 @@ export function ArticleLayout({
       section.id !== "beginner-summary" &&
       section.title.trim().toLowerCase() !== "beginner summary",
   );
-  const hasIslamicPerspective = visibleSections.some((section) =>
-    /islamic.*(conclusion|perspective|case)|the islamic (conclusion|perspective|case)/i.test(
-      `${section.id} ${section.title}`,
-    ),
-  );
-  const islamicPerspective = hasIslamicPerspective
-    ? undefined
-    : islamicPerspectiveByCategory[category.slug];
+  const islamicPerspective = getArticleIslamicPerspective(article, category);
   const defaultTableOfContents = visibleSections.map((section) => ({
     id: section.id,
     title: section.title,

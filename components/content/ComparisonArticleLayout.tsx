@@ -12,7 +12,10 @@ import type {
   ComparisonArticle,
   SiteCategory,
 } from "@/types/content";
-import { ArticleLayout } from "@/components/content/ArticleLayout";
+import {
+  ArticleLayout,
+  getArticleIslamicPerspective,
+} from "@/components/content/ArticleLayout";
 import type { ArticleTreeBreadcrumb } from "@/lib/content";
 
 type ComparisonArticleLayoutProps = {
@@ -33,6 +36,7 @@ export function ComparisonArticleLayout({
   treeBreadcrumbs,
 }: ComparisonArticleLayoutProps) {
   const CategoryIcon = categoryIconMap[category.icon] ?? fallbackCategoryIcon;
+  const islamicPerspective = getArticleIslamicPerspective(article, category);
 
   return (
     <ArticleLayout
@@ -51,6 +55,9 @@ export function ComparisonArticleLayout({
         { id: "key-differences", title: "Key differences" },
         { id: "common-objections", title: "Common objections" },
         { id: "respectful-conclusion", title: "Respectful conclusion" },
+        ...(islamicPerspective
+          ? [{ id: "islamic-perspective", title: "The Islamic perspective" }]
+          : []),
         { id: "sources", title: "Sources" },
         { id: "related-topics", title: "Related topics" },
       ]}
@@ -160,6 +167,19 @@ export function ComparisonArticleLayout({
           {comparison.respectfulConclusion}
         </Callout>
       </section>
+
+      {islamicPerspective ? (
+        <section id="islamic-perspective" className="scroll-mt-20">
+          <PageHeader
+            titleAs="h2"
+            eyebrow="Perspective"
+            title="The Islamic Perspective"
+          />
+          <p className="mt-4 select-text text-sm leading-6 text-muted-foreground sm:text-base sm:leading-7">
+            {islamicPerspective}
+          </p>
+        </section>
+      ) : null}
 
       <section id="related-topics" className="scroll-mt-20">
         <PageHeader
