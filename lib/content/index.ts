@@ -564,6 +564,22 @@ export type GetArticlesOptions = {
   includeDrafts?: boolean;
 };
 
+/**
+ * Consolidated articles remain redirectable for existing links, but are not
+ * shown as separate studies in cards, related reading, or the sitemap.
+ */
+export const articleRedirects: Readonly<Record<string, string>> = {
+  "judgment-day": "the-day-of-judgment",
+};
+
+export function getArticleRedirect(slug: string): string | undefined {
+  return articleRedirects[slug];
+}
+
+function isVisibleArticle(slug: string): boolean {
+  return !Object.hasOwn(articleRedirects, slug);
+}
+
 // Full article bodies can exceed Next.js' 2 MB persistent data-cache limit.
 // Request-level memoisation still prevents duplicate reads during a render
 // without attempting to serialize the complete library into the data cache.
@@ -588,9 +604,9 @@ export async function getArticles(
 ): Promise<Article[]> {
   const { includeDrafts = true } = options;
 
-  return (await getCachedArticleDocs(includeDrafts)).map((doc) =>
-    mapArticle(doc as unknown as ArticleDoc),
-  );
+  return (await getCachedArticleDocs(includeDrafts))
+    .map((doc) => mapArticle(doc as unknown as ArticleDoc))
+    .filter((article) => isVisibleArticle(article.slug));
 }
 
 const getCachedArticlesByCategory = cache(
@@ -620,9 +636,9 @@ export async function getArticlesByCategory(
 ): Promise<Article[]> {
   const { includeDrafts = true } = options;
 
-  return (await getCachedArticlesByCategory(category, includeDrafts)).map((doc) =>
-    mapArticle(doc as unknown as ArticleDoc),
-  );
+  return (await getCachedArticlesByCategory(category, includeDrafts))
+    .map((doc) => mapArticle(doc as unknown as ArticleDoc))
+    .filter((article) => isVisibleArticle(article.slug));
 }
 
 const getCachedArticleDocBySlug = unstable_cache(
@@ -700,7 +716,10 @@ export async function getRelatedArticles(
   // Preserve the order defined on the article record.
   return article.relatedArticles
     .map((reference) => byReference.get(reference))
-    .filter((related): related is Article => Boolean(related));
+    .filter(
+      (related): related is Article =>
+        Boolean(related) && isVisibleArticle(related?.slug ?? ""),
+    );
 }
 
 const getCachedArticleSlugs = cache(async (includeDrafts: boolean) => {
@@ -716,7 +735,10 @@ const getCachedArticleSlugs = cache(async (includeDrafts: boolean) => {
 
   return result.docs
     .map((doc) => (typeof doc.slug === "string" ? doc.slug : undefined))
-    .filter((slug): slug is string => Boolean(slug));
+    .filter(
+      (slug): slug is string =>
+        typeof slug === "string" && isVisibleArticle(slug),
+    );
 });
 
 export async function getArticleSlugs(

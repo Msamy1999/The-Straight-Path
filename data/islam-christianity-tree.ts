@@ -261,12 +261,6 @@ export const islamChristianityBranches: IslamChristianityBranchDef[] = [
       "Jannah and Jahannam alongside the Christian heaven and hell, in both traditions' own imagery.",
       "draft",
     ),
-    topic(
-      "Judgment Day",
-      "/articles/judgment-day",
-      "Yawm al-Qiyamah and the Last Judgment, compared across both traditions' eschatology.",
-      "draft",
-    ),
   ]),
   branch("preservation", [
     topic(

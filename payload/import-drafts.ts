@@ -336,19 +336,28 @@ async function main() {
       tags: draft.tags,
       status: articleStatus,
       lastUpdated: new Date().toISOString(),
-      sections: draft.sections.map((section) => ({
-        sectionId: section.sectionId,
-        title: section.title,
-        kind: section.kind,
-        body: section.body,
-        citations:
-          section.kind === "scripture"
-            ? [
-                citationIds["quran-tanzil-sahih-international"],
-                citationIds["bible-web-translation"],
-              ]
-            : [],
-      })),
+      // Older drafts may retain an internal "beginner summary" while their
+      // public overview has been revised. Do not import that duplicate block
+      // into Payload or expose it through the public content API.
+      sections: draft.sections
+        .filter(
+          (section) =>
+            section.sectionId !== "beginner-summary" &&
+            section.title.trim().toLowerCase() !== "beginner summary",
+        )
+        .map((section) => ({
+          sectionId: section.sectionId,
+          title: section.title,
+          kind: section.kind,
+          body: section.body,
+          citations:
+            section.kind === "scripture"
+              ? [
+                  citationIds["quran-tanzil-sahih-international"],
+                  citationIds["bible-web-translation"],
+                ]
+              : [],
+        })),
       citations: [
         citationIds["quran-tanzil-sahih-international"],
         citationIds["bible-web-translation"],

@@ -4,7 +4,7 @@
   "subtitle": "An inherited debt paid by Christ, or a free choice erased by repentance? Comparing how the Bible and the Quran define wrongdoing",
   "category": "the-quran-and-the-bible",
   "audienceLevel": "beginner",
-  "summary": "Western Christian formulations define sin as 'lawlessness' (1 John 3:4), and many Western accounts connect the human condition to Adam's fall; Eastern Orthodox accounts more often speak of ancestral sin and its consequences rather than inherited guilt in the same way. Many Christian traditions connect forgiveness to Christ's atoning work, though they explain that work differently. Islam teaches that every soul begins morally free and unstained — a claim the Quran grounds in the principle that 'no bearer of burdens will bear the burden of another' (Quran 17:15) — and that sin is a choice ranging from minor lapses to grave major sins (kaba'ir), fully erased through sincere repentance offered directly to God (Quran 66:8). This article quotes each tradition's own scripture before comparing how each understands what sin is and how it is removed.",
+  "summary": "Both faiths take sin seriously, but they explain the human starting point differently. Many Christian traditions connect humanity's condition to Adam's fall and to Christ's atoning work. Islam teaches that each person begins free of another's guilt, sins through personal choices, and may return to God through sincere repentance. The Quran's principle is clear: no soul bears another's burden.",
   "tags": [
     "Theology",
     "Scripture",
@@ -32,7 +32,7 @@
       "sectionId": "seeker-guide",
       "title": "Understanding What Is Sin?",
       "kind": "summary",
-      "body": "Western Christian formulations define sin as 'lawlessness' (1 John 3:4), and many Western accounts connect the human condition to Adam's fall; Eastern Orthodox accounts more often speak of ancestral sin and its consequences rather than inherited guilt in the same way. Many Christian traditions connect forgiveness to Christ's atoning work, though they explain that work differently. Islam teaches that every soul begins morally free and unstained — a claim the Quran grounds in the principle that 'no bearer of burdens will bear the burden of another' (Quran 17:15) — and that sin is a choice ranging from minor lapses to grave major sins (kaba'ir), fully erased through sincere repentance offered directly to God (Quran 66:8). This article quotes each tradition's own scripture before comparing how each understands what sin is and how it is removed."
+      "body": "Both faiths take sin seriously, but they explain the human starting point differently. Many Christian traditions connect humanity's condition to Adam's fall and to Christ's atoning work. Islam teaches that each person begins free of another's guilt, sins through personal choices, and may return to God through sincere repentance. The Quran's principle is clear: no soul bears another's burden."
     },
     {
       "sectionId": "beginner-summary",
@@ -220,6 +220,7 @@
     }
   ],
   "relatedSlugs": [
+    "sin-and-repentance",
     "original-sin-vs-personal-responsibility",
     "forgiveness-in-islam-and-christianity",
     "what-is-salvation",

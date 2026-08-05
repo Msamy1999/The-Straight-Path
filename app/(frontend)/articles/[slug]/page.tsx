@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { ArticleLayout } from "@/components/content/ArticleLayout";
 import { ComparisonArticleLayout } from "@/components/content/ComparisonArticleLayout";
 import {
   getArticleBySlug,
+  getArticleRedirect,
   getArticleSlugs,
   getArticleTreeBreadcrumbs,
   getCategoryBySlug,
@@ -81,6 +82,10 @@ export async function generateMetadata({
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
   const { slug } = await params;
+  const redirectSlug = getArticleRedirect(slug);
+  if (redirectSlug) {
+    permanentRedirect(`/articles/${redirectSlug}`);
+  }
   const article = await getArticleBySlug(slug);
 
   if (!article) {
