@@ -13,6 +13,7 @@ import type {
   SiteCategory,
 } from "@/types/content";
 import { ArticleLayout } from "@/components/content/ArticleLayout";
+import type { ArticleTreeBreadcrumb } from "@/lib/content";
 
 type ComparisonArticleLayoutProps = {
   article: Article;
@@ -20,6 +21,7 @@ type ComparisonArticleLayoutProps = {
   comparison: ComparisonArticle;
   citations: Citation[];
   relatedArticles: Article[];
+  treeBreadcrumbs?: ArticleTreeBreadcrumb[];
 };
 
 export function ComparisonArticleLayout({
@@ -28,6 +30,7 @@ export function ComparisonArticleLayout({
   comparison,
   citations,
   relatedArticles,
+  treeBreadcrumbs,
 }: ComparisonArticleLayoutProps) {
   const CategoryIcon = categoryIconMap[category.icon] ?? fallbackCategoryIcon;
 
@@ -37,6 +40,7 @@ export function ComparisonArticleLayout({
       category={category}
       citations={citations}
       relatedArticles={relatedArticles}
+      treeBreadcrumbs={treeBreadcrumbs}
       plainText={buildComparisonPlainText(article, comparison)}
       tocItems={[
         { id: "main-question", title: "Main question" },

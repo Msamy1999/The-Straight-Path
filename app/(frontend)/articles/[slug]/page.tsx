@@ -5,6 +5,7 @@ import { ComparisonArticleLayout } from "@/components/content/ComparisonArticleL
 import {
   getArticleBySlug,
   getArticleSlugs,
+  getArticleTreeBreadcrumbs,
   getCategoryBySlug,
   getCitationsByIds,
   getComparisonArticleBySlug,
@@ -86,10 +87,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     notFound();
   }
 
-  const [comparison, relatedArticles, category] = await Promise.all([
+  const [comparison, relatedArticles, category, treeBreadcrumbs] = await Promise.all([
     getComparisonArticleBySlug(article.slug),
     getRelatedArticles(article),
     getCategoryBySlug(article.category),
+    getArticleTreeBreadcrumbs(article.slug),
   ]);
   // This is a focused catalog, not a two-scripture comparison. Its researched
   // article sections use the same accordion presentation as Claims Against Islam.
@@ -110,6 +112,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         comparison={renderableComparison}
         citations={citations}
         relatedArticles={relatedArticles}
+        treeBreadcrumbs={treeBreadcrumbs}
       />
     );
   }
@@ -120,6 +123,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       category={category}
       citations={citations}
       relatedArticles={relatedArticles}
+      treeBreadcrumbs={treeBreadcrumbs}
       collapsibleSections={article.slug === "contradictions-in-the-bible"}
     />
   );

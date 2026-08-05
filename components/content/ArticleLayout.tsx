@@ -17,6 +17,7 @@ import {
   quranQuoteSegmentsInLine,
   quranReferenceForQuoteSegment,
 } from "@/lib/quran";
+import type { ArticleTreeBreadcrumb } from "@/lib/content";
 import type { Article, Citation, SiteCategory } from "@/types/content";
 
 type ArticleLayoutProps = {
@@ -36,6 +37,8 @@ type ArticleLayoutProps = {
   plainText?: string;
   /** Use the claims-style accordion presentation for selected long-form articles. */
   collapsibleSections?: boolean;
+  /** Public navigation path when the article is opened from a research tree. */
+  treeBreadcrumbs?: ArticleTreeBreadcrumb[];
   children?: ReactNode;
 };
 
@@ -47,6 +50,7 @@ export function ArticleLayout({
   tocItems,
   plainText,
   collapsibleSections = false,
+  treeBreadcrumbs = [],
   children,
 }: ArticleLayoutProps) {
   const CategoryIcon = categoryIconMap[category.icon] ?? fallbackCategoryIcon;
@@ -67,7 +71,9 @@ export function ArticleLayout({
           <Breadcrumbs
             items={[
               { label: "Library", href: "/" },
-              { label: category.title, href: category.href },
+              ...(treeBreadcrumbs.length > 0
+                ? treeBreadcrumbs
+                : [{ label: category.title, href: category.href }]),
               { label: article.title },
             ]}
           />

@@ -505,6 +505,52 @@ export async function getFullLibraryTree(): Promise<ResearchTreeNode[]> {
   ];
 }
 
+export type ArticleTreeBreadcrumb = {
+  label: string;
+  href?: string;
+};
+
+function findTreePath(
+  nodes: ResearchTreeNode[],
+  href: string,
+  ancestors: ResearchTreeNode[] = [],
+): ResearchTreeNode[] | undefined {
+  for (const node of nodes) {
+    const path = [...ancestors, node];
+    if (node.href === href) {
+      return path;
+    }
+
+    const nestedPath = findTreePath(node.children ?? [], href, path);
+    if (nestedPath) {
+      return nestedPath;
+    }
+  }
+
+  return undefined;
+}
+
+/**
+ * Articles can be grouped for editorial purposes in one category while being
+ * reached from a more specific learning path in the public research tree.
+ * Prefer that visible tree path for breadcrumbs so a reader can return to the
+ * exact branch they used to open the article.
+ */
+export async function getArticleTreeBreadcrumbs(
+  slug: string,
+): Promise<ArticleTreeBreadcrumb[]> {
+  const path = findTreePath(await getFullLibraryTree(), `/articles/${slug}`);
+  if (!path) {
+    return [];
+  }
+
+  // The article itself is appended by its layout using its canonical title.
+  return path.slice(0, -1).map((node) => ({
+    label: node.title,
+    ...(node.href ? { href: node.href } : {}),
+  }));
+}
+
 // ---------------------------------------------------------------------------
 // Articles (Payload-backed)
 // ---------------------------------------------------------------------------
