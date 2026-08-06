@@ -111,6 +111,16 @@
       "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
     },
     {
+      "surahName": "Al-Insaan",
+      "surahNumber": 76,
+      "ayahNumber": 2,
+      "reference": "Quran 76:2",
+      "arabic": "إِنَّا خَلَقْنَا ٱلْإِنسَٰنَ مِن نُّطْفَةٍ أَمْشَاجٍ نَّبْتَلِيهِ فَجَعَلْنَٰهُ سَمِيعًۢا بَصِيرًا",
+      "translation": "Indeed, We created man from a sperm-drop mixture that We may try him; and We made him hearing and seeing.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
       "surahName": "Al-Muminoon",
       "surahNumber": 23,
       "ayahNumber": 14,
@@ -192,27 +202,27 @@
   "faq": [
     {
       "question": "What does the Quranic term 'nutfah' mean, and how do Muslim scholars interpret it?",
-      "answer": "Nutfah literally means 'sperm-drop' or 'a drop of water,' referring to the very small amount of male reproductive fluid. Muslim scholars interpret this as referring to the fertilizing sperm or the early zygote stage. Some modern exegetes correlate it specifically with the gamete (sperm cell) or the very early blastocyst. The term's vagueness allows it to encompass several early developmental stages depending on the interpreter's framework."
+      "answer": "Nutfah means a small drop of fluid. In passages about human generation it refers to the minute reproductive beginning, and Quran 76:2 calls it a mixed drop (nutfah amshaj), language that does not reduce conception to male fluid alone. Commentators have applied the term to the reproductive drop and earliest beginning in the womb. It is accurate accessible language, not a modern technical label for one precisely timed microscopic stage."
     },
     {
       "question": "Is the medical knowledge described in the Quran unique to Islam, or was it known in pre-Islamic times?",
-      "answer": "The concept of sequential stages in human development was known in pre-Islamic medical thought influenced by Greek and Roman sources. Physicians such as Galen had proposed theories of fetal development involving stages of formation. However, Muslim scholars argue that while the concept existed, the precision of the Quranic description and its spiritual framing as divine revelation represent something distinctive. Critics counter that the Quranic language is phenomenological rather than technical and that vagueness permits easy retrofitting to any medical theory."
+      "answer": "Ancient Greek medical writers, including Galen, discussed stages of generation, so the bare idea of development in stages was not unique to the Quran. What cannot simply be assumed is a demonstrated route by which one exact Galenic scheme reached seventh-century Mecca or explains the Quran's wording. The Quran uses its own concise sequence and joins it to creation, dependence on God, and resurrection. That combination is meaningful evidence for Muslims, although it should not be advertised as a technical embryology textbook or as proof based on a single word."
     },
     {
-      "question": "Why don't early Islamic scholars mention embryology when interpreting these verses?",
-      "answer": "Early Islamic exegetes (mufassirs) focused primarily on linguistic and theological meanings. They interpreted nutfah, alaqah, and mudghah within their own contemporary medical knowledge but did not develop elaborate embryological theories as modern scholars do. The connection to modern embryology emerged only in the 20th century when Islamic scholars encountered advanced microscopic embryology and sought to demonstrate the Quran's scientific prescience. This timeline is cited by some as evidence that the correlation is retrospective rather than inherent to the text."
+      "question": "How did early Islamic scholars understand these stages?",
+      "answer": "Early commentators discussed nutfah as the reproductive drop, alaqah through meanings such as something that clings and congealed blood, and mudghah as a small chewed-like morsel. They explained the verses using Arabic usage and the observable knowledge of their time rather than modern microscopy. Modern correlations must therefore remain within the words' established range. Later scientific detail can illuminate a verse, but it should not be inserted into the Arabic if the language itself does not carry it."
     },
     {
       "question": "How does modern embryology describe the stages of fetal development compared to the Quranic account?",
-      "answer": "Modern embryology recognizes development as continuous rather than discrete stages. The zygote undergoes cleavage into a blastocyst, which implants (producing bleeding, sometimes associated with the 'clot' stage); the primitive streak forms and germ layers differentiate; organ primordia develop progressively; and bones ossify gradually. These processes overlap significantly. The Quran presents a simplified, sequential account of three major stages, whereas modern embryology describes dozens of recognized developmental milestones with precision and overlap that the Quranic text does not match."
+      "answer": "Modern embryology describes continuous development with recognizable phases: fertilization, cell division, implantation, formation of body layers, and overlapping development of tissues and organs. The Quran gives a concise sequence rather than a laboratory timetable. Alaqah can describe a clinging entity and should not be made to claim that the embryo is literally a blood clot. Bone and muscle development overlap, so 'clothing the bones with flesh' should be read as an accessible description of ordered formation, not as a claim that a complete bare skeleton exists before any muscle develops. Properly read, the passage is compatible with embryology and directs attention to the Creator."
     },
     {
       "question": "Can both Islamic and Christian interpretations of embryology in scripture be reconciled with modern science?",
-      "answer": "Reconciliation depends on how one interprets the text. If understood theologically—as affirming divine creation and care rather than providing technical embryology—both traditions' scriptural passages cohere with modern science without contradiction. Both acknowledge human development as a divine process worthy of awe. If understood literally as precise scientific descriptions, tension arises: the Quranic sequence is selective and vague compared to modern detail, and the Biblical approach is primarily metaphorical. Many contemporary believers in both faiths adopt a harmonizing stance: scripture conveys theological truth, and modern science provides detailed mechanisms."
+      "answer": "The Quran's statements can be read naturally alongside modern embryology when their purpose and level of detail are respected. They describe a minute reproductive beginning, attachment in the womb, shaped formation, and eventual emergence as a child, while science supplies the microscopic mechanisms and overlapping timelines. The Quran's purpose is theological as well as descriptive: the One who forms human life through ordered stages can raise it again. Compatibility does not require turning every term into a modern technical prediction."
     },
     {
       "question": "What do skeptical scholars mean by 'retroactive fitting' or 'eisegesis' in this context?",
-      "answer": "Critics argue that when a new embryological discovery occurs, Islamic exegetes adjust their interpretation of the Quranic terms rather than acknowledging that the text does not explicitly describe the newly discovered stage. For example, if a stage is identified that doesn't fit neatly into nutfah, alaqah, or mudghah, exegetes may broaden the definition of one of these terms or propose new layers of meaning rather than concluding that the Quranic account is incomplete. This pattern—making the text fit the science rather than deriving the science from the text—is cited as evidence of retroactive interpretation designed to maintain a narrative of Quranic scientific precision."
+      "answer": "The criticism is that an interpreter may start with a modern discovery and then force it into a flexible translation. That is a legitimate warning against exaggerated miracle claims. The remedy is to begin with Arabic usage, the verse's context, and early commentary, then ask whether a modern comparison is compatible with that established meaning. This careful method protects the Quran from fragile claims while preserving its clear argument from human development to God's creative power and the resurrection."
     }
   ],
   "relatedSlugs": [
