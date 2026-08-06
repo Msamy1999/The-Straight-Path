@@ -4,19 +4,30 @@
   "subtitle": "The Gospel accounts, the Christian confession, and the Quranic account",
   "category": "difficult-questions",
   "audienceLevel": "intermediate",
-  "summary": "The Passion Narrative is the New Testament account of Jesus’ final meal, arrest, trial, crucifixion, burial, and reported resurrection. Christianity treats these events as central to salvation. Islam honors Jesus as the Messiah but teaches that his enemies neither killed nor crucified him, and that Allah raised him. The difference concerns the meaning of Jesus’ mission as well as the historical account.",
-  "tags": ["Jesus", "Scripture", "History", "Questions"],
+  "summary": "The four Gospels agree on the central Christian claim that Jesus was crucified and that his followers believed he rose, but they arrange and describe parts of the final days differently. Christianity makes the cross the center of salvation. The Quran honors Jesus while denying that his enemies successfully killed him and directs salvation to faith, repentance, mercy, and worship of God alone.",
+  "tags": [
+    "Jesus",
+    "Scripture",
+    "History",
+    "Questions"
+  ],
   "seo": {
     "metaTitle": "The Passion Narrative: Crucifixion and Resurrection | The Straight Path",
-    "metaDescription": "A concise comparison of the Gospel Passion Narrative, the Christian confession of resurrection, and the Quranic account of Jesus.",
-    "keywords": ["Passion Narrative", "Jesus crucifixion", "Jesus resurrection", "Quran 4:157", "Islam and the crucifixion"]
+    "metaDescription": "The four Gospels agree on the central Christian claim that Jesus was crucified and that his followers believed he rose, but they arrange and describe.",
+    "keywords": [
+      "Passion Narrative",
+      "Jesus crucifixion",
+      "Jesus resurrection",
+      "Quran 4:157",
+      "Islam and the crucifixion"
+    ]
   },
   "sections": [
     {
       "sectionId": "overview",
-      "title": "Understanding the Passion Narrative",
+      "title": "The Question in Brief",
       "kind": "summary",
-      "body": "The Passion Narrative is the name commonly given to the final part of the Gospel story: Jesus’ last meal with his disciples, his arrest, hearings before Jewish and Roman authorities, crucifixion, burial, and the discovery of the empty tomb. The four Gospels tell the same broad story with different selections of detail and emphasis.\n\nFor Christians, the narrative is not simply a record of a martyr’s death. It is the center of the Christian confession that Jesus died for sins and was raised. For Muslims, Jesus is the honored Messiah and a great messenger, but the Quran rejects the claim that his enemies killed or crucified him and states that Allah raised him."
+      "body": "The four Gospels agree on the central Christian claim that Jesus was crucified and that his followers believed he rose, but they arrange and describe parts of the final days differently. Christianity makes the cross the center of salvation. The Quran honors Jesus while denying that his enemies successfully killed him and directs salvation to faith, repentance, mercy, and worship of God alone."
     },
     {
       "sectionId": "gospel-account",
@@ -50,9 +61,9 @@
     },
     {
       "sectionId": "key-takeaways",
-      "title": "Key Takeaways: The Passion Narrative",
+      "title": "Why This Matters: The Passion Narrative: The Story of Jesus’ Crucifixion and Resurrection",
       "kind": "summary",
-      "body": "The Gospel accounts share a Passion Narrative in which Jesus is crucified, buried, and proclaimed risen. Their individual details are not identical, and the relationship between the accounts remains a subject of Christian interpretation and historical study.\n\nThe Quran gives a different account: Jesus’ enemies did not kill or crucify him, and Allah raised him. This places the Islamic and Christian understandings of Jesus at a decisive point of disagreement while preserving Islam’s deep honor for Jesus and Mary."
+      "body": "The four Gospels agree on the central Christian claim that Jesus was crucified and that his followers believed he rose, but they arrange and describe parts of the final days differently. Christianity makes the cross the center of salvation. The Quran honors Jesus while denying that his enemies successfully killed him and directs salvation to faith, repentance, mercy, and worship of God alone."
     },
     {
       "sectionId": "faq",

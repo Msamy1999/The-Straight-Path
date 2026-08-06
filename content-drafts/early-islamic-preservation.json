@@ -4,7 +4,7 @@
   "subtitle": "The transmission, authentication, and compilation of hadith from the Prophet's lifetime to the major collections",
   "category": "religious-history",
   "audienceLevel": "deep-study",
-  "summary": "The transmission of hadith—reports of Prophet Muhammad's words and deeds—developed through memorization, early written notes and collections, and later large canonical compilations that matured in the 9th century. Islamic scholars created sophisticated authentication methods using chains of narrators (isnad) and rigorous criticism (jarh wa ta'dil) to evaluate each report's reliability. This approach contrasts with Biblical manuscript transmission, which relied on written copies from early periods, revealing how different religious cultures prioritized different preservation methods.",
+  "summary": "The Quran and hadith were preserved by related but distinct methods. The Quran was a public liturgical text standardized early; individual hadith reports were later tested through chains of transmitters, comparison of routes, and criticism of narrators and wording. Hadith criticism is rigorous but does not make every report equal, which is why Muslim scholars classify narrations rather than treating the entire hadith corpus as uniformly certain.",
   "tags": [
     "Preservation",
     "Scripture",
@@ -13,7 +13,7 @@
   ],
   "seo": {
     "metaTitle": "Early Islamic Hadith Preservation: Transmission, Authentication, Codification",
-    "metaDescription": "The transmission of hadith—reports of Prophet Muhammad's words and deeds—developed through memorization, early written notes and collections, and later…",
+    "metaDescription": "The Quran and hadith were preserved by related but distinct methods. The Quran was a public liturgical text standardized early; individual hadith reports.",
     "keywords": [
       "hadith transmission",
       "isnad",
@@ -29,15 +29,9 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "Understanding Early Islamic Preservation: Companions to Codification",
+      "title": "Why This History Matters",
       "kind": "summary",
-      "body": "The transmission of hadith—reports of Prophet Muhammad's words and deeds—developed through memorization, early written notes and collections, and later large canonical compilations that matured in the 9th century. Islamic scholars created sophisticated authentication methods using chains of narrators (isnad) and rigorous criticism (jarh wa ta'dil) to evaluate each report's reliability. This approach contrasts with Biblical manuscript transmission, which relied on written copies from early periods, revealing how different religious cultures prioritized different preservation methods."
-    },
-    {
-      "sectionId": "intro",
-      "title": "Introduction: The Challenge of Preservation",
-      "kind": "summary",
-      "body": "Every religious tradition faces the problem of preserving teachings across generations. Early Muslims used overlapping oral and written practices: memorized recitation and teaching, personal notebooks, letters, legal documents, and gradually expanding collections. Large canonical Sunni hadith compilations reached their mature form in the third Islamic century, but writing did not begin only then.\n\nThe Quranic commands to follow the Prophet gave preservation of his example theological importance. Hadith transmission consequently developed isnad criticism, transmitter biography, comparison of variants, and classification of reports. These methods were unusually elaborate, while their effectiveness and the dating of particular reports remain subjects of debate between traditional hadith scholarship and modern historical criticism."
+      "body": "The Quran and hadith were preserved by related but distinct methods. The Quran was a public liturgical text standardized early; individual hadith reports were later tested through chains of transmitters, comparison of routes, and criticism of narrators and wording. Hadith criticism is rigorous but does not make every report equal, which is why Muslim scholars classify narrations rather than treating the entire hadith corpus as uniformly certain."
     },
     {
       "sectionId": "companions-oral-period",
@@ -89,9 +83,9 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "Key Takeaways: Early Islamic Preservation: Companions to Codification",
+      "title": "Why This Matters: Early Islamic Preservation: Companions to Codification",
       "kind": "summary",
-      "body": "Hadith preservation involved oral teaching, early written notes, first- and second-century collections, and later canonical compilations. The timing and reliability of individual reports remain questions of method, not reasons to erase either the strengths or the limits of the tradition."
+      "body": "The Quran and hadith were preserved by related but distinct methods. The Quran was a public liturgical text standardized early; individual hadith reports were later tested through chains of transmitters, comparison of routes, and criticism of narrators and wording. Hadith criticism is rigorous but does not make every report equal, which is why Muslim scholars classify narrations rather than treating the entire hadith corpus as uniformly certain."
     }
   ],
   "quranVerses": [

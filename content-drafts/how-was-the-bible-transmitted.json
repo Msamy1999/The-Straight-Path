@@ -4,7 +4,7 @@
   "subtitle": "From spoken word to Greek manuscripts to modern translations — the journey of the Christian scriptures, told honestly",
   "category": "preservation",
   "audienceLevel": "beginner",
-  "summary": "The Bible reached today's readers through a long historical journey: oral teaching, composition in Greek, hand copying for many centuries, gradual agreement on the canon, and chains of translation. This article presents that history as mainstream Christian scholarship itself describes it, using Luke's own prologue as a window into how the Gospels were composed. It then offers the Islamic perspective: the Quran affirms the original Gospel of Jesus as guidance and light, while warning that scripture can be altered by human hands. The aim is an honest, respectful account that helps seekers compare the two transmission stories fairly.",
+  "summary": "The Bible preserves genuine ancient testimony, but it reached readers through many authors, manuscripts, languages, and later decisions about the canon. Textual criticism can recover much of its wording with confidence while also identifying passages whose earliest form is uncertain. Islam honors the revelations given to Moses and Jesus, yet presents the Quran as the final criterion by which earlier claims are judged.",
   "tags": [
     "Preservation",
     "Scripture",
@@ -13,7 +13,7 @@
   ],
   "seo": {
     "metaTitle": "How Was the Bible Transmitted? An Honest History",
-    "metaDescription": "The Bible reached today's readers through a long historical journey: oral teaching, composition in Greek, hand copying for many centuries, gradual agreement…",
+    "metaDescription": "The Bible preserves genuine ancient testimony, but it reached readers through many authors, manuscripts, languages, and later decisions about the canon.",
     "keywords": [
       "Bible transmission",
       "New Testament manuscripts",
@@ -30,33 +30,15 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "Understanding How Was the Bible Transmitted?",
+      "title": "The Evidence in Brief",
       "kind": "summary",
-      "body": "The Bible reached today's readers through a long historical journey: oral teaching, composition in Greek, hand copying for many centuries, gradual agreement on the canon, and chains of translation. This article presents that history as mainstream Christian scholarship itself describes it, using Luke's own prologue as a window into how the Gospels were composed. It then offers the Islamic perspective: the Quran affirms the original Gospel of Jesus as guidance and light, while warning that scripture can be altered by human hands. The aim is an honest, respectful account that helps seekers compare the two transmission stories fairly."
-    },
-    {
-      "sectionId": "beginner-summary",
-      "title": "In Brief",
-      "kind": "summary",
-      "body": "The Bible did not arrive as a single finished book. It grew over centuries: Jesus taught orally, authors later wrote accounts in Greek, scribes copied those writings by hand for well over a thousand years, and church leaders gradually agreed on which books belonged.\n\nAlmost everything in this article comes from Christian scholarship itself — the discipline called textual criticism, built largely by devout Christians. Islam, for its part, honors the original Gospel given to Jesus as true revelation from God. Knowing how the Bible reached us helps Christians and Muslims discuss scripture honestly, without caricature on either side."
-    },
-    {
-      "sectionId": "introduction",
-      "title": "Introduction",
-      "kind": "notes",
-      "body": "Every scripture has a history — a real, human journey from the moment of revelation to the printed page in your hands. This article traces that journey for the Bible, especially the New Testament.\n\nA word about method. Nothing here relies on polemics. The account below is the standard picture taught in Christian seminaries. The discipline that studies it, textual criticism, was developed overwhelmingly by Christian scholars who loved the Bible and wanted to recover its earliest wording. When modern Christian Bibles carry footnotes noting that some ancient manuscripts lack a verse, that honesty is the fruit of their work.\n\nIslam enters this conversation with respect. The Quran speaks of the Injil — the Gospel given to Jesus — as genuine revelation, \"guidance and light.\" The Islamic question is not whether God spoke through Jesus; Muslims affirm that He did. The question is what happened to that message afterward."
-    },
-    {
-      "sectionId": "main-question",
-      "title": "The Question We Are Asking",
-      "kind": "notes",
-      "body": "What happened between Jesus teaching in Galilee and the Bible on a bookshelf today?\n\nBreak it into stages. First, an oral stage: Jesus wrote no book, and his teaching circulated by word of mouth. Second, a writing stage: letters and Gospel accounts were composed in Greek in the decades after his ministry. Third, a copying stage: before printing, every copy was made by hand. Fourth, a canon stage: communities gradually agreed on which writings counted as scripture. Fifth, a translation stage: the text passed through Greek and Latin into thousands of languages.\n\nEach stage is described by Christian historians themselves."
+      "body": "The Bible preserves genuine ancient testimony, but it reached readers through many authors, manuscripts, languages, and later decisions about the canon. Textual criticism can recover much of its wording with confidence while also identifying passages whose earliest form is uncertain. Islam honors the revelations given to Moses and Jesus, yet presents the Quran as the final criterion by which earlier claims are judged."
     },
     {
       "sectionId": "historical-context",
-      "title": "From Spoken Word to Printed Page",
+      "title": "From Early Writings to Modern Bibles",
       "kind": "history",
-      "body": "Begin with language. Historians broadly agree that Jesus taught in Aramaic, the everyday tongue of first-century Jewish Galilee, yet the New Testament was written in Greek. Apart from a few preserved Aramaic phrases, the recorded words of Jesus therefore already stand in translation — a point made routinely in Christian introductions to the New Testament.\n\nThe earliest Christian writings are generally held to be the letters of Paul; the four Gospels came later in the first century, according to mainstream dating, drawing on oral tradition and earlier written material. None of the original documents — the autographs — survives for any book of the Bible. What survives are copies of copies.\n\nHand copying introduces variation. The surviving Greek manuscripts of the New Testament number in the thousands, from small early papyrus fragments — the earliest commonly dated to the second century — to complete codices such as Codex Sinaiticus and Codex Vaticanus, generally dated to the fourth century. Comparing them reveals many textual variants. Mainstream textual critics, most of them Christians, describe the great majority as trivial: spelling, word order, slips of the pen. A smaller number are significant, and modern Christian Bibles mark them openly — well-known examples include the longer ending of Mark and the story of the woman caught in adultery in John, both flagged in standard translations as absent from the earliest manuscripts.\n\nThe canon — the official list of biblical books — took shape gradually. Early communities used differing collections, and the earliest surviving list matching exactly today's twenty-seven New Testament books appears in a letter of Athanasius, bishop of Alexandria, in the later fourth century. Even now the Old Testament canon differs among Christians: Catholic and Orthodox Bibles include books, called deuterocanonical, that Protestant Bibles omit.\n\nFinally, translation. The Hebrew scriptures were rendered into Greek — the Septuagint — before Jesus's time, and New Testament authors often quote that version. Jerome's Latin Vulgate later served the Western church for roughly a thousand years. Modern translations work from critical editions: scholarly reconstructions assembled by comparing manuscripts. All of this is the mainstream account, told by Christian scholarship with admirable honesty."
+      "body": "The Hebrew Bible and New Testament are libraries of writings produced and copied over long periods. No original manuscript survives. Scholars compare thousands of later manuscripts, ancient translations, and quotations to estimate the earliest recoverable wording. This work succeeds for most of the text while leaving some passages uncertain.\n\nMost differences are spelling, word order, or other small copying changes. A smaller group is more significant: the longer ending of Mark, the story of the woman accused of adultery, and the Trinitarian wording in 1 John 5:7 are familiar examples identified in modern translations. Canon is a separate question: Catholic, Orthodox, and Protestant churches do not include exactly the same Old Testament books."
     },
     {
       "sectionId": "quranic-perspective",
@@ -74,13 +56,13 @@
       "sectionId": "comparison",
       "title": "Two Transmission Stories, Side by Side",
       "kind": "argument",
-      "body": "Set the two transmission stories side by side — each as its own scholarship tells it — and structural differences emerge.\n\nLanguage: the Quran is preserved and recited in its original Arabic, while the words of Jesus were spoken in Aramaic but preserved in Greek — with few exceptions, not available in his own tongue.\n\nTimescale: Muslim tradition and the early manuscript record describe a complete text standardized within a generation of the Prophet Muhammad's death, while the New Testament canon took shape over centuries.\n\nMechanism: the Quran's transmission ran on two parallel tracks — mass memorization alongside written copies — each checking the other; the Bible's ran on hand copying alone, which is why variants accumulated and textual criticism became necessary.\n\nSelf-description: Luke's prologue describes research and compilation of handed-down reports; the Quran presents itself throughout as the direct speech of God to one messenger.\n\nTwo cautions keep this honest. None of these differences impugns anyone's sincerity: generations of Christian scribes labored devotedly, and Christian scholars' candor about variants is a mark of integrity. And the Quran's own history — standardization under the caliph Uthman, early manuscripts, modes of recitation — deserves the same scrutiny, and receives it elsewhere in this library. The narrow point here is that the two scriptures traveled very different roads to reach us."
+      "body": "Set the two transmission stories side by side — each as its own scholarship tells it — and structural differences emerge.\n\nLanguage: the Quran is preserved and recited in its original Arabic, while the words of Jesus were spoken in Aramaic but preserved in Greek — with few exceptions, not available in his own tongue.\n\nTimescale: Muslim tradition and the early manuscript record describe a complete text standardized within a generation of the Prophet Muhammad's death, while the New Testament canon took shape over centuries.\n\nMechanism: the Quran's transmission ran on two parallel tracks — mass memorization alongside written copies — each checking the other; the Bible's ran on hand copying alone, which is why variants accumulated and textual criticism became necessary.\n\nSelf-description: Luke's prologue describes research and compilation of handed-down reports; the Quran presents itself throughout as the direct speech of God to one messenger."
     },
     {
       "sectionId": "common-misconceptions",
       "title": "Common Misconceptions",
       "kind": "interpretation",
-      "body": "A few misunderstandings cloud this topic on both sides.\n\n\"Muslims believe the Bible is worthless.\" Not so. The Quran calls the original Torah and Gospel guidance and light and calls Christians the People of the Gospel. The Islamic claim concerns transmission, not a denial that God spoke through Jesus.\n\n\"Textual variants mean nobody knows what the Bible says.\" Also not so. Mainstream textual critics hold that the vast majority of variants are minor and the general shape of the text is well established. The serious questions concern specific passages and wording — significant, but not a free-for-all.\n\n\"The books of the Bible were chosen at the Council of Nicaea.\" This story circulates in novels and internet memes, but historians of Christianity describe canon formation as a gradual process reflected in usage, debate, and later lists and councils. Repeating the Nicaea legend weakens any argument built on it.\n\n\"Since 2 Timothy says scripture is God-breathed, the transmission question is settled.\" The verse states a doctrine of inspiration; it does not list the canon's contents, and it could not certify copies and translations made centuries later. Inspiration and transmission are two different questions, and this article is about the second."
+      "body": "A few misunderstandings cloud this topic on both sides.\n\n\"Muslims believe the Bible is worthless.\" Not so. The Quran calls the original Torah and Gospel guidance and light and calls Christians the People of the Gospel. The Islamic claim concerns transmission, not a denial that God spoke through Jesus.\n\n\"Textual variants mean nobody knows what the Bible says.\" Also not so. Mainstream textual critics hold that the vast majority of variants are minor and the general shape of the text is well established. The serious questions concern specific passages and wording — significant, but not a free-for-all.\n\n\"The books of the Bible were chosen at the Council of Nicaea.\" This story circulates in novels and internet memes, but historians of Christianity describe canon formation as a gradual process reflected in usage, debate, and later lists and councils. Repeating the Nicaea legend weakens any argument built on it."
     },
     {
       "sectionId": "islamic-conclusion",
@@ -90,9 +72,9 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "Key Takeaways: How Was the Bible Transmitted?",
+      "title": "Why This Matters: How Was the Bible Transmitted?",
       "kind": "summary",
-      "body": "The Bible reached today's readers through a long historical journey: oral teaching, composition in Greek, hand copying for many centuries, gradual agreement on the canon, and chains of translation. This article presents that history as mainstream Christian scholarship itself describes it, using Luke's own prologue as a window into how the Gospels were composed. It then offers the Islamic perspective: the Quran affirms the original Gospel of Jesus as guidance and light, while warning that scripture can be altered by human hands. The aim is an honest, respectful account that helps seekers compare the two transmission stories fairly."
+      "body": "The Bible deserves careful reading and contains much that Islam affirms, but its manuscript and canon histories are not the same as the Quran's. Recognizing that difference is not an attack on Christians; it explains why Islam calls people to the Quran as a protected final criterion."
     },
     {
       "sectionId": "faq",
@@ -174,6 +156,15 @@
       "verse": "16",
       "reference": "2 Timothy 3:16",
       "text": "Every Scripture is God-breathed and profitable for teaching, for reproof, for correction, and for instruction in righteousness,",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "1 John",
+      "chapter": 5,
+      "verse": "7",
+      "reference": "1 John 5:7",
+      "text": "For there are three who testify:",
       "version": "World English Bible",
       "sourceAttribution": "bible-api.com — World English Bible (public domain)"
     }

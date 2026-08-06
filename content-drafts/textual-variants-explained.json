@@ -4,7 +4,7 @@
   "subtitle": "Why Bible manuscripts differ, what Mark 16 and John 8 have to do with it, and how the Quran's single consonantal text compares",
   "category": "preservation",
   "audienceLevel": "beginner",
-  "summary": "Textual criticism is the respected scholarly practice — largely developed and practiced by Christian scholars themselves — of comparing ancient handwritten Bible manuscripts to recover the earliest wording. Most of the many thousands of differences found this way are trivial spelling or word-order changes, but a few, like the longer ending of Mark and the story of the woman caught in adultery in John, are openly discussed by scholars in footnotes of nearly every modern Bible. This article walks through those two well-known cases in plain language, then compares that history of manuscript divergence with the Quran's single Uthmanic consonantal text, which did not develop comparable rival textual families.",
+  "summary": "A textual variant is a difference among handwritten copies. Most New Testament variants are minor, but a smaller number affect whole phrases or passages, including the longer ending of Mark and the story of the woman accused of adultery. Modern editions identify these openly. The Quran also has a documented history of spelling and canonical reading differences, but its early standardized consonantal text produced a much narrower textual range.",
   "tags": [
     "Preservation",
     "Scripture",
@@ -13,7 +13,7 @@
   ],
   "seo": {
     "metaTitle": "Textual Variants Explained: Bible Manuscripts vs. The Quran's Text",
-    "metaDescription": "Textual criticism is the respected scholarly practice — largely developed and practiced by Christian scholars themselves — of comparing ancient handwritten…",
+    "metaDescription": "A textual variant is a difference among handwritten copies. Most New Testament variants are minor, but a smaller number affect whole phrases or passages,.",
     "keywords": [
       "textual variants",
       "textual criticism",
@@ -28,27 +28,9 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "Understanding Textual Variants Explained",
+      "title": "The Evidence in Brief",
       "kind": "summary",
-      "body": "Textual criticism is the respected scholarly practice — largely developed and practiced by Christian scholars themselves — of comparing ancient handwritten Bible manuscripts to recover the earliest wording. Most of the many thousands of differences found this way are trivial spelling or word-order changes, but a few, like the longer ending of Mark and the story of the woman caught in adultery in John, are openly discussed by scholars in footnotes of nearly every modern Bible. This article walks through those two well-known cases in plain language, then compares that history of manuscript divergence with the Quran's single Uthmanic consonantal text, which did not develop comparable rival textual families."
-    },
-    {
-      "sectionId": "beginner-summary",
-      "title": "In Short",
-      "kind": "summary",
-      "body": "Textual criticism is the scholarly work of comparing ancient handwritten copies of a text — copies made before printing existed — in order to reconstruct, as closely as possible, the earliest recoverable wording. Applied to the New Testament, this field has catalogued more than five thousand Greek manuscripts and tens of thousands of small differences between them, called textual variants.\n\nThe overwhelming majority of these variants are inconsequential: a misspelled word, a different word order, an article added or dropped. A very small number are substantial enough that mainstream Christian scholarship discusses them openly, including the last twelve verses of the Gospel of Mark and the story of the woman caught in adultery in the Gospel of John.\n\nThis article explains what those two well-known cases are, why respected Christian scholars themselves flag them in modern study Bibles rather than hide them, and how this whole picture compares with the way the Quran's Arabic consonantal text was standardized within a generation of Muhammad's death, without producing rival textual families of the same kind."
-    },
-    {
-      "sectionId": "introduction",
-      "title": "What Is a Textual Variant?",
-      "kind": "notes",
-      "body": "Before printing presses existed, every copy of every book had to be written out by hand. Whenever a scribe copied a manuscript, no matter how careful, small differences crept in — a skipped line, a word spelled differently, two similar-sounding words swapped. Multiply that across many centuries and many copies, and you end up with thousands of manuscripts that agree on almost everything but differ from each other in thousands of small places. Scholars call each of these differences a textual variant.\n\nStudying these variants is called textual criticism, and it is one of the oldest and most respected disciplines in biblical scholarship. It is not a modern attack on faith. Devout Christian scholars have practiced it for centuries — from the Renaissance humanist Erasmus preparing the first printed Greek New Testament, to twentieth-century scholars like Bruce Metzger, to the seminary professors who teach it today. Their goal has always been the same: to get as close as possible to what the biblical authors actually wrote, by comparing the many surviving copies against one another.\n\nThis article looks at two of the best-known textual variants — the ending of Mark and the story of the woman caught in adultery in John — and explains why mainstream scholarship discusses them so openly. It then compares that picture with the history of the Quran's text, fixed into a single standardized consonantal form within about twenty years of Muhammad's death."
-    },
-    {
-      "sectionId": "main-question",
-      "title": "The Question This Article Answers",
-      "kind": "notes",
-      "body": "Both the Bible and the Quran were transmitted for a period by hand-copying before the age of printing. So a fair question is this: why does the New Testament have thousands of surviving manuscripts sorted by scholars into recognizably different textual families, with tens of thousands of small variants between them and a handful of well-known larger ones, while the Quran's Arabic consonantal text does not show a comparable pattern of rival textual families?\n\nAnswering that question honestly means taking each side's history on its own terms first, without exaggerating either one. It does not mean claiming the New Testament is unreliable, and it does not mean glossing over the fact that Quranic recitation itself contains a small number of sanctioned reading differences, called qiraat. It means looking carefully at what kind of variation each tradition actually produced, and why."
+      "body": "A textual variant is a difference among handwritten copies. Most New Testament variants are minor, but a smaller number affect whole phrases or passages, including the longer ending of Mark and the story of the woman accused of adultery. Modern editions identify these openly. The Quran also has a documented history of spelling and canonical reading differences, but its early standardized consonantal text produced a much narrower textual range."
     },
     {
       "sectionId": "historical-context",
@@ -70,9 +52,9 @@
     },
     {
       "sectionId": "comparison",
-      "title": "Comparing the Two Transmission Patterns",
+      "title": "Two Different Patterns",
       "kind": "argument",
-      "body": "Laid side by side, the two histories differ in kind, not just in degree. The New Testament's text passed through roughly fourteen centuries of hand-copying across a wide, religiously decentralized geography before anyone printed a fixed edition. No single authority ever issued one master copy and asked everyone to destroy competing versions. The natural result, as thousands of surviving manuscripts show, was the gradual emergence of recognizable regional textual families and tens of thousands of accumulated variants, a small number of which — like Mark's ending and the story in John 7:53-8:11 — involve entire paragraphs rather than single words.\n\nThe Quran's text, by contrast, was fixed by a one-time, top-down recension within about two decades of Muhammad's death, while companions who had memorized the entire revelation were still alive to check the written copies against living memory. Competing personal codices were collected and set aside rather than left to multiply independently for centuries. This does not mean the Quran's transmission has been free of any variation whatsoever — the sanctioned qiraat readings show it has not — but those differences are certified oral variants within a single agreed consonantal skeleton, not independently evolving manuscript lineages of the kind that produced Mark's alternate ending or John's floating story."
+      "body": "New Testament criticism compares a large manuscript tradition whose copies differ in thousands of places, overwhelmingly minor but sometimes substantial. Editors decide among readings by age, distribution, genealogy, and internal evidence.\n\nQuranic transmission includes early spelling variation, a small number of non-Uthmanic readings in historical sources, and canonical qira'at. Its dominant manuscripts, however, share an early standardized consonantal text. The useful comparison is therefore not 'variants versus no variants,' but the scale, control, and date of stabilization in each tradition."
     },
     {
       "sectionId": "common-misconceptions",
@@ -88,9 +70,9 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "Key Takeaways: Textual Variants Explained",
+      "title": "Why This Matters: Textual Variants Explained",
       "kind": "summary",
-      "body": "Textual criticism is the respected scholarly practice — largely developed and practiced by Christian scholars themselves — of comparing ancient handwritten Bible manuscripts to recover the earliest wording. Most of the many thousands of differences found this way are trivial spelling or word-order changes, but a few, like the longer ending of Mark and the story of the woman caught in adultery in John, are openly discussed by scholars in footnotes of nearly every modern Bible. This article walks through those two well-known cases in plain language, then compares that history of manuscript divergence with the Quran's single Uthmanic consonantal text, which did not develop comparable rival textual families."
+      "body": "A textual variant is a difference among handwritten copies. Most New Testament variants are minor, but a smaller number affect whole phrases or passages, including the longer ending of Mark and the story of the woman accused of adultery. Modern editions identify these openly. The Quran also has a documented history of spelling and canonical reading differences, but its early standardized consonantal text produced a much narrower textual range."
     },
     {
       "sectionId": "faq",

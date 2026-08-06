@@ -4,7 +4,7 @@
   "subtitle": "How the Quran was revealed, preserved, memorized, and compiled over 23 years",
   "category": "religious-history",
   "audienceLevel": "intermediate",
-  "summary": "The Quran was revealed orally over 23 years (conventionally c. 610–632 CE) in two main periods: Meccan (610–622) and Medinan (622–632). During this time, believers memorized it, wrote it on various materials, and preserved it through systematic oral transmission. After the Prophet Muhammad's death, Caliph Uthman commissioned a standardized written compilation around 650 CE, which became the basis of the mainstream written Quranic tradition, alongside authorized recitational variation.",
+  "summary": "The Quran was revealed publicly to Muhammad over about twenty-three years, memorized by companions, and written by scribes. Islamic reports then describe collection under Abu Bakr and standard copies under Uthman. Modern manuscript research confirms a very early Uthmanic text type, while questions about early spelling and readings remain legitimate areas of study rather than evidence of rival Qurans.",
   "tags": [
     "Scripture",
     "History",
@@ -13,7 +13,7 @@
   ],
   "seo": {
     "metaTitle": "Quranic Revelation History: From Oral to Written Text",
-    "metaDescription": "The Quran was revealed orally over 23 years (conventionally c. 610–632 CE) in two main periods: Meccan (610–622) and Medinan (622–632). During this time,…",
+    "metaDescription": "The Quran was revealed publicly to Muhammad over about twenty-three years, memorized by companions, and written by scribes.",
     "keywords": [
       "Quranic revelation",
       "Quran compilation",
@@ -28,9 +28,9 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "Understanding Quranic Revelation History",
+      "title": "Why This History Matters",
       "kind": "summary",
-      "body": "The Quran was revealed orally over 23 years (conventionally c. 610–632 CE) in two main periods: Meccan (610–622) and Medinan (622–632). During this time, believers memorized it, wrote it on various materials, and preserved it through systematic oral transmission. After the Prophet Muhammad's death, Caliph Uthman commissioned a standardized written compilation around 650 CE, which became the basis of the mainstream written Quranic tradition, alongside authorized recitational variation."
+      "body": "The Quran was revealed publicly to Muhammad over about twenty-three years, memorized by companions, and written by scribes. Islamic reports then describe collection under Abu Bakr and standard copies under Uthman. Modern manuscript research confirms a very early Uthmanic text type, while questions about early spelling and readings remain legitimate areas of study rather than evidence of rival Qurans."
     },
     {
       "sectionId": "overview",
@@ -87,16 +87,10 @@
       "body": "The Quranic revelation and preservation process differs notably from the textual development of other major scriptures, though assessment of these differences requires careful attention to the evidence for each tradition. The Christian New Testament emerged from written documents composed by various authors over several decades following Jesus's ministry. However, the NT's textual base is exceptionally well-attested by ancient standards: thousands of Greek manuscripts exist, some dating within a century of composition, far exceeding the manuscript evidence for most ancient texts. Mainstream textual critics (including skeptical scholars like Bart Ehrman) acknowledge the NT's strong attestation; the overwhelming majority of manuscript variants involve minor spelling or word-order differences that touch no doctrinal content. The Hebrew Bible developed over centuries through multiple authors and editorial stages. The Dead Sea Scrolls discovery (from Qumran and other sites) provides direct evidence of Hebrew Bible manuscripts dating back over a millennium before the Masoretic standardization. Scholars—including critical and conservative scholars alike—typically interpret the DSS as confirming the remarkable stability of the Hebrew Bible tradition across that millennium, with the DSS texts aligning closely with the later Masoretic standard despite the centuries separating them, rather than as evidence of uncontrolled textual variation. By contrast, Quranic revelation occurred over a defined 23-year period with a single known source (the Prophet Muhammad), and systematic efforts to standardize the text began within two decades of its completion. The Quran's emphasis on memorization created a parallel preservation system with no direct equivalent in biblical traditions, though Jewish oral law (Mishnah and Talmud) developed sophisticated memorization and transmission methods. Islamic tradition views this difference as reflecting God's distinct promise regarding the Quran's preservation. From an academic perspective, rapid standardization, systematic memorization culture, and institutional oversight contributed to textual consistency in the Quranic tradition, while the NT benefited from an exceptionally abundant manuscript base and the Hebrew Bible from documented long-term textual stability demonstrated by the DSS—each tradition exhibiting preservation mechanisms suited to its historical context."
     },
     {
-      "sectionId": "faq-intro",
-      "title": "Frequently Asked Questions",
-      "kind": "notes",
-      "body": "This section addresses common questions about Quranic revelation, preservation, and the history of its compilation into written form."
-    },
-    {
       "sectionId": "seeker-conclusion",
-      "title": "Key Takeaways: Quranic Revelation History",
+      "title": "Why This Matters: Quranic Revelation History",
       "kind": "summary",
-      "body": "The traditional chronology is conventionally described as beginning around 610 CE and ending in 632 CE, with exact dating and the relationship between recitation, writing, rasm, and qira'at explained rather than compressed into one timeline.\n\nThe Quran was revealed orally over 23 years (conventionally c. 610–632 CE) in two main periods: Meccan (610–622) and Medinan (622–632). During this time, believers memorized it, wrote it on various materials, and preserved it through systematic oral transmission. After the Prophet Muhammad's death, Caliph Uthman commissioned a standardized written compilation around 650 CE, which became the basis of the mainstream written Quranic tradition, alongside authorized recitational variation."
+      "body": "The Quran was revealed publicly to Muhammad over about twenty-three years, memorized by companions, and written by scribes. Islamic reports then describe collection under Abu Bakr and standard copies under Uthman. Modern manuscript research confirms a very early Uthmanic text type, while questions about early spelling and readings remain legitimate areas of study rather than evidence of rival Qurans."
     }
   ],
   "quranVerses": [

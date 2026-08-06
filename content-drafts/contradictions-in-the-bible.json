@@ -4,7 +4,7 @@
   "subtitle": "Commonly cited narrative tensions, why they matter, and the main responses",
   "category": "difficult-questions",
   "audienceLevel": "intermediate",
-  "summary": "This article examines commonly cited Bible contradictions without confusing them with textual variants or mere differences of emphasis. Each example identifies the competing claims, explains why critics call them contradictory, and notes the principal harmonizing and historical-critical responses.",
+  "summary": "The Bible contains passages that readers have long tried to harmonize and others that many scholars regard as genuine narrative or numerical tensions. Each example should be judged in context: a different emphasis is not a contradiction, but incompatible claims cannot be solved merely by imagining an unmentioned scenario. The Quran's challenge in 4:82 makes coherence part of Islam's positive case for revelation.",
   "tags": [
     "Scripture",
     "History",
@@ -14,15 +14,15 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "Understanding Contradictions in the Bible",
+      "title": "The Question in Brief",
       "kind": "summary",
-      "body": "This article examines commonly cited Bible contradictions without confusing them with textual variants or mere differences of emphasis. Each example identifies the competing claims, explains why critics call them contradictory, and notes the principal harmonizing and historical-critical responses."
+      "body": "The Bible contains passages that readers have long tried to harmonize and others that many scholars regard as genuine narrative or numerical tensions. Each example should be judged in context: a different emphasis is not a contradiction, but incompatible claims cannot be solved merely by imagining an unmentioned scenario. The Quran's challenge in 4:82 makes coherence part of Islam's positive case for revelation."
     },
     {
       "sectionId": "how-to-read-this-page",
-      "title": "What This Page Does—and Does Not—Call a Contradiction",
+      "title": "How to Identify a Contradiction",
       "kind": "summary",
-      "body": "This is one ordered catalog, from Genesis to the New Testament. A contradiction is more than a difference in emphasis: it is a case where two claims appear unable to be true in the same respect. Every entry gives the passages, why critics call them contradictory, and the main response offered by Christian interpreters.\n\nThe labels are careful. Some examples are readily harmonized; some may reflect selective narration, paraphrase, or a copying issue; and some remain substantial tensions. This page does not call manuscript additions or wording variants contradictions. Those ask which wording is earliest, and belong in the separate textual-variants study."
+      "body": "This is one ordered catalog, from Genesis to the New Testament. A contradiction is more than a difference in emphasis: it is a case where two claims appear unable to be true in the same respect. Every entry gives the passages, why critics call them contradictory, and the main response offered by Christian interpreters."
     },
     {
       "sectionId": "creation-accounts",
@@ -67,12 +67,6 @@
       "body": "The strongest examples are usually those where parallel accounts assign different numbers, names, causes, dates, or direct quotations to the same event: the census agent, David's totals, Judas's death, the genealogies, and Passover chronology. Differences in a selective list are weaker unless a passage claims completeness.\n\nA possible harmony is not the same as a demonstrated harmony. The fair test is whether it follows from the passages' normal wording and context, or requires unstated events and special definitions. The opposite mistake is also common: different ancient accounts are not automatically contradictions merely because they choose different details."
     },
     {
-      "sectionId": "old-testament-catalogue",
-      "title": "What Is Kept Separate: Textual Variants",
-      "kind": "history",
-      "body": "The longer ending of Mark, the woman caught in adultery, the Comma Johanneum, and KJV-only verses are important manuscript questions: Mark 16:9-20, John 7:53-8:11, and 1 John 5:7 are familiar examples. They are not counted here as contradictions. The question is whether a later copy contains the earliest wording, not whether two assertions in the same text can both be true. See the textual-variants article for manuscript evidence and translation notes."
-    },
-    {
       "sectionId": "gospel-ministry-catalogue",
       "title": "A Fair Conclusion",
       "kind": "history",
@@ -80,9 +74,9 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "Key Takeaways: Contradictions in the Bible",
+      "title": "Why This Matters: Contradictions in the Bible",
       "kind": "summary",
-      "body": "This draft examines commonly cited Bible contradictions without confusing them with textual variants or mere differences of emphasis. Each example identifies the competing claims, explains why critics call them contradictory, and notes the principal harmonizing and historical-critical responses."
+      "body": "The catalogue shows a range: some examples admit reasonable harmonization; others remain substantial tensions in wording, chronology, or numbers. Islam does not require exaggerating every difference. Its positive claim is that the Quran invites a level of coherent scrutiny that is part of recognizing it as revelation."
     }
   ],
   "quranVerses": [],

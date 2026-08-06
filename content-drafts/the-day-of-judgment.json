@@ -30,15 +30,9 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "Understanding The Day of Judgment",
+      "title": "Understanding the Day of Judgment",
       "kind": "summary",
       "body": "Islam and Christianity both teach bodily resurrection and a final judgment in which every deed is known. The Quran describes a perfectly just scale, a personal record, and direct accountability before God. The New Testament speaks of books of deeds and Christ's judgment seat. The central difference is whether forgiveness and judgment are received directly from God or through a mediating figure."
-    },
-    {
-      "sectionId": "beginner-summary",
-      "title": "In Plain Words",
-      "kind": "summary",
-      "body": "Islam and Christianity agree on something enormous: this life is not the end of the story. Both faiths teach that a day is coming when every person who has ever lived will be raised from death, stand before God, and answer for how they lived.\n\nThe Quran calls this event the Day of Resurrection, or simply \"That Day.\" It pictures a moment when even the smallest deed, as small as a single atom, is weighed on a scale of perfect justice and recorded in a book each person receives in their own hand. The New Testament pictures Jesus returning in glory to gather all nations before him, separating people the way a shepherd separates sheep from goats, while books recording every deed are opened before God's throne.\n\nThis article compares what each scripture actually says: the scattering of deeds and the scale of justice in the Quran, and the sheep and goats, the opened books, and the judgment seat of Christ in the New Testament. It closes by asking why Islam frames that day as both perfectly just and directly merciful, without needing anyone else to stand in a person's place."
     },
     {
       "sectionId": "introduction",
@@ -48,9 +42,9 @@
     },
     {
       "sectionId": "main-question",
-      "title": "The Question This Article Answers",
+      "title": "The Central Question",
       "kind": "notes",
-      "body": "The question at the center of this article is: how does the Quran describe the Day of Judgment, how does the Bible describe it, and what do the similarities and differences reveal about how each faith understands justice, mercy, and mediation between the sinner and God?\n\nBoth scriptures agree on the basic architecture of the event: a bodily resurrection, a gathering of all humanity before God, an examination of deeds symbolized by scales in the Quran and opened books in the Bible, and a permanent separation into two final destinies.\n\nWhere the two traditions differ is in the mechanics of the verdict: what exactly is weighed, who stands between the sinner and God, and how forgiveness reaches an imperfect human being. The Quran presents direct, personal accountability before God alone. The Bible presents Jesus Christ seated on the throne of judgment, with much of historic Christian theology holding that a believer's standing before that throne depends on their relationship to Christ as well as their deeds."
+      "body": "Both scriptures agree on the basic architecture of the event: a bodily resurrection, a gathering of all humanity before God, an examination of deeds symbolized by scales in the Quran and opened books in the Bible, and a permanent separation into two final destinies.\n\nWhere the two traditions differ is in the mechanics of the verdict: what exactly is weighed, who stands between the sinner and God, and how forgiveness reaches an imperfect human being. The Quran presents direct, personal accountability before God alone. The Bible presents Jesus Christ seated on the throne of judgment, with much of historic Christian theology holding that a believer's standing before that throne depends on their relationship to Christ as well as their deeds."
     },
     {
       "sectionId": "historical-context",
@@ -92,7 +86,7 @@
       "sectionId": "seeker-conclusion",
       "title": "Key Takeaways: The Day of Judgment",
       "kind": "summary",
-      "body": "Islam and Christianity both teach that history ends in a bodily resurrection and a final judgment before God, where every soul's deeds are examined and nothing is hidden. The Quran pictures this Day of Resurrection through a scale weighing even an atom's weight of good or evil and a record of deeds placed in each person's hand. The Bible pictures Jesus separating the nations like a shepherd separating sheep from goats, with books of deeds opened before God's throne. This article compares both pictures in detail, showing what the two faiths share and where they differ over who judges and how mercy is granted."
+      "body": "Islam and Christianity both teach that history ends in a bodily resurrection and a final judgment before God, where every soul's deeds are examined and nothing is hidden. The Quran pictures this Day of Resurrection through a scale weighing even an atom's weight of good or evil and a record of deeds placed in each person's hand. The Bible pictures Jesus separating the nations like a shepherd separating sheep from goats, with books of deeds opened before God's throne."
     },
     {
       "sectionId": "faq",
@@ -304,5 +298,6 @@
       "author": "John L. Esposito",
       "note": "A standard introductory overview of Islamic belief and practice, including its core teachings on the afterlife."
     }
-  ]
+  ],
+  "bibleReferences": []
 }

@@ -4,7 +4,7 @@
   "subtitle": "How Uthman’s standardization relates to Quranic preservation.",
   "category": "preservation",
   "audienceLevel": "beginner",
-  "summary": "Around the middle of the seventh century, Caliph Uthman commissioned standard codices from the sheets kept by Hafsa and distributed them to regional centers, ordering other Quranic materials withdrawn. The project anchored public recitation in a shared written archetype, while small regional rasm differences and transmitted qira'at remained part of the textual history.",
+  "summary": "Uthman's standardization answered a practical danger: Muslims from different regions were disputing how the Quran should be recited. According to Sahih al-Bukhari, a committee copied the manuscript held by Hafsa, sent authoritative copies to major centers, and retired competing private materials. This was an early preservation measure built on an existing collection, not the invention of a new Quran.",
   "tags": [
     "Preservation",
     "History",
@@ -12,7 +12,7 @@
   ],
   "seo": {
     "metaTitle": "Uthmanic Standardization: Why Uthman Unified the Quran's Text",
-    "metaDescription": "Around the middle of the seventh century, Caliph Uthman commissioned standard codices from the sheets kept by Hafsa and distributed them to regional…",
+    "metaDescription": "Uthman's standardization answered a practical danger: Muslims from different regions were disputing how the Quran should be recited.",
     "keywords": [
       "Uthmanic standardization",
       "Uthman Quran",
@@ -28,33 +28,15 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "Understanding Uthmanic Standardization",
+      "title": "The Evidence in Brief",
       "kind": "summary",
-      "body": "Around the middle of the seventh century, Caliph Uthman commissioned standard codices from the sheets kept by Hafsa and distributed them to regional centers, ordering other Quranic materials withdrawn. The project anchored public recitation in a shared written archetype, while small regional rasm differences and transmitted qira'at remained part of the textual history."
-    },
-    {
-      "sectionId": "beginner-summary",
-      "title": "In Brief",
-      "kind": "summary",
-      "body": "Around the year 650 CE, the third caliph of the Muslim community, Uthman ibn Affan, ordered that a single official written copy of the Quran be prepared and that copies of it be sent to the major cities of the rapidly growing Muslim empire. Older personal copies that Muslims had been using, which varied slightly in spelling and dialect, were retired from circulation.\n\nThis event is usually called the Uthmanic standardization, or sometimes the Uthmanic recension. Muslims understand it as an act of careful stewardship, not tampering: the wording and content of the Quran did not change. What changed was the elimination of regional spelling and pronunciation habits that were starting to cause disputes, so that Muslims from Damascus to Kufa to Medina would recite from the same master text.\n\nThis short, deliberate, and openly documented episode stands in sharp contrast to how the Bible took its final shape. The Bible's books were written over centuries by different authors, copied by hand across many regions for well over a thousand years, and organized into their current lists (called a canon) only gradually, through debate that stretched across the first several centuries of Christianity. Seeing the two histories side by side helps clarify a common misunderstanding: that Islam and Christianity had similarly disorganized textual histories. The evidence suggests otherwise."
-    },
-    {
-      "sectionId": "introduction",
-      "title": "Introduction",
-      "kind": "notes",
-      "body": "By the early 650s CE, within about two decades of the Prophet Muhammad's death, Islam had spread far beyond Mecca and Medina into Iraq, greater Syria, Egypt, and regions further east. Soldiers, administrators, and settlers from these newly incorporated lands had learned the Quran from different companions of the Prophet, and Arabic itself was spoken in several regional dialects.\n\nThe Quran had already been memorized by a large community of reciters and written down since the Prophet's own lifetime, and a complete written copy had been assembled under the first caliph, Abu Bakr, mainly to protect the text after a battle took the lives of a number of reciters who had memorized it. What had not yet happened, by Uthman's time, was a single agreed master copy circulating everywhere at once, and small differences in how the text was read aloud and written letter by letter were growing along with the empire — differences rooted in dialect, not disagreement about what had been revealed. This is the background against which the Uthmanic standardization took place."
-    },
-    {
-      "sectionId": "main-question",
-      "title": "The Question We Are Answering",
-      "kind": "notes",
-      "body": "The question this article addresses is specific: when Uthman ordered a single master copy produced and had earlier personal copies retired, did he change the Quran, or protect it?\n\nSkeptics sometimes point to the fact that Uthman had other copies destroyed as proof that something was hidden or lost — that there must have been a different or truer Quran that this standardization erased. Islamic scholarship, drawing on an early historical account, describes something else: a caliph responding to a practical, empire-wide problem of recitation and spelling divergence, using a committee of men who had themselves learned the Quran directly or through direct chains back to the Prophet, working from a written master copy that already existed.\n\nThe distinction that matters is between standardizing how a text is written and recited, and altering what it says. This article traces the historical account of what Uthman did, connects it to the Quran's own claims about its preservation, and compares this single early episode to the much longer, more complicated path the Bible took to reach its present form."
+      "body": "Uthman's standardization answered a practical danger: Muslims from different regions were disputing how the Quran should be recited. According to Sahih al-Bukhari, a committee copied the manuscript held by Hafsa, sent authoritative copies to major centers, and retired competing private materials. This was an early preservation measure built on an existing collection, not the invention of a new Quran."
     },
     {
       "sectionId": "historical-context",
-      "title": "The Historical Account of Uthman's Standardization",
+      "title": "What Uthman Standardized",
       "kind": "history",
-      "body": "The principal Sunni report is Sahih al-Bukhari 4987. It says that Hudhayfah, alarmed by recitation disputes during campaigns in Armenia and Azerbaijan, urged Uthman to act. Uthman requested the sheets kept by Hafsa and appointed Zayd ibn Thabit with Abdullah ibn al-Zubayr, Said ibn al-As, and Abd al-Rahman ibn al-Harith to copy them. If the Qurashi members disagreed with Zayd over wording or writing, Uthman told them to write it in the dialect of Quraysh. The report then says copies were sent to the provinces and other Quranic sheets or codices were burned.\n\nThat report does not itself name every destination, say that each copy traveled with a designated reciter, or reduce every earlier companion-codex difference to spelling. Later Muslim historical and rasm literature supplies additional regional details, but those details should be cited separately rather than placed inside Bukhari's account.\n\nManuscript and rasm studies strongly support descent of the standard text from an early written archetype and identify regional branches associated with Uthmanic codices. They also document a small number of consonantal or orthographic differences among those regional exemplars. These variants are minor compared with the text as a whole, but they make 'perfectly identical copies' too strong.\n\nThe standardization constrained public written transmission; it did not abolish all recitational variation. Canonical qira'at later preserved differences in pronunciation and, in a minority of cases, word form within the accepted Uthmanic rasm tradition."
+      "body": "The best-known account is Sahih al-Bukhari 4987. Hudhayfa warned Uthman that Muslims from Syria and Iraq were quarreling over recitation. Uthman requested the sheets held by Hafsa, appointed Zayd ibn Thabit, Abdullah ibn al-Zubayr, Sa'id ibn al-As, and Abd al-Rahman ibn al-Harith to copy them, and sent copies to the provinces.\n\nRetiring other written materials prevented private notes, dialectal spellings, or nonstandard codices from becoming competing public texts. The action was forceful, but its purpose and result were textual unity. Canonical qira'at later preserved authorized vocal readings compatible with the standard consonantal outline."
     },
     {
       "sectionId": "quranic-perspective",
@@ -88,9 +70,9 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "Key Takeaways: Uthmanic Standardization",
+      "title": "Why This Matters: Uthmanic Standardization",
       "kind": "summary",
-      "body": "Around the middle of the seventh century, Caliph Uthman commissioned standard codices from the sheets kept by Hafsa and distributed them to regional centers, ordering other Quranic materials withdrawn. The project anchored public recitation in a shared written archetype, while small regional rasm differences and transmitted qira'at remained part of the textual history."
+      "body": "Uthman's standardization answered a practical danger: Muslims from different regions were disputing how the Quran should be recited. According to Sahih al-Bukhari, a committee copied the manuscript held by Hafsa, sent authoritative copies to major centers, and retired competing private materials. This was an early preservation measure built on an existing collection, not the invention of a new Quran."
     },
     {
       "sectionId": "faq",

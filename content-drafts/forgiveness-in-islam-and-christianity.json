@@ -4,7 +4,7 @@
   "subtitle": "The cross or direct repentance: how each faith says sin is forgiven",
   "category": "salvation-and-purpose-of-life",
   "audienceLevel": "beginner",
-  "summary": "Christianity teaches that sin is forgiven through Jesus’s death on the cross, understood through models such as penal substitution and satisfaction. Islam teaches that God forgives directly whoever sincerely repents — no intermediary, sacrifice, or blood is required. This article presents both positions from their own scriptures, including the Bible’s internal tension between Hebrews 9:22 and passages like Jonah 3:10 and the prodigal son, where God forgives on repentance alone. It closes with the Islamic case that direct repentance to the All-Merciful was the original message of all the prophets.",
+  "summary": "Christianity connects forgiveness to Jesus's death, explained through several atonement models. Islam teaches that God forgives directly whoever sincerely repents: no intermediary, divine sacrifice, or blood payment is required. Biblical passages such as Jonah 3 and the prodigal son also show forgiveness following repentance. Islam presents this direct return to the All-Merciful as the message of every prophet.",
   "tags": [
     "Theology",
     "Scripture",
@@ -34,19 +34,13 @@
       "sectionId": "seeker-guide",
       "title": "Understanding Forgiveness in Islam and Christianity",
       "kind": "summary",
-      "body": "Christianity teaches that sin is forgiven through Jesus’s death on the cross, understood through models such as penal substitution and satisfaction. Islam teaches that God forgives directly whoever sincerely repents — no intermediary, sacrifice, or blood is required. This article presents both positions from their own scriptures, including the Bible’s internal tension between Hebrews 9:22 and passages like Jonah 3:10 and the prodigal son, where God forgives on repentance alone. It closes with the Islamic case that direct repentance to the All-Merciful was the original message of all the prophets."
-    },
-    {
-      "sectionId": "beginner-summary",
-      "title": "In Brief",
-      "kind": "summary",
-      "body": "Every religion must answer a simple, urgent question: when a person does wrong, how can they be made right with God? Mainstream Christianity answers that sin is forgiven through the death of Jesus on the cross, which paid a debt sinners could not pay themselves. Islam answers that God, the All-Merciful, forgives directly whoever turns back to Him in sincere repentance — no intermediary, no sacrifice, and no blood required. This article presents both answers from their own scriptures, in their own words, and then examines a tension inside the Bible itself: some passages say there is no forgiveness without the shedding of blood, while others show God forgiving freely the moment a sinner repents."
+      "body": "Christianity connects forgiveness to Jesus's death, explained through several atonement models. Islam teaches that God forgives directly whoever sincerely repents: no intermediary, divine sacrifice, or blood payment is required. Biblical passages such as Jonah 3 and the prodigal son also show forgiveness following repentance. Islam presents this direct return to the All-Merciful as the message of every prophet."
     },
     {
       "sectionId": "introduction",
       "title": "Two Answers to One Question",
       "kind": "notes",
-      "body": "Sin is a universal human experience. Everyone, whatever their religion, knows the weight of having done wrong: a lie told, a trust betrayed, a duty neglected. Islam and Christianity both take sin seriously, and both proclaim that God forgives. The question that separates them is how.\n\nIn Christian vocabulary the key word is atonement: the act by which sin is dealt with and the sinner is reconciled to God. Mainstream Christianity locates atonement in a single historical event — the crucifixion of Jesus. In Islamic vocabulary the key word is tawbah, usually translated “repentance” but literally meaning “turning back.” The sinner turns back to God, God turns to the sinner in mercy, and the matter is settled between the two of them.\n\nThis article lays out each tradition’s teaching from its own scripture, looks honestly at passages within the Bible that pull in different directions, and explains why Islam holds that the door of forgiveness stands open — directly, always, and for everyone."
+      "body": "Sin is a universal human experience. Everyone, whatever their religion, knows the weight of having done wrong: a lie told, a trust betrayed, a duty neglected. Islam and Christianity both take sin seriously, and both proclaim that God forgives. The question that separates them is how.\n\nIn Christian vocabulary the key word is atonement: the act by which sin is dealt with and the sinner is reconciled to God. Mainstream Christianity locates atonement in a single historical event — the crucifixion of Jesus. In Islamic vocabulary the key word is tawbah, usually translated “repentance” but literally meaning “turning back.” The sinner turns back to God, God turns to the sinner in mercy, and the matter is settled between the two of them."
     },
     {
       "sectionId": "main-question",
@@ -92,9 +86,9 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "Key Takeaways: Forgiveness in Islam and Christianity",
+      "title": "Key Takeaways: Forgiveness Without an Intermediary",
       "kind": "summary",
-      "body": "Christianity teaches that sin is forgiven through Jesus’s death on the cross, understood through models such as penal substitution and satisfaction. Islam teaches that God forgives directly whoever sincerely repents — no intermediary, sacrifice, or blood is required. This article presents both positions from their own scriptures, including the Bible’s internal tension between Hebrews 9:22 and passages like Jonah 3:10 and the prodigal son, where God forgives on repentance alone. It closes with the Islamic case that direct repentance to the All-Merciful was the original message of all the prophets."
+      "body": "Christian theology commonly grounds forgiveness in Jesus's death. Islam grounds it directly in God's mercy toward the sincerely repentant. Biblical narratives also show God forgiving when people turn back, while the Quran makes the open door unmistakable. Islam therefore calls every sinner to return to the All-Merciful without sacrifice or intermediary."
     },
     {
       "sectionId": "faq",
@@ -315,5 +309,6 @@
       "author": "Abu Hamid al-Ghazali",
       "note": "The celebrated Muslim theologian’s treatment of tawbah: its conditions, its psychology, and the vastness of divine mercy."
     }
-  ]
+  ],
+  "bibleReferences": []
 }

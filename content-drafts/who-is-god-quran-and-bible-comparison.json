@@ -34,12 +34,6 @@
       "body": "The Quran and the Bible agree that God is the eternal Creator: knowing, merciful, just, and unlike creation. Their decisive disagreement concerns God's nature. Islam teaches absolute oneness and rejects the Trinity and incarnation; mainstream Christianity affirms both. The question is therefore not whether God is worthy of worship, but how God has described Himself and whom He has authorized to receive worship."
     },
     {
-      "sectionId": "beginner-summary",
-      "title": "In Brief",
-      "kind": "summary",
-      "body": "The Quran and the Bible both describe one eternal Creator who is all-knowing, merciful, just, and unlike creation. Their main disagreement is whether the one God exists as a Trinity and became human in Jesus, as mainstream Christianity teaches, or is absolutely one and never becomes part of creation, as Islam teaches.\n\nThis article compares those claims through the scriptures themselves. Quranic verses are shown in Arabic with the Saheeh International translation, and biblical passages use the World English Bible."
-    },
-    {
       "sectionId": "main-question",
       "title": "The Question We Are Really Asking",
       "kind": "notes",
@@ -91,7 +85,7 @@
       "sectionId": "faq",
       "title": "Frequently Asked Questions",
       "kind": "notes",
-      "body": "Q: Do Muslims and Christians worship the same God?\nA: Both communities intend to worship the God of Abraham — one eternal Creator. The word 'Allah' is simply Arabic for God and is used by Arabic-speaking Christians too. The disagreement is over God's nature (Trinity and incarnation versus absolute oneness), not over which Creator is meant.\n\nQ: Does the Bible ever call God 'one' the way the Quran does?\nA: Yes. Deuteronomy 6:4 — 'Hear, Israel: Yahweh is our God. Yahweh is one.' — is the central creed of the Hebrew Bible, and Jesus and his earliest followers affirmed it. The Quran's Surah Al-Ikhlaas makes the same declaration with added precision: no begetting, no being begotten, no equivalent.\n\nQ: Is the God of the Quran merciful, or mainly a judge?\nA: The Quran's most frequent divine names are 'the Entirely Merciful, the Especially Merciful' (Quran 59:22), recited by Muslims before nearly every daily act. Justice is equally real — deeds are recompensed — but Islamic teaching, like Exodus 34:6-7, places mercy first.\n\nQ: Why does Islam reject calling God 'Father'?\nA: The Quran avoids parent-child language for God because, in its view, such language historically slid into literal sonship and division within God. It states that God 'neither begets nor is born' (Quran 112:3). God's tenderness is expressed instead through names like the Entirely Merciful, the Subtle, the Acquainted.\n\nQ: Can anyone see God, according to these scriptures?\nA: The Quran says 'Vision perceives Him not, but He perceives [all] vision' (Quran 6:103) — God cannot be seen in this life, though Muslims believe the people of Paradise will see Him in the hereafter. The Bible teaches that 'God is spirit' (John 4:24), while mainstream Christianity holds that God made Himself visible in Jesus — one of the key points where the two faiths differ."
+      "body": "Q: Do Muslims and Christians worship the same God?\nA: Both communities intend to worship the God of Abraham — one eternal Creator. The word 'Allah' is simply Arabic for God and is used by Arabic-speaking Christians too. The disagreement is over God's nature (Trinity and incarnation versus absolute oneness), not over which Creator is meant.\n\nQ: Does the Bible ever call God 'one' the way the Quran does?\nA: Yes. Deuteronomy 6:4 — 'Hear, Israel: Yahweh is our God. Yahweh is one.' — is the central creed of the Hebrew Bible. The Quran's Surah Al-Ikhlaas makes the same declaration with added precision: no begetting, no being begotten, no equivalent.\n\nQ: Is the God of the Quran merciful, or mainly a judge?\nA: The Quran's most frequent divine names are 'the Entirely Merciful, the Especially Merciful' (Quran 59:22), recited before nearly every daily act. Justice is equally real, but Islamic teaching, like Exodus 34:6-7, places mercy first.\n\nQ: Why does Islam reject calling God 'Father'?\nA: The Quran avoids parent-child language for God because, in its view, such language historically slid into literal sonship and division within God. It states that God 'neither begets nor is born' (Quran 112:3). God's tenderness is expressed through names like the Entirely Merciful and the Subtle, the Acquainted.\n\nQ: Can anyone see God, according to these scriptures?\nA: The Quran says 'Vision perceives Him not, but He perceives [all] vision' (Quran 6:103) — God cannot be seen in this life. The Bible teaches that 'God is spirit' (John 4:24), while mainstream Christianity holds that God made Himself visible in Jesus — a key point of difference between the two faiths.\n\nQ: Is 'Allah' a name only Muslims use?\nA: No. 'Allah' is the standard Arabic word for God, related to the Hebrew Elohim. Arabic-speaking Jews and Christians used it before Islam and still use it today in their Bibles, prayers, and churches."
     },
     {
       "sectionId": "further-reading",
@@ -354,5 +348,6 @@
       "author": "Gai Eaton",
       "note": "A reflective introduction to the Islamic vision of God and humanity, written for Western readers."
     }
-  ]
+  ],
+  "bibleReferences": []
 }

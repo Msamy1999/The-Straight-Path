@@ -42,46 +42,6 @@ type ArticleLayoutProps = {
   children?: ReactNode;
 };
 
-const islamicPerspectiveByCategory: Partial<Record<SiteCategory["slug"], string>> = {
-  "tawhid-and-the-trinity":
-    "Islam presents tawhid as a positive invitation: the Creator is one, near, merciful, and alone worthy of worship. No theological explanation should compromise that clarity or blur the distinction between God and His servants.",
-  "jesus-in-islam-and-christianity":
-    "Islam honors Jesus without asking people to worship him. Its invitation is to follow the Messiah's call to serve and worship God alone, while testing later theological conclusions against his words and the Quran.",
-  "salvation-and-purpose-of-life":
-    "Islam offers a direct relationship with God through faith, repentance, righteous action, and hope in His mercy, without making any human being a partner in divinity or worship.",
-  preservation:
-    "From an Islamic perspective, questions about authorship and transmission matter because God's guidance should remain identifiable and accessible. Muslims see the Quran's preserved recitation and text as a reason to examine its claim with special seriousness.",
-  "religious-history":
-    "For Muslims, historical development does not replace revelation; it makes the Quran's claim to restore the original monotheistic message more significant. The Islamic conclusion should follow the evidence without confusing later history with the teaching of every prophet.",
-  "war-and-violence":
-    "Islam's moral case should be read from the Quran, the Prophet's practice, and carefully qualified legal principles—not from violence committed in its name. Its core aim is justice, protection of life, and accountability before God.",
-  women:
-    "Islam's positive case is that spiritual worth belongs equally to men and women before God, while rights and duties are worked out within a family and civil order meant to protect dignity and prevent harm. Specific legal questions must be read in context, not as a measure of a woman's human value.",
-  "historical-evidence":
-    "Historical evidence can clarify context, but Islam asks a further question: whether the Quran's account offers the most faithful and coherent guidance about God, His messengers, and human accountability.",
-  prophecies:
-    "For Muslims, prophecy is one part of a cumulative case for revelation, not a collection of forced parallels. The Quran's clarity, its message of tawhid, and the character of its prophetic call remain central to the Islamic invitation.",
-  "scientific-signs":
-    "Islam invites reflection on creation as signs of God while forbidding believers from forcing the Quran into claims it does not clearly make. A careful reading can strengthen faith without treating changing scientific theories as the foundation of revelation.",
-  "difficult-questions":
-    "Islam invites scrutiny rather than fear of it: the Quran itself directs readers to reflect on whether it contains contradiction. Examining difficult questions is not controversy for its own sake, but a clearer judgment about revelation and worship of God alone.",
-};
-
-export function getArticleIslamicPerspective(
-  article: Article,
-  category: SiteCategory,
-): string | undefined {
-  const hasIslamicPerspective = article.sections.some((section) =>
-    /islamic.*(conclusion|perspective|case)|the islamic (conclusion|perspective|case)/i.test(
-      `${section.id} ${section.title}`,
-    ),
-  );
-
-  return hasIslamicPerspective
-    ? undefined
-    : islamicPerspectiveByCategory[category.slug];
-}
-
 export function ArticleLayout({
   article,
   category,
@@ -99,18 +59,8 @@ export function ArticleLayout({
       section.id !== "beginner-summary" &&
       section.title.trim().toLowerCase() !== "beginner summary",
   );
-  const islamicPerspective = getArticleIslamicPerspective(article, category);
-  const defaultTableOfContents = visibleSections.map((section) => ({
-    id: section.id,
-    title: section.title,
-  }));
-  if (islamicPerspective) {
-    defaultTableOfContents.push({
-      id: "islamic-perspective",
-      title: "The Islamic Perspective",
-    });
-  }
-  const tableOfContents = tocItems ?? defaultTableOfContents;
+  const tableOfContents =
+    tocItems ?? visibleSections.map((section) => ({ id: section.id, title: section.title }));
   const articleText = plainText ?? buildArticlePlainText(article);
 
   return (
@@ -165,17 +115,6 @@ export function ArticleLayout({
                       collapsible={collapsibleSections}
                     />
                   ))}
-                {islamicPerspective ? (
-                  <section id="islamic-perspective" className="scroll-mt-20">
-                    <p className="text-xs font-semibold uppercase text-accent sm:text-sm">
-                      Perspective
-                    </p>
-                    <h2 className="mt-2 select-text text-lg leading-snug sm:mt-3 sm:text-xl">
-                      The Islamic Perspective
-                    </h2>
-                    <ArticleSectionBody body={islamicPerspective} />
-                  </section>
-                ) : null}
               </div>
 
               {collapsibleSections ? (

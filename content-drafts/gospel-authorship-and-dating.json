@@ -4,7 +4,7 @@
   "subtitle": "What mainstream biblical scholarship says about who wrote the Gospels and when — compared with the Quran's single-generation compilation",
   "category": "preservation",
   "audienceLevel": "beginner",
-  "summary": "The four New Testament Gospels are traditionally named for Matthew, Mark, Luke, and John, but mainstream biblical scholarship notes that none of them actually names its author within the text itself. Scholars generally date Mark to roughly 65-75 CE, Matthew and Luke to about 80-90 CE, and John to around 90-100 CE — all written decades after Jesus' life, likely not by direct eyewitnesses. This article presents that scholarly consensus in its own words, then compares it with the Quran's single-generation compilation and the Islamic science of hadith transmission, which relies on named, checkable chains of narrators.",
+  "summary": "The four Gospels are the main narrative sources for Jesus, but the texts themselves do not name their authors in their opening lines. Their traditional attributions appear in early Christian transmission, while many modern scholars date them roughly between 70 and 100 CE and debate how directly they preserve eyewitness testimony. The Quran differs by presenting one public proclamation delivered and memorized within Muhammad's lifetime.",
   "tags": [
     "Preservation",
     "History",
@@ -14,7 +14,7 @@
   ],
   "seo": {
     "metaTitle": "Gospel Authorship and Dating: What Scholars Really Say",
-    "metaDescription": "The four New Testament Gospels are traditionally named for Matthew, Mark, Luke, and John, but mainstream biblical scholarship notes that none of them…",
+    "metaDescription": "The four Gospels are the main narrative sources for Jesus, but the texts themselves do not name their authors in their opening lines.",
     "keywords": [
       "Gospel authorship",
       "Synoptic Problem",
@@ -31,27 +31,9 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "Understanding Gospel Authorship and Dating",
+      "title": "The Evidence in Brief",
       "kind": "summary",
-      "body": "The four New Testament Gospels are traditionally named for Matthew, Mark, Luke, and John, but mainstream biblical scholarship notes that none of them actually names its author within the text itself. Scholars generally date Mark to roughly 65-75 CE, Matthew and Luke to about 80-90 CE, and John to around 90-100 CE — all written decades after Jesus' life, likely not by direct eyewitnesses. This article presents that scholarly consensus in its own words, then compares it with the Quran's single-generation compilation and the Islamic science of hadith transmission, which relies on named, checkable chains of narrators."
-    },
-    {
-      "sectionId": "beginner-summary",
-      "title": "In Brief",
-      "kind": "summary",
-      "body": "Matthew, Mark, Luke, and John — the four Gospels of the New Testament — are among the most influential texts in human history. Yet mainstream biblical scholars, including many faithful Christian scholars, have long pointed out something surprising: none of the four Gospels actually names its own author inside the text. The traditional titles were attached later, by the early church, and modern historians generally place the writing of these books decades after Jesus' lifetime, by authors most scholars conclude were probably not eyewitnesses.\n\nThis article explains that scholarly picture in its own terms, then compares it with how Islam approached a similar question: who transmitted the Quran and the sayings of the Prophet Muhammad, and how do we know? The comparison turns on named, checkable chains of transmission versus anonymous texts identified generations later by tradition."
-    },
-    {
-      "sectionId": "introduction",
-      "title": "Introduction",
-      "kind": "notes",
-      "body": "Every historical document raises the same basic questions: who wrote it, when did they write it, and how close were they to the events they describe? These questions matter even more for religious scripture, because they shape how much confidence a reader can place in a text's claim to preserve someone's actual words and deeds.\n\nFor the Quran, this is the account given by Islamic tradition, corroborated by early manuscript evidence: a text delivered by one man, Muhammad, over about twenty-three years (610-632 CE), memorized by his companions as it was revealed, and gathered into a single written form within a generation of his death. For the Gospels, the picture mainstream biblical scholarship describes — again, built largely by Christian scholars themselves — looks different: four texts, none naming its author, written by unknown hands across several decades, drawing on earlier sources, oral tradition, and each other.\n\nThis article lays out what mainstream scholarship says about who wrote the Gospels and when, in scholarship's own terms. It is not a claim invented by critics of Christianity; it is standard material taught in seminaries and divinity schools. It then compares that picture with the Islamic model of transmission, so readers can weigh the two approaches side by side."
-    },
-    {
-      "sectionId": "main-question",
-      "title": "The Question We Are Asking",
-      "kind": "notes",
-      "body": "Scholars call one part of this puzzle the \"Synoptic Problem\": why do Matthew, Mark, and Luke — called the Synoptic Gospels because they can be viewed \"together\" (syn-optic) — share so much material, sometimes word for word, while also disagreeing on order, wording, and details elsewhere? Something has to explain both the overlap and the differences, and the leading explanation is that one Gospel served as a written source for the others.\n\nThe majority position, often called \"Markan priority,\" holds that Mark was written first, and that the authors of Matthew and Luke each had access to Mark's text and built much of their own accounts on it, while adding their own material. This is not a fringe theory; it is the view favored by most experts in New Testament studies, even though no single solution to the Synoptic Problem commands total unanimity.\n\nA second, related question is authorship itself. The Gospels as we have them carry titles — \"The Gospel According to Matthew,\" and so on — but scholars widely note these titles were not part of the original texts. They were attached later, by the church, for organizational and liturgical purposes. This article asks: what does the text itself say about its author, what did the early church believe, and what do modern historians conclude?"
+      "body": "The four Gospels are the main narrative sources for Jesus, but the texts themselves do not name their authors in their opening lines. Their traditional attributions appear in early Christian transmission, while many modern scholars date them roughly between 70 and 100 CE and debate how directly they preserve eyewitness testimony. The Quran differs by presenting one public proclamation delivered and memorized within Muhammad's lifetime."
     },
     {
       "sectionId": "historical-context",
@@ -75,7 +57,7 @@
       "sectionId": "comparison",
       "title": "Two Transmission Models, Side by Side",
       "kind": "argument",
-      "body": "Set alongside this scholarly picture, the Islamic model of transmission developed along a different track, built around named chains of narration rather than anonymous compilation followed by later attribution.\n\nFor the Quran, this is the account given by Islamic tradition: the text was recited by Muhammad, memorized immediately by his companions (a normal practice in an oral culture that prized memorization), partially written down during his lifetime, and formally compiled into a single standardized written text within roughly two decades of his death, under the early caliphs. This traditional account is corroborated by early manuscript evidence — including Hijazi-script parchment folios radiocarbon-dated to a range overlapping the Prophet's own lifetime — as this library's companion articles \"How Was the Quran Preserved?\" And \"Was the Quran Preserved? Weighing the Evidence\" set out in more detail. On this account, the gap between source and finished text is measured in years, not generations. As with Gospel authorship, the timeline is not free of academic dispute: a minority of revisionist scholars, arguing mainly from source-critical readings of the early Arabic historical record rather than the traditional Islamic sources, have proposed that full standardization took longer, or occurred somewhat later, than the traditional account holds — a minority position set against the mainstream reading of the manuscript and historical evidence.\n\nFor reports about what Muhammad said and did outside the Quran — what Islamic scholarship calls hadith — Muslim scholars developed an entire discipline, the science of isnad, or chain of narration. Each report was expected to carry a named chain of transmitters reaching back to the Prophet, and generations of scholars cross-checked those chains: could this transmitter plausibly have met the next one in the chain, and what did other scholars say about their memory and honesty? Reports were then graded by reliability, a formal, named, cross-checked system built to answer \"how do we know this really goes back to its source?\"\n\nThe contrast with the Gospels, as mainstream scholarship describes them, is not a contrast between sincere and insincere believers — it is a difference in the kind of documentation each tradition produced. The Gospels, per the majority view, are anonymous texts, written decades after the events, whose connection to named eyewitnesses rests on later church tradition rather than an internal chain of named transmitters. The isnad system, by contrast, insists on naming and evaluating every link in the chain. Neither system guarantees perfect accuracy by itself, but Muslims point to the isnad model, together with the Quran's single-generation compilation, as offering a documented continuity the Gospels' transmission history does not."
+      "body": "Set alongside this scholarly picture, the Islamic model of transmission developed along a different track, built around named chains of narration rather than anonymous compilation followed by later attribution.\n\nFor reports about what Muhammad said and did outside the Quran — what Islamic scholarship calls hadith — Muslim scholars developed an entire discipline, the science of isnad, or chain of narration. Each report was expected to carry a named chain of transmitters reaching back to the Prophet, and generations of scholars cross-checked those chains: could this transmitter plausibly have met the next one in the chain, and what did other scholars say about their memory and honesty? Reports were then graded by reliability, a formal, named, cross-checked system built to answer \"how do we know this really goes back to its source?\"\n\nThe contrast with the Gospels, as mainstream scholarship describes them, is not a contrast between sincere and insincere believers — it is a difference in the kind of documentation each tradition produced. The Gospels, per the majority view, are anonymous texts, written decades after the events, whose connection to named eyewitnesses rests on later church tradition rather than an internal chain of named transmitters. The isnad system, by contrast, insists on naming and evaluating every link in the chain. Neither system guarantees perfect accuracy by itself, but Muslims point to the isnad model, together with the Quran's single-generation compilation, as offering a documented continuity the Gospels' transmission history does not."
     },
     {
       "sectionId": "common-misconceptions",
@@ -91,9 +73,9 @@
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "Key Takeaways: Gospel Authorship and Dating",
+      "title": "Why This Matters: Gospel Authorship and Dating",
       "kind": "summary",
-      "body": "The four New Testament Gospels are traditionally named for Matthew, Mark, Luke, and John, but mainstream biblical scholarship notes that none of them actually names its author within the text itself. Scholars generally date Mark to roughly 65-75 CE, Matthew and Luke to about 80-90 CE, and John to around 90-100 CE — all written decades after Jesus' life, likely not by direct eyewitnesses. This article presents that scholarly consensus in its own words, then compares it with the Quran's single-generation compilation and the Islamic science of hadith transmission, which relies on named, checkable chains of narrators."
+      "body": "The four Gospels are the main narrative sources for Jesus, but the texts themselves do not name their authors in their opening lines. Their traditional attributions appear in early Christian transmission, while many modern scholars date them roughly between 70 and 100 CE and debate how directly they preserve eyewitness testimony. The Quran differs by presenting one public proclamation delivered and memorized within Muhammad's lifetime."
     },
     {
       "sectionId": "faq",

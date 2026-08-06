@@ -12,10 +12,7 @@ import type {
   ComparisonArticle,
   SiteCategory,
 } from "@/types/content";
-import {
-  ArticleLayout,
-  getArticleIslamicPerspective,
-} from "@/components/content/ArticleLayout";
+import { ArticleLayout } from "@/components/content/ArticleLayout";
 import type { ArticleTreeBreadcrumb } from "@/lib/content";
 
 type ComparisonArticleLayoutProps = {
@@ -36,8 +33,6 @@ export function ComparisonArticleLayout({
   treeBreadcrumbs,
 }: ComparisonArticleLayoutProps) {
   const CategoryIcon = categoryIconMap[category.icon] ?? fallbackCategoryIcon;
-  const islamicPerspective = getArticleIslamicPerspective(article, category);
-
   return (
     <ArticleLayout
       article={article}
@@ -55,9 +50,6 @@ export function ComparisonArticleLayout({
         { id: "key-differences", title: "Key differences" },
         { id: "common-objections", title: "Common objections" },
         { id: "respectful-conclusion", title: "Respectful conclusion" },
-        ...(islamicPerspective
-          ? [{ id: "islamic-perspective", title: "The Islamic perspective" }]
-          : []),
         { id: "sources", title: "Sources" },
         { id: "related-topics", title: "Related topics" },
       ]}
@@ -90,7 +82,7 @@ export function ComparisonArticleLayout({
       <section id="comparison" className="scroll-mt-20">
         <ComparisonBlock
           title="Quranic and Biblical perspectives"
-          intro="Quote verified passages first, then clearly label interpretation and argument."
+          intro="The central passages and the main ways Muslims and Christians understand them."
           left={{
             label: "Quranic perspective",
             title: "The Quranic perspective",
@@ -118,12 +110,12 @@ export function ComparisonArticleLayout({
           title="Interpretation and response"
           left={{
             label: "Christian interpretation",
-            title: "Respectful summary pending",
+            title: "Christian interpretation",
             children: comparison.christianInterpretation,
           }}
           right={{
             label: "Islamic response",
-            title: "Source-backed response pending",
+            title: "Islamic response",
             children: comparison.islamicResponse,
           }}
         />
@@ -149,8 +141,8 @@ export function ComparisonArticleLayout({
         <PageHeader
           titleAs="h2"
           eyebrow="Common objections"
-          title="Questions to answer fairly"
-          subtitle="Quote objections fairly and answer them with citations."
+          title="Common questions"
+          subtitle="Questions readers often raise about this comparison."
         />
         <div className="mt-5 space-y-4">
           {comparison.commonObjections.map((item) => (
@@ -167,19 +159,6 @@ export function ComparisonArticleLayout({
           {comparison.respectfulConclusion}
         </Callout>
       </section>
-
-      {islamicPerspective ? (
-        <section id="islamic-perspective" className="scroll-mt-20">
-          <PageHeader
-            titleAs="h2"
-            eyebrow="Perspective"
-            title="The Islamic Perspective"
-          />
-          <p className="mt-4 select-text text-sm leading-6 text-muted-foreground sm:text-base sm:leading-7">
-            {islamicPerspective}
-          </p>
-        </section>
-      ) : null}
 
       <section id="related-topics" className="scroll-mt-20">
         <PageHeader
