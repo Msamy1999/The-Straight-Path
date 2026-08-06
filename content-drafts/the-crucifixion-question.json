@@ -1,10 +1,10 @@
 {
   "slug": "the-crucifixion-question",
   "title": "The Crucifixion Question",
-  "subtitle": "What happened to Jesus at the end? The Christian account, the historians' verdict, and the Quran's answer",
+  "subtitle": "The historical case, the Quranic denial, and why Muslims trust revelation",
   "category": "jesus-in-islam-and-christianity",
   "audienceLevel": "beginner",
-  "summary": "The crucifixion is the sharpest historical disagreement between Christianity and Islam. The earliest surviving Christian writings make Jesus's death central, and most historians accept a Roman crucifixion. The Quran states that Jesus's enemies neither killed nor crucified him and that God raised him. Islam trusts this as revelation and rejects the further claim that God's forgiveness requires the death of an innocent Messiah.",
+  "summary": "The earliest Christian sources present Jesus as crucified, and most historians accept that a crucifixion occurred. The Quran nevertheless states that Jesus was neither killed nor crucified, but that it was made to appear so, and that God raised him. Islam does not deny the evidence carelessly; it distinguishes what historical methods can infer from surviving reports from what reliable revelation can disclose about an exceptional event.",
   "tags": [
     "Jesus",
     "History",
@@ -29,63 +29,63 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "Understanding the Crucifixion Question",
+      "title": "Why Muslims Reject the Crucifixion of Jesus",
       "kind": "summary",
-      "body": "The crucifixion is the sharpest historical disagreement between Christianity and Islam. The earliest surviving Christian writings make Jesus's death central, and most historians accept a Roman crucifixion. The Quran states that Jesus's enemies neither killed nor crucified him and that God raised him. Islam trusts this as revelation and rejects the further claim that God's forgiveness requires the death of an innocent Messiah."
+      "body": "Most historians accept a crucifixion because Paul's letters and the Gospels are early sources that say it occurred. Muslims acknowledge that evidence while trusting the Quran's explicit correction: Jesus was not killed or crucified, and God raised him. The real issue is therefore whether the Quran is revelation and can correct a conclusion based on human testimony."
     },
     {
       "sectionId": "introduction",
-      "title": "Introduction: Where Two Faiths Part Ways",
+      "title": "A Major Point of Disagreement",
       "kind": "notes",
-      "body": "Islam and Christianity agree about Jesus to a surprising degree. Both affirm his virgin birth, his miracles, his title of Messiah, and his return before the end of history. A Muslim cannot be a Muslim without honoring Jesus.\n\nYet the two faiths tell different stories about how his earthly mission ended. For Christians the crucifixion is the heart of everything: it stands at the center of worship and of the doctrine of salvation. For Muslims, the Quran's declaration that Jesus was not killed and not crucified is equally non-negotiable, because it comes as the direct speech of God.\n\nThe subject deserves gentleness. For Christians the cross carries their deepest experience of grace; for Muslims, God's rescue of His messenger expresses His justice and power. It states each position from its own sources, admits honestly where historical scholarship stands, and then makes the Islamic case openly rather than pretending the disagreement is smaller than it is."
+      "body": "The cross stands at the center of mainstream Christianity. Islam honors Jesus as Messiah and mighty messenger but denies that his enemies killed him. A responsible Muslim case neither invents a detailed substitute story nor pretends that Christian sources say nothing about crucifixion. It states both records clearly and asks which source carries final authority."
     },
     {
       "sectionId": "main-question",
-      "title": "What Exactly Is Being Asked?",
+      "title": "History and Revelation Answer Different Questions",
       "kind": "notes",
-      "body": "The crucifixion question is really three questions folded into one.\n\nFirst, a textual question: what do the scriptures claim? The New Testament: Jesus was crucified, died, was buried, and was raised. The Quran: his enemies neither killed nor crucified him, it was made to appear otherwise, and God raised him to Himself. Neither text is vague about its own claim.\n\nSecond, a historical question: what can historians, using ordinary methods of evidence and probability, conclude about what happened outside Jerusalem in the first century? That question has a mainstream answer, stated plainly below.\n\nThird — and here lie the deepest stakes — a theological question: how are human beings forgiven? Christianity's answer runs through the cross, an atoning sacrifice. Islam's answer runs directly from the sinner to God: repentance met by mercy, no blood required. The crucifixion question is finally a question about the character of salvation."
+      "body": "Historical study weighs surviving documents and usually selects the explanation that best fits ordinary experience. It cannot directly observe first-century events or rule out divine intervention as a matter of method. Revelation makes a different claim: the God who knows the event tells humanity what truly occurred. Trusting that correction depends on the wider case for the Quran, not on pretending the historical evidence is absent."
     },
     {
       "sectionId": "historical-context",
-      "title": "The Historical Setting and the Historians' Verdict",
+      "title": "What Historians Commonly Conclude",
       "kind": "history",
-      "body": "Jesus lived in the first century in Galilee and Judea, then governed as part of the Roman Empire. Crucifixion was a Roman method of public execution — slow, deliberately degrading, used especially against slaves and those accused of rebellion. Its purpose was not only to kill but to warn.\n\nThe Gospels devote long narratives to Jesus' arrest, his condemnation under the Roman governor Pontius Pilate, and his crucifixion. The letters of Paul, generally regarded as the earliest surviving Christian documents, already preach the crucifixion and resurrection as settled proclamation, and references to Jesus' execution appear in later non-Christian sources as well.\n\nHere honesty requires a plain statement. In mainstream historical-critical scholarship — including scholars who are neither Christian nor Muslim — the crucifixion is regarded as among the most widely accepted facts about Jesus' life. Historians reason that early Christians were unlikely to invent a shameful execution for the man they proclaimed Messiah, and that multiple early sources report it.\n\nThe same honesty requires a second statement. That method treats the resurrection not as an establishable fact but as a faith claim, because the historian's tools weigh probabilities of ordinary events and cannot certify miracles. What the method affirms, and what it cannot see, will both matter when we weigh the Quranic account."
+      "body": "Paul's letters refer to Jesus's death, and all four canonical Gospels narrate a crucifixion. Later non-Christian references are brief and do not provide independent eyewitness detail, but they reflect the public Christian claim. For these reasons, most historians regard a Roman crucifixion as highly probable. That consensus deserves accurate representation, even though historical probability is not the same as revelation-based certainty."
     },
     {
       "sectionId": "quranic-perspective",
-      "title": "What the Quran Says",
+      "title": "The Quran's Clear Correction",
       "kind": "scripture",
-      "body": "The Quran addresses the crucifixion directly in Surah An-Nisaa, rebuking those who boasted of having killed Jesus. Quran 4:157 reads:\n\nوَقَوْلِهِمْ إِنَّا قَتَلْنَا ٱلْمَسِيحَ عِيسَى ٱبْنَ مَرْيَمَ رَسُولَ ٱللَّهِ وَمَا قَتَلُوهُ وَمَا صَلَبُوهُ وَلَٰكِن شُبِّهَ لَهُمْ ۚ وَإِنَّ ٱلَّذِينَ ٱخْتَلَفُوا۟ فِيهِ لَفِى شَكٍّۢ مِّنْهُ ۚ مَا لَهُم بِهِۦ مِنْ عِلْمٍ إِلَّا ٱتِّبَاعَ ٱلظَّنِّ ۚ وَمَا قَتَلُوهُ يَقِينًۢا\n\n\"And [for] their saying, \"Indeed, we have killed the Messiah, Jesus, the son of Mary, the messenger of Allah.\" And they did not kill him, nor did they crucify him; but [another] was made to resemble him to them. And indeed, those who differ over it are in doubt about it. They have no knowledge of it except the following of assumption. And they did not kill him, for certain.\" (Quran 4:157, Saheeh International)\n\nNotice what the verse does and does not deny. It does not deny that an event took place or that onlookers believed they had crucified Jesus. It denies that they killed him and that they crucified him, explaining the gap in one phrase: shubbiha lahum — it was made to appear so to them. It even asserts that those involved were confused: those who differ over it, it says, are in doubt about it.\n\nThe next verse states what actually happened. Quran 4:158:\n\nبَل رَّفَعَهُ ٱللَّهُ إِلَيْهِ ۚ وَكَانَ ٱللَّهُ عَزِيزًا حَكِيمًۭا\n\n\"Rather, Allah raised him to Himself. And ever is Allah Exalted in Might and Wise.\" (Quran 4:158, Saheeh International)\n\nHow was it made to appear so? The Quran does not say, and beginners should know that everything beyond this point is interpretation, not scripture. Many classical commentators understood shubbiha lahum as substitution: another person, made to resemble Jesus, was crucified in his place. Others placed the weight on appearance itself: the crowd, the chaos, and God's intervention left observers certain of something that had not happened. The identities proposed for a substitute come from commentary literature of varying reliability, not from the Quran, and no version is required belief.\n\nA related verse, Quran 3:55, records God's promise to Jesus:\n\nإِذْ قَالَ ٱللَّهُ يَٰعِيسَىٰٓ إِنِّى مُتَوَفِّيكَ وَرَافِعُكَ إِلَىَّ وَمُطَهِّرُكَ مِنَ ٱلَّذِينَ كَفَرُوا۟ وَجَاعِلُ ٱلَّذِينَ ٱتَّبَعُوكَ فَوْقَ ٱلَّذِينَ كَفَرُوٓا۟ إِلَىٰ يَوْمِ ٱلْقِيَٰمَةِ ۖ ثُمَّ إِلَىَّ مَرْجِعُكُمْ فَأَحْكُمُ بَيْنَكُمْ فِيمَا كُنتُمْ فِيهِ تَخْتَلِفُونَ\n\n\"[Mention] when Allah said, \"O Jesus, indeed I will take you and raise you to Myself and purify you from those who disbelieve and make those who follow you [in submission to Allah alone] superior to those who disbelieve until the Day of Resurrection. Then to Me is your return, and I will judge between you concerning that in which you used to differ.\" (Quran 3:55, Saheeh International)\n\nThe phrase rendered \"I will take you\" (mutawaffika) has been read in more than one way: the classical majority held that God took Jesus up alive, his death deferred until his return, while a minority read it as a peaceful death before the raising. On either reading, the decisive point stands — Jesus did not die on a cross at his enemies' hands.\n\nFinally, Quran 4:159 points forward:\n\nوَإِن مِّنْ أَهْلِ ٱلْكِتَٰبِ إِلَّا لَيُؤْمِنَنَّ بِهِۦ قَبْلَ مَوْتِهِۦ ۖ وَيَوْمَ ٱلْقِيَٰمَةِ يَكُونُ عَلَيْهِمْ شَهِيدًۭا\n\n\"And there is none from the People of the Scripture but that he will surely believe in Jesus before his death. And on the Day of Resurrection he will be against them a witness.\" (Quran 4:159, Saheeh International)\n\nMost commentators connect this to Jesus' return at the end of history, and reports including Sahih al-Bukhari 2476 and Sahih Muslim 2937a describe Jesus, son of Mary, descending near the end of time — a hope Muslims share, in their own form, with Christians."
+      "body": "The Quran states:\n\nوَمَا قَتَلُوهُ وَمَا صَلَبُوهُ وَلَٰكِن شُبِّهَ لَهُمْ ۚ وَإِنَّ ٱلَّذِينَ ٱخْتَلَفُوا۟ فِيهِ لَفِى شَكٍّۢ مِّنْهُ ۚ مَا لَهُم بِهِۦ مِنْ عِلْمٍ إِلَّا ٱتِّبَاعَ ٱلظَّنِّ ۚ وَمَا قَتَلُوهُ يَقِينًۢا\n\n'They did not kill him, nor did they crucify him; but it was made to appear so to them ... They did not kill him for certain' (Quran 4:157). The next verse says:\n\nبَل رَّفَعَهُ ٱللَّهُ إِلَيْهِ ۚ وَكَانَ ٱللَّهُ عَزِيزًا حَكِيمًۭا\n\n'Rather, Allah raised him to Himself. And Allah is Exalted in Might and Wise' (4:158).\n\nThe Quran does not name another person, describe the precise mechanism, or authorize certainty about details it leaves unstated. Its central affirmations are clear: Jesus's enemies did not succeed, and God raised His messenger."
     },
     {
       "sectionId": "biblical-perspective",
-      "title": "What the New Testament Says",
+      "title": "What the New Testament Affirms",
       "kind": "scripture",
-      "body": "Christianity's strongest scriptural case begins with Paul's testimony. Writing to the church in Corinth, he summarizes the message he says he received:\n\n\"For I delivered to you first of all that which I also received: that Christ died for our sins according to the Scriptures, that he was buried, that he was raised on the third day according to the Scriptures,\" (1 Corinthians 15:3-4, World English Bible)\n\nThis compact formula — died for our sins, buried, raised — is widely regarded by Christian scholars as one of the earliest summaries of Christian preaching. In the same chapter Paul argues that if Christ was not raised, the faith itself is emptied. The crucifixion and resurrection are not one doctrine among many; they are the load-bearing wall of the whole structure.\n\nThe Gospels narrate the event with stark brevity:\n\n\"It was the third hour, and they crucified him.\" (Mark 15:25, World English Bible)\n\nReaders have long noticed that John's Gospel appears to place the final sentencing at a later hour, a detail Christian interpreters and critical scholars discuss in different ways; but all four Gospels treat the crucifixion as the climax of the story.\n\nTwo sayings from these narratives deserve special attention. The first is the cry from the cross:\n\n\"About the ninth hour Jesus cried with a loud voice, saying, “Eli, Eli, lima sabachthani?” That is, “My God, my God, why have you forsaken me?”\" (Matthew 27:46, World English Bible)\n\nChristian interpreters note that these words open Psalm 22 and read the cry as Jesus bearing the weight of human sin while trusting the psalm's arc toward vindication. Muslim readers ask a different question: how could one who is himself God cry out that God has forsaken him? To Muslims the cry fits a beloved prophet in extremity far more naturally than an incarnate deity.\n\nThe second comes from Gethsemane, the night before:\n\n\"He said, “Abba, Father, all things are possible to you. Please remove this cup from me. However, not what I desire, but what you desire.”\" (Mark 14:36, World English Bible)\n\nChristian theology reads this as the human will of Jesus submitting perfectly to the divine plan. Muslims read it as something simpler: a righteous prophet, in anguish, begging his Lord — for whom all things are possible — to be spared. And the Quran's answer in 4:158, Muslims note, is that this prayer was heard: God raised him to Himself."
+      "body": "The Gospels narrate Jesus's arrest, trial, crucifixion, burial, and appearances after death. Paul writes that Christ died and was raised (1 Corinthians 15:3–4). Christians interpret these claims as the saving center of the Gospel. The accounts also contain differences in chronology and detail, but the broad crucifixion claim is common to them and should not be hidden."
     },
     {
       "sectionId": "comparison",
-      "title": "Three Positions, Weighed Honestly",
+      "title": "Where the Evidence Leads",
       "kind": "argument",
-      "body": "Set the three positions side by side. Christianity: Jesus was crucified, died for sins, and rose — the center of the faith. Historical scholarship: the crucifixion is the most securely attested event of Jesus' life, but the resurrection lies beyond what the method can affirm. Islam: Jesus was neither killed nor crucified; it was made to appear so; God raised him alive.\n\nEach position rests on a different authority: apostolic testimony, probabilistic reasoning over sources, and the Quran received as God's direct speech. That is why the debate cannot be settled simply by announcing the historians' verdict.\n\nConsider what historical method can see. Its conclusion follows from weighing sources under a working rule that excludes miracles from explanation. But the Quranic claim is precisely a claim of divine intervention in what observers perceived. A miracle of appearance is, by definition, invisible to a method that assumes appearances were normal — and every chain of testimony runs back through the very eyewitnesses the Quran says were deceived and confused. A Muslim can grant everything the method genuinely shows — an execution event, communities convinced Jesus had died — while denying the one link it cannot secure: that the man on the cross was Jesus.\n\nHonesty requires admitting the argument cuts both ways. The Muslim accepts a miracle on the authority of revelation, which the secular historian will not. But the Christian does the same at the decisive point, since the resurrection — the actual center of the faith — is likewise held on revelation and testimony, not neutral history. And beneath the historical question lies the theological one: if Jesus did not die for sins, forgiveness must come — as Islam says it does — from God's own direct mercy."
+      "body": "If the New Testament is treated as the final authority, the Christian conclusion follows. If the Quran is established as God's final revelation, its correction takes priority over human reports. The Islamic case rests on the Quran's preservation, message of uncompromising monotheism, fulfilled signs, and coherence—not on one isolated attempt to disprove every historical argument for crucifixion."
     },
     {
       "sectionId": "common-misconceptions",
-      "title": "Common Misconceptions",
+      "title": "What the Muslim Position Does and Does Not Claim",
       "kind": "interpretation",
-      "body": "First: the Quran does not deny that Jesus existed or that a dramatic public event took place. It denies that Jesus was the one killed and crucified, and states that observers were made to perceive otherwise. The position is not that nothing happened, but that what happened is not what they thought.\n\nSecond: it is often said that Muslims believe Judas was crucified instead. No name appears in the Quran. Proposed identities for a substitute come from later commentary of uneven reliability, and none is an article of faith. The Quran leaves the mechanism with God.\n\nThird: the denial is not hostility toward Christianity. The Quran affirms Jesus' virgin birth, miracles, messiahship, and return. Muslims understand the denial of the crucifixion as God's vindication of Jesus — a rescue, not a rejection.\n\nFourth, a misconception in the other direction: that Christians believe God simply died on the cross. Mainstream Christian theology is more careful: it holds that the divine nature cannot die, and that Christ died in his human nature. Muslims find the two-natures framework untenable, but the doctrine should be stated as Christians hold it.\n\nFifth: some academic writers compare Quran 4:157 to early sects called docetists, who taught that Christ only seemed to suffer because he was too divine to have a real body. The comparison fails at the crucial point: the Quran insists Jesus was fully human — born of a mother, eating food, praying. Its claim is not that Jesus had no real body, but that God protected His human messenger from that death. Muslims receive the verse as revelation correcting the record, not as an echo of anyone's speculation."
+      "body": "Islam does not teach that Jesus deserved death, that his mission failed, or that his enemies defeated him. It does not require one particular substitute theory. It also does not depend on dismissing every historian as biased. It says that ordinary historical reconstruction reached an understandable conclusion from available reports, while God revealed that the apparent outcome was not the final reality."
     },
     {
       "sectionId": "islamic-conclusion",
-      "title": "The Islamic Case: Revelation, Justice, and Direct Mercy",
+      "title": "Honor Without Atonement",
       "kind": "argument",
-      "body": "The Islamic position rests on revelation and on a different account of justice and mercy. Quran 4:157-158 states that Jesus's enemies neither killed nor crucified him and that God raised him. The verse does not name a substitute, so substitution should be presented as a classical explanation rather than the Quran's explicit detail.\n\nIslam also rejects inherited guilt and transferred punishment: \"No bearer of burdens will bear the burden of another\" (Quran 35:18). Christians answer that Jesus offered himself willingly and that the cross expresses both justice and love. Muslims respect that intention but question why the All-Merciful would require an innocent person's death before forgiving the repentant.\n\nThe Quran repeatedly shows God accepting direct repentance. It presents Jesus not as a divine sacrifice but as a rescued and honored messenger whose mission continues. Confidence in that account rests on the wider case that the Quran is God's preserved revelation. If that case is true, God's testimony corrects even a strong historical inference drawn from earlier human sources."
+      "body": "In Islam, God saved and raised Jesus; He did not abandon His messenger or require his blood before forgiving others. Every soul bears its own responsibility, and every sinner may repent directly to God. This preserves Jesus's honor, God's justice, and the prophetic call to worship the Creator rather than a crucified creation."
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "Key Takeaways: The Crucifixion and the Quran",
+      "title": "The Central Takeaway",
       "kind": "summary",
-      "body": "Early Christian writings and mainstream historical judgment support a crucifixion, while the Quran explicitly denies that Jesus's enemies killed or crucified him. Islam does not claim that ordinary historical method independently reaches the Quranic conclusion. It trusts God's later revelation and rejects the theology that forgiveness requires an innocent Messiah's death."
+      "body": "The crucifixion question ultimately returns to revelation. Historical sources explain why crucifixion became the dominant human account. The Quran provides a direct divine correction and calls people back to the one God worshiped by Jesus."
     },
     {
       "sectionId": "faq",
@@ -193,27 +193,27 @@
   "faq": [
     {
       "question": "Do Muslims believe Jesus was crucified?",
-      "answer": "No. The Quran states that Jesus was neither killed nor crucified but that it was made to appear so (4:157), and that God raised him to Himself (4:158). Muslims receive this as God's direct testimony."
+      "answer": "No. Quran 4:157 states that Jesus was neither killed nor crucified and 4:158 states that God raised him."
     },
     {
       "question": "If it was not Jesus on the cross, who was it?",
-      "answer": "The Quran does not say. Many classical commentators spoke of a substitute made to resemble Jesus, but no identification is part of the Quranic text or required belief. Muslims are content to leave the mechanism with God."
+      "answer": "The Quran does not identify another person. Specific substitute stories are interpretations, not explicit Quranic teaching."
     },
     {
       "question": "Don't historians agree the crucifixion happened?",
-      "answer": "Mainstream scholarship does regard it as among the best-attested facts of Jesus' life, and Muslims should acknowledge that honestly. But historical method excludes divine intervention by design, while the Quran's claim is precisely that God intervened in what observers perceived. The same method also declines to affirm the resurrection — so both faiths ultimately rest on revelation at the decisive point."
+      "answer": "Most do, based mainly on early Christian sources. Islam acknowledges that historical judgment but gives final authority to revelation from the God who knows the event directly."
     },
     {
       "question": "Without the cross, how are sins forgiven in Islam?",
-      "answer": "Directly. The sinner repents sincerely and God forgives out of His mercy — no intermediary, no sacrifice, no transferred guilt, for no soul bears the burden of another (Quran 35:18)."
+      "answer": "Through sincere repentance and God's mercy. Islam rejects transferred guilt and teaches that no soul bears another's burden."
     },
     {
       "question": "Is Jesus alive now, according to Islam?",
-      "answer": "The majority view is that God raised him alive and that he will return before the Day of Resurrection — a hope described in reports including Sahih al-Bukhari 2476 and Sahih Muslim 2937a, and connected by most commentators to Quran 4:159."
+      "answer": "Islam teaches that God raised Jesus and that he will return before the end of time. Details are established from authentic revelation, not speculation."
     },
     {
       "question": "Does denying the crucifixion dishonor Jesus?",
-      "answer": "The opposite. In the Islamic account the denial is God's rescue and vindication of a beloved messenger, whom Muslims may never mention except with reverence."
+      "answer": "No. The Quran presents it as God's vindication of Jesus and the failure of his enemies to destroy him."
     }
   ],
   "relatedSlugs": [

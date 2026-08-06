@@ -4,7 +4,7 @@
   "subtitle": "Why Bible manuscripts differ, what Mark 16 and John 8 have to do with it, and how the Quran's single consonantal text compares",
   "category": "preservation",
   "audienceLevel": "beginner",
-  "summary": "A textual variant is a difference among handwritten copies. Most New Testament variants are minor, but a smaller number affect whole phrases or passages, including the longer ending of Mark and the story of the woman accused of adultery. Modern editions identify these openly. The Quran also has a documented history of spelling and canonical reading differences, but its early standardized consonantal text produced a much narrower textual range.",
+  "summary": "Textual variants are differences among handwritten copies. Most are minor, but some New Testament passages involve longer additions or meaningful alternatives. Textual criticism often identifies an early reading with confidence, yet it works by reconstructing from divergent witnesses. The Quran's early standardized consonantal text and continuous recitation represent a materially different preservation history.",
   "tags": [
     "Preservation",
     "Scripture",
@@ -34,9 +34,9 @@
     },
     {
       "sectionId": "historical-context",
-      "title": "Two Different Transmission Histories",
+      "title": "Why Handwritten Copies Differ",
       "kind": "history",
-      "body": "The New Testament was copied by hand for roughly 1,400 years before the printing press reached Europe in the 1450s, across a vast area — Egypt, Palestine, Syria, Asia Minor, Greece, Italy, North Africa — with no central authority checking each new copy against a master original. Today more than 5,700 Greek manuscripts of the New Testament survive, along with thousands more in Latin, Coptic, Syriac, and other languages, plus quotations in early Christian writers. Comparing all of them turns up tens of thousands of textual variants. Scholars have long grouped these manuscripts into recognizable regional families, commonly called the Alexandrian, Western, Byzantine, and Caesarean text-types, reflecting how the text drifted somewhat differently in different regions before anyone attempted a unified, empire-wide standardization of the wording.\n\nThe Quran's transmission history took a different shape. According to Islamic historical accounts, verses were both memorized and written down on available materials by scribes during Muhammad's own lifetime, so writing and memorization ran side by side from the start rather than writing catching up to an already-diverging oral tradition. After Muhammad's death in 632 CE, the first caliph, Abu Bakr, had the material gathered into a single collected text. Within about two decades of that, the third caliph, Uthman, addressed growing regional differences in recitation by commissioning an authoritative copy based on Zayd ibn Thabit's compilation, sending copies of this single consonantal skeleton (called the rasm) to the main garrison cities of the growing Muslim world, and having competing partial copies set aside — a centralized, one-time standardization rather than a centuries-long, decentralized copying process. Consistent with that account, a Quran manuscript held at the University of Birmingham, radiocarbon-dated by the University of Oxford to somewhere between AD 568 and 645, has been described by the university as some of the earliest physical textual evidence of the Quran known to survive, consistent with a text that has undergone little alteration since close to Muhammad's own era."
+      "body": "Scribes can miss a line, repeat a phrase, adjust spelling, harmonize parallel passages, or add an explanatory note that later enters the text. A large manuscript tradition preserves many copies but also records many such differences. Scholars compare date, geographic spread, and relationships among manuscripts to estimate the earliest recoverable wording."
     },
     {
       "sectionId": "quranic-perspective",
@@ -46,9 +46,9 @@
     },
     {
       "sectionId": "biblical-perspective",
-      "title": "Mark's Ending and the Woman Caught in Adultery",
+      "title": "Minor Variants and Major Examples",
       "kind": "scripture",
-      "body": "The two most widely discussed textual variants in the New Testament both involve substantial passages, not single words, which is exactly why they are so well known and so openly discussed.\n\nThe first is the ending of Mark's Gospel. Most printed Bibles include Mark 16:9-20, which reads in part: \"Now when he had risen early on the first day of the week, he appeared first to Mary Magdalene, from whom he had cast out seven demons... He said to them, 'Go into all the world, and preach the Good News to the whole creation. He who believes and is baptized will be saved; but he who disbelieves will be condemned'... So then the Lord, after he had spoken to them, was received up into heaven, and sat down at the right hand of God\" (Mark 16:9, 15-16, 19). The two oldest and most highly regarded complete Greek manuscripts of the New Testament, Codex Sinaiticus and Codex Vaticanus, both copied in the fourth century, end Mark's Gospel at verse 8 instead, without these final twelve verses. Because of this and other manuscript evidence, most modern textual scholars conclude that verses 9-20 were added sometime after Mark's Gospel first circulated, even though the passage is ancient and was already known by some Christian writers within a century or two of the New Testament period.\n\nThe second is the story in John's Gospel of a woman brought to Jesus after being caught in adultery. It reads, in the World English Bible: \"Everyone went to his own house, but Jesus went to the Mount of Olives... The scribes and the Pharisees brought a woman taken in adultery... 'Teacher, we found this woman in adultery, in the very act. Now in our law, Moses commanded us to stone such women. What then do you say about her?'... 'He who is without sin among you, let him throw the first stone at her'... 'Woman, where are your accusers? Did no one condemn you?' She said, 'No one, Lord.' Jesus said, 'Neither do I condemn you. Go your way. From now on, sin no more'\" (John 7:53; 8:3-11). This beloved passage is likewise missing from the earliest surviving Greek manuscripts of John, and in some later manuscripts that include it, it appears in a different location entirely, sometimes even attached to Luke's Gospel. Mainstream biblical scholarship, including scholarship from within Christian seminaries, generally treats it as an early and cherished story about Jesus that circulated separately before being inserted into John's Gospel here, rather than as part of John's original text.\n\nWhat matters here is not the specific verdict on either passage, but the transparency involved in reaching it. Nearly every modern study Bible — Protestant and Catholic alike — flags both passages with brackets or footnotes explaining the manuscript evidence, so ordinary readers can see exactly what the textual question is. That kind of open acknowledgment is a mark of intellectual honesty within Christian scholarship, not evidence of concealment."
+      "body": "Most New Testament variants are spelling or word-order differences. Several famous passages are larger: the longer ending of Mark (Mark 16:9–20), the woman caught in adultery (John 7:53–8:11), and the explicit Trinitarian wording in the later form of 1 John 5:7. Modern translations usually mark these honestly. Their disclosure is commendable, but it also shows that the received text required scholarly sorting."
     },
     {
       "sectionId": "comparison",
@@ -58,21 +58,21 @@
     },
     {
       "sectionId": "common-misconceptions",
-      "title": "Common Misunderstandings",
+      "title": "What the Evidence Does and Does Not Show",
       "kind": "interpretation",
-      "body": "A first misunderstanding is that the sheer number of New Testament variants — often cited as being in the tens of thousands — means the text is hopelessly corrupted. Mainstream scholarship, including the work of Christian textual critics, points out that the great majority are exactly what you would expect from centuries of hand-copying: spelling differences, word-order changes, and obvious slips of the pen, none of which affect meaning. Only a small number, like the two discussed here, involve larger stretches of text.\n\nA second misunderstanding runs the other way: assuming Islamic tradition claims the Quran was copied for fourteen centuries with absolutely zero human variation of any kind. In reality, the qiraat readings are a recognized, if narrower, form of textual variation, preserved through certified oral chains rather than suppressed. The relevant contrast is not \"zero variation versus enormous variation,\" but a bounded, centrally managed, orally certified variation versus an open-ended, multi-century, geographically scattered manuscript divergence.\n\nA third misunderstanding is that textual criticism itself is a hostile, secular project aimed at undermining Christianity. In fact, it has been practiced for centuries mostly by devout Christian scholars working inside the church's own scholarly tradition, precisely because they care about recovering the most accurate possible text of Scripture. Flagging passages like Mark 16:9-20 or John 7:53-8:11 in a footnote is the discipline doing its job well, not evidence against the faith of the scholars doing it."
+      "body": "Variants do not mean that every New Testament teaching is unknowable. They do mean that 'the Bible never changed' is too simple. Likewise, recognized Quranic readings should not be equated automatically with copying errors: they operate within an early standard text and named recitation chains. Each tradition should be described according to its own transmission process."
     },
     {
       "sectionId": "islamic-conclusion",
-      "title": "What This Comparison Suggests",
+      "title": "A Different Preservation Record",
       "kind": "argument",
-      "body": "None of this is offered to mock the New Testament or the Christian scholars who study it with such care and honesty; their transparency about difficult manuscript questions is, if anything, admirable. But the comparison is instructive. The Quran's claim in Surah Al-Hijr — \"Indeed, it is We who sent down the Qur'an and indeed, We will be its guardian\" (Quran 15:9) — is a claim that can be tested against history, and the historical record of a swift, centralized recension producing a single stable consonantal text, supported by early physical evidence like the Birmingham folios radiocarbon-dated to the first century of Islam, fits that claim well.\n\nThe New Testament's history, honestly described by its own best scholars, is one of long, decentralized, hand-copied transmission that produced real and substantial textual questions — not because anyone acted in bad faith, but because that is what happens to any text copied by hand across many regions for over a thousand years without a unifying, one-time standardization. For a sincere seeker comparing the two scriptures, that difference in transmission history is one honest piece of evidence worth weighing."
+      "body": "Quran 15:9 states, 'Indeed, it is We who sent down the Reminder, and indeed, We will guard it.' The Quran was standardized early and transmitted through both writing and memorization. That does not eliminate every spelling or manuscript question, but it provides a stable public text without the same dependence on reconstructing anonymous, divergent copies."
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "Why This Matters: Textual Variants Explained",
+      "title": "The Central Takeaway",
       "kind": "summary",
-      "body": "A textual variant is a difference among handwritten copies. Most New Testament variants are minor, but a smaller number affect whole phrases or passages, including the longer ending of Mark and the story of the woman accused of adultery. Modern editions identify these openly. The Quran also has a documented history of spelling and canonical reading differences, but its early standardized consonantal text produced a much narrower textual range."
+      "body": "Textual criticism helps recover early biblical wording, but the need for reconstruction is itself part of the comparison. The Quran's early public standard and living recitation offer a clearer preservation claim and stronger access to the revelation as delivered."
     },
     {
       "sectionId": "faq",
@@ -199,5 +199,8 @@
       "author": "Muhammad Mustafa Al-Azami",
       "note": "A detailed Muslim scholarly account of the Quran's compilation and the Uthmanic standardization, written partly in response to Western textual criticism of the Quran."
     }
+  ],
+  "bibleReferences": [
+    "1 John 5:7"
   ]
 }

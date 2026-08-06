@@ -4,7 +4,7 @@
   "subtitle": "The Birmingham fragment, the Sanaa palimpsest, and the Samarkand and Topkapi codices, and what they do and do not prove",
   "category": "preservation",
   "audienceLevel": "beginner",
-  "summary": "Early Quran manuscripts provide physical evidence for a text very close to the one read today. The Birmingham folios, the Parisino-petropolitanus codex, and other early witnesses preserve substantial portions of the Uthmanic consonantal text. Radiocarbon dates apply to parchment rather than ink, and individual fragments cannot prove every verse; their value is the cumulative agreement of early witnesses with the received text.",
+  "summary": "Early Quran manuscripts do not stand alone as the entire preservation case, but they strongly support it. Hijazi-script fragments and early codices place the Quranic text close to Islam's first century, while the living recitation tradition and the Uthmanic standard explain how that text was transmitted. Manuscript details require care: radiocarbon dates parchment rather than ink, and fragmentary witnesses cannot prove every verse by themselves.",
   "tags": [
     "Preservation",
     "History",
@@ -34,9 +34,9 @@
     },
     {
       "sectionId": "historical-context",
-      "title": "Where These Manuscripts Were Found",
+      "title": "What Manuscripts Can Establish",
       "kind": "history",
-      "body": "A different kind of discovery happened at the University of Birmingham. Two leaves of parchment had been sitting for decades in the Mingana Collection of Middle Eastern manuscripts, held at the university's Cadbury Research Library, misbound together with a separate and later seventh-century Quran manuscript. Researchers eventually separated the two leaves and sent the older ones for radiocarbon testing at the University of Oxford's Radiocarbon Accelerator Unit.\n\nTwo other famous copies, often shown to visitors and pictured in books about Islamic history, are the large codices kept today in Tashkent, Uzbekistan (popularly called the Samarkand codex, after the city where it was long housed) and in the Topkapi Palace Museum in Istanbul. Both are traditionally associated with Caliph Uthman, the third successor to Muhammad, who Islamic historical accounts credit with standardizing the Quran's text into a single agreed form around the 650s CE and sending copies to the major cities of the growing Muslim community. Specialists who study the handwriting, and in the Samarkand codex's case the parchment itself, of these two codices generally judge them to be genuinely old and significant witnesses to the early text, while cautioning that the popular claim that either one is literally Uthman's own personal copy goes beyond what the physical evidence can confirm."
+      "body": "A manuscript can show that particular Quranic wording existed at a particular early period. Script analysis, codicology, and radiocarbon testing help estimate date and origin, but each method has limits. Radiocarbon dates the animal parchment, not the moment of writing. That caution does not weaken the evidence; it prevents stronger claims than the objects can bear."
     },
     {
       "sectionId": "quranic-perspective",
@@ -52,27 +52,27 @@
     },
     {
       "sectionId": "comparison",
-      "title": "Comparing the Two Manuscript Records",
+      "title": "A Dual Transmission System",
       "kind": "argument",
-      "body": "Placed side by side, the two manuscript records differ mainly in how soon after their founding events a complete or near-complete physical copy survives. The Birmingham leaves may sit within a couple of decades of Muhammad's death in 632 CE, and the Sanaa palimpsest's lower text is also generally placed within the first century of Islam. By contrast, the earliest surviving complete Bible manuscripts, Sinaiticus and Vaticanus, were copied roughly three centuries after the events described in the Gospels.\n\nThis comparison should be stated fairly rather than triumphantly. A shorter gap between an event and its surviving physical manuscripts is not automatic proof of a cleaner transmission; it is one piece of evidence among several. The New Testament's own textual history also includes earlier fragmentary papyri that are not complete Bibles but do predate Sinaiticus by generations. Likewise, both religious traditions relied heavily on oral transmission before and alongside writing: early Christian communities preserved and copied letters and Gospel accounts for decades before Sinaiticus was produced, just as the Quran was memorized by companions of Muhammad both before and after it was written down.\n\nWhat can be said honestly is this: the manuscript record for the Quran's text, taken as a whole, shows an unusually short gap between the claimed date of revelation and the earliest surviving written witnesses, a gap that mainstream biblical scholarship, again speaking in its own terms, does not claim for a complete New Testament manuscript."
+      "body": "The Quran was transmitted through memorized recitation and written copies within the first Muslim community. Early manuscripts therefore confirm a text already carried publicly by reciters. The New Testament survived through a large but decentralized manuscript tradition with many variants. The difference is not that one tradition has manuscripts and the other does not; it is the Quran's early coordination of oral and written preservation."
     },
     {
       "sectionId": "common-misconceptions",
-      "title": "Common Misconceptions, In Both Directions",
+      "title": "Common Questions About Early Copies",
       "kind": "interpretation",
-      "body": "A first misconception moves too fast in the Quran's favor: the claim that the Birmingham leaves alone \"prove\" the entire modern Quran, unchanged word for word, already existed in the 630s. The Birmingham fragment is two leaves covering parts of three surahs, 18 through 20, out of 114 in the whole Quran. It is genuine and important evidence for an early, stable text of those specific passages. It is not, by itself, evidence about the whole book's history.\n\nA second misconception moves too fast in the other direction: the claim that the Sanaa palimpsest's lower text \"proves\" the Quran was substantially rewritten or corrupted. This deserves care, because it is a genuinely debated case rather than a settled one in either direction. The lower text does contain real differences from the standard Uthmanic text, including variations in wording and, in places, a different ordering of surahs. Scholars who have studied it closely, including Behnam Sadeghi and Mohsen Goudarzi, have argued that these variants place the lower text within the same broad textual family as the standard Quran, closely comparable to Islamic historical accounts describing Companions of Muhammad, such as Ibn Mas'ud, who kept personal codices with different verse orderings and occasional wording differences before Caliph Uthman standardized a single text for the whole community. Other specialists, such as Asma Hilali, have proposed different explanations for the manuscript's origin and purpose, and the scholarly conversation about how best to characterize it continues. What the debate is not about, on any side taken seriously in the field, is a claim that the lower text represents an entirely different scripture or removes the Quran's core content.\n\nA third misconception treats the Samarkand and Topkapi codices as literally Uthman's original, blood-marked personal copy. Both are old and significant manuscripts in their own right, but specialists who study their script generally judge them to postdate Uthman's own lifetime, which means the popular attribution to Uthman personally is best understood as a matter of tradition and reverence rather than an established codicological fact."
+      "body": "No single fragment contains the whole Quran, and a radiocarbon range is not an exact publication date. Orthographic differences also do not automatically create a different text. The relevant question is whether early witnesses support the same consonantal skeleton and recited content transmitted by the Muslim community. Taken together, the evidence strongly supports early stability while still allowing careful study of spelling, layout, and recognized readings."
     },
     {
       "sectionId": "islamic-conclusion",
-      "title": "What the Manuscripts Establish",
+      "title": "Why the Manuscripts Matter",
       "kind": "argument",
-      "body": "The manuscripts do not prove a theological claim by themselves, and radiocarbon dating measures parchment rather than the day ink was applied. They do establish something important: substantial Quranic text survives from very near the rise of Islam, and its consonantal form closely matches the received Uthmanic text.\n\nThe Sana'a palimpsest also preserves a lower text with genuine variants, so it should not be hidden. Yet it remains recognizably Quranic, and the dominant manuscript tradition rapidly converges on the Uthmanic form. The fairest conclusion is strong early textual stability, not a claim that every early leaf was graphically identical."
+      "body": "Quran 15:9 promises divine preservation. Early manuscripts are not the only proof of that promise, but they fit the traditional account: a publicly recited revelation, written during the first generation, standardized early, and continuously memorized. The physical evidence and the living transmission system reinforce one another."
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "Why This Matters: Early Quran Manuscripts: What the Physical Evidence Shows",
+      "title": "The Central Takeaway",
       "kind": "summary",
-      "body": "Early Quran manuscripts provide physical evidence for a text very close to the one read today. The Birmingham folios, the Parisino-petropolitanus codex, and other early witnesses preserve substantial portions of the Uthmanic consonantal text. Radiocarbon dates apply to parchment rather than ink, and individual fragments cannot prove every verse; their value is the cumulative agreement of early witnesses with the received text."
+      "body": "Early Quran manuscripts provide unusually early physical evidence for the text Muslims recite today. Their strongest value appears when they are read alongside mass memorization, the reports of compilation, and the recognized reading tradition."
     },
     {
       "sectionId": "faq",
@@ -88,6 +88,16 @@
     }
   ],
   "quranVerses": [
+    {
+      "surahName": "Al-Hijr",
+      "surahNumber": 15,
+      "ayahNumber": 9,
+      "reference": "Quran 15:9",
+      "arabic": "إِنَّا نَحْنُ نَزَّلْنَا ٱلذِّكْرَ وَإِنَّا لَهُۥ لَحَٰفِظُونَ",
+      "translation": "Indeed, it is We who sent down the Qur'an and indeed, We will be its guardian.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
     {
       "surahName": "Al-Buruj",
       "surahNumber": 85,

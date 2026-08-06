@@ -4,7 +4,7 @@
   "subtitle": "How the Quran was revealed, preserved, memorized, and compiled over 23 years",
   "category": "religious-history",
   "audienceLevel": "intermediate",
-  "summary": "The Quran was revealed publicly to Muhammad over about twenty-three years, memorized by companions, and written by scribes. Islamic reports then describe collection under Abu Bakr and standard copies under Uthman. Modern manuscript research confirms a very early Uthmanic text type, while questions about early spelling and readings remain legitimate areas of study rather than evidence of rival Qurans.",
+  "summary": "The Quran was revealed publicly to Muhammad over approximately twenty-three years, memorized in worship, written by known scribes, collected after his death, and standardized for the expanding Muslim community under Uthman. The stages are distinct but connected: revelation, memorization, written collection, and public transmission.",
   "tags": [
     "Scripture",
     "History",
@@ -34,9 +34,9 @@
     },
     {
       "sectionId": "overview",
-      "title": "Overview of Quranic Revelation",
+      "title": "The Preservation Timeline",
       "kind": "summary",
-      "body": "Muslims believe the Quran was revealed to Prophet Muhammad through the angel Gabriel from about 610 CE until his death in 632. Muhammad recited each revelation publicly, companions memorized it, and scribes wrote it down. The Meccan revelations, before the migration in 622, emphasize God’s oneness, resurrection, moral accountability, and earlier prophets. The Medinan revelations guide a growing community in worship, family life, law, peace, and war. The gradual sequence explains why the Quran addresses real events while maintaining one consistent call to worship God alone."
+      "body": "During Muhammad's lifetime, Quranic passages were recited publicly, memorized, and written. After his death, Abu Bakr commissioned a collected set of written sheets. Under Uthman, those sheets were used to prepare standard codices for major regions. The community continued to transmit the text orally and in writing."
     },
     {
       "sectionId": "meccan-period",
@@ -70,27 +70,27 @@
     },
     {
       "sectionId": "verification-transmission",
-      "title": "Verification and Continuous Transmission",
+      "title": "How the Text Was Checked",
       "kind": "sources",
-      "body": "The transmission of the Quranic text from the Uthmanic period to the present demonstrates documented consistency. Islamic scholarship developed rigorous methodologies to verify and authenticate Quranic texts. Each new generation of scribes and scholars applied strict protocols: comparing new copies against established standards, verifying chains of transmission, and employing specialized readers to detect minor errors. The discipline of tajweed (proper recitation rules) emerged as a formal science to preserve pronunciation and meaning. Manuscripts from early Islamic centuries show consistent agreement in the Quranic text across geographically distant regions, a fact that modern scholars document and study. The continuous chain of memorizers (hafiz tradition) provided a verification layer: at any point in Islamic history, significant numbers of individuals carried the entire Quran in memory, serving as reference points against textual change. Modern scholarship examining historical manuscripts, early printed editions, and contemporary copies documents textual stability that scholars attribute to the combination of oral memorization, written documentation, institutional oversight, and the commitment of Muslim communities to preserving the Quranic text with precision."
+      "body": "The traditional reports describe Zayd ibn Thabit working from written materials and the testimony of reciters, not from private memory alone. Uthman's committee then used the collected sheets kept with Hafsa and distributed standard copies. Public recitation made silent alteration difficult because the written text was checked against a community that already knew it."
     },
     {
       "sectionId": "academic-perspective",
-      "title": "Academic Scholarly Assessment",
+      "title": "What Historical Study Can Confirm",
       "kind": "interpretation",
-      "body": "Modern scholars examine the traditional account alongside manuscripts. The lower text of the Sana’a palimpsest contains some wording and ordering variants, showing that personal written forms existed before full standardization. It does not reveal a different religion or a rival Quran. Early Uthmanic-type manuscripts from widely separated regions share the same basic consonantal text.\n\nOlder revisionist theories proposed canonization around 700 CE or even later. The manuscript evidence has made very late dates difficult to sustain. The Birmingham parchment has a radiocarbon range of 568-645 CE, though radiocarbon dates the animal skin rather than the moment of writing. Other early fragments and manuscript families likewise place the Quranic text very near Islam’s first generation. Scholars may explain that stability through human transmission rather than divine protection, but the historical result supports the central Muslim claim: the Quran known today is substantially the text recited and standardized by the earliest community."
+      "body": "Modern scholars debate individual details of the traditional narrative, as they do with other ancient histories. Early manuscripts, the stable consonantal text, inscriptions, and the rapid geographic spread of a common Quranic text nevertheless place the evidence very near Islam's beginnings. Responsible argument distinguishes that strong cumulative case from claims that one artifact proves every stage by itself."
     },
     {
       "sectionId": "comparative-context",
-      "title": "Comparative Context: Scriptural Preservation Methods",
+      "title": "Why This History Is Distinctive",
       "kind": "interpretation",
-      "body": "The Bible has abundant manuscript evidence and can often be reconstructed with high confidence. Most New Testament variants are minor, and the Dead Sea Scrolls confirm substantial stability in much of the Hebrew Bible. The comparison should not deny those strengths.\n\nThe Quran’s advantage is different: one prophetic source, a public recitation over twenty-three years, overlapping memory and writing, and a standard consonantal text within the first generation. Biblical books arose through multiple authors and editorial histories, and some passages remain textually or canonically disputed. The Quran’s rapid, communal preservation makes the identity of its text unusually clear. For Muslims, these visible means fulfill God’s promise to guard the revelation."
+      "body": "The Quran's transmission began with a named messenger, a community using the text liturgically, and an early standardization. The New Testament's books emerged through multiple authors and later canonical collection without a comparable first-generation central recension. The contrast helps explain Islam's confidence in the Quran as the final preserved revelation."
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "Why This Matters: Quranic Revelation History",
+      "title": "The Central Takeaway",
       "kind": "summary",
-      "body": "The Quran was revealed publicly to Muhammad over about twenty-three years, memorized by companions, and written by scribes. Islamic reports then describe collection under Abu Bakr and standard copies under Uthman. Modern manuscript research confirms a very early Uthmanic text type, while questions about early spelling and readings remain legitimate areas of study rather than evidence of rival Qurans."
+      "body": "Quranic preservation is a connected history of public revelation, memorization, writing, compilation, and recitation. The stages reinforce one another and fit the Quran's claim that God would guard His message."
     }
   ],
   "quranVerses": [
