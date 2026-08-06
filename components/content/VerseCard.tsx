@@ -17,7 +17,7 @@ export function VerseCard({ verse, className }: VerseCardProps) {
         <p
           lang="ar"
           dir="rtl"
-          className="mt-4 text-right text-2xl leading-loose text-foreground sm:text-3xl"
+          className="mt-4 text-right text-2xl leading-loose text-accent sm:text-3xl"
         >
           {verse.arabic.normalize("NFC")}
         </p>
@@ -30,7 +30,7 @@ export function VerseCard({ verse, className }: VerseCardProps) {
             {arabicReference}
           </p>
         ) : null}
-        <p className="mt-4 text-base leading-8 text-muted-foreground">
+        <p className="mt-4 text-base leading-8 text-accent">
           {verse.translation}
         </p>
         <p className="mt-4 text-sm font-semibold text-foreground">
@@ -62,14 +62,14 @@ export function VerseCard({ verse, className }: VerseCardProps) {
   return (
     <Card className={cn("p-5", className)}>
       <p className="text-sm font-semibold uppercase text-accent">Bible</p>
-      <blockquote className="mt-4 border-l-2 border-border pl-4 text-base leading-8 text-muted-foreground">
+      <blockquote className="mt-4 border-l-2 border-accent pl-4 text-base leading-8 text-accent">
         {verse.text}
       </blockquote>
       {verse.arabicText ? (
         <p
           lang="ar"
           dir="rtl"
-          className="mt-4 text-right text-xl leading-loose text-foreground"
+          className="mt-4 text-right text-xl leading-loose text-accent"
         >
           {verse.arabicText}
         </p>

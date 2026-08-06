@@ -4,6 +4,7 @@ import { ArticleHashOpener } from "@/components/content/ArticleHashOpener";
 import { ArticleTools } from "@/components/content/ArticleTools";
 import { CitationList } from "@/components/content/CitationList";
 import { TopicCard } from "@/components/content/TopicCard";
+import { VerseCard } from "@/components/content/VerseCard";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
@@ -18,7 +19,14 @@ import {
   quranReferenceForQuoteSegment,
 } from "@/lib/quran";
 import type { ArticleTreeBreadcrumb } from "@/lib/content";
-import type { Article, Citation, SiteCategory } from "@/types/content";
+import type {
+  Article,
+  ArticleKeyScripture,
+  BibleDisplayVerse,
+  Citation,
+  QuranDisplayVerse,
+  SiteCategory,
+} from "@/types/content";
 
 type ArticleLayoutProps = {
   article: Article;
@@ -39,6 +47,8 @@ type ArticleLayoutProps = {
   collapsibleSections?: boolean;
   /** Public navigation path when the article is opened from a research tree. */
   treeBreadcrumbs?: ArticleTreeBreadcrumb[];
+  /** Foundational passages selected for this article and quoted in full. */
+  keyScripture?: ArticleKeyScripture;
   children?: ReactNode;
 };
 
@@ -51,6 +61,7 @@ export function ArticleLayout({
   plainText,
   collapsibleSections = false,
   treeBreadcrumbs = [],
+  keyScripture = { quranVerses: [], bibleVerses: [] },
   children,
 }: ArticleLayoutProps) {
   const CategoryIcon = categoryIconMap[category.icon] ?? fallbackCategoryIcon;
@@ -61,7 +72,11 @@ export function ArticleLayout({
   );
   const tableOfContents =
     tocItems ?? visibleSections.map((section) => ({ id: section.id, title: section.title }));
-  const articleText = plainText ?? buildArticlePlainText(article);
+  const articleText = plainText ?? buildArticlePlainText(article, keyScripture);
+  const scriptureBySection = assignKeyScriptureToSections(
+    visibleSections,
+    keyScripture,
+  );
 
   return (
     <>
@@ -113,6 +128,7 @@ export function ArticleLayout({
                       article={article}
                       sectionId={section.id}
                       collapsible={collapsibleSections}
+                      sectionScripture={scriptureBySection.get(section.id)}
                     />
                   ))}
               </div>
@@ -223,10 +239,12 @@ function ArticleSectionBlock({
   article,
   sectionId,
   collapsible,
+  sectionScripture,
 }: {
   article: Article;
   sectionId: string;
   collapsible: boolean;
+  sectionScripture?: SectionScripture;
 }) {
   const section = article.sections.find((item) => item.id === sectionId);
 
@@ -241,7 +259,8 @@ function ArticleSectionBlock({
           {section.id === "seeker-guide" ? "Overview" : section.kind}
         </p>
         <h2 className="mt-2 select-text text-lg leading-snug sm:mt-3 sm:text-xl">{section.title}</h2>
-        <ArticleSectionBody body={section.body} />
+        <ArticleSectionBody body={section.body} keyScripture={sectionScripture?.all} />
+        <KeyScripturePassages keyScripture={sectionScripture?.cards} />
       </section>
     );
   }
@@ -267,13 +286,20 @@ function ArticleSectionBlock({
         />
       </summary>
       <div className="border-t border-border px-4 py-4 sm:px-5 sm:py-5">
-        <ArticleSectionBody body={section.body} />
+        <ArticleSectionBody body={section.body} keyScripture={sectionScripture?.all} />
+        <KeyScripturePassages keyScripture={sectionScripture?.cards} />
       </div>
     </details>
   );
 }
 
-function ArticleSectionBody({ body }: { body: string }) {
+function ArticleSectionBody({
+  body,
+  keyScripture,
+}: {
+  body: string;
+  keyScripture?: ArticleKeyScripture;
+}) {
   const lines = body.split(/\r?\n/);
 
   return (
@@ -310,7 +336,7 @@ function ArticleSectionBody({ body }: { body: string }) {
                       <span
                         lang="ar"
                         dir="rtl"
-                        className="block text-right text-xl leading-loose text-foreground sm:text-2xl"
+                        className="block text-right text-xl leading-loose text-accent sm:text-2xl"
                       >
                         {quote.text.normalize("NFC")}
                       </span>
@@ -336,20 +362,257 @@ function ArticleSectionBody({ body }: { body: string }) {
           return (
             <span key={`bullet-${index}`} className="flex gap-2 pl-1">
               <span aria-hidden="true" className="text-accent">•</span>
-              <span>{renderInlineMarkdown(item, `${index}-bullet`)}</span>
+              <span>{renderLineWithScripture(item, `${index}-bullet`, keyScripture)}</span>
             </span>
+          );
+        }
+
+        if (isBodySubheading(lines, index)) {
+          return (
+            <h3
+              key={`subheading-${index}`}
+              className="mt-5 block font-semibold leading-snug text-foreground first:mt-0 sm:text-lg"
+            >
+              {renderInlineMarkdown(line.trim(), `${index}-subheading`)}
+            </h3>
           );
         }
 
         return (
           <span key={`line-${index}`}>
-            {renderInlineMarkdown(line, `${index}-line`)}
+            {renderLineWithScripture(line, `${index}-line`, keyScripture)}
             {index < lines.length - 1 ? <br /> : null}
           </span>
         );
       })}
     </div>
   );
+}
+
+function renderLineWithScripture(
+  line: string,
+  keyPrefix: string,
+  keyScripture?: ArticleKeyScripture,
+): ReactNode {
+  const passages = [
+    ...(keyScripture?.quranVerses.map((verse) => verse.translation) ?? []),
+    ...(keyScripture?.bibleVerses.map((verse) => verse.text) ?? []),
+  ]
+    .filter((passage) => passage.length >= 30)
+    .map((passage) => ({ passage, start: line.indexOf(passage) }))
+    .filter((match) => match.start >= 0)
+    .sort((left, right) => left.start - right.start);
+
+  if (passages.length === 0) {
+    return renderInlineMarkdown(line, keyPrefix);
+  }
+
+  const output: ReactNode[] = [];
+  let cursor = 0;
+  passages.forEach(({ passage, start }, index) => {
+    if (start < cursor) {
+      return;
+    }
+    output.push(
+      ...([] as ReactNode[]).concat(
+        renderInlineMarkdown(line.slice(cursor, start), `${keyPrefix}-${index}-before`),
+      ),
+    );
+    output.push(
+      <span key={`${keyPrefix}-${index}-scripture`} className="text-accent">
+        {renderInlineMarkdown(passage, `${keyPrefix}-${index}-passage`)}
+      </span>,
+    );
+    cursor = start + passage.length;
+  });
+  output.push(
+    ...([] as ReactNode[]).concat(
+      renderInlineMarkdown(line.slice(cursor), `${keyPrefix}-after`),
+    ),
+  );
+  return output;
+}
+
+function isBodySubheading(lines: string[], index: number): boolean {
+  const line = lines[index]?.trim() ?? "";
+  if (/^(?:\*\*[^*]+\*\*|__[^_]+__)$/.test(line)) {
+    return true;
+  }
+  if (!line || line.length > 100 || /[.!?:;,]$/.test(line)) {
+    return false;
+  }
+  if (/^(?:[-*#>]|Qur(?:an|'an)|Surah|Bible|Hadith|Matthew|Mark|Luke|John|Acts|Romans|Genesis|Exodus|Deuteronomy|Psalm|Isaiah|Jeremiah)\b/i.test(line)) {
+    return false;
+  }
+  if (/^["'“‘(\d]|[\u0600-\u06ff]/u.test(line)) {
+    return false;
+  }
+  const words = line.replace(/\*\*|__/g, "").split(/\s+/);
+  if (words.length < 2 || words.length > 12 || !/^[A-Z]/.test(words[0] ?? "")) {
+    return false;
+  }
+  const previousIsBlank = index === 0 || (lines[index - 1]?.trim().length ?? 0) === 0;
+  const nextHasBody = (lines[index + 1]?.trim().length ?? 0) > 0;
+  return previousIsBlank && nextHasBody;
+}
+
+function KeyScripturePassages({
+  keyScripture,
+}: {
+  keyScripture?: ArticleKeyScripture;
+}) {
+  const verses = [
+    ...(keyScripture?.quranVerses ?? []),
+    ...(keyScripture?.bibleVerses ?? []),
+  ];
+
+  if (verses.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="mt-6">
+      <p className="text-xs font-semibold uppercase text-accent sm:text-sm">
+        Key passage{verses.length === 1 ? "" : "s"}
+      </p>
+      <div className="mt-3 grid gap-4 xl:grid-cols-2">
+        {verses.map((verse) => (
+          <VerseCard
+            key={`${verse.scripture}-${verse.reference}`}
+            verse={verse}
+            className="shadow-none"
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function assignKeyScriptureToSections(
+  sections: Article["sections"],
+  keyScripture: ArticleKeyScripture,
+): Map<string, SectionScripture> {
+  const assignments = new Map<string, SectionScripture>();
+  const fallbackSection =
+    sections.find((section) => section.kind === "scripture") ??
+    sections.find((section) => section.kind !== "summary") ??
+    sections[0];
+
+  const assign = (
+    verse: QuranDisplayVerse | BibleDisplayVerse,
+    scripture: "quran" | "bible",
+  ) => {
+    const target =
+      sections.find((section) =>
+        textMentionsScriptureReference(
+          `${section.title}\n${section.body}`,
+          verse.reference,
+        ),
+      ) ?? fallbackSection;
+    if (!target) {
+      return;
+    }
+    const current = assignments.get(target.id) ?? {
+      all: { quranVerses: [], bibleVerses: [] },
+      cards: { quranVerses: [], bibleVerses: [] },
+    };
+    if (scripture === "quran") {
+      current.all.quranVerses.push(verse as QuranDisplayVerse);
+      if (!passageAlreadyQuoted(target.body, verse)) {
+        current.cards.quranVerses.push(verse as QuranDisplayVerse);
+      }
+    } else {
+      current.all.bibleVerses.push(verse as BibleDisplayVerse);
+      if (!passageAlreadyQuoted(target.body, verse)) {
+        current.cards.bibleVerses.push(verse as BibleDisplayVerse);
+      }
+    }
+    assignments.set(target.id, current);
+  };
+
+  keyScripture.quranVerses.forEach((verse) => assign(verse, "quran"));
+  keyScripture.bibleVerses.forEach((verse) => assign(verse, "bible"));
+  return assignments;
+}
+
+type SectionScripture = {
+  all: ArticleKeyScripture;
+  cards: ArticleKeyScripture;
+};
+
+function textMentionsScriptureReference(
+  text: string,
+  reference: string,
+): boolean {
+  const normalize = (value: string) =>
+    value
+      .toLowerCase()
+      .replace(/[’']/g, "'")
+      .replace(/[–—]/g, "-")
+      .replace(/\s+/g, " ");
+  const normalizedText = normalize(text);
+  const normalizedReference = normalize(reference);
+  if (normalizedText.includes(normalizedReference)) {
+    return true;
+  }
+
+  const quranMatch = normalizedReference.match(/^quran (\d+):(\d+)(?:-(\d+))?$/);
+  if (quranMatch) {
+    const [, surah, selectedStart, selectedEnd = selectedStart] = quranMatch;
+    for (const cited of normalizedText.matchAll(
+      new RegExp(`\\b${surah}:(\\d+)(?:-(\\d+))?\\b`, "g"),
+    )) {
+      const citedStart = Number(cited[1]);
+      const citedEnd = Number(cited[2] ?? cited[1]);
+      if (
+        citedStart <= Number(selectedStart) &&
+        citedEnd >= Number(selectedEnd)
+      ) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  const bibleMatch = normalizedReference.match(
+    /^(.+?) (\d+):(\d+)(?:-(\d+))?$/,
+  );
+  if (!bibleMatch) {
+    return false;
+  }
+  const [, book, chapter, selectedStart, selectedEnd = selectedStart] =
+    bibleMatch;
+  const escapedBook = book.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  for (const cited of normalizedText.matchAll(
+    new RegExp(
+      `\\b${escapedBook} ${chapter}:(\\d+)(?:-(\\d+))?\\b`,
+      "g",
+    ),
+  )) {
+    const citedStart = Number(cited[1]);
+    const citedEnd = Number(cited[2] ?? cited[1]);
+    if (citedStart <= Number(selectedStart) && citedEnd >= Number(selectedEnd)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function passageAlreadyQuoted(
+  body: string,
+  verse: QuranDisplayVerse | BibleDisplayVerse,
+): boolean {
+  const normalize = (value: string) =>
+    value.normalize("NFC").replace(/[\s“”‘’"']/g, "").toLowerCase();
+  const normalizedBody = normalize(body);
+  if (verse.scripture === "quran") {
+    return (
+      normalize(verse.arabic).length > 20 &&
+      normalizedBody.includes(normalize(verse.arabic)) &&
+      normalizedBody.includes(normalize(verse.translation))
+    );
+  }
+  return normalize(verse.text).length > 30 && normalizedBody.includes(normalize(verse.text));
 }
 
 function renderInlineMarkdown(text: string, keyPrefix: string): ReactNode {

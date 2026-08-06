@@ -43,6 +43,11 @@ export type QuranDisplayVerse = { scripture: "quran" } & QuranVerse;
 
 export type BibleDisplayVerse = { scripture: "bible" } & BibleVerse;
 
+export type ArticleKeyScripture = {
+  quranVerses: QuranDisplayVerse[];
+  bibleVerses: BibleDisplayVerse[];
+};
+
 export type CitationType =
   | "quran"
   | "bible"

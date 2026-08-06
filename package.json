@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "smoke:test": "node scripts/smoke-test.mjs",
     "verify:drafts": "node payload/verify-drafts-local.mjs",
+    "verify:key-scripture": "node scripts/verify-key-scripture.mjs",
     "verify:scripture": "node payload/verify-drafts.mjs",
     "verify:quran": "node payload/verify-quran-uthmani.mjs"
   },

@@ -155,16 +155,16 @@ async function main() {
       citationKey: "quran-tanzil-sahih-international",
       type: "quran",
       title:
-        "The Quran — Tanzil Uthmani text with Saheeh International translation (served via api.alquran.cloud)",
+        "The Quran — Tanzil Uthmani text with Saheeh International translation",
       url: "https://alquran.cloud",
-      note: "Arabic text and translation fetched programmatically per verse; verify spot-checks against a printed mushaf and the published Saheeh International edition before final publication.",
+      note: "Uthmani-script Arabic text from Tanzil with the Saheeh International English translation.",
     },
     {
       citationKey: "bible-web-translation",
       type: "bible",
       title: "The Holy Bible, World English Bible (public domain)",
       url: "https://worldenglish.bible",
-      note: "Verse text fetched programmatically via bible-api.com; public-domain translation suitable for quotation.",
+      note: "Public-domain English translation from the World English Bible.",
     },
   ];
 

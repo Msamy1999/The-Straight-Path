@@ -4,12 +4,14 @@ import { ArticleLayout } from "@/components/content/ArticleLayout";
 import { ComparisonArticleLayout } from "@/components/content/ComparisonArticleLayout";
 import {
   getArticleBySlug,
+  getArticleKeyScripture,
   getArticleRedirect,
   getArticleSlugs,
   getArticleTreeBreadcrumbs,
   getCategoryBySlug,
   getCitationsByIds,
   getComparisonArticleBySlug,
+  hasArticleKeyScriptureSelection,
   getRelatedArticles,
 } from "@/lib/content";
 
@@ -92,11 +94,12 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     notFound();
   }
 
-  const [comparison, relatedArticles, category, treeBreadcrumbs] = await Promise.all([
+  const [comparison, relatedArticles, category, treeBreadcrumbs, keyScripture] = await Promise.all([
     getComparisonArticleBySlug(article.slug),
     getRelatedArticles(article),
     getCategoryBySlug(article.category),
     getArticleTreeBreadcrumbs(article.slug),
+    getArticleKeyScripture(article.slug),
   ]);
   // This is a focused catalog, not a two-scripture comparison. Its researched
   // article sections use the same accordion presentation as Claims Against Islam.
@@ -110,11 +113,23 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   const citations = await getCitationsByIds(citationIds);
 
   if (renderableComparison) {
+    const hasSelectedScripture = hasArticleKeyScriptureSelection(article.slug);
+    const selectedComparison = {
+      ...renderableComparison,
+      quranVerses:
+        hasSelectedScripture
+          ? keyScripture.quranVerses
+          : renderableComparison.quranVerses,
+      bibleVerses:
+        hasSelectedScripture
+          ? keyScripture.bibleVerses
+          : renderableComparison.bibleVerses,
+    };
     return (
       <ComparisonArticleLayout
         article={article}
         category={category}
-        comparison={renderableComparison}
+        comparison={selectedComparison}
         citations={citations}
         relatedArticles={relatedArticles}
         treeBreadcrumbs={treeBreadcrumbs}
@@ -129,6 +144,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       citations={citations}
       relatedArticles={relatedArticles}
       treeBreadcrumbs={treeBreadcrumbs}
+      keyScripture={keyScripture}
       collapsibleSections={article.slug === "contradictions-in-the-bible"}
     />
   );

@@ -2,7 +2,11 @@
  * Plain-text builders for the article tools (read aloud / copy).
  * React-free so they can run on the server inside layout components.
  */
-import type { Article, ComparisonArticle } from "@/types/domain";
+import type {
+  Article,
+  ArticleKeyScripture,
+  ComparisonArticle,
+} from "@/types/domain";
 
 /** Strip common markdown artifacts so speech and copied text read cleanly. */
 export function stripMarkdownArtifacts(text: string): string {
@@ -19,7 +23,10 @@ export function stripMarkdownArtifacts(text: string): string {
 }
 
 /** Title, subtitle, summary, then each section title + body. */
-export function buildArticlePlainText(article: Article): string {
+export function buildArticlePlainText(
+  article: Article,
+  keyScripture: ArticleKeyScripture = { quranVerses: [], bibleVerses: [] },
+): string {
   const parts: string[] = [article.title];
 
   if (article.subtitle) {
@@ -37,6 +44,7 @@ export function buildArticlePlainText(article: Article): string {
     }
     parts.push(section.title, section.body);
   }
+  appendScripturePlainText(parts, keyScripture);
 
   return stripMarkdownArtifacts(parts.join("\n\n"));
 }
@@ -81,7 +89,30 @@ export function buildComparisonPlainText(
     }
   }
 
+  appendScripturePlainText(parts, {
+    quranVerses: comparison.quranVerses,
+    bibleVerses: comparison.bibleVerses,
+  });
+
   parts.push("Respectful conclusion.", comparison.respectfulConclusion);
 
   return stripMarkdownArtifacts(parts.join("\n\n"));
+}
+
+function appendScripturePlainText(
+  parts: string[],
+  scripture: ArticleKeyScripture,
+): void {
+  if (scripture.quranVerses.length + scripture.bibleVerses.length === 0) {
+    return;
+  }
+  parts.push("Key scripture passages.");
+  for (const verse of scripture.quranVerses) {
+    parts.push(
+      `${verse.reference}. ${verse.translation} Translation: ${verse.translator}.`,
+    );
+  }
+  for (const verse of scripture.bibleVerses) {
+    parts.push(`${verse.reference}. ${verse.text} Version: ${verse.version}.`);
+  }
 }

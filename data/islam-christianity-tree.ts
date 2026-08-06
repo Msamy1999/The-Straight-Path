@@ -217,12 +217,6 @@ export const islamChristianityBranches: IslamChristianityBranchDef[] = [
       "Comparing the 99 names of Allah with Christian divine attributes and the doctrine of the Trinity.",
       "draft",
     ),
-    topic(
-      "Worshiping God alone",
-      "/articles/worshiping-god-alone",
-      "How Islam and Christianity both demand exclusive devotion to God alone, in their own terms.",
-      "draft",
-    ),
   ]),
   branch("salvation-and-purpose-of-life", [
     topic(

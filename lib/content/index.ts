@@ -12,6 +12,7 @@ import { unstable_cache } from "next/cache";
 import { cache } from "react";
 import config from "@payload-config";
 import { atheismAgnosticismTree } from "@/data/atheism-agnosticism-tree";
+import articleKeyScriptureData from "@/data/article-key-scripture.json";
 import { claimsAgainstIslamTree } from "@/data/claims-against-islam";
 import {
   christianLearningPath,
@@ -29,6 +30,7 @@ import {
 } from "@/data/site";
 import type {
   Article,
+  ArticleKeyScripture,
   ArticleSection,
   BibleDisplayVerse,
   CategorySlug,
@@ -570,6 +572,7 @@ export type GetArticlesOptions = {
  */
 export const articleRedirects: Readonly<Record<string, string>> = {
   "judgment-day": "the-day-of-judgment",
+  "worshiping-god-alone": "what-is-worship",
 };
 
 export function getArticleRedirect(slug: string): string | undefined {
@@ -858,6 +861,108 @@ function mapBibleVerse(doc: BibleVerseDoc): BibleDisplayVerse {
     notes: opt(doc.notes),
   };
 }
+
+type ArticleKeyScriptureSelection = {
+  quran?: string[];
+  bible?: string[];
+};
+
+const articleKeyScriptureSelections = articleKeyScriptureData as Readonly<
+  Record<string, ArticleKeyScriptureSelection>
+>;
+
+export function hasArticleKeyScriptureSelection(slug: string): boolean {
+  return Object.hasOwn(articleKeyScriptureSelections, slug);
+}
+
+const getCachedArticleKeyScriptureDocs = unstable_cache(
+  async (quranReferences: string[], bibleReferences: string[]) => {
+    const payload = await getClient();
+    const [quranResult, bibleResult] = await Promise.all([
+      quranReferences.length > 0
+        ? payload.find({
+            collection: "quran-verses",
+            where: { reference: { in: quranReferences } },
+            pagination: false,
+            depth: 0,
+          })
+        : Promise.resolve({ docs: [] }),
+      bibleReferences.length > 0
+        ? payload.find({
+            collection: "bible-verses",
+            where: { reference: { in: bibleReferences } },
+            pagination: false,
+            depth: 0,
+          })
+        : Promise.resolve({ docs: [] }),
+    ]);
+
+    return {
+      quranDocs: quranResult.docs,
+      bibleDocs: bibleResult.docs,
+    };
+  },
+  ["article-key-scripture"],
+  contentCacheOptions,
+);
+
+/**
+ * Return only the passages an editor selected as foundational to an article.
+ * The full verified text remains owned by the scripture collections, so an
+ * article never carries a stale hand-copied quotation.
+ */
+export const getArticleKeyScripture = cache(
+  async (slug: string): Promise<ArticleKeyScripture> => {
+    const selection = articleKeyScriptureSelections[slug];
+    const quranReferences = selection?.quran ?? [];
+    const bibleReferences = selection?.bible ?? [];
+
+    if (quranReferences.length === 0 && bibleReferences.length === 0) {
+      return { quranVerses: [], bibleVerses: [] };
+    }
+
+    const { quranDocs, bibleDocs } = await getCachedArticleKeyScriptureDocs(
+      quranReferences,
+      bibleReferences,
+    );
+    const quranByReference = new Map(
+      quranDocs.map((doc) => {
+        const verse = mapQuranVerse(doc as unknown as QuranVerseDoc);
+        return [verse.reference, verse] as const;
+      }),
+    );
+    const bibleByReference = new Map(
+      bibleDocs.map((doc) => {
+        const verse = mapBibleVerse(doc as unknown as BibleVerseDoc);
+        return [verse.reference, verse] as const;
+      }),
+    );
+
+    const missingQuran = quranReferences.filter(
+      (reference) => !quranByReference.has(reference),
+    );
+    const missingBible = bibleReferences.filter(
+      (reference) => !bibleByReference.has(reference),
+    );
+    if (missingQuran.length > 0 || missingBible.length > 0) {
+      throw new Error(
+        `Missing synced key scripture for ${slug}: ${[
+          ...missingQuran,
+          ...missingBible,
+        ].join(", ")}`,
+      );
+    }
+
+    return {
+      quranVerses: quranReferences
+        .map((reference) => quranByReference.get(reference))
+        .filter((verse): verse is QuranDisplayVerse => Boolean(verse)),
+      bibleVerses: bibleReferences
+        .map((reference) => bibleByReference.get(reference))
+        .filter((verse): verse is BibleDisplayVerse => Boolean(verse)),
+    };
+  },
+);
 
 const getCachedComparisonArticleDoc = unstable_cache(
   async (slug: string) => {
