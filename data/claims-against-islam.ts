@@ -23,15 +23,17 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     title: "Aisha was a child bride, so Islam cannot be moral.",
     claim: "Critics point to reports that place Aisha at a very young age when her marriage to the Prophet Muhammad was consummated.",
     response: [
-      "Islam does not treat women as property or make a coerced marriage valid. The Quran forbids inheriting women against their will, gives them independent financial rights, and connects marriageable age with sound judgment; the Prophet required a woman's permission before marriage.",
-      "The well-known reports in Sahih al-Bukhari give Aisha a young age at consummation. Some modern reconstructions argue for an older age, but that remains disputed. This is also a question of presentism: modern childhood norms cannot simply be projected onto a very different society. The moral standard Muslims apply today is consent, capacity, welfare, and the prevention of harm.",
-      "Aisha's later life does not fit a picture of a silenced victim: she was a confident public voice, a major teacher, and a leading narrator of hadith. Her stature shows the agency and scholarly authority Islam recognized in women, though it is not a substitute for taking consent and harm seriously in every marriage.",
+      "The well-known reports in Sahih al-Bukhari give Aisha a young age at consummation. Some modern writers argue for an older age, but that reconstruction remains disputed and should not be presented as settled. The historical report must be assessed within a society whose categories of childhood, maturity, and marriage were not those of a modern state. The fact that even Muhammad's determined contemporary enemies did not use the marriage as a moral accusation is strong evidence that it did not violate the norms by which that society recognized abuse or dishonor.",
+      "Historical context does not make welfare irrelevant. Islam forbids coercion, requires a woman's permission, recognizes her independent property, and makes the prevention of harm a governing legal principle. A past marriage cannot be turned into permission to endanger children today; contemporary capacity, welfare, law, and the actual circumstances must be taken seriously.",
+      "Most importantly, the primary sources do not present Aisha as voiceless. Sahih al-Bukhari records her questioning the Prophet until she understood a difficult teaching, and Abu Musa said the Companions repeatedly found knowledge with her when a hadith was unclear. She became a teacher, jurist, hadith critic, and public figure whose confident judgments shaped Islam. That does not prove safety merely from silence; it directly challenges the claim that Muslim sources erased her voice or treated her as an object.",
     ],
     evidence: [
       { kind: "Quran", reference: "Quran 4:4 and 4:7", summary: "Women receive their own mahr and inheritance shares.", href: "https://quran.com/4/4-7" },
       { kind: "Quran", reference: "Quran 4:6 and 4:19", summary: "It links maturity with sound judgment and forbids treating women against their will.", href: "https://quran.com/4/6" },
       { kind: "Hadith", reference: "Sahih al-Bukhari 5136", summary: "A woman is not married without consultation or permission.", href: "https://sunnah.com/bukhari:5136" },
       { kind: "Hadith", reference: "Sahih al-Bukhari 5134", summary: "It is one of the reports giving Aisha's age at marriage and consummation.", href: "https://sunnah.com/bukhari:5134" },
+      { kind: "Hadith", reference: "Sahih al-Bukhari 103", summary: "Aisha questioned a difficult statement until she understood how it agreed with the Quran.", href: "https://sunnah.com/bukhari:103" },
+      { kind: "Hadith", reference: "Jami at-Tirmidhi 3883", summary: "Abu Musa says the Companions found knowledge with Aisha when a hadith was unclear; al-Tirmidhi grades the report hasan sahih.", href: "https://sunnah.com/tirmidhi:3883" },
     ],
   },
   {
@@ -104,13 +106,15 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     claim: "Some critics say the Quran is demonic deception, copied material, or Muhammad's own composition rather than revelation.",
     response: [
       "The Quran rejects both accusations: it denies a human teacher supplied it, says devils did not bring it down, and repeatedly calls Satan a clear enemy. Its central message is worship of God alone, moral accountability, mercy, and resistance to evil; Muslims see that as the opposite of a satanic call.",
-      "Muslims also point to its linguistic challenge, its claims of signs and fulfilled forecasts, and the Prophet's known background as a seventh-century Arabian preacher rather than a biblical scholar. These are cumulative reasons Muslims see divine inspiration; they do not require the historically implausible idea that he secretly copied or composed the Quran unaided.",
-      "The opening-revelation report depicts Muhammad shaken by the experience, not launching a prepared literary project. The case for revelation rests on the Quran's message, form, history, and the Prophet's life together.",
+      "Shared prophets do not by themselves prove copying: the Quran retells their stories in a distinctive voice, corrects beliefs it rejects, and builds one sustained theology of Tawhid. It describes Muhammad as al-nabi al-ummi, commonly translated as the unlettered prophet, rather than identifying a biblical teacher or a manuscript from which he worked. The claim of human authorship still has to explain the Quran's form, message, public recitation, and development across twenty-three years.",
+      "Muslims also point to specific fulfilled announcements, not only general claims. Quran 30:2-4 said that the defeated Byzantines would reverse their loss within a few years, and Quran 48:27 announced safe entry into the Sacred Mosque after the Muslims had been turned away. These events should be assessed historically rather than used as slogans, but they form part of a cumulative case together with the Quran's literary challenge and Muhammad's life.",
+      "The opening-revelation report depicts Muhammad frightened and seeking reassurance, not unveiling a prepared literary project. No single observation forces belief, but the satanic and copying theories explain the evidence less coherently than the Quran's own claim: revelation calling humanity away from Satan and toward the worship of God alone.",
     ],
     evidence: [
       { kind: "Quran", reference: "Quran 16:103", summary: "It rejects the claim that a human being taught Muhammad the Quran.", href: "https://quran.com/16/103" },
       { kind: "Quran", reference: "Quran 26:210-212 and 35:6", summary: "It denies that devils brought it down and calls Satan a clear enemy.", href: "https://quran.com/26/210-212" },
       { kind: "Quran", reference: "Quran 17:88 and 7:157-158", summary: "It issues its literary challenge and describes the Prophet as unlettered.", href: "https://quran.com/17/88" },
+      { kind: "Quran", reference: "Quran 30:2-4 and 48:27", summary: "It announces a Byzantine recovery within a few years and later safe Muslim entry into the Sacred Mosque.", href: "https://quran.com/30/2-4" },
       { kind: "Hadith", reference: "Sahih al-Bukhari 3", summary: "Aisha's report describes the beginning of revelation at Hira.", href: "https://sunnah.com/bukhari:3" },
     ],
     links: [{ href: "/articles/why-the-quran", label: "Why the Quran?" }],
@@ -164,9 +168,9 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     title: "Islam kills people for leaving the religion.",
     claim: "Critics point to classical rulings on apostasy and argue that Islam gives no room for freedom of conscience.",
     response: [
-      "Islam calls people to faith because rejecting God has ultimate, eternal consequences, but the Quran does not authorize forcing belief. It mentions people who leave faith while placing their final judgment with God. No private person may threaten, punish, or harm someone for a change of belief.",
-      "Classical jurists derived severe rulings from Sahih al-Bukhari 6922. Many treated public apostasy in the early Islamic polity as more than private conviction: it could involve public agitation, leading others away from Islam, or rupture of a religious-civil allegiance, and was therefore discussed alongside treason. Other Muslim scholars limit the ruling to rebellion or wartime betrayal. The legal debate cannot be honestly reduced to one uncontested rule.",
-      "Islamic rulings are meant to prevent harm and require lawful authority, due process, justice, and social conditions; vigilantism is forbidden. Contemporary Muslims and jurists continue to disagree about how classical apostasy law applies in modern states.",
+      "The Quran says there is no compulsion in religion and describes people who believe, disbelieve, and believe again while assigning their final judgment to God. Faith cannot be produced by threat, and no private person may punish or harm someone for doubt or a change of belief.",
+      "The classical law must still be stated honestly. Relying on authentic hadith and early legal practice, the major Sunni schools generally prescribed a state penalty for deliberate apostasy and did not all restrict it to an apostate who also took up arms. They differed over procedure, repentance, sex, and other conditions. The offense developed in a polity where religious allegiance and political membership overlapped, but merely saying that someone might influence others is not the same as proving treason.",
+      "Some contemporary scholars retain the classical rule for a legitimate Islamic judiciary; others argue that the Prophetic cases concerned rebellion, warfare, or political betrayal and therefore do not cover private belief. This real disagreement cannot be settled by vigilantism or imported piecemeal into a secular system. Islamic penalties require lawful authority, proof, due process, and the full legal order in which they were reasoned—not private threats or mob violence.",
     ],
     evidence: [
       { kind: "Quran", reference: "Quran 2:256 and 4:137", summary: "It rejects compulsion and describes repeated changes of belief without a stated fixed worldly penalty.", href: "https://quran.com/2/256" },
@@ -181,7 +185,8 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     response: [
       "Premodern slavery was not identical to the modern, racial chattel system of the trans-Atlantic trade, but it was still a coercive institution and must not be romanticized. Islam entered a world structured around it and imposed rights, bans on mistreatment, and repeated routes to emancipation rather than presenting enslavement as an ideal.",
       "In context, the Quran describes the difficult moral ascent as faith, feeding in hardship, and freeing a person (90:11-13). It commands good treatment of those under one's authority, encourages manumission through expiations, requires emancipation contracts in a stated case, and forbids coercing enslaved women into prostitution. The Prophet required food, clothing, manageable work, and assistance for enslaved people.",
-      "The phrase 'those your right hands possess' is the Quran's legal idiom for people held under the historical institution. Classical law gave concubines a recognized legal standing and prohibited many forms of abuse, while Quran 24:33 expressly forbids sexual coercion into prostitution. These rules should not be confused with a modern consent framework; Muslims reject slavery today and read the Quran's repeated movement toward freedom as its ethical direction.",
+      "The phrase 'those your right hands possess' is the Quran's legal idiom for people held under that historical institution. Classical law permitted a male owner sexual relations with an unmarried female slave without a marriage contract. It imposed maintenance, established the free status and paternity of her child, and gave an umm walad protections tied to motherhood; it also prohibited prostitution and many forms of mistreatment. But it did not make her consent a formal condition in the modern legal sense. That moral difficulty should be acknowledged rather than hidden.",
+      "Muslims reject the revival of slavery and concubinage today. The lawful routes by which the premodern system operated no longer exist, while the Quran repeatedly rewards emancipation and directs social resources toward freedom. Islam's enduring commands of justice, dignity, and removal of harm cannot be used to reopen an abolished system of human ownership.",
     ],
     evidence: [
       { kind: "Quran", reference: "Quran 90:11-13", summary: "It places freeing a person in the context of the difficult moral ascent.", href: "https://quran.com/90/11-13" },
@@ -244,14 +249,15 @@ export const claimsAgainstIslam: ClaimAgainstIslam[] = [
     title: "Islam promotes hatred against the LGBTQ+ community.",
     claim: "Critics argue that Islam's sexual ethics are unjust because classical Islamic teaching prohibits same-sex sexual acts.",
     response: [
-      "Islamic teaching distinguishes a person's inherent dignity from every desire or action. The Quran places sexual intimacy within marriage between a man and a woman, and the classical Muslim understanding of the passages about the people of Lot prohibits same-sex sexual acts. That is a moral teaching shared by the major classical schools, not a license to demean people.",
-      "Muslims believe sexual ethics are part of a wider framework of chastity, fidelity, family responsibility, and accountability before God. A Muslim may explain and hold that conviction while still treating every person with justice, privacy, compassion, and protection from abuse. Harassment, violence, coercion, and vigilante punishment are not Islamic answers to moral disagreement.",
-      "People can disagree deeply about this teaching. The Muslim response is that divine moral limits are not hatred; they are part of a consistent ethic that asks every person, whatever their circumstances, to seek God's guidance and mercy.",
+      "LGBTQ+ is an umbrella label covering different questions. The Quranic passages about the people of Lot and the classical legal ruling address same-sex sexual conduct; questions about gender identity require their own careful discussion and should not be silently treated as the same issue.",
+      "Islam distinguishes a person's dignity and involuntary feelings from chosen conduct. The Prophet taught that inner thoughts are overlooked unless acted upon or expressed. Experiencing same-sex attraction is therefore not itself a sin. The classical schools prohibited same-sex sexual acts and placed sexual intimacy within marriage between a man and a woman, as part of a wider ethic that also demands chastity, fidelity, and restraint from heterosexual Muslims.",
+      "Moral disagreement is not permission for hatred. Every person must be treated with justice, privacy, compassion, and protection from abuse. Harassment, humiliation, violence, and vigilante punishment violate Islamic duties. Muslims can state the sexual ethic clearly while offering friendship, safety, and a sincere invitation to God's guidance and mercy.",
     ],
     evidence: [
       { kind: "Quran", reference: "Quran 7:80-81", summary: "It recounts Lot's condemnation of men approaching men with desire instead of women.", href: "https://quran.com/7/80-81" },
       { kind: "Quran", reference: "Quran 30:21", summary: "It presents marriage as a source of comfort, affection, and mercy.", href: "https://quran.com/30/21" },
       { kind: "Quran", reference: "Quran 49:13 and 5:8", summary: "It grounds human dignity and commands justice even toward those one dislikes.", href: "https://quran.com/49/13" },
+      { kind: "Hadith", reference: "Sahih al-Bukhari 5269", summary: "The Prophet taught that inner thoughts are overlooked unless they are acted upon or spoken.", href: "https://sunnah.com/bukhari:5269" },
     ],
   },
   {

@@ -1,10 +1,10 @@
 {
   "slug": "science-and-religion",
   "title": "Science and Religion",
-  "subtitle": "Different questions, real points of contact, and why neither automatic conflict nor easy harmony is adequate",
+  "subtitle": "Why scientific discovery and belief in Allah are not competing explanations",
   "category": "scientific-signs",
   "audienceLevel": "intermediate",
-  "summary": "Science investigates the natural world through public, testable methods; religion makes wider claims about God, purpose, value, and revelation. Their questions differ but can overlap. This article distinguishes methodological from metaphysical naturalism, rejects careless scientific-miracle claims, and presents Muslim diversity on evolution and interpretation honestly.",
+  "summary": "Science investigates patterns and causes within the natural world. Islam asks the deeper questions of why an ordered world exists, why human reason can understand it, and what knowledge should be used for. Scientific success does not establish atheism, and belief in Allah does not remove the need for evidence. The Quran invites observation while directing discovery toward humility, worship, and moral responsibility.",
   "tags": [
     "Science",
     "Theology",
@@ -27,63 +27,63 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "Understanding Science and Religion",
+      "title": "Science Explains Creation; It Does Not Replace the Creator",
       "kind": "summary",
-      "body": "Science investigates the natural world through public, testable methods; religion makes wider claims about God, purpose, value, and revelation. Their questions differ but can overlap. This article distinguishes methodological from metaphysical naturalism, rejects careless scientific-miracle claims, and presents Muslim diversity on evolution and interpretation honestly."
+      "body": "Science investigates patterns and causes within the natural world. Islam asks the deeper questions of why an ordered world exists, why human reason can understand it, and what knowledge should be used for. Scientific success does not establish atheism, and belief in Allah does not remove the need for evidence. The Quran invites observation while directing discovery toward humility, worship, and moral responsibility."
     },
     {
-      "sectionId": "define-the-terms",
-      "title": "Two Large Words",
-      "kind": "summary",
-      "body": "Science is not a list of unquestionable conclusions. It is a family of disciplined methods—observation, measurement, modeling, experiment, criticism, and revision—used to explain regular features of the natural world. Religion is also more than a set of guesses about nature; it involves claims about ultimate reality, revelation, moral obligation, worship, community, and purpose.\n\nBecause the domains are not identical, many claims do not compete. A biochemical account of fasting does not decide whether fasting is worship. Yet complete separation is also too simple. Scriptures refer to creation and human origins, religious communities make historical claims, and metaphysical views shape how people interpret scientific knowledge. The task is to identify the kind of claim being made before declaring conflict or harmony."
+      "sectionId": "what-science-does",
+      "title": "What Science Can—and Cannot—Answer",
+      "kind": "notes",
+      "body": "Science uses observation, measurement, experiment, modeling, and criticism to explain regular features of the world. Its power comes from asking focused questions that can be tested publicly.\n\nThat method can explain how stars form, diseases spread, or inherited traits change. It does not measure why anything exists, whether moral duties are real, or whether life has an ultimate purpose. Those are not failed scientific questions; they are philosophical and religious questions that require other kinds of reasoning."
     },
     {
-      "sectionId": "naturalisms",
-      "title": "Methodological and Metaphysical Naturalism",
-      "kind": "interpretation",
-      "body": "In ordinary research, scientists seek natural mechanisms that can be tested and used by investigators regardless of religion. This **methodological naturalism** is a rule of inquiry: a paper cannot end with 'a miracle occurred' and provide a repeatable model. It has been extraordinarily productive and Muslims can participate in it without denying God.\n\n**Metaphysical naturalism** is the wider claim that nothing beyond the physical natural order exists. That conclusion is philosophical, not a required result of using scientific methods. A believer can say that God sustains every regular cause while laboratories properly investigate those causes. Conversely, the fact that science does not test God directly does not prove theism; it shows that the question exceeds the method's normal scope."
-    },
-    {
-      "sectionId": "quran-and-inquiry",
-      "title": "The Quran's Invitation to Observe",
+      "sectionId": "quran-and-observation",
+      "title": "The Quran Invites People to Observe",
       "kind": "scripture",
-      "body": "The Quran repeatedly directs attention to the heavens, earth, living creatures, and human history. Quran 3:190-191 calls the creation of the heavens and earth and the alternation of night and day signs for reflective people. Quran 29:20 tells people to travel through the earth and observe how creation began. These passages give theological value to observation and reflection.\n\nThey do not provide the equations, instruments, controlled methods, or institutional norms of modern science. Calling the Quran a complete science textbook diminishes both the text's religious purpose and the labor through which scientific knowledge is built. Its natural descriptions primarily direct readers from ordered, dependent creation toward gratitude, humility, and responsibility. Specific scientific claims must still be established by scientific evidence."
+      "body": "The Quran treats the natural world as evidence that should awaken thought:\n\nإِنَّ فِى خَلْقِ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ وَٱخْتِلَٰفِ ٱلَّيْلِ وَٱلنَّهَارِ لَءَايَٰتٍۢ لِّأُو۟لِى ٱلْأَلْبَٰبِ\n\n“Indeed, in the creation of the heavens and the earth and the alternation of the night and the day are signs for those of understanding.” (Quran 3:190)\n\nIt also commands active investigation:\n\nقُلْ سِيرُوا۟ فِى ٱلْأَرْضِ فَٱنظُرُوا۟ كَيْفَ بَدَأَ ٱلْخَلْقَ ۚ ثُمَّ ٱللَّهُ يُنشِئُ ٱلنَّشْأَةَ ٱلْءَاخِرَةَ ۚ إِنَّ ٱللَّهَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌۭ\n\n“Say, [O Muhammad], \"Travel through the land and observe how He began creation. Then Allah will produce the final creation. Indeed Allah, over all things, is competent.\"” (Quran 29:20)\n\nThese verses do not supply equations or experimental results. They give scientific inquiry a moral and spiritual setting: creation is intelligible, observation matters, and knowledge should lead to humility before Allah rather than pride."
     },
     {
-      "sectionId": "history-beyond-slogans",
-      "title": "History Beyond Golden-Age Slogans",
-      "kind": "history",
-      "body": "Medieval Muslim societies supported major work in mathematics, astronomy, optics, medicine, geography, and other fields. Scholars such as Ibn al-Haytham, al-Biruni, and Ibn Sina worked within intellectually diverse institutions and inherited, criticized, and extended Greek, Persian, Indian, and earlier scientific traditions. Religious motivations sometimes encouraged study, while courts, practical needs, translation networks, and individual curiosity also mattered.\n\nThis history is neither proof that Islam is true nor evidence that religion and science never conflict. Muslim authorities and scholars disagreed over philosophy, cosmology, medicine, and interpretation, just as institutions elsewhere did. The popular nineteenth-century 'warfare' picture of one permanent battle between science and religion is too simple, but an equally romantic story of uninterrupted harmony is also inaccurate."
+      "sectionId": "science-not-atheism",
+      "title": "Scientific Method Is Not Atheism",
+      "kind": "argument",
+      "body": "A scientific paper seeks natural mechanisms that can be tested. This working rule is often called methodological naturalism. A Muslim can use it fully: studying rainfall does not deny that Allah created and sustains the system through which rain falls.\n\nMetaphysical naturalism is a different claim—that physical nature is all that exists. No experiment can establish that universal conclusion, because experiments already examine the natural world. Moving from ‘science found a mechanism’ to ‘therefore there is no Creator’ is a philosophical step, not a scientific discovery."
+    },
+    {
+      "sectionId": "order-and-reason",
+      "title": "Why Islam Gives Science a Home",
+      "kind": "argument",
+      "body": "Science assumes that nature has stable patterns and that human reasoning can discover them. Islam grounds both expectations in one wise Creator who gives order to creation and the ability to understand it. The same worldview also limits the misuse of knowledge: ability does not equal moral permission, and every discovery remains a trust.\n\nThis does not prove Islam from scientific success alone. It shows that belief in Allah is not a rival mechanism inserted into a gap. It is an explanation of why there is an ordered, knowable world in which mechanisms exist at all."
     },
     {
       "sectionId": "evolution",
       "title": "Evolution and Human Origins",
       "kind": "interpretation",
-      "body": "Modern evolutionary biology is supported by converging evidence from genetics, fossils, biogeography, observed selection, and comparative anatomy. Muslims respond to it in more than one way. Some accept common ancestry broadly and interpret Adam's election or ensoulment within an evolutionary history. Some accept evolution for nonhuman life but hold that Adam was specially created. Others reject common descent more extensively or dispute major parts of the science.\n\nThere is no honest basis for claiming that one modern position is the uncontested view of all qualified Muslims. Classical interpreters affirmed Adam's creation long before evolutionary theory, but they were not answering today's genetic and paleontological questions. Responsible discussion must distinguish established scientific findings, open questions within evolutionary research, theological commitments, and new interpretive proposals. Labeling all evolution 'just a theory' misunderstands the scientific use of theory; treating every theological question as a laboratory error misunderstands religion."
+      "body": "Evolutionary biology is supported by evidence from genetics, fossils, biogeography, and observed change. Muslims should not misrepresent that evidence or dismiss a scientific theory as a mere guess.\n\nMuslim views differ over how the evidence relates to Adam. Some accept common ancestry broadly, some accept evolution outside a specially created Adam, and others dispute larger parts of common descent. The Quran’s theological claims and modern scientific models must each be stated precisely. Honest disagreement is stronger than forcing a false consensus on either science or Islamic interpretation."
     },
     {
-      "sectionId": "miracles",
-      "title": "Miracles Are Not Alternative Laboratory Models",
-      "kind": "argument",
-      "body": "A miracle is claimed as an unusual divine act with religious significance, not a competing regular mechanism. Science can investigate physical evidence associated with a reported event and historical disciplines can assess testimony. Repeatable science cannot rule on divine intention as such. A believer should therefore not invoke miracles to fill every current explanatory gap; gaps often close, and 'God did it' does not yield a scientific model.\n\nLikewise, methodological exclusion of miracles from a laboratory explanation does not show they are metaphysically impossible. Historical miracle claims are evaluated through sources, background beliefs, and competing explanations. Islam's central public sign is the Quranic revelation, while reports of other extraordinary events still require the same source criticism applied to religious reports generally."
-    },
-    {
-      "sectionId": "scientific-miracles",
-      "title": "Why Scientific-Miracle Claims Need Restraint",
+      "sectionId": "scientific-signs",
+      "title": "Use Scientific-Sign Arguments Carefully",
       "kind": "sources",
-      "body": "Claims that a verse precisely predicted embryology, cosmic expansion, geology, or modern physics often rely on choosing one meaning from a broad Arabic term after a discovery is known. A fair test asks what the language plausibly meant in its first context, how early commentators read it, whether the statement is specific rather than flexible, what knowledge was available historically, and whether an apparent match survives changes in scientific theory.\n\nA verse can be compatible with a finding or evoke wonder without encoding a technical discovery. Overstatement creates fragile faith: when a translation is corrected or a scientific model changes, readers may think the scripture failed when the apologetic claim was never required by the text. Quranic signs can rationally contribute to a worldview without being mislabeled as journal abstracts."
+      "body": "Claims that a verse secretly contains a modern technical discovery can become fragile when they depend on one possible translation or on science that later changes. A responsible argument asks what the Arabic can mean, how early readers understood it, and whether the claimed match is specific rather than flexible.\n\nThe Quran’s case is deeper than a list of modern facts hidden in ancient wording. It repeatedly turns attention from dependent, ordered creation to the Creator. Compatibility with a discovery may be meaningful, but it should not be exaggerated into proof the text itself does not claim."
     },
     {
-      "sectionId": "working-framework",
-      "title": "A Working Framework",
-      "kind": "notes",
-      "body": "When science and religion appear to conflict, first state the scientific conclusion precisely and its confidence level. Then identify the religious claim, its genre, language, interpretive history, and doctrinal importance. Ask whether the conflict concerns data, an interpretation of scripture, or a metaphysical conclusion added to the science. Allow revision where the evidence warrants it without forcing either field to answer questions outside its competence.\n\nFor Muslims, trust that truth cannot finally contradict truth should encourage investigation rather than fear. The phrase is associated with Ibn Rushd's defense of philosophical demonstration, not al-Ghazali's critique of the philosophers. Intellectual confidence does not guarantee every reconciliation. It means scientific integrity and careful interpretation are religious responsibilities, and that saying 'we do not yet know' is better than a confident unsupported claim."
-    },
-    {
-      "sectionId": "seeker-conclusion",
-      "title": "Key Takeaways: Science and Religion",
+      "sectionId": "conclusion",
+      "title": "Knowledge as a Path to God",
       "kind": "summary",
-      "body": "Science can test natural mechanisms and historical claims, but it cannot by itself certify revelation; Quranic scientific-sign arguments must therefore remain textually careful, scientifically current, and modest about what they prove.\n\nScience investigates the natural world through public, testable methods; religion makes wider claims about God, purpose, value, and revelation. Their questions differ but can overlap. This article distinguishes methodological from metaphysical naturalism, rejects careless scientific-miracle claims, and presents Muslim diversity on evolution and interpretation honestly."
+      "body": "Islam welcomes truthful investigation because the natural world and genuine revelation come from the same God. Apparent conflicts should lead to better science, more careful interpretation, and the humility to say when an answer is not yet known.\n\nScience describes creation with extraordinary power. Tawhid explains why creation is ordered, dependent, meaningful, and morally entrusted to human beings. The Quran’s invitation is not to fear discovery, but to see clearly and then ask what the signs point toward."
+    },
+    {
+      "sectionId": "faq",
+      "title": "Frequently Asked Questions",
+      "kind": "notes",
+      "body": "**Does science disprove God?**\nNo. Science studies testable natural mechanisms. The claim that nothing exists beyond those mechanisms is a philosophical form of naturalism, not a laboratory result.\n\n**Is the Quran a science textbook?**\nNo. It calls natural phenomena signs of the Creator and encourages observation, but scientific measurements and models must be established through scientific work.\n\n**Must Muslims reject evolution?**\nMuslims hold several views, especially concerning Adam and human ancestry. Scientific evidence should be described accurately, and theological interpretations should be labeled rather than presented as unanimous.\n\n**Can Muslims accept methodological naturalism?**\nYes, when it means seeking testable natural causes in scientific research. It does not require the separate metaphysical belief that nature is all that exists."
+    },
+    {
+      "sectionId": "further-reading",
+      "title": "Further Reading",
+      "kind": "sources",
+      "body": "Selected sources and further reading:\n\n- **Islam's Quantum Question: Reconciling Muslim Tradition and Modern Science** — Nidhal Guessoum. A Muslim astrophysicist's critical engagement with modern science, Islamic thought, and scientific-miracle apologetics.\n- **Science and Religion: A Very Short Introduction** — Thomas Dixon. A concise historical and philosophical introduction that moves beyond a simple conflict narrative.\n- **Where the Conflict Really Lies: Science, Religion, and Naturalism** — Alvin Plantinga. A philosophical argument distinguishing science from metaphysical naturalism and examining areas of tension."
     }
   ],
   "quranVerses": [
@@ -112,19 +112,19 @@
   "faq": [
     {
       "question": "Does science disprove God?",
-      "answer": "Science explains natural mechanisms using testable methods. Whether all reality is exhausted by those mechanisms is a philosophical question. Scientific success alone neither proves nor disproves classical theism."
+      "answer": "No. Science studies testable natural mechanisms. The claim that nothing exists beyond those mechanisms is a philosophical form of naturalism, not a laboratory result."
     },
     {
       "question": "Is the Quran a science textbook?",
-      "answer": "No. It invites observation of nature as signs and makes claims relevant to creation, but its central purposes are theological, moral, and spiritual. Scientific details require scientific investigation."
+      "answer": "No. It calls natural phenomena signs of the Creator and encourages observation, but scientific measurements and models must be established through scientific work."
     },
     {
-      "question": "Must a Muslim reject evolution?",
-      "answer": "Muslims hold multiple positions, especially concerning Adam and human common ancestry. The scientific evidence should be represented accurately, and theological interpretation should not be presented as more uniform than it is."
+      "question": "Must Muslims reject evolution?",
+      "answer": "Muslims hold several views, especially concerning Adam and human ancestry. Scientific evidence should be described accurately, and theological interpretations should be labeled rather than presented as unanimous."
     },
     {
-      "question": "Are miracles unscientific?",
-      "answer": "They are not scientific models because they are claimed as exceptional acts rather than repeatable mechanisms. That methodological point does not decide whether a particular miracle occurred; historical evidence and wider worldview commitments become relevant."
+      "question": "Can Muslims accept methodological naturalism?",
+      "answer": "Yes, when it means seeking testable natural causes in scientific research. It does not require the separate metaphysical belief that nature is all that exists."
     }
   ],
   "relatedSlugs": [
@@ -159,5 +159,6 @@
       "type": "book",
       "note": "A philosophical argument distinguishing science from metaphysical naturalism and examining areas of tension."
     }
-  ]
+  ],
+  "lastUpdated": "2026-08-07"
 }
