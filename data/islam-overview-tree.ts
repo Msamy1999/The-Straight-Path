@@ -71,6 +71,14 @@ const dailyLife: ResearchTreeNode[] = [
     href: "/articles/worship-and-daily-life",
     status: "draft",
   },
+  {
+    id: "islamic-practices-and-health",
+    title: "Islamic practices and health",
+    description:
+      "What scientific research supports about selected Islamic practices, and which popular health claims Muslims should avoid.",
+    href: "/articles/islamic-practices-and-health",
+    status: "draft",
+  },
 ];
 
 /** Guided beginner path for /islam-overview. */

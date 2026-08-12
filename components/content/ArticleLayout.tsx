@@ -616,9 +616,24 @@ function passageAlreadyQuoted(
 }
 
 function renderInlineMarkdown(text: string, keyPrefix: string): ReactNode {
-  const parts = text.split(/(\*\*[^*]+\*\*|__[\s\S]+?__)/g);
+  const parts = text.split(/(\*\*[^*]+\*\*|__[\s\S]+?__|\[[^\]]+\]\(https?:\/\/[^\s)]+\))/g);
 
   return parts.map((part, index) => {
+    const linkMatch = part.match(/^\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)$/);
+    if (linkMatch) {
+      return (
+        <a
+          key={`${keyPrefix}-${index}`}
+          href={linkMatch[2]}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="font-medium text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent"
+        >
+          {linkMatch[1]}
+        </a>
+      );
+    }
+
     const match = part.match(/^\*\*([\s\S]+)\*\*$|^__([\s\S]+)__$/);
     if (!match) {
       return <span key={`${keyPrefix}-${index}`}>{part}</span>;
