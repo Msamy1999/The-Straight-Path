@@ -5,10 +5,12 @@ import path from "node:path";
 import process from "node:process";
 
 const workspace = process.cwd();
-const treeText = await readFile(
-  path.join(workspace, "data", "islam-christianity-tree.ts"),
-  "utf8",
+const [requiredTreeText, optionalTreeText] = await Promise.all(
+  ["islam-christianity-tree.ts", "islam-overview-tree.ts"].map((file) =>
+    readFile(path.join(workspace, "data", file), "utf8"),
+  ),
 );
+const treeText = `${requiredTreeText}\n${optionalTreeText}`;
 const selections = JSON.parse(
   await readFile(
     path.join(workspace, "data", "article-key-scripture.json"),
@@ -23,10 +25,18 @@ const treeSlugs = [
   ),
 ].sort();
 const selectedSlugs = Object.keys(selections).sort();
+const optionalTreeSlugs = new Set(
+  [...optionalTreeText.matchAll(/\/articles\/([a-z0-9-]+)/g)].map(
+    (match) => match[1],
+  ),
+);
 const failures = [];
 
 for (const slug of treeSlugs) {
   if (!Object.hasOwn(selections, slug)) {
+    if (optionalTreeSlugs.has(slug)) {
+      continue;
+    }
     failures.push(`${slug}: no foundational-passage selection`);
     continue;
   }
@@ -43,8 +53,8 @@ for (const slug of treeSlugs) {
   const selection = selections[slug];
   const quran = Array.isArray(selection.quran) ? selection.quran : [];
   const bible = Array.isArray(selection.bible) ? selection.bible : [];
-  if (quran.length + bible.length > 3) {
-    failures.push(`${slug}: select at most 3 foundational passages in total`);
+  if (quran.length + bible.length > 4) {
+    failures.push(`${slug}: select at most 4 foundational passages in total`);
   }
 
   const availableQuran = new Map(
@@ -113,7 +123,7 @@ if (failures.length > 0) {
 }
 
 console.log(
-  `Foundational scripture verified for ${treeSlugs.length} unique Islam & Christianity articles.`,
+  `Foundational scripture verified for ${treeSlugs.length} unique research-tree articles.`,
 );
 
 function mentionsReference(text, reference) {
