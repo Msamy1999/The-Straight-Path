@@ -45,7 +45,7 @@ export default async function HomePage() {
 
             <div className="relative mb-5 flex items-center gap-4 lg:mb-0 lg:flex-col lg:justify-center lg:gap-2 lg:text-center">
               <LogoMark
-                title={`${siteName} logo: three wandering paths merging into one straight path`}
+                title={`${siteName} logo: a straight road leading toward a golden light`}
                 className="h-16 w-16 shrink-0 text-accent sm:h-20 sm:w-20 lg:h-24 lg:w-24"
               />
               <div>

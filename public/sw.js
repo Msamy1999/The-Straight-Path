@@ -4,7 +4,7 @@
  * - Static assets (/_next/static, images, fonts): cache-first.
  * - Never touches /admin or /api (the CMS must always be live).
  */
-const VERSION = "v1";
+const VERSION = "v2";
 const CACHE_NAME = `straight-path-${VERSION}`;
 const OFFLINE_URL = "/offline";
 const PRECACHE = [OFFLINE_URL, "/icon-192.png", "/icon-512.png"];

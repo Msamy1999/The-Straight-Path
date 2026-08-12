@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "The Straight Path logo: three wandering paths merging into one straight path",
+        alt: "The Straight Path logo: a straight road leading toward a golden light",
       },
     ],
   },

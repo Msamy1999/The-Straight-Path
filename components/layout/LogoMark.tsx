@@ -1,9 +1,9 @@
 /**
  * Inline-SVG rendering of public/logo-mark.svg (keep the two in sync).
  *
- * "Road to the light": a straight road in perspective, open at the horizon,
- * receding toward a white light with a warm gold glow. Road strokes use
- * currentColor so the mark follows the text color of its parent (e.g.
+ * "Road to the light": a solid straight road in perspective, with visible
+ * shoulders and lane markings, leading toward a warm gold destination light.
+ * The road uses currentColor so the mark follows its parent (e.g.
  * `text-accent`) in light and dark mode; size it with Tailwind classes such
  * as `h-8 w-8`.
  */
@@ -24,34 +24,52 @@ export function LogoMark({ className, title }: LogoMarkProps) {
       aria-hidden={title ? undefined : true}
     >
       {title ? <title>{title}</title> : null}
-      {/* The white light at the end of the road, with a warm glow */}
-      <circle cx="32" cy="15.5" r="11" fill="#C8951E" opacity="0.18" />
-      <circle cx="32" cy="15.5" r="7" fill="#C8951E" opacity="0.4" />
-      <circle cx="32" cy="15.5" r="4.2" fill="#FFFFFF" stroke="#C8951E" strokeWidth="1.6" />
-      {/* The straight road, in perspective, open at the horizon */}
-      <path d="M15 58 L26.8 27" stroke="currentColor" strokeWidth="4.6" strokeLinecap="round" />
-      <path d="M49 58 L37.2 27" stroke="currentColor" strokeWidth="4.6" strokeLinecap="round" />
-      {/* Center line receding toward the light */}
       <path
-        d="M32 55.5 L32 49.5"
+        d="M19 22.5H45"
         stroke="currentColor"
-        strokeWidth="3.4"
+        strokeWidth="1.5"
         strokeLinecap="round"
-        opacity="0.6"
+        opacity="0.2"
+      />
+      <circle cx="32" cy="14.5" r="9.5" fill="#C8951E" opacity="0.12" />
+      <circle cx="32" cy="14.5" r="5.6" fill="#C8951E" opacity="0.28" />
+      <circle cx="32" cy="14.5" r="3.6" fill="#C8951E" />
+      <circle cx="32" cy="14.5" r="1.7" fill="#FFFFFF" />
+      <path
+        d="M10.5 58L28.5 23.2Q32 20.9 35.5 23.2L53.5 58H10.5Z"
+        fill="currentColor"
       />
       <path
-        d="M32 44 L32 39"
-        stroke="currentColor"
-        strokeWidth="2.7"
+        d="M15.8 55.5L29.8 25.8"
+        stroke="#F7F3EA"
+        strokeWidth="1.7"
         strokeLinecap="round"
-        opacity="0.6"
+        opacity="0.92"
       />
       <path
-        d="M32 34 L32 30.5"
-        stroke="currentColor"
+        d="M48.2 55.5L34.2 25.8"
+        stroke="#F7F3EA"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        opacity="0.92"
+      />
+      <path
+        d="M32 53V47.1"
+        stroke="#F7F3EA"
+        strokeWidth="3.8"
+        strokeLinecap="round"
+      />
+      <path
+        d="M32 41.7V37.4"
+        stroke="#F7F3EA"
+        strokeWidth="2.9"
+        strokeLinecap="round"
+      />
+      <path
+        d="M32 33.1V29.9"
+        stroke="#F7F3EA"
         strokeWidth="2.1"
         strokeLinecap="round"
-        opacity="0.6"
       />
     </svg>
   );
