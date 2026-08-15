@@ -66,14 +66,17 @@ services:
       traefik.enable: "true"
       traefik.docker.network: coolify
       traefik.http.middlewares.the-straight-path-gzip.compress: "true"
+      traefik.http.middlewares.the-straight-path-canonical.redirectregex.regex: ^https?://(?:www\.thestraightpathislam\.com|the-straight-path\.169\.58\.54\.165\.sslip\.io)(/.*)?$
+      traefik.http.middlewares.the-straight-path-canonical.redirectregex.replacement: https://thestraightpathislam.com$${1}
+      traefik.http.middlewares.the-straight-path-canonical.redirectregex.permanent: "true"
       traefik.http.middlewares.the-straight-path-redirect.redirectscheme.scheme: https
       traefik.http.routers.the-straight-path-http.entrypoints: http
-      traefik.http.routers.the-straight-path-http.middlewares: the-straight-path-redirect
-      traefik.http.routers.the-straight-path-http.rule: Host(`the-straight-path.169.58.54.165.sslip.io`) || Host(`api-the-straight-path.169.58.54.165.sslip.io`)
+      traefik.http.routers.the-straight-path-http.middlewares: the-straight-path-canonical,the-straight-path-redirect
+      traefik.http.routers.the-straight-path-http.rule: Host(`thestraightpathislam.com`) || Host(`www.thestraightpathislam.com`) || Host(`the-straight-path.169.58.54.165.sslip.io`) || Host(`api-the-straight-path.169.58.54.165.sslip.io`)
       traefik.http.routers.the-straight-path-http.service: the-straight-path-web
       traefik.http.routers.the-straight-path-https.entrypoints: https
-      traefik.http.routers.the-straight-path-https.middlewares: the-straight-path-gzip
-      traefik.http.routers.the-straight-path-https.rule: Host(`the-straight-path.169.58.54.165.sslip.io`) || Host(`api-the-straight-path.169.58.54.165.sslip.io`)
+      traefik.http.routers.the-straight-path-https.middlewares: the-straight-path-canonical,the-straight-path-gzip
+      traefik.http.routers.the-straight-path-https.rule: Host(`thestraightpathislam.com`) || Host(`www.thestraightpathislam.com`) || Host(`the-straight-path.169.58.54.165.sslip.io`) || Host(`api-the-straight-path.169.58.54.165.sslip.io`)
       traefik.http.routers.the-straight-path-https.service: the-straight-path-web
       traefik.http.routers.the-straight-path-https.tls: "true"
       traefik.http.routers.the-straight-path-https.tls.certresolver: letsencrypt

@@ -17,7 +17,7 @@
     "android": {
       "package": "com.thestraightpath.app",
       "adaptiveIcon": {
-        "backgroundColor": "#12655B",
+        "backgroundColor": "#073D38",
         "foregroundImage": "./assets/images/adaptive-foreground.png",
         "backgroundImage": "./assets/images/adaptive-background.png"
       }
@@ -31,7 +31,7 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#12655B",
+          "backgroundColor": "#073D38",
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 120,
           "dark": {

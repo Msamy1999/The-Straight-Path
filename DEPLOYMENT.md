@@ -13,7 +13,9 @@ API run in one container; the mobile build remains a separate release artifact.
 - Internal port: `4173`
 - Persistent storage: `/app/data` mounted from a uniquely named volume
   `the-straight-path-sqlite-data`
-- Web domain: `https://the-straight-path.169.58.54.165.sslip.io`
+- Canonical web domain: `https://thestraightpathislam.com`
+- Legacy web domain (permanent redirect):
+  `https://the-straight-path.169.58.54.165.sslip.io`
 - API domain: `https://api-the-straight-path.169.58.54.165.sslip.io`
 - Liveness: `/healthz`
 - Database readiness: `/api/health`
@@ -38,19 +40,20 @@ application sourced from an immutable commit of this repository.
 - Limits: 1 CPU and 1536 MB memory
 - `PAYLOAD_SECRET`: secret, randomly generated in Coolify
 - `DATABASE_URI`: `file:/app/data/payload.db`
-- `NEXT_PUBLIC_SITE_URL`:
-  `https://the-straight-path.169.58.54.165.sslip.io`
+- `NEXT_PUBLIC_SITE_URL`: `https://thestraightpathislam.com`
 - `HOSTNAME`: `0.0.0.0`
 - `PORT`: `4173`
 
-Assign both domains above to port 4173. Do not publish a host port for SQLite.
+Assign the canonical, `www`, legacy web, and API domains to port 4173. Redirect
+the legacy web domain and `www` permanently to the canonical apex domain. Do
+not publish a host port for SQLite.
 
 ## Verification
 
 Run from outside the VPS:
 
 ```powershell
-npm run smoke:test -- https://the-straight-path.169.58.54.165.sslip.io
+npm run smoke:test -- https://thestraightpathislam.com
 ```
 
 Also check the admin login page at `/admin`, a direct article refresh, the

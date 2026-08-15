@@ -1,11 +1,8 @@
 /**
- * Inline-SVG rendering of public/logo-mark.svg (keep the two in sync).
+ * Inline rendering of the primary Straight Path brand mark.
  *
- * "Road to the light": a solid straight road in perspective, with visible
- * shoulders and lane markings, leading toward a warm gold destination light.
- * The road uses currentColor so the mark follows its parent (e.g.
- * `text-accent`) in light and dark mode; size it with Tailwind classes such
- * as `h-8 w-8`.
+ * The road is deliberately clipped to the rounded frame so its perspective
+ * reaches the lower edge without spilling outside the icon.
  */
 type LogoMarkProps = {
   className?: string;
@@ -17,60 +14,65 @@ export function LogoMark({ className, title }: LogoMarkProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 64 64"
+      viewBox="0 0 128 128"
       fill="none"
       className={className}
       role={title ? "img" : undefined}
       aria-hidden={title ? undefined : true}
     >
       {title ? <title>{title}</title> : null}
-      <path
-        d="M19 22.5H45"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        opacity="0.2"
-      />
-      <circle cx="32" cy="14.5" r="9.5" fill="#C8951E" opacity="0.12" />
-      <circle cx="32" cy="14.5" r="5.6" fill="#C8951E" opacity="0.28" />
-      <circle cx="32" cy="14.5" r="3.6" fill="#C8951E" />
-      <circle cx="32" cy="14.5" r="1.7" fill="#FFFFFF" />
-      <path
-        d="M10.5 58L28.5 23.2Q32 20.9 35.5 23.2L53.5 58H10.5Z"
-        fill="currentColor"
-      />
-      <path
-        d="M15.8 55.5L29.8 25.8"
-        stroke="#F7F3EA"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        opacity="0.92"
-      />
-      <path
-        d="M48.2 55.5L34.2 25.8"
-        stroke="#F7F3EA"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        opacity="0.92"
-      />
-      <path
-        d="M32 53V47.1"
-        stroke="#F7F3EA"
-        strokeWidth="3.8"
-        strokeLinecap="round"
-      />
-      <path
-        d="M32 41.7V37.4"
-        stroke="#F7F3EA"
-        strokeWidth="2.9"
-        strokeLinecap="round"
-      />
-      <path
-        d="M32 33.1V29.9"
-        stroke="#F7F3EA"
-        strokeWidth="2.1"
-        strokeLinecap="round"
-      />
+      <defs>
+        <linearGradient
+          id="brand-road-surface"
+          x1="64"
+          y1="38"
+          x2="64"
+          y2="124"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#17675F" stopOpacity="0.36" />
+          <stop offset="1" stopColor="#16756B" stopOpacity="0.88" />
+        </linearGradient>
+        <linearGradient
+          id="brand-road-edge"
+          x1="64"
+          y1="38"
+          x2="64"
+          y2="124"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#FFFDF8" />
+          <stop offset="1" stopColor="#F1E7D8" />
+        </linearGradient>
+        <clipPath id="brand-frame-clip">
+          <rect x="4" y="4" width="120" height="120" rx="28" />
+        </clipPath>
+      </defs>
+
+      <rect x="4" y="4" width="120" height="120" rx="28" fill="#073D38" />
+      <circle cx="64" cy="30" r="23" fill="#E7B94A" opacity="0.1" />
+      <circle cx="64" cy="30" r="15.5" fill="#E7B94A" opacity="0.25" />
+      <circle cx="64" cy="30" r="9.5" fill="#E7B94A" opacity="0.65" />
+      <circle cx="64" cy="30" r="5.3" fill="#FFF9E9" />
+
+      <g clipPath="url(#brand-frame-clip)">
+        <path
+          d="M18 126L60.3 37.2Q64 33.2 67.7 37.2L110 126H18Z"
+          fill="url(#brand-road-surface)"
+        />
+        <path
+          d="M18 126L60 38L62.2 35.8L31 126H18Z"
+          fill="url(#brand-road-edge)"
+        />
+        <path
+          d="M97 126L65.8 35.8L68 38L110 126H97Z"
+          fill="url(#brand-road-edge)"
+        />
+        <path d="M63.25 47.2L63.4 41.2H64.6L64.75 47.2H63.25Z" fill="#FFFDF8" />
+        <path d="M62.7 62.8L63 52.8H65L65.3 62.8H62.7Z" fill="#FFFDF8" />
+        <path d="M61.8 86.8L62.2 70.8H65.8L66.2 86.8H61.8Z" fill="#FFFDF8" />
+        <path d="M60.2 120.5L60.9 98H67.1L67.8 120.5H60.2Z" fill="#FFFDF8" />
+      </g>
     </svg>
   );
 }
