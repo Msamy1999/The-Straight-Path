@@ -5,6 +5,7 @@ import { ComparisonArticleLayout } from "@/components/content/ComparisonArticleL
 import {
   getArticleBySlug,
   getArticleKeyScripture,
+  getArticlePlaybackNavigation,
   getArticleRedirect,
   getArticleSlugs,
   getArticleTreeBreadcrumbs,
@@ -102,6 +103,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     treeBreadcrumbs,
     keyScripture,
     baseCitations,
+    playbackNavigation,
   ] = await Promise.all([
     getComparisonArticleBySlug(article.slug),
     getRelatedArticles(article),
@@ -112,6 +114,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     // the normal article query immediately instead of adding another serial
     // database/cache round trip after all other page data has resolved.
     getCitationsByIds(baseCitationIds),
+    getArticlePlaybackNavigation(article.slug, article.category),
   ]);
   // This is a focused catalog, not a two-scripture comparison. Its researched
   // article sections use the same accordion presentation as Claims Against Islam.
@@ -148,6 +151,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         citations={citations}
         relatedArticles={relatedArticles}
         treeBreadcrumbs={treeBreadcrumbs}
+        playbackNavigation={playbackNavigation}
       />
     );
   }
@@ -159,6 +163,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       citations={citations}
       relatedArticles={relatedArticles}
       treeBreadcrumbs={treeBreadcrumbs}
+      playbackNavigation={playbackNavigation}
       keyScripture={keyScripture}
       collapsibleSections={article.slug === "contradictions-in-the-bible"}
     />

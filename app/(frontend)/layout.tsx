@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import { ArticleAudioProvider } from "@/components/audio/ArticleAudioProvider";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { ServiceWorkerRegistration } from "@/components/pwa/ServiceWorkerRegistration";
@@ -89,14 +90,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
         >
           Skip to content
         </a>
-        <div className="flex min-h-screen flex-col">
-          <ServiceWorkerRegistration />
-          <SiteHeader />
-          <main id="main-content" className="flex-1" tabIndex={-1}>
-            {children}
-          </main>
-          <SiteFooter />
-        </div>
+        <ArticleAudioProvider>
+          <div className="flex min-h-screen flex-col">
+            <ServiceWorkerRegistration />
+            <SiteHeader />
+            <main id="main-content" className="flex-1" tabIndex={-1}>
+              {children}
+            </main>
+            <SiteFooter />
+          </div>
+        </ArticleAudioProvider>
       </body>
     </html>
   );

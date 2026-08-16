@@ -13,6 +13,7 @@ import type {
 } from "@/types/content";
 import { ArticleLayout } from "@/components/content/ArticleLayout";
 import type { ArticleTreeBreadcrumb } from "@/lib/content";
+import type { ArticlePlaybackNavigation } from "@/types/domain";
 
 type ComparisonArticleLayoutProps = {
   article: Article;
@@ -21,6 +22,7 @@ type ComparisonArticleLayoutProps = {
   citations: Citation[];
   relatedArticles: Article[];
   treeBreadcrumbs?: ArticleTreeBreadcrumb[];
+  playbackNavigation?: ArticlePlaybackNavigation;
 };
 
 export function ComparisonArticleLayout({
@@ -30,6 +32,7 @@ export function ComparisonArticleLayout({
   citations,
   relatedArticles,
   treeBreadcrumbs,
+  playbackNavigation,
 }: ComparisonArticleLayoutProps) {
   const CategoryIcon = categoryIconMap[category.icon] ?? fallbackCategoryIcon;
   return (
@@ -39,6 +42,7 @@ export function ComparisonArticleLayout({
       citations={citations}
       relatedArticles={relatedArticles}
       treeBreadcrumbs={treeBreadcrumbs}
+      playbackNavigation={playbackNavigation}
       tocItems={[
         { id: "main-question", title: "Main question" },
         { id: "scripture-preview", title: "Scripture preview" },

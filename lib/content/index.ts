@@ -31,6 +31,8 @@ import {
 import type {
   Article,
   ArticleKeyScripture,
+  ArticlePlaybackLink,
+  ArticlePlaybackNavigation,
   ArticleSection,
   BibleDisplayVerse,
   CategorySlug,
@@ -551,6 +553,54 @@ export async function getArticleTreeBreadcrumbs(
     label: node.title,
     ...(node.href ? { href: node.href } : {}),
   }));
+}
+
+function flattenArticlePlaybackLinks(
+  nodes: ResearchTreeNode[],
+  links: ArticlePlaybackLink[] = [],
+  seen: Set<string> = new Set(),
+): ArticlePlaybackLink[] {
+  for (const node of nodes) {
+    const match = node.href?.match(/^\/articles\/([^/?#]+)$/);
+    if (match && !seen.has(match[1]) && isVisibleArticle(match[1])) {
+      seen.add(match[1]);
+      links.push({ slug: match[1], title: node.title, href: node.href! });
+    }
+    flattenArticlePlaybackLinks(node.children ?? [], links, seen);
+  }
+  return links;
+}
+
+/**
+ * Previous/next playback follows the same ordered research tree readers see.
+ * Articles not currently exposed in that tree fall back to their category's
+ * card order so every public article still has predictable audio navigation.
+ */
+export async function getArticlePlaybackNavigation(
+  slug: string,
+  category: CategorySlug,
+): Promise<ArticlePlaybackNavigation> {
+  let links = flattenArticlePlaybackLinks(await getFullLibraryTree());
+  let index = links.findIndex((link) => link.slug === slug);
+
+  if (index < 0) {
+    links = (await getArticleSummariesByCategory(category)).map((article) => ({
+      slug: article.slug,
+      title: article.title,
+      href: `/articles/${article.slug}`,
+    }));
+    index = links.findIndex((link) => link.slug === slug);
+  }
+
+  if (index < 0) {
+    return {};
+  }
+
+  return {
+    ...(index > 0 ? { previous: links[index - 1] } : {}),
+    ...(index + 1 < links.length ? { next: links[index + 1] } : {}),
+    playlist: links,
+  };
 }
 
 // ---------------------------------------------------------------------------

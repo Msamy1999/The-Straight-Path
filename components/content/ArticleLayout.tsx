@@ -26,6 +26,7 @@ import type {
   QuranDisplayVerse,
   SiteCategory,
 } from "@/types/content";
+import type { ArticlePlaybackNavigation } from "@/types/domain";
 
 type ArticleLayoutProps = {
   article: Article;
@@ -42,6 +43,7 @@ type ArticleLayoutProps = {
   treeBreadcrumbs?: ArticleTreeBreadcrumb[];
   /** Foundational passages selected for this article and quoted in full. */
   keyScripture?: ArticleKeyScripture;
+  playbackNavigation?: ArticlePlaybackNavigation;
   children?: ReactNode;
 };
 
@@ -54,6 +56,7 @@ export function ArticleLayout({
   collapsibleSections = false,
   treeBreadcrumbs = [],
   keyScripture = { quranVerses: [], bibleVerses: [] },
+  playbackNavigation = {},
   children,
 }: ArticleLayoutProps) {
   const CategoryIcon = categoryIconMap[category.icon] ?? fallbackCategoryIcon;
@@ -102,8 +105,12 @@ export function ArticleLayout({
             </p>
             <div className="mt-3">
               <ArticleTools
+                articleSlug={article.slug}
                 articleTitle={article.title}
                 articleSubtitle={article.subtitle}
+                previous={playbackNavigation.previous}
+                next={playbackNavigation.next}
+                playlist={playbackNavigation.playlist}
               />
             </div>
           </div>

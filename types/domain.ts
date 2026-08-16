@@ -252,3 +252,16 @@ export type ResearchTreeNode = {
   tag?: string;
   defaultOpen?: boolean;
 };
+
+export type ArticlePlaybackLink = {
+  slug: string;
+  title: string;
+  href: string;
+};
+
+export type ArticlePlaybackNavigation = {
+  previous?: ArticlePlaybackLink;
+  next?: ArticlePlaybackLink;
+  /** Ordered public reading sequence, used for progressive route preloading. */
+  playlist?: ArticlePlaybackLink[];
+};
