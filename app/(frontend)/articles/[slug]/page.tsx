@@ -94,12 +94,24 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     notFound();
   }
 
-  const [comparison, relatedArticles, category, treeBreadcrumbs, keyScripture] = await Promise.all([
+  const baseCitationIds = Array.from(new Set(article.citations));
+  const [
+    comparison,
+    relatedArticles,
+    category,
+    treeBreadcrumbs,
+    keyScripture,
+    baseCitations,
+  ] = await Promise.all([
     getComparisonArticleBySlug(article.slug),
     getRelatedArticles(article),
     getCategoryBySlug(article.category),
     getArticleTreeBreadcrumbs(article.slug),
     getArticleKeyScripture(article.slug),
+    // Citation records do not depend on the optional comparison layout. Start
+    // the normal article query immediately instead of adding another serial
+    // database/cache round trip after all other page data has resolved.
+    getCitationsByIds(baseCitationIds),
   ]);
   // This is a focused catalog, not a two-scripture comparison. Its researched
   // article sections use the same accordion presentation as Claims Against Islam.
@@ -107,10 +119,13 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     article.slug === "contradictions-in-the-bible" || !hasRenderableComparison(comparison)
       ? undefined
       : comparison;
-  const citationIds = Array.from(
-    new Set([...article.citations, ...(renderableComparison?.sources ?? [])]),
-  );
-  const citations = await getCitationsByIds(citationIds);
+  const baseCitationIdSet = new Set(baseCitationIds);
+  const comparisonCitationIds = Array.from(
+    new Set(renderableComparison?.sources ?? []),
+  ).filter((citationId) => !baseCitationIdSet.has(citationId));
+  const citations = comparisonCitationIds.length
+    ? [...baseCitations, ...(await getCitationsByIds(comparisonCitationIds))]
+    : baseCitations;
 
   if (renderableComparison) {
     const hasSelectedScripture = hasArticleKeyScriptureSelection(article.slug);

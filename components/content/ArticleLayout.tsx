@@ -11,7 +11,6 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { Card } from "@/components/ui/Card";
 import { Tag } from "@/components/ui/Tag";
-import { buildArticlePlainText } from "@/lib/article-text";
 import { categoryIconMap, fallbackCategoryIcon } from "@/lib/category-icons";
 import {
   formatArabicQuranReference,
@@ -37,12 +36,6 @@ type ArticleLayoutProps = {
     id: string;
     title: string;
   }>;
-  /**
-   * Plain-text override for the read-aloud/copy tools. Layouts that render
-   * custom children (e.g. comparison articles) pass their own text here;
-   * otherwise it is built from the article sections.
-   */
-  plainText?: string;
   /** Use the claims-style accordion presentation for selected long-form articles. */
   collapsibleSections?: boolean;
   /** Public navigation path when the article is opened from a research tree. */
@@ -58,7 +51,6 @@ export function ArticleLayout({
   citations,
   relatedArticles,
   tocItems,
-  plainText,
   collapsibleSections = false,
   treeBreadcrumbs = [],
   keyScripture = { quranVerses: [], bibleVerses: [] },
@@ -72,7 +64,6 @@ export function ArticleLayout({
   );
   const tableOfContents =
     tocItems ?? visibleSections.map((section) => ({ id: section.id, title: section.title }));
-  const articleText = plainText ?? buildArticlePlainText(article, keyScripture);
   const scriptureBySection = assignKeyScriptureToSections(
     visibleSections,
     keyScripture,
@@ -110,7 +101,10 @@ export function ArticleLayout({
               <time dateTime={article.lastUpdated}>{article.lastUpdated}</time>
             </p>
             <div className="mt-3">
-              <ArticleTools articleText={articleText} articleTitle={article.title} />
+              <ArticleTools
+                articleTitle={article.title}
+                articleSubtitle={article.subtitle}
+              />
             </div>
           </div>
         </Container>
@@ -120,7 +114,10 @@ export function ArticleLayout({
         <Container>
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start">
             <article className="min-w-0">
-              <div className={collapsibleSections ? "mt-2 space-y-3" : "mt-8 space-y-10"}>
+              <div
+                data-article-readable-content
+                className={collapsibleSections ? "mt-2 space-y-3" : "mt-8 space-y-10"}
+              >
                 {children ??
                   visibleSections.map((section) => (
                     <ArticleSectionBlock
@@ -258,7 +255,12 @@ function ArticleSectionBlock({
         <p className="text-xs font-semibold uppercase text-accent sm:text-sm">
           {section.id === "seeker-guide" ? "Overview" : section.kind}
         </p>
-        <h2 className="mt-2 select-text text-lg leading-snug sm:mt-3 sm:text-xl">{section.title}</h2>
+        <h2
+          data-read-aloud-block
+          className="mt-2 select-text text-lg leading-snug sm:mt-3 sm:text-xl"
+        >
+          {section.title}
+        </h2>
         <ArticleSectionBody body={section.body} keyScripture={sectionScripture?.all} />
         <KeyScripturePassages keyScripture={sectionScripture?.cards} />
       </section>
@@ -271,7 +273,10 @@ function ArticleSectionBlock({
       className="group scroll-mt-24 rounded-lg border border-border bg-card shadow-soft"
       open={section.kind === "summary"}
     >
-      <summary className="flex cursor-pointer list-none items-start justify-between gap-4 px-4 py-4 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-5 [&::-webkit-details-marker]:hidden">
+      <summary
+        data-read-aloud-block
+        className="flex cursor-pointer list-none items-start justify-between gap-4 px-4 py-4 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-5 [&::-webkit-details-marker]:hidden"
+      >
         <span>
           <span className="block text-xs font-semibold uppercase text-accent sm:text-sm">
             {section.id === "seeker-guide" ? "Overview" : section.kind}
@@ -303,7 +308,10 @@ function ArticleSectionBody({
   const lines = body.split(/\r?\n/);
 
   return (
-    <div className="mt-3 select-text whitespace-pre-wrap text-sm leading-6 text-muted-foreground sm:mt-4 sm:text-base sm:leading-7">
+    <div
+      data-read-aloud-container
+      className="mt-3 select-text whitespace-pre-wrap text-sm leading-6 text-muted-foreground sm:mt-4 sm:text-base sm:leading-7"
+    >
       {lines.map((line, index) => {
         const quotes = quranQuoteSegmentsInLine(line)
           .map((segment) => ({
@@ -360,7 +368,10 @@ function ArticleSectionBody({
         if (line.trimStart().startsWith("- ")) {
           const item = line.trimStart().slice(2);
           return (
-            <span key={`bullet-${index}`} className="flex gap-2 pl-1">
+            <span
+              key={`bullet-${index}`}
+              className="flex gap-2 pl-1"
+            >
               <span aria-hidden="true" className="text-accent">•</span>
               <span>{renderLineWithScripture(item, `${index}-bullet`, keyScripture)}</span>
             </span>

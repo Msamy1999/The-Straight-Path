@@ -6,9 +6,8 @@ import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 type ArticleToolsProps = {
-  /** Full plain-text of the article (title, sections, Q&A). */
-  articleText: string;
   articleTitle: string;
+  articleSubtitle?: string;
   className?: string;
 };
 
@@ -16,12 +15,25 @@ type PlayState = "idle" | "loading" | "playing" | "paused";
 
 type CopyStatus = { kind: "success" | "error"; message: string } | null;
 
+type SpeechChunk = {
+  text: string;
+  owner: HTMLElement | null;
+};
+
 const MAX_CHUNK_LENGTH = 360;
 const KEEP_ALIVE_MS = 10_000;
 const COPY_STATUS_MS = 2_500;
 const VOICE_RETRY_MS = 400;
 const NEURAL_VOICE = "en-US-GuyNeural";
 const PLAYBACK_RATES = [1, 1.25, 1.5, 1.75, 2] as const;
+const ACTIVE_HIGHLIGHT_CLASSES = [
+  "bg-accent/10",
+  "ring-1",
+  "ring-inset",
+  "ring-accent/35",
+  "rounded-md",
+  "transition-colors",
+] as const;
 
 /**
  * Rank English voices by expected quality — used only by the on-device
@@ -167,8 +179,8 @@ const secondaryToolClass =
   "border border-border bg-card text-foreground hover:bg-muted";
 
 export function ArticleTools({
-  articleText,
   articleTitle,
+  articleSubtitle,
   className,
 }: ArticleToolsProps) {
   const pathname = usePathname();
@@ -177,6 +189,10 @@ export function ArticleTools({
   const [copyStatus, setCopyStatus] = useState<CopyStatus>(null);
   const [voiceName, setVoiceName] = useState("");
   const [playbackRate, setPlaybackRate] = useState(1);
+  const [activeChunkIndex, setActiveChunkIndex] = useState(0);
+  const [chunkCount, setChunkCount] = useState(0);
+  const [activeReadAlongElement, setActiveReadAlongElement] =
+    useState<HTMLElement | null>(null);
 
   const stoppedRef = useRef(false);
   /** Increments on every play/stop so stale async callbacks self-discard. */
@@ -191,6 +207,8 @@ export function ArticleTools({
   const prefetchRef = useRef<Promise<Blob> | null>(null);
   const abortRef = useRef<AbortController | null>(null);
   const playbackRateRef = useRef(1);
+  const activeReadAlongElementRef = useRef<HTMLElement | null>(null);
+  const manualScrollUntilRef = useRef(0);
 
   useEffect(() => {
     if (typeof window === "undefined" || !("speechSynthesis" in window)) {
@@ -244,6 +262,182 @@ export function ArticleTools({
     };
   }, [pathname]);
 
+  useEffect(() => {
+    const clearHighlight = () => {
+      if (!activeReadAlongElementRef.current) {
+        return;
+      }
+      activeReadAlongElementRef.current.classList.remove(
+        ...ACTIVE_HIGHLIGHT_CLASSES,
+      );
+      activeReadAlongElementRef.current.removeAttribute(
+        "data-read-aloud-active",
+      );
+      activeReadAlongElementRef.current = null;
+    };
+
+    clearHighlight();
+    if (!activeReadAlongElement || playState === "idle") {
+      return;
+    }
+
+    const target = activeReadAlongElement;
+
+    const collapsedParent = target.closest("details");
+    if (collapsedParent && !collapsedParent.open) {
+      collapsedParent.open = true;
+    }
+    target.classList.add(...ACTIVE_HIGHLIGHT_CLASSES);
+    target.setAttribute("data-read-aloud-active", "true");
+    activeReadAlongElementRef.current = target;
+
+    const scrollToTargetIfNeeded = () => {
+      if (Date.now() < manualScrollUntilRef.current) {
+        return;
+      }
+      const rect = target.getBoundingClientRect();
+      const safeTop = 88;
+      const playerClearance = window.matchMedia("(max-width: 639px)").matches
+        ? 150
+        : 80;
+      const safeBottom = window.innerHeight - playerClearance;
+      if (rect.top >= safeTop && rect.bottom <= safeBottom) {
+        return;
+      }
+      target.scrollIntoView({
+        block: "center",
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "auto"
+          : "smooth",
+      });
+    };
+    window.requestAnimationFrame(scrollToTargetIfNeeded);
+
+    return clearHighlight;
+  }, [activeReadAlongElement, playState]);
+
+  useEffect(() => {
+    if (playState === "idle") {
+      return;
+    }
+    const noteManualNavigation = () => {
+      manualScrollUntilRef.current = Date.now() + 5_000;
+    };
+    window.addEventListener("wheel", noteManualNavigation, { passive: true });
+    window.addEventListener("touchmove", noteManualNavigation, { passive: true });
+    return () => {
+      window.removeEventListener("wheel", noteManualNavigation);
+      window.removeEventListener("touchmove", noteManualNavigation);
+    };
+  }, [playState]);
+
+  useEffect(() => {
+    if (playState === "idle" || !window.matchMedia("(max-width: 639px)").matches) {
+      return;
+    }
+    const previousPadding = document.body.style.paddingBottom;
+    document.body.style.paddingBottom =
+      "calc(7.5rem + env(safe-area-inset-bottom))";
+    return () => {
+      document.body.style.paddingBottom = previousPadding;
+    };
+  }, [playState]);
+
+  function getRenderedArticleText(includeArabic: boolean): string {
+    const content = document.querySelector<HTMLElement>(
+      "[data-article-readable-content]",
+    );
+    let renderedText = "";
+    if (content) {
+      const readableClone = content.cloneNode(true) as HTMLElement;
+      readableClone
+        .querySelectorAll("[data-read-aloud-exclude]")
+        .forEach((element) => element.remove());
+      if (!includeArabic) {
+        readableClone
+          .querySelectorAll('[lang="ar"]')
+          .forEach((element) => element.remove());
+      }
+      readableClone.querySelectorAll("details").forEach((details) => {
+        details.open = true;
+      });
+      readableClone.setAttribute("aria-hidden", "true");
+      Object.assign(readableClone.style, {
+        position: "fixed",
+        left: "-10000px",
+        top: "0",
+        width: "48rem",
+        opacity: "0",
+        pointerEvents: "none",
+      });
+      document.body.appendChild(readableClone);
+      try {
+        renderedText = readableClone.innerText;
+      } finally {
+        readableClone.remove();
+      }
+    }
+    return [articleTitle, articleSubtitle, renderedText]
+      .filter((value): value is string => Boolean(value?.trim()))
+      .join("\n\n")
+      .trim();
+  }
+
+  function getElementText(element: HTMLElement, includeArabic: boolean): string {
+    const readableClone = element.cloneNode(true) as HTMLElement;
+    readableClone
+      .querySelectorAll("[data-read-aloud-exclude]")
+      .forEach((child) => child.remove());
+    if (!includeArabic) {
+      readableClone.querySelectorAll('[lang="ar"]').forEach((child) => child.remove());
+    }
+    // Speech owners are already small, ordered blocks. textContent avoids a
+    // forced layout for every block when a long article starts reading.
+    return (readableClone.textContent ?? "").trim();
+  }
+
+  function getSpeechChunks(): SpeechChunk[] {
+    const content = document.querySelector<HTMLElement>(
+      "[data-article-readable-content]",
+    );
+    const titleOwner = document.querySelector<HTMLElement>("main h1");
+    const subtitleOwner =
+      titleOwner?.nextElementSibling instanceof HTMLElement
+        ? titleOwner.nextElementSibling
+        : titleOwner;
+    const blocks: Array<{ text: string; owner: HTMLElement | null }> = [
+      { text: articleTitle, owner: titleOwner },
+      ...(articleSubtitle
+        ? [{ text: articleSubtitle, owner: subtitleOwner ?? titleOwner }]
+        : []),
+    ];
+
+    if (content) {
+      const candidates = Array.from(
+        content.querySelectorAll<HTMLElement>(
+          "[data-read-aloud-block], [data-read-aloud-container] > span, [data-read-aloud-container] > h3",
+        ),
+      );
+      for (const owner of candidates) {
+        if (owner.closest("[data-read-aloud-exclude]")) {
+          continue;
+        }
+        const parentBlock = owner.parentElement?.closest("[data-read-aloud-block]");
+        if (parentBlock && content.contains(parentBlock)) {
+          continue;
+        }
+        const text = toSpeechText(getElementText(owner, false));
+        if (text) {
+          blocks.push({ text, owner });
+        }
+      }
+    }
+
+    return blocks.flatMap(({ text, owner }) =>
+      chunkText(text).map((chunk) => ({ text: chunk, owner })),
+    );
+  }
+
   function clearKeepAlive() {
     if (keepAliveRef.current !== null) {
       window.clearInterval(keepAliveRef.current);
@@ -266,6 +460,9 @@ export function ArticleTools({
     stoppedRef.current = true;
     clearKeepAlive();
     setPlayState("idle");
+    setActiveReadAlongElement(null);
+    setActiveChunkIndex(0);
+    setChunkCount(0);
   }
 
   // -------------------------------------------------------------------------
@@ -293,7 +490,7 @@ export function ArticleTools({
   }
 
   async function playNeuralChunk(
-    chunks: string[],
+    chunks: SpeechChunk[],
     index: number,
     session: number,
   ): Promise<void> {
@@ -306,13 +503,15 @@ export function ArticleTools({
     }
 
     const signal = abortRef.current?.signal as AbortSignal;
-    const blob = await (prefetchRef.current ?? fetchChunkBlob(chunks[index], signal));
+    const blob = await (
+      prefetchRef.current ?? fetchChunkBlob(chunks[index].text, signal)
+    );
     prefetchRef.current =
       index + 1 < chunks.length
-        ? fetchChunkBlob(chunks[index + 1], signal).catch(() => {
+        ? fetchChunkBlob(chunks[index + 1].text, signal).catch(() => {
             // Prefetch failures resurface when the chunk is actually needed.
             prefetchRef.current = null;
-            return fetchChunkBlob(chunks[index + 1], signal);
+            return fetchChunkBlob(chunks[index + 1].text, signal);
           })
         : null;
 
@@ -327,6 +526,8 @@ export function ArticleTools({
     objectUrlRef.current = URL.createObjectURL(blob);
     audio.src = objectUrlRef.current;
     audio.playbackRate = playbackRateRef.current;
+    setActiveReadAlongElement(chunks[index].owner);
+    setActiveChunkIndex(index);
 
     audio.onended = () => {
       void playNeuralChunk(chunks, index + 1, session).catch(() => {
@@ -351,8 +552,8 @@ export function ArticleTools({
   // Fallback engine: on-device speechSynthesis (best available system voice).
   // -------------------------------------------------------------------------
 
-  function speakChunk(chunks: string[], index: number) {
-    if (stoppedRef.current) {
+  function speakChunk(chunks: SpeechChunk[], index: number, session: number) {
+    if (session !== sessionRef.current || stoppedRef.current) {
       return;
     }
     if (index >= chunks.length) {
@@ -360,7 +561,10 @@ export function ArticleTools({
       return;
     }
 
-    const utterance = new SpeechSynthesisUtterance(chunks[index]);
+    setActiveReadAlongElement(chunks[index].owner);
+    setActiveChunkIndex(index);
+
+    const utterance = new SpeechSynthesisUtterance(chunks[index].text);
     if (voiceRef.current) {
       utterance.voice = voiceRef.current;
       utterance.lang = voiceRef.current.lang;
@@ -369,12 +573,12 @@ export function ArticleTools({
     utterance.pitch = 1;
     utterance.volume = 1;
     utterance.onend = () => {
-      if (!stoppedRef.current) {
-        speakChunk(chunks, index + 1);
+      if (session === sessionRef.current && !stoppedRef.current) {
+        speakChunk(chunks, index + 1, session);
       }
     };
     utterance.onerror = () => {
-      if (!stoppedRef.current) {
+      if (session === sessionRef.current && !stoppedRef.current) {
         finishPlayback();
         window.speechSynthesis.cancel();
       }
@@ -382,7 +586,10 @@ export function ArticleTools({
     window.speechSynthesis.speak(utterance);
   }
 
-  function startSystemFallback(chunks: string[]) {
+  function startSystemFallback(chunks: SpeechChunk[], session: number) {
+    if (session !== sessionRef.current || stoppedRef.current) {
+      return;
+    }
     if (!speechSupported) {
       finishPlayback();
       return;
@@ -392,7 +599,7 @@ export function ArticleTools({
     window.speechSynthesis.cancel();
     setPlayState("playing");
     startKeepAlive();
-    speakChunk(chunks, 0);
+    speakChunk(chunks, 0, session);
   }
 
   // -------------------------------------------------------------------------
@@ -400,10 +607,14 @@ export function ArticleTools({
   // -------------------------------------------------------------------------
 
   function handlePlay() {
-    const chunks = chunkText(toSpeechText(articleText));
+    const chunks = getSpeechChunks();
     if (chunks.length === 0) {
       return;
     }
+
+    setChunkCount(chunks.length);
+    setActiveChunkIndex(0);
+    setActiveReadAlongElement(null);
 
     sessionRef.current += 1;
     const session = sessionRef.current;
@@ -422,7 +633,7 @@ export function ArticleTools({
     playNeuralChunk(chunks, 0, session).catch(() => {
       // Server voice unreachable — fall back to the device's own engine.
       if (session === sessionRef.current && !stoppedRef.current) {
-        startSystemFallback(chunks);
+        startSystemFallback(chunks, session);
       }
     });
   }
@@ -465,6 +676,9 @@ export function ArticleTools({
       window.speechSynthesis.cancel();
     }
     setPlayState("idle");
+    setActiveReadAlongElement(null);
+    setActiveChunkIndex(0);
+    setChunkCount(0);
   }
 
   function handlePlaybackRate() {
@@ -490,7 +704,7 @@ export function ArticleTools({
     }, COPY_STATUS_MS);
   }
 
-  function fallbackCopy(): boolean {
+  function fallbackCopy(articleText: string): boolean {
     const textarea = document.createElement("textarea");
     textarea.value = articleText;
     textarea.setAttribute("readonly", "");
@@ -508,6 +722,7 @@ export function ArticleTools({
   }
 
   async function handleCopy() {
+    const articleText = getRenderedArticleText(true);
     let succeeded = false;
     try {
       if (navigator.clipboard?.writeText) {
@@ -519,7 +734,7 @@ export function ArticleTools({
     }
     if (!succeeded) {
       try {
-        succeeded = fallbackCopy();
+        succeeded = fallbackCopy(articleText);
       } catch {
         succeeded = false;
       }
@@ -542,9 +757,37 @@ export function ArticleTools({
         className={cn(
           "flex flex-wrap items-center gap-2",
           playState !== "idle" &&
-            "fixed inset-x-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-[70] rounded-xl border border-border bg-card/95 p-2 shadow-soft backdrop-blur sm:left-1/2 sm:right-auto sm:w-auto sm:-translate-x-1/2",
+            "fixed inset-x-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-[70] mx-auto w-[calc(100%-1.5rem)] max-w-md rounded-2xl border border-border/80 bg-card/95 p-2.5 shadow-[0_16px_48px_hsl(var(--background)/0.45)] ring-1 ring-foreground/5 backdrop-blur-xl sm:left-1/2 sm:right-auto sm:w-auto sm:max-w-none sm:-translate-x-1/2 sm:rounded-xl sm:p-2",
         )}
       >
+        {playState !== "idle" ? (
+          <div className="w-full px-1 pb-0.5 sm:hidden" aria-hidden="true">
+            <div className="flex items-center justify-between gap-3">
+              <span className="inline-flex min-w-0 items-center gap-1.5 text-xs font-semibold text-foreground">
+                <Volume2 className="h-3.5 w-3.5 shrink-0 text-accent" />
+                <span className="shrink-0 text-accent">
+                  {playState === "loading" ? "Preparing" : "Now reading"}
+                </span>
+                <span className="truncate font-medium text-muted-foreground">
+                  {articleTitle}
+                </span>
+              </span>
+              {chunkCount > 0 ? (
+                <span className="text-[0.68rem] tabular-nums text-muted-foreground">
+                  {Math.min(activeChunkIndex + 1, chunkCount)} / {chunkCount}
+                </span>
+              ) : null}
+            </div>
+            <div className="mt-1 h-1 overflow-hidden rounded-full bg-muted">
+              <span
+                className="block h-full rounded-full bg-accent transition-[width] duration-300"
+                style={{
+                  width: `${chunkCount > 0 ? ((activeChunkIndex + 1) / chunkCount) * 100 : 0}%`,
+                }}
+              />
+            </div>
+          </div>
+        ) : null}
         {playState === "idle" ? (
           <button
             type="button"
@@ -557,22 +800,44 @@ export function ArticleTools({
           </button>
         ) : null}
         {playState === "loading" ? (
-          <button
-            type="button"
-            disabled
-            aria-label="Preparing audio"
-            className={cn(toolButtonClass, primaryToolClass, "opacity-70")}
-          >
-            <Volume2 aria-hidden="true" className="h-4 w-4 animate-pulse" />
-            Preparing…
-          </button>
+          <>
+            <div
+              role="status"
+              aria-label="Preparing audio"
+              className={cn(
+                toolButtonClass,
+                primaryToolClass,
+                "flex-1 rounded-xl opacity-70 sm:flex-none sm:rounded-md",
+              )}
+            >
+              <Volume2 aria-hidden="true" className="h-4 w-4 animate-pulse" />
+              Preparing…
+            </div>
+            <button
+              type="button"
+              onClick={handleStop}
+              aria-label="Cancel audio preparation"
+              className={cn(
+                toolButtonClass,
+                secondaryToolClass,
+                "rounded-xl px-3 sm:rounded-md sm:px-4",
+              )}
+            >
+              <Square aria-hidden="true" className="h-4 w-4" />
+              Cancel
+            </button>
+          </>
         ) : null}
         {playState === "playing" ? (
           <button
             type="button"
             onClick={handlePause}
             aria-label="Pause reading"
-            className={cn(toolButtonClass, secondaryToolClass)}
+            className={cn(
+              toolButtonClass,
+              primaryToolClass,
+              "flex-1 rounded-xl px-3 sm:flex-none sm:rounded-md sm:px-4",
+            )}
           >
             <Pause aria-hidden="true" className="h-4 w-4" />
             Pause
@@ -583,7 +848,11 @@ export function ArticleTools({
             type="button"
             onClick={handleResume}
             aria-label="Resume reading"
-            className={cn(toolButtonClass, secondaryToolClass)}
+            className={cn(
+              toolButtonClass,
+              primaryToolClass,
+              "flex-1 rounded-xl px-3 sm:flex-none sm:rounded-md sm:px-4",
+            )}
           >
             <Play aria-hidden="true" className="h-4 w-4" />
             Resume
@@ -595,7 +864,11 @@ export function ArticleTools({
               type="button"
               onClick={handlePlaybackRate}
               aria-label={`Playback speed ${playbackRate} times. Press to increase speed.`}
-              className={cn(toolButtonClass, secondaryToolClass)}
+              className={cn(
+                toolButtonClass,
+                secondaryToolClass,
+                "min-w-[4.5rem] rounded-xl px-3 tabular-nums sm:rounded-md sm:px-4",
+              )}
             >
               {playbackRate}×
             </button>
@@ -603,7 +876,11 @@ export function ArticleTools({
               type="button"
               onClick={handleStop}
               aria-label="Stop reading"
-              className={cn(toolButtonClass, secondaryToolClass)}
+              className={cn(
+                toolButtonClass,
+                secondaryToolClass,
+                "flex-1 rounded-xl px-3 sm:flex-none sm:rounded-md sm:px-4",
+              )}
             >
               <Square aria-hidden="true" className="h-4 w-4" />
               Stop

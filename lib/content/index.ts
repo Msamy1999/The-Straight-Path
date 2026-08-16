@@ -633,6 +633,84 @@ const getCachedArticlesByCategory = cache(
   },
 );
 
+/**
+ * Category cards only need article metadata. Keeping this query separate from
+ * `getArticlesByCategory` prevents every long section body from being read,
+ * mapped, and retained just to render a title and two-line summary.
+ */
+const getCachedArticleSummaryDocsByCategory = unstable_cache(
+  async (category: CategorySlug, includeDrafts: boolean) => {
+    const payload = await getClient();
+
+    const result = await payload.find({
+      collection: "articles",
+      where: {
+        and: [
+          { category: { equals: category } },
+          ...(includeDrafts ? [] : [{ status: { equals: "published" } }]),
+        ],
+      },
+      sort: "createdAt",
+      pagination: false,
+      depth: 0,
+      select: {
+        slug: true,
+        title: true,
+        category: true,
+        audienceLevel: true,
+        summary: true,
+        tags: true,
+        status: true,
+        lastUpdated: true,
+      },
+    });
+
+    return result.docs;
+  },
+  ["article-summaries-by-category"],
+  contentCacheOptions,
+);
+
+function mapArticleSummary(doc: {
+  slug: string;
+  title: string;
+  category: CategorySlug;
+  audienceLevel: Article["audienceLevel"];
+  summary: string;
+  tags?: TopicTag[] | null;
+  status: Article["status"];
+  lastUpdated: string;
+}): Article {
+  return {
+    slug: doc.slug,
+    title: cleanEditorialText(doc.title),
+    subtitle: "",
+    category: doc.category,
+    audienceLevel: doc.audienceLevel,
+    summary: cleanEditorialText(doc.summary),
+    tags: doc.tags ?? [],
+    status: doc.status,
+    lastUpdated: doc.lastUpdated.slice(0, 10),
+    sections: [],
+    citations: [],
+    relatedArticles: [],
+  };
+}
+
+export async function getArticleSummariesByCategory(
+  category: CategorySlug,
+  options: GetArticlesOptions = {},
+): Promise<Article[]> {
+  const docs = await getCachedArticleSummaryDocsByCategory(
+    category,
+    options.includeDrafts ?? true,
+  );
+
+  return docs
+    .map((doc) => mapArticleSummary(doc as unknown as Parameters<typeof mapArticleSummary>[0]))
+    .filter((article) => isVisibleArticle(article.slug));
+}
+
 export async function getArticlesByCategory(
   category: CategorySlug,
   options: GetArticlesOptions = {},
@@ -683,6 +761,19 @@ const getCachedRelatedArticleDocs = unstable_cache(
       where: (clauses.length === 1 ? clauses[0] : { or: clauses }) as never,
       pagination: false,
       depth: 0,
+      // Related cards never render article bodies. Some of those bodies are
+      // tens of kilobytes, so selecting metadata avoids unrelated SQLite I/O
+      // and mapping work on a cold article request.
+      select: {
+        slug: true,
+        title: true,
+        category: true,
+        audienceLevel: true,
+        summary: true,
+        tags: true,
+        status: true,
+        lastUpdated: true,
+      },
     });
 
     return result.docs;
@@ -709,7 +800,9 @@ export async function getRelatedArticles(
 
   const byReference = new Map<string, Article>();
   for (const doc of docs) {
-    const mapped = mapArticle(doc as unknown as ArticleDoc);
+    const mapped = mapArticleSummary(
+      doc as unknown as Parameters<typeof mapArticleSummary>[0],
+    );
     byReference.set(mapped.slug, mapped);
     if ("id" in doc) {
       byReference.set(String((doc as { id: unknown }).id), mapped);
@@ -964,6 +1057,24 @@ export const getArticleKeyScripture = cache(
   },
 );
 
+const getCachedComparisonArticleSlugs = unstable_cache(
+  async () => {
+    const payload = await getClient();
+    const result = await payload.find({
+      collection: "comparison-articles",
+      pagination: false,
+      depth: 0,
+      select: { slug: true },
+    });
+
+    return result.docs
+      .map((doc) => (typeof doc.slug === "string" ? doc.slug : undefined))
+      .filter((slug): slug is string => Boolean(slug));
+  },
+  ["comparison-article-slugs"],
+  contentCacheOptions,
+);
+
 const getCachedComparisonArticleDoc = unstable_cache(
   async (slug: string) => {
     const payload = await getClient();
@@ -982,6 +1093,15 @@ const getCachedComparisonArticleDoc = unstable_cache(
 );
 
 export const getComparisonArticleBySlug = cache(async (slug: string) => {
+  // Most research articles use their long-form sections. Check the shared,
+  // metadata-only index first so opening each of them does not issue its own
+  // guaranteed-to-miss query against the comparison collection. The index is
+  // invalidated by the same Payload content hooks as the full record.
+  const comparisonSlugs = await getCachedComparisonArticleSlugs();
+  if (!comparisonSlugs.includes(slug)) {
+    return undefined;
+  }
+
   const doc = (await getCachedComparisonArticleDoc(slug)) as
     | undefined
     | {

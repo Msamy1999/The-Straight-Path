@@ -4,7 +4,6 @@ import { TopicCard } from "@/components/content/TopicCard";
 import { VerseCard } from "@/components/content/VerseCard";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Card } from "@/components/ui/Card";
-import { buildComparisonPlainText } from "@/lib/article-text";
 import { categoryIconMap, fallbackCategoryIcon } from "@/lib/category-icons";
 import type {
   Article,
@@ -40,7 +39,6 @@ export function ComparisonArticleLayout({
       citations={citations}
       relatedArticles={relatedArticles}
       treeBreadcrumbs={treeBreadcrumbs}
-      plainText={buildComparisonPlainText(article, comparison)}
       tocItems={[
         { id: "main-question", title: "Main question" },
         { id: "scripture-preview", title: "Scripture preview" },
@@ -55,20 +53,24 @@ export function ComparisonArticleLayout({
       ]}
     >
       <section id="main-question" className="scroll-mt-20">
+        <div data-read-aloud-block>
         <PageHeader
           titleAs="h2"
           eyebrow="Main question"
           title={comparison.mainQuestion}
         />
+        </div>
       </section>
 
       <section id="scripture-preview" className="scroll-mt-20">
+        <div data-read-aloud-block>
         <PageHeader
           titleAs="h2"
           eyebrow="Scripture preview"
           title="Key passages"
           subtitle="Read the relevant passages before weighing the interpretations offered below."
         />
+        </div>
         <div className="mt-6 grid gap-4 lg:grid-cols-2">
           {comparison.quranVerses.map((verse) => (
             <VerseCard key={`${verse.reference}-${verse.translator}`} verse={verse} />
@@ -97,12 +99,14 @@ export function ComparisonArticleLayout({
       </section>
 
       <section id="historical-context" className="scroll-mt-20">
+        <div data-read-aloud-block>
         <PageHeader
           titleAs="h2"
           eyebrow="Historical context"
           title="Context before conclusions"
           subtitle={comparison.historicalContext}
         />
+        </div>
       </section>
 
       <section id="interpretations" className="scroll-mt-20">
@@ -122,15 +126,21 @@ export function ComparisonArticleLayout({
       </section>
 
       <section id="key-differences" className="scroll-mt-20">
+        <div data-read-aloud-block>
         <PageHeader
-            titleAs="h2"
-            eyebrow="Key differences"
+          titleAs="h2"
+          eyebrow="Key differences"
           title="Key differences"
           subtitle="The central differences between the two perspectives."
         />
+        </div>
         <div className="mt-5 grid gap-3">
           {comparison.keyDifferences.map((difference) => (
-            <Card key={difference} className="p-4 text-sm leading-7 text-muted-foreground">
+            <Card
+              key={difference}
+              data-read-aloud-block
+              className="p-4 text-sm leading-7 text-muted-foreground"
+            >
               {difference}
             </Card>
           ))}
@@ -138,15 +148,17 @@ export function ComparisonArticleLayout({
       </section>
 
       <section id="common-objections" className="scroll-mt-20">
+        <div data-read-aloud-block>
         <PageHeader
           titleAs="h2"
           eyebrow="Common objections"
           title="Common questions"
           subtitle="Questions readers often raise about this comparison."
         />
+        </div>
         <div className="mt-5 space-y-4">
           {comparison.commonObjections.map((item) => (
-            <Card key={item.objection} className="p-4">
+            <Card key={item.objection} data-read-aloud-block className="p-4">
               <h3 className="select-text text-lg leading-snug">{item.objection}</h3>
               <p className="mt-2 select-text text-sm text-muted-foreground">{item.response}</p>
             </Card>
@@ -154,13 +166,18 @@ export function ComparisonArticleLayout({
         </div>
       </section>
 
-      <section id="respectful-conclusion" className="scroll-mt-20">
+      <section id="respectful-conclusion" className="scroll-mt-20" data-read-aloud-block>
         <Callout type="respectful-reminder" title="Respectful conclusion">
           {comparison.respectfulConclusion}
         </Callout>
       </section>
 
-      <section id="related-topics" className="scroll-mt-20">
+      <section
+        id="related-topics"
+        className="scroll-mt-20"
+        data-read-aloud-block
+        data-read-aloud-exclude
+      >
         <PageHeader
           titleAs="h2"
           eyebrow="Related topics"

@@ -6,7 +6,7 @@ import { Section } from "@/components/layout/Section";
 import { Tag } from "@/components/ui/Tag";
 import { categoryIconMap, fallbackCategoryIcon } from "@/lib/category-icons";
 import {
-  getArticlesByCategory,
+  getArticleSummariesByCategory,
   getRelatedCategories,
   isIslamChristianityCategorySlug,
 } from "@/lib/content";
@@ -20,7 +20,7 @@ type CategoryPageProps = {
 export async function CategoryPage({ category }: CategoryPageProps) {
   const Icon = categoryIconMap[category.icon] ?? fallbackCategoryIcon;
   const relatedCategories = await getRelatedCategories(category);
-  const draftArticles = await getArticlesByCategory(category.slug);
+  const draftArticles = await getArticleSummariesByCategory(category.slug);
   const isIslamChristianityBranch = isIslamChristianityCategorySlug(
     category.slug,
   );
