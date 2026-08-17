@@ -351,14 +351,18 @@ function ArticleSectionBody({
                       <span
                         lang="ar"
                         dir="rtl"
-                        className="block text-right text-xl leading-loose text-accent sm:text-2xl"
+                        translate="no"
+                        data-quran-original
+                        className="notranslate block text-right text-xl leading-loose text-accent sm:text-2xl"
                       >
                         {quote.text.normalize("NFC")}
                       </span>
                       <span
                         lang="ar"
                         dir="rtl"
-                        className="mt-1 block text-right text-xs font-semibold text-accent sm:text-sm"
+                        translate="no"
+                        data-quran-original
+                        className="notranslate mt-1 block text-right text-xs font-semibold text-accent sm:text-sm"
                       >
                         {quote.label}
                       </span>
@@ -624,10 +628,15 @@ function passageAlreadyQuoted(
     value.normalize("NFC").replace(/[\s“”‘’"']/g, "").toLowerCase();
   const normalizedBody = normalize(body);
   if (verse.scripture === "quran") {
+    const containsFullInlineQuote =
+      (body.match(/\p{Script=Arabic}/gu)?.length ?? 0) >= 20 &&
+      normalizedBody.includes(normalize(verse.translation)) &&
+      textMentionsScriptureReference(body, verse.reference);
     return (
-      normalize(verse.arabic).length > 20 &&
-      normalizedBody.includes(normalize(verse.arabic)) &&
-      normalizedBody.includes(normalize(verse.translation))
+      containsFullInlineQuote ||
+      (normalize(verse.arabic).length > 20 &&
+        normalizedBody.includes(normalize(verse.arabic)) &&
+        normalizedBody.includes(normalize(verse.translation)))
     );
   }
   return normalize(verse.text).length > 30 && normalizedBody.includes(normalize(verse.text));

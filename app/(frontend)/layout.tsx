@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { ArticleAudioProvider } from "@/components/audio/ArticleAudioProvider";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
+import { NavigationLoadingIndicator } from "@/components/layout/NavigationLoadingIndicator";
 import { ServiceWorkerRegistration } from "@/components/pwa/ServiceWorkerRegistration";
 import { absoluteUrl, siteDescription, siteName } from "@/lib/site-config";
 import "./globals.css";
@@ -91,6 +92,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           Skip to content
         </a>
         <ArticleAudioProvider>
+          <NavigationLoadingIndicator />
           <div className="flex min-h-screen flex-col">
             <ServiceWorkerRegistration />
             <SiteHeader />

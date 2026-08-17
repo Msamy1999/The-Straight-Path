@@ -19,7 +19,9 @@ export function VerseCard({ verse, className }: VerseCardProps) {
         <p
           lang="ar"
           dir="rtl"
-          className="mt-2 text-right text-[1.45rem] leading-[1.65] text-accent sm:mt-4 sm:text-3xl sm:leading-loose"
+          translate="no"
+          data-quran-original
+          className="notranslate mt-2 text-right text-[1.45rem] leading-[1.65] text-accent sm:mt-4 sm:text-3xl sm:leading-loose"
         >
           {verse.arabic.normalize("NFC")}
         </p>
@@ -27,7 +29,9 @@ export function VerseCard({ verse, className }: VerseCardProps) {
           <p
             lang="ar"
             dir="rtl"
-            className="mt-1 text-right text-xs font-semibold leading-6 text-accent sm:mt-2 sm:text-sm"
+            translate="no"
+            data-quran-original
+            className="notranslate mt-1 text-right text-xs font-semibold leading-6 text-accent sm:mt-2 sm:text-sm"
           >
             {arabicReference}
           </p>

@@ -61,7 +61,7 @@ const MAX_RESTORE_AGE_MS = 7 * 24 * 60 * 60 * 1_000;
 const STORAGE_KEY = "straight-path-article-playback-v1";
 const KEEP_ALIVE_MS = 10_000;
 const VOICE_RETRY_MS = 400;
-const PREVIOUS_ARTICLE_WINDOW_MS = 4_000;
+const CHUNK_PRELOAD_INTERVAL_MS = 5_600;
 const NEURAL_VOICE = "en-US-GuyNeural";
 const PLAYBACK_RATES = [1, 1.25, 1.5, 1.75, 2] as const;
 const SILENT_WAV =
@@ -149,9 +149,8 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     useState<PersistedArticle | null>(null);
   const [playbackRate, setPlaybackRate] = useState(1);
   const [activeChunkIndex, setActiveChunkIndex] = useState(0);
-  const [chunkCount, setChunkCount] = useState(0);
+  const [, setChunkCount] = useState(0);
   const [progress, setProgress] = useState(0);
-  const [backAtBeginning, setBackAtBeginning] = useState(false);
   const [activeReadAlongElement, setActiveReadAlongElement] =
     useState<HTMLElement | null>(null);
 
@@ -170,7 +169,8 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
   const engineRef = useRef<"neural" | "system">("neural");
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const objectUrlRef = useRef<string | null>(null);
-  const prefetchRef = useRef<Promise<Blob> | null>(null);
+  const chunkBlobCacheRef = useRef(new Map<number, Promise<Blob>>());
+  const chunkAudioPreloadTimerRef = useRef<number | null>(null);
   const abortRef = useRef<AbortController | null>(null);
   const playbackRateRef = useRef(1);
   const activeReadAlongElementRef = useRef<HTMLElement | null>(null);
@@ -187,8 +187,6 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
   const persistThrottleRef = useRef(0);
   const preloadTimerRef = useRef<number | null>(null);
   const prefetchedArticleHrefsRef = useRef(new Set<string>());
-  const backAtBeginningRef = useRef(false);
-  const backAtBeginningTimerRef = useRef<number | null>(null);
 
   const registerImplementationRef = useRef<
     (registration: ArticlePlaybackRegistration) => () => void
@@ -256,24 +254,12 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     }
   }
 
-  function clearBackAtBeginning() {
-    if (backAtBeginningTimerRef.current !== null) {
-      window.clearTimeout(backAtBeginningTimerRef.current);
-      backAtBeginningTimerRef.current = null;
+  function clearChunkAudioPreload() {
+    if (chunkAudioPreloadTimerRef.current !== null) {
+      window.clearTimeout(chunkAudioPreloadTimerRef.current);
+      chunkAudioPreloadTimerRef.current = null;
     }
-    backAtBeginningRef.current = false;
-    setBackAtBeginning(false);
-  }
-
-  function openPreviousArticleWindow() {
-    clearBackAtBeginning();
-    backAtBeginningRef.current = true;
-    setBackAtBeginning(true);
-    backAtBeginningTimerRef.current = window.setTimeout(() => {
-      backAtBeginningRef.current = false;
-      setBackAtBeginning(false);
-      backAtBeginningTimerRef.current = null;
-    }, PREVIOUS_ARTICLE_WINDOW_MS);
+    chunkBlobCacheRef.current.clear();
   }
 
   function preloadArticleSequence(article: PersistedArticle) {
@@ -333,11 +319,10 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     stoppedRef.current = true;
     abortRef.current?.abort();
     abortRef.current = null;
-    prefetchRef.current = null;
+    clearChunkAudioPreload();
     clearKeepAlive();
     clearSystemStartedTimer();
     clearPreloadSequence();
-    clearBackAtBeginning();
     const audio = audioRef.current;
     if (audio) {
       audio.pause();
@@ -409,6 +394,64 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     });
   }
 
+  function getChunkBlob(
+    chunks: SpeechChunk[],
+    index: number,
+    signal: AbortSignal,
+  ): Promise<Blob> {
+    const cached = chunkBlobCacheRef.current.get(index);
+    if (cached) return cached;
+
+    const request = fetchChunkBlob(chunks[index].text, signal).catch((error) => {
+      chunkBlobCacheRef.current.delete(index);
+      throw error;
+    });
+    chunkBlobCacheRef.current.set(index, request);
+    return request;
+  }
+
+  function startChunkAudioPreload(
+    chunks: SpeechChunk[],
+    startIndex: number,
+    session: number,
+  ) {
+    if (chunkAudioPreloadTimerRef.current !== null) {
+      window.clearTimeout(chunkAudioPreloadTimerRef.current);
+    }
+    let index = startIndex;
+
+    const preloadNext = async () => {
+      if (
+        session !== sessionRef.current ||
+        stoppedRef.current ||
+        index >= chunks.length ||
+        !abortRef.current
+      ) {
+        chunkAudioPreloadTimerRef.current = null;
+        return;
+      }
+
+      const currentIndex = index;
+      index += 1;
+      try {
+        await getChunkBlob(chunks, currentIndex, abortRef.current.signal);
+      } catch {
+        // Playback retries a failed preload when that paragraph is reached.
+      }
+
+      if (session === sessionRef.current && !stoppedRef.current) {
+        chunkAudioPreloadTimerRef.current = window.setTimeout(
+          preloadNext,
+          CHUNK_PRELOAD_INTERVAL_MS,
+        );
+      }
+    };
+
+    // Start building the offline-ready queue immediately, without waiting for
+    // the current paragraph to end. The spacing stays within the TTS limiter.
+    chunkAudioPreloadTimerRef.current = window.setTimeout(preloadNext, 250);
+  }
+
   function updateProgress(index: number, fraction: number) {
     const count = currentChunksRef.current.length;
     const safeFraction = Math.max(0, Math.min(1, fraction));
@@ -445,16 +488,7 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     }
 
     const signal = abortRef.current?.signal as AbortSignal;
-    const blob = await (
-      prefetchRef.current ?? fetchChunkBlob(chunks[index].text, signal)
-    );
-    prefetchRef.current =
-      index + 1 < chunks.length
-        ? fetchChunkBlob(chunks[index + 1].text, signal).catch(() => {
-            prefetchRef.current = null;
-            return fetchChunkBlob(chunks[index + 1].text, signal);
-          })
-        : null;
+    const blob = await getChunkBlob(chunks, index, signal);
 
     if (session !== sessionRef.current || stoppedRef.current) return;
 
@@ -573,7 +607,6 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     articleHasStartedRef.current = index > 0 || (options.fraction ?? 0) > 0.08;
     stoppedRef.current = false;
     abortRef.current = new AbortController();
-    prefetchRef.current = null;
     engineRef.current = "neural";
     updatePlayState("loading");
 
@@ -582,6 +615,7 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     preloadArticleSequence(articleWithoutChunks(registration));
 
     const session = sessionRef.current;
+    startChunkAudioPreload(chunks, index + 1, session);
     if (options.unlock) {
       const audio = getAudio();
       audio.src = SILENT_WAV;
@@ -667,29 +701,92 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     if (article) navigateToArticle(article, true);
   }
 
-  function handlePrevious() {
+  function paragraphStartIndex(chunks: SpeechChunk[], index: number): number {
+    const safeIndex = Math.max(0, Math.min(index, chunks.length - 1));
+    const owner = chunks[safeIndex]?.owner;
+    if (!owner) return safeIndex;
+    let start = safeIndex;
+    while (start > 0 && chunks[start - 1]?.owner === owner) start -= 1;
+    return start;
+  }
+
+  function previousParagraphIndex(
+    chunks: SpeechChunk[],
+    index: number,
+  ): number | null {
+    const start = paragraphStartIndex(chunks, index);
+    return start > 0 ? paragraphStartIndex(chunks, start - 1) : null;
+  }
+
+  function nextParagraphIndex(
+    chunks: SpeechChunk[],
+    index: number,
+  ): number | null {
+    if (chunks.length === 0) return null;
+    const owner = chunks[Math.max(0, Math.min(index, chunks.length - 1))]?.owner;
+    let next = index + 1;
+    if (owner) {
+      while (next < chunks.length && chunks[next]?.owner === owner) next += 1;
+    }
+    return next < chunks.length ? next : null;
+  }
+
+  function seekToChunk(index: number) {
     const registration = currentRegistrationRef.current;
     const chunks = currentChunksRef.current;
-    const previous = currentArticleRef.current?.previous;
-    if (backAtBeginningRef.current) {
-      if (previous) navigateToArticle(previous, true);
+    if (!registration || chunks.length === 0 || !abortRef.current) return;
+
+    sessionRef.current += 1;
+    const session = sessionRef.current;
+    stoppedRef.current = false;
+    clearKeepAlive();
+    clearSystemStartedTimer();
+    const audio = audioRef.current;
+    if (audio) {
+      audio.pause();
+      audio.onended = null;
+      audio.onerror = null;
+      audio.ontimeupdate = null;
+      audio.onloadedmetadata = null;
+      audio.removeAttribute("src");
+      audio.load();
+    }
+    releaseObjectUrl();
+    if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+
+    pendingSeekFractionRef.current = 0;
+    chunkFractionRef.current = 0;
+    updateChunkIndex(index);
+    updateProgress(index, 0);
+    updatePlayState("loading");
+    engineRef.current = "neural";
+    startChunkAudioPreload(chunks, index + 1, session);
+    void playNeuralChunk(chunks, index, session).catch(() => {
+      if (session === sessionRef.current && !stoppedRef.current) {
+        startSystemFallback(chunks, index, session);
+      }
+    });
+    persistPlayback(true);
+  }
+
+  function handlePrevious() {
+    const chunks = currentChunksRef.current;
+    if (chunks.length === 0) return;
+    const currentStart = paragraphStartIndex(chunks, currentChunkIndexRef.current);
+    const paragraphHasStarted =
+      currentChunkIndexRef.current > currentStart || chunkFractionRef.current > 0.08;
+    if (paragraphHasStarted) {
+      seekToChunk(currentStart);
       return;
     }
-    if (
-      registration &&
-      chunks.length > 0 &&
-      (articleHasStartedRef.current || currentChunkIndexRef.current > 0)
-    ) {
-      beginPlayback(registration, chunks, { index: 0, unlock: true });
-      openPreviousArticleWindow();
-      return;
-    }
-    if (previous) navigateToArticle(previous, true);
+    const previous = previousParagraphIndex(chunks, currentChunkIndexRef.current);
+    if (previous !== null) seekToChunk(previous);
   }
 
   function handleNext() {
-    const next = currentArticleRef.current?.next;
-    if (next) navigateToArticle(next, true);
+    const chunks = currentChunksRef.current;
+    const next = nextParagraphIndex(chunks, currentChunkIndexRef.current);
+    if (next !== null) seekToChunk(next);
   }
 
   function handleStop() {
@@ -962,9 +1059,21 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     [currentArticle?.slug, playState, registerArticle, startArticle],
   );
 
-  const atBeginning =
-    backAtBeginning ||
-    (!articleHasStartedRef.current && activeChunkIndex === 0 && progress < 2);
+  const paragraphStarts = currentChunksRef.current.reduce<number[]>((starts, chunk, index, chunks) => {
+    if (index === 0 || !chunk.owner || chunk.owner !== chunks[index - 1]?.owner) {
+      starts.push(index);
+    }
+    return starts;
+  }, []);
+  const currentParagraphPosition = Math.max(
+    0,
+    paragraphStarts.findLastIndex((start) => start <= activeChunkIndex),
+  );
+  const currentParagraphStart = paragraphStarts[currentParagraphPosition] ?? 0;
+  const currentParagraphHasStarted =
+    activeChunkIndex > currentParagraphStart || chunkFractionRef.current > 0.08;
+  const canGoBack = currentParagraphHasStarted || currentParagraphPosition > 0;
+  const canGoForward = currentParagraphPosition + 1 < paragraphStarts.length;
 
   return (
     <ArticleAudioContext.Provider value={contextValue}>
@@ -986,9 +1095,9 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
                   {currentArticle.title}
                 </span>
               </span>
-              {chunkCount > 0 ? (
+              {paragraphStarts.length > 0 ? (
                 <span className="shrink-0 text-[0.68rem] tabular-nums text-muted-foreground sm:text-xs">
-                  {Math.min(activeChunkIndex + 1, chunkCount)} / {chunkCount}
+                  {Math.min(currentParagraphPosition + 1, paragraphStarts.length)} / {paragraphStarts.length}
                 </span>
               ) : null}
             </div>
@@ -1011,22 +1120,18 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
             <button
               type="button"
               onClick={handlePrevious}
-              disabled={atBeginning && !currentArticle.previous}
-              aria-label={
-                atBeginning
-                  ? `Previous article${currentArticle.previous ? `: ${currentArticle.previous.title}` : ""}`
-                  : "Restart current article"
-              }
-              title={atBeginning ? "Previous article" : "Restart article"}
+              disabled={!canGoBack}
+              aria-label={currentParagraphHasStarted ? "Restart current paragraph" : "Previous paragraph"}
+              title={currentParagraphHasStarted ? "Restart paragraph" : "Previous paragraph"}
               className={cn(toolButtonClass, secondaryToolClass, "min-w-11 px-3")}
             >
-              {atBeginning ? (
-                <SkipBack aria-hidden="true" className="h-4 w-4" />
-              ) : (
+              {currentParagraphHasStarted ? (
                 <RotateCcw aria-hidden="true" className="h-4 w-4" />
+              ) : (
+                <SkipBack aria-hidden="true" className="h-4 w-4" />
               )}
               <span className="hidden md:inline">
-                {atBeginning ? "Back" : "Restart"}
+                {currentParagraphHasStarted ? "Restart" : "Back"}
               </span>
             </button>
 
@@ -1067,9 +1172,9 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
             <button
               type="button"
               onClick={handleNext}
-              disabled={!currentArticle.next}
-              aria-label={`Next article${currentArticle.next ? `: ${currentArticle.next.title}` : ""}`}
-              title="Next article"
+              disabled={!canGoForward}
+              aria-label="Next paragraph"
+              title="Next paragraph"
               className={cn(toolButtonClass, secondaryToolClass, "min-w-11 px-3")}
             >
               <SkipForward aria-hidden="true" className="h-4 w-4" />

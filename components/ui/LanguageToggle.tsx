@@ -1,6 +1,6 @@
 "use client";
 
-import { Languages } from "lucide-react";
+import { Languages, LoaderCircle } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -167,6 +167,21 @@ function hideGoogleOverlays() {
     });
 }
 
+function protectOriginalQuranText() {
+  document.querySelectorAll<HTMLElement>("[data-quran-original]").forEach((element) => {
+    element.classList.add("notranslate");
+    element.setAttribute("translate", "no");
+  });
+}
+
+function waitForTranslationPaint() {
+  return new Promise<void>((resolve) => {
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => window.setTimeout(resolve, 450));
+    });
+  });
+}
+
 function broadcastLanguage(language: SupportedLanguage) {
   window.dispatchEvent(new CustomEvent<SupportedLanguage>(LANGUAGE_EVENT, { detail: language }));
 }
@@ -174,6 +189,7 @@ function broadcastLanguage(language: SupportedLanguage) {
 export function LanguageToggle({ className }: { className?: string }) {
   const [language, setLanguage] = useState<SupportedLanguage>("en");
   const [isLoading, setIsLoading] = useState(false);
+  const [pendingLanguage, setPendingLanguage] = useState<SupportedLanguage | null>(null);
   const languageRef = useRef<SupportedLanguage>("en");
 
   useEffect(() => {
@@ -181,6 +197,7 @@ export function LanguageToggle({ className }: { className?: string }) {
     languageRef.current = saved;
     setLanguage(saved);
     setDirection(saved);
+    protectOriginalQuranText();
 
     const handleLanguageChange = (event: Event) => {
       const next = (event as CustomEvent<SupportedLanguage>).detail;
@@ -192,7 +209,18 @@ export function LanguageToggle({ className }: { className?: string }) {
     window.addEventListener(LANGUAGE_EVENT, handleLanguageChange);
 
     if (saved === "ar") {
-      void loadGoogleTranslate().then(() => applyGoogleLanguageWhenReady("ar").then(hideGoogleOverlays));
+      setPendingLanguage("ar");
+      setIsLoading(true);
+      void loadGoogleTranslate()
+        .then(() => applyGoogleLanguageWhenReady("ar"))
+        .then(async () => {
+          hideGoogleOverlays();
+          await waitForTranslationPaint();
+        })
+        .finally(() => {
+          setPendingLanguage(null);
+          setIsLoading(false);
+        });
     }
 
     return () => window.removeEventListener(LANGUAGE_EVENT, handleLanguageChange);
@@ -200,12 +228,10 @@ export function LanguageToggle({ className }: { className?: string }) {
 
   const toggleLanguage = useCallback(async () => {
     if (isLoading) return;
-    const next: SupportedLanguage = languageRef.current === "en" ? "ar" : "en";
-    languageRef.current = next;
-    setLanguage(next);
-    setDirection(next);
-    saveLanguage(next);
-    broadcastLanguage(next);
+    const previous = languageRef.current;
+    const next: SupportedLanguage = previous === "en" ? "ar" : "en";
+    protectOriginalQuranText();
+    setPendingLanguage(next);
     setIsLoading(true);
 
     try {
@@ -213,17 +239,46 @@ export function LanguageToggle({ className }: { className?: string }) {
       const applied = await applyGoogleLanguageWhenReady(next);
       hideGoogleOverlays();
       if (!applied) {
+        saveLanguage(next);
         window.location.reload();
+        return;
       }
+      await waitForTranslationPaint();
+      languageRef.current = next;
+      setLanguage(next);
+      setDirection(next);
+      saveLanguage(next);
+      broadcastLanguage(next);
     } catch {
-      // The preference remains saved. Retrying the button will load the provider again.
+      languageRef.current = previous;
+      setLanguage(previous);
+      setDirection(previous);
+      saveLanguage(previous);
     } finally {
+      setPendingLanguage(null);
       setIsLoading(false);
     }
   }, [isLoading]);
 
+  const loadingLabel = pendingLanguage === "ar" ? "Switching to Arabic…" : "Switching to English…";
+
   return (
-    <button
+    <>
+      {isLoading && pendingLanguage ? (
+        <div
+          role="status"
+          aria-live="assertive"
+          aria-label={loadingLabel}
+          translate="no"
+          className="notranslate fixed inset-0 z-[100] grid place-items-center bg-background/85 px-6 backdrop-blur-sm"
+        >
+          <div className="flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4 font-semibold text-foreground shadow-soft">
+            <LoaderCircle aria-hidden="true" className="h-5 w-5 animate-spin text-accent" />
+            <span>{loadingLabel}</span>
+          </div>
+        </div>
+      ) : null}
+      <button
       type="button"
       translate="no"
       dir={language === "ar" ? "rtl" : "ltr"}
@@ -235,8 +290,15 @@ export function LanguageToggle({ className }: { className?: string }) {
         className,
       )}
     >
-      <Languages aria-hidden="true" className="h-4 w-4" />
-      <span lang={language === "en" ? "ar" : "en"}>{isLoading ? "…" : language === "en" ? "العربية" : "English"}</span>
-    </button>
+        {isLoading ? (
+          <LoaderCircle aria-hidden="true" className="h-4 w-4 animate-spin" />
+        ) : (
+          <Languages aria-hidden="true" className="h-4 w-4" />
+        )}
+        <span lang={language === "en" ? "ar" : "en"}>
+          {isLoading ? "Loading" : language === "en" ? "العربية" : "English"}
+        </span>
+      </button>
+    </>
   );
 }

@@ -193,6 +193,7 @@ export function ArticleTools({
   articleSubtitle,
   previous,
   next,
+  playlist,
   className,
 }: ArticleToolsProps) {
   const { registerArticle, startArticle, activeSlug, playState } =
@@ -212,9 +213,10 @@ export function ArticleTools({
       href: `/articles/${articleSlug}`,
       previous,
       next,
+      playlist,
       getChunks,
     }),
-    [articleSlug, articleSubtitle, articleTitle, getChunks, next, previous],
+    [articleSlug, articleSubtitle, articleTitle, getChunks, next, playlist, previous],
   );
 
   useEffect(() => registerArticle(registration), [registerArticle, registration]);

@@ -148,6 +148,15 @@
       "Romans 5:12"
     ]
   },
+  "five-pillars-of-islam": {
+    "quran": [
+      "Quran 47:19",
+      "Quran 2:43",
+      "Quran 2:183",
+      "Quran 3:97"
+    ],
+    "bible": []
+  },
   "forgiveness-in-islam-and-christianity": {
     "quran": [
       "Quran 39:53"
@@ -392,6 +401,13 @@
       "Luke 22:49-51"
     ]
   },
+  "six-pillars-of-faith": {
+    "quran": [
+      "Quran 2:285",
+      "Quran 4:136"
+    ],
+    "bible": []
+  },
   "shirk-explained": {
     "quran": [
       "Quran 4:48"
@@ -518,6 +534,13 @@
       "1 Chronicles 21:1"
     ]
   },
+  "what-are-the-prophets": {
+    "quran": [
+      "Quran 21:25",
+      "Quran 2:136"
+    ],
+    "bible": []
+  },
   "what-is-revelation": {
     "quran": [
       "Quran 42:51"
@@ -544,7 +567,9 @@
   },
   "what-is-tawhid": {
     "quran": [
-      "Quran 112:1"
+      "Quran 112:1",
+      "Quran 21:25",
+      "Quran 42:11"
     ],
     "bible": [
       "Deuteronomy 6:4"
@@ -557,6 +582,13 @@
     "bible": [
       "Matthew 28:19"
     ]
+  },
+  "what-is-the-quran": {
+    "quran": [
+      "Quran 2:2",
+      "Quran 15:9"
+    ],
+    "bible": []
   },
   "what-is-worship": {
     "quran": [
@@ -582,6 +614,13 @@
       "Matthew 26:39"
     ]
   },
+  "who-is-allah": {
+    "quran": [
+      "Quran 112:1",
+      "Quran 59:22"
+    ],
+    "bible": []
+  },
   "who-is-god-quran-and-bible-comparison": {
     "quran": [
       "Quran 112:1"
@@ -599,6 +638,13 @@
       "John 17:3"
     ]
   },
+  "who-is-prophet-muhammad": {
+    "quran": [
+      "Quran 33:40",
+      "Quran 3:144"
+    ],
+    "bible": []
+  },
   "why-would-god-allow-corruption": {
     "quran": [
       "Quran 2:79",
@@ -607,6 +653,13 @@
     "bible": [
       "Jeremiah 8:8"
     ]
+  },
+  "why-islam": {
+    "quran": [
+      "Quran 51:56",
+      "Quran 39:53"
+    ],
+    "bible": []
   },
   "women-in-the-quran-and-bible": {
     "quran": [
@@ -619,6 +672,13 @@
   "womens-worth-classical-voices": {
     "quran": [
       "Quran 33:35"
+    ],
+    "bible": []
+  },
+  "worship-and-daily-life": {
+    "quran": [
+      "Quran 29:45",
+      "Quran 16:90"
     ],
     "bible": []
   },
