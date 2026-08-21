@@ -11,6 +11,10 @@ export default tseslint.config(
       "payload/types/**",
       "payload/**/*.mjs",
       "public/**",
+      // Generated build/report scratch directories, not part of the site.
+      ".codex-spreadsheet-build/**",
+      "outputs/**",
+      "content-drafts/**",
     ],
   },
   js.configs.recommended,

@@ -9,6 +9,7 @@ import { SiteBrand } from "@/components/layout/SiteBrand";
 import { LanguageToggle } from "@/components/ui/LanguageToggle";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { islamChristianityHrefs, primaryNavItems } from "@/lib/navigation";
+import { warmUpTranslation } from "@/lib/translation";
 import { cn } from "@/lib/utils";
 
 export function SiteNavigation() {
@@ -69,6 +70,10 @@ export function SiteNavigation() {
             aria-expanded={isMobileOpen}
             aria-label={isMobileOpen ? "Close navigation menu" : "Open navigation menu"}
             onClick={() => {
+              // The language button lives inside this panel and there is no
+              // hover on touch devices, so opening the menu is the earliest
+              // honest signal of intent to warm the translation widget.
+              if (!isMobileOpen) warmUpTranslation();
               setIsMobileOpen((current) => !current);
               setIsBrowseOpen(false);
             }}

@@ -13,6 +13,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/language-demo",
   },
+  // Internal layout scaffolding: every verse on it is a "source pending"
+  // placeholder, so it must never be indexed or listed in the sitemap.
+  robots: {
+    index: false,
+    follow: false,
+  },
   openGraph: {
     title: "Language Demo",
     description:

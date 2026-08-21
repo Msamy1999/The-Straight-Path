@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { NavigationLoadingIndicator } from "@/components/layout/NavigationLoadingIndicator";
 import { ServiceWorkerRegistration } from "@/components/pwa/ServiceWorkerRegistration";
+import { TranslationProgress } from "@/components/ui/TranslationProgress";
 import { absoluteUrl, siteDescription, siteName } from "@/lib/site-config";
 import "./globals.css";
 
@@ -67,6 +68,24 @@ export const viewport: Viewport = {
   ],
 };
 
+const PRE_PAINT_SCRIPT = `(function(){
+var d=document.documentElement;
+try{var t=localStorage.getItem('theme');d.classList.remove('light','dark');d.classList.add(t==='dark'?'dark':'light');}
+catch(e){d.classList.add('light');}
+try{
+var l=null;try{l=localStorage.getItem('the-straight-path-language');}catch(e){}
+if(l!=='ar'&&l!=='en'){l=document.cookie.indexOf('googtrans=/en/ar')>-1?'ar':'en';}
+d.lang=l;d.dir=l==='ar'?'rtl':'ltr';d.setAttribute('data-language',l);
+if(l==='ar'&&typeof Node==='function'&&Node.prototype&&!window.__straightPathTranslationGuard){
+window.__straightPathTranslationGuard=true;
+var rc=Node.prototype.removeChild;
+Node.prototype.removeChild=function(c){return c&&c.parentNode!==this?c:rc.apply(this,arguments);};
+var ib=Node.prototype.insertBefore;
+Node.prototype.insertBefore=function(n,r){return r&&r.parentNode!==this?n:ib.apply(this,arguments);};
+}
+}catch(e){}
+})();`;
+
 type RootLayoutProps = Readonly<{
   children: ReactNode;
 }>;
@@ -76,13 +95,18 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" className="light" suppressHydrationWarning>
       <body suppressHydrationWarning>
         {/*
-         * Light is the default. Apply a saved dark choice before first paint,
-         * otherwise keep the explicit light class in place.
+         * Runs before first paint so the saved theme and the saved reading
+         * direction are already in place. Deferring the direction to hydration
+         * made every Arabic page load flash left-to-right first.
+         *
+         * When Arabic is the saved language it also installs the DOM guards up
+         * front: the translation widget re-applies itself from its own cookie
+         * during hydration, and an unguarded React commit against its rewritten
+         * text nodes throws and takes the whole client tree down with it.
          */}
         <script
           dangerouslySetInnerHTML={{
-            __html:
-              "(function(){try{var t=localStorage.getItem('theme');var d=document.documentElement;d.classList.remove('light','dark');if(t==='dark'){d.classList.add('dark');}else{d.classList.add('light');}}catch(e){document.documentElement.classList.add('light');}})();",
+            __html: PRE_PAINT_SCRIPT,
           }}
         />
         <a
@@ -93,6 +117,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         </a>
         <ArticleAudioProvider>
           <NavigationLoadingIndicator />
+          <TranslationProgress />
           <div className="flex min-h-screen flex-col">
             <ServiceWorkerRegistration />
             <SiteHeader />

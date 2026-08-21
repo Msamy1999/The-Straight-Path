@@ -1,7 +1,7 @@
 "use client";
 
-import { LoaderCircle } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { Spinner } from "@/components/ui/Spinner";
 import { useEffect, useRef, useState } from "react";
 
 const MAX_LOADING_MS = 20_000;
@@ -81,10 +81,11 @@ export function NavigationLoadingIndicator() {
       role="status"
       aria-live="polite"
       aria-label="Loading page"
-      className="fixed inset-0 z-[60] grid place-items-center bg-background/80 px-6 backdrop-blur-sm"
+      translate="no"
+      className="notranslate fixed inset-0 z-[60] grid place-items-center bg-background/80 px-6 backdrop-blur-sm"
     >
       <div className="flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4 font-semibold text-foreground shadow-soft">
-        <LoaderCircle aria-hidden="true" className="h-5 w-5 animate-spin text-accent" />
+        <Spinner className="h-5 w-5 text-accent" />
         <span>Loading page…</span>
       </div>
     </div>

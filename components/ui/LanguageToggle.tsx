@@ -1,304 +1,92 @@
 "use client";
 
-import { Languages, LoaderCircle } from "lucide-react";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { Languages } from "lucide-react";
+import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
+import { Spinner } from "@/components/ui/Spinner";
 import { cn } from "@/lib/utils";
-
-type SupportedLanguage = "en" | "ar";
-
-type GoogleTranslateApi = {
-  translate?: {
-    TranslateElement: new (
-      options: {
-        autoDisplay: boolean;
-        includedLanguages: string;
-        pageLanguage: string;
-      },
-      elementId: string,
-    ) => unknown;
-  };
-};
-
-const LANGUAGE_STORAGE_KEY = "the-straight-path-language";
-const LANGUAGE_EVENT = "the-straight-path-language-change";
-const GOOGLE_TARGET_ID = "the-straight-path-google-translate";
-
-declare global {
-  interface Window {
-    google?: GoogleTranslateApi;
-    googleTranslateElementInit?: () => void;
-  }
-}
-
-let translateLoader: Promise<void> | null = null;
-
-function readSavedLanguage(): SupportedLanguage {
-  if (typeof window === "undefined" || typeof document === "undefined") {
-    return "en";
-  }
-
-  const saved = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
-  if (saved === "ar" || saved === "en") {
-    return saved;
-  }
-
-  return document.cookie.includes("googtrans=/en/ar") ? "ar" : "en";
-}
-
-function setDirection(language: SupportedLanguage) {
-  document.documentElement.lang = language;
-  document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
-  document.documentElement.dataset.language = language;
-}
-
-function saveLanguage(language: SupportedLanguage) {
-  window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
-  const target = language === "ar" ? "/en/ar" : "/en/en";
-  document.cookie = `googtrans=${target}; path=/; max-age=31536000; SameSite=Lax`;
-}
-
-function ensureGoogleTranslateTarget() {
-  let target = document.getElementById(GOOGLE_TARGET_ID);
-  if (!target) {
-    target = document.createElement("div");
-    target.id = GOOGLE_TARGET_ID;
-    target.className = "sr-only";
-    target.setAttribute("aria-hidden", "true");
-    target.setAttribute("translate", "no");
-    document.body.appendChild(target);
-  }
-}
-
-function loadGoogleTranslate() {
-  if (window.google?.translate?.TranslateElement) {
-    return Promise.resolve();
-  }
-  if (translateLoader) {
-    return translateLoader;
-  }
-
-  ensureGoogleTranslateTarget();
-  translateLoader = new Promise<void>((resolve, reject) => {
-    window.googleTranslateElementInit = () => {
-      try {
-        if (window.google?.translate?.TranslateElement) {
-          new window.google.translate.TranslateElement(
-            { autoDisplay: false, includedLanguages: "ar,en", pageLanguage: "en" },
-            GOOGLE_TARGET_ID,
-          );
-        }
-        resolve();
-      } catch (error) {
-        translateLoader = null;
-        reject(error);
-      }
-    };
-
-    const existingScript = document.querySelector<HTMLScriptElement>(
-      'script[src*="translate.google.com/translate_a/element.js"]',
-    );
-    if (existingScript) {
-      existingScript.addEventListener("error", () => reject(new Error("Translation could not be loaded")), {
-        once: true,
-      });
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-    script.async = true;
-    script.onerror = () => {
-      translateLoader = null;
-      reject(new Error("Translation could not be loaded"));
-    };
-    document.head.appendChild(script);
-  });
-
-  return translateLoader;
-}
-
-function applyGoogleLanguage(language: SupportedLanguage) {
-  const select = document.querySelector<HTMLSelectElement>(".goog-te-combo");
-  const value = language === "ar" ? "ar" : "en";
-  const option = select ? Array.from(select.options).find((item) => item.value === value) : undefined;
-  if (!select || !option) {
-    return false;
-  }
-
-  select.value = value;
-  select.dispatchEvent(new Event("change", { bubbles: true }));
-  return true;
-}
-
-function applyGoogleLanguageWhenReady(language: SupportedLanguage) {
-  return new Promise<boolean>((resolve) => {
-    let attempts = 0;
-    let timer = 0;
-    let finished = false;
-    const finish = (applied: boolean) => {
-      if (finished) return;
-      finished = true;
-      window.clearTimeout(timer);
-      observer.disconnect();
-      resolve(applied);
-    };
-    const tryApply = () => {
-      if (applyGoogleLanguage(language)) {
-        finish(true);
-      } else if (attempts++ >= 80) {
-        finish(false);
-      } else {
-        timer = window.setTimeout(tryApply, 125);
-      }
-    };
-    const observer = new MutationObserver(tryApply);
-    observer.observe(document.body, { childList: true, subtree: true });
-    tryApply();
-  });
-}
-
-function hideGoogleOverlays() {
-  document
-    .querySelectorAll<HTMLElement>("iframe.skiptranslate, .goog-te-banner-frame, body > .skiptranslate")
-    .forEach((element) => {
-      element.style.setProperty("display", "none", "important");
-      element.style.setProperty("visibility", "hidden", "important");
-      element.style.setProperty("pointer-events", "none", "important");
-    });
-}
-
-function protectOriginalQuranText() {
-  document.querySelectorAll<HTMLElement>("[data-quran-original]").forEach((element) => {
-    element.classList.add("notranslate");
-    element.setAttribute("translate", "no");
-  });
-}
-
-function waitForTranslationPaint() {
-  return new Promise<void>((resolve) => {
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => window.setTimeout(resolve, 450));
-    });
-  });
-}
-
-function broadcastLanguage(language: SupportedLanguage) {
-  window.dispatchEvent(new CustomEvent<SupportedLanguage>(LANGUAGE_EVENT, { detail: language }));
-}
+import {
+  getServerTranslationRun,
+  getTranslationRun,
+  guardReactAgainstTranslation,
+  LANGUAGE_EVENT,
+  persistLanguage,
+  protectOriginalScripture,
+  readSavedLanguage,
+  requestLanguage,
+  setDocumentLanguage,
+  subscribeToTranslationRun,
+  warmUpTranslation,
+  type SupportedLanguage,
+} from "@/lib/translation";
 
 export function LanguageToggle({ className }: { className?: string }) {
   const [language, setLanguage] = useState<SupportedLanguage>("en");
-  const [isLoading, setIsLoading] = useState(false);
-  const [pendingLanguage, setPendingLanguage] = useState<SupportedLanguage | null>(null);
-  const languageRef = useRef<SupportedLanguage>("en");
+  const run = useSyncExternalStore(
+    subscribeToTranslationRun,
+    getTranslationRun,
+    getServerTranslationRun,
+  );
 
   useEffect(() => {
     const saved = readSavedLanguage();
-    languageRef.current = saved;
     setLanguage(saved);
-    setDirection(saved);
-    protectOriginalQuranText();
+    setDocumentLanguage(saved);
+    protectOriginalScripture();
 
     const handleLanguageChange = (event: Event) => {
       const next = (event as CustomEvent<SupportedLanguage>).detail;
       if (next !== "en" && next !== "ar") return;
-      languageRef.current = next;
       setLanguage(next);
-      setDirection(next);
+      setDocumentLanguage(next);
     };
     window.addEventListener(LANGUAGE_EVENT, handleLanguageChange);
 
     if (saved === "ar") {
-      setPendingLanguage("ar");
-      setIsLoading(true);
-      void loadGoogleTranslate()
-        .then(() => applyGoogleLanguageWhenReady("ar"))
-        .then(async () => {
-          hideGoogleOverlays();
-          await waitForTranslationPaint();
-        })
-        .finally(() => {
-          setPendingLanguage(null);
-          setIsLoading(false);
-        });
+      // The widget re-applies the saved language from its own cookie on every
+      // page load. Guard React first, then let the shared run drive it; the
+      // request is a no-op for whichever toggle instance gets here second.
+      guardReactAgainstTranslation();
+      void requestLanguage("ar", "restore");
+    } else {
+      // Keep the widget's cookie in step with our own store, otherwise a stale
+      // cookie from an interrupted switch silently translates an "English" page.
+      persistLanguage("en");
     }
 
     return () => window.removeEventListener(LANGUAGE_EVENT, handleLanguageChange);
   }, []);
 
-  const toggleLanguage = useCallback(async () => {
-    if (isLoading) return;
-    const previous = languageRef.current;
-    const next: SupportedLanguage = previous === "en" ? "ar" : "en";
-    protectOriginalQuranText();
-    setPendingLanguage(next);
-    setIsLoading(true);
+  const toggleLanguage = useCallback(() => {
+    void requestLanguage(language === "en" ? "ar" : "en", "switch");
+  }, [language]);
 
-    try {
-      await loadGoogleTranslate();
-      const applied = await applyGoogleLanguageWhenReady(next);
-      hideGoogleOverlays();
-      if (!applied) {
-        saveLanguage(next);
-        window.location.reload();
-        return;
-      }
-      await waitForTranslationPaint();
-      languageRef.current = next;
-      setLanguage(next);
-      setDirection(next);
-      saveLanguage(next);
-      broadcastLanguage(next);
-    } catch {
-      languageRef.current = previous;
-      setLanguage(previous);
-      setDirection(previous);
-      saveLanguage(previous);
-    } finally {
-      setPendingLanguage(null);
-      setIsLoading(false);
-    }
-  }, [isLoading]);
-
-  const loadingLabel = pendingLanguage === "ar" ? "Switching to Arabic…" : "Switching to English…";
+  const isBusy = run !== null;
 
   return (
-    <>
-      {isLoading && pendingLanguage ? (
-        <div
-          role="status"
-          aria-live="assertive"
-          aria-label={loadingLabel}
-          translate="no"
-          className="notranslate fixed inset-0 z-[100] grid place-items-center bg-background/85 px-6 backdrop-blur-sm"
-        >
-          <div className="flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4 font-semibold text-foreground shadow-soft">
-            <LoaderCircle aria-hidden="true" className="h-5 w-5 animate-spin text-accent" />
-            <span>{loadingLabel}</span>
-          </div>
-        </div>
-      ) : null}
-      <button
+    <button
       type="button"
       translate="no"
       dir={language === "ar" ? "rtl" : "ltr"}
-      disabled={isLoading}
-      onClick={() => void toggleLanguage()}
+      disabled={isBusy}
+      onClick={toggleLanguage}
+      onPointerEnter={warmUpTranslation}
+      onPointerDown={warmUpTranslation}
+      onFocus={warmUpTranslation}
       aria-label={language === "en" ? "Translate site to Arabic" : "Return site to English"}
+      aria-busy={isBusy}
       className={cn(
-        "inline-flex h-9 items-center justify-center gap-1.5 rounded-md border border-border bg-card px-2.5 text-sm font-semibold text-foreground transition hover:bg-muted disabled:cursor-wait disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
+        "notranslate inline-flex h-9 items-center justify-center gap-1.5 rounded-md border border-border bg-card px-2.5 text-sm font-semibold text-foreground transition hover:bg-muted disabled:cursor-wait disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
         className,
       )}
     >
-        {isLoading ? (
-          <LoaderCircle aria-hidden="true" className="h-4 w-4 animate-spin" />
-        ) : (
-          <Languages aria-hidden="true" className="h-4 w-4" />
-        )}
-        <span lang={language === "en" ? "ar" : "en"}>
-          {isLoading ? "Loading" : language === "en" ? "العربية" : "English"}
-        </span>
-      </button>
-    </>
+      {isBusy ? (
+        <Spinner className="h-4 w-4" />
+      ) : (
+        <Languages aria-hidden="true" className="h-4 w-4" />
+      )}
+      <span lang={language === "en" ? "ar" : "en"}>
+        {language === "en" ? "العربية" : "English"}
+      </span>
+    </button>
   );
 }
