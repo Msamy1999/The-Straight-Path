@@ -76,6 +76,14 @@ const checks = [
     body: "{}",
   },
   { path: "/api/users?limit=1", type: "application/json", status: 403 },
+  {
+    path: "/api/users/unlock",
+    type: "application/json",
+    status: 403,
+    method: "POST",
+    requestHeaders: { "content-type": "application/json" },
+    body: JSON.stringify({ email: "unauthorized-unlock-test@example.invalid" }),
+  },
   { path: "/api/analytics-events?limit=1", type: "application/json", status: 403 },
   {
     path: "/api/articles?limit=1&where%5Bstatus%5D%5Bnot_equals%5D=published",

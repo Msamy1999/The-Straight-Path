@@ -36,6 +36,9 @@ assert.equal(invoke(authenticated, { user: owner }), true);
 assert.equal(invoke(authenticated, { user: anonymous }), false);
 assert.equal(invoke(ownerOnly, { user: owner }), true);
 assert.equal(invoke(ownerOnly, { user: reviewer }), false);
+assert.equal(invoke(Users.access?.unlock, { user: owner }), true);
+assert.equal(invoke(Users.access?.unlock, { user: reviewer }), false);
+assert.equal(invoke(Users.access?.unlock, { user: anonymous }), false);
 assert.deepEqual(invoke(ownerOrSelf, { user: reviewer }), {
   id: { equals: reviewer.id },
 });

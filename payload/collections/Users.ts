@@ -19,6 +19,8 @@ export const Users: CollectionConfig = {
     read: ownerOrSelf,
     update: ownerOrSelf,
     delete: ownerOnly,
+    // Account recovery must not let a reviewer reset another user's lockout.
+    unlock: ownerOnly,
   },
   hooks: {
     beforeChange: [
