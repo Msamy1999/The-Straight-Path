@@ -5,7 +5,11 @@ type Row = Record<string, unknown>;
 const id = (value: unknown) => value as number | string;
 const nullable = (value: unknown) => value === null ? undefined : value;
 
-/** Reads only public content plus the stored owner ID/role, never credentials. */
+/**
+ * Reads published MAIN content and the latest PRIVATE draft content, plus the
+ * stored owner ID/role only. Payload draft:true intentionally saves private
+ * edits only in versions; their historical MAIN rows are not publication truth.
+ */
 export function readReleaseSnapshot(databasePath: string, ownerId?: string): ReleaseSnapshot {
   const db = new DatabaseSync(databasePath, { readOnly: true });
   try {
@@ -29,17 +33,28 @@ export function readReleaseSnapshot(databasePath: string, ownerId?: string): Rel
     const slugs = new Map(rows.map(r => [r.id, String(r.slug)]));
     const articles: ArticleState[] = [];
     for (const row of rows) {
-      const rawSections = db.prepare("SELECT s._order,s.id,s.section_id,s.kind,l.title,l.body FROM articles_sections s LEFT JOIN articles_sections_locales l ON l._parent_id=s.id AND l._locale='en' WHERE s._parent_id=? ORDER BY s._order").all(id(row.id)) as Row[];
-      const rels = db.prepare('SELECT path,citations_id,articles_id FROM articles_rels WHERE parent_id=? ORDER BY "order"').all(id(row.id)) as Row[];
+      let content = row, contentID = id(row.id), sectionsTable = "articles_sections", relsTable = "articles_rels", tagsTable = "articles_tags", relationPrefix = "";
+      if (row.status !== "published") {
+        const versions = db.prepare("SELECT v.id AS version_id,v.version_slug AS slug,v.version_category AS category,v.version_audience_level AS audience_level,v.version_status AS status,v.version__status AS _status,l.version_title AS title,l.version_subtitle AS subtitle,l.version_summary AS summary FROM _articles_v v LEFT JOIN _articles_v_locales l ON l._parent_id=v.id AND l._locale='en' WHERE v.parent_id=? AND v.latest=1").all(id(row.id)) as Row[];
+        if (versions.length !== 1) throw new Error(`Private article must have exactly one latest version before release: ${String(row.slug)}.`);
+        const latest = versions[0];
+        if (latest.slug !== row.slug) throw new Error(`A private latest draft changes its main slug; explicit editorial resolution is required: ${String(row.slug)}.`);
+        if (!["draft", "reviewed"].includes(String(latest.status)) || latest._status !== "draft") throw new Error(`A private latest version has inconsistent publication controls: ${String(row.slug)}.`);
+        content = latest; contentID = id(latest.version_id);
+        sectionsTable = "_articles_v_version_sections"; relsTable = "_articles_v_rels"; tagsTable = "_articles_v_version_tags"; relationPrefix = "version.";
+      }
+      // Table names come only from the fixed choices above, never document data.
+      const rawSections = db.prepare(`SELECT s._order,s.id,s.section_id,s.kind,l.title,l.body FROM ${sectionsTable} s LEFT JOIN ${sectionsTable}_locales l ON l._parent_id=s.id AND l._locale='en' WHERE s._parent_id=? ORDER BY s._order`).all(contentID) as Row[];
+      const rels = db.prepare(`SELECT path,citations_id,articles_id FROM ${relsTable} WHERE parent_id=? ORDER BY "order"`).all(contentID) as Row[];
       const keysAt = (p: string) => rels.filter(r => r.path === p).map(r => {
         const key = citationKeys.get(r.citations_id);
         if (!key) throw new Error("An article links a missing citation record.");
         return key;
       });
       const sections = rawSections.map(s => ({ sectionId: s.section_id, kind: s.kind, title: s.title, body: s.body }));
-      const sectionCitationKeys = Object.fromEntries(rawSections.map((s, i) => [String(s.section_id), keysAt(`sections.${i}.citations`)]));
-      const data: Fields = { title: row.title, subtitle: row.subtitle, category: row.category, audienceLevel: row.audience_level, summary: row.summary, sections, tags: db.prepare('SELECT value FROM articles_tags WHERE parent_id=? ORDER BY "order"').all(id(row.id)).map(r => r.value) };
-      articles.push({ id: id(row.id), slug: String(row.slug), status: row.status as ArticleState["status"], payloadStatus: row._status as ArticleState["payloadStatus"], data, citationKeys: keysAt("citations"), sectionCitationKeys, relatedSlugs: rels.filter(r => r.path === "relatedArticles").map(r => {
+      const sectionCitationKeys = Object.fromEntries(rawSections.map((s, i) => [String(s.section_id), keysAt(`${relationPrefix}sections.${i}.citations`)]));
+      const data: Fields = { title: content.title, subtitle: content.subtitle, category: content.category, audienceLevel: content.audience_level, summary: content.summary, sections, tags: db.prepare(`SELECT value FROM ${tagsTable} WHERE parent_id=? ORDER BY "order"`).all(contentID).map(r => r.value) };
+      articles.push({ id: id(row.id), slug: String(row.slug), status: content.status as ArticleState["status"], payloadStatus: content._status as ArticleState["payloadStatus"], data, citationKeys: keysAt(`${relationPrefix}citations`), sectionCitationKeys, relatedSlugs: rels.filter(r => r.path === `${relationPrefix}relatedArticles`).map(r => {
         const slug = slugs.get(r.articles_id); if (!slug) throw new Error("An article links a missing related article."); return slug;
       }) });
     }

@@ -51,6 +51,18 @@ test("an editor's article change after external preflight is rejected before mut
   const state = await readTransactionReleaseSnapshot(f.reader, f.req, f.snapshot, f.plan);
   assert.throws(() => assertTransactionReleasePreconditions(f.plan, state, "sources"), /Transaction-bound article precondition changed/);
 });
+
+test("a newer unapproved draft on a PUBLIC main record still rejects transaction preconditions", async () => {
+  const f = fixture();
+  f.snapshot.articles[0].status = "published";
+  f.snapshot.articles[0].payloadStatus = "published";
+  f.plan.articlePreconditions[0].stateSha256 = articleStateHash(f.snapshot.articles[0]);
+  f.currentArticle.status = "reviewed";
+  f.currentArticle._status = "draft";
+  f.currentArticle.summary = "A newer unapproved private draft over public MAIN.";
+  const latestState = await readTransactionReleaseSnapshot(f.reader, f.req, f.snapshot, f.plan);
+  assert.throws(() => assertTransactionReleasePreconditions(f.plan, latestState, "sources"), /Transaction-bound article precondition changed/);
+});
 test("Payload _status changes are protected by the transaction precondition", async () => {
   const f = fixture();
   f.currentArticle._status = "published";
