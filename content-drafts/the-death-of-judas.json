@@ -41,7 +41,7 @@
       "sectionId": "matthew-account",
       "title": "Matthew's Account: Suicide by Hanging",
       "kind": "scripture",
-      "body": "Matthew 27:3-5 presents Judas's remorse as motivated by witnessing Jesus's condemnation. The evangelist emphasizes Judas's confession of guilt and the rejection of his attempted restitution by the religious authorities. The narrative culminates in a straightforward statement of suicide: Judas departed and hanged himself. This account is notably concise and focuses on Judas's internal moral crisis and its direct consequences. Matthew does not mention a field, burst body, or intestines. The emphasis is on Judas's personal guilt, the rejection of his repentance, and his voluntary self-destruction."
+      "body": "Matthew 27:3-5 presents Judas's remorse as motivated by witnessing Jesus's condemnation. The evangelist emphasizes Judas's confession of guilt and the rejection of his attempted restitution by the religious authorities. The narrative culminates in a straightforward statement of suicide: Judas departed and hanged himself. This account is notably concise and focuses on Judas's internal moral crisis and its direct consequences. The following verses, [Matthew 27:6–10](https://www.biblegateway.com/passage/?search=Matthew%2027%3A3-10&version=WEB), do mention a field. The priests use the returned money to buy a burial ground, called the Field of Blood because it was bought with blood money. Matthew does not describe a burst body or spilled intestines. The emphasis is on Judas's personal guilt, the rejection of his repentance, and his voluntary self-destruction."
     },
     {
       "sectionId": "acts-account",
@@ -53,7 +53,7 @@
       "sectionId": "the-contradiction",
       "title": "The Apparent Contradiction",
       "kind": "interpretation",
-      "body": "At first glance, these accounts seem to describe incompatible deaths: hanging versus falling. A person who hangs himself does not typically fall headlong and burst open; conversely, someone who falls and bursts open would not have hanged himself. The accounts also differ in details: Matthew mentions remorse, a confession, and the return of blood money; Acts does not. Matthew mentions hanging; Acts does not. Acts mentions a field and the naming of Akeldama; Matthew does not. Acts mentions intestines spilling out; Matthew makes no such reference. The settings also appear different: Matthew's scene occurs in the sanctuary with the chief priests and elders; Acts's scene involves apostles selecting a replacement and explaining a place-name. These differences have prompted scholars and theologians to offer various explanations, from harmonization attempts to source-critical analyzes suggesting the accounts derive from independent traditions."
+      "body": "At first glance, these accounts seem to describe incompatible deaths: hanging versus falling. A person who hangs himself does not typically fall headlong and burst open; conversely, someone who falls and bursts open would not have hanged himself. The accounts also differ in details: Matthew mentions remorse, a confession, and the return of blood money; Acts does not. Matthew mentions hanging; Acts does not. Both accounts mention a field and the name Field of Blood. Matthew attributes the purchase to the priests using the returned money and links the name to blood money (Matthew 27:6–8). Acts says Judas acquired the field with the reward of his wrongdoing and connects the name with the report of his gruesome death (Acts 1:18–19). These are the differences to compare. Acts mentions intestines spilling out; Matthew makes no such reference. The settings also appear different: Matthew's scene occurs in the sanctuary with the chief priests and elders; Acts's scene involves apostles selecting a replacement and explaining a place-name. These differences have prompted scholars and theologians to offer various explanations, from harmonization attempts to source-critical analyzes suggesting the accounts derive from independent traditions."
     },
     {
       "sectionId": "harmonization-attempts",
@@ -126,6 +126,20 @@
       "text": "Now this man obtained a field with the reward for his wickedness, and falling headlong, his body burst open, and all his intestines gushed out. It became known to everyone who lived in Jerusalem that in their language that field was called ‘Akeldama,’ that is, ‘The field of blood.’",
       "version": "World English Bible",
       "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 27,
+      "verse": "6-10",
+      "reference": "Matthew 27:6-10",
+      "text": "The chief priests took the pieces of silver, and said, “It’s not lawful to put them into the treasury, since it is the price of blood.” They took counsel, and bought the potter’s field with them, to bury strangers in. Therefore that field was called “The Field of Blood” to this day. Then that which was spoken through Jeremiah the prophet was fulfilled, saying,\n“They took the thirty pieces of silver,\nthe price of him upon whom a price had been set,\nwhom some of the children of Israel priced, and they gave them for the potter’s field,\nas the Lord commanded me.”",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    }
+  ],
+  "bibleReferences": [
+    {
+      "reference": "Matthew 27:6-8"
     }
   ],
   "faq": [

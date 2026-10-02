@@ -56,7 +56,7 @@
       "sectionId": "comparison",
       "title": "Two Transmission Stories, Side by Side",
       "kind": "argument",
-      "body": "The two transmission stories have clear differences.\n\nLanguage: the Quran is preserved and recited in Arabic. Jesus spoke Aramaic, while the Gospels were preserved in Greek. His words are usually not available in his own tongue.\n\nTimescale: Muslim tradition and early manuscripts describe a complete Quranic text standardized within a generation of Muhammad's death. The New Testament canon took shape over centuries.\n\nMethod: Quranic transmission used mass memorization alongside written copies. Each checked the other. The Bible relied on hand copying, so variants accumulated and textual criticism became necessary. Luke describes research and compilation; the Quran presents itself as God's direct speech to one messenger."
+      "body": "The two transmission stories have clear differences.\n\nLanguage: the Quran is preserved and recited in Arabic. Jesus spoke Aramaic, while the Gospels were preserved in Greek. His words are usually not available in his own tongue.\n\nTimescale: Muslim tradition and early manuscripts describe a complete Quranic text standardized within a generation of Muhammad's death. The New Testament canon took shape over centuries.\n\nMethod: Quranic transmission used mass memorization alongside written copies. Each checked the other. The surviving biblical textual evidence relies primarily on handwritten manuscripts, whose variants require textual criticism. Oral teaching and worship also passed on traditions, as [Luke 1:1–4](https://www.biblegateway.com/passage/?search=Luke%201%3A1-4&version=WEB) and [1 Corinthians 11:23–26](https://www.biblegateway.com/passage/?search=1%20Corinthians%2011%3A23-26&version=WEB) show. Luke describes research and compilation; the Quran presents itself as God's direct speech to one messenger."
     },
     {
       "sectionId": "common-misconceptions",
@@ -167,6 +167,11 @@
       "text": "For there are three who testify:",
       "version": "World English Bible",
       "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    }
+  ],
+  "bibleReferences": [
+    {
+      "reference": "1 Corinthians 11:23-26"
     }
   ],
   "faq": [

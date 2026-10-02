@@ -33,7 +33,7 @@ export const mainPaths: ResearchTreeNode[] = [
     id: "people-of-palestine",
     title: "People of Palestine",
     description:
-      "A respectful, human-centered section on dignity, context, and responsible learning.",
+      "Meet the people, learn the history and sacred significance, and turn concern into truthful, responsible action.",
     href: "/people-of-palestine",
     tag: "People",
   },

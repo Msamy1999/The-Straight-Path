@@ -58,6 +58,59 @@ public access rules correctly hide. Publication and verification must be
 completed through Payload's editorial workflow; never bypass those controls to
 make a deployment pass.
 
+## Reviewed content releases
+
+Do not run the generic `content-sync` import against public records. Its
+`--status=reviewed` import is for editorial staging and resets scripture to
+pending. It is not a publication or approval command.
+
+For an explicitly owner-authorized content release, use
+`payload/publish-approved-release.ts` with an immutable evidence manifest.
+The default command is a SQLite read-only preflight; it does not initialize
+Payload, push a schema, or change records:
+
+```bash
+npx --no-install tsx payload/publish-approved-release.ts \
+  --manifest=data/release-evidence/<release>/manifest.json \
+  --output=/tmp/the-straight-path-<release>-content-plan.json
+```
+
+Every article approval binds the exact parsed draft hash. Every pending or
+changed source needs a checked evidence artifact bound to its exact content
+hash. Bibliographic identity checks do not certify unread quotations or every
+argument in a book. Unresolved source requirements block the entire release
+before mutation. A real stored owner is mandatory; never manufacture an owner
+principal or mark evidence verified merely to make this preflight pass.
+
+After a consistent, integrity-checked server SQLite backup and a successful
+isolated rehearsal, apply only the approved plan hash under `NODE_ENV=production`:
+
+```bash
+NODE_ENV=production npx --no-install tsx payload/publish-approved-release.ts \
+  --manifest=data/release-evidence/<release>/manifest.json \
+  --apply --plan-hash=<exact-successful-preflight-hash>
+```
+
+This preserves normal Payload access rules and publication hooks. Individually
+verified source changes commit in one transaction, followed by article/related
+link publication in a second transaction. If the article phase fails, genuinely
+verified sources remain committed but article changes roll back; inspect the
+result and obtain a fresh read-only plan before retrying. Never blindly restore
+the database over a running service. Private backup and plan files must not be
+committed or exposed publicly. Unused placeholders and retired redirects remain
+unpublished.
+
+The short-lived approved publisher sets connection-local `cache_spill=OFF`
+before **each** transaction and verifies it on the registered transaction
+session. This defers SQLite's exclusive read lock until commit; it does not
+change the persistent journal mode, schema, web configuration, or publish
+gates. Allow sufficient memory for retained dirty pages and verify anonymous
+content/health reads during the operation. A short read pause can still occur
+at commit. SQLite still permits only one writer: analytics, login/session and
+admin writes can be unavailable for the entire publication transaction. Plan
+and communicate this temporary write freeze; do not promise zero downtime or
+replace the live database with a copy that would discard concurrent records.
+
 Run the release smoke suite from outside the VPS with the public-content gate:
 
 ```powershell

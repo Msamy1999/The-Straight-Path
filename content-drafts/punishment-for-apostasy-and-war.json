@@ -44,7 +44,7 @@
       "sectionId": "hadith-law",
       "title": "The Hadith and Classical Rulings",
       "kind": "sources",
-      "body": "Some authentic hadith and early legal practice led the major Sunni schools to prescribe a state penalty for deliberate apostasy. They differed over repentance, procedure, sex, and conditions. Classical law did not give private people the right to punish. Only lawful authority could act."
+      "body": "The major Sunni schools drew their classical capital ruling from authentic reports and early legal practice. Key evidence includes [Sahih al-Bukhari 3017](https://sunnah.com/bukhari:3017), also numbered [6922](https://sunnah.com/bukhari:6922), and [Sahih Muslim 1676a](https://sunnah.com/muslim:1676a). The latter describes leaving the religion and separating from the community. Jurists differed over repentance, procedure, sex, and other conditions.\n\nThe classical rule was generally broader than the contemporary interpretation limiting punishment to treason or armed subversion. Both should be described honestly. Even the strict classical position assigned judgment to lawful authority and courts; it gave families, private groups, and individuals no license to threaten or punish someone."
     },
     {
       "sectionId": "context",
@@ -187,8 +187,11 @@
     },
     {
       "title": "The Origins and Evolution of Islamic Law",
-      "author": "Wael Hallaq",
-      "note": "Authoritative work (Cambridge University Press, 2004) on the formation of Islamic jurisprudential schools and their methodological differences."
+      "author": "Wael B. Hallaq",
+      "type": "book",
+      "publisher": "Cambridge University Press",
+      "year": 2005,
+      "note": "A study of the formation of Islamic jurisprudential schools and their methodological differences (Cambridge University Press, 2005)."
     },
     {
       "title": "Islam and the Secular State: Negotiating the Future of Shari'a",
@@ -198,15 +201,15 @@
     {
       "title": "Apostasy in Islam",
       "author": "Rudolph Peters and Gert J.J. De Vries",
-      "note": "Foundational historical study (Die Welt des Islams, 1976) examining the gap between classical juristic doctrine on apostasy and its actual historical enforcement, particularly in the Ottoman context.",
       "type": "journalArticle",
       "journal": "Die Welt des Islams",
-      "year": "1976-1977",
+      "year": 1976,
       "volume": "17",
-      "issue": "1/4",
-      "pages": "1-25",
-      "doi": "10.2307/1570336",
-      "url": "https://doi.org/10.2307/1570336"
+      "issue": "1–4",
+      "pages": "1–25",
+      "doi": "10.1163/157006076X00017",
+      "url": "https://dare.uva.nl/id/f8309145-ecc2-4258-934f-7ad1f6b217a0",
+      "note": "A historical study of classical apostasy rulings and their enforcement, including the Ottoman context."
     }
   ]
 }

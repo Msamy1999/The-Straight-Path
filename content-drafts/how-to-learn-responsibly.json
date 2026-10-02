@@ -4,32 +4,38 @@
   "subtitle": "A practical method for checking reports, images, dates, and claims",
   "category": "sources",
   "audienceLevel": "beginner",
-  "summary": "Palestine is surrounded by fast-moving claims and powerful images. A responsible reader checks the original source, date, location, evidence, and independent confirmation before believing or sharing a report.",
+  "summary": "Reports about Palestine move quickly and often carry strong emotion. A responsible reader pauses, finds the original source, checks the date and place, looks for independent confirmation, and labels uncertainty honestly before sharing. Quran 49:6 makes verification part of preventing harm.",
   "tags": ["Sources", "Questions", "History"],
   "sections": [
     {
       "sectionId": "seeker-guide",
       "title": "Check Before You Share",
       "kind": "summary",
-      "body": "Care for Palestinians should deepen a commitment to truth, not weaken it. The Quran warns believers to investigate reports so that people are not harmed through ignorance (Quran 49:6). A false caption or invented quotation can damage innocent people and discredit a just concern."
+      "body": "Care for Palestinians should deepen a commitment to truth, not weaken it. Quran 49:6 tells believers to investigate reports so that people are not harmed through ignorance. A false caption, invented quotation, or outdated number can harm innocent people and discredit a just concern."
     },
     {
       "sectionId": "five-checks",
-      "title": "Five Quick Checks",
+      "title": "Six Checks Before You Share",
       "kind": "sources",
-      "body": "Ask five questions: Who first made the claim? When and where did the event occur? What evidence is shown? Does the source distinguish fact from allegation or opinion? Has a credible, independent source confirmed the central point?\n\nFor photographs and videos, find the earliest upload and check whether the image is old, cropped, or from another place. For numbers, identify who produced them, what they count, and whether later revisions exist. Until a claim is verified, label it honestly as unconfirmed."
+      "body": "- Find the original: who first published the words, image, video, or number?\n- Check the date: is old material being presented as new?\n- Check the place: do landmarks, weather, language, and reliable geolocation support the caption?\n- Inspect the evidence: is the full document or unedited footage available?\n- Seek independent confirmation: does another credible source with its own evidence support the central claim?\n- State the confidence level: confirmed, alleged, disputed, corrected, or still unverified.\n\nThe [Verification Handbook](https://verificationhandbook.com/) gives step-by-step methods for digital material. Verification does not require ignoring suffering. It helps prevent a true cause from being defended with a false claim."
+    },
+    {
+      "sectionId": "images-numbers-and-quotes",
+      "title": "Images, Numbers, and Quotations Need Different Checks",
+      "kind": "notes",
+      "body": "For an image, search for earlier copies, compare landmarks, and look for the original uploader. For video, examine key frames and listen for language or sounds that may locate it. Cropping and missing context can mislead even when the image itself is real.\n\nFor casualty or aid figures, identify the organization, date, method, population counted, and later revisions. For quotations, open the full speech or document and read the sentences around the excerpt. A screenshot of text is not a source. UNESCO's [handbook on journalism and disinformation](https://www.unesco.org/en/articles/journalism-fake-news-disinformation) explains practical fact-checking and social-media verification."
     },
     {
       "sectionId": "source-balance",
       "title": "Use the Right Source for the Question",
       "kind": "notes",
-      "body": "Primary documents establish what an institution officially said. Historians reconstruct events from many records. Human-rights investigators assess evidence under stated methods. News reports document events as information emerges. Religious texts explain why a place or cause matters to believers. No single source type answers every question.\n\nApply the same standard to claims that support one's position and claims that challenge it. Responsible learning is not false neutrality; it is disciplined truthfulness."
+      "body": "Primary documents establish what an institution officially said; they do not automatically prove that every statement in the document is true. Historians reconstruct events from many records. Human-rights investigators assess evidence under stated methods. News reports document events while information is still developing. Religious texts explain belief and moral duty. Courts interpret law in particular proceedings. No single source type answers every question.\n\nApply the same standard to claims that support your position and claims that challenge it. Responsible learning is not false neutrality. It is disciplined truthfulness for the sake of justice."
     },
     {
       "sectionId": "seeker-conclusion",
       "title": "Truthful Advocacy Is Stronger Advocacy",
       "kind": "summary",
-      "body": "The most helpful advocate is careful with evidence, transparent about uncertainty, and unwilling to use another person's suffering as a slogan. Verify first, speak precisely, correct mistakes openly, and keep human dignity at the center."
+      "body": "A helpful advocate is careful with evidence, transparent about uncertainty, and unwilling to use another person's suffering as a slogan. Verify first, speak precisely, correct mistakes openly, and keep human dignity at the center. This is stronger advocacy and better Islamic character."
     }
   ],
   "quranVerses": [
@@ -45,7 +51,12 @@
     }
   ],
   "bibleVerses": [],
-  "relatedSlugs": ["source-library-for-palestine", "human-dignity-and-justice", "who-are-the-people-of-palestine"],
+  "relatedSlugs": [
+    "source-library-for-palestine",
+    "help-palestine-responsibly",
+    "human-dignity-and-justice",
+    "who-are-the-people-of-palestine"
+  ],
   "furtherReading": [
     {
       "title": "Verification Handbook",
@@ -56,12 +67,12 @@
       "url": "https://verificationhandbook.com/"
     },
     {
-      "title": "Palestine: A Guide to Reliable UN Records",
-      "author": "United Nations",
-      "publisher": "UNISPAL",
-      "year": 2026,
-      "note": "A searchable collection of official UN documents and a dated historical timeline.",
-      "url": "https://www.un.org/unispal/timeline/"
+      "title": "Journalism, Fake News & Disinformation",
+      "author": "Cherilyn Ireton and Julie Posetti, editors",
+      "publisher": "UNESCO",
+      "year": 2018,
+      "note": "An official UNESCO handbook with practical modules on fact-checking, social-media verification, and responsible reporting.",
+      "url": "https://www.unesco.org/en/articles/journalism-fake-news-disinformation"
     }
   ],
   "faq": []

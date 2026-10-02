@@ -271,11 +271,11 @@
     },
     {
       "question": "What does homoousios mean and why was it important?",
-      "answer": "Homoousios (Greek: ὁμοούσιος) means \"of one substance\" or \"of the same substance.\" This term was central to the Nicene Creed's affirmation that Christ shares the same divine nature as the Father. The word was chosen to reject the Arian position that Christ was homoiousios (of similar substance but not identical), which would have allowed for subordination. The difference of a single letter (iota) represented a monumental theological distinction and became the focal point of Christian orthodoxy."
+      "answer": "Homoousios means \"of the same substance.\" The [Nicene Creed](https://www.newadvent.org/fathers/3801.htm) used it to affirm that the Son shares the Father's divine nature, rejecting Arius's teaching that the Son was created and had a beginning. Homoiousios, meaning \"similar in substance,\" became an alternative in later fourth-century debates; it was not simply Arius's original position at Nicaea. [Athanasius's account](https://www.newadvent.org/fathers/2817.htm) records those later disputes."
     },
     {
       "question": "What role did Emperor Constantine play in the Council of Nicaea?",
-      "answer": "Constantine convened the Council of Nicaea as a political tool to establish unity within his empire. He presided over portions of the proceedings, enforced the council's decisions through imperial power (including exile and destruction of pro-Arian writings), and ensured compliance with the Nicene Creed. This set a precedent for imperial oversight of church doctrine, a model called Caesaropapism that characterized Byzantine Christianity. However, Constantine himself was not baptized until near the end of his life."
+      "answer": "Constantine convened the council to seek agreement in the Church and unity in his empire. He participated in the proceedings and used imperial power to support its decisions, including exile for opponents. The bishops also engaged in serious theological debate; political pressure alone does not explain their conclusions. The [Vatican's historical discussion](https://www.vatican.va/roman_curia/congregations/cfaith/cti_documents/rc_cti_doc_20250403_1700-nicea_en.html) distinguishes these religious and political aims. Muslims can question the council's doctrinal authority without reducing every participant's motives to politics."
     },
     {
       "question": "How do Muslims view the Council of Nicaea?",
@@ -313,7 +313,8 @@
     {
       "title": "The Crucifixion and the Quran: A Study in the History of Muslim Thought",
       "author": "Todd Lawson",
-      "note": "An Islamic scholar's examination of how Muslim thought, from the Quran through classical and modern exegesis, has understood the crucifixion of Jesus and related Christological claims. Provides Islamic perspective on the historical development of Christian doctrine including Nicene Christianity."
+      "type": "book",
+      "note": "A scholarly examination of Muslim interpretations of Quran 4:157, from classical exegesis through later Muslim thought."
     },
     {
       "title": "Christians, Muslims, and Jesus",

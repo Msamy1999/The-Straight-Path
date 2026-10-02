@@ -24,11 +24,11 @@ export function Citation({ source, prefix = "Source", className }: CitationProps
           rel="noreferrer noopener"
           className="inline-flex items-center gap-1 rounded-sm text-muted-foreground hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
-          {citation.label}
+          <bdi translate="no" className="notranslate">{citation.label}</bdi>
           <ExternalLink aria-hidden="true" className="h-3 w-3" />
         </a>
       ) : (
-        <span>{citation.label}</span>
+        <bdi translate="no" className="notranslate">{citation.label}</bdi>
       )}
       {citation.note ? <span className="ml-1">{citation.note}</span> : null}
     </p>

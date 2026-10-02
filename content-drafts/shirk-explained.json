@@ -203,6 +203,16 @@
       "translation": "They have certainly disbelieved who say, \"Allah is the Messiah, the son of Mary\" while the Messiah has said, \"O Children of Israel, worship Allah, my Lord and your Lord.\" Indeed, he who associates others with Allah - Allah has forbidden him Paradise, and his refuge is the Fire. And there are not for the wrongdoers any helpers.",
       "translator": "Saheeh International",
       "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "An-Nisaa",
+      "surahNumber": 4,
+      "ayahNumber": 59,
+      "reference": "Quran 4:59",
+      "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ أَطِيعُوا۟ ٱللَّهَ وَأَطِيعُوا۟ ٱلرَّسُولَ وَأُو۟لِى ٱلْأَمْرِ مِنكُمْ ۖ فَإِن تَنَٰزَعْتُمْ فِى شَىْءٍۢ فَرُدُّوهُ إِلَى ٱللَّهِ وَٱلرَّسُولِ إِن كُنتُمْ تُؤْمِنُونَ بِٱللَّهِ وَٱلْيَوْمِ ٱلْءَاخِرِ ۚ ذَٰلِكَ خَيْرٌۭ وَأَحْسَنُ تَأْوِيلًا",
+      "translation": "O you who have believed, obey Allah and obey the Messenger and those in authority among you. And if you disagree over anything, refer it to Allah and the Messenger, if you should believe in Allah and the Last Day. That is the best [way] and best in result.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
     }
   ],
   "bibleVerses": [
@@ -281,7 +291,7 @@
     },
     {
       "question": "What is the difference between major shirk and minor shirk?",
-      "answer": "Major shirk (الشرك الأكبر) involves directing worship, obedience, or ultimate trust to something other than God in a way that negates Islamic faith. Examples include worshipping idols, invoking saints as divine beings, or following human-made laws as if they were divine legislation. Minor shirk (الشرك الأصغر) refers to actions that diminish one's spiritual standing without negating faith—such as showing off one's good deeds, relying partially on means rather than God, or using oaths by other than God. Islamic scholars emphasize guarding against minor shirk as a means of protecting the heart from the seeds of major shirk."
+      "answer": "Major shirk gives creation a share in God's exclusive right to worship or His independent divine power. Minor shirk includes forms of religious showing off that corrupt sincerity without making the person a worshiper of another deity. Using medicine, work, or another person's help is compatible with trust in Allah; the Prophet taught active effort alongside reliance on Him ([Sahih Muslim 2664](https://sunnah.com/muslim:2664)). Following an ordinary civil rule is not automatically shirk. [Quran 4:59](https://quran.com/4/59) commands obedience to legitimate authority while directing disputes back to Allah and His messenger. Specific judgments require attention to the person's belief and the act involved."
     },
     {
       "question": "How do Christians respond to the Islamic interpretation of the Trinity as shirk?",
@@ -289,11 +299,11 @@
     },
     {
       "question": "Are there different forms of shirk beyond idol worship?",
-      "answer": "Yes, Islamic theology identifies numerous forms of shirk beyond the worship of carved idols. These include: ascribing divine attributes to created beings; invoking the dead for help or intercession; following laws or moral systems as if they were divine without God's authority; placing ultimate trust in means rather than God; showing off deeds for people's approval; and subtle forms of idolatry in the heart. Islamic scholars have emphasized that shirk can be very subtle—that one might engage in outwardly correct religious practice while allowing the heart to depend on other than God. This is why Islamic spirituality stresses continuous vigilance against all manifestations of shirk."
+      "answer": "Yes. Shirk includes worshiping a created being or treating it as possessing independent divine power. Scholars disagree about some practices called tawassul, seeking a means of approach to Allah, and requests for intercession. [Egypt's Dar Al-Ifta](https://www.dar-alifta.org/en/fatwa/details/23910/seeking-the-prophet%E2%80%99s-intercession), for example, permits seeking the Prophet's intercession; other scholars prohibit particular forms. These disputes should not be presented as a unanimous judgment that every such request is shirk. The shared foundation is clear: worship belongs to Allah, intercession depends on His permission, and lawful human help does not replace ultimate trust in Him."
     },
     {
       "question": "Why is the concept of shirk central to Islamic theology and ethics?",
-      "answer": "Shirk is central to Islam because Islamic faith, law, and spirituality all flow from the principle of tawhid—the absolute oneness and uniqueness of God. Accepting tawhid means recognizing that God alone deserves worship, that God's authority is absolute, and that human purpose is to orient the entire being toward God. Islamic jurisprudence, ethics, and spiritual discipline are all grounded in guarding against shirk. The rejection of unjust human legislation, the prohibition against blind obedience to leaders, and the emphasis on direct accountability to God are all consequences of the tawhid principle. In Islamic understanding, shirk represents not merely a legal violation but a fundamental distortion of the human relationship with God."
+      "answer": "Tawhid means that Allah alone deserves worship and that everyone answers to Him. It guides devotion, law, and character. Human authorities can make ordinary rules, and obeying them is not automatically shirk. [Quran 4:59](https://quran.com/4/59) recognizes authority while requiring disputes to be referred to Allah and His messenger. Treating a created being as divine, or assigning it God's exclusive authority as a god, is a different belief. Sinful obedience and disbelief should not be collapsed into one label. Islam calls people to sincere worship, responsible action, and direct accountability before Allah."
     }
   ],
   "relatedSlugs": [

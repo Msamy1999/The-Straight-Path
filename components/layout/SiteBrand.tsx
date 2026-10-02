@@ -26,15 +26,18 @@ export function SiteBrand({
       />
       <span className="flex min-w-0 flex-col leading-tight">
         <span
+          lang="en"
+          dir="ltr"
+          translate="no"
           className={cn(
-            "font-semibold text-foreground",
+            "notranslate font-semibold text-foreground",
             compact ? "text-sm" : "text-base",
           )}
         >
           {siteName}
         </span>
         {!compact ? (
-          <span lang="ar" dir="rtl" className="text-right text-xs text-muted-foreground">
+          <span lang="ar" dir="rtl" translate="no" className="notranslate text-right text-xs text-muted-foreground">
             {siteNameArabic}
           </span>
         ) : null}

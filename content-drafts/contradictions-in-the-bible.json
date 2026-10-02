@@ -34,7 +34,7 @@
       "sectionId": "ark-instructions",
       "title": "2. Torah: God, Responsibility, and Narrative Details",
       "kind": "interpretation",
-      "body": "**Seeing God. Genesis 32:30 / Exodus 24:9-11 / Exodus 33:20 / John 1:18.** Jacob and the Sinai elders are said to see God, while Exodus and John say no one can see God. The common response distinguishes a visible manifestation from God's full, unmediated essence. Critics reply that the wording still creates a serious tension.\n\n**Does God change his mind?. Genesis 6:6 / Exodus 32:14 / 1 Samuel 15:11 / Numbers 23:19 / 1 Samuel 15:29.** Several texts say God regretted or relented, while others deny that God changes his mind. Defenders distinguish a change in action toward people from a change in character or ultimate purpose. Critics see both affirmation and denial of change.\n\n**Children and parents' sin. Exodus 20:5 / Deuteronomy 24:16 / Ezekiel 18:20.** Exodus speaks of visiting iniquity on later generations. Deuteronomy and Ezekiel reject punishing children for a parent's sin. The response distinguishes social consequences from individual legal guilt.\n\n**Hardening and testing. Exodus 7:3 / Exodus 8:15 / Genesis 22:1 / James 1:13.** Pharaoh sometimes hardens his own heart and sometimes God hardens it. God tests Abraham while James says God tempts no one. Defenders distinguish ultimate sovereignty from immediate choice, and testing from an enticement to evil. Critics ask whether those distinctions are present in each story.\n\n**Moses' father-in-law and the move to Egypt. Exodus 2:18 / Exodus 3:1 / Genesis 46:27 / Acts 7:14.** Moses' father-in-law is called Reuel and Jethro. Genesis counts seventy members entering Egypt while Acts says seventy-five. Multiple names and the Septuagint-based total are common responses. However, the received wordings differ.\n\n**Jacob's burial and the Shechem purchase. Genesis 50:13 / Acts 7:15-16.** Genesis says Jacob was buried at Machpelah, purchased by Abraham. Acts connects the burial with Shechem and a purchase by Jacob. Harmonizers propose that Acts compresses several family burials. Critics see conflated locations and purchasers."
+      "body": "**Seeing God. Genesis 32:30 / Exodus 24:9-11 / Exodus 33:20 / John 1:18.** Jacob and the Sinai elders are said to see God, while Exodus and John say no one can see God. The common response distinguishes a visible manifestation from God's full, unmediated essence. Critics reply that the wording still creates a serious tension.\n\n**Does God change his mind?. Genesis 6:6 / Exodus 32:14 / 1 Samuel 15:11 / Numbers 23:19 / 1 Samuel 15:29.** Several texts say God regretted or relented, while others deny that God changes his mind. Defenders distinguish a change in action toward people from a change in character or ultimate purpose. Critics see both affirmation and denial of change.\n\n**Children and parents' sin. Exodus 20:5 / Deuteronomy 24:16 / Ezekiel 18:20.** Exodus speaks of visiting iniquity on later generations. Deuteronomy and Ezekiel reject punishing children for a parent's sin. The response distinguishes social consequences from individual legal guilt.\n\n**Hardening and testing. Exodus 7:3 / Exodus 8:15 / Genesis 22:1 / James 1:13.** Pharaoh sometimes hardens his own heart and sometimes God hardens it. God tests Abraham while James says God tempts no one. Defenders distinguish ultimate sovereignty from immediate choice, and testing from an enticement to evil. Critics ask whether those distinctions are present in each story.\n\n**Moses' father-in-law and the move to Egypt. Exodus 2:18 / Exodus 3:1 / Genesis 46:27 / Acts 7:14.** Moses' father-in-law is called Reuel and Jethro. Genesis counts seventy members entering Egypt while Acts says seventy-five. Multiple names and the Septuagint-based total are common responses. However, the received wordings differ.\n\n**Jacob's burial and the Shechem purchase. Genesis 50:13 / Genesis 33:19 / Acts 7:15-16.** Genesis says Jacob was buried at Machpelah, purchased by Abraham. [Acts 7:16](https://bible.usccb.org/bible/acts/7) connects the burial with Shechem and names Abraham as the purchaser there, while [Genesis 33:19](https://bible.usccb.org/bible/genesis/33) attributes the Shechem land purchase to Jacob. Harmonizers propose that Acts compresses several family burials or refers to an otherwise unrecorded purchase. Critics see conflated locations and purchasers."
     },
     {
       "sectionId": "davids-census",
@@ -251,6 +251,24 @@
       "verse": "1",
       "reference": "John 20:1",
       "text": "Now on the first day of the week, Mary Magdalene went early, while it was still dark, to the tomb, and saw the stone taken away from the tomb.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Genesis",
+      "chapter": 33,
+      "verse": "19",
+      "reference": "Genesis 33:19",
+      "text": "He bought the parcel of ground where he had spread his tent, at the hand of the children of Hamor, Shechem’s father, for one hundred pieces of money.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Acts",
+      "chapter": 7,
+      "verse": "16",
+      "reference": "Acts 7:16",
+      "text": "and they were brought back to Shechem, and laid in the tomb that Abraham bought for a price in silver from the children of Hamor of Shechem.",
       "version": "World English Bible",
       "sourceAttribution": "bible-api.com — World English Bible (public domain)"
     }

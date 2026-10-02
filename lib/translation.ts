@@ -30,6 +30,7 @@ const GOOGLE_SCRIPT_SRC =
 const TRANSLATE_ORIGINS = [
   "https://translate.google.com",
   "https://translate.googleapis.com",
+  "https://translate-pa.googleapis.com",
   "https://www.gstatic.com",
   "https://fonts.gstatic.com",
 ];
@@ -200,11 +201,16 @@ function loadGoogleTranslate(): Promise<void> {
 
   translateLoader = new Promise<void>((resolve, reject) => {
     let settled = false;
+    let ownedScript: HTMLScriptElement | null = null;
     const fail = (error: Error) => {
       if (settled) return;
       settled = true;
       window.clearTimeout(timer);
+      // A failed tag cannot load again merely because a new promise is made.
+      // Remove only this attempt's tag so the next intent can retry the request.
+      ownedScript?.remove();
       translateLoader = null;
+      warmed = false;
       reject(error);
     };
     const succeed = () => {
@@ -240,6 +246,7 @@ function loadGoogleTranslate(): Promise<void> {
     }
 
     const script = document.createElement("script");
+    ownedScript = script;
     script.src = GOOGLE_SCRIPT_SRC;
     script.async = true;
     script.onerror = () => fail(new Error("Translation could not be loaded"));
@@ -568,10 +575,12 @@ export type TranslationRun = {
  * this is the backstop that guarantees a reader is never left staring at a
  * frozen overlay if something upstream misbehaves.
  */
-const RUN_TIMEOUT_MS = 10_000;
+const RUN_TIMEOUT_MS =
+  SCRIPT_TIMEOUT_MS + CONTROL_TIMEOUT_MS + APPLIED_TIMEOUT_MS + SETTLE_TIMEOUT_MS + 250;
 
 let currentRun: TranslationRun | null = null;
 let runInFlight = false;
+let runGeneration = 0;
 const runListeners = new Set<() => void>();
 
 function publishRun(next: TranslationRun | null) {
@@ -605,6 +614,8 @@ export function getServerTranslationRun(): TranslationRun | null {
 export async function requestLanguage(target: SupportedLanguage, mode: TranslationMode) {
   if (runInFlight) return;
   runInFlight = true;
+  const generation = ++runGeneration;
+  const isCurrentRun = () => generation === runGeneration;
 
   const documentLanguage = document.documentElement.dataset.language;
   const previous: SupportedLanguage =
@@ -614,20 +625,45 @@ export async function requestLanguage(target: SupportedLanguage, mode: Translati
   publishRun({ target, mode, stage: "connecting" });
 
   let released = false;
+  let returningToSource = false;
   const release = () => {
     if (released) return;
     released = true;
+    if (!isCurrentRun()) return;
     runInFlight = false;
     publishRun(null);
   };
-  const backstop = window.setTimeout(release, RUN_TIMEOUT_MS);
+  const backstop = window.setTimeout(() => {
+    if (!isCurrentRun()) return;
+    if (returningToSource) {
+      // If navigation could not finish, leave the current translated document
+      // and its controls describing the language that is still on screen.
+      setDocumentLanguage(previous);
+      persistLanguage(previous);
+      broadcastLanguage(previous);
+    }
+    release();
+    runGeneration += 1;
+  }, RUN_TIMEOUT_MS);
 
   try {
+    if (target === "en") {
+      // Google's current widget can leave its source-language selector in a
+      // state that discards the next Arabic request. Reload the exact URL to
+      // restore the original English document and a fresh widget. Keep this
+      // document's Arabic label/direction and overlay until navigation finishes.
+      persistLanguage("en");
+      returningToSource = true;
+      window.location.reload();
+      return;
+    }
+
     const applied = await applyLanguage(target, {
       onStage: (stage) => {
-        if (currentRun) publishRun({ ...currentRun, stage });
+        if (isCurrentRun() && currentRun) publishRun({ ...currentRun, stage });
       },
     });
+    if (!isCurrentRun()) return;
 
     if (!applied) {
       // Never claim that Arabic is active over visibly English copy. A reload
@@ -643,13 +679,16 @@ export async function requestLanguage(target: SupportedLanguage, mode: Translati
     persistLanguage(target);
     broadcastLanguage(target);
   } catch {
-    if (mode === "switch") {
+    returningToSource = false;
+    if (isCurrentRun() && mode === "switch") {
       setDocumentLanguage(previous);
       persistLanguage(previous);
       broadcastLanguage(previous);
     }
   } finally {
-    window.clearTimeout(backstop);
-    release();
+    if (!returningToSource) {
+      window.clearTimeout(backstop);
+      release();
+    }
   }
 }

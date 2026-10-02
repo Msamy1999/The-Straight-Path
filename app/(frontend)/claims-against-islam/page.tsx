@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ChevronDown } from "lucide-react";
 import { claimsAgainstIslam } from "@/data/claims-against-islam";
 import { ClaimsHashOpener } from "@/components/content/ClaimsHashOpener";
+import { ScriptureReferenceText } from "@/components/content/ScriptureReferenceText";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
@@ -63,13 +64,13 @@ export default function ClaimsAgainstIslamPage() {
                     <p className="text-xs font-semibold uppercase tracking-wide text-gold">
                       The claim
                     </p>
-                    <p className="mt-1.5">{item.claim}</p>
+                    <p className="mt-1.5"><ScriptureReferenceText text={item.claim} /></p>
                   </div>
                   <div className="mt-4 text-sm leading-7 text-muted-foreground sm:text-base">
                     <p className="font-semibold text-foreground">A careful response</p>
                     {item.response.map((paragraph) => (
                       <p key={paragraph} className="mt-2.5">
-                        {paragraph}
+                        <ScriptureReferenceText text={paragraph} />
                       </p>
                     ))}
                   </div>
@@ -90,15 +91,15 @@ export default function ClaimsAgainstIslamPage() {
                               rel="noreferrer noopener"
                               className="font-semibold text-accent underline decoration-accent/40 underline-offset-2 hover:text-foreground"
                             >
-                              {source.reference}
+                              <bdi dir="ltr" translate="no" className="notranslate">{source.reference}</bdi>
                             </a>
                           ) : (
                             <span className="font-semibold text-foreground">
-                              {source.reference}
+                              <bdi dir="ltr" translate="no" className="notranslate">{source.reference}</bdi>
                             </span>
                           )}
                           <span className="text-foreground"> — </span>
-                          {source.summary}
+                          <ScriptureReferenceText text={source.summary} />
                         </li>
                       ))}
                     </ul>

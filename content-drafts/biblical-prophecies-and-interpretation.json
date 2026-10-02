@@ -268,7 +268,10 @@
     {
       "title": "Jesus and the Victory of God",
       "author": "N.T. Wright",
-      "note": "A major work placing Jesus within Second Temple Judaism and messianic expectations; demonstrates how Christian interpretation adapted existing Jewish prophetic categories."
+      "type": "book",
+      "publisher": "SPCK",
+      "year": 1996,
+      "note": "Wright's study of the historical Jesus within first-century Judaism, including Jesus' proclamation, messianic vocation, and movement toward the cross."
     },
     {
       "title": "Studies in Jewish Myth and Jewish Messianism",

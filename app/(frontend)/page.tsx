@@ -12,6 +12,9 @@ import { Tag } from "@/components/ui/Tag";
 import { getFullLibraryTree, getHomeData } from "@/lib/content";
 import { siteName, siteNameArabic } from "@/lib/seo";
 
+// The deployed CMS, not the build database, determines public availability.
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Respectful Islamic Research Library",
   description:

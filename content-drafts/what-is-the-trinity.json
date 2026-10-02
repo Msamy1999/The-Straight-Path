@@ -71,7 +71,7 @@
       "sectionId": "comparison",
       "title": "Weighing the Two Positions",
       "kind": "argument",
-      "body": "Begin with common ground. Christianity and Islam both confess one God. The disagreement is not monotheism versus polytheism. It is unfair to call the Trinity belief in three gods. The question is whether the one God's inner life contains three co-equal persons, or whether God is one in an absolute, undifferentiated sense. Tawhid.\n\nNow test each claim against the texts quoted above. The triadic passages, including Matthew 28:19 and 2 Corinthians 13:14, genuinely name the three together, but naming three together is not the doctrine. Neither verse states that the three are one being, co-equal and co-eternal. Those further claims required the councils' vocabulary. Ousia, hypostasis, homoousios, which appears nowhere in the Bible. John's Gospel brings the reader closest: “the Word was God.” Yet the same Gospel has Jesus say “the Father is greater than I,” and Mark has the Son not knowing the day or the hour. The two-natures explanation can absorb these verses, but only by adding another layer of post-biblical doctrine.\n\nThe Quranic position requires no such machinery. God is one. Jesus is His honored messenger, word, and servant. On that reading, “the Father is greater than I” and “only the Father” knows the hour mean exactly what they say. The trinitarian must explain the subordination texts. The affirmer of God's oneness need only explain honorific language about a uniquely honored prophet. Language the Quran itself uses of Jesus.\n\nThat asymmetry matters. The side that needs the more elaborate auxiliary doctrine carries the greater explanatory burden."
+      "body": "Begin with common ground. Christianity and Islam both confess one God. The disagreement is not monotheism versus polytheism. It is unfair to call the Trinity belief in three gods. The question is whether the one God's inner life contains three co-equal persons, or whether God is one in an absolute, undifferentiated sense. Tawhid.\n\nNow test each claim against the texts quoted above. The triadic passages, including Matthew 28:19 and 2 Corinthians 13:14, genuinely name the three together, but naming three together is not the doctrine. Neither verse states that the three are one being, co-equal and co-eternal. The councils later defined those claims with technical vocabulary. The completed creedal formula is not explicitly stated in the New Testament. Some Greek words used in it do occur there with other meanings: ousia refers to property in [Luke 15:12-13](https://bible.usccb.org/bible/luke/15), and hypostasis occurs in [Hebrews 1:3](https://bible.usccb.org/bible/hebrews/1). Their occurrence does not by itself state the later formula; homoousios, \"of the same substance,\" is a creedal term. John's Gospel brings the reader closest: “the Word was God.” Yet the same Gospel has Jesus say “the Father is greater than I,” and Mark has the Son not knowing the day or the hour. The two-natures explanation can absorb these verses, but only by adding another layer of post-biblical doctrine.\n\nThe Quranic position requires no such machinery. God is one. Jesus is His honored messenger, word, and servant. On that reading, “the Father is greater than I” and “only the Father” knows the hour mean exactly what they say. The trinitarian must explain the subordination texts. The affirmer of God's oneness need only explain honorific language about a uniquely honored prophet. Language the Quran itself uses of Jesus.\n\nThat asymmetry matters. The side that needs the more elaborate auxiliary doctrine carries the greater explanatory burden."
     },
     {
       "sectionId": "common-misconceptions",
@@ -248,6 +248,24 @@
       "text": "For there are three who testify:",
       "version": "World English Bible",
       "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Luke",
+      "chapter": 15,
+      "verse": "12-13",
+      "reference": "Luke 15:12-13",
+      "text": "The younger of them said to his father, ‘Father, give me my share of your property.’ He divided his livelihood between them. Not many days after, the younger son gathered all of this together and traveled into a far country. There he wasted his property with riotous living.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Hebrews",
+      "chapter": 1,
+      "verse": "3",
+      "reference": "Hebrews 1:3",
+      "text": "His Son is the radiance of his glory, the very image of his substance, and upholding all things by the word of his power, who, when he had by himself purified us of our sins, sat down on the right hand of the Majesty on high;",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
     }
   ],
   "faq": [
@@ -288,7 +306,10 @@
     {
       "title": "Trinity (Stanford Encyclopedia of Philosophy)",
       "author": "Dale Tuggy",
-      "note": "The academic reference for the doctrine's definition and the council dates; freely available online with a detailed history supplement."
+      "type": "primaryText",
+      "publisher": "Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/archives/fall2022/entries/trinity/",
+      "note": "An academic encyclopedia survey of Trinitarian doctrine, philosophical models, and historical developments; consult its linked history supplement for council context."
     },
     {
       "title": "Early Christian Doctrines",

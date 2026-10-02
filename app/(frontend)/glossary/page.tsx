@@ -4,6 +4,9 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { getGlossaryTerms } from "@/lib/content";
 
+// The deployed CMS, not the build database, determines public availability.
+export const dynamic = "force-dynamic";
+
 export const metadata = {
   title: "Glossary",
   description:

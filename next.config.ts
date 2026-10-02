@@ -8,6 +8,8 @@ const scriptSources = [
   ...(process.env.NODE_ENV === "development" ? ["'unsafe-eval'"] : []),
   "https://translate.google.com",
   "https://translate.googleapis.com",
+  // The official Translate widget loads its supported-language callback here.
+  "https://translate-pa.googleapis.com",
   "https://www.gstatic.com",
 ];
 
@@ -17,7 +19,7 @@ const contentSecurityPolicy = [
   "style-src 'self' 'unsafe-inline' https://translate.googleapis.com https://fonts.googleapis.com",
   "img-src 'self' data: blob: https://translate.google.com https://www.gstatic.com",
   "font-src 'self' data: https://fonts.gstatic.com",
-  "connect-src 'self' https://translate.google.com https://translate.googleapis.com https://www.gstatic.com",
+  "connect-src 'self' https://translate.google.com https://translate.googleapis.com https://translate-pa.googleapis.com https://www.gstatic.com",
   "media-src 'self' blob:",
   "worker-src 'self' blob:",
   "frame-src https://translate.google.com",

@@ -7,7 +7,6 @@ import {
   getArticleKeyScripture,
   getArticlePlaybackNavigation,
   getArticleRedirect,
-  getArticleSlugs,
   getArticleTreeBreadcrumbs,
   getCategoryBySlug,
   getCitationsByIds,
@@ -16,10 +15,9 @@ import {
   getRelatedArticles,
 } from "@/lib/content";
 
-// ISR lets long articles be served from the generated cache instead of
-// rebuilding the full Payload response on every tree click. Next development
-// mode still renders route data dynamically while draft imports are active.
-export const revalidate = 300;
+// Resolve published availability from the runtime CMS. Tagged content reads
+// remain cached, but build-time drafts must not freeze article HTML or 404s.
+export const dynamic = "force-dynamic";
 
 type ArticlePageProps = {
   params: Promise<{
@@ -49,11 +47,6 @@ function hasRenderableComparison(
           !verse.text.includes("[VERIFIED"),
       ),
   );
-}
-
-export async function generateStaticParams() {
-  const slugs = await getArticleSlugs();
-  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({

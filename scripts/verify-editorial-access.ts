@@ -140,6 +140,77 @@ await assert.rejects(
   /not yet verified/i,
 );
 
+// Publication source reads must share the exact owner request/transaction;
+// otherwise bulk SQLite publication can self-block on a second connection.
+type SourceRead = {
+  collection: string;
+  req: unknown;
+  overrideAccess: boolean;
+  depth: number;
+  where: { id: { in: string[] } };
+};
+const sourceReadCalls: { collection: string; ids: string[] }[] = [];
+const transactionReq = {
+  user: owner,
+  transactionID: "editorial-publication-transaction",
+  locale: "en",
+  payload: {
+    find: async (options: SourceRead) => {
+      assert.equal(options.req, transactionReq);
+      assert.equal(options.overrideAccess, false);
+      assert.equal(options.depth, 0);
+      sourceReadCalls.push({ collection: options.collection, ids: options.where.id.in });
+      return { docs: options.where.id.in.map(id => ({ id, status: "verified" })) };
+    },
+  },
+};
+const verifiedData = {
+  status: "published",
+  citations: [1, "1", { id: 2 }],
+  sections: [{ citations: [3] }],
+  sources: [4],
+  quranVerses: [5],
+  bibleVerses: [6],
+};
+assert.equal(await blockUnverifiedPublish({ data: verifiedData, req: transactionReq } as never), verifiedData);
+assert.deepEqual(sourceReadCalls, [
+  { collection: "citations", ids: ["1", "2", "3", "4"] },
+  { collection: "quran-verses", ids: ["5"] },
+  { collection: "bible-verses", ids: ["6"] },
+]);
+for (const collection of ["citations", "quran-verses", "bible-verses"]) {
+  const pendingReq = {
+    user: owner,
+    transactionID: `pending-source-${collection}`,
+    payload: {
+      find: async (options: SourceRead) => {
+        assert.equal(options.req, pendingReq);
+        assert.equal(options.overrideAccess, false);
+        return { docs: options.where.id.in.map(id => ({ id, status: options.collection === collection ? "pending" : "verified" })) };
+      },
+    },
+  };
+  await assert.rejects(
+    async () => blockUnverifiedPublish({ data: verifiedData, req: pendingReq } as never),
+    /not yet verified/i,
+  );
+  const missingReq = {
+    user: owner,
+    transactionID: `missing-source-${collection}`,
+    payload: {
+      find: async (options: SourceRead) => {
+        assert.equal(options.req, missingReq);
+        assert.equal(options.overrideAccess, false);
+        return { docs: options.collection === collection ? [] : options.where.id.in.map(id => ({ id, status: "verified" })) };
+      },
+    },
+  };
+  await assert.rejects(
+    async () => blockUnverifiedPublish({ data: verifiedData, req: missingReq } as never),
+    /references are missing/i,
+  );
+}
+
 for (const collection of [
   Citations,
   GlossaryTerms,

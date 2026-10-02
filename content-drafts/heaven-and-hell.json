@@ -99,7 +99,7 @@
       "sectionId": "faq-section",
       "title": "Essential Questions",
       "kind": "notes",
-      "body": "Q: Does Islam believe in eternal Paradise?\\nA: Yes. Paradise is lasting life, peace, and God’s pleasure.\\n\\nQ: Is Hell real in Islam?\\nA: Yes. It is a warning for rejection and persistent wrongdoing. God remains perfectly just and merciful.\\n\\nQ: Can a person be forgiven?\\nA: Yes. The Quran repeatedly calls people to sincere repentance before death.\\n\\nQ: Do Muslims believe in inherited sin?\\nA: No. Each person is responsible for his or her own choices.\\n\\nQ: What is the main difference from Christianity?\\nA: Islam teaches direct worship of the One God and salvation through faith, repentance, righteous action, and mercy."
+      "body": "Q: Does Islam believe in eternal Paradise?\nA: Yes. Paradise is lasting life, peace, and God’s pleasure.\n\nQ: Is Hell real in Islam?\nA: Yes. It is a warning for rejection and persistent wrongdoing. God remains perfectly just and merciful.\n\nQ: Can a person be forgiven?\nA: Yes. The Quran repeatedly calls people to sincere repentance before death.\n\nQ: Do Muslims believe in inherited sin?\nA: No. Each person is responsible for his or her own choices.\n\nQ: What is the main difference from Christianity?\nA: Islam teaches direct worship of the One God and salvation through faith, repentance, righteous action, and mercy."
     },
     {
       "sectionId": "seeker-conclusion",
@@ -386,7 +386,7 @@
     },
     {
       "question": "Is the punishment of Hell/Jahannam eternal in both traditions?",
-      "answer": "Islamic scholars debate this extensively; many teach eternal punishment for those who persistently reject God, but some argue that believers whose faith was genuine may eventually enter jannah after purification. Christian theology traditionally teaches eternal separation from God for those who reject salvation, though some modern Christian thinkers revisit this question. Both traditions affirm that consequences are real and represent genuine separation from God's favor."
+      "answer": "Mainstream Sunni teaching distinguishes those who die in unbelief from sinful believers. Those who die with faith may face punishment, but will not remain in Hell forever; [Sahih al-Bukhari 22](https://sunnah.com/bukhari:22) explicitly describes their deliverance. This is different from the minority debate over whether Hell itself eventually ends. Eternal punishment for unbelief is the mainstream position. Many Christians teach eternal conscious punishment, while others teach final destruction or eventual restoration. These alternatives should not be confused with one another."
     },
     {
       "question": "Why do both religions use such vivid, physical descriptions of the afterlife?",
@@ -423,7 +423,8 @@
     {
       "title": "Surprised by Hope: Rethinking Heaven, the Resurrection, and the Mission of the Church",
       "author": "N.T. Wright",
-      "note": "A contemporary Christian perspective arguing for embodied, transformed existence in heaven as the renewal of creation rather than escape from the material world."
+      "type": "book",
+      "note": "A Christian account of hope in bodily resurrection and renewed creation, distinguished from the idea that final salvation is escape from the world into heaven."
     }
   ],
   "bibleReferences": []

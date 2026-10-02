@@ -278,7 +278,10 @@
     {
       "title": "Jesus and the Victory of God",
       "author": "N.T. Wright",
-      "note": "Scholarly reconstruction of Jesus's kingdom proclamation and its first-century Jewish context. Wright, an Anglican bishop, demonstrates how historical study and theological commitment are compatible."
+      "type": "book",
+      "publisher": "SPCK",
+      "year": 1996,
+      "note": "Wright's study of the historical Jesus within first-century Judaism, including Jesus' proclamation, messianic vocation, and movement toward the cross."
     },
     {
       "title": "The Muslim Jesus: Sayings and Stories in Islamic Literature",

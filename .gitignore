@@ -41,3 +41,10 @@ deployment-backups/
 
 # local Codex audit/build workspaces (may contain large fixture databases)
 .codex*/
+
+# Private audit backups and isolated release rehearsals are never source files.
+outputs/**/*.db
+outputs/**/*.db-*
+outputs/**/production-content-snapshot*.json
+tmp/**/*.db
+tmp/**/*.db-*

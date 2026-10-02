@@ -4,7 +4,7 @@
   "subtitle": "Why Al-Aqsa matters in Islam and how to discuss Jerusalem with justice",
   "category": "religious-history",
   "audienceLevel": "beginner",
-  "summary": "Jerusalem and Al-Aqsa hold a unique place in Islamic faith and history. The Quran connects the Prophet's night journey to the Farthest Mosque, and Muslims honor Jerusalem as a land of prophets and worship. Islam also requires justice and respect for every community connected to the city.",
+  "summary": "Al-Aqsa is the Farthest Mosque named in Quran 17:1 and identified with Jerusalem in authentic hadith. The Prophet named it among three mosques with a special status for travel in worship, and Muslims in Medina faced Jerusalem for sixteen or seventeen months before the qiblah changed to the Kaaba. Understanding the scripture, the sanctuary's names, and its shared setting helps Muslims honor it with accuracy and justice.",
   "tags": [
     "History",
     "Theology",
@@ -15,31 +15,37 @@
       "sectionId": "seeker-guide",
       "title": "Why Jerusalem and Al-Aqsa Matter in Islam",
       "kind": "summary",
-      "body": "Jerusalem is sacred to many communities. For Muslims, Al-Aqsa is linked to the Prophet's night journey, earlier prophets, and the first prayer direction. The Quran calls for truth and justice toward all."
+      "body": "For Muslims, Al-Aqsa is a place of revelation, prayer, and prophetic memory. Quran 17:1 names the Farthest Mosque and blesses its surroundings. Authentic hadith connects that mosque with Jerusalem, gives it a special place among mosques, and records Jerusalem as the first direction faced by the Muslim community in prayer."
     },
     {
       "sectionId": "what-al-aqsa-means",
-      "title": "What Muslims Mean by Al-Aqsa",
+      "title": "What the Name Al-Aqsa Refers To",
       "kind": "interpretation",
-      "body": "Al-Aqsa can mean the mosque or the wider blessed sanctuary. Its religious importance rests on the Quran and the Prophet's teachings. Quran 22:40 names monasteries, churches, synagogues, and mosques as places of worship. Muslims honor Al-Aqsa as prophetic inheritance."
+      "body": "The Arabic name al-Masjid al-Aqsa means \"the Farthest Mosque.\" In common Muslim and custodial usage, Al-Aqsa Mosque or al-Haram al-Sharif refers to the whole walled sanctuary in Jerusalem. The Qibli prayer hall stands at its southern end, and the Dome of the Rock is a distinct building within the same sanctuary. A [Jordanian custodial description submitted through UNESCO](https://whc.unesco.org/document/181413) explains this wider use of the name.\n\nKnowing the terms prevents a common mistake: the gold-domed building is the Dome of the Rock, not the Qibli prayer hall. Both stand within the wider Al-Aqsa sanctuary. Terminology can be politically contested, so careful writers should state which building or area they mean."
     },
     {
       "sectionId": "isra-and-miraj",
       "title": "The Isra and Mi'raj in Islamic Sources",
       "kind": "scripture",
-      "body": "The Quran says Allah took His servant by night from the Sacred Mosque to the Farthest Mosque, whose surroundings He blessed (Quran 17:1). Hadith and tafsir identify it with Jerusalem. This is why Muslims love Al-Aqsa. History must guide claims about modern rule and archaeology. Residents deserve dignity."
+      "body": "Quran 17:1 states that Allah took His servant by night from al-Masjid al-Haram in Mecca to al-Masjid al-Aqsa, whose surroundings He blessed. The verse itself does not use the city-name Jerusalem. The location is made explicit in the Prophetic tradition: [Sahih al-Bukhari 3886](https://sunnah.com/bukhari:3886) says Jerusalem was shown to the Prophet when he described his night journey, and [Sahih al-Bukhari 3888](https://sunnah.com/bukhari:3888) names Bayt al-Maqdis in its report of that journey.\n\nThe Prophet said that a special journey for worship is undertaken to three mosques: al-Masjid al-Haram, his mosque in Medina, and Al-Aqsa ([Sahih al-Bukhari 1189](https://sunnah.com/bukhari:1189)). [Sahih Muslim 525b](https://sunnah.com/muslim:525b) also records that Muslims faced Jerusalem for sixteen or seventeen months before the prayer direction changed to the Kaaba. These are strong and precise foundations for Al-Aqsa's importance in Islam."
+    },
+    {
+      "sectionId": "sanctity-and-justice",
+      "title": "Sanctity Does Not Cancel Justice",
+      "kind": "notes",
+      "body": "Jerusalem is also sacred to Jews and Christians. Acknowledging that fact does not weaken Al-Aqsa's Islamic significance. It requires Muslims to speak accurately, protect human dignity, and reject religious hatred.\n\nQuran 22:40 mentions monasteries, churches, synagogues, and mosques in a passage about people expelled from their homes and the protection of worship. It is an Islamic ethical foundation, not a modern property map or a substitute for historical and legal evidence. Questions about archaeology, access, administration, or sovereignty require their own reliable sources."
     },
     {
       "sectionId": "how-to-study",
-      "title": "How to Study a Shared Sacred City",
+      "title": "Use the Right Evidence",
       "kind": "sources",
-      "body": "Use Quran and hadith for faith, archaeology and documents for history, and reliable reports for the present. Religious conviction should not replace evidence. No political argument justifies hatred of Jews, Christians, Muslims, or civilians."
+      "body": "Use the Quran and authentic hadith to establish religious belief. Use inscriptions, archaeology, Islamic endowment (waqf) records, and dated documents for architectural and political history. Use current legal texts and reliable reporting for present disputes. Keeping these kinds of evidence separate makes the Islamic case clearer, not weaker."
     },
     {
       "sectionId": "seeker-conclusion",
       "title": "Key Takeaways: Jerusalem and Al-Aqsa",
       "kind": "summary",
-      "body": "Al-Aqsa matters because Allah blessed its surroundings and linked it to the Prophet's night journey. Devotion should produce worship, truth, protection, and justice. Muslims can uphold its Islamic significance while treating every innocent person with dignity."
+      "body": "Al-Aqsa's Islamic status rests on clear Quranic and Prophetic evidence. The name commonly includes the whole walled sanctuary, while the Qibli prayer hall and Dome of the Rock are distinct buildings within it. Muslims can defend Al-Aqsa's sacred character while using careful evidence and honoring the dignity of every innocent person."
     }
   ],
   "quranVerses": [
@@ -67,6 +73,8 @@
   "bibleVerses": [],
   "relatedSlugs": [
     "why-palestine-matters-to-muslims",
+    "palestine-places-and-people",
+    "palestine-beginner-timeline",
     "human-dignity-and-justice",
     "source-library-for-palestine"
   ],
@@ -85,7 +93,15 @@
       "publisher": "Alfred A. Knopf",
       "year": 2011,
       "note": "A broad narrative history useful for orientation; it should be read alongside specialist scholarship and primary sources.",
-      "url": "https://www.penguinrandomhouse.com/books/215608/jerusalem-by-simon-sebag-montefiore/"
+      "url": "https://www.penguinrandomhouse.com/books/116181/jerusalem-by-simon-sebag-montefiore/"
+    },
+    {
+      "title": "Medieval Jerusalem and Islamic Worship: Holy Places, Ceremonies, Pilgrimage",
+      "author": "Amikam Elad",
+      "publisher": "Brill",
+      "year": 1994,
+      "note": "A specialist history of Muslim worship and holy places in early and medieval Jerusalem, based on Arabic sources.",
+      "url": "https://brill.com/display/title/658"
     }
   ],
   "faq": []

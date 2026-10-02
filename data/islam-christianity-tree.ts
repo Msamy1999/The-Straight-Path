@@ -64,7 +64,7 @@ export const islamChristianityBranches: IslamChristianityBranchDef[] = [
         "draft",
       ),
       topic(
-        "What is revelation?",
+        "What is divine revelation?",
         "/articles/what-is-revelation",
         "A draft study on the Quran-Christ asymmetry: verbatim revelation versus the Word made flesh.",
         "draft",

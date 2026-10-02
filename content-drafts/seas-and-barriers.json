@@ -186,7 +186,7 @@
   "faq": [
     {
       "question": "Is the barrier between fresh and salt water a solid structure?",
-      "answer": "No. The barrier is a zone of rapid transition, not a physical wall. This zone, called a halocline (salinity boundary) or thermocline (temperature boundary), is where fresh and salt water meet and mix slowly. The density difference causes them to remain layered, with the lighter fresh water above and denser salt water below. Molecular diffusion across this boundary is slow compared to the bulk motion of the water bodies."
+      "answer": "No. Water masses can remain distinguishable across fronts or layers while water crosses their boundaries. A halocline is a strong change in salinity with depth; a thermocline is a strong change in temperature. Neither term is simply another name for every river-sea boundary. Density can keep fresher water above saltier water, but tides, currents, wind, and turbulence affect how quickly they mix. A persistent boundary does not mean an impermeable wall."
     },
     {
       "question": "Did pre-Islamic people know about the barrier between fresh and salt water?",
@@ -198,7 +198,7 @@
     },
     {
       "question": "How do Islamic scholars interpret these verses?",
-      "answer": "Classical and modern Islamic scholars view these verses as signs (āyāt) of divine creation and wisdom. Many frame them as evidence that the Quranic text contains knowledge of natural phenomena, sometimes categorized as scientific signs (i'jāz 'ilmī) of the Quran's divine origin. This interpretation emphasizes that God has guided the revelation to affirm true things about creation."
+      "answer": "Classical commentators explain these waters as signs of Allah's creation, power, and provision. Modern writers sometimes connect the imagery with oceanography or with scientific-miracle arguments. That later approach should be distinguished from classical tafsir. The Quran's invitation is clear without claiming that every early commentator understood modern salinity gradients: observe creation and recognize the One who orders and sustains it."
     },
     {
       "question": "How do skeptical scholars interpret them?",
@@ -217,8 +217,11 @@
   "furtherReading": [
     {
       "title": "Oceanography: An Illustrated Text",
-      "author": "S. A. Thorpe and C. P. Summerhayes",
-      "note": "Comprehensive treatment of estuarine dynamics, haline stratification, and river-ocean interactions (Manson Publishing, 1996)."
+      "author": "C. P. Summerhayes and S. A. Thorpe (editors)",
+      "type": "book",
+      "publisher": "Wiley",
+      "year": 1996,
+      "note": "An illustrated introduction to oceanography and the development of ocean science, with contributions from specialists."
     },
     {
       "title": "The Qur'anic Phenomenon: An Essay of a Theory on the Qur'an",

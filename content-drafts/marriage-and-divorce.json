@@ -4,7 +4,7 @@
   "subtitle": "Consent, mercy, divorce, polygyny, and protection from harm in Islamic marriage",
   "category": "women",
   "audienceLevel": "beginner",
-  "summary": "Islam treats marriage as a serious covenant built on consent, mercy, financial responsibility, and mutual rights. It permits divorce when a marriage cannot be repaired and gives women independent routes to separation. Polygyny was restricted to four and conditioned on justice; the Quran warns that perfect equality is beyond human ability. No Islamic rule makes coercion, abuse, or child harm acceptable.",
+  "summary": "Islam treats marriage as a serious covenant of mercy, financial responsibility, and mutual rights. Authentic hadith support the bride's permission, and contemporary institutions explicitly reject forced marriage. Classical jurists differed over some guardianship powers, but abuse and harm violate duties of protection. Divorce and independent routes to separation give recourse when a marriage cannot be repaired; polygyny is a conditional permission tied to justice.",
   "tags": [
     "Scripture",
     "Theology",
@@ -35,13 +35,13 @@
       "sectionId": "seeker-guide",
       "title": "Marriage Is Meant to Bring Tranquility and Mercy",
       "kind": "summary",
-      "body": "Surah al-Rum (30:21) describes spouses as a source of tranquility, affection. And mercy. Marriage is not ownership. It is a binding covenant in which both people have rights before Allah. A valid Islamic marriage includes consent, a marital gift belonging to the bride, public recognition. And enforceable obligations.\n\nCalling marriage a contract does not make it cold or merely commercial. The Quran calls it a solemn covenant (4:21). And Prophetic teaching connects excellence in faith to conduct at home. Legal clarity protects affection: each spouse knows that love is supported by duties, property rights. And recourse when harm occurs."
+      "body": "Surah al-Rum (30:21) describes spouses as a source of tranquility, affection, and mercy. Marriage is not ownership. It is a binding covenant in which both people have rights before Allah. The mahr belongs to the bride, and the contract creates enforceable obligations. Authentic hadith require a bride's permission; the historical differences over guardianship are explained below.\n\nCalling marriage a contract does not make it cold or merely commercial. The Quran calls it a solemn covenant (4:21), and Prophetic teaching connects excellence in faith to conduct at home. Legal clarity protects affection through duties, property rights, and recourse when harm occurs."
     },
     {
       "sectionId": "rights",
       "title": "Consent and Financial Security",
       "kind": "scripture",
-      "body": "A woman cannot be forced into marriage. Authentic hadith show the Prophet giving a woman the choice when her father arranged a marriage she disliked. The mahr belongs to the bride. And marriage does not transfer her property to her husband. The husband must provide according to his means. While both spouses owe faithful, kind. And honorable treatment. Surah al-Nisa (4:19) commands men to live with wives in kindness.\n\nSahih al-Bukhari 5136 states that a previously married woman must be consulted and a virgin must give permission. Bukhari 5138 reports that the Prophet invalidated a marriage arranged against Khansa bint Khidam's wishes. These authentic texts make consent a legal requirement. Silence in the first hadith reflects a culturally shy but genuinely asked bride. It cannot be used to treat protest, fear, or coercion as consent."
+      "body": "Authentic hadith support a woman's right to accept or refuse a husband. [Sahih al-Bukhari 5136](https://sunnah.com/bukhari:5136) requires consultation of a previously married woman and permission from a virgin. [Bukhari 5138](https://sunnah.com/bukhari:5138) reports that the Prophet invalidated a marriage arranged against Khansa bint Khidam's wishes. Egypt's [Dar al-Ifta](https://www.dar-alifta.org/en/fatwa/details/8323/a-woman%E2%80%99s-right-to-choose-her-husband) explicitly requires the bride's consent and rejects forced marriage.\n\n[Classical jurists differed](https://journalofislamiclaw.com/current/article/download/scheunchen/117?inline=1) over a father's power to arrange marriage for virgin or minor wards, often called ijbar. The historical rules were therefore not uniform. It is not a license for relatives to coerce a woman or expose her to harm. A shy bride's silence in the hadith follows a request for permission; it must not be used to dismiss refusal or fear.\n\nThe mahr belongs to the bride, and marriage does not transfer her property to her husband. The husband provides according to his means, while both spouses owe faithful and honorable treatment. Quran 4:19 commands men to live with their wives in kindness."
     },
     {
       "sectionId": "polygyny",
@@ -302,7 +302,7 @@
   "faq": [
     {
       "question": "Can a woman be forced to marry?",
-      "answer": "No. Consent is required, and authentic reports show the Prophet allowing women to reject marriages arranged against their wishes."
+      "answer": "The cited authentic hadith require a bride's permission and record the rejection of a marriage arranged against a woman's wishes. Contemporary institutions such as Dar al-Ifta explicitly reject forced marriage. Classical jurists differed over certain guardianship powers concerning virgin or minor wards; this history must not be used to justify coercion or harm."
     },
     {
       "question": "Does Islam require polygyny?",
@@ -331,7 +331,10 @@
     {
       "title": "Succession in the Muslim Family",
       "author": "Noel James Coulson",
-      "note": "Legal and historical analysis of Islamic family law covering marriage, divorce, inheritance, and succession across various jurisdictions and legal schools"
+      "type": "book",
+      "publisher": "Cambridge University Press",
+      "year": 1971,
+      "note": "A study of classical Muslim inheritance, succession, and bequest rules and modern reforms affecting the family."
     },
     {
       "title": "An Introduction to Canon Law",

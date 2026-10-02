@@ -4,7 +4,7 @@
   "subtitle": "A practical reading map for Islamic sources, history, law, and current reporting",
   "category": "sources",
   "audienceLevel": "beginner",
-  "summary": "A reliable study of Palestine needs more than a single article. This guide groups useful primary sources, historical scholarship, legal material, and dated reporting so readers can check claims and understand their limits.",
+  "summary": "A reliable study of Palestine uses the right source for each question. Quran and hadith establish Islamic belief; historians explain change over time; original documents show what institutions decided; courts and legal texts address law; and dated humanitarian reports describe current conditions. This guide points readers to each type and explains its limits.",
   "tags": [
     "Sources",
     "History",
@@ -15,43 +15,49 @@
       "sectionId": "seeker-guide",
       "title": "How to Build a Reliable Reading List",
       "kind": "summary",
-      "body": "No single source answers every question about Palestine. A sound list joins Islamic scripture with history, law, study, and dated reports. Note each source's author, purpose, date, and evidence."
+      "body": "No single book, website, government, or organization answers every question about Palestine. Start by asking whether the question is about Islamic belief, identity and history, a legal rule, a humanitarian condition, or a breaking event. Then choose a source built to answer that question."
     },
     {
       "sectionId": "verify-reports",
-      "title": "Verify Before Repeating a Claim",
+      "title": "Verification Is an Islamic Responsibility",
       "kind": "scripture",
-      "body": "The Qur'an teaches a rule for news and social media:\n\n\"O you who have believed, if there comes to you a disobedient one with information, investigate, lest you harm a people out of ignorance and become, over what you have done, regretful.\" (Qur'an 49:6)\n\nA careful review checks the first report, date, place, named sources, and later corrections. If proof is missing, the claim should be marked unverified. Checking claims is part of preventing harm."
+      "body": "Quran 49:6 tells believers to investigate reports so that people are not harmed through ignorance. The full Arabic and English verse appears below. For any important claim, record the original source, author, date, place, evidence, and later correction. If proof is missing, label the claim unverified rather than filling the gap with confidence."
     },
     {
       "sectionId": "islamic-sources",
       "title": "Islamic Scripture and Scholarship",
       "kind": "sources",
-      "body": "Begin with the Quran and sound Prophetic teachings when studying Palestine. Surah al-Isra describes the night journey to al-Masjid al-Aqsa. Surah al-Hajj names monasteries, churches, synagogues, and mosques among places worth protecting. Read these texts with trusted tafsir, not isolated slogans.\n\nFor Islamic law, separate Quranic commands, hadith, old legal reasoning, and modern political claims. They are related, but not the same."
+      "body": "Use the Quran for what Allah reveals and authentic hadith for the Prophet's teachings. [The opening verse of Surah al-Isra, displayed in the Jerusalem article](/articles/jerusalem-and-al-aqsa), names al-Masjid al-Aqsa and blesses its surroundings. [Sahih al-Bukhari 1189](https://sunnah.com/bukhari:1189) gives Al-Aqsa a special place among three mosques, while [Sahih Muslim 525b](https://sunnah.com/muslim:525b) records Jerusalem as the early prayer direction.\n\nRead scripture with reliable tafsir and hadith commentary. Keep Quranic text, Prophetic report, later interpretation, classical jurisprudence, and modern political argument distinct. They may relate to one another, but they are not the same kind of evidence."
     },
     {
       "sectionId": "history-and-documents",
       "title": "History and Primary Documents",
       "kind": "history",
-      "body": "For modern history, use books on the late Ottoman years, the British Mandate, the 1948 Nakba, the 1967 occupation, the PLO, and the Intifadas. Pair a historian's view with first-hand records: mandate files, UN resolutions, speeches, deals, maps, and population records. A document shows what an institution wrote. Context is still needed.\n\nRashid Khalidi and Beshara Doumani discuss Palestinian identity and local history. The UN Palestine portal helps find official records and timelines. Compare books when historians disagree."
+      "body": "For Palestinian identity and local life, begin with [Rashid Khalidi](https://cup.columbia.edu/book/palestinian-identity/9780231150743) and [Beshara Doumani](https://www.ucpress.edu/book/9780520203709/rediscovering-palestine). For a broad conflict history written for general readers, use [James Gelvin's survey](https://www.cambridge.org/highereducation/books/israelpalestine-conflict/5D389E3231527643CCE3F861003EC172). Compare their questions and evidence rather than treating any author as neutral by definition.\n\nFor original UN material, use the [UNISPAL document collection](https://www.un.org/unispal/data-collection/) and its [historical orientation](https://www.un.org/unispal/history/). A resolution or report proves what a UN body recorded or decided; its author, mandate, date, and evidentiary method still matter."
     },
     {
-      "sectionId": "law-and-current-reporting",
-      "title": "Law, Humanitarian Data, and Current Events",
+      "sectionId": "law-and-judgments",
+      "title": "Law and Judicial Sources",
       "kind": "sources",
-      "body": "For international law, read judgments, opinions, treaty text, and filings rather than headlines. For aid data, prefer dated figures with methods from OCHA and UNRWA. For breaking news, use reports that name sources, separate facts from claims, and correct errors.\n\nLaw and aid sources answer specific questions. They do not settle every faith, history, or politics question."
+      "body": "For the rules of armed conflict, begin with the [ICRC's rules-of-war guide](https://www.icrc.org/en/document/FAQ-rules-of-war-ihl) and then consult the relevant treaty or customary-law rule. For judicial findings, read the judgment or advisory opinion itself. The [International Court of Justice case page on the occupied Palestinian territory, including East Jerusalem](https://www.icj-cij.org/case/186) collects the 2024 advisory opinion, summary, and separate opinions.\n\nA court document answers a legal question within that body's jurisdiction and procedure. It does not replace historical research, and a headline about a case does not replace the court's own wording."
+    },
+    {
+      "sectionId": "humanitarian-data-and-news",
+      "title": "Humanitarian Data and Current Reporting",
+      "kind": "sources",
+      "body": "For humanitarian conditions, consult dated reports from [UN OCHA's occupied Palestinian territory office](https://www.ochaopt.org/) and [UNRWA's information on Palestine refugees](https://www.unrwa.org/palestine-refugees). Check what population, period, and method each figure covers. UNRWA's operational refugee category is not a definition of every Palestinian.\n\nFor breaking news, seek the earliest attributable evidence and independent confirmation. Separate what a witness, military, government, hospital, or aid agency claims from what a reporter has verified. Figures may be revised; record the publication date."
     },
     {
       "sectionId": "reading-principles",
       "title": "A Simple Method for Readers",
       "kind": "notes",
-      "body": "For an important claim, ask: Who made it? What proof is given? When was it recorded? Can the original be checked? Compare a second view. Keep proof, not labels, central.\n\nAvoid anonymous screenshots, old videos without dates, cropped quotes, and claims that treat whole peoples as one mind. The aim is truth, human dignity, and moral duty."
+      "body": "For an important claim, ask: Who made it? What proof is given? When was it recorded? Can the original be opened? What is the source's mandate or point of view? Has an independent source checked the same evidence?\n\nAvoid anonymous screenshots, undated videos, cropped quotations, and claims that treat whole peoples as one mind. Sources do not become useless because they have a perspective; their perspective and limits must be made visible."
     },
     {
       "sectionId": "seeker-conclusion",
       "title": "Key Takeaways: Reading Palestine Responsibly",
       "kind": "summary",
-      "body": "A sound reading process joins faith, proof, and humility. Read Islamic sources for Palestine's religious meaning, historians for context, first-hand records for events, and current reports for dated facts. Check before repeating. Separate fact from opinion. Keep justice and human dignity central."
+      "body": "Read Islamic sources for religious meaning, historians for context, original records for institutional actions, legal texts for law, and current reports for dated conditions. Check before repeating, distinguish evidence from interpretation, and correct errors openly. Truthful study strengthens justice and reflects Islamic character."
     }
   ],
   "quranVerses": [
@@ -69,6 +75,9 @@
   "bibleVerses": [],
   "relatedSlugs": [
     "how-to-learn-responsibly",
+    "palestine-beginner-timeline",
+    "palestine-places-and-people",
+    "nakba-and-palestinian-refugees",
     "jerusalem-and-al-aqsa",
     "who-are-the-people-of-palestine",
     "human-dignity-and-justice"
@@ -79,14 +88,15 @@
       "author": "United Nations",
       "type": "primaryText",
       "note": "Official documents, resolutions, reports, and background material. Read each document with attention to its date, author, and institutional mandate.",
-      "url": "https://www.un.org/unispal/"
+      "url": "https://www.un.org/unispal/data-collection/"
     },
     {
-      "title": "United Nations Timeline of the Question of Palestine",
+      "title": "History of the Question of Palestine",
       "author": "United Nations",
       "type": "primaryText",
-      "note": "A dated orientation to major developments; use the linked documents for fuller context.",
-      "url": "https://www.un.org/unispal/timeline/"
+      "publisher": "United Nations",
+      "url": "https://www.un.org/unispal/history/",
+      "note": "A continuously maintained institutional overview of the Mandate, partition, 1948, 1967, and later UN involvement; use it as a documented UN chronology, not as the only historical interpretation."
     },
     {
       "title": "Palestinian Identity: The Construction of Modern National Consciousness",
@@ -94,7 +104,7 @@
       "publisher": "Columbia University Press",
       "year": 1997,
       "note": "A major scholarly study of Palestinian identity and its historical development.",
-      "url": "https://cup.columbia.edu/book/palestinian-identity/9780231105156"
+      "url": "https://cup.columbia.edu/book/palestinian-identity/9780231150743"
     },
     {
       "title": "Rediscovering Palestine: Merchants and Peasants in Jabal Nablus, 1700–1900",
@@ -113,12 +123,19 @@
       "url": "https://www.cambridge.org/highereducation/books/israel-palestine-conflict/5D389E3231527643CCE3F861003EC172"
     },
     {
-      "title": "Armed Struggle and the Search for State",
-      "author": "Yezid Sayigh",
-      "publisher": "Oxford University Press",
-      "year": 1997,
-      "note": "A detailed history of the Palestinian national movement and the PLO.",
-      "url": "https://global.oup.com/academic/product/armed-struggle-and-the-search-for-state-9780198296431"
+      "title": "Frequently Asked Questions: Rules of War",
+      "author": "International Committee of the Red Cross",
+      "type": "primaryText",
+      "note": "A plain-language introduction to distinction, proportionality, precautions, and civilian protection under international humanitarian law.",
+      "url": "https://www.icrc.org/en/document/FAQ-rules-of-war-ihl"
+    },
+    {
+      "title": "Legal Consequences Arising from the Policies and Practices of Israel in the Occupied Palestinian Territory, Including East Jerusalem",
+      "author": "International Court of Justice",
+      "type": "primaryText",
+      "year": 2024,
+      "note": "The official case page for the advisory opinion, summary, and judges' separate opinions; use the court's own wording rather than a headline summary.",
+      "url": "https://www.icj-cij.org/case/186"
     },
     {
       "title": "United Nations Office for the Coordination of Humanitarian Affairs: Occupied Palestinian Territory",

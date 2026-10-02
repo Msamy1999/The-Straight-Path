@@ -218,9 +218,11 @@
       "note": "Classical Islamic theological work examining the boundaries between revelation and reason, philosophy and faith—demonstrates how Islamic scholars have long engaged critically with claims about scientific knowledge and religious truth."
     },
     {
-      "title": "The Qur'an and the Bible in the Light of History and Science",
+      "title": "The Qur'an & Modern Science: Compatible or Incompatible?",
       "author": "Dr. Zakir Naik",
-      "note": "Represents popular Muslim perspective on scientific claims in Quranic texts; useful for understanding contemporary arguments in Islamic comparative discourse."
+      "type": "book",
+      "url": "https://zakirnaik.com/Quran-Modern-Science-Book/",
+      "note": "A popular Muslim presentation of scientific-concordance arguments, included as further reading rather than as primary scientific evidence. Individual claims require comparison with the original verses, tafsir, and current research."
     },
     {
       "title": "Reading the Bible Theologically",
@@ -229,13 +231,25 @@
     },
     {
       "title": "Creation and Evolution: A Conference with Pope Benedict XVI in Castel Gandolfo",
-      "author": "Christoph Schönborn and Stephan Horn (eds.)",
-      "note": "Documents a 2006 theological conference with Pope Benedict XVI; reflects one major Christian tradition's official engagement with how theological and scientific truths coexist."
+      "author": "Stephan Otto Horn and Siegfried Wiedenhofer (editors)",
+      "type": "book",
+      "publisher": "Ignatius Press",
+      "year": 2008,
+      "url": "https://books.google.com/books/about/Creation_and_Evolution.html?id=iq3xMm75KF8C",
+      "note": "An edited record of the 2006 conference with Pope Benedict XVI, with contributions addressing Catholic theology and evolutionary science."
     },
     {
       "title": "Methodological Naturalism?",
       "author": "Alvin Plantinga",
-      "note": "Plantinga's argument that methodological naturalism in science need not entail philosophical naturalism, helping distinguish legitimate scientific questions from theological ones."
+      "type": "journalArticle",
+      "publisher": "American Scientific Affiliation",
+      "journal": "Perspectives on Science and Christian Faith",
+      "year": 1997,
+      "volume": "49",
+      "issue": "3",
+      "pages": "143-154",
+      "url": "https://www.asa3.org/ASA/PSCF/1997/PSCF9-97Plantinga.html",
+      "note": "A philosophical critique of methodological naturalism; distinguishes scientific method from wider metaphysical commitments."
     }
   ]
 }

@@ -226,60 +226,86 @@
   ],
   "furtherReading": [
     {
-      "title": "Impact of Listening to, Reciting, or Memorizing the Quran on Physical and Mental Health",
-      "author": "Wan Nur Amirah Che Wan Mohd Rozali, Izuddin Ishak, and colleagues",
+      "title": "The Impact of Listening to, Reciting, or Memorizing the Quran on Physical and Mental Health of Muslims: Evidence From Systematic Review",
+      "author": "Wan Nor Atikah Che Wan Mohd Rozali, Ismarulyusda Ishak, and colleagues",
+      "type": "journalArticle",
+      "journal": "International Journal of Public Health",
       "year": 2022,
+      "volume": "67",
+      "pages": "1604998",
+      "doi": "10.3389/ijph.2022.1604998",
       "url": "https://pubmed.ncbi.nlm.nih.gov/36119448/",
       "note": "A systematic review reporting promising outcomes alongside important methodological limitations."
     },
     {
-      "title": "Ramadan Fasting and Health Outcomes: An Umbrella Review",
-      "author": "H. Jahrami, A. Ammar, J. M. Glenn, and colleagues",
-      "year": 2024,
+      "title": "An umbrella review and meta-analysis of meta-analyses of the impact of Ramadan fasting on the metabolic syndrome components",
+      "author": "Haitham Jahrami, Achraf Ammar, Jordan M. Glenn, and colleagues",
+      "type": "journalArticle",
+      "journal": "Nutrition Reviews",
+      "year": 2025,
+      "volume": "83",
+      "issue": "2",
+      "pages": "e711-e721",
+      "doi": "10.1093/nutrit/nuae001",
       "url": "https://pubmed.ncbi.nlm.nih.gov/38335125/",
-      "note": "A review of meta-analyses examining metabolic and body-measure outcomes during Ramadan."
+      "note": "A review of meta-analyses of Ramadan fasting and metabolic-syndrome components. First published online in 2024; cited here using the 2025 journal issue."
     },
     {
       "title": "Alcohol",
       "author": "World Health Organization",
+      "type": "primaryText",
       "url": "https://www.who.int/news-room/fact-sheets/detail/alcohol",
       "note": "Authoritative overview of alcohol-related disease, injury, mortality, and social harm."
     },
     {
       "title": "Gambling",
       "author": "World Health Organization",
+      "type": "primaryText",
       "url": "https://www.who.int/news-room/fact-sheets/detail/gambling",
       "note": "Authoritative overview of gambling-related health, financial, and family harms."
     },
     {
-      "title": "Effectiveness of Miswak as Compared with the Toothbrush on Plaque and Gingivitis",
-      "author": "H. Ramli, K. N. Nor Aripin, S. Mohd Said, and colleagues",
+      "title": "The effectiveness of miswak (Salvadora persica L. and Azadirachta indica A.Juss.) practices in reducing plaque and gingivitis among adults: A systematic review and meta-analysis",
+      "author": "Haslinda Ramli, Khairun Nain Nor Aripin, Shahida Mohd Said, and colleagues",
+      "type": "journalArticle",
+      "journal": "Journal of Ethnopharmacology",
       "year": 2022,
+      "volume": "298",
+      "pages": "115598",
+      "doi": "10.1016/j.jep.2022.115598",
       "url": "https://pubmed.ncbi.nlm.nih.gov/35944735/",
       "note": "Review of evidence comparing miswak, toothbrushing, and combined use."
     },
     {
       "title": "Breastfeeding",
       "author": "World Health Organization",
+      "type": "primaryText",
       "url": "https://www.who.int/health-topics/breastfeeding",
       "note": "Current global guidance on exclusive and continued breastfeeding."
     },
     {
       "title": "Voluntary Medical Male Circumcision for HIV Prevention",
       "author": "World Health Organization",
+      "type": "primaryText",
       "url": "https://www.who.int/teams/global-hiv-hepatitis-and-stis-programmes/hiv/prevention/voluntary-medical-male-circumcision",
       "note": "Evidence and limitations concerning circumcision as one component of HIV prevention."
     },
     {
-      "title": "The Effects of Gratitude Interventions: A Systematic Review and Meta-Analysis",
-      "author": "G. Diniz, L. Korkes, L. S. Tristão, and colleagues",
+      "title": "The effects of gratitude interventions: a systematic review and meta-analysis",
+      "author": "Geyze Diniz, Ligia Korkes, Luca Schiliró Tristão, and colleagues",
+      "type": "journalArticle",
+      "journal": "Einstein (São Paulo)",
       "year": 2023,
+      "volume": "21",
+      "pages": "eRW0371",
+      "doi": "10.31744/einstein_journal/2023RW0371",
       "url": "https://pubmed.ncbi.nlm.nih.gov/37585888/",
       "note": "A synthesis of randomized trials examining gratitude and mental-health outcomes."
     },
     {
       "title": "Our Epidemic of Loneliness and Isolation",
       "author": "U.S. Surgeon General",
+      "type": "primaryText",
       "year": 2023,
       "url": "https://www.hhs.gov/surgeongeneral/reports-and-publications/connection/index.html",
       "note": "An evidence-based advisory on social connection and health."
@@ -287,12 +313,14 @@
     {
       "title": "Physical Activity",
       "author": "World Health Organization",
+      "type": "primaryText",
       "url": "https://www.who.int/news-room/fact-sheets/detail/physical-activity",
       "note": "Evidence-based recommendations and benefits of regular physical activity."
     },
     {
-      "title": "Tobacco",
+      "title": "Tobacco and nicotine",
       "author": "World Health Organization",
+      "type": "primaryText",
       "url": "https://www.who.int/news-room/fact-sheets/detail/tobacco",
       "note": "Authoritative overview of tobacco-related disease, death, and exposure risk."
     }

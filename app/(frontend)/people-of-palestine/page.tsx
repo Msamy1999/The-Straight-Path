@@ -9,17 +9,20 @@ import { Section } from "@/components/layout/Section";
 import { Tag } from "@/components/ui/Tag";
 import { getResearchTree } from "@/lib/content";
 
+// The deployed CMS, not the build database, determines public availability.
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "People of Palestine",
   description:
-    "A respectful discussion about the people of Palestine, with focus on historical context and the relevance of the Palestinian cause to Islam.",
+    "A beginner-friendly path through Palestinian people, places, history, Al-Aqsa, justice, and responsible action from an Islamic perspective.",
   alternates: {
     canonical: "/people-of-palestine",
   },
   openGraph: {
     title: "People of Palestine",
     description:
-      "A respectful discussion about the people of Palestine, with focus on historical context and the relevance of the Palestinian cause to Islam.",
+      "A beginner-friendly path through Palestinian people, places, history, Al-Aqsa, justice, and responsible action from an Islamic perspective.",
   },
 };
 
@@ -42,9 +45,9 @@ export default async function PeopleOfPalestinePage() {
                 <HandHeart aria-hidden="true" className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
               <PageHeader
-                eyebrow="Human section"
+                eyebrow="People, history, faith, and justice"
                 title="People of Palestine"
-                subtitle="A respectful discussion about the people of Palestine, with focus on historical context and the relevance of the Palestinian cause to Islam."
+                subtitle="Begin with people and place, learn the main history, understand Al-Aqsa's place in Islam, and turn concern into truthful, compassionate action."
               />
               <div className="mt-4 flex flex-wrap gap-2">
                 <Tag>Human dignity</Tag>
@@ -60,13 +63,13 @@ export default async function PeopleOfPalestinePage() {
           <PageHeader
             titleAs="h2"
             eyebrow="Study map"
-            title="Topics for careful study"
-            subtitle="Each topic approaches the subject with attention to context, dignity, and historical complexity."
+            title="A clear path from understanding to action"
+            subtitle="Start with the foundations, then follow the history, faith, justice, and source guides at your own pace."
           />
           <div className="mt-6">
             <ResearchTree
               title="People of Palestine"
-              description="A careful, human-centered outline with direct links to each study article."
+              description="A concise reading path arranged for beginners, with direct links to scripture and authoritative sources."
               nodes={peopleOfPalestineTree}
             />
           </div>

@@ -84,7 +84,7 @@
       "sectionId": "further-reading",
       "title": "Further Reading",
       "kind": "sources",
-      "body": "Selected sources and further reading:\n\n- **The History of the Qur'anic Text: From Revelation to Compilation** — Muhammad Mustafa al-Azami. Study of Quran transmission.\n- **The Text of the New Testament: Its Transmission, Corruption, and Restoration** — Bruce M. Metzger. Study of New Testament criticism.\n- **Misquoting Jesus: The Story of Who Changed the Bible and Why** — Bart D. Ehrman. Account of New Testament variation.\n- **The Qur'an: A Historical-Critical Introduction** — Nicolai Sinai. Overview of Quran compilation."
+      "body": "Selected sources and further reading:\n\n- **The History of the Qur'anic Text: From Revelation to Compilation** — Muhammad Mustafa al-Azami. Study of Quran transmission.\n- **The Text of the New Testament: Its Transmission, Corruption, and Restoration** — Bruce M. Metzger. Study of New Testament criticism.\n- **Misquoting Jesus: The Story Behind Who Changed the Bible and Why** — Bart D. Ehrman. Account of New Testament variation.\n- **The Qur'an: A Historical-Critical Introduction** — Nicolai Sinai. Overview of Quran compilation."
     }
   ],
   "quranVerses": [
@@ -113,15 +113,15 @@
   "faq": [
     {
       "question": "Did Uthman change the wording of the Quran?",
-      "answer": "No. The historical account describes producing accurate copies from an existing written master text, using a committee that included men who had memorized the Quran; it addresses spelling and dialect uniformity, not the wording that had been revealed."
+      "answer": "[Sahih al-Bukhari 4987](https://sunnah.com/bukhari:4987) describes copying Hafsa's existing collection to address recitation disputes, not composing a new revelation. It includes an instruction about the language of Quraysh. This established the Uthmanic written tradition; reducing the project to spelling alone would overlook the questions raised by personal codices and limited regional differences."
     },
     {
       "question": "Why did Uthman have other copies burned?",
-      "answer": "To remove copies whose regional spelling conventions were becoming a source of dispute, once identical master copies had been distributed everywhere. The account does not describe removing disputed content."
+      "answer": "[Sahih al-Bukhari 4987](https://sunnah.com/bukhari:4987) reports differences in recitation, followed by Uthman's order to destroy other written Quran materials after distributing the new codices. Muslim tradition understands this as preventing division. Historically, the project established one written tradition, whose regional exemplars also preserve limited consonantal differences."
     },
     {
       "question": "Do the different qira'at (reading styles) contradict this standardization?",
-      "answer": "No. The qira'at that survived are variations within the consonantal skeleton Uthman distributed, each carried by its own documented chain of trained reciters. They are a related but separate topic from the standardization itself."
+      "answer": "No. The recognized qira'at preserve transmitted readings compatible with the Uthmanic written tradition, including its limited regional consonantal differences. They have named teaching chains. Reading variation and the history of written standardization are connected questions, but should not be treated as identical."
     },
     {
       "question": "Is this similar to how the Bible's canon was decided?",
@@ -152,8 +152,12 @@
       "note": "A standard academic textbook on New Testament manuscript families and the discipline of textual criticism."
     },
     {
-      "title": "Misquoting Jesus: The Story of Who Changed the Bible and Why",
+      "title": "Misquoting Jesus: The Story Behind Who Changed the Bible and Why",
       "author": "Bart D. Ehrman",
+      "type": "book",
+      "publisher": "HarperOne",
+      "year": 2005,
+      "url": "https://www.bartehrman.com/misquoting-jesus-the-story-behind-who-changed-the-bible-and-why/",
       "note": "An accessible account of New Testament textual variation written by a leading biblical scholar."
     },
     {

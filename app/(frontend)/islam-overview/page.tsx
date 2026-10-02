@@ -13,6 +13,9 @@ import { categoryIconMap, fallbackCategoryIcon } from "@/lib/category-icons";
 import { getLearnIslamCategories, getResearchTree } from "@/lib/content";
 import { readerDescription } from "@/lib/reader-text";
 
+// The deployed CMS, not the build database, determines public availability.
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Islam Overview",
   description:

@@ -37,7 +37,7 @@
       "sectionId": "overview",
       "title": "The Genealogical Problem",
       "kind": "summary",
-      "body": "Matthew and Luke both open their gospel narratives with genealogies meant to establish Jesus's place in Jewish history and prophecy. Yet these genealogies diverge dramatically. From King David forward, they name almost entirely different ancestors. Matthew traces Jesus through Solomon (David's son), while Luke traces him through Nathan (David's other son). Matthew's genealogy spans 42 generations; Luke's spans 77. Most strikingly for modern readers: if Jesus was born of a virgin—a doctrine affirmed in both gospels—why does either genealogy matter? They trace the lineage of Joseph, who Christians hold was not Jesus's biological father. This apparent logical tension has prompted centuries of scholarly explanation."
+      "body": "Matthew opens with a genealogy, while Luke places his after Jesus' baptism and before the temptation narrative. Both genealogies connect Jesus with Israel's history. Yet these genealogies diverge dramatically. From King David forward, they name almost entirely different ancestors. Matthew traces Jesus through Solomon (David's son), while Luke traces him through Nathan (David's other son). Matthew's genealogy spans 42 generations; Luke's spans 77. Most strikingly for modern readers: if Jesus was born of a virgin—a doctrine affirmed in both gospels—why does either genealogy matter? They trace the lineage of Joseph, who Christians hold was not Jesus's biological father. This apparent logical tension has prompted centuries of scholarly explanation."
     },
     {
       "sectionId": "matthew-genealogy",
@@ -49,7 +49,7 @@
       "sectionId": "luke-genealogy",
       "title": "Luke's Genealogical Framework",
       "kind": "scripture",
-      "body": "Luke presents his genealogy differently. He situates it after Jesus's baptism and temptation, immediately before Jesus begins his public ministry. Luke 3:23 introduces: \"Jesus himself, when he began to teach, was about thirty years old, being the son (as was supposed) of Joseph, the son of Heli,\" The phrase \"as was supposed\" subtly signals awareness that this is not biological fatherhood. From Joseph, Luke traces backward through generations to King David and beyond. Luke 3:31 names the line through David's son Nathan: \"the son of Melea, the son of Menan, the son of Mattatha, the son of Nathan, the son of David,\" This divergence from Matthew is complete—not merely different names, but a fundamentally different branch of the family tree. Luke extends the genealogy all the way back to Adam, concluding at 3:38: \"the son of Enos, the son of Seth, the son of Adam, the son of God.\" The final phrase, \"the son of God,\" suggests that Luke's genealogy, by reaching to Adam (who in tradition was created directly by God), positions Jesus within all humanity and points toward his divine sonship."
+      "body": "Luke presents his genealogy differently. He places it after the baptism account (Luke 3:21–22) and before the temptation account (Luke 4:1–13). Luke 3:23 introduces: \"Jesus himself, when he began to teach, was about thirty years old, being the son (as was supposed) of Joseph, the son of Heli,\" The phrase \"as was supposed\" subtly signals awareness that this is not biological fatherhood. From Joseph, Luke traces backward through generations to King David and beyond. Luke 3:31 names the line through David's son Nathan: \"the son of Melea, the son of Menan, the son of Mattatha, the son of Nathan, the son of David,\" This divergence from Matthew is complete—not merely different names, but a fundamentally different branch of the family tree. Luke extends the genealogy all the way back to Adam, concluding at 3:38: \"the son of Enos, the son of Seth, the son of Adam, the son of God.\" The final phrase, \"the son of God,\" suggests that Luke's genealogy, by reaching to Adam (who in tradition was created directly by God), positions Jesus within all humanity and points toward his divine sonship."
     },
     {
       "sectionId": "critical-tensions",
@@ -67,7 +67,7 @@
       "sectionId": "islamic-perspective",
       "title": "The Quranic Approach to Genealogy",
       "kind": "interpretation",
-      "body": "The Quran's treatment of Jesus's genealogy stands in marked contrast to the Gospel accounts. Rather than tracing a paternal line, the Quran consistently identifies Jesus through his mother, Mary. In Surah Ali 'Imran 3:33, the Quran states: \"Indeed, Allah chose Adam and Noah and the family of Abraham and the family of 'Imran over the worlds,\" establishing Mary as part of the honored lineage of 'Imran's family—a lineage chosen and elevated by God. Most directly, Quran 3:45 announces: \"[And mention] when the angels said, \"O Mary, indeed Allah gives you good tidings of a word from Him, whose name will be the Messiah, Jesus, the son of Mary - distinguished in this world and the Hereafter and among those brought near [to Allah].\" The Quranic identification is consistent: Jesus is 'Isa ibn Maryam—Jesus, son of Mary. This identification serves multiple purposes in Islamic theology. First, it emphasizes Jesus's genuine humanity—he had a mother, belonged to a human family, was born in time and space. Second, it avoids any suggestion of biological paternity, whether through Joseph or any other man. Third, by identifying him through Mary, the Quran honors her as the vessel of this miraculous conception. The Quranic emphasis on Mary's role is theologically profound: it affirms Jesus's humanity while maintaining his miraculous origin, without needing to establish a legal or biological patrilineal claim. One interpretive question that arises in scholarly literature concerns the identity of \"'Imran's family\" in Quranic usage: elsewhere in the Quranic and biblical chronology, 'Imran (Amram) is identified as the father of Moses and Aaron, figures roughly 1,300+ years before Mary's time. Some scholars and commentators have proposed varying resolutions—that the references are to different families sharing the name, that genealogical frameworks in antiquity worked differently than modern assumptions, or that the Quranic identification is primarily theological rather than genealogical. Muslim scholars of the classical and modern periods have offered a range of interpretations on this point. There is no genealogical problem in the Quranic framework because the Quran does not claim Jesus as heir to David's throne through a paternal genealogy. Instead, it presents him as a prophet and messenger chosen by God, with Mary's honored place in the lineage of believers being sufficient genealogical context."
+      "body": "The Quran's treatment of Jesus's genealogy stands in marked contrast to the Gospel accounts. Rather than tracing a paternal line, the Quran consistently identifies Jesus through his mother, Mary. In Surah Ali 'Imran 3:33, the Quran states: \"Indeed, Allah chose Adam and Noah and the family of Abraham and the family of 'Imran over the worlds,\" establishing Mary as part of the honored lineage of 'Imran's family—a lineage chosen and elevated by God. Most directly, Quran 3:45 announces: \"[And mention] when the angels said, \"O Mary, indeed Allah gives you good tidings of a word from Him, whose name will be the Messiah, Jesus, the son of Mary - distinguished in this world and the Hereafter and among those brought near [to Allah].\" The Quranic identification is consistent: Jesus is 'Isa ibn Maryam—Jesus, son of Mary. This identification serves multiple purposes in Islamic theology. First, it emphasizes Jesus's genuine humanity—he had a mother, belonged to a human family, was born in time and space. Second, it avoids any suggestion of biological paternity, whether through Joseph or any other man. Third, by identifying him through Mary, the Quran honors her as the vessel of this miraculous conception. The Quranic emphasis on Mary's role is theologically profound: it affirms Jesus's humanity while maintaining his miraculous origin, without needing to establish a legal or biological patrilineal claim. The names also need careful attribution. [Exodus 6:20](https://www.biblegateway.com/passage/?search=Exodus%206%3A20&version=WEB) names Amram as the father of Moses and Aaron. The Quran does not name Moses' father. It places Imran in Mary's family narrative (Quran 3:35–36), without identifying him as that earlier man. [Sahih Muslim 2135](https://sunnah.com/muslim:2135) explains that people were named after earlier prophets and righteous people. Similar names alone do not establish that the Quran confuses their identities. There is no genealogical problem in the Quranic framework because the Quran does not claim Jesus as heir to David's throne through a paternal genealogy. Instead, it presents him as a prophet and messenger chosen by God, with Mary's honored place in the lineage of believers being sufficient genealogical context."
     },
     {
       "sectionId": "theological-implications",
@@ -106,6 +106,26 @@
       "reference": "Quran 3:45",
       "arabic": "إِذْ قَالَتِ ٱلْمَلَٰٓئِكَةُ يَٰمَرْيَمُ إِنَّ ٱللَّهَ يُبَشِّرُكِ بِكَلِمَةٍۢ مِّنْهُ ٱسْمُهُ ٱلْمَسِيحُ عِيسَى ٱبْنُ مَرْيَمَ وَجِيهًۭا فِى ٱلدُّنْيَا وَٱلْءَاخِرَةِ وَمِنَ ٱلْمُقَرَّبِينَ",
       "translation": "[And mention] when the angels said, \"O Mary, indeed Allah gives you good tidings of a word from Him, whose name will be the Messiah, Jesus, the son of Mary - distinguished in this world and the Hereafter and among those brought near [to Allah].",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Aal-i-Imraan",
+      "surahNumber": 3,
+      "ayahNumber": 35,
+      "reference": "Quran 3:35",
+      "arabic": "إِذْ قَالَتِ ٱمْرَأَتُ عِمْرَٰنَ رَبِّ إِنِّى نَذَرْتُ لَكَ مَا فِى بَطْنِى مُحَرَّرًۭا فَتَقَبَّلْ مِنِّىٓ ۖ إِنَّكَ أَنتَ ٱلسَّمِيعُ ٱلْعَلِيمُ",
+      "translation": "[Mention, O Muhammad], when the wife of 'Imran said, \"My Lord, indeed I have pledged to You what is in my womb, consecrated [for Your service], so accept this from me. Indeed, You are the Hearing, the Knowing.\"",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Aal-i-Imraan",
+      "surahNumber": 3,
+      "ayahNumber": 36,
+      "reference": "Quran 3:36",
+      "arabic": "فَلَمَّا وَضَعَتْهَا قَالَتْ رَبِّ إِنِّى وَضَعْتُهَآ أُنثَىٰ وَٱللَّهُ أَعْلَمُ بِمَا وَضَعَتْ وَلَيْسَ ٱلذَّكَرُ كَٱلْأُنثَىٰ ۖ وَإِنِّى سَمَّيْتُهَا مَرْيَمَ وَإِنِّىٓ أُعِيذُهَا بِكَ وَذُرِّيَّتَهَا مِنَ ٱلشَّيْطَٰنِ ٱلرَّجِيمِ",
+      "translation": "But when she delivered her, she said, \"My Lord, I have delivered a female.\" And Allah was most knowing of what she delivered, \"And the male is not like the female. And I have named her Mary, and I seek refuge for her in You and [for] her descendants from Satan, the expelled [from the mercy of Allah].\"",
       "translator": "Saheeh International",
       "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
     }
@@ -164,6 +184,23 @@
       "text": "the son of Enos, the son of Seth, the son of Adam, the son of God.",
       "version": "World English Bible",
       "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Exodus",
+      "chapter": 6,
+      "verse": "20",
+      "reference": "Exodus 6:20",
+      "text": "Amram took Jochebed his father’s sister to himself as wife; and she bore him Aaron and Moses: and the years of the life of Amram were a hundred and thirty-seven years.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    }
+  ],
+  "bibleReferences": [
+    {
+      "reference": "Luke 3:21-22"
+    },
+    {
+      "reference": "Luke 4:1-13"
     }
   ],
   "faq": [
@@ -181,7 +218,7 @@
     },
     {
       "question": "What is levirate marriage, and how does it explain the genealogies?",
-      "answer": "Levirate marriage was an ancient Israelite practice in which a man married the widow of his childless brother to preserve the family line and inheritance. The child born to such a union was legally considered the son of the deceased brother. The 3rd-century Christian apologist Julius Africanus used levirate marriage to explain the genealogies: according to his account, Joseph's half-brothers Jacob (Matthew's line) and Heli (Luke's line) were sons of the same mother but different fathers, married in succession. When Heli died childless, Jacob married his widow and fathered Joseph. Thus Joseph could be counted in both genealogies—as the natural son of Jacob (Matthew's genealogy) and as the legal son of Heli through levirate inheritance (Luke's genealogy). In this theory, both genealogies trace Joseph's line but through different family relationships. A separate, later theory proposes that Luke's genealogy actually traces Mary's line, with Heli as her father. This theory emerged centuries after Africanus and is often conflated with his account, though the mechanisms differ. While both theories attempted to harmonize Matthew and Luke, they depend on assumptions not explicitly stated in the gospels themselves and remain disputed among scholars."
+      "answer": "Levirate marriage was a practice in which a man raised a family for his deceased, childless brother. In the harmonization attributed to Julius Africanus, Jacob and Heli were maternal half-brothers to one another. Jacob fathered Joseph naturally, while Heli was counted as Joseph's father legally. [Eusebius preserves this account in Church History 1.7](https://www.newadvent.org/fathers/250101.htm). It is a proposed harmonization, not an independently established family record. The later theory that Luke traces Mary's line is a different explanation."
     },
     {
       "question": "Why does Matthew include scandalous figures in the genealogy?",
@@ -189,7 +226,7 @@
     },
     {
       "question": "How do these genealogical accounts affect belief in the virgin birth?",
-      "answer": "The genealogies do not undermine the virgin birth; both Matthew and Luke explicitly affirm Jesus's conception without a human father, and both immediately follow their genealogies with accounts of the virgin conception. The genealogies function differently: they establish Jesus's connection to Israel's covenantal history and to the Messianic promise. In Matthew's framework, Joseph (the legal father) establishes the genealogical connection; the genealogy need not be biological to be meaningful. In Luke's framework, similarly, the genealogy establishes Jesus within human history and covenantal tradition. The phrase in Luke 3:23, \"being the son (as was supposed) of Joseph,\" explicitly notes that this was a matter of assumption, not biological fact. Thus the genealogies and the virgin birth account operate on different theological levels: the genealogy addresses covenantal continuity and Messianic expectation; the virgin conception addresses the miraculous nature of Jesus's origin."
+      "answer": "Both Matthew and Luke affirm Jesus' conception without a human father, but they arrange their material differently. Matthew's genealogy precedes the birth narrative; Luke's birth narrative is in chapters 1–2, before the genealogy in chapter 3. Christian interpreters understand Joseph's ancestry as a legal or theological connection to David. The historical differences between the lists remain debated."
     }
   ],
   "relatedSlugs": [

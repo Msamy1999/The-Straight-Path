@@ -2,6 +2,9 @@ import type { MetadataRoute } from "next";
 import { getArticles, getSiteCategories } from "@/lib/content";
 import { absoluteUrl } from "@/lib/seo";
 
+// The deployed CMS, not the build database, determines public availability.
+export const dynamic = "force-dynamic";
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteCategories = await getSiteCategories();
   const articles = await getArticles();

@@ -46,7 +46,7 @@
       "sectionId": "biblical-perspective",
       "title": "Why Qira'at Are Not the Same as Textual Variants",
       "kind": "argument",
-      "body": "Biblical variants arise among handwritten copies. Scholars compare them to seek early wording. Canonical qira'at are recitations taught through named chains within one consonantal text. Not every claimed reading is authentic. Recognized qira'at are controlled transmission, not rival Qurans."
+      "body": "Biblical variants arise among handwritten copies. Scholars compare them to seek early wording. Canonical qira'at are recitations taught through named chains within the Uthmanic written tradition. [Studies of regional codices](https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/hisams-ibraham-evidence-for-a-canonical-quranic-reading-based-on-the-rasm/E1E00FF676696F869570F4A70C3115E4) document limited differences in their consonantal letters. A recognized reading may correspond to one regional exemplar; every exemplar need not have an identical letter sequence. Not every claimed reading is authentic. Recognized qira'at are controlled transmission, not rival Qurans."
     },
     {
       "sectionId": "comparison",
@@ -82,7 +82,7 @@
       "sectionId": "further-reading",
       "title": "Further Reading",
       "kind": "sources",
-      "body": "Selected sources and further reading:\n\n- **The Story of the Qur'an: Its History and Place in Muslim Life** — Ingrid Mattson. Introduction to Quran compilation, oral transmission, and readings.\n- **The Qur'an: A Historical-Critical Introduction** — Nicolai Sinai. Academic study of Quran textual history and qira'at.\n- **The Text of the New Testament: Its Transmission, Corruption, and Restoration** — Bruce M. Metzger. Scholarly account of New Testament copying and textual criticism.\n- **Misquoting Jesus: The Story of Who Changed the Bible and Why** — Bart D. Ehrman. Popular account of New Testament variants."
+      "body": "Selected sources and further reading:\n\n- **The Story of the Qur'an: Its History and Place in Muslim Life** — Ingrid Mattson. Introduction to Quran compilation, oral transmission, and readings.\n- **The Qur'an: A Historical-Critical Introduction** — Nicolai Sinai. Academic study of Quran textual history and qira'at.\n- **The Text of the New Testament: Its Transmission, Corruption, and Restoration** — Bruce M. Metzger. Scholarly account of New Testament copying and textual criticism.\n- **Misquoting Jesus: The Story Behind Who Changed the Bible and Why** — Bart D. Ehrman. Popular account of New Testament variants."
     }
   ],
   "quranVerses": [
@@ -165,9 +165,13 @@
       "note": "A classic scholarly account of how the New Testament was copied and how textual critics reconstruct its earliest wording."
     },
     {
-      "title": "Misquoting Jesus: The Story of Who Changed the Bible and Why",
+      "title": "Misquoting Jesus: The Story Behind Who Changed the Bible and Why",
       "author": "Bart D. Ehrman",
-      "note": "A widely read popular account of New Testament manuscript variants and the methods scholars use to study them."
+      "type": "book",
+      "publisher": "HarperOne",
+      "year": 2005,
+      "url": "https://www.bartehrman.com/misquoting-jesus-the-story-behind-who-changed-the-bible-and-why/",
+      "note": "An accessible account of New Testament textual variation written by a leading biblical scholar."
     }
   ]
 }

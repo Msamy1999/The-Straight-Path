@@ -189,7 +189,10 @@ for (const { file, data: draft } of drafts) {
       }
     }
     if (item.type === "journalArticle") {
-      for (const field of ["journal", "year", "volume", "issue", "pages", "url"]) {
+      // Continuous-publication journals and article-number volumes legitimately
+      // have no numbered issue. Require a reproducible locator, not an invented
+      // issue number (e.g. Einstein 21:eRW0371 or J Ethnopharmacol 298:115598).
+      for (const field of ["journal", "year", "volume", "pages", "url"]) {
         if (!item[field]) problems.push(label + ": journal article lacks " + field + ": " + item.title);
       }
     }

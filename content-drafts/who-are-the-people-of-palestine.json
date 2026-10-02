@@ -1,10 +1,10 @@
 {
   "slug": "who-are-the-people-of-palestine",
   "title": "Who Are the People of Palestine?",
-  "subtitle": "A respectful discussion about the people of Palestine, with focus on historical context and the relevance of the Palestinian cause to Islam.",
+  "subtitle": "A beginner's guide to Palestinian identity, community, faith, and ties to home",
   "category": "religious-history",
   "audienceLevel": "beginner",
-  "summary": "Palestinians are a diverse people whose identity grew from local communities, family networks, Arabic language and culture, religious life, displacement, and political organization. Understanding that history helps readers discuss Palestine with accuracy and human dignity.",
+  "summary": "Palestinians are a diverse people shaped by family, Arabic language and culture, religious life, shared memory, and ties to historic Palestine. They include Muslims, Christians, and people of other or no faith; people living in the land and across a worldwide diaspora; refugees and non-refugees; and many political views. Learning who they are begins with people, not slogans.",
   "tags": [
     "History",
     "Questions",
@@ -15,31 +15,31 @@
       "sectionId": "seeker-guide",
       "title": "Who Are the People of Palestine?",
       "kind": "summary",
-      "body": "Palestinians include Muslims, Christians, and people with other or no faith. Families live across historic Palestine and in a worldwide diaspora. Language, family memory, worship, work, and ties to place shape their identity. Palestinians do not all share one politics or one set of beliefs."
+      "body": "Palestinians are not one party, armed group, or political opinion. They are families and communities with varied beliefs and experiences. Most share Arabic language and culture and a lasting connection to historic Palestine, whether they live there or in the diaspora."
     },
     {
       "sectionId": "identity-and-history",
-      "title": "Identity Is Historical and Personal",
+      "title": "A People With More Than One Story",
       "kind": "history",
-      "body": "National identities grow through family, school, language, faith, migration, and politics. Palestine was a place-name long before modern nationalism. A clear Palestinian identity grew through late Ottoman towns, schools, papers, trade, local councils, and religious life. Under the British Mandate, groups, elections, and the press made that identity more public.\n\nRashid Khalidi describes local, Arab, Syrian, Ottoman, and Palestinian loyalties. Beshara Doumani studies families, traders, farmers, and local groups in Ottoman Palestine. James Gelvin places these changes in the wider conflict. Their work shows that Palestinian identity formed over time, not suddenly in 1948.\n\nIdentities can overlap. This history does not erase Jewish, Christian, Muslim, Samaritan, Armenian, Bedouin, or other ties to the land. It explains Palestinians' lasting bond with home."
+      "body": "Palestinian identity is national, cultural, local, and personal. A person may also identify with a city or village, an extended family, an Arab heritage, a church or Muslim community, or a country of residence. These loyalties can exist together.\n\nHistorian [Rashid Khalidi](https://cup.columbia.edu/book/palestinian-identity/9780231150743) traces how Palestinian national consciousness grew alongside local, Arab, Ottoman, and religious loyalties. [Beshara Doumani's social history](https://www.ucpress.edu/book/9780520203709/rediscovering-palestine) shows the towns, farms, family networks, trade, and institutions of Ottoman Palestine. Their work explains why Palestinian identity has deep roots while also taking a modern national form.\n\nRecognizing Palestinian identity does not erase Jewish, Christian, Muslim, Samaritan, Armenian, Bedouin, or other connections to the land. Honest history can acknowledge more than one community's attachment without denying another's humanity."
     },
     {
-      "sectionId": "modern-history-timeline",
-      "title": "Key Events in Modern Palestinian History",
+      "sectionId": "home-diaspora-and-refuge",
+      "title": "Home, Diaspora, and Refugee Experience",
       "kind": "history",
-      "body": "Several events frame modern Palestinian history. The 1917 Balfour Declaration and British Mandate placed rival national plans in one land. The 1947 UN partition plan and 1948 war were followed by the Nakba. More than 700,000 Palestinians were displaced or expelled during the war, according to [widely cited UN and scholarly estimates](https://www.unrwa.org/palestine-refugees). That loss remains central to Palestinian memory.\n\nThe PLO began in 1964 as an umbrella for Palestinian groups. After the 1967 war, the West Bank, East Jerusalem, and Gaza came under Israeli military occupation.\n\nThe First Intifada began in 1987 with strikes, protests, civil disobedience, and armed violence. It came before the 1993 Oslo process, in which Israel and the PLO recognized one another. The Second Intifada began in 2000 after peace talks failed. The fighting caused grave harm to Palestinian and Israeli civilians. The works by James Gelvin and Yezid Sayigh listed below provide fuller historical timelines."
+      "body": "Palestinians live in the West Bank, including East Jerusalem, in Gaza, in Israel, in neighboring Arab countries, and around the world. Displacement in 1948 and 1967 made exile and family separation central to many Palestinian stories, but refugee is not a synonym for Palestinian. Many Palestinians are not registered refugees, and Palestinian life is much broader than displacement.\n\n[UNRWA uses a specific operational definition](https://www.unrwa.org/palestine-refugees) for the Palestine refugees eligible for its services. That definition should not be mistaken for a complete definition of the Palestinian people. Families also preserve identity through memory, food, music, worship, education, professions, and relationships with towns and villages.\n\nA dedicated timeline can explain wars, political organizations, and negotiations. This article keeps the focus on the people themselves."
     },
     {
       "sectionId": "reading-with-dignity",
       "title": "Start With Human Dignity",
       "kind": "notes",
-      "body": "Palestinians are people with names, families, grief, hopes, and daily duties. Distinguish governments, armed groups, faiths, and civilians. Dates, authors, and context matter when judging a people. Islamic ethics requires truth and justice. The Quran commands justice even when it is hard (Quran 4:135). It says peoples and tribes were made to know one another, not to claim rank (Quran 49:13)."
+      "body": "Begin with names, families, work, worship, art, grief, and hope. Distinguish civilians from governments, parties, and armed groups. Do not treat Muslim and Christian Palestinians as if they have identical experiences, and do not make any individual answer for an entire people.\n\nThe Quran commands believers to stand firmly for justice even against their own interests (Quran 4:135). It also says that peoples and tribes were made so that human beings may know one another, not claim racial or national superiority (Quran 49:13). For a Muslim, learning about Palestinians truthfully is therefore part of justice and human dignity."
     },
     {
       "sectionId": "seeker-conclusion",
       "title": "Key Takeaways: Who Are the People of Palestine?",
       "kind": "summary",
-      "body": "Palestinians are diverse, with local, faith, cultural, and national identities. Their modern identity grew through Ottoman and Mandate-era life, the 1948 Nakba, occupation after 1967, political work, and ties to home. Learning this history calls for honesty, compassion, and justice, not hostility."
+      "body": "Palestinians are a diverse people, not a political stereotype. Their identity joins family, culture, faith, memory, and ties to home. Some live in historic Palestine; others live in a wide diaspora; some are refugees and others are not. Islam asks readers to meet this human story with truth, justice, and compassion."
     }
   ],
   "quranVerses": [
@@ -66,6 +66,9 @@
   ],
   "bibleVerses": [],
   "relatedSlugs": [
+    "palestine-places-and-people",
+    "palestine-beginner-timeline",
+    "nakba-and-palestinian-refugees",
     "human-dignity-and-justice",
     "how-to-learn-responsibly",
     "source-library-for-palestine"
@@ -78,14 +81,6 @@
       "year": 1997,
       "note": "A major scholarly study of the development of Palestinian national consciousness; read alongside other historians for differing emphases.",
       "url": "https://cup.columbia.edu/book/palestinian-identity/9780231150743"
-    },
-    {
-      "title": "The Palestinians: From Peasants to Revolutionaries",
-      "author": "Rosemary Sayigh",
-      "publisher": "Zed Books",
-      "year": 1979,
-      "note": "An influential social history that foregrounds Palestinian voices and displacement; its perspective should be read alongside other histories.",
-      "url": "https://www.palgrave.com/gp/book/9781856491945"
     },
     {
       "title": "Rediscovering Palestine: Merchants and Peasants in Jabal Nablus, 1700-1900",
@@ -104,12 +99,12 @@
       "url": "https://www.cambridge.org/highereducation/books/israel-palestine-conflict/5D389E3231527643CCE3F861003EC172"
     },
     {
-      "title": "Armed Struggle and the Search for State: The Palestinian National Movement, 1949-1993",
-      "author": "Yezid Sayigh",
-      "publisher": "Oxford University Press",
-      "year": 1997,
-      "note": "A detailed history of Palestinian political organization, including the PLO and the movement's changing strategies.",
-      "url": "https://global.oup.com/academic/product/armed-struggle-and-the-search-for-state-9780198296431"
+      "title": "Palestine Refugees",
+      "author": "United Nations Relief and Works Agency",
+      "type": "primaryText",
+      "publisher": "UNRWA",
+      "url": "https://www.unrwa.org/palestine-refugees",
+      "note": "UNRWA's official explanation of its operational refugee definition and where registered Palestine refugees live. It describes an agency category, not every Palestinian."
     }
   ],
   "faq": []

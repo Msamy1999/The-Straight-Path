@@ -45,13 +45,13 @@
       "sectionId": "quranic-perspective",
       "title": "One Voice, One Generation",
       "kind": "scripture",
-      "body": "Islam frames textual origin differently. Muslims believe the Quran came through one prophet over about twenty-three years. Quran 4:82 invites readers to examine its consistency: “If it had been from [any] other than Allah, they would have found within it much contradiction.”\\n\\nThe Quran was memorized as it was revealed. It was gathered into one written form within a generation. Muslims therefore see one public voice, not a later patchwork of unnamed authors. The historical claim is clear and testable."
+      "body": "Islam frames textual origin differently. Muslims believe the Quran came through one prophet over about twenty-three years. Quran 4:82 invites readers to examine its consistency: “If it had been from [any] other than Allah, they would have found within it much contradiction.”\n\nThe Quran was memorized as it was revealed. It was gathered into one written form within a generation. Muslims therefore see one public voice, not a later patchwork of unnamed authors. The historical claim is clear and testable."
     },
     {
       "sectionId": "biblical-perspective",
       "title": "What Mainstream Scholarship Concludes",
       "kind": "scripture",
-      "body": "Luke says he traced earlier reports and eyewitness testimony (Luke 1:1–4). He presents himself as an investigator, not a named eyewitness. John closes with a testimony about the disciple and uses “we” (John 21:24–25). Many scholars see a community or later editor in that ending.\\n\\nCommon scholarly dates place Mark around 65–75 CE, Matthew and Luke around 80–90 CE, and John around 90–100 CE. These dates are debated. They still place the final texts decades after Jesus. Questions about authorship, sources, and theological development therefore remain open."
+      "body": "Luke says he traced earlier reports and eyewitness testimony (Luke 1:1–4). He presents himself as an investigator, not a named eyewitness. John closes with a testimony about the disciple and uses “we” (John 21:24–25). Many scholars see a community or later editor in that ending.\n\nCommon scholarly dates place Mark around 65–75 CE, Matthew and Luke around 80–90 CE, and John around 90–100 CE. These dates are debated. They still place the final texts decades after Jesus. Questions about authorship, sources, and theological development therefore remain open."
     },
     {
       "sectionId": "comparison",
@@ -63,7 +63,7 @@
       "sectionId": "common-misconceptions",
       "title": "Common Misconceptions",
       "kind": "interpretation",
-      "body": "Anonymous authorship does not mean the Gospels contain no history. Many scholars see earlier traditions behind them. Historical value and authorship are related, but they are not the same question.\\n\\nThe dating and anonymity discussion is mainstream scholarship. It is not an attack invented by Muslims.\\n\\nThe Islamic hadith system also does not make every report authentic. Muslim scholars used chains, narrator criticism, and grades. Traditional Gospel names can remain useful labels while the documents themselves do not prove their authors."
+      "body": "Anonymous authorship does not mean the Gospels contain no history. Many scholars see earlier traditions behind them. Historical value and authorship are related, but they are not the same question.\n\nThe dating and anonymity discussion is mainstream scholarship. It is not an attack invented by Muslims.\n\nThe Islamic hadith system also does not make every report authentic. Muslim scholars used chains, narrator criticism, and grades. Traditional Gospel names can remain useful labels while the documents themselves do not prove their authors."
     },
     {
       "sectionId": "islamic-conclusion",
@@ -81,7 +81,7 @@
       "sectionId": "faq",
       "title": "Frequently Asked Questions",
       "kind": "notes",
-      "body": "Q: Are the traditional Gospel authors certain?\\nA: The names are early and important. The texts themselves do not state them in their opening lines. Scholars debate how the traditional attributions arose.\\n\\nQ: Do later dates make the Gospels worthless?\\nA: No. A later source can preserve earlier material. Dating helps readers judge how claims were transmitted.\\n\\nQ: Does Islam reject everything in the Gospels?\\nA: No. Islam affirms the original Gospel and accepts truths that remain consistent with revelation. The Quran is the final criterion.\\n\\nQ: Why does authorship matter?\\nA: It affects how directly a saying can be linked to Jesus.\\n\\nQ: What is the Islamic alternative?\\nA: The Quran was recited by one named messenger, memorized publicly, and written and standardized early."
+      "body": "Q: Are the traditional Gospel authors certain?\nA: The names are early and important. The texts themselves do not state them in their opening lines. Scholars debate how the traditional attributions arose.\n\nQ: Do later dates make the Gospels worthless?\nA: No. A later source can preserve earlier material. Dating helps readers judge how claims were transmitted.\n\nQ: Does Islam reject everything in the Gospels?\nA: No. Islam affirms the original Gospel and accepts truths that remain consistent with revelation. The Quran is the final criterion.\n\nQ: Why does authorship matter?\nA: It affects how directly a saying can be linked to Jesus.\n\nQ: What is the Islamic alternative?\nA: The Quran was recited by one named messenger, memorized publicly, and written during his lifetime. The traditional revelation period lasted about twenty-three years; Uthman's standardization followed roughly two decades after Muhammad's death."
     },
     {
       "sectionId": "further-reading",
@@ -125,7 +125,7 @@
   "faq": [
     {
       "question": "Does saying the Gospels are \"anonymous\" mean nobody knows anything about who wrote them?",
-      "answer": "Not exactly. It means the texts themselves do not name an author, and modern scholars conclude the traditional names were attached later by church tradition rather than proven from the documents. Scholars still form educated hypotheses about the communities and contexts behind each Gospel."
+      "answer": "The narratives do not directly name their authors, while manuscript titles and early church testimony attribute them to Matthew, Mark, Luke, and John. Many scholars argue that the names were attached later. Others, including [Simon Gathercole](https://academic.oup.com/jts/article-abstract/69/2/447/5101372), argue that early attributions could have accompanied the texts. Internal anonymity, titles, and actual authorship are related questions, but they are not identical."
     },
     {
       "question": "Isn't the idea that the Gospels were written decades later just an anti-Christian argument?",
@@ -137,7 +137,7 @@
     },
     {
       "question": "Does the Quran's single-generation compilation mean it has no textual history at all?",
-      "answer": "It still has a documented history of memorization, partial early writing, and later standardization, but that history spans roughly two decades rather than many decades."
+      "answer": "It has a documented history of public memorization and writing during Muhammad's lifetime, followed by collection and standardization. The traditional revelation period lasted about twenty-three years. Uthman's standardization occurred roughly two decades after the Prophet's death, so the broader sequence spans about four decades."
     },
     {
       "question": "Why does this comparison matter for someone deciding what to believe?",

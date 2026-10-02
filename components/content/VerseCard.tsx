@@ -40,11 +40,11 @@ export function VerseCard({ verse, className }: VerseCardProps) {
             {arabicReference}
           </p>
         ) : null}
-        <p className="mt-2 text-sm leading-6 text-muted-foreground sm:text-base sm:leading-7">
+        <p lang="en" dir="ltr" translate="no" data-scripture-translation className="notranslate mt-2 text-sm leading-6 text-accent sm:text-base sm:leading-7">
           {verse.translation}
         </p>
         <div className="mt-2 border-t border-border/70 pt-2">
-          <p className="text-[0.7rem] font-semibold leading-4 text-foreground sm:text-xs">
+          <p lang="en" dir="ltr" translate="no" data-scripture-reference className="notranslate text-[0.7rem] font-semibold leading-4 text-foreground sm:text-xs">
             {verse.reference}
           </p>
           <Citation
@@ -80,7 +80,7 @@ export function VerseCard({ verse, className }: VerseCardProps) {
       <p className="text-[0.68rem] font-semibold uppercase tracking-wide text-accent sm:text-xs">
         Bible
       </p>
-      <blockquote className="mt-1.5 border-l-2 border-accent pl-2.5 text-sm leading-6 text-accent sm:mt-2 sm:pl-3 sm:text-base sm:leading-7">
+      <blockquote lang="en" dir="ltr" translate="no" data-scripture-translation className="notranslate mt-1.5 border-l-2 border-accent pl-2.5 text-sm leading-6 text-accent sm:mt-2 sm:pl-3 sm:text-base sm:leading-7">
         {verse.text}
       </blockquote>
       {verse.arabicText ? (
@@ -93,7 +93,7 @@ export function VerseCard({ verse, className }: VerseCardProps) {
         </p>
       ) : null}
       <div className="mt-2 border-t border-border/70 pt-2 sm:border-0 sm:pt-0">
-        <p className="text-[0.7rem] font-semibold leading-4 text-foreground sm:text-xs">
+        <p lang="en" dir="ltr" translate="no" data-scripture-reference className="notranslate text-[0.7rem] font-semibold leading-4 text-foreground sm:text-xs">
           {verse.reference}
         </p>
         <Citation

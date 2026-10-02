@@ -1,4 +1,4 @@
-import type { CollectionBeforeChangeHook, Payload } from "payload";
+import type { CollectionBeforeChangeHook, PayloadRequest } from "payload";
 import { APIError } from "payload";
 
 /**
@@ -43,7 +43,7 @@ function relationIds(value: unknown): (string | number)[] {
 }
 
 async function assertAllVerified(
-  payload: Payload,
+  req: PayloadRequest,
   collection: "citations" | "quran-verses" | "bible-verses",
   ids: (string | number)[],
   label: string,
@@ -53,11 +53,15 @@ async function assertAllVerified(
     return;
   }
 
-  const docs = await payload.find({
+  const docs = await req.payload.find({
     collection,
     where: { id: { in: uniqueIds } },
     limit: uniqueIds.length,
     depth: 0,
+    // Keep the source check in the exact publication transaction. A separate
+    // SQLite connection can block against this request's own pending writes.
+    req,
+    overrideAccess: false,
   });
 
   const foundIds = new Set(docs.docs.map((doc) => String(doc.id)));
@@ -143,17 +147,17 @@ export const blockUnverifiedPublish: CollectionBeforeChangeHook = async ({
       : []),
     ...relationIds(document.sources),
   ];
-  await assertAllVerified(req.payload, "citations", citationIds, "citations");
+  await assertAllVerified(req, "citations", citationIds, "citations");
 
   // 3. Comparison articles: every linked scripture record must be verified.
   await assertAllVerified(
-    req.payload,
+    req,
     "quran-verses",
     relationIds(document.quranVerses),
     "Quran verses",
   );
   await assertAllVerified(
-    req.payload,
+    req,
     "bible-verses",
     relationIds(document.bibleVerses),
     "Bible verses",

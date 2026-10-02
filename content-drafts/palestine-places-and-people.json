@@ -1,0 +1,126 @@
+{
+  "slug": "palestine-places-and-people",
+  "title": "Gaza, the West Bank, East Jerusalem, Israel, and the Palestinian Diaspora",
+  "subtitle": "A map in words for understanding Palestinian places, communities, and legal terms",
+  "category": "religious-history",
+  "audienceLevel": "beginner",
+  "summary": "Palestinians live in Gaza, the West Bank, East Jerusalem, Israel, refugee communities across the Middle East, and a worldwide diaspora—a population living outside its ancestral homeland. These places have different legal systems and daily realities. Knowing the difference helps readers speak about Palestine accurately and see people rather than only borders.",
+  "tags": [
+    "History",
+    "Questions",
+    "Sources"
+  ],
+  "sections": [
+    {
+      "sectionId": "seeker-guide",
+      "title": "The Basic Map",
+      "kind": "summary",
+      "body": "The Gaza Strip is a small coastal area beside Israel and Egypt. The West Bank lies west of the Jordan River and east of Israel. East Jerusalem is the part of Jerusalem captured by Israel in 1967 and is treated by the United Nations, the International Court of Justice, and the International Committee of the Red Cross as part of the occupied Palestinian territory. Israel claims Jerusalem as its capital and disputes that legal position.\n\nPalestinians also live as citizens of Israel and across a large diaspora. A person can therefore be Palestinian and also be Gazan, West Banker, Jerusalemite, an Israeli citizen, a refugee, or a citizen or resident of another country. These descriptions are related, but they are not interchangeable."
+    },
+    {
+      "sectionId": "historic-palestine",
+      "title": "What Does “Palestine” Mean?",
+      "kind": "history",
+      "body": "The word “Palestine” has been used for a geographic region, an Ottoman and Mandate-era place, a national homeland, the State of Palestine, and the occupied Palestinian territory. Writers may mean different boundaries when they use the same word.\n\n“Historic Palestine” usually refers to the land governed under the British Mandate between the Jordan River and the Mediterranean Sea. Using that historical term does not by itself settle present borders or the rights of the people living there. Good writing states which place and period it means."
+    },
+    {
+      "sectionId": "gaza-strip",
+      "title": "The Gaza Strip",
+      "kind": "history",
+      "body": "Gaza is a narrow coastal territory with cities, towns, refugee camps, farms, and generations of family life. Many residents are refugees from places their families left in 1948 or their descendants. Gaza is not one neighborhood, and its civilian population is not the same as Hamas or any other armed group.\n\nIsrael withdrew its settlements and permanent ground presence from Gaza in 2005. Hamas became the de facto internal governing authority after its 2007 takeover, while later wars changed conditions and control on the ground. Israel has continued to exercise key elements of authority from outside Gaza. Access and control at the Rafah crossing have also changed during wartime, so current conditions should be checked in a dated humanitarian source. The [ICJ's 2024 summary](https://www.icj-cij.org/node/204176) says Israel's occupation-law obligations remain commensurate with the degree of its effective control, and the [ICRC treats Gaza as occupied territory](https://www.icrc.org/en/document/ihl-occupying-power-responsibilities-occupied-palestinian-territories). Israel disputes the post-2005 characterization. Stating the disagreement helps readers understand the law without hiding its humanitarian consequences."
+    },
+    {
+      "sectionId": "west-bank-and-east-jerusalem",
+      "title": "The West Bank and East Jerusalem",
+      "kind": "history",
+      "body": "The West Bank contains major Palestinian cities, villages, refugee camps, rural communities, and Israeli settlements. Under the Oslo agreements, different parts were assigned different interim administrative arrangements, commonly called Areas A, B, and C. These labels describe administration and security arrangements; they did not create a final border or end occupation.\n\nEast Jerusalem includes the Old City and the Al-Aqsa sanctuary. Israel applies its law and administration there after measures it took following 1967. [UN Security Council Resolution 478](https://www.un.org/unispal/document/auto-insert-187506/) did not recognize Israel's 1980 Basic Law claim over Jerusalem, and the [International Court of Justice](https://www.icj-cij.org/case/186) treats East Jerusalem as occupied territory. Palestinian Jerusalemites often hold a residency status different from both Palestinian Authority documents and Israeli citizenship. For a current visual reference, use the [OCHA interactive map](https://www.ochaopt.org/content/interactive-map-occupied-palestinian-territory)."
+    },
+    {
+      "sectionId": "palestinians-in-israel",
+      "title": "Palestinian Citizens of Israel",
+      "kind": "history",
+      "body": "Most Palestinians who remained within the territory that became Israel, and most of their descendants, are Israeli citizens. People use several self-descriptions, including Palestinian citizens of Israel, Arab citizens of Israel, or Palestinian Arabs. Arabic-speaking citizens include Muslims, Christians, Druze, Bedouin, and others; individual self-identification varies. No single label captures every person's identity or politics."
+    },
+    {
+      "sectionId": "refugees-and-diaspora",
+      "title": "Refugees and the Wider Diaspora",
+      "kind": "history",
+      "body": "Large Palestinian communities live in Jordan, Lebanon, Syria, the Gulf, Europe, the Americas, and elsewhere. “Diaspora” means a population living outside its ancestral homeland and is broader than “refugee.” Some Palestinians abroad are registered with the United Nations Relief and Works Agency for Palestine Refugees in the Near East (UNRWA), some fall under other legal systems, and some hold full citizenship where they live.\n\nUNRWA's original Palestine Refugee category covers people who lost both home and livelihood because of the 1948 conflict, with registration extended through eligible descendants in the male line. That operational definition determines access to UNRWA services; it is not a complete definition of every Palestinian refugee or displaced person. The distinction matters because Palestinians displaced in 1967 and people outside UNRWA's areas may have different records and legal status."
+    },
+    {
+      "sectionId": "islamic-meaning",
+      "title": "People Before Labels",
+      "kind": "interpretation",
+      "body": "Quran 49:13 teaches that human diversity should lead people to know one another and that honor before Allah rests on righteousness, not ancestry or nationality. A Muslim can care deeply about Palestinian rights without reducing Jewish or Israeli civilians to a political category. The same principle forbids reducing Palestinians to refugees, statistics, or security labels.\n\nLearning the map should increase moral clarity: distinguish civilians from combatants, peoples from governments, and religious communities from political movements. Precision is part of justice."
+    },
+    {
+      "sectionId": "seeker-conclusion",
+      "title": "Key Takeaways: Places and People",
+      "kind": "summary",
+      "body": "Gaza, the West Bank, East Jerusalem, Israel, and the diaspora describe different places and legal realities. Palestinians live across all of them and hold many religious, civic, and political identities. Understanding those differences makes concern for Palestine more informed, humane, and truthful."
+    }
+  ],
+  "quranVerses": [
+    {
+      "surahName": "Al-Hujurat",
+      "surahNumber": 49,
+      "ayahNumber": 13,
+      "reference": "Quran 49:13",
+      "arabic": "يَٰٓأَيُّهَا ٱلنَّاسُ إِنَّا خَلَقْنَٰكُم مِّن ذَكَرٍۢ وَأُنثَىٰ وَجَعَلْنَٰكُمْ شُعُوبًۭا وَقَبَآئِلَ لِتَعَارَفُوٓا۟ ۚ إِنَّ أَكْرَمَكُمْ عِندَ ٱللَّهِ أَتْقَىٰكُمْ ۚ إِنَّ ٱللَّهَ عَلِيمٌ خَبِيرٌۭ",
+      "translation": "O mankind, indeed We have created you from male and female and made you peoples and tribes that you may know one another. Indeed, the most noble of you in the sight of Allah is the most righteous of you. Indeed, Allah is Knowing and Acquainted.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    }
+  ],
+  "bibleVerses": [],
+  "relatedSlugs": [
+    "who-are-the-people-of-palestine",
+    "palestine-beginner-timeline",
+    "nakba-and-palestinian-refugees",
+    "jerusalem-and-al-aqsa"
+  ],
+  "furtherReading": [
+    {
+      "title": "Interactive Map of the Occupied Palestinian Territory",
+      "author": "United Nations Office for the Coordination of Humanitarian Affairs",
+      "type": "primaryText",
+      "publisher": "OCHA",
+      "url": "https://www.ochaopt.org/content/interactive-map-occupied-palestinian-territory",
+      "note": "A maintained geographic reference for Gaza, the West Bank, East Jerusalem, communities, crossings, and humanitarian data; map labels reflect UN terminology."
+    },
+    {
+      "title": "Legal Consequences Arising from the Policies and Practices of Israel in the Occupied Palestinian Territory, Including East Jerusalem",
+      "author": "International Court of Justice",
+      "publisher": "International Court of Justice",
+      "year": 2024,
+      "type": "primaryText",
+      "note": "The case page provides the advisory opinion, summary, and separate judicial opinions; an advisory opinion is authoritative legal analysis but is not a judgment between two litigating states.",
+      "url": "https://www.icj-cij.org/case/186"
+    },
+    {
+      "title": "Responsibilities of an Occupying Power in the Occupied Palestinian Territory",
+      "author": "International Committee of the Red Cross",
+      "publisher": "ICRC",
+      "year": 2024,
+      "note": "States the ICRC's legal position on the West Bank, East Jerusalem, and Gaza and explains the effective-control test used in occupation law.",
+      "url": "https://www.icrc.org/en/document/ihl-occupying-power-responsibilities-occupied-palestinian-territories"
+    },
+    {
+      "title": "Hamas-Israel Conflict 2023: Key Legal Aspects",
+      "author": "Government of Israel",
+      "publisher": "Government of Israel",
+      "year": 2023,
+      "note": "States Israel's official contrary position on Gaza's post-2005 occupation status; include it as a party's legal argument, not as a neutral adjudication.",
+      "url": "https://www.gov.il/en/pages/hamas-israel-conflict2023-key-legal-aspects"
+    },
+    {
+      "title": "Who Is UNRWA Mandated to Serve?",
+      "author": "United Nations Relief and Works Agency for Palestine Refugees in the Near East",
+      "type": "primaryText",
+      "publisher": "UNRWA",
+      "url": "https://www.unrwa.org/who-unrwa-mandated-serve",
+      "note": "Explains UNRWA's operational eligibility definition and why people displaced in 1967 may be served under a separate mandate."
+    }
+  ],
+  "faq": []
+}

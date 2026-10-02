@@ -25,7 +25,7 @@ export const siteCategories = [
         "/articles/who-is-jesus",
       ),
       topic(
-        "What is revelation?",
+        "What is divine revelation?",
         "A planned study on scripture, prophethood, inspiration, and source attribution.",
       ),
       topic(

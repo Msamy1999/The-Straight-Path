@@ -213,7 +213,12 @@
     {
       "title": "The Alteration of the Sacred Books According to the Islamic Theologians",
       "author": "Ramazan Biçer",
-      "note": "An academic survey of classical Muslim debates over textual and interpretive tahrif."
+      "type": "primaryText",
+      "publisher": "Research Association for Interdisciplinary Studies",
+      "year": 2020,
+      "doi": "10.5281/zenodo.3909957",
+      "url": "https://rais.education/wp-content/uploads/2020/06/RAIS-Conference-Proceedings-June2020.pdf",
+      "note": "A conference paper surveying classical Muslim debates over textual and interpretive tahrif. Proceedings of the 17th International RAIS Conference, June 1–2, 2020."
     },
     {
       "title": "The New Testament Documents: Are They Reliable?",

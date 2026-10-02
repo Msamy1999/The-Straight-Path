@@ -92,7 +92,7 @@
       "sectionId": "faq",
       "title": "Frequently Asked Questions",
       "kind": "notes",
-      "body": "Q: Do Muslims and Christians actually agree that a Day of Judgment is coming?\nA: Yes. Both scriptures teach a bodily resurrection of the dead, a universal judgment before God, and a final separation between two ultimate destinies.\n\nQ: What is the \"scale\" (mizan) mentioned in the Quran?\nA: The mizan is the Quran's image of a scale of justice on which every deed is weighed. Quran 21:47 says God places these \"scales of justice\" so precisely that \"no soul will be treated unjustly at all,\" down to a mustard seed.\n\nQ: Does the Bible teach that people are judged by their good and bad deeds?\nA: Yes. Revelation 20:12, 2 Corinthians 5:10, and Romans 14:12 all describe judgment based on a person's actual deeds - \"according to what he has done, whether good or bad\" - not merely stated beliefs.\n\nQ: Who acts as judge on the Day of Judgment in each faith?\nA: In the Quran, God alone judges, sufficient \"as accountant\" (Quran 21:47). In the New Testament, Jesus Christ returns \"in his glory\" to judge all nations (Matthew 25:31-32), and before his \"judgment seat\" everyone must appear (2 Corinthians 5:10).\n\nQ: What is the \"book\" or \"record\" of deeds?\nA: Both scriptures use a written record of a person's life. The Quran describes a record given into the right or left hand (Quran 84:7); Revelation 20:12 describes books opened before God's throne, alongside a separate \"book of life.\"\n\nQ: Does Islam believe in intercession on the Day of Judgment?\nA: Many Islamic scholars affirm that intercession (shafa'ah) by the Prophet Muhammad on behalf of believers will occur, but the Quran ties any such intercession strictly to God's own permission - \"Who is it that can intercede with Him except by His permission?\" (Quran 2:255) - so it is read as an added mercy, not a substitute payment that changes the deeds weighed on the scale."
+      "body": "Q: Do Muslims and Christians actually agree that a Day of Judgment is coming?\nA: Yes. Both scriptures teach a bodily resurrection of the dead, a universal judgment before God, and a final separation between two ultimate destinies.\n\nQ: What is the \"scale\" (mizan) mentioned in the Quran?\nA: The mizan is the Quran's image of a scale of justice on which every deed is weighed. Quran 21:47 says God places these \"scales of justice\" so precisely that \"no soul will be treated unjustly at all,\" down to a mustard seed.\n\nQ: Does the Bible teach that people are judged by their good and bad deeds?\nA: Yes. Revelation 20:12, 2 Corinthians 5:10, and Romans 14:12 all describe judgment based on a person's actual deeds - \"according to what he has done, whether good or bad\" - not merely stated beliefs.\n\nQ: Who acts as judge on the Day of Judgment in each faith?\nA: In the Quran, God alone judges, sufficient \"as accountant\" (Quran 21:47). In the New Testament, Jesus Christ returns \"in his glory\" to judge all nations (Matthew 25:31-32), and before his \"judgment seat\" everyone must appear (2 Corinthians 5:10).\n\nQ: What is the \"book\" or \"record\" of deeds?\nA: Both scriptures use a written record of a person's life. The Quran describes a record given into the right hand (Quran 84:7) or behind the back (Quran 84:10); Revelation 20:12 describes books opened before God's throne, alongside a separate \"book of life.\"\n\nQ: Does Islam believe in intercession on the Day of Judgment?\nA: Many Islamic scholars affirm that intercession (shafa'ah) by the Prophet Muhammad on behalf of believers will occur, but the Quran ties any such intercession strictly to God's own permission - \"Who is it that can intercede with Him except by His permission?\" (Quran 2:255) - so it is read as an added mercy, not a substitute payment that changes the deeds weighed on the scale."
     },
     {
       "sectionId": "further-reading",
@@ -181,6 +181,16 @@
       "translation": "Allah - there is no deity except Him, the Ever-Living, the Sustainer of [all] existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? He knows what is [presently] before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursi extends over the heavens and the earth, and their preservation tires Him not. And He is the Most High, the Most Great.",
       "translator": "Saheeh International",
       "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Inshiqaaq",
+      "surahNumber": 84,
+      "ayahNumber": 10,
+      "reference": "Quran 84:10",
+      "arabic": "وَأَمَّا مَنْ أُوتِىَ كِتَٰبَهُۥ وَرَآءَ ظَهْرِهِۦ",
+      "translation": "But as for he who is given his record behind his back,",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
     }
   ],
   "bibleVerses": [
@@ -258,7 +268,7 @@
     },
     {
       "question": "What is the \"book\" or \"record\" of deeds?",
-      "answer": "Both scriptures use a written record of a person's life. The Quran describes a record given into the right or left hand (Quran 84:7); Revelation 20:12 describes books opened before God's throne, alongside a separate \"book of life.\""
+      "answer": "Both scriptures use a written record of a person's life. The Quran describes a record given into the right hand (Quran 84:7) or behind the back (Quran 84:10); Revelation 20:12 describes books opened before God's throne, alongside a separate \"book of life.\""
     },
     {
       "question": "Does Islam believe in intercession on the Day of Judgment?",

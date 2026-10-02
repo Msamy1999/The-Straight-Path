@@ -463,7 +463,8 @@ export async function getFullLibraryTree(): Promise<ResearchTreeNode[]> {
     {
       id: "people-of-palestine",
       title: "People of Palestine",
-      description: "Human-centered studies of Palestinian history, identity, dignity, and faith.",
+      description:
+        "A guided path through Palestinian people, places, history, faith, justice, and responsible action.",
       href: "/people-of-palestine",
       tag: "History",
       defaultOpen: true,

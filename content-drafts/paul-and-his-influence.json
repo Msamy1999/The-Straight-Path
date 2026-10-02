@@ -38,7 +38,7 @@
       "sectionId": "overview",
       "title": "Overview: The Apostle Who Never Met Jesus",
       "kind": "summary",
-      "body": "Paul of Tarsus, first known as Saul, lived in the first century CE and persecuted Jesus' followers. He later described a revelation of the risen Jesus. Paul never met Jesus during his ministry, yet his letters shaped Christian communities across the Mediterranean."
+      "body": "Paul of Tarsus, first known as Saul, lived in the first century CE and persecuted Jesus' followers. He later described a revelation of the risen Jesus ([Galatians 1:11-16](https://bible.usccb.org/bible/galatians/1)). No secure source establishes that he met Jesus during the public ministry. Unlike the original disciples, he had not accompanied Jesus, yet his letters shaped Christian communities across the Mediterranean."
     },
     {
       "sectionId": "pauls-calling",
@@ -184,10 +184,24 @@
       "sourceAttribution": "bible-api.com — World English Bible (public domain)"
     }
   ],
+  "bibleReferences": [
+    {
+      "reference": "Galatians 1:11-16"
+    },
+    {
+      "reference": "Acts 22:17-21"
+    },
+    {
+      "reference": "Galatians 5:2-6"
+    },
+    {
+      "reference": "1 Corinthians 7:18-20"
+    }
+  ],
   "faq": [
     {
       "question": "Did Paul ever meet Jesus during Jesus' lifetime?",
-      "answer": "No. Paul was born after Jesus' birth, and by the time Paul was active as a persecutor of Christians, Jesus had already been crucified and, according to Christian belief, risen from the dead. Paul's only encounter with Jesus was what he described as a post-resurrection revelation on the Damascus Road, which he did not witness in the flesh. This distinguishes Paul from the twelve apostles, who had been with Jesus during his ministry."
+      "answer": "No secure source establishes a meeting during Jesus's public ministry, and Paul was not one of the disciples who accompanied him. Paul describes his calling as revelation ([Galatians 1:11-16](https://bible.usccb.org/bible/galatians/1)); Acts places his conversion experience on the Damascus road. That was not his only reported vision: [Acts 22:17-21](https://bible.usccb.org/bible/acts/22) also describes a later vision in Jerusalem. The careful distinction is between Jesus's original companions and Paul's later claimed revelation, not proof that he never saw Jesus at any earlier moment."
     },
     {
       "question": "Why do some scholars see Paul's theology as a departure from Jesus' teachings?",
@@ -195,7 +209,7 @@
     },
     {
       "question": "What was Paul's position on Jewish law for Christian believers?",
-      "answer": "Paul taught that Christian believers—both Jew and Gentile—were not required to observe the commandments of Jewish law (Torah) as a condition for salvation. He believed that faith in Jesus Christ superseded law-keeping as the path to justification and salvation. This was revolutionary because it allowed the primarily Jewish early church to accept Gentiles as full members without requiring them to undergo circumcision or follow dietary and Sabbath laws. However, this position provoked significant conflict with other Jerusalem apostles who maintained stricter observance requirements."
+      "answer": "Paul did not require non-Jewish believers to become Torah-observant Jews. [Galatians 5:2-6](https://bible.usccb.org/bible/galatians/5) rejects circumcision as a requirement for their standing in Christ. This is distinct from whether Jewish believers should continue Jewish practice, a question scholars debate. [1 Corinthians 7:18-20](https://bible.usccb.org/bible/1corinthians/7) tells people not to change their circumcised or uncircumcised status. Paul's teaching on justification should not be simplified into a claim that he uniformly abolished every Jewish practice for every believer."
     },
     {
       "question": "How did Islamic scholars traditionally view Paul's role in Christianity?",

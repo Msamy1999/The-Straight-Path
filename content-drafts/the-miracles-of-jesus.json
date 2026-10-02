@@ -94,7 +94,7 @@
       "sectionId": "faq",
       "title": "Frequently Asked Questions",
       "kind": "notes",
-      "body": "Q: Does the Quran affirm Jesus's miracles?\nA: Yes. It describes healing, raising the dead, the clay bird, hidden knowledge, speech from the cradle, and the heavenly table (3:49, 5:110, 5:112-115, 19:29-30). Muslims accept these as real.\n\nQ: Do miracles prove that Jesus is God?\nA: No. The Quran says they occurred by Allah's permission. Acts says God did them through Jesus (2:22), while Jesus says he can do nothing by himself (John 5:30). Elisha also raised the dead (2 Kings 4:32-35).\n\nQ: Which Quranic miracles lack an exact biblical parallel?\nA: Jesus speaking from the cradle (19:29-30), the clay bird (3:49), and the heavenly table (5:112-115).\n\nQ: Why repeat 'by permission of Allah'?\nA: The repetition attributes the power entirely to God while honoring Jesus as His mighty messenger.\n\nQ: Did the Quran copy a Christian legend?\nA: A similar clay-bird story appears in the non-canonical Infancy Gospel of Thomas. Muslims understand the Quran as confirming and correcting earlier tradition, while stressing that the event occurred by Allah's permission."
+      "body": "Q: Does the Quran affirm Jesus's miracles?\nA: Yes. It describes healing, raising the dead, the clay bird, hidden knowledge, speech from the cradle, and the heavenly table (3:49, 5:110, 5:112-115, 19:29-30). Muslims accept these as real.\n\nQ: Do miracles prove that Jesus is God?\nA: A miracle alone does not establish that its human agent is God: Elisha also raised the dead (2 Kings 4:32-35). The Quran attributes Jesus's miracles to Allah's permission, and Acts 2:22 says God worked through him. Christians read Jesus's signs within their larger belief in his divinity; [John 20:30-31](https://bible.usccb.org/bible/john/20) gives the signs a purpose in leading readers to faith in him. Islam honors them as signs of a true messenger without directing worship to him.\n\nQ: Which Quranic miracles lack an exact biblical parallel?\nA: Jesus speaking from the cradle (19:29-30), the clay bird (3:49), and the heavenly table (5:112-115).\n\nQ: Why repeat 'by permission of Allah'?\nA: The repetition attributes the power entirely to God while honoring Jesus as His mighty messenger.\n\nQ: Did the Quran copy a Christian legend?\nA: A similar clay-bird story appears in the non-canonical Infancy Gospel of Thomas. Muslims understand the Quran as confirming and correcting earlier tradition, while stressing that the event occurred by Allah's permission."
     },
     {
       "sectionId": "further-reading",
@@ -296,7 +296,7 @@
     },
     {
       "question": "Do miracles prove that Jesus is God?",
-      "answer": "Not according to either scripture. The Quran says each miracle happened 'by permission of Allah', and the New Testament describes them as wonders 'which God did by him' (Acts 2:22), while Jesus says, 'I can of myself do nothing' (John 5:30). Earlier prophets such as Elisha also raised the dead (2 Kings 4:32-35), and no one concludes they were divine."
+      "answer": "A miracle alone does not establish that its human agent is God: Elisha also raised the dead (2 Kings 4:32-35). The Quran attributes Jesus's miracles to Allah's permission, and Acts 2:22 says God worked through him. Christians read Jesus's signs within their larger belief in his divinity; [John 20:30-31](https://bible.usccb.org/bible/john/20) gives the signs a purpose in leading readers to faith in him. Islam honors them as signs of a true messenger without directing worship to him."
     },
     {
       "question": "Which miracles appear in the Quran but not in the Bible?",
@@ -347,6 +347,9 @@
     }
   ],
   "bibleReferences": [
-    "Matthew 7:22-23"
+    "Matthew 7:22-23",
+    {
+      "reference": "John 20:30-31"
+    }
   ]
 }

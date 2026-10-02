@@ -1,6 +1,6 @@
 {
   "slug": "what-is-revelation",
-  "title": "What Is Revelation?",
+  "title": "What Is Divine Revelation?",
   "subtitle": "How God speaks: a book that is itself the Word, or a Word who became flesh",
   "category": "the-quran-and-the-bible",
   "audienceLevel": "beginner",
@@ -12,7 +12,7 @@
     "Sources"
   ],
   "seo": {
-    "metaTitle": "What Is Revelation? Quran vs. Bible on How God Speaks",
+    "metaTitle": "What Is Divine Revelation? Quran vs. Bible on How God Speaks",
     "metaDescription": "Both Islam and Christianity say God has spoken to humanity, but they mean strikingly different things by it. In Islam, revelation (wahy) is the Quran…",
     "keywords": [
       "what is revelation in Islam",
@@ -28,7 +28,7 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "Understanding What Is Revelation?",
+      "title": "Understanding Divine Revelation",
       "kind": "summary",
       "body": "Islam and Christianity both say God guides humanity. They define revelation differently. Muslims believe the Quran is God's speech, delivered to Muhammad through Gabriel. Christians describe Scripture as God-breathed through human authors and identify Jesus as God's fullest revelation. This difference makes revelation central to Islam's case."
     },
@@ -90,13 +90,13 @@
       "sectionId": "faq",
       "title": "Frequently Asked Questions",
       "kind": "notes",
-      "body": "Q: What does \"wahy\" mean?\nA: Wahy is Arabic for divine revelation. Its central sense is God's verbatim Quranic wording delivered to Muhammad through Gabriel (Quran 42:51; 16:102).\n\nQ: Did Muhammad write the Quran in his own words?\nA: No. Muslims believe he received its exact wording from God. Quran 53:3-4 says he does not \"speak from [his own] inclination\" and that it is \"a revelation revealed.\"\n\nQ: If Jesus is ultimate revelation, does the Bible matter?\nA: Yes. Scripture is \"God-breathed\" (2 Timothy 3:16). Jesus is \"the Word made flesh\" (John 1:14). Christian teaching treats the Bible as witness to him.\n\nQ: Is hadith the same revelation as Quran?\nA: No. The Quran is God's verbatim speech. Hadith report Muhammad's sayings and practice. They guide Muslims but are not God's direct speech.\n\nQ: Why compare Quran and Christianity?\nA: It avoids treating Quran and Bible as identical roles. A closer comparison is Quran to Christ, each tradition's central point of contact with God. This is a comparative observation, not a claim about Christian self-understanding."
+      "body": "Q: What does \"wahy\" mean?\nA: Wahy is Arabic for divine revelation. Its central sense is God's verbatim Quranic wording delivered to Muhammad through Gabriel (Quran 42:51; 16:102).\n\nQ: Did Muhammad write the Quran in his own words?\nA: No. Muslims believe he received its exact wording from God. Quran 53:3-4 says he does not \"speak from [his own] inclination\" and that it is \"a revelation revealed.\"\n\nQ: If Jesus is ultimate revelation, does the Bible matter?\nA: Yes. Scripture is \"God-breathed\" (2 Timothy 3:16). Jesus is \"the Word made flesh\" (John 1:14). Christian teaching treats the Bible as witness to him.\n\nQ: Is hadith the same revelation as Quran?\nA: No. The Quran is God's revealed wording and has a unique status in worship. Hadith report the Prophet's sayings, actions, and approvals. Hadith qudsi also report statements attributed to Allah through the Prophet, as in [Sahih Muslim 2577a](https://sunnah.com/muslim:2577a). Scholars discuss their wording and meaning, but they remain distinct from the Quran and are not recited as Quran in prayer. Each hadith's authenticity must also be assessed.\n\nQ: Why compare Quran and Christianity?\nA: It avoids treating Quran and Bible as identical roles. A closer comparison is Quran to Christ, each tradition's central point of contact with God. This is a comparative observation, not a claim about Christian self-understanding."
     },
     {
       "sectionId": "further-reading",
       "title": "Further Reading",
       "kind": "sources",
-      "body": "Selected sources and further reading:\n\n- **The Study Quran: A New Translation and Commentary** — Seyyed Hossein Nasr (ed.). Classical Muslim commentary.\n- **Introduction to the Quran** — W. Montgomery Watt. Quran origin and transmission.\n- **The Bible Made Impossible** — Christian Smith. Biblical inspiration.\n- **The Gospel According to John** — Raymond E. Brown. Logos theology in John 1:14."
+      "body": "Selected sources and further reading:\n\n- **The Study Quran: A New Translation and Commentary** — Seyyed Hossein Nasr (ed.). Classical Muslim commentary.\n- **Bell's Introduction to the Qur'an** — Richard Bell (revised by W. Montgomery Watt). Quran origin and transmission.\n- **The Bible Made Impossible** — Christian Smith. Biblical inspiration.\n- **The Gospel According to John** — Raymond E. Brown. Logos theology in John 1:14."
     }
   ],
   "quranVerses": [
@@ -234,7 +234,7 @@
     },
     {
       "question": "Is hadith the same kind of revelation as the Quran?",
-      "answer": "No. The Quran alone is regarded in Islamic theology as God's own verbatim speech. Hadith are reports of Muhammad's own sayings, decisions, and practice, collected and evaluated by later scholars; they are treated as authoritative guidance but are described in Muslim scholarship as Muhammad's words, not God's direct speech in the way the Quran is."
+      "answer": "No. The Quran is God's revealed wording and has a unique status in worship. Hadith report the Prophet's sayings, actions, and approvals. Hadith qudsi also report statements attributed to Allah through the Prophet, as in [Sahih Muslim 2577a](https://sunnah.com/muslim:2577a). Scholars discuss their wording and meaning, but they remain distinct from the Quran and are not recited as Quran in prayer. Each hadith's authenticity must also be assessed."
     },
     {
       "question": "Why does this comparison matter for someone exploring both religions?",
@@ -257,8 +257,11 @@
       "note": "A major English translation with extensive commentary drawing on classical Muslim exegesis, useful for verses on revelation and prophethood."
     },
     {
-      "title": "Introduction to the Quran",
-      "author": "W. Montgomery Watt",
+      "title": "Bell's Introduction to the Qur'an",
+      "author": "Richard Bell (revised by W. Montgomery Watt)",
+      "type": "book",
+      "publisher": "Edinburgh University Press",
+      "year": 1970,
       "note": "A widely used academic introduction covering the Quran's claims about its own origin and transmission."
     },
     {

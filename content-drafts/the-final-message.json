@@ -39,7 +39,7 @@
       "sectionId": "introduction",
       "title": "Introduction",
       "kind": "notes",
-      "body": "Judaism, Christianity, and Islam all speak about the completion of revelation. Christianity sees that completion in Jesus. Islam sees Muhammad as the last in a line of messengers from Adam and the Quran as God's final revealed book. The comparison turns on what \"final\" means.\n\nBoth traditions honor Jesus. The Quran calls him the Messiah, affirms his virgin birth, and names a chapter after his mother Mary. The disagreement concerns what followed his ministry.\n\nA nabi receives revelation. A rasul is a prophet sent with a scripture or law. Khatam means a seal that closes and authenticates a message."
+      "body": "Judaism, Christianity, and Islam all speak about the completion of revelation. Christianity sees that completion in Jesus. Islam sees Muhammad as the final prophet in the prophetic line beginning with Adam and the Quran as God's final revealed book. The comparison turns on what \"final\" means.\n\nBoth traditions honor Jesus. The Quran calls him the Messiah, affirms his virgin birth, and names a chapter after his mother Mary. The disagreement concerns what followed his ministry.\n\nA nabi is a prophet who receives revelation, and a rasul is a messenger commissioned by God. Scholars distinguish the two terms in several ways, including mission, audience, or law; a separate new scripture is not a universally agreed requirement. [Quran 19:54](https://quran.com/19/54), for example, calls Ishmael both a messenger and a prophet. Khatam means a seal that closes and authenticates a message."
     },
     {
       "sectionId": "main-question",
@@ -134,6 +134,16 @@
       "reference": "Quran 7:158",
       "arabic": "قُلْ يَٰٓأَيُّهَا ٱلنَّاسُ إِنِّى رَسُولُ ٱللَّهِ إِلَيْكُمْ جَمِيعًا ٱلَّذِى لَهُۥ مُلْكُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ ۖ لَآ إِلَٰهَ إِلَّا هُوَ يُحْىِۦ وَيُمِيتُ ۖ فَـَٔامِنُوا۟ بِٱللَّهِ وَرَسُولِهِ ٱلنَّبِىِّ ٱلْأُمِّىِّ ٱلَّذِى يُؤْمِنُ بِٱللَّهِ وَكَلِمَٰتِهِۦ وَٱتَّبِعُوهُ لَعَلَّكُمْ تَهْتَدُونَ",
       "translation": "Say, [O Muhammad], \"O mankind, indeed I am the Messenger of Allah to you all, [from Him] to whom belongs the dominion of the heavens and the earth. There is no deity except Him; He gives life and causes death.\" So believe in Allah and His Messenger, the unlettered prophet, who believes in Allah and His words, and follow him that you may be guided.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Maryam",
+      "surahNumber": 19,
+      "ayahNumber": 54,
+      "reference": "Quran 19:54",
+      "arabic": "وَٱذْكُرْ فِى ٱلْكِتَٰبِ إِسْمَٰعِيلَ ۚ إِنَّهُۥ كَانَ صَادِقَ ٱلْوَعْدِ وَكَانَ رَسُولًۭا نَّبِيًّۭا",
+      "translation": "And mention in the Book, Ishmael. Indeed, he was true to his promise, and he was a messenger and a prophet.",
       "translator": "Saheeh International",
       "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
     }

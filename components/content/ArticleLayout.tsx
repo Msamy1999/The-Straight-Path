@@ -5,6 +5,7 @@ import { ArticleTools } from "@/components/content/ArticleTools";
 import { CitationList } from "@/components/content/CitationList";
 import { TopicCard } from "@/components/content/TopicCard";
 import { VerseCard } from "@/components/content/VerseCard";
+import { ScriptureReferenceText } from "@/components/content/ScriptureReferenceText";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
@@ -437,11 +438,17 @@ function renderLineWithScripture(
   keyPrefix: string,
   keyScripture?: ArticleKeyScripture,
 ): ReactNode {
-  const passages = [
+  const knownPassages = [
     ...(keyScripture?.quranVerses.map((verse) => verse.translation) ?? []),
     ...(keyScripture?.bibleVerses.map((verse) => verse.text) ?? []),
-  ]
-    .filter((passage) => passage.length >= 30)
+  ];
+  const words = (text: string) => text.toLowerCase().normalize("NFKC").replace(/[’‘]/g, "'").replace(/[^a-z0-9' ]/g, " ").replace(/\s+/g, " ").trim();
+  // Preserve short, exact excerpts too, but only when their words occur in a
+  // verified passage assigned here. Ordinary quoted objections still translate.
+  const excerpts = [...line.matchAll(/"([^"\n]+)"|“([^”\n]+)”|‘([^’\n]+)’/g)]
+    .map((match) => match[1] ?? match[2] ?? match[3] ?? "")
+    .filter((excerpt) => words(excerpt).split(" ").length >= 3 && knownPassages.some((passage) => (` ${words(passage)} `).includes(` ${words(excerpt)} `)));
+  const passages = [...new Set([...knownPassages.filter((passage) => passage.length >= 30), ...excerpts])]
     .map((passage) => ({ passage, start: line.indexOf(passage) }))
     .filter((match) => match.start >= 0)
     .sort((left, right) => left.start - right.start);
@@ -462,7 +469,7 @@ function renderLineWithScripture(
       ),
     );
     output.push(
-      <span key={`${keyPrefix}-${index}-scripture`} className="text-accent">
+      <span key={`${keyPrefix}-${index}-scripture`} lang="en" dir="ltr" translate="no" data-scripture-translation className="notranslate text-accent">
         {renderInlineMarkdown(passage, `${keyPrefix}-${index}-passage`)}
       </span>,
     );
@@ -671,7 +678,7 @@ function renderInlineMarkdown(text: string, keyPrefix: string): ReactNode {
     if (linkMatch) {
       const href = safeExternalUrl(linkMatch[2]);
       if (!href) {
-        return <span key={`${keyPrefix}-${index}`}>{linkMatch[1]}</span>;
+        return <span key={`${keyPrefix}-${index}`}><ScriptureReferenceText text={linkMatch[1]} /></span>;
       }
       return (
         <a
@@ -681,19 +688,19 @@ function renderInlineMarkdown(text: string, keyPrefix: string): ReactNode {
           rel="noreferrer noopener"
           className="font-medium text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent"
         >
-          {linkMatch[1]}
+          <ScriptureReferenceText text={linkMatch[1]} />
         </a>
       );
     }
 
     const match = part.match(/^\*\*([\s\S]+)\*\*$|^__([\s\S]+)__$/);
     if (!match) {
-      return <span key={`${keyPrefix}-${index}`}>{part}</span>;
+      return <span key={`${keyPrefix}-${index}`}><ScriptureReferenceText text={part} /></span>;
     }
 
     return (
       <strong key={`${keyPrefix}-${index}`} className="font-semibold text-foreground">
-        {match[1] ?? match[2]}
+        <ScriptureReferenceText text={match[1] ?? match[2]} />
       </strong>
     );
   });

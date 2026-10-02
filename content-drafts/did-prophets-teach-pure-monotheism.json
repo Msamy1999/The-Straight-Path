@@ -338,11 +338,11 @@
     },
     {
       "question": "What do the Shema and Surah Al-Ikhlas teach about monotheism?",
-      "answer": "Both passages are understood by their respective traditions as foundational statements of God's oneness. The Shema (Deuteronomy 6:4) states 'Hear, O Israel, Yahweh is our God, Yahweh is one'—emphasizing God's unique status as Israel's deity. Surah Al-Ikhlas (112:1) states 'Say, He is Allah, [who is] One'—emphasizing that Allah has no partners, no equals, and no resemblance to creation. Muslims understand both as consistent with pure monotheism and cite them as evidence that the prophets taught Tawhid. Christians affirm both as true while arguing they are consistent with Trinitarian theology—God is uniquely one and has no competitors, which the Trinity preserves by maintaining that the Father, Son, and Spirit all share one divine nature."
+      "answer": "The Shema affirms God's oneness, and Jesus repeats it in Mark 12:29. Surah Al-Ikhlas affirms Allah's absolute oneness and denies that He begets or is born. Muslims see these passages as supporting tawhid. Christians affirm the Shema but do not generally accept Al-Ikhlas as revelation or its Islamic rejection of divine sonship. Their doctrine of eternal generation, explained in the [Catholic Catechism](https://www.vatican.va/archive/ENG0015/__P1J.HTM), marks a real disagreement. Shared language about one God should not hide that difference."
     },
     {
       "question": "Did Paul introduce the idea that Jesus was divine?",
-      "answer": "Biblical scholars debate this extensively. Paul's letters (written before the Gospels) contain highly exalted language about Jesus (Colossians 1:15-17, Philippians 2:6-11) but also affirm monotheism (1 Corinthians 8:4-6). Some scholars argue Paul was the architect of Christian Christology; others argue he was expressing what early Jewish believers already affirmed based on the Resurrection. Islamic scholars typically view Paul as introducing non-Abrahamic theology influenced by Greco-Roman categories. Christian scholars typically view Paul as the apostle most deeply reflecting on what the Resurrection revealed. Christian scholars argue that the evidence shows even before Paul, early disciples were venerating Jesus in ways that would have been radical if he were believed to be merely human; Muslim scholars respond that early enthusiasm and misunderstanding could account for this without implying Jesus actually taught divinity, so scholars disagree on whether this represents continuity with Jesus' own claims or a misunderstanding of his message."
+      "answer": "Paul's letters contain exalted language about Jesus, but they do not establish that Paul invented all such beliefs. In [1 Corinthians 15:3-8](https://bible.usccb.org/bible/1corinthians/15), Paul says he passed on a tradition he had received. Scholars disagree about how early beliefs developed and how closely they reflect Jesus's own teaching. Christianity generally treats Paul's message as faithful apostolic teaching. Islam evaluates any later teaching against the Quran's account of Jesus as God's messenger. That Islamic conclusion does not require an unsupported claim that Paul alone created Christian belief in Jesus's divinity."
     },
     {
       "question": "How did the Trinity become the official Christian doctrine?",
@@ -377,13 +377,21 @@
       "note": "A foundational Islamic text explaining Tawhid as the core principle of Islam, clarifying what constitutes true monotheism and how it differs from polytheism and theological innovations."
     },
     {
-      "title": "The Trinity",
+      "title": "On Christian Theology",
       "author": "Rowan Williams",
-      "note": "A contemporary Christian theologian's examination of Trinitarian doctrine, exploring how the Trinity developed in Christian thought and how it relates to biblical witness, ancient creeds, and the nature of God."
+      "type": "book",
+      "publisher": "Blackwell Publishers",
+      "year": 2000,
+      "url": "https://research-information.bris.ac.uk/en/publications/on-christian-theology",
+      "note": "A collection of Christian theological essays, including reflections on Trinity and revelation, divine personhood, and incarnation. Read as a Christian interpretation, not an Islamic authority.",
+      "isbn": "9780631214403"
     }
   ],
   "bibleReferences": [
     "Isaiah 43:10",
-    "Mark 12:29-30"
+    "Mark 12:29-30",
+    {
+      "reference": "1 Corinthians 15:3-8"
+    }
   ]
 }

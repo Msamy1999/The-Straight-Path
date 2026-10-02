@@ -202,7 +202,7 @@
     },
     {
       "question": "What did early Christians believe about Jesus' resurrection, and how do we know?",
-      "answer": "The earliest written testimony appears in Paul's first letter to Corinth (1 Corinthians 15:3-8), written about 20-25 years after the crucifixion. Paul states he is passing on a tradition received from earlier Christians in Jerusalem, indicating the belief predates his letter. The formula mentions multiple appearance accounts to different individuals and groups. Scholars debate what actually happened (literal bodily resurrection, visionary experiences, spiritual transformation, etc.), but historical consensus is strong that the disciples were convinced Jesus had been raised and that this conviction drove the emergence of Christianity. Islamic theology, by contrast, affirms Jesus' elevation to God but denies crucifixion and literal bodily death, making resurrection unnecessary within Islamic Christology."
+      "answer": "One of the earliest surviving written accounts is [1 Corinthians 15:3-8](https://bible.usccb.org/bible/1corinthians/15), written roughly twenty years after Jesus's ministry. Paul says he received and passed on a tradition about death, burial, resurrection, and appearances. The passage does not identify where or from whom he received it; a Jerusalem origin is a scholarly reconstruction. It establishes that resurrection belief predates his letter. Historians debate the experiences behind that belief. Islam affirms that God raised Jesus to Himself and rejects the crucifixion described by Christian tradition."
     },
     {
       "question": "How did Christianity spread so rapidly despite persecution?",
@@ -218,7 +218,7 @@
     },
     {
       "question": "How do Christian and Islamic interpretations of early Christianity differ?",
-      "answer": "Christian and Islamic traditions agree on many historical facts (Jesus' ministry, crucifixion under Pilate, the disciples' conviction of resurrection, early persecution, Constantine's legalization) but diverge fundamentally in theological interpretation. Christianity affirms Jesus as divine Son of God, whose death was a redemptive sacrifice, whose resurrection vindicated his divinity, and whose return is anticipated. Islam affirms Jesus as a supremely honored prophet and messiah but emphatically rejects his divinity, his crucifixion (Quran 4:157), and incarnation. Islamic theology maintains that Jesus taught strict monotheism (Quran 5:117) and that later Christians departed from his original message. Both traditions see their interpretation as faithful to Scripture; they differ in which texts receive priority and how they read overlapping narratives."
+      "answer": "Both traditions affirm Jesus's ministry, his importance, and his expected return. They disagree about events as well as their meaning. Christianity affirms his crucifixion under Pilate and resurrection; mainstream Islamic teaching denies that Jesus was killed or crucified (Quran 4:157). It affirms him as God's honored Messiah and messenger who taught worship of God alone (Quran 5:117). The Quran does not give a detailed history of later Christian persecution or Constantine's rule. Those questions are studied through historical sources, while the central Islamic judgment about Jesus comes from revelation."
     }
   ],
   "relatedSlugs": [
@@ -246,7 +246,10 @@
     {
       "title": "Jesus and the Victory of God",
       "author": "N.T. Wright",
-      "note": "A detailed scholarly work integrating Jesus within first-century Jewish expectations and showing how the resurrection transformed those expectations. Represents informed Christian scholarly perspective."
+      "type": "book",
+      "publisher": "SPCK",
+      "year": 1996,
+      "note": "Wright's study of the historical Jesus within first-century Judaism, including Jesus' proclamation, messianic vocation, and movement toward the cross."
     }
   ]
 }

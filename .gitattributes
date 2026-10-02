@@ -1,0 +1,2 @@
+# Verification artifacts are hashed as bytes on both Windows and Linux.
+data/release-evidence/**/*.json text eol=lf

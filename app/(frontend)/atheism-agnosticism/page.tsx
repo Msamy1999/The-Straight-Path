@@ -9,6 +9,9 @@ import { Section } from "@/components/layout/Section";
 import { Tag } from "@/components/ui/Tag";
 import { getResearchTree } from "@/lib/content";
 
+// The deployed CMS, not the build database, determines public availability.
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Atheism & Agnosticism",
   description:

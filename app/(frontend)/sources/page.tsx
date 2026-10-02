@@ -5,6 +5,9 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { getSourceLibraryCategories } from "@/lib/content";
 
+// The deployed CMS, not the build database, determines public availability.
+export const dynamic = "force-dynamic";
+
 export const metadata = {
   title: "Sources and Further Reading",
   description: "References and further reading for articles throughout The Straight Path.",
