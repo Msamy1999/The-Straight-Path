@@ -68,6 +68,9 @@ obsolete requests and load only the final selection, with at most one upcoming
 chunk preloaded. Completed audio is reused. Standalone source links remain
 visible and copyable but are omitted from narration. Server synthesis is
 cancellable, cached with bounded memory, and retried if its deadline expires.
+The tap-time audio-unlock clip uses a temporary blob URL permitted by the
+existing strict media policy; it does not require allowing data URLs. Stop,
+cancellation, and audio replacement release its URL along with narration URLs.
 
 Exercise the reader's failure and recovery paths with:
 

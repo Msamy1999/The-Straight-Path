@@ -21,6 +21,7 @@ import {
   useState,
 } from "react";
 import { cn } from "@/lib/utils";
+import { createAudioUnlockBlob } from "@/lib/audio/unlock";
 import type {
   ArticlePlaybackLink,
   ArticlePlaybackNavigation,
@@ -68,8 +69,6 @@ const MAX_CACHED_CHUNKS = 32;
 const ENGLISH_NEURAL_VOICE = "en-US-GuyNeural";
 const ARABIC_NEURAL_VOICE = "ar-SA-HamedNeural";
 const PLAYBACK_RATES = [1, 1.25, 1.5, 1.75, 2] as const;
-const SILENT_WAV =
-  "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA";
 
 const BASE_HIGHLIGHT_CLASSES = [
   "bg-accent/10",
@@ -606,7 +605,12 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     const session = sessionRef.current;
     if (options.unlock) {
       const audio = getAudio();
-      audio.src = SILENT_WAV;
+      // Keep the strict media-src policy: it permits blob:, not data:.
+      // Create and play synchronously in the tap's user-activation stack,
+      // using the same element as narration. Normal transport cleanup revokes
+      // this URL on replacement, cancellation, or provider unmount.
+      objectUrlRef.current = URL.createObjectURL(createAudioUnlockBlob());
+      audio.src = objectUrlRef.current;
       void audio.play().catch(() => {});
     }
     void playNeuralChunk(chunks, index, session);

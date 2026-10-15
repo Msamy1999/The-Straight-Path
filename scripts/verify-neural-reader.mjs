@@ -39,11 +39,32 @@ async function scenario(name, viewport, handler, check, path = articlePath) {
   page.on("pageerror", (error) => errors.push(error.message));
   try {
     await page.addInitScript(() => {
-      window.__neuralQa = { speechCalls: 0, aborted: 0 };
+      window.__neuralQa = { speechCalls: 0, aborted: 0, firstPlaySource: null, mediaPolicyViolations: [], createdUrls: [], revokedUrls: [] };
+      const createUrl = URL.createObjectURL.bind(URL);
+      const revokeUrl = URL.revokeObjectURL.bind(URL);
+      URL.createObjectURL = (blob) => {
+        const url = createUrl(blob);
+        window.__neuralQa.createdUrls.push(url);
+        return url;
+      };
+      URL.revokeObjectURL = (url) => {
+        window.__neuralQa.revokedUrls.push(url);
+        revokeUrl(url);
+      };
+      document.addEventListener("securitypolicyviolation", (event) => {
+        if (event.violatedDirective.startsWith("media-src")) {
+          window.__neuralQa.mediaPolicyViolations.push(event.blockedURI);
+        }
+      });
       const BaseAudio = Audio;
       window.Audio = function (...args) {
         const audio = new BaseAudio(...args);
         window.__neuralQa.audio = audio;
+        const nativePlay = audio.play.bind(audio);
+        audio.play = () => {
+          window.__neuralQa.firstPlaySource ??= audio.src;
+          return nativePlay();
+        };
         return audio;
       };
       window.Audio.prototype = BaseAudio.prototype;
@@ -77,9 +98,15 @@ async function scenario(name, viewport, handler, check, path = articlePath) {
     const state = await page.evaluate(() => ({
       speechCalls: window.__neuralQa.speechCalls,
       horizontalOverflow: document.documentElement.scrollWidth > window.innerWidth,
+      unlockUsesBlob: window.__neuralQa.firstPlaySource?.startsWith("blob:"),
+      mediaPolicyViolations: window.__neuralQa.mediaPolicyViolations,
+      objectUrlsReleased: window.__neuralQa.createdUrls.every(url => window.__neuralQa.revokedUrls.includes(url)),
     }));
     assert.equal(state.speechCalls, 0, "Device speech must never be invoked");
     assert.equal(state.horizontalOverflow, false);
+    assert.equal(state.unlockUsesBlob, true, "Unlock must use a policy-compatible blob URL inside the tap");
+    assert.deepEqual(state.mediaPolicyViolations, [], "Never relax or violate media-src to unlock audio");
+    assert.equal(state.objectUrlsReleased, true, "Stop/cancellation must release unlock and narration URLs");
     assert.deepEqual(errors, []);
     assert.ok(requests.every((request) => request.voice === "en-US-GuyNeural"));
     results.push({ name, viewport, requests: requests.length, ...state, passed: true });

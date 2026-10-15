@@ -3,6 +3,17 @@ import { PassThrough, Readable } from "node:stream";
 import { MsEdgeTTS } from "msedge-tts";
 import { SpeechAudioCache, SpeechTimeoutError, synthesizeNeuralAudio } from "../lib/audio/neural-tts";
 import { isReferenceOnlyLine } from "../lib/article-text";
+import { createAudioUnlockBlob } from "../lib/audio/unlock";
+
+const unlock = createAudioUnlockBlob();
+assert.equal(unlock.type, "audio/wav");
+const unlockBytes = Buffer.from(await unlock.arrayBuffer());
+assert.equal(unlockBytes.subarray(0, 4).toString(), "RIFF");
+assert.equal(unlockBytes.readUInt32LE(4) + 8, unlockBytes.byteLength);
+assert.equal(unlockBytes.subarray(8, 12).toString(), "WAVE");
+assert.equal(unlockBytes.readUInt16LE(20), 1, "PCM format");
+assert.equal(unlockBytes.readUInt16LE(22), 1, "Mono");
+assert.equal(unlockBytes.readUInt32LE(24), 44_100);
 
 for (const line of ["[Review](https://example.org/paper)", " [CDC](https://example.org) ", "[A](https://example.org/a); [B](https://example.org/b)"]) {
   assert.equal(isReferenceOnlyLine(line), true);
@@ -115,4 +126,4 @@ try {
 } finally {
   Object.assign(MsEdgeTTS.prototype, original);
 }
-console.log("Neural TTS cache, cancellation, timeout, limiter, concurrency and reference classification verified.");
+console.log("Audio unlock WAV, neural TTS cache, cancellation, timeout, limiter, concurrency and reference classification verified.");
