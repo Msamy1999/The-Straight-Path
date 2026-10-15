@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "release": "reader-refinements-20261015",
+  "mutationSlugs": ["islamic-practices-and-health"],
+  "articleApprovals": [
+    {
+      "slug": "islamic-practices-and-health",
+      "draftSha256": "f9faef74aa2655911cc82e558a298623a00fb1ab78f8d82d7d28d8f9870009b2",
+      "publish": true,
+      "proofId": "two-section-owner-approved-review"
+    }
+  ],
+  "sourceApprovals": [],
+  "proofs": [
+    {
+      "id": "two-section-owner-approved-review",
+      "kind": "editorial-review",
+      "status": "verified",
+      "reviewedBy": "Codex source-backed review of the two changed sections; owner-approved publication",
+      "verifiedAt": "2026-10-15T14:10:43.528Z",
+      "sourceUrls": [
+        "https://quran.com/5/6",
+        "https://sunnah.com/bukhari:887",
+        "https://www.cdc.gov/clean-hands/data-research/facts-stats/",
+        "https://www.who.int/tools/elena/review-summaries/wsh-diarrhoea--hand-washing-promotion-for-preventing-diarrhoea",
+        "https://pubmed.ncbi.nlm.nih.gov/35944735/",
+        "https://pubmed.ncbi.nlm.nih.gov/33513418/"
+      ],
+      "artifactPath": "data/release-evidence/reader-refinements-20261015/article-review.json",
+      "artifactSha256": "e64d077aec6f63739a2381a945288669c0f729cd21f74918553efa855ef336ec"
+    }
+  ]
+}

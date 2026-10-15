@@ -14,6 +14,7 @@ import { Card } from "@/components/ui/Card";
 import { Tag } from "@/components/ui/Tag";
 import { categoryIconMap, fallbackCategoryIcon } from "@/lib/category-icons";
 import { safeExternalUrl } from "@/lib/external-url";
+import { isReferenceOnlyLine } from "@/lib/article-text";
 import {
   formatArabicQuranReference,
   quranQuoteSegmentsInLine,
@@ -403,6 +404,7 @@ function ArticleSectionBody({
           return (
             <span
               key={`bullet-${index}`}
+              data-read-aloud-skip={isReferenceOnlyLine(item) || undefined}
               className="flex gap-2 pl-1"
             >
               <span aria-hidden="true" className="text-accent">•</span>
@@ -423,7 +425,7 @@ function ArticleSectionBody({
         }
 
         return (
-          <span key={`line-${index}`}>
+          <span key={`line-${index}`} data-read-aloud-skip={isReferenceOnlyLine(line) || undefined}>
             {renderLineWithScripture(line, `${index}-line`, keyScripture)}
             {index < lines.length - 1 ? <br /> : null}
           </span>

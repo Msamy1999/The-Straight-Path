@@ -8,6 +8,12 @@ import type {
   ComparisonArticle,
 } from "@/types/domain";
 
+/** A standalone source link is useful on screen/copy, but not in narration. */
+export function isReferenceOnlyLine(text: string): boolean {
+  const withoutLinks = text.replace(/\[[^\]]+\]\(https?:\/\/[^\s)]+\)/g, "");
+  return withoutLinks !== text && /^[\s,;|()[\]•-]*$/.test(withoutLinks);
+}
+
 /** Strip common markdown artifacts so speech and copied text read cleanly. */
 export function stripMarkdownArtifacts(text: string): string {
   return text

@@ -31,7 +31,7 @@ const success = (route) => route.fulfill({ status: 200, contentType: "audio/wav"
 const failed = (route, status = 502, headers = {}) =>
   route.fulfill({ status, headers, contentType: "application/json", body: '{"error":"Temporarily unavailable"}' });
 
-async function scenario(name, viewport, handler, check) {
+async function scenario(name, viewport, handler, check, path = articlePath) {
   const context = await browser.newContext({ viewport, serviceWorkers: "block" });
   const page = await context.newPage();
   const requests = [];
@@ -63,7 +63,7 @@ async function scenario(name, viewport, handler, check) {
       requests.push({ at: Date.now(), text: url.searchParams.get("text"), voice: url.searchParams.get("voice") });
       await handler(route, requests);
     });
-    await page.goto(`${origin}${articlePath}`, { waitUntil: "domcontentloaded", timeout: 120_000 });
+    await page.goto(`${origin}${path}`, { waitUntil: "domcontentloaded", timeout: 120_000 });
     const read = page.getByRole("button", { name: /^Read article aloud:/ }).first();
     await read.waitFor({ timeout: 60_000 });
     await page.waitForFunction(() => {
@@ -102,6 +102,79 @@ const waitForRequests = async (requests, count) => {
 
 try {
   await Promise.all([
+    scenario("only one upcoming chunk is preloaded", desktop, (route) => success(route),
+      async (page, requests) => {
+        await playing(page).waitFor();
+        await page.waitForTimeout(8_000);
+        assert.equal(requests.length, 2, "Do not synthesize the whole article while one paragraph plays");
+        await page.getByRole("button", { name: "Stop reading", exact: true }).click();
+      }),
+    scenario("back restarts paragraph or goes previous in its first second; cached audio reused", phone,
+      (route) => success(route),
+      async (page, requests) => {
+        await playing(page).waitFor();
+        const title = requests[0].text;
+        await page.getByRole("button", { name: "Next paragraph", exact: true }).click();
+        await playing(page).waitFor();
+        const subtitle = requests.at(-1).text;
+        assert.notEqual(title, subtitle);
+        const count = requests.length;
+        await page.getByRole("button", { name: "Previous paragraph", exact: true }).focus();
+        await page.keyboard.press("Enter");
+        await playing(page).waitFor();
+        assert.equal(requests.length, count, "Back must reuse the loaded title");
+        await page.getByRole("button", { name: "Next paragraph", exact: true }).click();
+        await playing(page).waitFor();
+        await page.evaluate(() => {
+          window.__neuralQa.audio.currentTime = 2;
+          window.__neuralQa.audio.dispatchEvent(new window.Event("timeupdate"));
+        });
+        await page.getByRole("button", { name: "Restart current paragraph", exact: true }).focus();
+        await page.keyboard.press("Enter");
+        await playing(page).waitFor();
+        assert.ok(await page.evaluate(() => window.__neuralQa.audio.currentTime < 1));
+        assert.equal(requests.length, count, "Restart must reuse the loaded paragraph");
+        assert.ok(await page.getByRole("button", { name: "Previous paragraph", exact: true }).isVisible());
+        await page.getByRole("button", { name: "Stop reading", exact: true }).click();
+      }),
+    (async () => {
+      let release;
+      const held = new Promise((resolve) => { release = resolve; });
+      await scenario("rapid skips request only the final selected paragraph", phone,
+        async (route, requests) => {
+          if (requests.length === 1) await held;
+          await success(route).catch(() => {});
+        },
+        async (page, requests) => {
+          await waitForRequests(requests, 1);
+          const next = page.getByRole("button", { name: "Next paragraph", exact: true });
+          await next.click();
+          await next.click();
+          await next.click();
+          await playing(page).waitFor();
+          release();
+          assert.equal(requests.length, 2, "Intermediate selections must not start requests");
+          assert.ok(await page.evaluate(() => window.__neuralQa.aborted > 0));
+          await page.getByRole("button", { name: "Stop reading", exact: true }).click();
+        });
+    })(),
+    scenario("health article source links remain visible but are never spoken", desktop,
+      (route) => success(route),
+      async (page, requests) => {
+        await playing(page).waitFor();
+        assert.ok(await page.locator('[data-read-aloud-skip] a[href^="https://"]').count() > 10);
+        const next = page.getByRole("button", { name: "Next paragraph", exact: true });
+        let visited = 0;
+        while (await next.isEnabled() && visited < 150) {
+          await next.click();
+          await playing(page).waitFor();
+          await playing(page).click(); // Prevent background preloading during this walk.
+          visited += 1;
+        }
+        assert.ok(visited > 20 && visited < 150);
+        assert.ok(requests.every(({ text }) => !/^(?:•\s*)?(?:Review|WHO|CDC|Systematic review \(\d{4}\)|Handwashing evidence|Handwashing review)(?:\s*[,—-]\s*(?:CDC|WHO))?$/.test(text.trim())));
+        await page.getByRole("button", { name: "Stop reading", exact: true }).click();
+      }, "/articles/islamic-practices-and-health"),
     scenario("repeated failures keep waiting then recover", desktop,
       (route, requests) => requests.length <= 3 ? failed(route) : success(route),
       async (page, requests) => {

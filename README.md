@@ -60,10 +60,20 @@ npm run smoke:test -- http://localhost:4173
 The website's article reader uses male neural audio only. If audio is slow or
 unavailable it stays on Preparing and retries with backoff, respecting
 `Retry-After`; Cancel/Stop aborts loading and retries. It never switches to a
-browser/device voice. Exercise the reader's failure and recovery paths with:
+browser/device voice.
+
+The bottom Back button restarts the current paragraph after its first second;
+within that first second it goes to the previous paragraph. Rapid skips cancel
+obsolete requests and load only the final selection, with at most one upcoming
+chunk preloaded. Completed audio is reused. Standalone source links remain
+visible and copyable but are omitted from narration. Server synthesis is
+cancellable, cached with bounded memory, and retried if its deadline expires.
+
+Exercise the reader's failure and recovery paths with:
 
 ```powershell
 node scripts/verify-neural-reader.mjs http://localhost:4173
+npx --no-install tsx scripts/verify-neural-tts.ts
 ```
 
 This browser regression check intercepts TTS requests in isolated test contexts;

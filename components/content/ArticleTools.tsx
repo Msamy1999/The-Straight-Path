@@ -86,7 +86,7 @@ function chunkText(text: string): string[] {
 function getElementText(element: HTMLElement, includeArabic: boolean): string {
   const clone = element.cloneNode(true) as HTMLElement;
   clone
-    .querySelectorAll("[data-read-aloud-exclude]")
+    .querySelectorAll("[data-read-aloud-exclude], [data-read-aloud-skip]")
     .forEach((child) => child.remove());
   if (!includeArabic) {
     clone.querySelectorAll('[lang="ar"]').forEach((child) => child.remove());
@@ -158,7 +158,7 @@ function collectSpeechChunks(
       ),
     );
     for (const owner of candidates) {
-      if (owner.closest("[data-read-aloud-exclude]")) continue;
+      if (owner.closest("[data-read-aloud-exclude], [data-read-aloud-skip]")) continue;
       const parentBlock = owner.parentElement?.closest("[data-read-aloud-block]");
       if (parentBlock && content.contains(parentBlock)) continue;
       const text = toSpeechText(getElementText(owner, false));

@@ -1,0 +1,51 @@
+{
+  "kind": "editorial-review",
+  "status": "verified",
+  "reviewedBy": "Codex source-backed review of the two changed sections; owner-approved publication",
+  "verifiedAt": "2026-10-15T14:10:43.528Z",
+  "scope": ["cleanliness-and-wudu", "miswak-and-oral-health"],
+  "beforeSectionBodyHashes": {
+    "cleanliness-and-wudu": "254050eb0b4870a71894d5a2ed99ca10af7eb22da4d4e9ac593f0ad1cf51d56d",
+    "miswak-and-oral-health": "be2e2537d6ec405702f460ca21114d5718393428e784ed3cb431f5df4c526213"
+  },
+  "approval": "The owner explicitly approved deploying the reader fixes and publishing the verified two-section rewrite in this chat on 15 October 2026.",
+  "baseline": {
+    "commit": "86b8ce8",
+    "draftSha256": "d2a7620a398ca535322612ab67e8fbdcea47ac9e456c46166f1f4bae57f4ed6a",
+    "publishedProseCompared": true,
+    "priorReviewArtifact": "data/release-evidence/factual-review-20261002/article-review.json",
+    "priorReviewArtifactSha256": "fa7417d37ebbff44e070e19f466de7d42073f3489ac142f8cc373e9a191c3b72",
+    "unchangedMaterial": "All other article fields, section prose, scripture text and bibliography remain unchanged. This is not a new clinical or theological certification of unchanged claims."
+  },
+  "sourceUrls": [
+    "https://quran.com/5/6",
+    "https://sunnah.com/bukhari:887",
+    "https://www.cdc.gov/clean-hands/data-research/facts-stats/",
+    "https://www.who.int/tools/elena/review-summaries/wsh-diarrhoea--hand-washing-promotion-for-preventing-diarrhoea",
+    "https://pubmed.ncbi.nlm.nih.gov/35944735/",
+    "https://pubmed.ncbi.nlm.nih.gov/33513418/"
+  ],
+  "reviewNotes": [
+    "Quran 5:6 supports the existing statement about washing before prayer; no scripture quotation was added or changed.",
+    "Sahih al-Bukhari 887 supports the existing encouragement of siwak around prayer; the revised sentence is a paraphrase, not a new quotation.",
+    "CDC and WHO describe benefits of handwashing interventions. The revised text explicitly does not present those studies as trials of wudu.",
+    "The PubMed abstracts support plaque and gingivitis benefits of miswak, with methodological and technique/frequency reporting limitations. Full trial datasets were not independently reanalysed.",
+    "The rewrite removes the unnecessary soap/toothbrush contrasts without adding a claim that these items are prohibited, ineffective, or medically unnecessary.",
+    "Standalone source-link labels are improved; all existing research URLs remain attached to their relevant section."
+  ],
+  "subjects": [
+    {
+      "collection": "articles",
+      "key": "islamic-practices-and-health",
+      "recordSha256": "f9faef74aa2655911cc82e558a298623a00fb1ab78f8d82d7d28d8f9870009b2",
+      "status": "verified",
+      "sourceUrls": [
+        "https://quran.com/5/6",
+        "https://sunnah.com/bukhari:887",
+        "https://www.cdc.gov/clean-hands/data-research/facts-stats/",
+        "https://pubmed.ncbi.nlm.nih.gov/35944735/",
+        "https://pubmed.ncbi.nlm.nih.gov/33513418/"
+      ]
+    }
+  ]
+}

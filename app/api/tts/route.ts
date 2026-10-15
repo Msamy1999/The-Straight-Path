@@ -1,4 +1,4 @@
-import { MsEdgeTTS, OUTPUT_FORMAT } from "msedge-tts";
+import { SpeechAudioCache, SpeechTimeoutError, synthesizeNeuralAudio } from "@/lib/audio/neural-tts";
 import { requestClientKey } from "@/lib/request-client";
 
 /**
@@ -21,7 +21,6 @@ const MAX_CHARS = 1200;
 const REQUEST_WINDOW_MS = 60_000;
 const MAX_REQUESTS_PER_WINDOW = 12;
 const MAX_CONCURRENT_SYNTHESIS = 3;
-const SYNTHESIS_TIMEOUT_MS = 45_000;
 const MAX_TRACKED_CLIENTS = 5_000;
 
 type RateLimitEntry = {
@@ -31,6 +30,7 @@ type RateLimitEntry = {
 
 const requestsByClient = new Map<string, RateLimitEntry>();
 let activeSyntheses = 0;
+const audioCache = new SpeechAudioCache();
 
 function consumeRequest(client: string): number | null {
   const now = Date.now();
@@ -65,50 +65,14 @@ function consumeRequest(client: string): number | null {
   return null;
 }
 
-function escapeSsmlText(value: string): string {
-  return value
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&apos;");
-}
-
-async function synthesize(voice: string, text: string): Promise<Uint8Array> {
-  const tts = new MsEdgeTTS();
-  let timeout: ReturnType<typeof setTimeout> | undefined;
-  const operation = async () => {
-    await tts.setMetadata(voice, OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3);
-    const { audioStream } = await tts.toStream(escapeSsmlText(text));
-
-    const chunks: Buffer[] = [];
-    await new Promise<void>((resolve, reject) => {
-      audioStream.on("data", (chunk: Buffer) => chunks.push(chunk));
-      audioStream.on("end", resolve);
-      audioStream.on("error", reject);
-    });
-
-    const audio = Buffer.concat(chunks);
-    if (audio.length === 0) {
-      throw new Error("Empty synthesis result");
-    }
-
-    return new Uint8Array(audio);
-  };
-
-  const timedOut = new Promise<Uint8Array>((_, reject) => {
-    timeout = setTimeout(() => {
-      tts.close();
-      reject(new Error("TTS synthesis timed out"));
-    }, SYNTHESIS_TIMEOUT_MS);
+function audioResponse(audio: Uint8Array) {
+  return new Response(Uint8Array.from(audio).buffer, {
+    headers: {
+      "Content-Type": "audio/mpeg",
+      "Content-Length": String(audio.byteLength),
+      "Cache-Control": "public, max-age=604800, immutable",
+    },
   });
-
-  try {
-    return await Promise.race([operation(), timedOut]);
-  } finally {
-    if (timeout) clearTimeout(timeout);
-    tts.close();
-  }
 }
 
 export async function GET(request: Request) {
@@ -126,6 +90,10 @@ export async function GET(request: Request) {
     );
   }
   const voice = ALLOWED_VOICES.has(voiceParam) ? voiceParam : DEFAULT_VOICE;
+  if (request.signal.aborted) return new Response(null, { status: 499 });
+  const cacheKey = audioCache.key(voice, text);
+  const cached = audioCache.get(cacheKey);
+  if (cached) return audioResponse(cached);
 
   const retryAfter = consumeRequest(requestClientKey(request));
   if (retryAfter !== null) {
@@ -143,37 +111,20 @@ export async function GET(request: Request) {
   }
 
   activeSyntheses += 1;
-  const synthesis = synthesize(voice, text);
-  void synthesis.then(
-    () => {
-      activeSyntheses = Math.max(0, activeSyntheses - 1);
-    },
-    () => {
-      activeSyntheses = Math.max(0, activeSyntheses - 1);
-    },
-  );
-
   try {
-    const audio = await synthesis;
-
-    // Copy into a plain ArrayBuffer; the Node Buffer backing store type is
-    // wider than the Web Response body type used by Next's TypeScript setup.
-    const audioBody = Uint8Array.from(audio).buffer;
-
-    return new Response(audioBody, {
-      headers: {
-        "Content-Type": "audio/mpeg",
-        "Content-Length": String(audio.length),
-        // Same text+voice always yields the same audio — cache aggressively.
-        "Cache-Control": "public, max-age=604800, immutable",
-      },
-    });
+    const audio = await synthesizeNeuralAudio(voice, text, request.signal);
+    request.signal.throwIfAborted();
+    audioCache.set(cacheKey, audio);
+    return audioResponse(audio);
   } catch (error) {
+    if (request.signal.aborted) return new Response(null, { status: 499 });
     console.error("TTS synthesis failed:", error);
-    const timedOut = error instanceof Error && error.message === "TTS synthesis timed out";
+    const timedOut = error instanceof SpeechTimeoutError;
     return Response.json(
       { error: timedOut ? "Speech synthesis timed out" : "Speech synthesis failed" },
       { status: timedOut ? 504 : 502 },
     );
+  } finally {
+    activeSyntheses = Math.max(0, activeSyntheses - 1);
   }
 }
