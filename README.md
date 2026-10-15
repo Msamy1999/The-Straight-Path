@@ -57,6 +57,18 @@ For a running target:
 npm run smoke:test -- http://localhost:4173
 ```
 
+The website's article reader uses male neural audio only. If audio is slow or
+unavailable it stays on Preparing and retries with backoff, respecting
+`Retry-After`; Cancel/Stop aborts loading and retries. It never switches to a
+browser/device voice. Exercise the reader's failure and recovery paths with:
+
+```powershell
+node scripts/verify-neural-reader.mjs http://localhost:4173
+```
+
+This browser regression check intercepts TTS requests in isolated test contexts;
+also verify real neural playback against the deployed site before release.
+
 For the Expo application:
 
 ```powershell

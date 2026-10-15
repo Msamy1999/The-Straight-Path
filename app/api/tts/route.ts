@@ -10,8 +10,9 @@ import { requestClientKey } from "@/lib/request-client";
  * result directly by URL.
  *
  * Note: this uses the same public endpoint the Edge browser's own Read
- * Aloud feature calls. If it ever breaks, both clients fall back to their
- * on-device speech engines automatically.
+ * Aloud feature calls. The website waits and retries this neural voice if it
+ * is unavailable; it never substitutes an on-device speech engine. Mobile
+ * playback has its own availability handling.
  */
 
 const DEFAULT_VOICE = "en-US-GuyNeural";

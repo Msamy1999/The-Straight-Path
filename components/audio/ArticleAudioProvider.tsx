@@ -59,8 +59,8 @@ type PersistedPlayback = {
 
 const MAX_RESTORE_AGE_MS = 7 * 24 * 60 * 60 * 1_000;
 const STORAGE_KEY = "straight-path-article-playback-v1";
-const KEEP_ALIVE_MS = 10_000;
-const VOICE_RETRY_MS = 400;
+const AUDIO_RETRY_INITIAL_MS = 3_000;
+const AUDIO_RETRY_MAX_MS = 30_000;
 const CHUNK_PRELOAD_INTERVAL_MS = 5_600;
 const BACK_NAVIGATION_WINDOW_MS = 4_000;
 const ENGLISH_NEURAL_VOICE = "en-US-GuyNeural";
@@ -68,42 +68,6 @@ const ARABIC_NEURAL_VOICE = "ar-SA-HamedNeural";
 const PLAYBACK_RATES = [1, 1.25, 1.5, 1.75, 2] as const;
 const SILENT_WAV =
   "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA";
-const PREFERRED_MALE_VOICE_NAMES = [
-  "guy",
-  "andrew",
-  "david",
-  "mark",
-  "daniel",
-  "george",
-  "ryan",
-  "james",
-  "alex",
-  "brian",
-  "christopher",
-  "eric",
-  "jacob",
-  "roger",
-  "thomas",
-  "william",
-  "hamed",
-  "male",
-] as const;
-const FEMALE_VOICE_NAMES = [
-  "aria",
-  "ava",
-  "emma",
-  "hazel",
-  "jenny",
-  "michelle",
-  "monica",
-  "natasha",
-  "samantha",
-  "sara",
-  "sonia",
-  "susan",
-  "zira",
-  "female",
-] as const;
 
 const BASE_HIGHLIGHT_CLASSES = [
   "bg-accent/10",
@@ -136,34 +100,19 @@ export function useArticleAudio(): ArticleAudioContextValue {
   return context;
 }
 
-function scoreVoice(voice: SpeechSynthesisVoice): number {
-  const name = voice.name.toLowerCase();
-  const words = name.split(/[^a-z]+/);
-  let score = 0;
-  // Match whole names so "female" cannot accidentally match "male".
-  if (PREFERRED_MALE_VOICE_NAMES.some((candidate) => words.includes(candidate))) {
-    score += 1_000;
-  }
-  if (FEMALE_VOICE_NAMES.some((candidate) => words.includes(candidate))) {
-    score -= 1_000;
-  }
-  if (name.includes("natural")) score += 100;
-  if (name.includes("google")) score += 80;
-  if (name.includes("online")) score += 60;
-  if (!voice.localService) score += 40;
-  if (voice.default) score += 1;
-  return score;
-}
-
-function pickBestVoice(
-  voices: SpeechSynthesisVoice[],
-  languagePrefix: "en" | "ar",
-): SpeechSynthesisVoice | null {
-  return (
-    voices
-      .filter((voice) => voice.lang.toLowerCase().startsWith(languagePrefix))
-      .sort((left, right) => scoreVoice(right) - scoreVoice(left))[0] ?? null
-  );
+function waitForAudioRetry(delay: number, signal: AbortSignal): Promise<boolean> {
+  if (signal.aborted) return Promise.resolve(false);
+  return new Promise((resolve) => {
+    const onAbort = () => {
+      window.clearTimeout(timer);
+      resolve(false);
+    };
+    const timer = window.setTimeout(() => {
+      signal.removeEventListener("abort", onAbort);
+      resolve(true);
+    }, Math.min(delay, 2_147_483_647));
+    signal.addEventListener("abort", onAbort, { once: true });
+  });
 }
 
 function isPrimarilyArabic(text: string): boolean {
@@ -218,9 +167,8 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
   const articleHasStartedRef = useRef(false);
   const stoppedRef = useRef(true);
   const sessionRef = useRef(0);
-  const keepAliveRef = useRef<number | null>(null);
-  const voicesRef = useRef<SpeechSynthesisVoice[]>([]);
-  const engineRef = useRef<"neural" | "system">("neural");
+  const playbackFailureRef = useRef<((error: unknown) => void) | null>(null);
+  const audioRetryNotBeforeRef = useRef(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const objectUrlRef = useRef<string | null>(null);
   const chunkBlobCacheRef = useRef(new Map<number, Promise<Blob>>());
@@ -237,7 +185,6 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     autoPlay: boolean;
   } | null>(null);
   const pendingNavigationTimeoutRef = useRef<number | null>(null);
-  const systemStartedTimerRef = useRef<number | null>(null);
   const persistThrottleRef = useRef(0);
   const preloadTimerRef = useRef<number | null>(null);
   const backNavigationTimerRef = useRef<number | null>(null);
@@ -282,24 +229,10 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     setActiveChunkIndex(index);
   }
 
-  function clearKeepAlive() {
-    if (keepAliveRef.current !== null) {
-      window.clearInterval(keepAliveRef.current);
-      keepAliveRef.current = null;
-    }
-  }
-
   function clearNavigationTimeout() {
     if (pendingNavigationTimeoutRef.current !== null) {
       window.clearTimeout(pendingNavigationTimeoutRef.current);
       pendingNavigationTimeoutRef.current = null;
-    }
-  }
-
-  function clearSystemStartedTimer() {
-    if (systemStartedTimerRef.current !== null) {
-      window.clearTimeout(systemStartedTimerRef.current);
-      systemStartedTimerRef.current = null;
     }
   }
 
@@ -364,15 +297,6 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     preloadTimerRef.current = window.setTimeout(preloadNext, 80);
   }
 
-  function startKeepAlive() {
-    clearKeepAlive();
-    keepAliveRef.current = window.setInterval(() => {
-      if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
-        window.speechSynthesis.resume();
-      }
-    }, KEEP_ALIVE_MS);
-  }
-
   function getAudio(): HTMLAudioElement {
     if (!audioRef.current) {
       const audio = new Audio();
@@ -396,8 +320,7 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     abortRef.current?.abort();
     abortRef.current = null;
     clearChunkAudioPreload();
-    clearKeepAlive();
-    clearSystemStartedTimer();
+    playbackFailureRef.current = null;
     clearPreloadSequence();
     const audio = audioRef.current;
     if (audio) {
@@ -410,9 +333,6 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
       audio.load();
     }
     releaseObjectUrl();
-    if ("speechSynthesis" in window) {
-      window.speechSynthesis.cancel();
-    }
     setActiveReadAlongElement(null);
   }
 
@@ -468,9 +388,28 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     return fetch(
       `/api/tts?text=${encodeURIComponent(chunk)}&voice=${voice}`,
       { signal },
-    ).then((response) => {
-      if (!response.ok) throw new Error(`TTS ${response.status}`);
-      return response.blob();
+    ).then(async (response) => {
+      if (!response.ok) {
+        const retryAfter = response.headers.get("Retry-After");
+        if (retryAfter) {
+          const seconds = Number(retryAfter);
+          const retryAt = Number.isFinite(seconds)
+            ? Date.now() + Math.max(0, seconds) * 1_000
+            : Date.parse(retryAfter);
+          if (Number.isFinite(retryAt)) {
+            audioRetryNotBeforeRef.current = Math.max(
+              audioRetryNotBeforeRef.current,
+              retryAt,
+            );
+          }
+        }
+        throw new Error(`TTS ${response.status}`);
+      }
+      const blob = await response.blob();
+      if (!blob.type.startsWith("audio/") || blob.size === 0) {
+        throw new Error("TTS returned no playable audio");
+      }
+      return blob;
     });
   }
 
@@ -483,7 +422,10 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     if (cached) return cached;
 
     const request = fetchChunkBlob(chunks[index].text, signal).catch((error) => {
-      chunkBlobCacheRef.current.delete(index);
+      // An aborted request from an old session must not evict its replacement.
+      if (chunkBlobCacheRef.current.get(index) === request) {
+        chunkBlobCacheRef.current.delete(index);
+      }
       throw error;
     });
     chunkBlobCacheRef.current.set(index, request);
@@ -511,8 +453,22 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
         return;
       }
 
-      const currentIndex = index;
-      index += 1;
+      // Foreground playback takes priority, especially during an outage or
+      // rate-limit wait. Do not spend its request budget preloading paragraphs.
+      if (
+        playStateRef.current !== "playing" ||
+        Date.now() < audioRetryNotBeforeRef.current
+      ) {
+        chunkAudioPreloadTimerRef.current = window.setTimeout(
+          preloadNext,
+          CHUNK_PRELOAD_INTERVAL_MS,
+        );
+        return;
+      }
+
+      const currentIndex = Math.max(index, currentChunkIndexRef.current + 1);
+      if (currentIndex >= chunks.length) return;
+      index = currentIndex + 1;
       try {
         await getChunkBlob(chunks, currentIndex, abortRef.current.signal);
       } catch {
@@ -561,112 +517,95 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     index: number,
     session: number,
   ): Promise<void> {
-    if (session !== sessionRef.current || stoppedRef.current) return;
-    if (index >= chunks.length) {
-      finishArticle(session);
-      return;
-    }
+    const signal = abortRef.current?.signal;
+    if (!signal) return;
+    const isCurrent = () =>
+      session === sessionRef.current && !stoppedRef.current && !signal.aborted;
+    let retryDelay = AUDIO_RETRY_INITIAL_MS;
 
-    const signal = abortRef.current?.signal as AbortSignal;
-    const blob = await getChunkBlob(chunks, index, signal);
+    // Never substitute a browser/device voice. Keep the same neural voice and
+    // paragraph pending until it becomes available or the listener cancels.
+    while (isCurrent() && index < chunks.length) {
+      updatePlayState("loading");
+      updateChunkIndex(index);
+      setActiveReadAlongElement(chunks[index].owner);
+      updateProgress(index, pendingSeekFractionRef.current);
+      try {
+        const serverWait = audioRetryNotBeforeRef.current - Date.now();
+        if (
+          !chunkBlobCacheRef.current.has(index) &&
+          serverWait > 0 &&
+          !(await waitForAudioRetry(serverWait, signal))
+        ) return;
+        if (!isCurrent()) return;
+        const blob = await getChunkBlob(chunks, index, signal);
+        if (!isCurrent()) return;
 
-    if (session !== sessionRef.current || stoppedRef.current) return;
+        const audio = getAudio();
+        releaseObjectUrl();
+        objectUrlRef.current = URL.createObjectURL(blob);
+        audio.playbackRate = playbackRateRef.current;
 
-    const audio = getAudio();
-    releaseObjectUrl();
-    objectUrlRef.current = URL.createObjectURL(blob);
-    audio.src = objectUrlRef.current;
-    audio.playbackRate = playbackRateRef.current;
-    updateChunkIndex(index);
-    setActiveReadAlongElement(chunks[index].owner);
-    updateProgress(index, 0);
-
-    audio.onloadedmetadata = () => {
-      if (session !== sessionRef.current || !Number.isFinite(audio.duration)) return;
-      const fraction = pendingSeekFractionRef.current;
-      pendingSeekFractionRef.current = 0;
-      if (fraction > 0) {
-        audio.currentTime = Math.min(audio.duration * fraction, audio.duration - 0.05);
+        // Own the entire media attempt, not just audio.play(): decode errors
+        // can happen later. One settlement prevents duplicate retry loops.
+        await new Promise<void>((resolve, reject) => {
+          let settled = false;
+          const complete = (error?: unknown) => {
+            if (settled) return;
+            settled = true;
+            signal.removeEventListener("abort", onAbort);
+            audio.onended = null;
+            audio.onerror = null;
+            audio.onloadedmetadata = null;
+            audio.ontimeupdate = null;
+            if (playbackFailureRef.current === fail) playbackFailureRef.current = null;
+            if (error) reject(error);
+            else resolve();
+          };
+          const fail = (error: unknown) => complete(error);
+          const onAbort = () => fail(new DOMException("Playback cancelled", "AbortError"));
+          playbackFailureRef.current = fail;
+          signal.addEventListener("abort", onAbort, { once: true });
+          audio.onloadedmetadata = () => {
+            if (!isCurrent() || !Number.isFinite(audio.duration)) return;
+            const fraction = pendingSeekFractionRef.current;
+            pendingSeekFractionRef.current = 0;
+            if (fraction > 0) {
+              audio.currentTime = Math.max(0, Math.min(audio.duration * fraction, audio.duration - 0.05));
+            }
+          };
+          audio.ontimeupdate = () => {
+            if (!isCurrent()) return;
+            const fraction =
+              Number.isFinite(audio.duration) && audio.duration > 0
+                ? audio.currentTime / audio.duration
+                : 0;
+            updateProgress(index, fraction);
+          };
+          audio.onended = () => complete();
+          audio.onerror = () => fail(new Error("Neural audio playback failed"));
+          audio.src = objectUrlRef.current!;
+          void audio.play().then(() => {
+            if (!settled && isCurrent()) updatePlayState("playing");
+          }).catch(fail);
+        });
+        if (!isCurrent()) return;
+        index += 1;
+        pendingSeekFractionRef.current = 0;
+        retryDelay = AUDIO_RETRY_INITIAL_MS;
+      } catch {
+        if (!isCurrent()) return;
+        audioRef.current?.pause();
+        releaseObjectUrl();
+        chunkBlobCacheRef.current.delete(index);
+        pendingSeekFractionRef.current = chunkFractionRef.current;
+        updatePlayState("loading");
+        const delay = Math.max(retryDelay, audioRetryNotBeforeRef.current - Date.now());
+        if (!(await waitForAudioRetry(delay, signal))) return;
+        retryDelay = Math.min(retryDelay * 2, AUDIO_RETRY_MAX_MS);
       }
-    };
-    audio.ontimeupdate = () => {
-      const fraction =
-        Number.isFinite(audio.duration) && audio.duration > 0
-          ? audio.currentTime / audio.duration
-          : 0;
-      updateProgress(index, fraction);
-    };
-    audio.onended = () => {
-      void playNeuralChunk(chunks, index + 1, session).catch(() => {
-        if (session === sessionRef.current) finishIdle(false);
-      });
-    };
-    audio.onerror = () => {
-      if (session === sessionRef.current) finishIdle(false);
-    };
-
-    await audio.play();
-    if (session === sessionRef.current && !stoppedRef.current) {
-      updatePlayState("playing");
     }
-  }
-
-  function speakSystemChunk(
-    chunks: SpeechChunk[],
-    index: number,
-    session: number,
-  ) {
-    if (session !== sessionRef.current || stoppedRef.current) return;
-    if (index >= chunks.length) {
-      finishArticle(session);
-      return;
-    }
-
-    updateChunkIndex(index);
-    setActiveReadAlongElement(chunks[index].owner);
-    updateProgress(index, 0);
-    clearSystemStartedTimer();
-    systemStartedTimerRef.current = window.setTimeout(() => {
-      if (session === sessionRef.current) articleHasStartedRef.current = true;
-    }, 2_000);
-
-    const utterance = new SpeechSynthesisUtterance(chunks[index].text);
-    const language = isPrimarilyArabic(chunks[index].text) ? "ar" : "en";
-    const voice = pickBestVoice(voicesRef.current, language);
-    if (voice) {
-      utterance.voice = voice;
-      utterance.lang = voice.lang;
-    } else {
-      utterance.lang = language === "ar" ? "ar-SA" : "en-US";
-    }
-    utterance.rate = playbackRateRef.current;
-    utterance.pitch = 1;
-    utterance.volume = 1;
-    utterance.onend = () => {
-      if (session === sessionRef.current && !stoppedRef.current) {
-        speakSystemChunk(chunks, index + 1, session);
-      }
-    };
-    utterance.onerror = () => {
-      if (session === sessionRef.current && !stoppedRef.current) finishIdle(false);
-    };
-    window.speechSynthesis.speak(utterance);
-  }
-
-  function startSystemFallback(
-    chunks: SpeechChunk[],
-    index: number,
-    session: number,
-  ) {
-    if (!("speechSynthesis" in window)) {
-      finishIdle(false);
-      return;
-    }
-    engineRef.current = "system";
-    updatePlayState("playing");
-    window.speechSynthesis.cancel();
-    startKeepAlive();
-    speakSystemChunk(chunks, index, session);
+    if (isCurrent()) finishArticle(session);
   }
 
   function beginPlayback(
@@ -692,7 +631,6 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     articleHasStartedRef.current = index > 0 || (options.fraction ?? 0) > 0.08;
     stoppedRef.current = false;
     abortRef.current = new AbortController();
-    engineRef.current = "neural";
     updatePlayState("loading");
 
     if (registration.next) router.prefetch(registration.next.href);
@@ -706,11 +644,7 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
       audio.src = SILENT_WAV;
       void audio.play().catch(() => {});
     }
-    void playNeuralChunk(chunks, index, session).catch(() => {
-      if (session === sessionRef.current && !stoppedRef.current) {
-        startSystemFallback(chunks, index, session);
-      }
-    });
+    void playNeuralChunk(chunks, index, session);
     persistPlayback(true);
   }
 
@@ -750,12 +684,7 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
 
   function handlePause() {
     if (playStateRef.current !== "playing") return;
-    if (engineRef.current === "neural") {
-      audioRef.current?.pause();
-    } else {
-      clearKeepAlive();
-      window.speechSynthesis.pause();
-    }
+    audioRef.current?.pause();
     updatePlayState("paused");
     persistPlayback(true);
   }
@@ -763,14 +692,9 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
   function handleResume() {
     if (playStateRef.current !== "paused") return;
     const audio = audioRef.current;
-    if (engineRef.current === "neural" && audio?.src) {
-      void audio.play();
-      updatePlayState("playing");
-      return;
-    }
-    if (engineRef.current === "system" && window.speechSynthesis.paused) {
-      window.speechSynthesis.resume();
-      startKeepAlive();
+    if (audio?.src && playbackFailureRef.current) {
+      const fail = playbackFailureRef.current;
+      void audio.play().catch(fail);
       updatePlayState("playing");
       return;
     }
@@ -805,36 +729,18 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     const chunks = currentChunksRef.current;
     if (!registration || chunks.length === 0 || !abortRef.current) return;
 
-    sessionRef.current += 1;
+    cancelTransport();
     const session = sessionRef.current;
     stoppedRef.current = false;
-    clearKeepAlive();
-    clearSystemStartedTimer();
-    const audio = audioRef.current;
-    if (audio) {
-      audio.pause();
-      audio.onended = null;
-      audio.onerror = null;
-      audio.ontimeupdate = null;
-      audio.onloadedmetadata = null;
-      audio.removeAttribute("src");
-      audio.load();
-    }
-    releaseObjectUrl();
-    if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+    abortRef.current = new AbortController();
 
     pendingSeekFractionRef.current = 0;
     chunkFractionRef.current = 0;
     updateChunkIndex(index);
     updateProgress(index, 0);
     updatePlayState("loading");
-    engineRef.current = "neural";
     startChunkAudioPreload(chunks, index + 1, session);
-    void playNeuralChunk(chunks, index, session).catch(() => {
-      if (session === sessionRef.current && !stoppedRef.current) {
-        startSystemFallback(chunks, index, session);
-      }
-    });
+    void playNeuralChunk(chunks, index, session);
     persistPlayback(true);
   }
 
@@ -945,20 +851,6 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
   previousActionRef.current = handlePrevious;
   nextActionRef.current = handleNext;
   stopActionRef.current = handleStop;
-
-  useEffect(() => {
-    if (!("speechSynthesis" in window)) return;
-    const pickVoice = () => {
-      voicesRef.current = window.speechSynthesis.getVoices();
-    };
-    pickVoice();
-    window.speechSynthesis.addEventListener("voiceschanged", pickVoice);
-    const timeout = window.setTimeout(pickVoice, VOICE_RETRY_MS);
-    return () => {
-      window.speechSynthesis.removeEventListener("voiceschanged", pickVoice);
-      window.clearTimeout(timeout);
-    };
-  }, []);
 
   useEffect(() => {
     let cancelled = false;
