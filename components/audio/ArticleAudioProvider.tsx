@@ -68,6 +68,42 @@ const ARABIC_NEURAL_VOICE = "ar-SA-HamedNeural";
 const PLAYBACK_RATES = [1, 1.25, 1.5, 1.75, 2] as const;
 const SILENT_WAV =
   "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA";
+const PREFERRED_MALE_VOICE_NAMES = [
+  "guy",
+  "andrew",
+  "david",
+  "mark",
+  "daniel",
+  "george",
+  "ryan",
+  "james",
+  "alex",
+  "brian",
+  "christopher",
+  "eric",
+  "jacob",
+  "roger",
+  "thomas",
+  "william",
+  "hamed",
+  "male",
+] as const;
+const FEMALE_VOICE_NAMES = [
+  "aria",
+  "ava",
+  "emma",
+  "hazel",
+  "jenny",
+  "michelle",
+  "monica",
+  "natasha",
+  "samantha",
+  "sara",
+  "sonia",
+  "susan",
+  "zira",
+  "female",
+] as const;
 
 const BASE_HIGHLIGHT_CLASSES = [
   "bg-accent/10",
@@ -102,12 +138,19 @@ export function useArticleAudio(): ArticleAudioContextValue {
 
 function scoreVoice(voice: SpeechSynthesisVoice): number {
   const name = voice.name.toLowerCase();
+  const words = name.split(/[^a-z]+/);
   let score = 0;
+  // Match whole names so "female" cannot accidentally match "male".
+  if (PREFERRED_MALE_VOICE_NAMES.some((candidate) => words.includes(candidate))) {
+    score += 1_000;
+  }
+  if (FEMALE_VOICE_NAMES.some((candidate) => words.includes(candidate))) {
+    score -= 1_000;
+  }
   if (name.includes("natural")) score += 100;
   if (name.includes("google")) score += 80;
   if (name.includes("online")) score += 60;
   if (!voice.localService) score += 40;
-  if (name.includes("samantha") || name.includes("daniel")) score += 20;
   if (voice.default) score += 1;
   return score;
 }
