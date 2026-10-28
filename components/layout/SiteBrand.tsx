@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { LogoMark } from "@/components/layout/LogoMark";
 import { siteName, siteNameArabic } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
+import { useReaderLanguage } from "@/components/content/ReaderLocale";
 
 type SiteBrandProps = {
   as?: "link" | "text";
@@ -16,6 +19,7 @@ export function SiteBrand({
   onClick,
   compact = false,
 }: SiteBrandProps) {
+  const language = useReaderLanguage();
   const content = (
     <span className={cn("flex min-w-0 items-center gap-2.5", className)}>
       <LogoMark
@@ -26,17 +30,17 @@ export function SiteBrand({
       />
       <span className="flex min-w-0 flex-col leading-tight">
         <span
-          lang="en"
-          dir="ltr"
+          lang={language}
+          dir={language === "ar" ? "rtl" : "ltr"}
           translate="no"
           className={cn(
             "notranslate font-semibold text-foreground",
             compact ? "text-sm" : "text-base",
           )}
         >
-          {siteName}
+          {language === "ar" ? siteNameArabic : siteName}
         </span>
-        {!compact ? (
+        {!compact && language !== "ar" ? (
           <span lang="ar" dir="rtl" translate="no" className="notranslate text-right text-xs text-muted-foreground">
             {siteNameArabic}
           </span>
@@ -52,7 +56,7 @@ export function SiteBrand({
   return (
     <Link
       href="/"
-      aria-label={`${siteName} home`}
+      aria-label={language === "ar" ? `${siteNameArabic} — الصفحة الرئيسية` : `${siteName} home`}
       onClick={onClick}
       className="shrink-0 no-underline"
     >

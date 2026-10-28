@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { ReaderReference } from "./ReaderLocale";
 
 // These are locators, not translated prose. In particular, machine translation
 // must not invent a surah name for a chapter/verse number (19 is Maryam, not
@@ -30,8 +31,6 @@ export function splitScriptureReferences(text: string): { text: string; protecte
 
 export function ScriptureReferenceText({ text }: { text: string }) {
   return splitScriptureReferences(text).map((part, index) => part.protected ? (
-    <bdi key={index} lang="en" dir="ltr" translate="no" data-scripture-reference className="notranslate">
-      {part.text}
-    </bdi>
+    <ReaderReference key={index} reference={part.text} />
   ) : <Fragment key={index}>{part.text}</Fragment>);
 }

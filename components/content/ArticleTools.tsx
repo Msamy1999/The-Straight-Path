@@ -161,7 +161,7 @@ function collectSpeechChunks(
       if (owner.closest("[data-read-aloud-exclude], [data-read-aloud-skip]")) continue;
       const parentBlock = owner.parentElement?.closest("[data-read-aloud-block]");
       if (parentBlock && content.contains(parentBlock)) continue;
-      const text = toSpeechText(getElementText(owner, false));
+      const text = toSpeechText(getElementText(owner, document.documentElement.lang === "ar"));
       if (text) blocks.push({ text, owner });
     }
   }

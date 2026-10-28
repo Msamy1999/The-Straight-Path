@@ -2,6 +2,8 @@ import { Callout } from "@/components/content/Callout";
 import { ComparisonBlock } from "@/components/content/ComparisonBlock";
 import { TopicCard } from "@/components/content/TopicCard";
 import { VerseCard } from "@/components/content/VerseCard";
+import { CompactArticleDetails } from "./CompactArticleDetails";
+import { ReaderLabel } from "./ReaderLocale";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Card } from "@/components/ui/Card";
 import { categoryIconMap, fallbackCategoryIcon } from "@/lib/category-icons";
@@ -66,16 +68,8 @@ export function ComparisonArticleLayout({
         </div>
       </section>
 
-      <section id="scripture-preview" className="scroll-mt-20">
-        <div data-read-aloud-block>
-          <PageHeader
-            titleAs="h2"
-            eyebrow="Scripture preview"
-            title="Key passages"
-            subtitle="Read the relevant passages before weighing the interpretations offered below."
-          />
-        </div>
-        <div className="mt-4 grid grid-cols-1 gap-2.5">
+      <CompactArticleDetails id="scripture-preview" title="Key passages" arabicTitle="المقاطع الرئيسية" count={comparison.quranVerses.length + comparison.bibleVerses.length}>
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
           {comparison.quranVerses.map((verse) => (
             <VerseCard key={`${verse.reference}-${verse.translator}`} verse={verse} />
           ))}
@@ -83,7 +77,7 @@ export function ComparisonArticleLayout({
             <VerseCard key={`${verse.reference}-${verse.version}`} verse={verse} />
           ))}
         </div>
-      </section>
+      </CompactArticleDetails>
 
       <section id="comparison" className="scroll-mt-20">
         <ComparisonBlock
@@ -182,13 +176,8 @@ export function ComparisonArticleLayout({
         data-read-aloud-block
         data-read-aloud-exclude
       >
-        <PageHeader
-          titleAs="h2"
-          eyebrow="Related topics"
-          title="Further study paths"
-          subtitle="These topics connect the comparison with broader categories."
-        />
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <h2 className="text-sm font-semibold"><ReaderLabel en="Further study paths" ar="مسارات إضافية للدراسة" /></h2>
+        <div className="mt-2 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
           {comparison.relatedTopics.map((topic) => (
             <TopicCard
               key={topic}
@@ -198,6 +187,7 @@ export function ComparisonArticleLayout({
               icon={CategoryIcon}
               label="Related topic"
               meta="Related topic"
+              compact
             />
           ))}
         </div>

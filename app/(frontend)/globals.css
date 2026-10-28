@@ -281,8 +281,15 @@ font[style*="vertical-align"],
   }
 
   [data-article-readable-content] details:not([open]) > :not(summary),
-  [data-print-article] > details:not([open]) > :not(summary) {
+  [data-print-article] > details:not([open]) > :not(summary),
+  [data-citation-details]:not([open]) > :not(summary) {
     display: block !important;
+  }
+
+  [data-compact-article-details]::details-content,
+  [data-citation-details]::details-content {
+    display: block !important;
+    content-visibility: visible !important;
   }
 
   [data-article-readable-content] details > summary svg,

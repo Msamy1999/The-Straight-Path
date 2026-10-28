@@ -9,6 +9,7 @@ type TopicCardProps = {
   icon?: LucideIcon;
   label?: string;
   meta?: string;
+  compact?: boolean;
 };
 
 export function TopicCard({
@@ -18,7 +19,19 @@ export function TopicCard({
   icon: Icon,
   label,
   meta = "Topic",
+  compact = false,
 }: TopicCardProps) {
+  if (compact) return (
+    <Card className="group min-w-0 shadow-none transition hover:border-accent/60">
+      <Link href={href} aria-label={title} className="flex min-h-11 items-start gap-2.5 rounded-lg p-3 no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+        {Icon ? <Icon aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-accent" /> : null}
+        <span className="min-w-0">
+          <span className="block text-sm font-semibold leading-5 text-foreground group-hover:text-accent">{title}</span>
+          <span className="mt-1 line-clamp-2 text-xs leading-5 text-muted-foreground">{description}</span>
+        </span>
+      </Link>
+    </Card>
+  );
   return (
     <Card className="group flex min-h-36 flex-col transition hover:-translate-y-0.5 hover:border-accent/60 sm:min-h-44">
       <Link

@@ -1,58 +1,52 @@
+"use client";
+
 import { Card } from "@/components/ui/Card";
 import { Citation } from "@/components/content/Citation";
-import { formatArabicQuranReference } from "@/lib/quran";
+import { ReaderLabel, ReaderReference, useReaderLanguage } from "./ReaderLocale";
+import { formatArabicQuranReference, quranReferencesInText } from "@/lib/quran";
 import type { VerseCardProps } from "@/types/content";
 import { cn } from "@/lib/utils";
 
 export function VerseCard({ verse, className }: VerseCardProps) {
+  const language = useReaderLanguage();
+  const arabicMode = language === "ar";
+  const notes = verse.notes && (!arabicMode || !/[a-z]/i.test(verse.notes)) ? verse.notes : undefined;
   if (verse.scripture === "quran") {
     const arabicReference = formatArabicQuranReference({
       surahNumber: verse.surahNumber,
       firstAyahNumber: verse.ayahNumber,
+      lastAyahNumber: quranReferencesInText(verse.reference)[0]?.lastAyahNumber,
     });
 
     return (
       <Card
         data-read-aloud-block
         data-print-keep-together
-        className={cn("border-accent/25 p-3 sm:p-3.5", className)}
+        className={cn("border-accent/20 p-3 shadow-none", className)}
       >
-        <p className="text-[0.68rem] font-semibold uppercase tracking-wide text-accent sm:text-xs">
-          Quran
-        </p>
+        <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-xs leading-5">
+          <span className="font-semibold text-accent"><ReaderLabel en="Quran" ar="القرآن الكريم" /></span>
+          <span className="text-muted-foreground"><ReaderReference reference={verse.reference} arabic={arabicReference || undefined} /></span>
+        </div>
         <p
           lang="ar"
           dir="rtl"
           translate="no"
           data-quran-original
-          className="notranslate mt-1.5 text-right text-[13px] leading-6 text-accent sm:mt-2 sm:text-[15px] sm:leading-7"
+          className="notranslate mt-2 text-right text-sm leading-7 text-accent sm:text-[15px]"
         >
           {verse.arabic.normalize("NFC")}
         </p>
-        {arabicReference ? (
-          <p
-            lang="ar"
-            dir="rtl"
-            translate="no"
-            data-quran-original
-            className="notranslate mt-0.5 text-right text-[0.65rem] font-semibold leading-4 text-accent sm:text-[0.7rem]"
-          >
-            {arabicReference}
-          </p>
-        ) : null}
-        <p lang="en" dir="ltr" translate="no" data-scripture-translation className="notranslate mt-2 text-sm leading-6 text-accent sm:text-base sm:leading-7">
+        {!arabicMode ? <p lang="en" dir="ltr" translate="no" data-scripture-translation className="notranslate mt-2 text-sm leading-6 text-foreground">
           {verse.translation}
-        </p>
-        <div className="mt-2 border-t border-border/70 pt-2">
-          <p lang="en" dir="ltr" translate="no" data-scripture-reference className="notranslate text-[0.7rem] font-semibold leading-4 text-foreground sm:text-xs">
-            {verse.reference}
-          </p>
+        </p> : null}
+        {!arabicMode ? <div className="mt-2 border-t border-border/60 pt-1.5">
           <Citation
             source={verse.translator}
             prefix="Translation"
             className="mt-0.5 text-[0.68rem] leading-4 sm:text-xs sm:leading-5"
           />
-        </div>
+        </div> : null}
         {verse.arabicTafsirNote ? (
           <div
             lang="ar"
@@ -62,11 +56,12 @@ export function VerseCard({ verse, className }: VerseCardProps) {
             {verse.arabicTafsirNote}
           </div>
         ) : null}
-        {verse.notes ? (
+        {notes ? (
           <div className="mt-2.5 rounded-md bg-muted p-2 text-xs leading-5 text-muted-foreground sm:text-sm sm:leading-6">
-            {verse.notes}
+            {notes}
           </div>
         ) : null}
+        {arabicMode && verse.notes && !notes ? <p translate="no" className="notranslate mt-2 text-xs leading-6 text-muted-foreground">تتوفر ملاحظات إضافية في النسخة الإنجليزية.</p> : null}
       </Card>
     );
   }
@@ -75,27 +70,28 @@ export function VerseCard({ verse, className }: VerseCardProps) {
     <Card
       data-read-aloud-block
       data-print-keep-together
-      className={cn("p-3 sm:p-3.5", className)}
+      className={cn("p-3 shadow-none", className)}
     >
-      <p className="text-[0.68rem] font-semibold uppercase tracking-wide text-accent sm:text-xs">
-        Bible
-      </p>
-      <blockquote lang="en" dir="ltr" translate="no" data-scripture-translation className="notranslate mt-1.5 border-l-2 border-accent pl-2.5 text-sm leading-6 text-accent sm:mt-2 sm:pl-3 sm:text-base sm:leading-7">
+      <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-xs leading-5">
+        <span className="font-semibold text-accent"><ReaderLabel en="Bible" ar="الكتاب المقدس" /></span>
+        <span className="text-muted-foreground"><ReaderReference reference={verse.reference} /></span>
+      </div>
+      {!arabicMode ? <blockquote lang="en" dir="ltr" translate="no" data-scripture-translation className="notranslate mt-2 border-s-2 border-accent ps-2.5 text-sm leading-6 text-foreground">
         {verse.text}
-      </blockquote>
-      {verse.arabicText ? (
+      </blockquote> : null}
+      {arabicMode && verse.arabicText ? (
         <p
           lang="ar"
           dir="rtl"
-          className="mt-2 text-right text-sm leading-6 text-accent sm:text-base sm:leading-7"
+          translate="no"
+          data-scripture-translation
+          className="notranslate mt-2 text-right text-sm leading-7 text-accent sm:text-[15px]"
         >
           {verse.arabicText}
         </p>
       ) : null}
-      <div className="mt-2 border-t border-border/70 pt-2 sm:border-0 sm:pt-0">
-        <p lang="en" dir="ltr" translate="no" data-scripture-reference className="notranslate text-[0.7rem] font-semibold leading-4 text-foreground sm:text-xs">
-          {verse.reference}
-        </p>
+      {arabicMode && !verse.arabicText ? <p translate="no" dir="rtl" className="notranslate mt-2 text-xs leading-6 text-muted-foreground">لم تُضف ترجمة عربية موثقة لهذا المقطع.</p> : null}
+      {!arabicMode ? <div className="mt-2 border-t border-border/60 pt-1.5">
         <Citation
           source={verse.version}
           prefix="Version"
@@ -108,12 +104,13 @@ export function VerseCard({ verse, className }: VerseCardProps) {
             className="mt-0.5 text-[0.68rem] leading-4 sm:text-xs sm:leading-5"
           />
         ) : null}
-      </div>
-      {verse.notes ? (
+      </div> : <a href="#sources" className="mt-2 inline-flex min-h-8 items-center text-xs text-accent underline"><ReaderLabel en="Source details" ar="تفاصيل المصدر" /></a>}
+      {notes ? (
         <div className="mt-2.5 rounded-md bg-muted p-2 text-xs leading-5 text-muted-foreground sm:text-sm sm:leading-6">
-          {verse.notes}
+          {notes}
         </div>
       ) : null}
+      {arabicMode && verse.notes && !notes ? <p translate="no" className="notranslate mt-2 text-xs leading-6 text-muted-foreground">تتوفر ملاحظات إضافية في النسخة الإنجليزية.</p> : null}
     </Card>
   );
 }

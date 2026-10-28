@@ -964,8 +964,11 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     if (!activeReadAlongElement || playState === "idle") return;
 
     const target = activeReadAlongElement;
-    const collapsedParent = target.closest("details");
-    if (collapsedParent && !collapsedParent.open) collapsedParent.open = true;
+    let collapsedParent = target.closest("details");
+    while (collapsedParent) {
+      collapsedParent.open = true;
+      collapsedParent = collapsedParent.parentElement?.closest("details") ?? null;
+    }
     const highlightClasses = [
       ...BASE_HIGHLIGHT_CLASSES,
       ...(target.tagName === "SPAN" ? INLINE_HIGHLIGHT_CLASSES : []),

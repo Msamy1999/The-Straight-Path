@@ -1,11 +1,14 @@
 import { ArrowRight, ChevronDown } from "lucide-react";
 import type { ReactNode } from "react";
 import { ArticleHashOpener } from "@/components/content/ArticleHashOpener";
+import { ArticlePrintDetails } from "@/components/content/ArticlePrintDetails";
 import { ArticleTools } from "@/components/content/ArticleTools";
 import { CitationList } from "@/components/content/CitationList";
 import { TopicCard } from "@/components/content/TopicCard";
 import { VerseCard } from "@/components/content/VerseCard";
 import { ScriptureReferenceText } from "@/components/content/ScriptureReferenceText";
+import { CompactArticleDetails } from "@/components/content/CompactArticleDetails";
+import { ReaderEnglishExcerpt, ReaderFaqMarker, ReaderLabel } from "@/components/content/ReaderLocale";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
@@ -77,7 +80,8 @@ export function ArticleLayout({
 
   return (
     <>
-      {collapsibleSections ? <ArticleHashOpener /> : null}
+      <ArticleHashOpener />
+      <ArticlePrintDetails />
       <Section data-print-article-header className="border-b border-border" spacing="sm">
         <Container data-print-article-container>
           <div data-print-masthead className="hidden" aria-hidden="true">
@@ -151,57 +155,18 @@ export function ArticleLayout({
                   ))}
               </div>
 
-              {collapsibleSections ? (
-                <details
-                  id="sources"
-                  className="group mt-8 scroll-mt-20 rounded-lg border border-border bg-card shadow-soft"
-                >
-                  <summary className="flex cursor-pointer list-none items-start justify-between gap-4 px-4 py-4 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-5 [&::-webkit-details-marker]:hidden">
-                    <span>
-                      <span className="block text-xs font-semibold uppercase text-accent">Sources</span>
-                      <span className="mt-1 block text-base font-semibold text-foreground sm:text-lg">
-                        Sources and further reading
-                      </span>
-                      <span className="mt-1 block text-sm leading-6 text-muted-foreground">
-                        Primary texts and works cited in this article.
-                      </span>
-                    </span>
-                    <ChevronDown
-                      aria-hidden="true"
-                      className="mt-1 h-5 w-5 shrink-0 text-accent transition-transform group-open:rotate-180"
-                    />
-                  </summary>
-                  <div className="border-t border-border px-4 py-4 sm:px-5 sm:py-5">
-                    <CitationList citations={citations} />
-                  </div>
-                </details>
-              ) : (
-                <section id="sources" className="mt-12 scroll-mt-20">
-                  <PageHeader
-                    titleAs="h2"
-                    eyebrow="Sources"
-                    title="Sources and further reading"
-                    subtitle="Primary texts and works cited in this article."
-                  />
-                  <div className="mt-6">
-                    <CitationList citations={citations} />
-                  </div>
-                </section>
-              )}
+              <CompactArticleDetails id="sources" title="Sources and further reading" arabicTitle="المصادر وقراءات إضافية" count={citations.length} className="mt-6">
+                <CitationList citations={citations} compact />
+              </CompactArticleDetails>
 
               {relatedArticles.length > 0 ? (
                 <section
                   id="related-articles"
                   data-print-hidden
-                  className="mt-12 scroll-mt-20 print:hidden"
+                  className="mt-6 scroll-mt-20 print:hidden"
                 >
-                  <PageHeader
-                    titleAs="h2"
-                    eyebrow="Related"
-                    title="Related articles"
-                    subtitle="Continue exploring related questions and evidence."
-                  />
-                  <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                  <h2 className="text-sm font-semibold"><ReaderLabel en="Related articles" ar="مقالات ذات صلة" /></h2>
+                  <div className="mt-2 grid gap-2 sm:grid-cols-2">
                     {relatedArticles.map((relatedArticle) => (
                       <TopicCard
                         key={relatedArticle.slug}
@@ -210,6 +175,7 @@ export function ArticleLayout({
                         href={`/articles/${relatedArticle.slug}`}
                         icon={CategoryIcon}
                         meta="Article"
+                        compact
                       />
                     ))}
                   </div>
@@ -343,6 +309,16 @@ function ArticleSectionBody({
       className="mt-3 select-text whitespace-pre-wrap text-sm leading-6 text-muted-foreground sm:mt-4 sm:text-base sm:leading-7"
     >
       {lines.map((line, index) => {
+        const faq = line.match(/^\s*([QA]):\s*(.*)$/);
+        if (faq) {
+          const question = faq[1] === "Q";
+          return (
+            <span key={`faq-${index}`} data-faq-line={question ? "question" : "answer"} className={`flex items-start gap-2.5 ${question ? "mt-3 first:mt-0" : "mt-1"}`}>
+              <ReaderFaqMarker question={question} />{" "}
+              <span className={question ? "min-w-0 font-semibold text-foreground" : "min-w-0"}>{renderLineWithScripture(faq[2], `${index}-faq`, keyScripture)}</span>
+            </span>
+          );
+        }
         const quotes = quranQuoteSegmentsInLine(line)
           .map((segment) => ({
             ...segment,
@@ -369,7 +345,7 @@ function ArticleSectionBody({
 
                 return (
                   <span key={`${quote.start}-${quote.end}`}>
-                    {renderInlineMarkdown(before, `${index}-${quote.start}-before`)}
+                    {renderLineWithScripture(before, `${index}-${quote.start}-before`, keyScripture)}
                     <span className="block py-1.5">
                       <span
                         lang="ar"
@@ -393,7 +369,7 @@ function ArticleSectionBody({
                   </span>
                 );
               })}
-              {renderInlineMarkdown(line.slice(cursor), `${index}-after`)}
+              {renderLineWithScripture(line.slice(cursor), `${index}-after`, keyScripture)}
               {index < lines.length - 1 ? <br /> : null}
             </span>
           );
@@ -471,9 +447,13 @@ function renderLineWithScripture(
       ),
     );
     output.push(
-      <span key={`${keyPrefix}-${index}-scripture`} lang="en" dir="ltr" translate="no" data-scripture-translation className="notranslate text-accent">
+      <ReaderEnglishExcerpt
+        key={`${keyPrefix}-${index}-scripture`}
+        hasQuranOriginal={Boolean(keyScripture?.quranVerses.some(verse => verse.translation === passage))}
+        arabicText={keyScripture?.bibleVerses.find(verse => verse.text === passage)?.arabicText}
+      >
         {renderInlineMarkdown(passage, `${keyPrefix}-${index}-passage`)}
-      </span>,
+      </ReaderEnglishExcerpt>,
     );
     cursor = start + passage.length;
   });
@@ -523,11 +503,8 @@ function KeyScripturePassages({
   }
 
   return (
-    <div className="mt-5">
-      <p className="text-[0.7rem] font-semibold uppercase text-accent sm:text-xs">
-        Key passage{verses.length === 1 ? "" : "s"}
-      </p>
-      <div className="mt-2 grid grid-cols-1 gap-2.5">
+    <CompactArticleDetails title={verses.length === 1 ? "Key passage" : "Key passages"} arabicTitle="المقاطع الرئيسية" count={verses.length} className="mt-3">
+      <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
         {verses.map((verse) => (
           <VerseCard
             key={`${verse.scripture}-${verse.reference}`}
@@ -536,7 +513,7 @@ function KeyScripturePassages({
           />
         ))}
       </div>
-    </div>
+    </CompactArticleDetails>
   );
 }
 
