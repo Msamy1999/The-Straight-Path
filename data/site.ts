@@ -10,43 +10,49 @@ export const siteCategories = [
     title: "The Quran & the Bible",
     href: "/the-quran-and-the-bible",
     description:
-      "A beginner-friendly hub for comparing major questions in the Quran and Bible with clear source status.",
+      "Begin the Islamic case for God, Jesus, revelation, and salvation through evidence, fair objections, and practical next steps.",
     icon: "scripture",
     tags: ["Scripture", "Theology"],
     futureTopics: [
       topic(
         "Who is God?",
-        "A draft comparison of how God is described, worshiped, and understood.",
+        "Why Islam reserves worship for the one independent Creator, with the reasons and Christian response examined.",
         "/articles/who-is-god-quran-and-bible-comparison",
       ),
       topic(
         "Who is Jesus?",
-        "A study path for comparing Jesus with scripture, interpretation, and context kept separate.",
+        "The Messiah's worship, the strongest Christian evidence, and Islam's invitation to follow him.",
         "/articles/who-is-jesus",
       ),
       topic(
         "What is divine revelation?",
-        "A planned study on scripture, prophethood, inspiration, and source attribution.",
+        "Why divine guidance matters and how the claim of revelation can be tested.",
+        "/articles/what-is-revelation",
       ),
       topic(
         "What is salvation?",
-        "A planned comparison of forgiveness, accountability, mercy, and purpose.",
+        "The Islamic case for mercy, repentance, personal responsibility, and hope.",
+        "/articles/what-is-salvation",
       ),
       topic(
         "What is sin?",
-        "A planned topic for personal responsibility, repentance, and moral accountability.",
+        "A practical path from wrongdoing to repentance and repair, with no inherited guilt.",
+        "/articles/what-is-sin",
       ),
       topic(
         "What is worship?",
-        "A planned study on worshiping God, prayer, obedience, and devotion.",
+        "Why worship belongs to the Creator and how that conviction shapes life.",
+        "/articles/what-is-worship",
       ),
       topic(
         "What is the Day of Judgment?",
-        "A planned comparison of accountability, resurrection, judgment, and final destiny.",
+        "Final accountability, mercy, and what it means to prepare to meet God.",
+        "/articles/the-day-of-judgment",
       ),
       topic(
         "What is the final message?",
-        "A planned research path about prophecy, revelation, and the completion of guidance.",
+        "Islam's claim of universal final guidance and what follows if its messenger is trusted.",
+        "/articles/the-final-message",
       ),
     ],
     relatedSlugs: ["preservation", "jesus-in-islam-and-christianity", "sources"],

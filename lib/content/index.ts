@@ -333,7 +333,7 @@ function composeIslamChristianityTree(): ResearchTreeNode[] {
     folder(
       "comparison-start",
       "Start with the main questions",
-      "The core questions readers usually need before moving into deeper comparison.",
+      "Begin the Islamic case for God, Jesus, revelation, and a life of worship, with evidence and clear next steps.",
       topicsFor("the-quran-and-the-bible"),
       "/the-quran-and-the-bible",
       true,

@@ -1,10 +1,10 @@
 {
   "slug": "gospel-authorship-and-dating",
   "title": "Gospel Authorship and Dating",
-  "subtitle": "What mainstream biblical scholarship says about who wrote the Gospels and when — compared with the Quran's single-generation compilation",
+  "subtitle": "Internal testimony, early attributions, and why scholarly dates are estimates",
   "category": "preservation",
   "audienceLevel": "beginner",
-  "summary": "The canonical Gospels are ancient sources for Jesus, but the texts themselves do not name their authors in their opening narratives, and their traditional titles were attached through early church transmission. Most modern scholars date them decades after Jesus. This does not make them worthless; it does mean that their distance, dependence, and theological aims should be weighed when they conflict with the Quran's claim to be preserved revelation.",
+  "summary": "The Gospel narratives do not directly identify their authors by the familiar names, but early titles and church testimony supply real attribution evidence. Many scholars date their final forms decades after Jesus, while others defend earlier dates or traditional authorship. These questions affect access to eyewitness testimony without making anonymity, literary dependence, or a later date automatic proof of falsehood.",
   "tags": [
     "Preservation",
     "History",
@@ -14,7 +14,7 @@
   ],
   "seo": {
     "metaTitle": "Gospel Authorship and Dating: What Scholars Really Say",
-    "metaDescription": "The four Gospels are the main narrative sources for Jesus, but the texts themselves do not name their authors in their opening lines.",
+    "metaDescription": "Internal Gospel testimony, early Christian attributions, dating ranges, and serious arguments both for and against traditional authorship.",
     "keywords": [
       "Gospel authorship",
       "Synoptic Problem",
@@ -31,63 +31,63 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "The Evidence in Brief",
+      "title": "What 'Anonymous' Does—and Does Not—Mean",
       "kind": "summary",
-      "body": "The four Gospels are the main narratives about Jesus. Their opening lines do not name their authors. Traditional names appear in early church testimony. Many modern scholars date the final texts between about 70 and 100 CE. They debate how directly the texts preserve eyewitness testimony. The Quran presents a different model. It was publicly recited and memorized during Muhammad’s lifetime."
+      "body": "Who wrote the Gospels, and how close were those writers to Jesus? The narratives do not say 'I, Matthew' or 'I, John' in the modern authorial way. Yet that fact alone cannot prove they circulated without names or that their traditional authors were invented.\n\nA responsible judgment compares internal testimony, manuscript titles, early church statements, and literary relationships. The evidence is real; so is the disagreement about how far it establishes authorship."
     },
     {
       "sectionId": "historical-context",
-      "title": "What the Gospels Claim About Their Sources",
+      "title": "What the Books Say About Their Sources",
       "kind": "history",
-      "body": "The Gospels do not begin with the modern formula “written by Matthew, Mark, Luke, or John.” Luke describes collecting earlier reports (Luke 1:1–4). Early church testimony connects the books with the traditional names. Many Christians defend those attributions. Modern scholars study that testimony and the internal evidence."
+      "body": "Luke 1:1–4 says its author investigated earlier accounts and testimony received from eyewitnesses. That presents an investigator, not an explicit claim to have witnessed Jesus' whole ministry personally.\n\nJohn 21:24 connects the book with the testimony of a disciple and adds a confirming 'we.' This is important internal evidence for an eyewitness connection. It does not name the disciple as John son of Zebedee or by itself settle whether one writer produced the whole finished book."
     },
     {
       "sectionId": "quranic-perspective",
-      "title": "One Voice, One Generation",
+      "title": "A Fair Comparison Needs the Same Standards",
       "kind": "scripture",
-      "body": "Islam frames textual origin differently. Muslims believe the Quran came through one prophet over about twenty-three years. Quran 4:82 invites readers to examine its consistency: “If it had been from [any] other than Allah, they would have found within it much contradiction.”\n\nThe Quran was memorized as it was revealed. It was gathered into one written form within a generation. Muslims therefore see one public voice, not a later patchwork of unnamed authors. The historical claim is clear and testable."
+      "body": "Quran 4:82 invites examination of its consistency. Muslims connect it with a named messenger and an early received proclamation. That is a different literary claim from four narratives about Jesus.\n\nThe difference can strengthen clarity of attribution, but it cannot replace inquiry into Muslim sources. Hadith and biography are also transmitted in later collections and require criticism. It would be inconsistent to reject every later Christian report while accepting every Muslim report simply because it includes a chain."
     },
     {
       "sectionId": "biblical-perspective",
-      "title": "What Mainstream Scholarship Concludes",
+      "title": "The Traditional Names Have Early Evidence",
       "kind": "scripture",
-      "body": "Luke says he traced earlier reports and eyewitness testimony (Luke 1:1–4). He presents himself as an investigator, not a named eyewitness. John closes with a testimony about the disciple and uses “we” (John 21:24–25). Many scholars see a community or later editor in that ending.\n\nCommon scholarly dates place Mark around 65–75 CE, Matthew and Luke around 80–90 CE, and John around 90–100 CE. These dates are debated. They still place the final texts decades after Jesus. Questions about authorship, sources, and theological development therefore remain open."
+      "body": "[Irenaeus, Against Heresies III.1](https://www.newadvent.org/fathers/0103301.htm), attributes the four Gospels to Matthew, Mark, Luke, and John. [Eusebius, Church History III.39](https://www.newadvent.org/fathers/250103.htm), preserves Papias's testimony about Mark and Matthew.\n\nThese witnesses must be weighed, not erased by the word 'anonymous.' The questions include their distance from composition, possible shared sources, and whether their descriptions fit our surviving Greek texts. [Simon Gathercole's argument](https://www.repository.cam.ac.uk/items/d376bf86-b3db-4dc8-a59a-db327df52322) for original attributions is a serious scholarly challenge to the simple late-name theory."
     },
     {
       "sectionId": "comparison",
-      "title": "Why Authorship and Date Matter",
+      "title": "Why Common Dates Are Ranges",
       "kind": "argument",
-      "body": "A later or unnamed author can preserve real history. Anonymity does not prove falsehood. It does affect how directly a saying can be traced to Jesus. The Quran offers another model. A named messenger recited it publicly. His community memorized it. Written copies were standardized early."
+      "body": "Common critical estimates place Mark around 65–75 CE, Matthew and Luke often around 80–90, and John around 90–100. The [Catholic introductions](https://bible.usccb.org/bible/luke/0?bk=Luke&ch=) illustrate these judgments; the [John introduction](https://bible.usccb.org/bible/john/0) discusses possible earlier material and final editing.\n\nThese are reasoned estimates, not dates written in surviving autographs. Arguments use literary dependence, historical setting, and interpretation of references to Jerusalem's destruction. A dating argument that simply assumes genuine prediction impossible would beg an important question. Earlier dates also require evidence, not merely theological preference."
     },
     {
       "sectionId": "common-misconceptions",
-      "title": "Common Misconceptions",
+      "title": "Literary Dependence Is Not Four Independent Witnesses",
       "kind": "interpretation",
-      "body": "Anonymous authorship does not mean the Gospels contain no history. Many scholars see earlier traditions behind them. Historical value and authorship are related, but they are not the same question.\n\nThe dating and anonymity discussion is mainstream scholarship. It is not an attack invented by Muslims.\n\nThe Islamic hadith system also does not make every report authentic. Muslim scholars used chains, narrator criticism, and grades. Traditional Gospel names can remain useful labels while the documents themselves do not prove their authors."
+      "body": "Matthew, Mark, and Luke share substantial material, often closely worded. Many scholars infer that Matthew and Luke used Mark, while proposals differ about other sources and relationships.\n\nThis matters when four accounts are counted as independent confirmation of every detail. It does not mean borrowing was dishonest: ancient authors could use sources openly or conventionally, and Luke expressly mentions earlier accounts. Dependence must be studied at the level of the particular event or saying."
     },
     {
       "sectionId": "islamic-conclusion",
-      "title": "The Quran as the Final Criterion",
+      "title": "The Strongest Christian Reply",
       "kind": "argument",
-      "body": "Islam honors the Gospel originally given to Jesus. It distinguishes that revelation from later biographies about him. The Gospels preserve valuable memories and teachings. Their authorship and development still require judgment. The Quran is a direct, named revelation. It confirms Jesus, corrects claims about him, and calls humanity to worship God alone."
+      "body": "A Christian can reasonably argue that named tradition, earlier sources, and an eyewitness foundation survive even if a finished Gospel was written decades later. A later account can preserve authentic memory. Muslims should concede that rather than claiming that a gap of decades makes history impossible.\n\nThe remaining dispute concerns the strength of the link in each case and the theological claims built on it. Islam's distinction between Jesus' revelation and Gospel narratives is not established by anonymity alone. It rests on the positive authority Muslims attribute to the Quran and on direct comparison of what the texts teach."
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "The Central Takeaway",
+      "title": "Why This Matters When Reading Jesus",
       "kind": "summary",
-      "body": "The Gospels deserve serious reading. Their authorship and dating also call for care when later theology is placed above Jesus’ clear worship of one God. Islam honors Jesus as Messiah and messenger. It preserves the simpler call to worship the Lord he worshiped."
+      "body": "Do not ask only whether a Gospel is 'reliable' in one all-or-nothing sense. Ask how well a particular teaching is supported, whether parallel accounts are independent, and how historical testimony relates to the author's theological interpretation.\n\nContinue with [Prophecies About Jesus](/articles/prophecies-about-jesus) for a worked example: the Gospels' use of earlier scripture. For the separate question of copied wording, read [Textual Variants Explained](/articles/textual-variants-explained)."
     },
     {
       "sectionId": "faq",
-      "title": "Frequently Asked Questions",
+      "title": "What Would Change the Judgment?",
       "kind": "notes",
-      "body": "Q: Are the traditional Gospel authors certain?\nA: The names are early and important. The texts themselves do not state them in their opening lines. Scholars debate how the traditional attributions arose.\n\nQ: Do later dates make the Gospels worthless?\nA: No. A later source can preserve earlier material. Dating helps readers judge how claims were transmitted.\n\nQ: Does Islam reject everything in the Gospels?\nA: No. Islam affirms the original Gospel and accepts truths that remain consistent with revelation. The Quran is the final criterion.\n\nQ: Why does authorship matter?\nA: It affects how directly a saying can be linked to Jesus.\n\nQ: What is the Islamic alternative?\nA: The Quran was recited by one named messenger, memorized publicly, and written during his lifetime. The traditional revelation period lasted about twenty-three years; Uthman's standardization followed roughly two decades after Muhammad's death."
+      "body": "An earlier attestation, a better account of a title's origin, or a demonstrable literary relationship can affect confidence. A useful position says what evidence it relies on and what evidence would count against it. Neither 'all scholars agree' nor 'the church says so' can replace that explanation."
     },
     {
       "sectionId": "further-reading",
-      "title": "Further Reading",
+      "title": "Read the Argument on Both Sides",
       "kind": "sources",
-      "body": "Selected sources and further reading:\n\n- **Jesus, Interrupted. Revealing the Hidden Contradictions in the Bible (And Why We Don't Know About Them)**. Bart D. Ehrman. A widely read overview of mainstream scholarly conclusions on Gospel authorship, dating. And the Synoptic Problem.\n- **An Introduction to the New Testament**. Raymond E. Brown. A standard Catholic scholarly textbook surveying authorship and dating debates for each New Testament book.\n- **The Historical Figure of Jesus**. E. P. Sanders. A leading historical-Jesus scholar's discussion of the Gospel sources and their reliability.\n- **Hadith. Muhammad's Legacy in the Medieval and Modern World**. Jonathan A. C. Brown. An accessible academic overview of isnad methodology and the development of hadith criticism.\n- **Hadith Literature. Its Origin, Development and Special Features**. M. Zubayr Siddiqi. A classic account of the science of hadith transmission and chain evaluation."
+      "body": "The early Christian witnesses above provide primary attribution claims. Gathercole directly challenges the anonymity argument. Brown's introduction and Sanders's work explain critical judgments about sources and history without reducing the Gospels to worthless fiction."
     }
   ],
   "quranVerses": [
@@ -124,39 +124,59 @@
   ],
   "faq": [
     {
-      "question": "Does saying the Gospels are \"anonymous\" mean nobody knows anything about who wrote them?",
-      "answer": "The narratives do not directly name their authors, while manuscript titles and early church testimony attribute them to Matthew, Mark, Luke, and John. Many scholars argue that the names were attached later. Others, including [Simon Gathercole](https://academic.oup.com/jts/article-abstract/69/2/447/5101372), argue that early attributions could have accompanied the texts. Internal anonymity, titles, and actual authorship are related questions, but they are not identical."
+      "question": "Are the Gospels certainly anonymous in every sense?",
+      "answer": "No. Their narratives do not directly name their authors, but titles and early church testimony supply attributions. Whether those names accompanied the texts from the beginning is disputed."
     },
     {
-      "question": "Isn't the idea that the Gospels were written decades later just an anti-Christian argument?",
-      "answer": "No. This dating and the anonymous-authorship conclusion are standard positions in mainstream New Testament scholarship, taught in Christian seminaries and secular universities alike, and defended by many devout Christian scholars as part of honest textual criticism."
+      "question": "Are the traditional authors impossible?",
+      "answer": "No. Many scholars question the attributions, while others defend them. Each Gospel requires its own argument; a general label cannot settle all four."
     },
     {
-      "question": "How is the isnad system different from just trusting oral tradition generally?",
-      "answer": "Isnad requires every report to carry a named, checkable chain of transmitters, each evaluated for reliability, memory, and plausible contact with the next link, and reports are formally graded rather than simply accepted."
+      "question": "Does a date decades after Jesus make an account false?",
+      "answer": "No. A later source can preserve earlier testimony. Date matters together with sources, transmission, genre, and corroboration."
     },
     {
-      "question": "Does the Quran's single-generation compilation mean it has no textual history at all?",
-      "answer": "It has a documented history of public memorization and writing during Muhammad's lifetime, followed by collection and standardization. The traditional revelation period lasted about twenty-three years. Uthman's standardization occurred roughly two decades after the Prophet's death, so the broader sequence spans about four decades."
+      "question": "Are all four Gospels independent witnesses to every event?",
+      "answer": "No. The Synoptic Gospels have substantial literary relationships. Independence must be assessed for the particular passage under discussion."
     },
     {
-      "question": "Why does this comparison matter for someone deciding what to believe?",
-      "answer": "It does not settle every theological question on its own, but it gives a concrete, checkable basis for comparing how each tradition documents the distance between its claimed source and the text available today."
+      "question": "Does this prove the Quran is revelation?",
+      "answer": "No. It clarifies the evidence for the Gospel accounts. Islam's claim requires a positive case for the Quran and Muhammad, not merely uncertainty about another tradition."
     }
   ],
   "relatedSlugs": [
-    "how-was-the-bible-transmitted",
-    "biblical-canon-formation",
+    "prophecies-about-jesus",
     "textual-variants-explained",
-    "how-was-the-quran-preserved",
-    "why-preservation-matters",
-    "how-to-read-comparisons"
+    "biblical-canon-formation",
+    "early-islamic-preservation",
+    "why-the-quran"
   ],
   "furtherReading": [
     {
-      "title": "Jesus, Interrupted: Revealing the Hidden Contradictions in the Bible (And Why We Don't Know About Them)",
-      "author": "Bart D. Ehrman",
-      "note": "A widely read overview of mainstream scholarly conclusions on Gospel authorship, dating, and the Synoptic Problem."
+      "title": "Against Heresies, Book III, Chapter 1",
+      "author": "Irenaeus of Lyons",
+      "type": "primaryText",
+      "url": "https://www.newadvent.org/fathers/0103301.htm",
+      "note": "Early Christian attribution of the four Gospels; testimony to be evaluated, not a contemporary authorial signature."
+    },
+    {
+      "title": "Church History, Book III",
+      "author": "Eusebius of Caesarea",
+      "type": "primaryText",
+      "url": "https://www.newadvent.org/fathers/250103.htm",
+      "note": "Chapters 3 and 25 discuss accepted and disputed writings; chapter 39 preserves testimony attributed to Papias."
+    },
+    {
+      "title": "The Alleged Anonymity of the Canonical Gospels",
+      "author": "Simon Gathercole",
+      "type": "journalArticle",
+      "journal": "Journal of Theological Studies",
+      "year": 2018,
+      "volume": "69",
+      "issue": "2",
+      "pages": "447–476",
+      "url": "https://www.repository.cam.ac.uk/items/d376bf86-b3db-4dc8-a59a-db327df52322",
+      "note": "A scholarly argument for original Gospel attributions; an important challenge to treating internal anonymity as proof of anonymous circulation."
     },
     {
       "title": "An Introduction to the New Testament",
@@ -167,16 +187,11 @@
       "title": "The Historical Figure of Jesus",
       "author": "E. P. Sanders",
       "note": "A leading historical-Jesus scholar's discussion of the Gospel sources and their reliability."
-    },
+    }
+  ],
+  "bibleReferences": [
     {
-      "title": "Hadith: Muhammad's Legacy in the Medieval and Modern World",
-      "author": "Jonathan A. C. Brown",
-      "note": "An accessible academic overview of isnad methodology and the development of hadith criticism."
-    },
-    {
-      "title": "Hadith Literature: Its Origin, Development and Special Features",
-      "author": "M. Zubayr Siddiqi",
-      "note": "A classic account of the science of hadith transmission and chain evaluation."
+      "reference": "John 21:24"
     }
   ]
 }

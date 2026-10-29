@@ -17,13 +17,12 @@
   },
   "biblical-prophecies-and-interpretation": {
     "quran": [
-      "Quran 61:6",
       "Quran 5:48",
-      "Quran 3:45"
+      "Quran 3:45",
+      "Quran 4:171",
+      "Quran 6:164"
     ],
-    "bible": [
-      "Micah 5:2"
-    ]
+    "bible": []
   },
   "celestial-signs-in-the-quran": {
     "quran": [
@@ -80,9 +79,7 @@
       "Quran 23:91",
       "Quran 112:1"
     ],
-    "bible": [
-      "1 John 5:7"
-    ]
+    "bible": []
   },
   "creation-and-nature": {
     "quran": [
@@ -93,15 +90,11 @@
   },
   "crusades-and-islamic-history": {
     "quran": [
-      "Quran 2:256",
       "Quran 5:8",
       "Quran 2:190",
-      "Quran 8:61",
       "Quran 60:8"
     ],
-    "bible": [
-      "Matthew 26:52"
-    ]
+    "bible": []
   },
   "development-of-trinity-doctrine": {
     "quran": [
@@ -155,7 +148,8 @@
     "quran": [
       "Quran 5:117",
       "Quran 4:157",
-      "Quran 2:87"
+      "Quran 2:87",
+      "Quran 3:55"
     ],
     "bible": [
       "Acts 2:22-24"
@@ -163,7 +157,8 @@
   },
   "early-islamic-preservation": {
     "quran": [
-      "Quran 33:21"
+      "Quran 33:21",
+      "Quran 3:31"
     ],
     "bible": []
   },
@@ -188,13 +183,13 @@
   "end-times-beliefs": {
     "quran": [
       "Quran 43:61",
-      "Quran 18:83",
       "Quran 21:96",
-      "Quran 4:159"
+      "Quran 4:159",
+      "Quran 75:1",
+      "Quran 18:98",
+      "Quran 24:37"
     ],
-    "bible": [
-      "1 Thessalonians 4:16"
-    ]
+    "bible": []
   },
   "eve-in-islam-and-christianity": {
     "quran": [
@@ -224,7 +219,8 @@
       "Quran 3:135",
       "Quran 25:70",
       "Quran 6:164",
-      "Quran 20:82"
+      "Quran 20:82",
+      "Quran 2:222"
     ],
     "bible": [
       "Hebrews 9:22"
@@ -234,10 +230,9 @@
     "quran": [
       "Quran 42:11",
       "Quran 59:22",
-      "Quran 20:8",
-      "Quran 112:1",
       "Quran 2:186",
-      "Quran 18:29"
+      "Quran 18:29",
+      "Quran 2:255"
     ],
     "bible": [
       "1 Timothy 1:17"
@@ -255,7 +250,11 @@
     "quran": [
       "Quran 4:124",
       "Quran 2:82",
-      "Quran 39:53"
+      "Quran 39:53",
+      "Quran 4:123",
+      "Quran 18:30",
+      "Quran 2:277",
+      "Quran 4:57"
     ],
     "bible": [
       "Ephesians 2:8-10"
@@ -265,7 +264,11 @@
     "quran": [
       "Quran 32:17",
       "Quran 9:72",
-      "Quran 3:185"
+      "Quran 3:185",
+      "Quran 25:65",
+      "Quran 47:15",
+      "Quran 39:20",
+      "Quran 76:11"
     ],
     "bible": [
       "2 Corinthians 12:2-4"
@@ -278,9 +281,7 @@
       "Quran 4:157",
       "Quran 3:45"
     ],
-    "bible": [
-      "2 Samuel 5:1-3"
-    ]
+    "bible": []
   },
   "how-to-learn-responsibly": {
     "quran": [
@@ -296,7 +297,9 @@
   },
   "how-was-the-bible-transmitted": {
     "quran": [
-      "Quran 5:48"
+      "Quran 5:48",
+      "Quran 5:46",
+      "Quran 2:79"
     ],
     "bible": [
       "Luke 1:1-4"
@@ -310,7 +313,8 @@
       "Quran 56:77",
       "Quran 56:78",
       "Quran 85:21",
-      "Quran 85:22"
+      "Quran 85:22",
+      "Quran 1:4"
     ],
     "bible": []
   },
@@ -328,7 +332,6 @@
       "Quran 4:171",
       "Quran 5:75",
       "Quran 19:30",
-      "Quran 3:59",
       "Quran 3:45"
     ],
     "bible": [
@@ -339,7 +342,8 @@
     "quran": [
       "Quran 4:11",
       "Quran 2:282",
-      "Quran 4:7"
+      "Quran 4:7",
+      "Quran 4:12"
     ],
     "bible": []
   },
@@ -355,7 +359,6 @@
   },
   "james-josephus-and-external-evidence": {
     "quran": [
-      "Quran 4:157",
       "Quran 3:45"
     ],
     "bible": [
@@ -386,10 +389,10 @@
     "quran": [
       "Quran 2:190",
       "Quran 25:52",
-      "Quran 8:61",
-      "Quran 60:8",
       "Quran 2:256",
-      "Quran 22:39"
+      "Quran 22:39",
+      "Quran 9:29",
+      "Quran 9:5"
     ],
     "bible": []
   },
@@ -400,7 +403,6 @@
       "Quran 30:21",
       "Quran 4:21",
       "Quran 4:19",
-      "Quran 2:229",
       "Quran 4:129"
     ],
     "bible": []
@@ -450,7 +452,8 @@
   "paul-and-his-influence": {
     "quran": [
       "Quran 3:79",
-      "Quran 4:157"
+      "Quran 4:157",
+      "Quran 5:77"
     ],
     "bible": [
       "Romans 3:28"
@@ -460,7 +463,8 @@
     "quran": [
       "Quran 12:43",
       "Quran 12:50",
-      "Quran 12:54"
+      "Quran 12:54",
+      "Quran 7:104"
     ],
     "bible": [
       "Genesis 41:37-41"
@@ -471,15 +475,14 @@
       "Quran 61:6",
       "Quran 7:157"
     ],
-    "bible": [
-      "Deuteronomy 18:18"
-    ]
+    "bible": []
   },
   "prophecies-about-jesus": {
     "quran": [
       "Quran 3:45",
       "Quran 17:15",
-      "Quran 4:157"
+      "Quran 4:157",
+      "Quran 4:171"
     ],
     "bible": [
       "Micah 5:2"
@@ -487,12 +490,9 @@
   },
   "pseudepigrapha-in-the-new-testament": {
     "quran": [
-      "Quran 2:79",
-      "Quran 15:9"
+      "Quran 2:79"
     ],
-    "bible": [
-      "2 Peter 3:15-16"
-    ]
+    "bible": []
   },
   "punishment-for-apostasy-and-war": {
     "quran": [
@@ -506,13 +506,18 @@
     "quran": [
       "Quran 51:56",
       "Quran 6:165",
-      "Quran 2:30"
+      "Quran 2:30",
+      "Quran 67:15",
+      "Quran 3:110",
+      "Quran 16:125",
+      "Quran 33:72"
     ],
     "bible": []
   },
   "qiraat-explained-simply": {
     "quran": [
-      "Quran 54:17"
+      "Quran 54:17",
+      "Quran 54:22"
     ],
     "bible": []
   },
@@ -526,16 +531,18 @@
   },
   "quranic-revelation-history": {
     "quran": [
-      "Quran 96:1"
+      "Quran 96:1",
+      "Quran 25:32",
+      "Quran 73:4"
     ],
     "bible": []
   },
   "rights-of-non-muslims": {
     "quran": [
       "Quran 60:8",
-      "Quran 2:256",
       "Quran 5:8",
-      "Quran 29:46"
+      "Quran 29:46",
+      "Quran 9:29"
     ],
     "bible": []
   },
@@ -586,7 +593,11 @@
       "Quran 17:15",
       "Quran 6:164",
       "Quran 2:37",
-      "Quran 25:70"
+      "Quran 25:70",
+      "Quran 4:2",
+      "Quran 25:68",
+      "Quran 4:31",
+      "Quran 53:32"
     ],
     "bible": [
       "1 John 1:9"
@@ -609,7 +620,6 @@
   "the-crucifixion-and-history": {
     "quran": [
       "Quran 4:157",
-      "Quran 3:55",
       "Quran 4:158"
     ],
     "bible": [
@@ -620,8 +630,7 @@
     "quran": [
       "Quran 4:157",
       "Quran 4:158",
-      "Quran 35:18",
-      "Quran 4:159"
+      "Quran 35:18"
     ],
     "bible": [
       "1 Corinthians 15:3-4"
@@ -681,7 +690,8 @@
       "Quran 3:45",
       "Quran 4:171",
       "Quran 5:72",
-      "Quran 4:158"
+      "Quran 4:158",
+      "Quran 112:1"
     ],
     "bible": [
       "1 Corinthians 15:3-4"
@@ -774,7 +784,8 @@
       "Quran 6:164",
       "Quran 39:53",
       "Quran 2:25",
-      "Quran 103:3"
+      "Quran 103:3",
+      "Quran 103:1"
     ],
     "bible": [
       "Ephesians 2:8-9"
@@ -814,9 +825,7 @@
       "Quran 5:116"
     ],
     "bible": [
-      "Matthew 28:19",
-      "Luke 15:12-13",
-      "Hebrews 1:3"
+      "Matthew 28:19"
     ]
   },
   "what-is-the-quran": {
@@ -840,7 +849,8 @@
   },
   "when-was-deuteronomy-written": {
     "quran": [
-      "Quran 15:9"
+      "Quran 15:9",
+      "Quran 25:32"
     ],
     "bible": [
       "Deuteronomy 31:9"
@@ -881,8 +891,7 @@
   "who-follows-jesus-more-closely": {
     "quran": [
       "Quran 19:31",
-      "Quran 3:52",
-      "Quran 18:23"
+      "Quran 3:52"
     ],
     "bible": [
       "Matthew 26:39"
@@ -899,9 +908,10 @@
     "quran": [
       "Quran 112:1",
       "Quran 59:22",
-      "Quran 6:103",
       "Quran 7:180",
-      "Quran 112:3"
+      "Quran 112:3",
+      "Quran 112:2",
+      "Quran 112:4"
     ],
     "bible": [
       "Deuteronomy 6:4"
@@ -912,16 +922,17 @@
       "Quran 3:45",
       "Quran 19:30",
       "Quran 5:110",
-      "Quran 3:49",
       "Quran 4:171",
       "Quran 5:72",
       "Quran 3:59",
       "Quran 3:47",
-      "Quran 2:87",
-      "Quran 5:75"
+      "Quran 5:75",
+      "Quran 19:31"
     ],
     "bible": [
-      "John 17:3"
+      "John 17:3",
+      "John 20:17",
+      "John 20:28"
     ]
   },
   "who-is-prophet-muhammad": {
@@ -980,8 +991,7 @@
       "Quran 66:10",
       "Quran 66:11",
       "Quran 4:1",
-      "Quran 9:71",
-      "Quran 2:282"
+      "Quran 9:71"
     ],
     "bible": []
   },
@@ -994,7 +1004,8 @@
   },
   "written-compilation-of-the-quran": {
     "quran": [
-      "Quran 41:42"
+      "Quran 41:42",
+      "Quran 41:41"
     ],
     "bible": []
   },

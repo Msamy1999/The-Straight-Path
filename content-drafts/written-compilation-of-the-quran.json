@@ -1,10 +1,10 @@
 {
   "slug": "written-compilation-of-the-quran",
   "title": "Written Compilation of the Quran",
-  "subtitle": "How the revelation was set down in ink during the Prophet's own lifetime, then gathered into one verified copy within a year of his death",
+  "subtitle": "Writing, collection, and standard copying are three different stages",
   "category": "preservation",
   "audienceLevel": "beginner",
-  "summary": "The Quran was written during Muhammad's lifetime, collected into verified sheets under Abu Bakr, and copied into regional standard codices under Uthman. These were not three different Qurans but stages in preserving one public revelation already memorized and recited by the community.",
+  "summary": "Muslim sources distinguish written material during Muhammad's life, collection under Abu Bakr, and standard codices under Uthman. The reports supply a connected account; early manuscripts support a very early written tradition without proving every procedural detail. Compilation need not mean composition, but neither should its history be simplified into a surviving original master copy.",
   "tags": [
     "Preservation",
     "History",
@@ -13,7 +13,7 @@
   ],
   "seo": {
     "metaTitle": "Written Compilation of the Quran: Abu Bakr, Yamama, and Zayd ibn Thabit",
-    "metaDescription": "Islamic sources describe a careful written collection under Abu Bakr after the Prophet's death and the production of standard copies under Uthman.",
+    "metaDescription": "Writing, collection, and standard copying as distinct stages, with evidence for continuity and limits on what later reports establish.",
     "keywords": [
       "Quran compilation",
       "Abu Bakr Quran",
@@ -28,63 +28,63 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "The Evidence in Brief",
+      "title": "Compilation Does Not Mean Writing a New Revelation",
       "kind": "summary",
-      "body": "Islamic sources describe a written collection under Abu Bakr and standard copies under Uthman. The process did not create revelation. It gathered and standardized material already recited and written by the companions. Early manuscripts support this common text in the first Islamic century."
+      "body": "A collected book and the material collected into it need not begin at the same moment. The Muslim account says revelation was recited and written before it was gathered after Muhammad's death. Uthman's later project distributed a public written standard.\n\nThe key question is whether the evidence supports continuity across those stages. It does, strongly at the level of the early written tradition, while leaving some reported procedures open to historical scrutiny."
     },
     {
       "sectionId": "historical-context",
-      "title": "Collection Under Abu Bakr and Uthman",
+      "title": "Two Reports, Two Projects",
       "kind": "history",
-      "body": "Sahih al-Bukhari 4986 names Zayd ibn Thabit as leader of the first collection after Yamama. The sheets passed from Abu Bakr to Umar and then Hafsa.\n\nSahih al-Bukhari 4987 describes Uthman's committee copying them during regional disputes. Hafsa was Umar's daughter and a Prophet's widow. The reports are Islamic literary sources, not surviving administrative records. Early manuscripts support the antiquity of the resulting text."
+      "body": "[Bukhari 4986](https://sunnah.com/bukhari:4986) gives Zayd's collection under Abu Bakr after losses among reciters at Yamama. [Bukhari 4987](https://sunnah.com/bukhari:4987) then describes copying Hafsa's sheets under Uthman to address recitation disputes.\n\nThe first is a gathering account; the second is a standard-copying account. They are later transmitted hadith reports, not seventh-century autographs. Their distinction is important: the phrase 'Uthman compiled the Quran' can hide the earlier stage the sources themselves describe."
     },
     {
       "sectionId": "quranic-perspective",
-      "title": "From Written Pieces to a Collected Codex",
+      "title": "What the Earlier Material Was",
       "kind": "scripture",
-      "body": "Scribes wrote revelation during the Prophet's life. Companions memorized it. After reciters died at Yamama, Abu Bakr commissioned Zayd ibn Thabit to gather the written material. Hafsa kept the sheets. Uthman's committee used them for standard codices (Sahih al-Bukhari 4986–4987)."
+      "body": "The collection account describes both written pieces and remembered recitation. It does not picture a community discovering an entirely unknown scripture after its prophet's death. Zayd is presented as someone who had written revelation for Muhammad.\n\nThere is no surviving, securely identified sheet that lets us verify each step of Abu Bakr's project directly. This is different from evidence that the Quran had no written existence until a much later century."
     },
     {
       "sectionId": "biblical-perspective",
-      "title": "A Different Timescale",
+      "title": "Compare the Right Questions",
       "kind": "argument",
-      "body": "The Bible's books were composed, copied, and canonized across centuries. The Quran was collected within the first Muslim generation by people who heard its recitation. This does not place every later report beyond examination. It gives the Quran a shorter, more public path to a standard text."
+      "body": "The biblical canon asks which of many books belongs in a library. The Quran's collection asks how one prophetic proclamation became a collected and distributed written text. These are not identical operations.\n\nA shorter path can strengthen confidence in access, but speed is not inspiration. An early collection could in principle contain mistakes, and a later copy can preserve early wording. The comparison must examine the actual witnesses rather than treating elapsed time as the entire argument."
     },
     {
       "sectionId": "comparison",
-      "title": "Oral and Written Evidence Worked Together",
+      "title": "Why Manuscripts Matter to the Reported Process",
       "kind": "argument",
-      "body": "The Quran was preserved by memory and writing. Reciters checked written material. Codices constrained recitation. This redundancy supports preservation. An error would have to escape both public recitation and the written record."
+      "body": "A written ancestor leaves traces when copies repeat distinctive features. [Shared orthographic patterns](https://doi.org/10.1017/S0041977X19000338) support common written ancestry in the Uthmanic tradition. This fits an early copying project much better than independent, centuries-late reconstruction from scattered memories.\n\nIt does not identify the actual sheets held by Hafsa or prove who sat on a committee. Physical continuity corroborates the broad history; the more detailed personal narrative still depends on literary transmission."
     },
     {
       "sectionId": "common-misconceptions",
-      "title": "Compilation Did Not Begin With Uthman",
+      "title": "What About Material Found With Only One Person?",
       "kind": "interpretation",
-      "body": "Uthman did not gather an unwritten Quran or invent its order. Abu Bakr's collection already existed. Material had been written during Muhammad's life. Uthman produced public codices from that collection as Islam spread."
+      "body": "Bukhari 4986 says Zayd found the ending of a surah with one named companion and did not find it with another. This deserves reading rather than omission from the account.\n\nTraditional explanations distinguish finding a written witness from being the only person who knew a passage. The short report does not spell out every procedural rule or witness's memory. It therefore cannot honestly be used either as a complete modern audit trail or as proof that a solitary person invented verses. The broader transmission evidence has to be considered."
     },
     {
       "sectionId": "islamic-conclusion",
-      "title": "A Traceable Preservation Process",
+      "title": "What the Evidence Supports",
       "kind": "argument",
-      "body": "Quran 41:42 says falsehood cannot approach the revelation. The process shows practical preservation: scribes, memorization, first-generation collection, custody, and public standardization. The case is cumulative, not one manuscript or narrator."
+      "body": "Quran 41:41–42 describes the revelation as protected from falsehood. Muslims see early writing, collection, and recitation as means of that protection. The historical conclusion is narrower: the Quran has an early, traceable written tradition, not an unexplained leap from Muhammad to medieval printing.\n\nThis is a substantial reason to trust access to the text. Whether its protected character comes from God belongs to the wider case for revelation."
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "The Central Takeaway",
+      "title": "The Next Question Is What the Standard Included",
       "kind": "summary",
-      "body": "The Quran's written history is early and connected. Abu Bakr's sheets and Uthmanic codices are successive preservation stages. They are not competing Qurans."
+      "body": "Read [Uthmanic Standardization](/articles/uthmanic-standardization) next. It considers the destruction order, regional exemplars, and why a public standard does not mean that every earlier difference was only a spelling choice."
     },
     {
       "sectionId": "faq",
-      "title": "Frequently Asked Questions",
+      "title": "Avoid Precision the Sources Do Not Give",
       "kind": "notes",
-      "body": "Q: Did Muhammad leave one bound copy?\nA: No. Revelation continued until his death. The text existed as memorization and separate written pieces.\n\nQ: How many memorizers died at Yamama?\nA: Accounts differ. They agree that experienced reciters died, enough to concern Umar and Abu Bakr about relying on memory alone.\n\nQ: Who held the compiled manuscript?\nA: Tradition says Abu Bakr, then Umar, then Hafsa bint Umar held it until Uthman used it.\n\nQ: Did compilation change the wording?\nA: Muslims hold that it did not. The process gathered and verified written and memorized material.\n\nQ: Was this Uthman's standardization?\nA: No. Abu Bakr produced a verified manuscript. Uthman later used it for standard copies and regional disputes."
+      "body": "Claims such as 'compiled within exactly one year,' a fixed number of dead reciters, or a surviving museum codex personally owned by Uthman need their own evidence. Approximate traditional chronology and documented manuscript findings are stronger than attractive precision without a source."
     },
     {
       "sectionId": "further-reading",
-      "title": "Further Reading",
+      "title": "Read Reports and Artifacts Together",
       "kind": "sources",
-      "body": "Selected sources and further reading:\n\n- **The History of the Qur'anic Text from Revelation to Compilation** — M. M. Al-Azami. Study of Quran compilation.\n- **Qur'ans of the Umayyads** — François Déroche. Study of early Quran manuscripts.\n- **Misquoting Jesus** — Bart D. Ehrman. Study of New Testament transmission.\n- **The Text of the New Testament: Its Transmission, Corruption, and Restoration** — Bruce M. Metzger. Textbook on New Testament manuscripts."
+      "body": "Begin with Bukhari 4986–4987 for the traditional account. Then use the manuscript studies below to ask what the surviving written record confirms. A source describing a collection is not the same kind of evidence as a dated leaf."
     }
   ],
   "quranVerses": [
@@ -122,55 +122,56 @@
   "bibleVerses": [],
   "faq": [
     {
-      "question": "Did Muhammad leave behind one single bound copy of the whole Quran?",
-      "answer": "No. Because revelation continued until his death, the text existed during his lifetime as memorized recitation plus a body of separate written fragments on different materials, not as one closed book."
+      "question": "Did Muhammad leave a single surviving bound master copy?",
+      "answer": "No securely identified complete master copy from his lifetime survives. The traditional account describes recitation and written pieces followed by a collected set of sheets under Abu Bakr."
     },
     {
-      "question": "Exactly how many Quran memorizers died at the Battle of Yamama?",
-      "answer": "Historical accounts differ on the precise number. What they agree on is that a meaningful number of experienced reciters were among the dead, enough to seriously worry Umar and Abu Bakr about the risk of losing material if the community continued to rely on memory alone."
+      "question": "Was Abu Bakr's collection the same as Uthman's project?",
+      "answer": "No. In the transmitted account, Abu Bakr commissioned a collection; Uthman later used the sheets held by Hafsa to produce distributed standard copies."
     },
     {
-      "question": "Who held the finished compiled manuscript?",
-      "answer": "According to the traditional account, it remained with Abu Bakr, then passed to Umar during his caliphate, and afterward to Hafsa bint Umar, one of the Prophet's widows, until it was drawn on again under Uthman roughly two decades later."
+      "question": "Does compilation imply changed wording?",
+      "answer": "Not by itself. It can mean gathering existing material. Whether a collection changed it is an evidence question, and the early written tradition strongly supports continuity."
     },
     {
-      "question": "Does calling this a 'compilation' mean the wording changed after Muhammad's death?",
-      "answer": "Muslims hold that it did not. The process was about gathering and verifying material that already existed in both written and memorized form, not adding, removing, or rewording content."
+      "question": "Can manuscripts prove all of Zayd's reported checking rules?",
+      "answer": "No. They can support an early common text without independently certifying every detail of the literary account."
     },
     {
-      "question": "Is this the same event as the Uthmanic standardization?",
-      "answer": "No. Abu Bakr's compilation produced one complete, verified manuscript shortly after the Prophet's death. Uthman's later project, roughly two decades on, used that same base text to produce standardized copies for a rapidly growing empire and to settle regional recitation disputes - a distinct, later stage covered in a separate article."
+      "question": "Why does the report mention a passage found with one companion?",
+      "answer": "It describes Zayd's search for material, but does not fully specify the relation of written witnesses and memorized knowledge. Traditional explanations and the wider evidence should be weighed rather than reading a whole authentication system into one sentence."
     }
   ],
   "relatedSlugs": [
-    "how-was-the-quran-preserved",
-    "oral-memorization-of-the-quran",
-    "early-quran-manuscripts",
     "uthmanic-standardization",
-    "how-was-the-bible-transmitted",
-    "gospel-authorship-and-dating",
-    "why-preservation-matters"
+    "early-quran-manuscripts",
+    "oral-memorization-of-the-quran",
+    "how-was-the-quran-preserved"
   ],
   "furtherReading": [
     {
-      "title": "The History of the Qur'anic Text from Revelation to Compilation",
-      "author": "M. M. Al-Azami",
-      "note": "A detailed study by a Muslim scholar of the compilation process under Abu Bakr and Zayd ibn Thabit's role in it, compared with the transmission history of the Bible."
+      "title": "Sahih al-Bukhari, reports 4986–4987",
+      "author": "Muhammad ibn Ismail al-Bukhari",
+      "type": "primaryText",
+      "url": "https://sunnah.com/bukhari:4986",
+      "note": "The traditional collection accounts, read with the adjacent report on Uthman's copying project; a later hadith compilation, not a surviving seventh-century administrative record."
+    },
+    {
+      "title": "“The Grace of God” as Evidence for a Written Uthmanic Archetype",
+      "author": "Marijn van Putten",
+      "type": "journalArticle",
+      "year": 2019,
+      "url": "https://doi.org/10.1017/S0041977X19000338",
+      "note": "Research on shared spelling patterns as evidence for common written ancestry, not proof of divine authorship.",
+      "journal": "Bulletin of the School of Oriental and African Studies",
+      "volume": "82",
+      "issue": "2",
+      "pages": "271–288"
     },
     {
       "title": "Qur'ans of the Umayyads",
       "author": "François Déroche",
       "note": "An academic study of early Quran manuscripts by a leading Western scholar of Quranic paleography."
-    },
-    {
-      "title": "Misquoting Jesus: The Story Behind Who Changed the Bible and Why",
-      "author": "Bart D. Ehrman",
-      "note": "A widely read account of New Testament textual transmission by a mainstream biblical scholar, useful for comparing transmission histories."
-    },
-    {
-      "title": "The Text of the New Testament: Its Transmission, Corruption, and Restoration",
-      "author": "Bruce M. Metzger",
-      "note": "A classic academic textbook on the manuscript history of the New Testament."
     }
   ]
 }

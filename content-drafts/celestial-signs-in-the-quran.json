@@ -29,9 +29,9 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "A Careful Islamic Reading",
+      "title": "Seven Observations, One Direction of Worship",
       "kind": "summary",
-      "body": "The Quran calls readers to reflect on orbits, stars, water, plants, iron, the sun, and the moon. Several descriptions fit what people now know about nature, but popular claims often go further than the Arabic or classical interpretation permits. These verses are strongest as a cumulative invitation to recognize order, dependence, and divine wisdom—not as seven hidden equations that no earlier person could understand."
+      "body": "The Quran draws attention to moving heavenly bodies, stars, plants, water, iron, and light. Its recurring direction is from creation to the Creator, not from one natural object to another object of worship.\n\nThe strongest case identifies what the wording means, what observation supports, and what is inferred about God. These passages need not be seven uniquely predicted discoveries to form a connected invitation to humility, gratitude, and inquiry."
     },
     {
       "sectionId": "orbits-swimming",
@@ -77,15 +77,15 @@
     },
     {
       "sectionId": "applying-the-framework",
-      "title": "Signs, Not a Physics Textbook",
+      "title": "The Objection: Were These Things Already Observable?",
       "kind": "argument",
-      "body": "The strongest observations here are compatibility, fitting imagery, and a repeated pattern of directing attention from creation to God. Weaker claims depend on a disputed translation, ignore context, or assert scientific novelty that cannot be shown. Islam's case is not harmed by that distinction. It is strengthened when every claim is no larger than its evidence."
+      "body": "Much was observable. Regular celestial motion and the need for water were not secrets awaiting modern instruments. This limits claims that the Quran must have supernatural origins solely because it mentions them. Disputed translations about iron, reflected light, or moving mountains should not be promoted into certainty either.\n\nThe Islamic argument can concern something different: why the message repeatedly joins the world's order to one source, human dependence, and responsibility. That claim has to be assessed alongside its account of God and its historical emergence. A collection of appealing parallels is not a replacement for that reasoning.\n\n[Creation and Nature](/articles/creation-and-nature) examines the argument about purpose, while [Why the Quran?](/articles/why-the-quran) examines why this particular message is taken as revelation. The narrower scientific observations can contribute without carrying more weight than they support."
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "Signs That Point Beyond Themselves",
+      "title": "What the Signs Ask a Person to Do",
       "kind": "summary",
-      "body": "These passages are strongest when read as signs rather than hidden physics equations. Their language is memorable and directed toward reflection on order, dependence, and purpose. The cumulative Islamic argument is that the Quran joins the signs of creation to clear guidance about the Creator who alone deserves worship. A fair reading can test each claim carefully and still recognize the invitation to know God."
+      "body": "The Quran's signs turn observation into a question about allegiance: should life be centered on created powers, personal status, and desire, or on their ultimate source? Islam's answer is worship of one Creator, expressed through gratitude and responsible conduct.\n\nThat is a reasoned invitation to investigate, not a demand to accept a modern miracle list. Continue with [Who Is God?](/articles/who-is-god-quran-and-bible-comparison) to examine the account of the Creator toward whom these signs point."
     }
   ],
   "quranVerses": [
@@ -321,7 +321,7 @@
     },
     {
       "question": "Did people in the seventh century already know that plants have male and female forms?",
-      "answer": "Partially, and practically rather than systematically. The date palm — central to the economy of the Hijaz — is dioecious (individual trees are male or female) and requires hand-pollination, a practice already old by the seventh century (attested in Assyrian reliefs from the ninth century BCE and in Theophrastus's writings, and reflected in a hadith in Sahih Muslim, no. 2363, about the Prophet's companions pollinating palms in Medina). What did not exist until the late seventeenth and early eighteenth centuries (with botanists like Nehemiah Grew and Rudolf Jakob Camerarius) was the general, systematic scientific principle that flowering plants as a class reproduce sexually through distinguishable male and female structures."
+      "answer": "Some practical knowledge of plant reproduction predates modern biology. Date palms have male and female plants and are commonly hand-pollinated in cultivation. Natural wind and insect pollination also occur; they do not biologically depend on human hands. The [FAO's pollination account](https://www.fao.org/4/Y4360E/y4360e0c.htm) explains the distinction. That limits claims of wholly inaccessible ancient knowledge without removing the Quran's use of nature as a sign."
     },
     {
       "question": "Does the extraterrestrial origin of iron prove Quran 57:25 is a scientific miracle?",
@@ -334,7 +334,6 @@
   ],
   "relatedSlugs": [
     "how-to-approach-scientific-claims-carefully",
-    "strong-vs-debated-scientific-claims",
     "cosmology",
     "mountains",
     "embryology"

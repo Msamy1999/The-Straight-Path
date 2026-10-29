@@ -10,7 +10,7 @@ import type {
 
 /** A standalone source link is useful on screen/copy, but not in narration. */
 export function isReferenceOnlyLine(text: string): boolean {
-  const withoutLinks = text.replace(/\[[^\]]+\]\(https?:\/\/[^\s)]+\)/g, "");
+  const withoutLinks = text.replace(/\[[^\]]+\]\((?:https?:\/\/[^\s)]+|\/articles\/[a-z0-9]+(?:-[a-z0-9]+)*)\)/g, "");
   return withoutLinks !== text && /^[\s,;|()[\]•-]*$/.test(withoutLinks);
 }
 

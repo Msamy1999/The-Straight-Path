@@ -5,7 +5,7 @@ import { ArticleTools } from "@/components/content/ArticleTools";
 import { CitationList } from "@/components/content/CitationList";
 import { TopicCard } from "@/components/content/TopicCard";
 import { VerseCard } from "@/components/content/VerseCard";
-import { ScriptureReferenceText } from "@/components/content/ScriptureReferenceText";
+import { renderInlineMarkdown } from "@/components/content/InlineArticleText";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
@@ -13,7 +13,6 @@ import { Section } from "@/components/layout/Section";
 import { Card } from "@/components/ui/Card";
 import { Tag } from "@/components/ui/Tag";
 import { categoryIconMap, fallbackCategoryIcon } from "@/lib/category-icons";
-import { safeExternalUrl } from "@/lib/external-url";
 import { isReferenceOnlyLine } from "@/lib/article-text";
 import {
   formatArabicQuranReference,
@@ -670,40 +669,4 @@ function passageAlreadyQuoted(
     );
   }
   return normalize(verse.text).length > 30 && normalizedBody.includes(normalize(verse.text));
-}
-
-function renderInlineMarkdown(text: string, keyPrefix: string): ReactNode {
-  const parts = text.split(/(\*\*[^*]+\*\*|__[\s\S]+?__|\[[^\]]+\]\(https?:\/\/[^\s)]+\))/g);
-
-  return parts.map((part, index) => {
-    const linkMatch = part.match(/^\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)$/);
-    if (linkMatch) {
-      const href = safeExternalUrl(linkMatch[2]);
-      if (!href) {
-        return <span key={`${keyPrefix}-${index}`}><ScriptureReferenceText text={linkMatch[1]} /></span>;
-      }
-      return (
-        <a
-          key={`${keyPrefix}-${index}`}
-          href={href}
-          target="_blank"
-          rel="noreferrer noopener"
-          className="font-medium text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent"
-        >
-          <ScriptureReferenceText text={linkMatch[1]} />
-        </a>
-      );
-    }
-
-    const match = part.match(/^\*\*([\s\S]+)\*\*$|^__([\s\S]+)__$/);
-    if (!match) {
-      return <span key={`${keyPrefix}-${index}`}><ScriptureReferenceText text={part} /></span>;
-    }
-
-    return (
-      <strong key={`${keyPrefix}-${index}`} className="font-semibold text-foreground">
-        <ScriptureReferenceText text={match[1] ?? match[2]} />
-      </strong>
-    );
-  });
 }

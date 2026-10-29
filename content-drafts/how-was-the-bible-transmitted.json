@@ -1,10 +1,10 @@
 {
   "slug": "how-was-the-bible-transmitted",
   "title": "How Was the Bible Transmitted?",
-  "subtitle": "From spoken word to Greek manuscripts to modern translations — the journey of the Christian scriptures, told honestly",
+  "subtitle": "Composition, copying, canon, and translation are different parts of the story",
   "category": "preservation",
   "audienceLevel": "beginner",
-  "summary": "The Bible reached the present through many authors, collections, translations, and hand-copied manuscripts. This preserved valuable ancient testimony, but also produced variants and debated passages. Islam honors the revelations given to Moses and Jesus and presents the Quran as the final preserved criterion.",
+  "summary": "The Bible preserves ancient texts through a long history of composition, copying, collection, and translation. Manuscripts show both substantial continuity and real variants, while churches differ over parts of the canon. These facts qualify claims of unchanged wording without proving that all biblical testimony is lost—or that Islam follows merely from a difficulty in Christian transmission.",
   "tags": [
     "Preservation",
     "Scripture",
@@ -13,7 +13,7 @@
   ],
   "seo": {
     "metaTitle": "How Was the Bible Transmitted? An Honest History",
-    "metaDescription": "The Bible preserves genuine ancient testimony, but it reached readers through many authors, manuscripts, languages, and later decisions about the canon.",
+    "metaDescription": "Composition, copying, canon, and translation explained through biblical evidence, with continuity, real variants, and the strongest Christian reply.",
     "keywords": [
       "Bible transmission",
       "New Testament manuscripts",
@@ -30,63 +30,63 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "The Evidence in Brief",
+      "title": "Not a Lost Book, and Not a History Without Change",
       "kind": "summary",
-      "body": "The Bible preserves genuine ancient testimony. It reached readers through many authors, manuscripts, languages, and later canon decisions. Textual criticism recovers much of its wording while identifying passages with uncertain early forms. Islam honors the revelations given to Moses and Jesus, yet presents the Quran as the final criterion."
+      "body": "How can a reader trust a Bible copied across many centuries? The answer is neither that every word is unknowable nor that no change ever occurred. Surviving witnesses let scholars recover much wording with confidence and identify places where the evidence differs.\n\nThis matters to Muslims and Christians because the dispute concerns real claims about God and Jesus. An honest comparison starts with what each text and witness actually shows."
     },
     {
       "sectionId": "historical-context",
-      "title": "From Early Writings to Modern Bibles",
+      "title": "Keep Four Questions Apart",
       "kind": "history",
-      "body": "The Hebrew Bible and New Testament are libraries of writings copied over long periods. No original manuscript survives. Scholars compare manuscripts, ancient translations, and quotations to estimate the earliest recoverable wording. This works for most of the text, while some passages remain uncertain.\n\nMost differences involve spelling, word order, or other small changes. A smaller group is more significant. Examples include the longer ending of Mark, the story of the woman accused of adultery, and the wording in 1 John 5:7. Canon is separate: Catholic, Orthodox, and Protestant churches do not have exactly the same Old Testament books."
+      "body": "Composition asks how a work was written and what sources it used. Copying asks how its wording traveled. Canon asks which works count as scripture. Translation asks how wording is represented in another language.\n\nA dispute about a Gospel's author does not automatically show a later copy has different wording. A variant does not automatically remove a whole book from the canon. Confusing these questions creates a much more dramatic—but less accurate—story of 'corruption.'"
     },
     {
       "sectionId": "quranic-perspective",
-      "title": "The Quran's View of Earlier Scripture",
+      "title": "The Quran Affirms Earlier Revelation and Claims Authority",
       "kind": "scripture",
-      "body": "The Quran affirms that God revealed the Torah and Gospel. It also criticizes concealment and distortion. It describes the Quran as confirming earlier scripture and acting as a criterion over it (Quran 5:48). Islam therefore avoids two extremes: every biblical sentence is not called false, and every surviving form is not treated as pristine revelation. Agreement is affirmed; conflict is judged by the final revelation."
+      "body": "Quran 5:46–47 speaks positively of the Gospel's guidance, while 2:79 condemns writing and falsely claiming divine authority. Quran 5:48 describes the Quran as confirming earlier scripture and as a criterion over it.\n\nMuslims therefore need not call every biblical sentence false to explain disagreement. But a Christian can fairly ask why the later Quran should judge earlier testimony. The answer must include a positive case for the Quran's authority; manuscript variation alone cannot supply it."
     },
     {
       "sectionId": "biblical-perspective",
-      "title": "How the Biblical Texts Reached the Present",
+      "title": "The Bible Openly Describes Mediated Testimony",
       "kind": "scripture",
-      "body": "The biblical books were composed and collected over centuries. Luke 1:1–4 says that many accounts existed and that its author investigated them before writing an ordered narrative. Later hand-copying produced spelling differences, omissions, additions, and disputed passages. Textual criticism compares witnesses to reconstruct the earliest recoverable wording. This can be valuable and successful, but it remains a reconstruction from surviving copies, not an original manuscript preserved intact."
+      "body": "Luke 1:1–4 describes earlier accounts, received eyewitness testimony, and the author's investigation. This is a claim to careful historical narration, not a claim that Jesus dictated the Gospel word for word.\n\nChristians commonly understand inspiration as God's work through such human authors. Muslims distinguish the Injil given to Jesus from later narratives about him. Those are different models of revelation. Luke's stated method is evidence for one model, not an admission of dishonesty."
     },
     {
       "sectionId": "comparison",
-      "title": "Two Transmission Stories, Side by Side",
+      "title": "The Old Testament Record Shows Continuity and Diversity",
       "kind": "argument",
-      "body": "The two transmission stories have clear differences.\n\nLanguage: the Quran is preserved and recited in Arabic. Jesus spoke Aramaic, while the Gospels were preserved in Greek. His words are usually not available in his own tongue.\n\nTimescale: Muslim tradition and early manuscripts describe a complete Quranic text standardized within a generation of Muhammad's death. The New Testament canon took shape over centuries.\n\nMethod: Quranic transmission used mass memorization alongside written copies. Each checked the other. The surviving biblical textual evidence relies primarily on handwritten manuscripts, whose variants require textual criticism. Oral teaching and worship also passed on traditions, as [Luke 1:1–4](https://www.biblegateway.com/passage/?search=Luke%201%3A1-4&version=WEB) and [1 Corinthians 11:23–26](https://www.biblegateway.com/passage/?search=1%20Corinthians%2011%3A23-26&version=WEB) show. Luke describes research and compilation; the Quran presents itself as God's direct speech to one messenger."
+      "body": "The [Dead Sea Scrolls library](https://www.deadseascrolls.org.il/learn-about-the-scrolls/introduction?locale=en_US) describes biblical manuscripts that closely resemble the later Hebrew text alongside others with differences. This gives actual evidence of both careful preservation and textual plurality.\n\nThe New Testament likewise survives in many copied witnesses. [Codex Sinaiticus](https://codexsinaiticus.org/en/codex/default.aspx) preserves a complete New Testament in an early major codex. An original autograph need not survive for wording to be recoverable; the relationships and differences among copies are what textual critics examine."
     },
     {
       "sectionId": "common-misconceptions",
-      "title": "Common Misconceptions",
+      "title": "What Larger Variants Show",
       "kind": "interpretation",
-      "body": "Several claims need qualification. Muslims do not treat the Bible as worthless; the Quran honors the original Torah and Gospel while making a claim about later transmission. Most variants are minor, but disputed passages require reconstruction. The Council of Nicaea did not choose all biblical books. Canon formation developed through long use, debate, and later lists. Islam presents the Quran as the final criterion."
+      "body": "The longer ending of Mark and the woman accused of adultery are well-known examples where later readers encounter material absent from important early witnesses. Modern editions often flag them; the [Catholic note on John 7:53–8:11](https://bible.usccb.org/bible/john/8) explicitly discusses its later insertion.\n\nThat is meaningful evidence against an unqualified claim that no wording ever changed. It is not evidence that Christians invented every doctrine through hidden additions. Public textual notes are a strength of responsible scholarship, not something to ridicule."
     },
     {
       "sectionId": "islamic-conclusion",
-      "title": "Why the Quranic Criterion Matters",
+      "title": "The Strongest Christian Reply Deserves an Answer",
       "kind": "argument",
-      "body": "The Quran says:\n\nوَأَنزَلْنَآ إِلَيْكَ ٱلْكِتَٰبَ بِٱلْحَقِّ مُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ مِنَ ٱلْكِتَٰبِ وَمُهَيْمِنًا عَلَيْهِ\n\n'We have revealed to you the Book in truth, confirming what preceded it of the Scripture and as a criterion over it' (Quran 5:48). The transmission history explains why such a criterion is needed. Islam preserves respect for God's earlier messengers while locating final textual authority in the Quran."
+      "body": "A Christian may say that many copies make variants visible and allow correction, and that central Christian beliefs do not depend on the disputed passages. Much of that reply is right: plentiful evidence can improve reconstruction, and no single famous variant erases the Christian case.\n\nThe remaining question is which source has authority when accounts conflict. Islam offers an early shared Quranic text and an explicit claim to correct earlier disputes. Its preservation supports access; its message and messenger must support divine authority. [Why the Quran?](/articles/why-the-quran) gives that positive argument."
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "The Central Takeaway",
+      "title": "Choose the Next Question Precisely",
       "kind": "summary",
-      "body": "The Bible remains historically and religiously important, but its long, decentralized transmission requires reconstruction. The Quran offers a different preservation history and restores the prophets' clear call: worship God alone."
+      "body": "For wording, read [Textual Variants Explained](/articles/textual-variants-explained). For the Gospel authors and dates, read [Gospel Authorship and Dating](/articles/gospel-authorship-and-dating). For the table of contents, read [Biblical Canon Formation](/articles/biblical-canon-formation).\n\nA fair conclusion about the Bible comes from those distinct inquiries—not a single slogan that it was perfectly unchanged or wholly lost."
     },
     {
       "sectionId": "faq",
-      "title": "Frequently Asked Questions",
+      "title": "A Useful Check on a Dramatic Claim",
       "kind": "notes",
-      "body": "Q: Did Jesus write any part of the Bible?\nA: No. Mainstream Christian scholarship agrees that Jesus left no writings. The Gospels were written about him, in Greek, in the decades after his ministry. Luke describes this process in his prologue.\n\nQ: Do Muslims believe the Bible is completely corrupted?\nA: No. The Quran affirms the original Torah and Gospel as guidance and light, and classical scholars differed over whether the distortion it warns of affected mainly the text or its interpretation. Today's Bible is seen as containing truth alongside material shaped by long human transmission.\n\nQ: What language did Jesus speak, and why does it matter?\nA: Historians broadly agree Jesus taught in Aramaic, while the New Testament was composed in Greek. With few exceptions, his words reach us in translation. A fact acknowledged in standard Christian scholarship.\n\nQ: Who decided which books belong in the Bible?\nA: No single meeting decided it. Books circulated and were debated for generations. The earliest surviving exact list of today's twenty-seven New Testament books comes from Athanasius in the later fourth century, and Christian communions still differ over the Old Testament canon.\n\nQ: Is textual criticism an attack on Christianity?\nA: No. It is a discipline built largely by Christian scholars seeking the earliest recoverable wording of the Bible. The manuscript footnotes in modern Christian Bibles are the fruit of that work."
+      "body": "When someone says a verse was 'added,' ask which witnesses contain it, which omit it, and what a critical edition concludes. When someone says a book was 'chosen,' ask by whom, when, and for which community. Precise questions are more useful than an accusation made against the entire Bible at once."
     },
     {
       "sectionId": "further-reading",
-      "title": "Further Reading",
+      "title": "Read Christian Evidence in Christian Sources Too",
       "kind": "sources",
-      "body": "Sources are listed below."
+      "body": "The primary manuscript and translation notes linked above let you inspect the issue directly. Metzger and Ehrman's textbook explains textual criticism; Bruce's canon study gives a serious Christian defense. Agreement with all their theology is not required to learn from their evidence."
     }
   ],
   "quranVerses": [
@@ -172,36 +172,39 @@
   "bibleReferences": [
     {
       "reference": "1 Corinthians 11:23-26"
+    },
+    {
+      "reference": "John 7:53-8:11"
     }
   ],
   "faq": [
     {
-      "question": "Did Jesus write any part of the Bible?",
-      "answer": "No. Mainstream Christian scholarship agrees that Jesus left no writings. The Gospels were written about him, in Greek, in the decades after his ministry — a process Luke describes in his prologue."
+      "question": "Does copying over centuries make all biblical wording uncertain?",
+      "answer": "No. Many readings are well supported. Some remain disputed, and a smaller number involve substantial passages. Confidence should be stated passage by passage."
     },
     {
-      "question": "Do Muslims believe the Bible is completely corrupted?",
-      "answer": "No. The Quran affirms the original Torah and Gospel as guidance and light, and classical scholars differed over whether the distortion it warns of affected mainly the text or its interpretation. Today's Bible is seen as containing truth alongside material shaped by long human transmission."
+      "question": "Does an original autograph have to survive?",
+      "answer": "No. Copies can preserve early wording, and comparison can recover it with varying confidence. An autograph's absence is a limitation, not proof of total loss."
     },
     {
-      "question": "What language did Jesus speak, and why does it matter?",
-      "answer": "Historians broadly agree Jesus taught in Aramaic, while the New Testament was composed in Greek. With few exceptions, his words reach us in translation — a fact acknowledged in standard Christian scholarship."
+      "question": "Do Muslims believe every biblical sentence is false?",
+      "answer": "No. Islam affirms earlier revelation and recognizes truth in the surviving Bible, while treating the Quran as final authority. That authority requires its own positive case."
     },
     {
-      "question": "Who decided which books belong in the Bible?",
-      "answer": "No single meeting decided it. Books circulated and were debated for generations; the earliest surviving exact list of today's twenty-seven New Testament books comes from Athanasius in the later fourth century, and Christian communions still differ over the Old Testament canon."
+      "question": "Is translation itself corruption?",
+      "answer": "No. Translation is an interpretation of wording in another language and can be careful or mistaken. It should not be confused with a manuscript addition or change in canon."
     },
     {
-      "question": "Is textual criticism an attack on Christianity?",
-      "answer": "No. It is a discipline built largely by Christian scholars seeking the earliest recoverable wording of the Bible. The manuscript footnotes in modern Christian Bibles are the fruit of that work."
+      "question": "Did Nicaea select all the Bible's books?",
+      "answer": "No. That familiar claim misrepresents a longer history of use, debate, and recognition. The canon article examines actual early lists."
     }
   ],
   "relatedSlugs": [
+    "textual-variants-explained",
+    "gospel-authorship-and-dating",
+    "biblical-canon-formation",
     "how-was-the-quran-preserved",
-    "was-the-quran-preserved",
-    "how-to-read-comparisons",
-    "source-status-labels",
-    "who-is-jesus"
+    "why-the-quran"
   ],
   "furtherReading": [
     {
@@ -210,24 +213,16 @@
       "note": "The standard scholarly introduction to New Testament textual criticism."
     },
     {
-      "title": "The Canon of the New Testament: Its Origin, Development, and Significance",
-      "author": "Bruce M. Metzger",
-      "note": "A detailed history of how the twenty-seven-book New Testament canon took shape."
-    },
-    {
       "title": "The Canon of Scripture",
       "author": "F. F. Bruce",
       "note": "An evangelical Christian scholar's account of canon formation for both Testaments."
     },
     {
-      "title": "Misquoting Jesus: The Story Behind Who Changed the Bible and Why",
-      "author": "Bart D. Ehrman",
-      "note": "A popular-level introduction to manuscripts and variants; its conclusions are debated among scholars."
-    },
-    {
-      "title": "The History of the Qur'anic Text from Revelation to Compilation: A Comparative Study with the Old and New Testaments",
-      "author": "Muhammad Mustafa al-Azami",
-      "note": "A Muslim scholar's comparative study of Quranic and biblical transmission."
+      "title": "The Dead Sea Scrolls: Introduction",
+      "author": "Israel Antiquities Authority",
+      "type": "primaryText",
+      "url": "https://www.deadseascrolls.org.il/learn-about-the-scrolls/introduction?locale=en_US",
+      "note": "The digital manuscript library's overview of both continuity with the later Hebrew text and textual differences."
     }
   ]
 }

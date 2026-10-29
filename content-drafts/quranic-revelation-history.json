@@ -1,10 +1,10 @@
 {
   "slug": "quranic-revelation-history",
   "title": "Quranic Revelation History",
-  "subtitle": "How the Quran was revealed, preserved, memorized, and compiled over 23 years",
+  "subtitle": "A proclamation across Mecca and Medina, followed by collection and standardization",
   "category": "religious-history",
   "audienceLevel": "intermediate",
-  "summary": "The Quran was revealed publicly to Muhammad over about twenty-three years, memorized in worship, written by known scribes, collected after his death, and standardized for the expanding Muslim community under Uthman. Revelation, memorization, writing, and public transmission formed one connected process of preservation.",
+  "summary": "Islamic tradition places Quranic revelation across approximately 610–632 CE, divided by the migration to Medina in 622. The text's gradual address, public recitation, and early written history support a proclamation rooted in the first community. Exact passage dates and later reports about occasions of revelation have different levels of certainty.",
   "tags": [
     "Scripture",
     "History",
@@ -13,7 +13,7 @@
   ],
   "seo": {
     "metaTitle": "Quranic Revelation History: From Oral to Written Text",
-    "metaDescription": "The Quran was revealed publicly to Muhammad over about twenty-three years, memorized by companions, and written by scribes.",
+    "metaDescription": "The Quran's Meccan and Medinan proclamation, oral and written learning, early collection, and the limits of exact chronology.",
     "keywords": [
       "Quranic revelation",
       "Quran compilation",
@@ -28,69 +28,69 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "Why This History Matters",
+      "title": "Why the Sequence Matters",
       "kind": "summary",
-      "body": "The Quran came to Muhammad over about twenty-three years. It was public. Companions heard it. They memorized it. Scribes wrote it. Reports describe a collection under Abu Bakr. They describe standard copies under Uthman. Early manuscripts support a very early text. Spelling questions do not show rival Qurans."
+      "body": "The Quran was not presented as a book discovered long after Muhammad. It was a proclamation heard, learned, and practiced during a changing public mission. Traditional chronology places revelation from about 610 until his death in 632.\n\nThis setting helps explain its movement between warning, consolation, argument, and law. It also creates a historical question: how directly can a later reader connect a particular passage with a particular event?"
     },
     {
       "sectionId": "overview",
-      "title": "The Preservation Timeline",
+      "title": "Four Stages, Not Four Different Qurans",
       "kind": "summary",
-      "body": "Revelation was recited during Muhammad’s life. It was also written. Companions learned it. Scribes recorded it. Abu Bakr later commissioned a collection. Uthman used it for standard codices. Oral and written paths continued together."
+      "body": "The traditional sequence distinguishes revelation to Muhammad, oral and written learning, collection under Abu Bakr, and standard copying under Uthman. The first concerns the origin of the message; the later stages concern transmission.\n\nCalling all four 'compilation' can obscure what the evidence supports. A later collection date does not mean no earlier writing existed, and an early manuscript does not itself establish the date of every revelation."
     },
     {
       "sectionId": "meccan-period",
-      "title": "The Meccan Period (610–622 CE)",
+      "title": "Mecca: Worship and Accountability",
       "kind": "history",
-      "body": "The Meccan period lasted about twelve years. Its message stressed one God. It rejected idols. It warned about judgment. It recalled earlier prophets. The first revelation was 96:1–5. It commanded recitation. Believers learned each passage. Gradual revelation strengthened Muhammad. It also taught the message clearly."
+      "body": "The traditional Meccan period centers on God's unity, resurrection, moral responsibility, and earlier messengers. [Bukhari 3](https://sunnah.com/bukhari:3) identifies the opening of surah 96 with the first revelation. The selected verse 96:1 gives the command to recite in the Lord's name.\n\nThis is the Muslim account of the beginning, known through transmission rather than a dated autograph. Lists placing every surah and verse in exact order are more precise than the surviving evidence warrants. Broad periods are useful; exact assignments can be disputed."
     },
     {
       "sectionId": "medinan-period",
-      "title": "The Medinan Period (622–632 CE)",
+      "title": "Medina: Guidance for a Community",
       "kind": "history",
-      "body": "The migration to Medina came in 622 CE. Later revelations addressed worship. They addressed family life. They addressed trade and inheritance. They addressed social duties. They addressed other communities. They addressed war. Spiritual guidance joined practical law. Revelation continued near Muhammad’s death. Recitation remained central. Writing gave a second safeguard."
+      "body": "After the migration in 622, the proclamation also addresses a community with public duties: worship, family relationships, material responsibilities, conflict, and relations with other groups. These practical concerns do not replace the account of God and judgment.\n\nThe traditional distinction is usually before and after the migration, not simply whether words were spoken inside Mecca or Medina. A surah can also contain material whose classification is debated. Reading a whole passage is safer than turning a broad label into an automatic explanation of every verse."
     },
     {
       "sectionId": "oral-memorization",
-      "title": "Oral Transmission and Memorization",
+      "title": "Why Gradual Revelation Was Not a Defect",
       "kind": "interpretation",
-      "body": "Companions learned from Muhammad. They repeated the words in prayer. They taught the words to others. Reports describe Gabriel reviewing the Quran with Muhammad. This happened in the final Ramadan. Some companions memorized the whole text. Many knew large parts. The seven ahruf describe an early range. Scholars debate the exact meaning. It is not simply seven dialects. Later qiraat are transmitted readings. Memory worked with writing."
+      "body": "Quran 25:32 addresses the objection that revelation did not arrive all at once and connects its manner with strengthening Muhammad's heart. Quran 73:4 commands measured recitation. These passages show that gradual, careful delivery belongs to the text's own understanding of itself.\n\nA critic may see a preacher adapting to circumstances. Muslims see guidance addressing real people as events unfold. Responsiveness alone does not settle the origin; the content and consistency of that guidance must be assessed."
     },
     {
       "sectionId": "written-sources",
-      "title": "Written Sources During the Prophet's Lifetime",
+      "title": "Writing Alongside Recitation",
       "kind": "history",
-      "body": "Scribes wrote revelation during Muhammad’s life. They used leather. They used stones. They used bones. They used palm fronds. They used papyrus. These pieces helped memory. They were not one codex yet. Islamic sources name the scribes. They describe checking written material. After Muhammad’s death, pieces and memory supported the first full collection."
+      "body": "[Bukhari 4986](https://sunnah.com/bukhari:4986) describes a collection using written material and reciters, with Zayd identified as a scribe of revelation. This supports the traditional account of an oral-and-written process.\n\nIt is still a later report. No exact inventory of every writing surface is needed to make the point, and uncertain lists should not be repeated as a complete archive. The important distinction is between the existence of earlier material and the later act of gathering it."
     },
     {
       "sectionId": "uthman-compilation",
-      "title": "The Standardized Compilation Under Caliph Uthman",
+      "title": "The Public Written Standard",
       "kind": "history",
-      "body": "Islam spread into new regions. Regional pronunciation could cause disputes. Personal copies could also cause disputes. Around 650 CE, Uthman appointed Zayd ibn Thabit. A committee prepared standard copies. They used the collection held by Hafsa. Copies went to major centers. Unofficial copies were withdrawn. This prevented competing written standards. The Uthmanic rasm became the base of later manuscripts. It allowed authorized readings. Uthman standardized the text. He did not compose a new Quran."
+      "body": "[Bukhari 4987](https://sunnah.com/bukhari:4987) places Uthman's copying project in response to recitation disputes. This is traditionally dated to his caliphate, roughly two decades after Muhammad's death.\n\nThe project standardized a written tradition; it did not add a new period of revelation. Recognized reading differences and limited regional written forms remain part of the transmission history. The [standardization article](/articles/uthmanic-standardization) explains why these distinctions matter."
     },
     {
       "sectionId": "verification-transmission",
-      "title": "How the Text Was Checked",
+      "title": "Not Every Context Report Has the Same Weight",
       "kind": "sources",
-      "body": "Reports describe careful checking. Zayd checked written pieces against reciters. The committee used Hafsa’s collection. Standard copies were sent out. Public recitation continued. The community already knew the text. Silent change was therefore difficult."
+      "body": "Reports about the occasion of a verse can explain an otherwise puzzling detail, but they need authentication. A commentary can preserve more than one account, and later writers can infer an occasion from the verse itself.\n\nA reader should distinguish the Quranic passage, a transmitted explanation, and a modern reconstruction. Treating all three as equally direct evidence can create a false sense of precision about the chronology."
     },
     {
       "sectionId": "academic-perspective",
-      "title": "What Historical Study Can Confirm",
+      "title": "What the Physical Record Adds",
       "kind": "interpretation",
-      "body": "Modern scholars debate parts of this history. Early manuscripts are important. Inscriptions are also important. A stable consonantal text matters. The rapid spread of one text matters. These facts place the evidence close to Islam’s beginnings. The best conclusion is cumulative. One artifact cannot prove every detail."
+      "body": "Early manuscripts support an early written tradition. The [Sana'a study](https://experts.umn.edu/en/publications/san%C4%81-1-and-the-origins-of-the-qur%C4%81n/) also argues that surahs predate Uthman's project, while documenting nonstandard early evidence.\n\nThese findings challenge a picture of the familiar Quran first assembled centuries later. They do not independently verify the encounter with Gabriel, every Meccan or Medinan assignment, or each detail of the collection reports. Divine revelation is a theological explanation of the history, not something a manuscript date measures."
     },
     {
       "sectionId": "comparative-context",
-      "title": "Why This History Is Distinctive",
+      "title": "One Messenger and an Early Text Are Important, Not Sufficient",
       "kind": "interpretation",
-      "body": "The Quran began with one messenger. It was used in public worship. It was memorized. It was written. It was collected early. It was standardized. The New Testament came through several authors. Its canon formed later. This difference explains Islam’s confidence in the Quran as final revelation."
+      "body": "The Quran's connection with a named messenger and an early shared text gives a seeker a clear claim to examine. It differs from a biblical library formed through multiple authors and collections.\n\nThat difference helps with access and attribution; it does not make the earlier religion false or the later one true by chronology alone. For the argument about origin, read [Why the Quran?](/articles/why-the-quran)."
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "The Central Takeaway",
+      "title": "Use History to Read Better",
       "kind": "summary",
-      "body": "The Quran’s history has several parts. There was revelation. There was memory. There was writing. There was collection. There was public checking. These parts support one another. They fit the Quran’s claim that Allah guards His message. A seeker can study the Quran. A seeker can also study this early history."
+      "body": "When a passage addresses fear, opposition, worship, or public responsibility, ask how its setting illuminates its message. Keep uncertainty about a report's date separate from the words actually preserved.\n\nContinue with [Written Compilation of the Quran](/articles/written-compilation-of-the-quran) for transmission, or [Who Is Prophet Muhammad?](/articles/who-is-prophet-muhammad) for the person at the center of the proclamation."
     }
   ],
   "quranVerses": [
@@ -287,57 +287,57 @@
   ],
   "faq": [
     {
-      "question": "How long did Quranic revelation take?",
-      "answer": "According to Islamic tradition, revelation came over about 23 years, from approximately 610 CE until the Prophet Muhammad's death in 632 CE. It is commonly divided into the Meccan and Medinan periods, separated by the migration to Medina in 622 CE. The classification of individual surahs and verses has some scholarly differences, so approximate counts should not be treated as a precise chronological record."
+      "question": "How long did revelation take?",
+      "answer": "Islamic tradition gives about twenty-three years, from approximately 610 to 632 CE. The migration in 622 divides the broad Meccan and Medinan periods."
     },
     {
-      "question": "Why was the Quran revealed gradually rather than all at once?",
-      "answer": "The Quran itself responds to this question when it records disbelievers' criticisms of gradual revelation. Quranic commentary (tafsir) explains that incremental revelation served multiple divine purposes: strengthening the Prophet's heart, allowing clear distinction between revelations, facilitating memorization and integration into practice, and enabling responsive guidance to address emerging questions and challenges within the developing Muslim community. From a practical perspective, gradual revelation also created natural rhythm for teaching, memorization, and social implementation of the Quranic message."
+      "question": "Can every verse be dated exactly?",
+      "answer": "No. Individual assignments rely on reports and interpretation of internal evidence, and some are disputed. Broad chronology is more secure than a complete precise sequence."
     },
     {
-      "question": "How do we know what the original Quran said if it was memorized, not written?",
-      "answer": "The Quran was both recited and written during the Prophet's life. [Sahih al-Bukhari 4986](https://sunnah.com/bukhari:4986) describes collection under Abu Bakr; [4987](https://sunnah.com/bukhari:4987) describes Uthman's later production of standard copies using the collection held by Hafsa. Early manuscript evidence largely supports the Uthmanic textual type, while the Sana'a palimpsest's lower layer contains textual differences. The [early manuscripts article](/articles/early-quran-manuscripts) explains that evidence and its limits. Oral transmission, written records, and manuscript comparison should be assessed together."
+      "question": "Why was revelation gradual?",
+      "answer": "Quran 25:32 connects gradual delivery with strengthening the messenger. Muslims also understand it as guidance learned and practiced as the community developed; that explanation should be distinguished from an independently proven chronology."
     },
     {
-      "question": "How many Qurans were made during Caliph Uthman's time?",
-      "answer": "Islamic sources describe Uthman commissioning copies for major centers, but later reports differ over their number. Early surviving manuscripts support the spread of an early standard text; that does not prove that a particular museum manuscript is one of his commissioned originals. For example, the [Birmingham fragment's radiocarbon result](https://www.birmingham.ac.uk/facilities/cadbury/birmingham-quran-mingana-collection/birmingham-quran/faqs) dates its parchment, not the ink. Script analysis and textual comparison supply additional evidence. An early copy of the Uthmanic textual type should be distinguished from a claimed original codex."
+      "question": "Was the Quran only memorized until Uthman?",
+      "answer": "No. The traditional sources describe writing during Muhammad's life and a collection before Uthman's standard copying. Early manuscripts support a very early written tradition."
     },
     {
-      "question": "What are the Quran's canonical readings, or qira'at?",
-      "answer": "Qira'at are transmitted ways of reciting the Quran. The familiar seven-reading classification and the later ten-reading classification developed after the Prophet's lifetime. They are not simply identical to the seven ahruf mentioned in [Sahih al-Bukhari 4992](https://sunnah.com/bukhari:4992); scholars disagree over the exact meaning of ahruf. Canonical readings include differences in pronunciation, grammar, and some words, sometimes expressing distinct but compatible meanings within the received text. The [qira'at article](/articles/qiraat-explained-simply) explains examples. [Al-Dani's manual](https://www.openbookpublishers.com/books/10.11647/obp.0475) documents the seven-reading tradition."
-    },
-    {
-      "question": "Can Islamic and academic scholars agree on Quranic history?",
-      "answer": "Islamic tradition emphasizes divine preservation of the Quran as a theological principle, viewing God's protection as ensuring the text's authenticity. Academic scholars, employing historical methodology, investigate the human processes—memorization systems, written documentation, institutional oversight, and community commitment—that contributed to textual preservation. While their frameworks differ (theological vs. Naturalistic), there is substantial agreement on many historical facts: revelation occurred over 23 years, written sources existed during the Prophet's time, and early manuscripts show remarkable textual consistency. The dating of complete standardization is not fully settled, however: most scholars date systematic compilation to the Uthmanic era (~650 CE), though a minority—including Patricia Crone and Michael Cook in their revisionist study Hagarism—argue standardization was completed later, closer to 700 CE under Abd al-Malik/al-Hajjaj (a still later canonization date, around 800 CE, is associated with John Wansbrough's separate revisionist chronology). The perspectives complement rather than contradict each other when understood in their own terms, even where dating questions remain open."
+      "question": "Do historical methods prove an angel delivered the Quran?",
+      "answer": "No. They can assess the age and transmission of the text and reports. Recognition of revelation requires a broader judgment about the message and messenger."
     }
   ],
   "relatedSlugs": [
     "written-compilation-of-the-quran",
-    "was-the-quran-preserved",
-    "early-islamic-preservation",
+    "who-is-prophet-muhammad",
+    "uthmanic-standardization",
     "early-quran-manuscripts",
-    "uthmanic-standardization"
+    "why-the-quran"
   ],
   "furtherReading": [
     {
-      "title": "Materials for the History of the Text of the Qur'an",
-      "author": "Arthur Jeffery",
-      "note": "Academic examination of Quranic transmission and textual criticism from a historical-comparative perspective, including primary source material on the companion codices."
+      "title": "Sahih al-Bukhari, reports 4986–4987",
+      "author": "Muhammad ibn Ismail al-Bukhari",
+      "type": "primaryText",
+      "url": "https://sunnah.com/bukhari:4986",
+      "note": "The traditional collection accounts, read with the adjacent report on Uthman's copying project; a later hadith compilation, not a surviving seventh-century administrative record."
     },
     {
-      "title": "The Collection of the Qur'an",
-      "author": "John Burton",
-      "note": "Scholarly analysis of early Quranic textual materials and the standardization process under Uthman."
+      "title": "Ṣanʿāʾ 1 and the Origins of the Qurʾān",
+      "author": "Behnam Sadeghi and Mohsen Goudarzi",
+      "type": "journalArticle",
+      "year": 2012,
+      "url": "https://experts.umn.edu/en/publications/san%C4%81-1-and-the-origins-of-the-qur%C4%81n/",
+      "note": "Research edition and analysis of the palimpsest's lower text; the university record supplies the abstract and publisher DOI. Its reconstruction and interpretation remain subjects of scholarly debate.",
+      "journal": "Der Islam",
+      "volume": "87",
+      "issue": "1–2",
+      "pages": "1–129"
     },
     {
       "title": "The History of the Qur'anic Text: From Revelation to Compilation",
       "author": "Mustafa al-A'zami",
       "note": "Islamic scholarly treatment of revelation history, memorization systems, and the compilation process with primary source documentation."
-    },
-    {
-      "title": "Orality and Literacy: The Technologizing of the Word",
-      "author": "Walter Ong",
-      "note": "Foundational study of oral transmission and memory culture, providing comparative context for understanding the Quranic memorization system."
     }
   ]
 }

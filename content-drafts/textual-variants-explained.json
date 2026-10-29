@@ -1,10 +1,10 @@
 {
   "slug": "textual-variants-explained",
   "title": "Textual Variants Explained",
-  "subtitle": "Why Bible manuscripts differ, what Mark 16 and John 8 have to do with it, and how the Quran's single consonantal text compares",
+  "subtitle": "How differences between copies affect confidence in particular passages",
   "category": "preservation",
   "audienceLevel": "beginner",
-  "summary": "Textual variants are differences among handwritten copies. Most are minor, but some New Testament passages involve longer additions or meaningful alternatives. Textual criticism often identifies an early reading with confidence, yet it works by reconstructing from divergent witnesses. The Quran's early standardized consonantal text and continuous recitation represent a materially different preservation history.",
+  "summary": "A textual variant is a difference between witnesses, not a verdict that a whole scripture is unknowable. The endings of Mark and the woman accused of adultery show why some biblical passages require critical judgment. Quranic readings and manuscripts also contain variation; a fair comparison asks about its kind, date, scale, and transmission rather than pretending one side has none.",
   "tags": [
     "Preservation",
     "Scripture",
@@ -13,7 +13,7 @@
   ],
   "seo": {
     "metaTitle": "Textual Variants Explained: Bible Manuscripts vs. The Quran's Text",
-    "metaDescription": "A textual variant is a difference among handwritten copies. Most New Testament variants are minor, but a smaller number affect whole phrases or passages,.",
+    "metaDescription": "How manuscript differences affect particular passages, with Mark and John as examples and the same standards applied to Quranic evidence.",
     "keywords": [
       "textual variants",
       "textual criticism",
@@ -28,63 +28,63 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "The Evidence in Brief",
+      "title": "A Difference Is the Beginning of the Question",
       "kind": "summary",
-      "body": "A textual variant is a difference among handwritten copies. Most New Testament variants are minor. However, a smaller number affect whole phrases or passages, including the longer ending of Mark and the story of the woman accused of adultery. Modern editions identify these openly. The Quran also has a documented history of spelling and canonical reading differences. However, its early standardized consonantal text produced a much narrower textual range."
+      "body": "If two copies differ, at least one cannot reproduce the same wording at that point. That matters. It does not follow that every sentence in either copy is uncertain or that the entire religion was invented.\n\nTextual criticism compares witnesses to identify early wording and explain later differences. Its results can be strong, probable, or unresolved. The honest task is to match confidence to the actual passage."
     },
     {
       "sectionId": "historical-context",
-      "title": "Why Handwritten Copies Differ",
+      "title": "Why Copies Differ",
       "kind": "history",
-      "body": "Scribes can miss a line, repeat a phrase, adjust spelling, harmonize parallel passages, or add an explanatory note that later enters the text. A large manuscript tradition preserves many copies but also records many such differences. Scholars compare date, geographic spread, and relationships among manuscripts to estimate the earliest recoverable wording."
+      "body": "A copyist may skip between similar phrases, repeat a line, modernize spelling, harmonize parallel accounts, or incorporate a marginal explanation. Some changes are accidental; others are deliberate. Motive should not be asserted without evidence.\n\nCounting every difference gives little guidance by itself. Many late copies can multiply the same change, and many spelling differences can leave the meaning intact. A short addition affecting a major claim can matter more than hundreds of harmless spelling differences."
     },
     {
       "sectionId": "quranic-perspective",
-      "title": "The Quran's Own Claim About Its Preservation",
+      "title": "Apply the Standard to the Quran Too",
       "kind": "scripture",
-      "body": "The Quran makes an explicit claim about its own preservation. In Surah Al-Hijr, God says: \"إِنَّا نَحْنُ نَزَّلْنَا ٱلذِّكْرَ وَإِنَّا لَهُۥ لَحَٰفِظُونَ\" — \"Indeed, it is We who sent down the Qur'an and indeed, We will be its guardian\" (Quran 15:9).\n\nMuslims understand this verse as God's promise to protect the core revealed text of the Quran from being lost or corrupted over time. Historically, that promise is understood to have been worked out through the process described above: verses recorded in writing during Muhammad's lifetime, an unbroken chain of memorizers (huffaz) reciting the whole text from the beginning, and then Uthman's early standardization of a written tradition distributed to the major cities of the Muslim world, foreclosing the kind of centuries-long, uncoordinated regional drift that produced the New Testament's many textual families.\n\nThis does not mean the Quran's transmission has no internal variation at all. A small number of differences in vowelling, pronunciation, and minor word forms, called qiraat, were preserved as multiple authenticated oral traditions going back to the Prophet, compatible with the Uthmanic written tradition, including its limited regional consonantal differences. [Manuscript research](https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/hisams-ibraham-evidence-for-a-canonical-quranic-reading-based-on-the-rasm/E1E00FF676696F869570F4A70C3115E4) distinguishes this shared tradition from absolute identity in every regional exemplar. These are recognized, bounded variant readings passed down through certified chains of transmission, not independent manuscript lineages that diverged silently over time the way New Testament text-types did."
+      "body": "Quran 15:9 states the promise of protection. Muslim belief accepts canonical readings as authorized parts of transmission. That theological judgment should not be confused with the descriptive fact that readings can differ.\n\nThe Quranic record includes spelling differences, copyists' mistakes, canonical word and grammatical variants, and some early nonstandard textual evidence. [Qira'at Explained Simply](/articles/qiraat-explained-simply) distinguishes those categories. A comparison built on 'Bible variants versus no Quran variants' would begin with a false premise."
     },
     {
       "sectionId": "biblical-perspective",
-      "title": "Minor Variants and Major Examples",
+      "title": "Two Larger Examples Readers Can Check",
       "kind": "scripture",
-      "body": "Most New Testament variants are spelling or word-order differences. Several famous passages are larger: the longer ending of Mark (Mark 16:9–20), the woman caught in adultery (John 7:53–8:11), and the explicit Trinitarian wording in the later form of 1 John 5:7. Modern translations usually mark these honestly. Their disclosure is commendable. However, it also shows that the received text required scholarly sorting."
+      "body": "Mark 16:9–20 is the longer ending printed in many Bibles. The [Catholic note](https://bible.usccb.org/bible/mark/16) distinguishes it from Mark's ending at 16:8 while acknowledging its early reception and canonical status in that church.\n\nJohn 7:53–8:11, the woman accused of adultery, also has a complex transmission history. The [Catholic note on John 8](https://bible.usccb.org/bible/john/8) identifies it as a later insertion and still recognizes it as canonical scripture. Here the questions 'was it in the earliest recoverable form?' and 'does this church accept it?' are visibly different."
     },
     {
       "sectionId": "comparison",
-      "title": "Two Different Patterns",
+      "title": "How Editors Reach a Judgment",
       "kind": "argument",
-      "body": "New Testament criticism compares a large manuscript tradition whose copies differ in thousands of places, overwhelmingly minor but sometimes substantial. Editors decide among readings by age, distribution, genealogy, and internal evidence.\n\nQuranic transmission includes early spelling variation, a small number of non-Uthmanic readings in historical sources, and canonical qira'at. Its dominant manuscripts, however, share an early standardized consonantal text. The useful comparison is therefore not 'variants versus no variants,' but the scale, control, and date of stabilization in each tradition."
+      "body": "Scholars weigh a witness's age, its relationship to others, geographical spread where known, and which reading best explains the alternatives. The oldest surviving copy is important but not automatically correct at every point.\n\nThe Quran's dominant manuscripts reflect an early standard; biblical textual study often compares a broader range of copied forms. That is a meaningful historical difference. It is not permission to compare an ideal account of Quranic transmission with only the worst biblical examples."
     },
     {
       "sectionId": "common-misconceptions",
-      "title": "What the Evidence Does and Does Not Show",
+      "title": "The Strongest Christian Reply",
       "kind": "interpretation",
-      "body": "Variants do not mean that every New Testament teaching is unknowable. They do mean that 'the Bible never changed' is too simple. Likewise, recognized Quranic readings should not be equated automatically with copying errors: they operate within an early standard text and named recitation chains. Each tradition should be described according to its own transmission process."
+      "body": "A Christian may say that disputed passages are openly marked and that the resurrection, for example, is not based solely on Mark's longer ending. That is correct. Recognizing this variant does not erase the other Gospel narratives or Paul's testimony.\n\nThe remaining issue is narrower but real: a verse should not be defended as unquestionably original wording merely because a familiar Bible prints it. An argument about a doctrine must be reassessed if it depends specifically on disputed wording. Other evidence for the doctrine must then be considered on its merits."
     },
     {
       "sectionId": "islamic-conclusion",
-      "title": "A Different Preservation Record",
+      "title": "Why Early Stabilization Still Matters",
       "kind": "argument",
-      "body": "Quran 15:9 states, 'Indeed, it is We who sent down the Reminder, and indeed, We will guard it.' The Quran was standardized early and transmitted through both writing and memorization. That does not eliminate every spelling or manuscript question. However, it provides a stable public text without the same dependence on reconstructing anonymous, divergent copies."
+      "body": "An early shared written framework reduces the range that must be reconstructed later. That is a genuine strength in the Quran's preservation case, especially alongside learned recitation. It does not prove the text divine or answer every question about its early readings.\n\nIslam can make an affirmative case for reliable access without claiming every biblical teaching is lost. [How Was the Quran Preserved?](/articles/how-was-the-quran-preserved) explains that case with its qualifications."
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "The Central Takeaway",
+      "title": "Use Footnotes as Evidence, Not Ammunition",
       "kind": "summary",
-      "body": "Textual criticism helps recover early biblical wording. However, the need for reconstruction is itself part of the comparison. The Quran's early public standard and living recitation offer a clearer preservation claim and stronger access to the revelation as delivered."
+      "body": "When a footnote names a variant, read it and the surrounding passage. Ask what changes, how the evidence is weighed, and whether your belief depends on that wording. A disclosed uncertainty is useful information.\n\nFor the different question of which books a church accepts, continue with [Biblical Canon Formation](/articles/biblical-canon-formation). A variant within a book is not the same issue as the boundary of a canon."
     },
     {
       "sectionId": "faq",
-      "title": "Frequently Asked Questions",
+      "title": "The Four Details a Good Claim Supplies",
       "kind": "notes",
-      "body": "Q: Does the existence of thousands of New Testament variants mean the Bible cannot be trusted at all?\nA: Mainstream textual scholars, many of them devout Christians, note that the vast majority of variants are trivial spelling or word-order differences that do not change meaning. Only a small number of passages, like the two discussed here, involve larger questions, and those are openly footnoted rather than hidden.\n\nQ: Are Mark 16:9-20 and John 7:53-8:11 removed from modern Bibles?\nA: No. Almost all modern translations still print both passages in full, usually with brackets or a footnote explaining that the earliest manuscripts lack them.\n\nQ: Does the Quran have any variant readings at all?\nA: Yes. The qiraat are certified oral reading traditions affecting vowelling and some word forms, compatible with the Uthmanic written tradition, including limited regional consonantal differences. It is bounded and documented, not an uncontrolled multi-family divergence like the New Testament's.\n\nQ: Is textual criticism an attack on Christianity?\nA: No. It is a long-established discipline practiced mostly by Christian scholars themselves, aimed at recovering the earliest recoverable New Testament text through careful comparison of manuscripts.\n\nQ: Why did Uthman have some Quran copies set aside?\nA: According to Islamic historical accounts, Uthman acted to prevent regional divergence in recitation, establishing the Uthmanic written tradition through copies sent to the main cities of the Muslim world, based on the compilation prepared earlier under Abu Bakr."
+      "body": "Identify the passage, the competing forms, the witnesses supporting each, and the effect on meaning. A claim missing these details may be too vague to evaluate. This applies equally to a sensational allegation against the Quran and a reassurance that no biblical text ever changed."
     },
     {
       "sectionId": "further-reading",
-      "title": "Further Reading",
+      "title": "Begin With the Textual Notes",
       "kind": "sources",
-      "body": "Selected sources and further reading:\n\n- **The Text of the New Testament: Its Transmission, Corruption, and Restoration**. Bruce M. Metzger and Bart D. Ehrman. A standard, widely cited textbook on New Testament textual criticism, covering manuscript families and famous variant passages.\n- **Misquoting Jesus: The Story Behind Who Changed the Bible and Why**. Bart D. Ehrman. A popular-level introduction to New Testament textual variants, including the ending of Mark and the story in John 7:53-8:11.\n- **The New Testament Documents: Are They Reliable?**. F. F. Bruce. A classic evangelical Christian defense of the New Testament's manuscript reliability, written by a respected biblical scholar.\n- **The History of the Qur'anic Text: From Revelation to Compilation**. Muhammad Mustafa Al-Azami. A detailed Muslim scholarly account of the Quran's compilation and the Uthmanic standardization, written partly in response to Western textual criticism of the Quran."
+      "body": "The linked editions above let you inspect two concrete cases. The textbook below explains the method; Bruce gives a Christian defense of the documentary evidence. Reading both is more informative than using a raw variant count as a verdict."
     }
   ],
   "quranVerses": [
@@ -148,56 +148,50 @@
   ],
   "faq": [
     {
-      "question": "Does the existence of thousands of New Testament variants mean the Bible cannot be trusted at all?",
-      "answer": "Mainstream textual scholars, many of them devout Christians, consistently note that the vast majority of variants are trivial spelling or word-order differences that do not change meaning. Only a small number of passages involve larger questions, and those are openly footnoted rather than hidden."
+      "question": "Do variants make the entire Bible unknowable?",
+      "answer": "No. Many passages are well supported; some have uncertain details, and a smaller group involves larger additions or omissions. The conclusion must be specific."
     },
     {
-      "question": "Are Mark 16:9-20 and John 7:53-8:11 removed from modern Bibles?",
-      "answer": "No. Almost all modern translations still print both passages in full, usually with brackets or a footnote explaining that the earliest manuscripts lack them, so readers can see exactly what the textual evidence shows."
+      "question": "Are Mark's longer ending and the woman accused of adultery hidden?",
+      "answer": "No. Many modern editions print them with brackets or notes, and critical scholarship discusses them openly. Printing and canonical acceptance are different from a claim of original authorship."
     },
     {
-      "question": "Does the Quran have any variant readings at all?",
-      "answer": "Yes. The qira'at are certified reading traditions affecting pronunciation, vowels, and some word forms. They fit the Uthmanic written tradition, including its limited regional consonantal differences. This is bounded, documented variation, rather than uncontrolled copying drift."
+      "question": "Does removing Mark's longer ending remove the resurrection from Christianity?",
+      "answer": "No. Other Gospel passages and earlier Christian testimony remain. This variant concerns particular wording and attribution, not the disappearance of the whole Christian argument."
     },
     {
-      "question": "Is textual criticism an attack on Christianity?",
-      "answer": "No. It is a long-established scholarly discipline practiced mostly by Christian scholars themselves, aimed at recovering the earliest recoverable New Testament text through careful comparison of manuscripts."
+      "question": "Does the Quran also have variants?",
+      "answer": "Yes. The categories include spelling, copying errors, received reading differences, and some early nonstandard evidence. Their authorization and historical relationships require explanation, not denial."
     },
     {
-      "question": "Why did Uthman have some Quran copies set aside?",
-      "answer": "[Sahih al-Bukhari 4987](https://sunnah.com/bukhari:4987) reports that Uthman acted over disputes in recitation. His committee copied the earlier collection held by Hafsa and distributed codices to major regions. The resulting written tradition shared a common text while preserving limited regional consonantal differences."
+      "question": "Is the oldest manuscript always right?",
+      "answer": "No. Age is important, but an early copy can contain an error and a later copy can preserve an earlier reading. Relationships among witnesses also matter."
     }
   ],
   "relatedSlugs": [
-    "how-was-the-quran-preserved",
-    "was-the-quran-preserved",
-    "how-was-the-bible-transmitted",
-    "uthmanic-standardization",
-    "gospel-authorship-and-dating",
     "biblical-canon-formation",
-    "why-preservation-matters",
-    "early-quran-manuscripts"
+    "how-was-the-bible-transmitted",
+    "qiraat-explained-simply",
+    "early-quran-manuscripts",
+    "how-was-the-quran-preserved"
   ],
   "furtherReading": [
+    {
+      "title": "Mark 16 and John 8: Text and Textual Notes",
+      "author": "United States Conference of Catholic Bishops",
+      "type": "primaryText",
+      "url": "https://bible.usccb.org/bible/mark/16",
+      "note": "A Christian edition discussing the longer ending of Mark and, in its John 8 notes, the woman accused of adultery; historical origin and Catholic canonical reception are distinguished."
+    },
     {
       "title": "The Text of the New Testament: Its Transmission, Corruption, and Restoration",
       "author": "Bruce M. Metzger and Bart D. Ehrman",
       "note": "A standard, widely cited textbook on New Testament textual criticism, covering manuscript families and famous variant passages."
     },
     {
-      "title": "Misquoting Jesus: The Story Behind Who Changed the Bible and Why",
-      "author": "Bart D. Ehrman",
-      "note": "A popular-level introduction to New Testament textual variants, including the ending of Mark and the story in John 7:53-8:11."
-    },
-    {
       "title": "The New Testament Documents: Are They Reliable?",
       "author": "F. F. Bruce",
       "note": "A classic evangelical Christian defense of the New Testament's manuscript reliability, written by a respected biblical scholar."
-    },
-    {
-      "title": "The History of the Qur'anic Text: From Revelation to Compilation",
-      "author": "Muhammad Mustafa Al-Azami",
-      "note": "A detailed Muslim scholarly account of the Quran's compilation and the Uthmanic standardization, written partly in response to Western textual criticism of the Quran."
     }
   ],
   "bibleReferences": [
