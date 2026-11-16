@@ -57,10 +57,11 @@ For a running target:
 npm run smoke:test -- http://localhost:4173
 ```
 
-The website's article reader uses male neural audio only. If audio is slow or
-unavailable it stays on Preparing and retries with backoff, respecting
-`Retry-After`; Cancel/Stop aborts loading and retries. It never switches to a
-browser/device voice.
+The website's article reader uses male neural audio only. If a request or
+playback stalls, the reader times out that attempt and keeps waiting for the
+same voice, respecting `Retry-After`. Cancel/Stop aborts loading and retries.
+If the browser requires another tap, Resume plays the clip already loaded.
+The selected speed carries over when the reader starts the next article.
 
 The bottom Back button restarts the current paragraph after its first second;
 within that first second it goes to the previous paragraph. Rapid skips cancel

@@ -18,14 +18,15 @@ import { requestClientKey } from "@/lib/request-client";
 const DEFAULT_VOICE = "en-US-GuyNeural";
 const ALLOWED_VOICES = new Set([DEFAULT_VOICE, "ar-SA-HamedNeural"]);
 const MAX_CHARS = 1200;
-const REQUEST_WINDOW_MS = 60_000;
-const MAX_REQUESTS_PER_WINDOW = 12;
+// Preserve the burst ceiling but refill continuously for short paragraphs.
+const MAX_REQUEST_BURST = 12;
+const REQUEST_REFILL_MS = 2_500;
 const MAX_CONCURRENT_SYNTHESIS = 3;
 const MAX_TRACKED_CLIENTS = 5_000;
 
 type RateLimitEntry = {
-  count: number;
-  resetAt: number;
+  tokens: number;
+  updatedAt: number;
 };
 
 const requestsByClient = new Map<string, RateLimitEntry>();
@@ -35,9 +36,10 @@ const audioCache = new SpeechAudioCache();
 function consumeRequest(client: string): number | null {
   const now = Date.now();
 
-  if (requestsByClient.size >= MAX_TRACKED_CLIENTS) {
+  const entry = requestsByClient.get(client);
+  if (!entry && requestsByClient.size >= MAX_TRACKED_CLIENTS) {
     for (const [key, value] of requestsByClient) {
-      if (value.resetAt <= now) {
+      if (now - value.updatedAt >= MAX_REQUEST_BURST * REQUEST_REFILL_MS) {
         requestsByClient.delete(key);
       }
     }
@@ -47,21 +49,13 @@ function consumeRequest(client: string): number | null {
     }
   }
 
-  const entry = requestsByClient.get(client);
-
-  if (!entry || entry.resetAt <= now) {
-    requestsByClient.set(client, {
-      count: 1,
-      resetAt: now + REQUEST_WINDOW_MS,
-    });
-    return null;
+  const tokens = entry
+    ? Math.min(MAX_REQUEST_BURST, entry.tokens + Math.max(0, now - entry.updatedAt) / REQUEST_REFILL_MS)
+    : MAX_REQUEST_BURST;
+  if (tokens < 1) {
+    return Math.max(1, Math.ceil((1 - tokens) * REQUEST_REFILL_MS / 1000));
   }
-
-  if (entry.count >= MAX_REQUESTS_PER_WINDOW) {
-    return Math.max(1, Math.ceil((entry.resetAt - now) / 1000));
-  }
-
-  entry.count += 1;
+  requestsByClient.set(client, { tokens: tokens - 1, updatedAt: now });
   return null;
 }
 
@@ -95,18 +89,18 @@ export async function GET(request: Request) {
   const cached = audioCache.get(cacheKey);
   if (cached) return audioResponse(cached);
 
+  if (activeSyntheses >= MAX_CONCURRENT_SYNTHESIS) {
+    return Response.json(
+      { error: "Speech service is busy. Please try again shortly." },
+      { status: 503, headers: { "Retry-After": "3" } },
+    );
+  }
+
   const retryAfter = consumeRequest(requestClientKey(request));
   if (retryAfter !== null) {
     return Response.json(
       { error: "Too many speech requests. Please try again shortly." },
       { status: 429, headers: { "Retry-After": String(retryAfter) } },
-    );
-  }
-
-  if (activeSyntheses >= MAX_CONCURRENT_SYNTHESIS) {
-    return Response.json(
-      { error: "Speech service is busy. Please try again shortly." },
-      { status: 503, headers: { "Retry-After": "10" } },
     );
   }
 

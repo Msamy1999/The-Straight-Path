@@ -22,6 +22,7 @@ import {
 } from "react";
 import { cn } from "@/lib/utils";
 import { createAudioUnlockBlob } from "@/lib/audio/unlock";
+import { ReaderLabel } from "@/components/content/ReaderLocale";
 import type {
   ArticlePlaybackLink,
   ArticlePlaybackNavigation,
@@ -61,7 +62,9 @@ type PersistedPlayback = {
 const MAX_RESTORE_AGE_MS = 7 * 24 * 60 * 60 * 1_000;
 const STORAGE_KEY = "straight-path-article-playback-v1";
 const AUDIO_RETRY_INITIAL_MS = 3_000;
-const AUDIO_RETRY_MAX_MS = 30_000;
+const AUDIO_RETRY_MAX_MS = 12_000;
+const AUDIO_REQUEST_TIMEOUT_MS = 20_000;
+const AUDIO_START_TIMEOUT_MS = 8_000;
 const CHUNK_PRELOAD_DELAY_MS = 1_500;
 const SEEK_DEBOUNCE_MS = 200;
 const PREVIOUS_PARAGRAPH_WINDOW_SECONDS = 1;
@@ -144,12 +147,19 @@ function normalizedSpeech(text: string): string {
     .trim();
 }
 
+function applyPlaybackRate(audio: HTMLAudioElement, rate: number) {
+  // Loading another source can reset the effective rate to the default.
+  audio.defaultPlaybackRate = rate;
+  audio.playbackRate = rate;
+}
+
 export function ArticleAudioProvider({ children }: { children: ReactNode }) {
   const router = useRouter();
   const [playState, setPlayState] = useState<PlayState>("idle");
   const [currentArticle, setCurrentArticle] =
     useState<PersistedArticle | null>(null);
   const [playbackRate, setPlaybackRate] = useState(1);
+  const [waitingForVoice, setWaitingForVoice] = useState(false);
   const [activeChunkIndex, setActiveChunkIndex] = useState(0);
   const [, setChunkCount] = useState(0);
   const [progress, setProgress] = useState(0);
@@ -165,7 +175,7 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
   const chunkFractionRef = useRef(0);
   const stoppedRef = useRef(true);
   const sessionRef = useRef(0);
-  const playbackFailureRef = useRef<((error: unknown) => void) | null>(null);
+  const playLoadedAudioRef = useRef<(() => void) | null>(null);
   const audioRetryNotBeforeRef = useRef(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const objectUrlRef = useRef<string | null>(null);
@@ -185,8 +195,6 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
   } | null>(null);
   const pendingNavigationTimeoutRef = useRef<number | null>(null);
   const persistThrottleRef = useRef(0);
-  const preloadTimerRef = useRef<number | null>(null);
-  const prefetchedArticleHrefsRef = useRef(new Set<string>());
 
   const registerImplementationRef = useRef<
     (registration: ArticlePlaybackRegistration) => () => void
@@ -233,45 +241,12 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     }
   }
 
-  function clearPreloadSequence() {
-    if (preloadTimerRef.current !== null) {
-      window.clearTimeout(preloadTimerRef.current);
-      preloadTimerRef.current = null;
-    }
-  }
-
   function clearChunkAudioPreload() {
     if (chunkAudioPreloadTimerRef.current !== null) {
       window.clearTimeout(chunkAudioPreloadTimerRef.current);
       chunkAudioPreloadTimerRef.current = null;
     }
     chunkBlobCacheRef.current.clear();
-  }
-
-  function preloadArticleSequence(article: PersistedArticle) {
-    clearPreloadSequence();
-    const playlist = article.playlist ?? [];
-    const currentIndex = playlist.findIndex((item) => item.slug === article.slug);
-    if (currentIndex < 0 || currentIndex + 1 >= playlist.length) return;
-    let index = currentIndex + 1;
-
-    const preloadNext = () => {
-      if (index >= playlist.length || playStateRef.current === "idle") {
-        preloadTimerRef.current = null;
-        return;
-      }
-      const link = playlist[index];
-      index += 1;
-      if (!prefetchedArticleHrefsRef.current.has(link.href)) {
-        prefetchedArticleHrefsRef.current.add(link.href);
-        router.prefetch(link.href);
-      }
-      // Queue routes progressively instead of firing a large burst on mobile.
-      // The immediate next route is already prefetched synchronously below.
-      preloadTimerRef.current = window.setTimeout(preloadNext, 180);
-    };
-
-    preloadTimerRef.current = window.setTimeout(preloadNext, 80);
   }
 
   function getAudio(): HTMLAudioElement {
@@ -298,8 +273,7 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     abortRef.current = null;
     clearChunkAudioPreload();
     if (!preserveCompletedAudio) completedChunkBlobsRef.current.clear();
-    playbackFailureRef.current = null;
-    clearPreloadSequence();
+    playLoadedAudioRef.current = null;
     const audio = audioRef.current;
     if (audio) {
       audio.pause();
@@ -357,14 +331,21 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     if (clearSavedState) clearPersistedPlayback();
   }
 
-  function fetchChunkBlob(chunk: string, signal: AbortSignal): Promise<Blob> {
+  async function fetchChunkBlob(chunk: string, signal: AbortSignal): Promise<Blob> {
     const voice = isPrimarilyArabic(chunk)
       ? ARABIC_NEURAL_VOICE
       : ENGLISH_NEURAL_VOICE;
-    return fetch(
-      `/api/tts?text=${encodeURIComponent(chunk)}&voice=${voice}`,
-      { signal },
-    ).then(async (response) => {
+    signal.throwIfAborted();
+    const request = new AbortController();
+    const onAbort = () => request.abort();
+    signal.addEventListener("abort", onAbort, { once: true });
+    const deadline = window.setTimeout(onAbort, AUDIO_REQUEST_TIMEOUT_MS);
+    try {
+      const response = await fetch(
+        `/api/tts?text=${encodeURIComponent(chunk)}&voice=${voice}`,
+        { signal: request.signal },
+      );
+      request.signal.throwIfAborted();
       if (!response.ok) {
         const retryAfter = response.headers.get("Retry-After");
         if (retryAfter) {
@@ -382,11 +363,15 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
         throw new Error(`TTS ${response.status}`);
       }
       const blob = await response.blob();
+      request.signal.throwIfAborted();
       if (!blob.type.startsWith("audio/") || blob.size === 0) {
         throw new Error("TTS returned no playable audio");
       }
       return blob;
-    });
+    } finally {
+      window.clearTimeout(deadline);
+      signal.removeEventListener("abort", onAbort);
+    }
   }
 
   function getChunkBlob(
@@ -497,9 +482,11 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
         if (
           !completedChunkBlobsRef.current.has(index) &&
           !chunkBlobCacheRef.current.has(index) &&
-          serverWait > 0 &&
-          !(await waitForAudioRetry(serverWait, signal))
-        ) return;
+          serverWait > 0
+        ) {
+          setWaitingForVoice(true);
+          if (!(await waitForAudioRetry(serverWait, signal))) return;
+        }
         if (!isCurrent()) return;
         const blob = await getChunkBlob(chunks, index, signal);
         if (!isCurrent()) return;
@@ -507,30 +494,66 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
         const audio = getAudio();
         releaseObjectUrl();
         objectUrlRef.current = URL.createObjectURL(blob);
-        audio.playbackRate = playbackRateRef.current;
+        applyPlaybackRate(audio, playbackRateRef.current);
 
         // Own the entire media attempt, not just audio.play(): decode errors
         // can happen later. One settlement prevents duplicate retry loops.
         await new Promise<void>((resolve, reject) => {
           let settled = false;
+          let starting = false;
+          let startDeadline: number | undefined;
+          const clearStartDeadline = () => window.clearTimeout(startDeadline);
           const complete = (error?: unknown) => {
             if (settled) return;
             settled = true;
+            clearStartDeadline();
             signal.removeEventListener("abort", onAbort);
             audio.onended = null;
             audio.onerror = null;
             audio.onloadedmetadata = null;
             audio.ontimeupdate = null;
-            if (playbackFailureRef.current === fail) playbackFailureRef.current = null;
+            if (playLoadedAudioRef.current === playLoadedAudio) playLoadedAudioRef.current = null;
             if (error) reject(error);
             else resolve();
           };
           const fail = (error: unknown) => complete(error);
           const onAbort = () => fail(new DOMException("Playback cancelled", "AbortError"));
-          playbackFailureRef.current = fail;
+          const playLoadedAudio = () => {
+            if (settled || starting || !isCurrent()) return;
+            starting = true;
+            updatePlayState("loading");
+            applyPlaybackRate(audio, playbackRateRef.current);
+            startDeadline = window.setTimeout(
+              () => fail(new Error("Neural audio did not start")), AUDIO_START_TIMEOUT_MS,
+            );
+            void audio.play().then(() => {
+              if (settled || !isCurrent()) return;
+              starting = false;
+              clearStartDeadline();
+              applyPlaybackRate(audio, playbackRateRef.current);
+              setWaitingForVoice(false);
+              updatePlayState("playing");
+              startChunkAudioPreload(chunks, index, session);
+            }).catch((error: unknown) => {
+              if (settled || !isCurrent()) return;
+              starting = false;
+              clearStartDeadline();
+              if (error instanceof DOMException && error.name === "NotAllowedError") {
+                // A browser can require another tap when the next article
+                // starts. Resume the already-loaded clip from that gesture.
+                setWaitingForVoice(false);
+                updatePlayState("paused");
+              } else {
+                fail(error);
+              }
+            });
+          };
+          playLoadedAudioRef.current = playLoadedAudio;
           signal.addEventListener("abort", onAbort, { once: true });
           audio.onloadedmetadata = () => {
-            if (!isCurrent() || !Number.isFinite(audio.duration)) return;
+            if (!isCurrent()) return;
+            applyPlaybackRate(audio, playbackRateRef.current);
+            if (!Number.isFinite(audio.duration)) return;
             const fraction = pendingSeekFractionRef.current;
             pendingSeekFractionRef.current = 0;
             if (fraction > 0) {
@@ -548,12 +571,7 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
           audio.onended = () => complete();
           audio.onerror = () => fail(new Error("Neural audio playback failed"));
           audio.src = objectUrlRef.current!;
-          void audio.play().then(() => {
-            if (!settled && isCurrent()) {
-              updatePlayState("playing");
-              startChunkAudioPreload(chunks, index, session);
-            }
-          }).catch(fail);
+          playLoadedAudio();
         });
         if (!isCurrent()) return;
         index += 1;
@@ -566,6 +584,7 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
         chunkBlobCacheRef.current.delete(index);
         completedChunkBlobsRef.current.delete(index);
         pendingSeekFractionRef.current = chunkFractionRef.current;
+        setWaitingForVoice(true);
         updatePlayState("loading");
         const delay = Math.max(retryDelay, audioRetryNotBeforeRef.current - Date.now());
         if (!(await waitForAudioRetry(delay, signal))) return;
@@ -586,6 +605,7 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     }
     const index = Math.max(0, Math.min(options.index ?? 0, chunks.length - 1));
     cancelTransport();
+    setWaitingForVoice(false);
     currentRegistrationRef.current = registration;
     currentChunksRef.current = chunks;
     updateCurrentArticle(articleWithoutChunks(registration));
@@ -598,10 +618,6 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     abortRef.current = new AbortController();
     updatePlayState("loading");
 
-    if (registration.next) router.prefetch(registration.next.href);
-    if (registration.previous) router.prefetch(registration.previous.href);
-    preloadArticleSequence(articleWithoutChunks(registration));
-
     const session = sessionRef.current;
     if (options.unlock) {
       const audio = getAudio();
@@ -609,16 +625,19 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
       // Create and play synchronously in the tap's user-activation stack,
       // using the same element as narration. Normal transport cleanup revokes
       // this URL on replacement, cancellation, or provider unmount.
+      applyPlaybackRate(audio, playbackRateRef.current);
       objectUrlRef.current = URL.createObjectURL(createAudioUnlockBlob());
       audio.src = objectUrlRef.current;
       void audio.play().catch(() => {});
     }
     void playNeuralChunk(chunks, index, session);
+    if (registration.next) router.prefetch(registration.next.href);
     persistPlayback(true);
   }
 
   function navigateToArticle(link: ArticlePlaybackLink, autoPlay: boolean) {
     cancelTransport();
+    setWaitingForVoice(false);
     clearNavigationTimeout();
     pendingNavigationRef.current = { link, autoPlay };
     currentChunksRef.current = [];
@@ -658,11 +677,8 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
 
   function handleResume() {
     if (playStateRef.current !== "paused") return;
-    const audio = audioRef.current;
-    if (audio?.src && playbackFailureRef.current) {
-      const fail = playbackFailureRef.current;
-      void audio.play().catch(fail);
-      updatePlayState("playing");
+    if (playLoadedAudioRef.current) {
+      playLoadedAudioRef.current();
       return;
     }
     const registration = currentRegistrationRef.current;
@@ -708,6 +724,7 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     if (!registration || chunks.length === 0 || !abortRef.current) return;
 
     cancelTransport(true);
+    setWaitingForVoice(false);
     const session = sessionRef.current;
     stoppedRef.current = false;
     abortRef.current = new AbortController();
@@ -754,7 +771,7 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     const nextRate = PLAYBACK_RATES[(currentIndex + 1) % PLAYBACK_RATES.length];
     playbackRateRef.current = nextRate;
     setPlaybackRate(nextRate);
-    if (audioRef.current) audioRef.current.playbackRate = nextRate;
+    if (audioRef.current) applyPlaybackRate(audioRef.current, nextRate);
     persistPlayback(true);
     updateProgress(currentChunkIndexRef.current, chunkFractionRef.current);
   }
@@ -1021,7 +1038,6 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
     return () => {
       cancelTransport();
       clearNavigationTimeout();
-      clearPreloadSequence();
     };
     // The provider owns one persistent transport for its entire mounted life.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -1126,7 +1142,7 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
                 )}
               >
                 <Volume2 aria-hidden="true" className="h-4 w-4 animate-pulse" />
-                <span className="truncate">Preparing…</span>
+                <ReaderLabel className="truncate" en={waitingForVoice ? "Waiting for voice…" : "Preparing…"} ar={waitingForVoice ? "بانتظار الصوت…" : "جارٍ التحضير…"} />
               </div>
             ) : playState === "playing" ? (
               <button

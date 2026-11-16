@@ -31,7 +31,8 @@ const success = (route) => route.fulfill({ status: 200, contentType: "audio/wav"
 const failed = (route, status = 502, headers = {}) =>
   route.fulfill({ status, headers, contentType: "application/json", body: '{"error":"Temporarily unavailable"}' });
 
-async function scenario(name, viewport, handler, check, path = articlePath) {
+async function scenario(name, viewport, handler, check, path = articlePath, beforeRead) {
+  if (process.env.READER_TEST_FILTER && !name.includes(process.env.READER_TEST_FILTER)) return;
   const context = await browser.newContext({ viewport, serviceWorkers: "block" });
   const page = await context.newPage();
   const requests = [];
@@ -63,6 +64,12 @@ async function scenario(name, viewport, handler, check, path = articlePath) {
         const nativePlay = audio.play.bind(audio);
         audio.play = () => {
           window.__neuralQa.firstPlaySource ??= audio.src;
+          if (audio.src !== window.__neuralQa.firstPlaySource) {
+            const mode = window.__neuralQa.nextPlayMode;
+            window.__neuralQa.nextPlayMode = undefined;
+            if (mode === "blocked") return Promise.reject(new window.DOMException("Tap required", "NotAllowedError"));
+            if (mode === "stalled") return new Promise(() => {});
+          }
           return nativePlay();
         };
         return audio;
@@ -93,6 +100,7 @@ async function scenario(name, viewport, handler, check, path = articlePath) {
     }, undefined, { timeout: 60_000 });
     const consent = page.getByRole("button", { name: "No thanks", exact: true });
     if (await consent.isVisible()) await consent.click();
+    await beforeRead?.(page);
     await read.click();
     await check(page, requests);
     const state = await page.evaluate(() => ({
@@ -129,6 +137,66 @@ const waitForRequests = async (requests, count) => {
 
 try {
   await Promise.all([
+    scenario("1.5x stays audible through automatic next article", phone, (route) => success(route),
+      async (page) => {
+        await playing(page).waitFor();
+        for (const rate of [1, 1.25]) {
+          await page.getByRole("button", { name: `Playback speed ${rate} times. Press to increase speed.`, exact: true }).click();
+        }
+        const originalPath = new URL(page.url()).pathname;
+        const speed = page.getByRole("button", { name: "Playback speed 1.5 times. Press to increase speed.", exact: true });
+        for (let i = 0; i < 150 && new URL(page.url()).pathname === originalPath; i += 1) {
+          await playing(page).waitFor({ timeout: 20_000 });
+          const src = await page.evaluate(() => {
+            const audio = window.__neuralQa.audio;
+            const source = audio.src;
+            audio.currentTime = audio.duration - 0.04;
+            return source;
+          });
+          await page.waitForFunction(source => {
+            const audio = window.__neuralQa.audio;
+            return audio.src !== source && !audio.paused && audio.readyState >= 2;
+          }, src, { timeout: 20_000 });
+        }
+        assert.notEqual(new URL(page.url()).pathname, originalPath);
+        await playing(page).waitFor();
+        assert.ok(await speed.isVisible());
+        assert.equal(await page.evaluate(() => window.__neuralQa.audio.playbackRate), 1.5);
+        const start = await page.evaluate(() => ({ media: window.__neuralQa.audio.currentTime, wall: window.performance.now() }));
+        await page.waitForTimeout(1_000);
+        const elapsed = await page.evaluate(start => {
+          return (window.__neuralQa.audio.currentTime - start.media) / ((window.performance.now() - start.wall) / 1000);
+        }, start);
+        assert.ok(elapsed > 1.32 && elapsed < 1.68, `Expected media clock near 1.5×, measured ${elapsed.toFixed(2)}×`);
+        await page.getByRole("button", { name: "Stop reading", exact: true }).click();
+      }, "/articles/what-is-revelation"),
+    scenario("autoplay blocked prompts Resume and reuses the loaded audio", phone, (route) => success(route),
+      async (page, requests) => {
+        const resume = page.getByRole("button", { name: "Resume reading", exact: true });
+        await resume.waitFor({ timeout: 10_000 });
+        assert.equal(requests.length, 1);
+        await resume.click();
+        await playing(page).waitFor({ timeout: 5_000 });
+        assert.equal(requests.length, 1);
+        await page.getByRole("button", { name: "Stop reading", exact: true }).click();
+      }, articlePath, page => page.evaluate(() => { window.__neuralQa.nextPlayMode = "blocked"; })),
+    scenario("stalled media start retries without falling back", phone, (route) => success(route),
+      async (page, requests) => {
+        await page.getByText("Waiting for voice…", { exact: true }).waitFor({ timeout: 12_000 });
+        await playing(page).waitFor({ timeout: 20_000 });
+        assert.deepEqual(requests.slice(0, 2).map(({ text }) => text), [requests[0].text, requests[0].text]);
+        await page.getByRole("button", { name: "Stop reading", exact: true }).click();
+      }, articlePath, page => page.evaluate(() => { window.__neuralQa.nextPlayMode = "stalled"; })),
+    scenario("stalled download is aborted and retried", desktop, async (route, requests) => {
+      if (requests.length === 1) await new Promise(resolve => globalThis.setTimeout(resolve, 28_000));
+      await success(route).catch(() => {});
+    }, async (page, requests) => {
+      await page.getByText("Waiting for voice…", { exact: true }).waitFor({ timeout: 26_000 });
+      await playing(page).waitFor({ timeout: 30_000 });
+      assert.ok(await page.evaluate(() => window.__neuralQa.aborted > 0));
+      assert.equal(requests[1].text, requests[0].text);
+      await page.getByRole("button", { name: "Stop reading", exact: true }).click();
+    }),
     scenario("only one upcoming chunk is preloaded", desktop, (route) => success(route),
       async (page, requests) => {
         await playing(page).waitFor();

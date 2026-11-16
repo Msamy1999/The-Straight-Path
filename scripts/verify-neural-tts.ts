@@ -105,16 +105,40 @@ try {
   for (let i = 0; i < 12; i += 1) assert.equal((await GET(request(`limit-${i}`, "192.0.2.1"))).status, 200);
   const limited = await GET(request("limit-13", "192.0.2.1"));
   assert.equal(limited.status, 429);
-  assert.ok(Number(limited.headers.get("retry-after")) > 0);
+  assert.ok(Number(limited.headers.get("retry-after")) <= 3);
   const before = syntheses;
   assert.equal((await GET(request("limit-0", "192.0.2.1"))).status, 200);
   assert.equal(syntheses, before, "Cached audio must not start another synthesis");
+
+  const realNow = Date.now;
+  let now = realNow();
+  Date.now = () => now;
+  try {
+    // A run of short paragraphs at 1.5× crosses the old 12/minute gate.
+    for (let i = 0; i < 24; i += 1) {
+      assert.equal((await GET(request(`short-paragraph-${i}`, "192.0.2.20"))).status, 200);
+      now += 2_000;
+    }
+    for (let i = 0; i < 12; i += 1) {
+      assert.equal((await GET(request(`burst-${i}`, "192.0.2.21"))).status, 200);
+    }
+    assert.equal((await GET(request("burst-after-exhaustion", "192.0.2.21"))).status, 429);
+    now += 2_500;
+    assert.equal((await GET(request("burst-after-refill", "192.0.2.21"))).status, 200);
+    assert.equal((await GET(request("one-refilled-slot", "192.0.2.21"))).status, 429);
+  } finally {
+    Date.now = realNow;
+  }
 
   hold = true;
   const controllers = Array.from({ length: 3 }, () => new AbortController());
   const waiting = controllers.map((entry, index) => GET(request(`held-${index}`, `192.0.2.${index + 2}`, entry.signal)));
   await new Promise((resolve) => setTimeout(resolve, 5));
-  assert.equal((await GET(request("busy", "192.0.2.9"))).status, 503);
+  for (let i = 0; i < 12; i += 1) {
+    const busy = await GET(request("busy", "192.0.2.9"));
+    assert.equal(busy.status, 503);
+    assert.equal(busy.headers.get("retry-after"), "3");
+  }
   controllers[0].abort();
   assert.equal((await waiting[0]).status, 499);
   hold = false;
